@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Módulo 1/Unidade 3/Slide 1</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/main.css"> 
+    <style type="text/css">
+        #w1 { margin-top: 28px; } #w2 { margin-top: 40px; } #w3 { margin: 0 16px; } #w4 { margin: 0 16px; } #w5 { margin-top: 80px; } #w6 { margin-top: 62px; } #w7 { position: absolute; bottom: -60px; right: 0; } #w8 { margin-top: 94px; }
+    </style>
+
+
+    <script>
+        var ie = (!!window.ActiveXObject && +(/msie\s(\d+)/i.exec(navigator.userAgent)[1])) || NaN;
+        if (ie === 6)
+            document.documentElement.className += ' ie6';
+        else if (ie === 7)
+            document.documentElement.className += ' ie7';
+        else if (ie === 8)
+            document.documentElement.className += ' ie8';
+    </script>
+</head>
+
+<body class='frame'>
+    
+
+    <div class="main-frame">
+    <header id="header-frame-row" class="header-frame-row ">
+        <div class="header-bar ">
+            <div class="course">
+                <div class="container">
+                    <p class="course-flag"><a href="../../mod1/uni1/index.html">Voltar para a Unidade</a></p>
+                    <p class="course-name"><a href="../../mod1/index.html">Índice do módulo 1</a></p>
+                </div>
+            </div>
+            <div class="unit" style="display: block;">
+                <div class="container">
+                    <p class="unit-flag">UNIDADE 3:</p>
+                    <p class="unit-name">A língua portuguesa e os contextos sociais</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="content-frame-row ">
+        <div class="slide-info " id="w1">
+            <div class="slide-info-body">
+                <div class="slide-info-value">Slide 1 de 4</div>
+            </div>
+        </div>
+        <div class="header-info ">
+            <div class="header-info-body lt-text ">Para trabalharmos a sequência de conteúdo desta primeira unidade, vamos iniciar discutindo o que é e para que serve o texto. Na sequência vamos ver o texto na situação e a situação no texto, passar pelas etapas e pelas técnicas de planejamento e de elaboração textual e finalizar discutindo a reformulação do texto.</div>
+        </div>
+        <div class="lt-text container" id="w2">
+            <h4>O TEXTO: O QUE É E PARA QUE SERVE</h4>
+        </div>
+            <div class="postit " style="transform: rotate(1deg);" id="w4">
+                <div class="postit-header">Olá</div>
+                <div class="postit-body">
+                    Algum conteúdo para teste.
+                </div>
+            </div>
+        </div>
+        
+        <div class="slider-wrapper ">
+            <div class="slider-description">VOCÊ ESTÁ EM:</div>
+            <div class="slider"><a href="#header-frame-row" class="go-to-the-top animated-scroll">IR PARA O TOPO</a>
+                <div class="slider-header">SLIDE 1 DE 4</div>
+                <div class="slider-control">
+                    <a href="" class="btn-left"></a> 
+                    <a href="slide2.html" class="btn-right">Slide 2</a></div>
+                <nav class="navigation">
+                    <h5 class="navigation-description">IR PARA O SLIDE:</h5>
+                    <ul class="pagination">
+                        <li class="page-item"><a href="slide1.html" class="page-link active">1</a></li>
+                        <li class="page-item"><a href="slide2.html" class="page-link">2</a></li>
+						<li class="page-item"><a href="slide3.html" class="page-link">3</a></li>
+						<li class="page-item"><a href="slide4.html" class="page-link">4</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-frame-row ">
+        <div class="footer ">
+            <div class="container">
+                <ul class="branding-partners">
+                    <li><span class="description">INICIATIVA:</span> <a href="https://www.mec.gov.br/" target="_blank" class="logo-capes-white">Capes</a></li>
+                    <li><span class="description">PRODUÇÃO:</span> <a href="http://www.labtime.ufg.br/" target="_blank" class="logo-labtime-white">Labtime</a> <a href="http://www.ufg.br/" target="_blank" class="logo-ufg-white">UFG</a></li>
+                </ul>
+                <div class="copyright">2018. CAPES - PROGRAMA DE ACOLHIMENTO DA UNIVERSIDADE ABERTA DO BRASIL</div>
+            </div>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
+
+<script>
+    console.clear(screen);
+    var API = new BridgeRestApi();        
+    var id_unidade = "mod1_uni3";
+    var id_slide = "mod1/uni3/slide1.html";
+    var progresso = 25;
+    var progressoSalvo;
+
+    //TESTANDO OBTER DADOS DO CURSO
+    var objCurso={};
+   
+    //teste obtendo dados curso
+    window.addEventListener('load', function(){            
+            objCurso = API.obterDadosCurso();
+    })
+    
+    window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
+    function resultadoObterDadosCurso(evento){            
+        console.log(evento.detail); 
+
+        //antes de registrar a porcentagem, verifica a porcentagem atual:
+        API.obterDadosGenericos("porcentagemUni3");
+        window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
+        function resultadoObtemDadosGenericos (evento){                  
+            console.log(evento.detail);
+            progressoSalvo = evento.detail["data"][0]["valor"];
+            console.log("Valor de Porcentagem atual: "+progressoSalvo+" e o novo:"+progresso);
+            
+            if(progressoSalvo < progresso){
+                //registrando a porcentagem da Unidade 3
+                API.registrarDadosGenericos("porcentagemUni3",progresso);
+                console.log('teste de porcentagem\n'+progresso); 
+
+                window.addEventListener('evObtemRegistraDadosGenericos', resultadoRegistrarDadosGenericos, false);
+                function resultadoRegistrarDadosGenericos (evento){
+                    console.log("Verificando porcentagem registrada");
+                    console.log(evento.detail);
+                };
+            }
+        }                       
+    }    
+</script>
+</body>
+</html>

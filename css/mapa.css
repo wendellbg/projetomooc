@@ -1,0 +1,16 @@
+.imagem {
+	width: 850px;
+	height: 450px;	
+	overflow: hidden;	
+}
+.imagem img {
+	width: 100%;
+}
+.link-complementar {
+	display: block;
+	overflow: hidden;
+}
+.link-complementar img {
+	width: 10%;
+	height: 10%;
+}

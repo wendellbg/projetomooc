@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Mentoria</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../../css/main.css" />
+		<link rel="stylesheet" href="../../css/cards.css"/>
+		<link rel="stylesheet" href="../../css/menu-top-down.css"/>	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">	
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="#">UNIDADE 1</a></div>
+			</header>
+
+		<!-- Main -->
+			<section id="main">
+				<div class="inner">
+				<!-- One -->
+					<section id="one" class="wrapper style1">
+
+						<header class="special">
+								<div class="entire-menu">
+									<div class="menu-tit">
+										<div class="menu-tit-col1">  
+											<h2>Educação profissional no mundo do trabalho</h2>
+										</div>
+										<div class="menu-tit-col2"> 	
+  											<input type="checkbox" id="change-hamburguer" />  															
+  											<a class="hamburguer" href="#">  										
+   											<span></span>   									  									
+    											<label for="change-hamburguer"></label>
+  											</a>  									  									
+  											<div class="menu">
+    											<a href="tela01.html">Tela 01 - Apresentação</a>
+    											<a href="tela02.html">Tela 02 - Educação profissional no mundo do trabalho</a>
+    											<a href="tela03.html">Tela 03 - Técnica e Trabalho</a>
+    											<a href="tela04.html">Tela 04 - Como aprendemos as técnicas?</a>
+    											<a href="tela05.html">Tela 05 - Educação profissional e educação propedêutica</a>
+    											<a href="tela06.html">Tela 06</a>
+    											<a href="tela07.html">Tela 07</a>
+  											</div>
+  										</div>
+  									</div>		  									  									 									
+								</div>																																														
+						</header>
+						<div class="content">
+									<div class="linha">
+										<div class="coluna-50">
+											<img class="imagem-esq" src="../../img/uni1/tela02_01.png" alt="imagem 1">                           												
+										</div>								
+                           	<div class="coluna-50">
+  		                            <p>Você já pensou em como a educação profissional está presente em nossas vidas? Talvez já tenha visto vagas de emprego em que a formação exigida era de uma educação profissional ou quem sabe precisou contratar o serviço de uma pessoa em que fosse necessária uma formação técnica específica.</p>
+	                           </div>
+                           </div>	                               	
+                                                          
+                            <p>Agora vamos voltar no tempo. Você lembra da época em que cursou o ensino médio?  Existiam trajetórias diferentes ou o percurso de disciplinas e conteúdos era único? Algum professor lhe orientou sobre as opções de formações antes do ingresso no ensino médio? Existiam escolas técnicas na sua cidade?</p>                            
+                            <span class="imagem">
+                                <img class="imagem-cent" src=" ../../img/uni1/tela02_02.png"alt="imagem 2">
+                            </span>
+                            <p>Como você já percebeu, neste curso abordaremos a educação profissional no mundo contemporâneo, mas antes de continuarmos é importante considerar alguns fatos importantes sobre a educação profissional no contexto brasileiro.</p>
+									 <span class="separador">                           
+                            		<p class="texto-separador">
+                            			Clique nas cartas abaixo para descobrir:                            	
+                            		</p>
+                            </span>	
+                            <div class="linha">
+                            	<div class="coluna-50">	                                              				 
+                            		<div class='card-animado'>                            	 
+                               		<input type="checkbox" id="switch-1" />
+									    		<label class="flip-container-1" for="switch-1">
+											 	<div class="flipper">
+											 		<div class="front">
+														<div class="card yellow">
+															<div class="card-top">Há uma escola técnica na sua cidade?</div>
+															<div class="card-bottom">01</div>
+														</div>
+													</div>
+												 	<div class="back">
+														<div class="card yellow">
+															 <div class="card-top">A maioria das cidades brasileiras ainda não possui escolas técnicas ou uma instituição de Educação Profissional</div>
+														 	<div class="card-bottom"></div>
+													 	</div>
+												 	</div>
+											 	</div>
+									 	  		</label>
+                            		</div>                           
+                               </div>
+                               <div class="coluna-50">	                                              				 
+                            		<div class='card-animado'>                            	 
+                               		<input type="checkbox" id="switch-2" />
+									    		<label class="flip-container-2" for="switch-2">
+											 	<div class="flipper">
+											 		<div class="front">
+														<div class="card red">
+															<div class="card-top">Dos 7,5 milhões de alunos do Ensino Médio, qual o percentual está matriculado em curso Técnico?</div>
+															<div class="card-bottom">02</div>
+														</div>
+													</div>
+												 	<div class="back">
+														<div class="card red">
+															 <div class="card-top">Em torno de 10% dos alunos do EM estão no ensino técnico. Você faz ideia da proporção em outros países?</div>
+														 	<div class="card-bottom"></div>
+													 	</div>
+												 	</div>
+											 	</div>
+									 	  		</label>
+                            		</div>                           
+                               </div>                                            
+                            </div>                                                                                 
+                            <div class='navegacao'>                            	                       
+                                <span><a href="#"><button class="bt-avanca" type="button">PROSSEGUIR ></button></a></span>                                                                  	
+                                <span class='botoes-navegacao'>
+                                		<a href="tela01.html"><button class="bt-navegacao" type="button"><</button></a>		
+                                		<a href="tela01.html"><input style="border-radius:4px;" type="radio" checked="checked" name="radio"></a>                                		
+                                		<a href="tela02.html"><input style="border-radius:4px;" type="radio" checked="checked" name="radio"></a>
+                                		<a href="tela03.html"><input style="border-radius:4px;" type="radio" checked="checked" name="radio"></a>
+                                		<a href="tela04.html"><input style="border-radius:4px;" type="radio" checked="checked" name="radio"></a>
+                                		<a href="tela05.html"><input style="border-radius:4px;" type="radio" checked="checked" name="radio"></a>
+                                		<a href="tela06.html"><input style="border-radius:4px;" type="radio" checked="checked" name="radio"></a>
+                                		<a href="tela07.html"><input style="border-radius:4px;" type="radio" checked="checked" name="radio"></a>
+                                		<a href="tela03.html"><button class="bt-navegacao" type="button">></button></a>
+                                </span>                                 
+                                <span class="lista-navegacao" style="margin-left:530px;">
+                                		 <a href="#"><i class="fas fa-angle-double-up" style="font-size:48px;"></i></a>                                		                            
+                                </span>                                
+                            </div>
+                  			 <hr>
+                  			 <div class="linha">
+										<div class="coluna-50"> 
+											<img width="300" height="90" src="../../img/uni1/ifsc.png" alt="IFSC">
+										</div>							
+										<div class="coluna-50"> 
+											<img width="300" height="90" src="../../img/uni1/ifes.png" alt="IFES">
+										</div>
+									</div> 	               
+						</div>											
+					</section>					
+				</div>				
+			</section>
+			
+
+		<!-- Footer -->
+			<footer id="footer">
+                <!--<div class='navegacao'>
+                    <p class='titulo-navegacao'>Navegação do Curso</p>
+                    <p class='tela-atual'>Tela 02 de 07</p>
+                    <span class='botoes-navegacao'>
+                        <p class='bt-anterior'>Anterior</p>
+                        <p class="bt-proximo">Próximo</p>
+                    </span>
+                    <span class="lista-navegacao">
+                        <label>Ir para</label>
+                        <a href="./tela01.html">01</a>
+                        <a href="./tela02.html">02</a>
+                        <a href="./tela03.html">03</a>
+                        <a href="./tela04.html">04</a>
+                        <a href="./tela05.html">05</a>
+                        <a href="./tela06.html">06</a>
+                        <a href="./tela07.html">07</a>
+                    </span>
+                </div>       
+        
+                <div class="links">
+                    <span class="label-link">INICIATIVA:</span> <a href="https://www.mec.gov.br/" target="_blank" class="logo-capes-white">Capes</a>
+                    <span class="label-link">REALIZAÇÃO:</span> <a href="https://www.mec.gov.br/" target="_blank" class="logo-capes-white">SETEC</a>
+                    <span class="label-link">PRODUÇÃO:</span> <a href="http://www.labtime.ufg.br/" target="_blank" class="logo-labtime-white">Labtime</a> <a href="http://www.ufg.br/" target="_blank" class="logo-ufg-white">UFG</a>
+                    <div class="copyright">2018. CAPES - PROGRAMA DE ACOLHIMENTO DA UNIVERSIDADE ABERTA DO BRASIL</div>
+                </div>-->
+			</footer>
+
+
+	</body>
+</html>
