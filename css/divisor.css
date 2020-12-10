@@ -1,0 +1,21 @@
+	
+.divisor{
+	margin-top: 60px;
+}
+.divisor .texto-separador {
+	background-color: #2a5caa;
+	color: white;
+	padding: 15px;
+	border-radius: 4px;
+	margin-top: -70px;
+	margin-bottom: 0px;
+	margin-left: 40%;
+	margin-right: 40%;
+	text-align: center;
+	font-weight: bold;	 
+ }
+ .divisor hr {
+	/*border-color: black;
+	position: relative;
+	top: 87px;*/
+ }

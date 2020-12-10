@@ -10,9 +10,9 @@
 }*/
 
 .entire-menu {
-  position: absolute;
+  position: /* estava absolute, relative permite movimento dos elementos subsquentes */
   padding: 20px;
-  width: 100%;
+  /*width: 100%;             <----- provocava rolamento lateral*/
 }
 .hamburguer {
   width: 20px;
@@ -20,7 +20,7 @@
   display: block;
   position: relative;
   background: none;
-  margin: 0 0 10px 0;
+  margin: 0 0 10px 10px;
 }
 .hamburguer:after, .hamburguer:before, .hamburguer span, .hamburguer label {
   content: ' ';
@@ -73,7 +73,8 @@
   opacity: 0;
 }
 #change-hamburguer:checked ~ .menu {
-  max-height: 200px;
+  max-height: 400px; /* estava limitado a 200px e não mostrava todas as 7 opçoes do menu*/
+  margin-top: 20px;
 }
 .menu {
   max-height: 0;
@@ -85,12 +86,13 @@
   font-family: sans-serif;
   font-weight: 400;
   font-size: 13px;
-  width: 50%;
+  width: 100%;
+  border-radius: 2px;
 }
 .menu a {
   text-decoration: none;
   color: #fff;
-  padding: 5px 10px;
+  padding: 10px; /*removi os '5px' para melhorar espaçamento entre os links*/
   display: block;
   text-transform: uppercase;
   border-left: 5px solid #000;
@@ -101,8 +103,14 @@
   background: #222;
 }
 .menu-tit-col1 {
-	margin-left: 30px;	
+	margin-left: 50px;	
+  /*white-space: nowrap; /*@jlas*//*
+  overflow:hidden;*/
 }
+.menu-tit-col1 h2 {
+	text-align: left;
+}
+
 .menu-tit-col2 {
 	margin-top: -57px;
 }  
