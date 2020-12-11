@@ -1425,7 +1425,7 @@
 				if(evento.detail["status"]=="200"){				
 					//se a unidade já foi iniciada, então vai ter porcentagem.
 					var porcentagem = evento.detail["data"][0]["valor"];
-
+          console.log(evento.detail["data"]);
 					switch (evento.detail["data"][0]["chave"]){
 						case "porcentagemUni1":
 							console.log("Unidade 1 tem "+(porcentagem)+"% concluída"); 									

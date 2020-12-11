@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+	<!DOCTYPE HTML>
 <html>
 	<head>
 		<title>Mentoria</title>
@@ -6,7 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="../../css/main.css"/>
 		<link rel="stylesheet" href="../../css/menu-top-down.css"/>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+		<link rel="stylesheet" href="../../css/rodape.css"/>
 	</head>
 	<body>
 
@@ -14,7 +15,7 @@
 			<header id="header">
 				<div class="logo">
 					<a href="../sumario.html">
-						<span>UNIDADE 1</span>
+						UNIDADE 1
 					</a>
 				</div>				
 			</header>			
@@ -38,7 +39,8 @@
 	    									<label for="change-hamburguer"></label>
   										</a>  									  									
   										<div class="menu">
-	    									<a href="tela01.html"><span>Tela 01 - Apresentação</span></a>
+											<a href="../sumario.html" class='titulo-menu'>UNIDADE 1</a>
+	    									<a href="tela01.html" class='link-menu-atual'>Tela 01 - Apresentação</a>
    	 										<a href="tela02.html">Tela 02 - Educação profissional no mundo do trabalho</a>
     										<a href="tela03.html">Tela 03 - Técnica e Trabalho</a>
     										<a href="tela04.html">Tela 04 - Como aprendemos as técnicas?</a>
@@ -57,22 +59,28 @@
 								<p>Vamos começar falando da Educação profissional no mundo contemporâneo.
 								<br><br>Ao final da unidade, você será capaz de comparar o cenário da Educação Profissional brasileira com o de outros países e identificar os seus principais desafios. </p></div>
 							<div class="caixa-texto-rodape"><p>Vamos lá?!</p></div>														
-							<div class='navegacao'>                    
-								 <span><a href="#"><button class="bt-avanca" type="button">PROSSEGUIR ></button></a></span>                                                                  	
-                         <span class='botoes-navegacao'>
-                          		<a href="tela01.html"><button class="bt-navegacao" type="button"><</button></a>		
-                          		<a href="tela01.html"><input style="border-radius:4px;" type="radio" checked="checked" name="radio"></a>                                		
-                          		<a href="tela02.html"><input style="border-radius:4px;" type="radio" checked="checked" name="radio"></a>
-                          		<a href="tela03.html"><input style="border-radius:4px;" type="radio" checked="checked" name="radio"></a>
-                             	<a href="tela04.html"><input style="border-radius:4px;" type="radio" checked="checked" name="radio"></a>
-                             	<a href="tela05.html"><input style="border-radius:4px;" type="radio" checked="checked" name="radio"></a>
-                             	<a href="tela06.html"><input style="border-radius:4px;" type="radio" checked="checked" name="radio"></a>
-                             	<a href="tela07.html"><input style="border-radius:4px;" type="radio" checked="checked" name="radio"></a>
-                             	<a href="tela03.html"><button class="bt-navegacao" type="button">></button></a>
-                          </span>                                 
-                          <span class="lista-navegacao" style="margin-left:530px;">
-                              <a href="#"><i class="fas fa-angle-double-up" style="font-size:48px;"></i></a>                                		                            
-                          </span> 
+							
+							
+							<div class='navegacao'>
+								<span class="lista-navegacao" style="margin-left:530px;">
+									<a href="#"><i class="fas fa-angle-double-up" style="font-size:48px;"></i></a>                                		                            
+								</span>                     
+								<span><a href="tela02.html"><button class="bt-avanca" type="button">PROSSEGUIR ></button></a></span>                                                                  							 
+								<span class='botoes-navegacao'>
+									<button class="bt-navegacao desativado" type="button"><</button>
+
+									<a href="tela01.html"><input type="radio" checked name="radio"><label for="radio"></label></a>                                		
+									<a href="tela02.html"><input type="radio" name="radio"><label for="radio"></label></a>
+									<a href="tela03.html"><input type="radio" name="radio"><label for="radio"></label></a>
+									<a href="tela04.html"><input type="radio" name="radio"><label for="radio"></label></a>
+									<a href="tela05.html"><input type="radio" name="radio"><label for="radio"></label></a>
+									<a href="tela06.html"><input type="radio" name="radio"><label for="radio"></label></a>
+									<a href="tela07.html"><input type="radio" name="radio"><label for="radio"></label></a>
+									
+									<a href="tela02.html"><button class="bt-navegacao" type="button">></button></a>
+								</span>                                 
+								<span class="legenda">Slide 1 de 7</span>  
+								
 							</div>
 							<hr>
                   	<div class="linha">
@@ -90,30 +98,7 @@
 			</section>
 
 		<!-- Footer -->
-			<footer id="footer">
-               <!--<div class='navegacao'>                    
-					<span><h3>Navegação do Curso</h3></span>
-                    <span class='botoes-navegacao'>						
-                        <p class='bt-anterior'><a href="#">Anterior</a>Tela 01 de 07<a href="#">Próximo</a></p>
-                    </span>
-                    <span class="lista-navegacao">
-                        <label>Ir para</label>
-                        <a href="./tela01.html">01</a>
-                        <a href="./tela02.html">02</a>
-                        <a href="./tela03.html">03</a>
-                        <a href="./tela04.html">04</a>
-                        <a href="./tela05.html">05</a>
-                        <a href="./tela06.html">06</a>
-                        <a href="./tela07.html">07</a>
-                    </span>
-                </div>       
-        
-                <div class="links">
-                    <span class="label-link copyright">INICIATIVA:</span> <a href="https://www.mec.gov.br/" target="_blank" class="logo-capes-white">Capes</a>
-                    <span class="label-link copyright">REALIZAÇÃO:</span> <a href="https://www.mec.gov.br/" target="_blank" class="logo-capes-white">SETEC</a>
-                    <span class="label-link copyright">PRODUÇÃO:</span> <a href="http://www.labtime.ufg.br/" target="_blank" class="logo-labtime-white">Labtime</a> <a href="http://www.ufg.br/" target="_blank" class="logo-ufg-white">UFG</a>
-                    <div class="copyright">2018. CAPES - PROGRAMA DE ACOLHIMENTO DA UNIVERSIDADE ABERTA DO BRASIL</div>
-                </div>-->
+			<footer id="footer">              
 			</footer>
 
 		<script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>	

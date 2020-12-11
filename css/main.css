@@ -597,7 +597,8 @@
 		padding: 10rem;
 		padding-top: 0; /* Elimina espaço desnecessário entre elementos.*/
 		min-height: 800px;
-		font-family: "Catamaran", sans-serif;
+		/* font-family: "Catamaran", sans-serif; */
+		font-family:"Poppins", sans-serif;
       	font-size: 16px;
       	color: #363636;
       	margin-bottom: -140px;
@@ -667,27 +668,7 @@
 		background-position: center top;
 	}
 
-	.content .navegacao {
-		border: #fff 2px solid;		
-		background-color: #fff;
-		margin-top: 10%; /* elimina excesso de espaço (invés de 70%)*/
-		right: 550px;
-		left: 550px;
-		bottom: 90px;
-		position: static;				
-		padding: 5px;
-		border-radius: 4px;
-		text-align: center; /*centraliza os botões de navegação*/
-		/*padding-left: 200px;
-		padding-right: 200px;*/
-				
-	}
-	.content .navegacao h3 {
-		color: #fff;
-		text-align: center;
-		background-color: #2a5caa;
-		border-radius: 4px;			
-	}
+	
 	.content .linha {
 		display: flex;
 		flex-flow: row wrap;
@@ -732,59 +713,9 @@
 		margin-right: 15%;
 		text-align: center;		
 	}
-	.bt-avanca {
-	 position: relative;
-    background-color: #2a5caa;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    /*display: inline-block;*/
-    font-size: 1rem;
-    font-family: "Catamaran", sans-serif;    
-    margin: 4px 2px 40px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-    /*margin-left: 55px;*/
-	}
-	.bt-navegacao {
-	background-color: #2a5caa;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    font-size: 16px;
-    font-family: "Catamaran", sans-serif;    
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 14px;
-    margin-left: 0px;			
-	}
-	.bt-radio-navega {
-		display: block;
-  		position: fixed;  		
-  		margin-bottom: 12px;
-  		cursor: pointer;
-  		font-size: 22px;	
-	}
-	.bt-radio-navega input {
-	  position: absolute;
-  	  opacity: 0;
-     cursor: pointer;
-   }
-   .bt-cima {
-      width: 50px;
-  	  height: 50px;     
-      border-color: black;	
-	  background-image: url(../img/uni1/seta-cima.png);
-	  background-size: 50px 50px;
-	  background-color: transparent;   
-   }
+	
+
+	
    .caixa-texto-topo {
    		position: relative;
    		top: 40px; /*40px ao invés de 50px*/
@@ -799,7 +730,7 @@
 		margin-left:10%; /* 10% ao inves de 15% impede encolimento do fundo */
 		margin-right:10%; /* 10% ao inves de 15% impede encolimento do fundo */
 		margin-top: -50px;
-		background-size: 80%;   
+		background-size: 80%;  		
    }
  	.caixa-texto-topo p { 	
  		 padding-top: 10%;
@@ -807,13 +738,15 @@
 		 text-align: center;
 		 color: #2a5caa;
 		 font-weight: bold;	 
+		 font-size: 20px; 
 		 	
  	}
 	.caixa-texto-centro {
 		display:block;
 		padding-left:5%;
 		padding-right:5%;
-		padding-bottom: 15%;
+		padding-bottom: 20%;
+		padding-top: 10%;
 		background-image: url(../img/uni1/tela01_bg.png);
 		background-repeat: no-repeat;
 		background-position: initial;
@@ -881,13 +814,14 @@
 		} 
 
  	.caixa-texto-centro p {
- 		 padding-top: 15%;
- 		 padding-bottom: 15%;
- 		 padding-left: 10%;
- 		 padding-right: 10%;
-		 text-align: center;
+ 		 padding-top: 5%;
+ 		 padding-bottom: 5%;
+ 		 padding-left: 15%;
+ 		 padding-right: 15%;		 
 		 color: #fff;
-		 font-weight: bold;
+		 /* font-weight: bold; */
+		 font-size: 18px;
+		 text-align: justify;
  	}
 	.caixa-texto-rodape {
 		display:block;
@@ -898,7 +832,7 @@
 		background-position: center;	
 		margin-left:0%;
 		margin-right:50%;
-		margin-top: -23%;
+		margin-top: -25%;
 		background-size: 50%;
 		width:auto;
 		height:auto;   
@@ -909,6 +843,7 @@
 		 text-align: center;
 		 color: #2a5caa;
 		 font-weight: bold;	 
+		 font-size: 20px;
 		 	
  	}
 

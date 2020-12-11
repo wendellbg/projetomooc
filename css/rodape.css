@@ -1,94 +1,114 @@
-  
-#rodape{
-    width: 80%;
-    margin-bottom: -8em;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #fff;
-    border-radius: 2em;
-    text-align: center;
-  }
-
-  #rodape .navegacao{
-		background-color:#fff;    
-    align-content: center;
-		padding: 5px;		
-  }
-
-  #rodape .anterior, #rodape .proximo{
-    background-color: #2a5caa;	
-    text-decoration: none;
-    color: white;    
-    padding: 0.5em 1em;
-    margin: 1em;        
-    border-radius: 1em;
-  }
-
-  #rodape .anterior, #rodape .proximo{
-    padding: 1.5em auto;    
-  }
-
-  #rodape .prosseguir{
-    background-color: #2a5caa;	
-    text-decoration: none;
-    color: white;    
-    padding: 0.5em 1em ;
-    margin-bottom: 30px;        
-    border-radius: 1em;
-  }
-
-  #rodape .navegacao a.link-tela{
-    margin: 0.5em;
-    padding: 0.8em;
-    background: radial-gradient(circle closest-side,#fff 0%,#fff 74%,#2a5caa 76%,#2a5caa 98%,rgba(0,0,0,0) 100%);
-  }
-
-  #rodape .navegacao a.link-tela:hover{
-    background: radial-gradient(circle closest-side,#2a5caa 0%,#2a5caa 74%,#fff 76%,#2a5caa 98%,rgba(0,0,0,0) 100%);
-  }
-
-  #rodape .navegacao a.atual{
-    margin: 0.5em;
-    padding: 0.8em;
-    background: radial-gradient(circle closest-side,#2a5caa 0%,#2a5caa 74%,#2a5caa 76%,#2a5caa 98%,rgba(0,0,0,0) 100%);
-  }
-
-  #rodape .legenda{
-    font-weight:900;
-    margin-top: 1em;
-  }
-
-.link-unidade{  
-  border:#2a5caa solid 2px;
-  align-items: center;
-  position: relative;  
+.content .navegacao {
+  border: #fff 2px solid;		
+  background-color: #fff;
+  margin-top: 10%; /* elimina excesso de espaço (invés de 70%)*/
+  right: 550px;
+  left: 550px;
+  bottom: 90px;
+  position: static;				
+  padding: 5px;
+  border-radius: 4px;
+  text-align: center; /*centraliza os botões de navegação*/
+  /*padding-left: 200px;
+  padding-right: 200px;*/
+      
+}
+.content .navegacao h3 {
+  color: #fff;
   text-align: center;
-  float:left;  
+  background-color: #2a5caa;
+  border-radius: 4px;			
 }
 
-#div-uni1{
- background-color: aliceblue;
- 
-}
+.bt-navegacao {
+	background-color: #2a5caa;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
+    font-family: "Catamaran", sans-serif;    
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 14px;
+    margin-left: 0px;			
+	}
 
-#rodape #linha{
-  border-bottom: 1px solid black;
-  padding: 1em auto;
-  margin: 2em auto;
-  width: 70%;
-}
-#rodape .links img{
-  width: 3rem;
-}
+	.bt-navegacao.desativado{
+		background-color: #a6a6a6;
+		pointer-events: none;
+	}	
 
-#rodape .links span{
-  margin: auto 2em;    
-}
+	.bt-radio-navega {
+		display: block;
+  		position: fixed;  		
+  		margin-bottom: 12px;
+  		cursor: pointer;
+  		font-size: 22px;	
+	}
+	.botoes-navegacao input {		 
+		 display:none;
+	}
+	
+	.botoes-navegacao label {
+			     cursor: pointer;
+	}
+	
+	.botoes-navegacao input[type="radio"] + label:before{ 
+			   border: 1px solid #2a5caa;    
+			   content: "\00a0";    
+			   display: inline-block;    
+			   font: 18px/1em sans-serif;    
+			   height: 18px;    
+			   margin: 0 0.5em;    
+			   padding:0;    
+			   vertical-align: center;    
+			   width: 18px;    
+			   border-radius:50%;
+		}
+		.botoes-navegacao input[type="radio"]:checked + label:before{
+			background: #2a5caa;    
+			color: #FFF;    
+			border: 1px solid #2a5caa;
+			content: "\00a0";    
+			text-align: center;
+		}		
+   
 
-#rodape .links .final{
-  line-height: 3em;
-}
+   .navegacao .legenda{
+	font-weight:600;
+	color: #2a5caa;
+	display: block;
+    margin-top: 1em;
+   }
 
-.imagem img{
-  width: 100%;
-}
+   .bt-cima {
+      width: 50px;
+  	  height: 50px;     
+      border-color: black;	
+	  background-image: url(../img/uni1/seta-cima.png);
+	  background-size: 50px 50px;
+	  background-color: transparent;   
+   }
+
+   .bt-avanca {
+		position: relative;
+		background-color: #2a5caa;
+		border:none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		font-weight: 400;
+		letter-spacing:0.2em;
+		display: block;
+		font-size: 1rem;
+		font-family: "Catamaran", sans-serif;    
+		margin: 40px auto;
+		cursor: pointer;
+		border-radius: 12px;
+		/*margin-left: 55px;*/
+	}
