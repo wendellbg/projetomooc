@@ -1,32 +1,34 @@
-.details,
-.show,
-.hide:target {
+.details, .show, .hide:target {
   display: none;
 }
-.hide:target + .show,
-.hide:target ~ .details {
-  display: block;  
+
+.hide:target + .show, .hide:target ~  .details {
+  display: block; 
 }
-.menu {
-	 background: #2A5CAA;
-    color: #FFF;
-    padding: 10px;
-    padding-right: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-    height: 100%;
-    border-color: #252525;
+
+.menu-opcoes {
+	background: #2A5CAA;
+  color: #FFF;
+  padding: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 100%;
+  border-color: #252525;
+  border-radius: 1em;
 }
+
 .details {
-	 background: #2A5CAA;
-    color: #FFF;
-    padding: 10px;
-    padding-right: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-    height: 100%;
-    border-color: #252525;
+  background: #2A5CAA;
+  color:#fff;
+  padding: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 100%;
+  border-color: #252525;      
 }
-.menu a {
-	color: white; 
+
+.menu-opcoes a {
+  color: white;  
 }

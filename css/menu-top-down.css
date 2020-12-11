@@ -10,7 +10,7 @@
 }*/
 
 .entire-menu {
-  position: /* estava absolute, relative permite movimento dos elementos subsquentes */
+  position: relative;/* estava absolute, relative permite movimento dos elementos subsquentes */
   padding: 20px;
   /*width: 100%;             <----- provocava rolamento lateral*/
 }

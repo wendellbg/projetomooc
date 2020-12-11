@@ -71,3 +71,24 @@
 ul {
   list-style-type: none;
 } 
+
+.lista-topicos li{    
+    padding: 0.5em 1em;
+    margin: 1em 0;
+}
+
+.lista-topicos li img{
+    vertical-align: middle;
+}
+
+.lista-topicos li span{
+    display: inline-block;
+    margin-left: 5px;  
+    width: 90%;    
+    border: 1px solid #2a5caa;
+    border-radius: 1em;
+    font-weight: bold;
+    padding: 5px 10px;
+    vertical-align: middle;
+
+}
