@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'Musket-Bold';
+    src:url('../fonts/Musket-Bold.ttf.woff') format('woff'),
+        url('../fonts/Musket-Bold.ttf.svg#Musket-Bold') format('svg'),
+        url('../fonts/Musket-Bold.ttf.eot'),
+        url('../fonts/Musket-Bold.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+.horizontal-timeline {
+    position: relative;
+    height: 2vh;
+    background: #fec13b;
+    margin:0;
+    border: 2px solid #fec13b;
+    border-radius: 3vh;
+    }
+    
+    .arrow-up{
+    position: absolute;
+    width: 0;
+    height: 0;    
+    background-color: #2a5caa;
+    border: 3vh solid #2a5caa;
+    border-radius: 2em;
+    vertical-align: baseline;
+    top: -1vw;
+    }
+
+    .horizontal-timeline-icones{
+        position: relative;
+        height: 2vh;        
+        margin: 12vh 0 6vh 0;        
+        }
+    
+     .icone-audio{      
+        border-radius: 2em;          
+        border: 2px solid white;   
+        position: absolute;
+        width: 14vh;
+        height: 14vh;
+        margin-left: -3.5vh;      
+        top: -4vw;                
+    }
+
+    .icone-play img{
+        width: 14vh;
+        height: 14vh;        
+        border: 2px solid #fff;
+        border-radius: 2em;
+    }
+
+    .icone-pause img{
+        width: 14vh;
+        height: 14vh;        
+        border: 2px solid #2a5caa;
+        border-radius: 2em;
+    }
+
+    .icone-audio img:hover, .icone-play img:hover{
+        background-color: #ebebeb;
+        border: 2px solid #fec13b;
+        border-radius: 2em;
+        width: 14vh;
+        height: 14vh;
+    }
+
+    .legenda-icone{
+        position: absolute;
+        margin-top: -8vh;
+        font-size: 2em;
+        font-family: "Musket-Bold";
+        
+    }
+    

@@ -1,5 +1,5 @@
 @import url(font-awesome.min.css);
-@import url('http://fonts.cdnfonts.com/css/affogato');
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
 
 /* Reset */
 
@@ -199,7 +199,7 @@
 		}
 
 	h2 {
-		font-family: "Affogato-Regular", sans-serif;
+		font-family: "Catamaran", sans-serif;
 		font-weight: 700;
 		font-size: 28px;
 		line-height: 40px;
@@ -448,7 +448,7 @@
 				font-size: 1rem;
 				display: block;
 				color: rgba(255, 255, 255, 0.65);
-				font-family: "Affogato-Regular", sans-serif;
+				font-family: "Catamaran", sans-serif;
 				font-weight: 700;
 				font-size: 23px;
 				line-height: 35px;
@@ -598,7 +598,7 @@
 		padding-top: 0; /* Elimina espaço desnecessário entre elementos.*/
 		min-height: 800px;
 		/* font-family: "Catamaran", sans-serif; */
-		font-family:"Affogato-Regular", sans-serif;
+		font-family:"Poppins", sans-serif;
       	font-size: 16px;
       	color: #363636;
       	margin-bottom: -140px;
