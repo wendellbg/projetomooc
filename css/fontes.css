@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Affogato-Regular';
+    src: url('../fonts/Affogato-Regular.eot');
+    src: url('../fonts/Affogato-Regular.eot?#iefix') format('embedded-opentype'),
+    	 url('../fonts/Affogato-Regular.woff') format('woff'),
+         url('../fonts/Affogato-Regular.woff2') format('woff2'),
+         url('../fonts/Affogato-Regular.ttf')  format('truetype'),
+         url('../fonts/Affogato-Regular.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'Musket-Bold';
+    src:url('../fonts/Musket-Bold.ttf.woff') format('woff'),
+        url('../fonts/Musket-Bold.ttf.svg#Musket-Bold') format('svg'),
+        url('../fonts/Musket-Bold.ttf.eot'),
+        url('../fonts/Musket-Bold.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+#one p{
+    font-family: "Affogato-Regular";
+}
+
+body h2{
+    font-family: "Musket-bold";
+}

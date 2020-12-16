@@ -1,0 +1,88 @@
+.menu-colorido-geral{
+    background-color: #ebebeb;
+    font-family: "Musket-Bold";
+    padding: 1em;
+    font-size: 1.4em;
+    margin-bottom: 2em;
+}
+
+.hide, .show{
+    padding: 0.5em;
+    display: inline-block;
+}
+
+.details, .show, .hide:target {
+  display: none;
+}
+
+.hide:target + .show, .hide:target ~  .details {
+  display: block;   
+}
+
+.menu-colorido a span{
+    float: right;
+    font-size: 1.2em;
+}
+
+.menu-colorido {
+  color: #FFF;    
+  margin-bottom: 10px;  
+}
+
+.details { 
+  color:#fff;  
+  padding: 1em; 
+  width: 100%;
+  height: 100%;     
+}
+
+.menu-colorido a {
+    color: white;     
+    text-decoration: none;
+    width: 100%;
+    font-size: 1.2em;
+    transition: background-color .5s;
+}
+
+/* .box1a, .box2a, .box3a, .box4a, .box5a{
+    padding: 1em;
+} */
+
+.box1a, .box1b:hover, .box1c{
+    background: #e73535;    
+}
+
+.box1b, .box1a:hover{
+    background: #b70306;
+}
+
+.box2a, .box2b:hover, .box2c{
+    background: #2b5ca9;
+}
+
+.box2b, .box2a:hover{
+    background: #020e36;
+}
+
+.box3a, .box3b:hover, .box3c{
+    background: #3fadac;
+}
+
+.box3b, .box3a:hover{
+    background: #266866;
+}
+
+.box4a, .box4b:hover, .box4c{
+    background: #fdc13c;
+}
+
+.box4b, .box4a:hover{
+    background: #f89106;
+}
+
+.box5a, .box5b:hover, .box5c{
+    background: #ff841d;
+}
+.box5b, .box5a:hover{
+    background: #e16100;
+}
