@@ -738,7 +738,8 @@
 		 text-align: center;
 		 color: #2a5caa;
 		 font-weight: bold;	 
-		 font-size: 20px; 
+		 font-size: 20px;
+		 font-family: "Musket", sans-serif;
 		 	
  	}
 	.caixa-texto-centro {
@@ -821,6 +822,7 @@
 		 color: #fff;
 		 /* font-weight: bold; */
 		 font-size: 18px;
+		 font-family: "Musket", sans-serif;
 		 text-align: justify;
  	}
 	.caixa-texto-rodape {
@@ -844,6 +846,7 @@
 		 color: #2a5caa;
 		 font-weight: bold;	 
 		 font-size: 20px;
+		 font-family: "Musket", sans-serif;
 		 	
  	}
 

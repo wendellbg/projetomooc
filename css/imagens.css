@@ -1,0 +1,21 @@
+.fundo-imagem {
+	display: block; 
+	padding: 5%;	
+}
+.imagem {
+	position: relative;	
+}
+
+.imagem .seg {
+	visibility: hidden;
+    opacity: 0;
+    position:absolute;
+    top:0;
+    left:0;
+
+}
+.imagem:hover .seg {
+    visibility: visible;
+    opacity: 1;
+}
+
