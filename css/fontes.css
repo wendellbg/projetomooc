@@ -18,7 +18,8 @@
     font-style: normal;
 }
 #one p{
-    font-family: "Affogato-Regular";
+    font-family: "Affogato-Regular"; 
+    font-size: 18px;   
 }
 
 body h2{
