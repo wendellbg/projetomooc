@@ -19,9 +19,16 @@
 }
 #one p{
     font-family: "Affogato-Regular"; 
-    font-size: 18px;   
+    font-size: 16px;   
+    line-height: 24px;
 }
 
 body h2{
     font-family: "Musket-bold";
+    font-size: 23px;
+}
+
+.logo a{
+    font-family: "Affogato-Regular";
+    font-size: 35px;
 }
