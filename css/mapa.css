@@ -1,0 +1,14 @@
+.imagem .imagem-ampla {
+	width: 100%;
+	height: 100%;			
+	padding: auto;
+	margin: auto;
+}
+
+.link-complementar {
+	display: block;
+}
+.link-complementar img {
+	width: 10%;
+	height: 10%;
+}
