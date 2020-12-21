@@ -17,15 +17,18 @@
     font-weight: normal;
     font-style: normal;
 }
-#one p{
-    font-family: "Affogato-Regular"; 
-    font-size: 16px;   
-    line-height: 24px;
+
+.content .caixa-texto-topo p, .content .caixa-texto-rodape p{
+    font-size: 1.4em;
 }
 
 body h2{
     font-family: "Musket-bold";
-    font-size: 23px;
+}
+.inner p, .special a{
+    font-family: "Affogato-Regular"; 
+    font-size: 16px;   
+    line-height: 24px;
 }
 
 .logo a{

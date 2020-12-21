@@ -8,9 +8,14 @@
     font-style: normal;
 }
 
-.horizontal-timeline {
+.timeline-geral{
+    display: block;
     position: relative;
-    height: 2vh;
+}
+
+.horizontal-timeline {
+    position: relative;    
+    height: 2vw;
     background: #fec13b;
     margin:0;
     border: 2px solid #fec13b;
@@ -22,7 +27,7 @@
     width: 0;
     height: 0;    
     background-color: #2a5caa;
-    border: 3vh solid #2a5caa;
+    border: 2vw solid #2a5caa;
     border-radius: 2em;
     vertical-align: baseline;
     top: -1vw;
@@ -38,22 +43,22 @@
         border-radius: 2em;          
         border: 2px solid white;   
         position: absolute;
-        width: 14vh;
-        height: 14vh;
-        margin-left: -3.5vh;      
-        top: -4vw;                
+        width: 12vw;
+        height:10vw;
+        margin-left: -3.5vw;      
+        top: -5vw;                
     }
 
     .icone-play img{
-        width: 14vh;
-        height: 14vh;        
+        width: 12vw;
+        height:10vw;       
         border: 2px solid #fff;
         border-radius: 2em;
     }
 
     .icone-pause img{
-        width: 14vh;
-        height: 14vh;        
+        width: 12vw;
+        height:10vw;        
         border: 2px solid #2a5caa;
         border-radius: 2em;
     }
@@ -62,15 +67,28 @@
         background-color: #ebebeb;
         border: 2px solid #fec13b;
         border-radius: 2em;
-        width: 14vh;
-        height: 14vh;
+        width: 12vw;
+        height:10vw;
     }
 
     .legenda-icone{
         position: absolute;
-        margin-top: -8vh;
-        font-size: 2em;
+        margin-top: -10vh;
+        font-size: 3vw;
         font-family: "Musket-Bold";
         
     }
+
+#player70, #player80, #player90{
+    position: relative;
+    top: 12vh;
+    height: 20%;    
+    display: inline-block;
+    width: 140%;
+    
+}
+
+
+
+
     
