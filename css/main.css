@@ -465,8 +465,8 @@
 			background-attachment: scroll;
 			background-size: auto;
 			background-position: top;
-		}
-
+		}		
+		
 	}
 
 	@media screen and (max-width: 736px) {
@@ -718,7 +718,7 @@
 	
    .caixa-texto-topo {
    		position: relative;
-   		top: 40px; /*40px ao invés de 50px*/
+   		top: 30px; /*40px ao invés de 50px*/
 		display: block;
 		padding-left:15%;
 		padding-right:15%;
@@ -744,8 +744,8 @@
  	}
 	.caixa-texto-centro {
 		display:block;
-		padding-left:5%;
-		padding-right:5%;
+		padding-left:2%;
+		padding-right:2%;
 		padding-bottom: 20%;
 		padding-top: 10%;
 		background-image: url(../img/uni1/tela01_bg.png);
@@ -753,8 +753,8 @@
 		background-position: initial;
 		width:auto;
 		height: auto;		
-		margin-left:-20%;
-		margin-right:-20%;
+		margin-left:-8%;
+		margin-right:-6%;
 		margin-top: -10%;
 		background-size: 100%;   
    }
@@ -815,10 +815,10 @@
 		} 
 
  	.caixa-texto-centro p {
- 		 padding-top: 5%;
+ 		 padding-top: 3%;
  		 padding-bottom: 5%;
- 		 padding-left: 15%;
- 		 padding-right: 15%;		 
+ 		 padding-left: 13%;
+ 		 padding-right: 13%;		 
 		 color: #fff;
 		 /* font-weight: bold; */
 		 font-size: 18px;

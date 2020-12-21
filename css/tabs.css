@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: 'Affogato-Regular';
     src: url('../fonts/Affogato-Regular.eot');
     src: url('../fonts/Affogato-Regular.eot?#iefix') format('embedded-opentype'),
@@ -16,15 +16,17 @@
         url('../fonts/Musket-Bold.ttf.eot?#iefix') format('embedded-opentype'); 
     font-weight: normal;
     font-style: normal;
-}
+} */
 
 .tab {
     width: 100%;
     margin: 10px 0;
-    background-color: #ebebeb;   
-    border: 6px solid #ebebeb;      
+    padding-bottom: 10px;
+    background-color: #ababab;   
+    border: 6px solid #ababab;      
     font-family: 'Musket-Bold';
     font-size: 1.2em;
+    display: block;
 }
 
   .tab input[type] {
@@ -38,8 +40,8 @@
     cursor: pointer;
     width: 25%;
     text-align: center;
-    border: 4px solid #ebebeb;
-    background-color: #ebebeb;
+    border: 4px solid #ababab;
+    background-color: #ababab;
     color: #252525;
     border-radius: 1em;
     transition: background-color .3s;
@@ -48,7 +50,7 @@
 .tab label:hover, .tab input:checked + label {
     background: #fff;
     color: #252525;
-    border: 4px solid #ebebeb;
+    border: 4px solid #ababab;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
     border-bottom-left-radius: 0%;
@@ -61,7 +63,7 @@
     perspective: 400px;
     -webkit-perspective: 400px;    
     margin: 10px auto;  
-    min-height:600px;
+    min-height: 600px;
     background:#fff;
   }
 
@@ -69,7 +71,7 @@
     width: 100%;
     position: absolute; 
     height: auto;
-    padding: 10px 20px;
+    padding: 10px 50px;
     line-height: 1.4em;
     opacity: 0;
     /* transform: rotateX(-20deg);
@@ -80,6 +82,15 @@
     transition: all 300ms ease-in-out;
 }
 
+
+/* .tabs .content-tabs:nth-of-type(1){
+  height: 100px;
+}
+
+.tabs .content-tabs:nth-of-type(2){
+  height: 1000px;
+} */
+
 #tab1:checked ~ .tabs .content-tabs:nth-of-type(1),
 #tab2:checked ~ .tabs .content-tabs:nth-of-type(2),
 #tab3:checked ~ .tabs .content-tabs:nth-of-type(3),
@@ -87,9 +98,11 @@
   transform: rotateX(0);
   opacity: 1;
   z-index: 1;
+  height: auto;
 }
 
 .tabs .content-tabs img{
     width: 100%;
     padding: 0;
+    height: 100%;
 }

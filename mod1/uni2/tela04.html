@@ -72,65 +72,66 @@
 								<label for="tab4">Normal</label>
 						   
 								<div class="tabs">
-								  <div class="content-tabs">									
+								  <div class="content-tabs" id="ctab1">									
 									<p>Abordava mais intensamente as ciências naturais: física, química, biologia além de um bom enfoque em matemática.</p>
 									<img src="../../img/uni2/MOOC1_unid2_tela4_imagem1.jpg">
 								  </div>
 								   
-								  <div class="content-tabs">
+								  <div class="content-tabs" id='ctab2'>
 									<p>Dedicava-se mais às humanidades e artes: filosofia, história, sociologia, língua e literatura.</p>
 									<img src="../../img/uni2/MOOC1_unid2_tela4_imagem2.jpg" />
 								  </div>
 								   
-								  <div class="content-tabs">									
+								  <div class="content-tabs" id='ctab3'>									
 									<p>Desdobrava-se em três grupos, segundo os três principais setores da economia à época: Agropecuária, Comércio e Indústria. Havia escolas agrotécnicas, escolas técnicas de comércio e escolas técnicas industriais. O Setor de comércio também incluía os serviços, por isso os cursos da saúde e do turismo faziam parte desse grupo.</p>
 									<img src="../../img/uni2/MOOC1_unid2_tela4_imagem3.jpg" />
 								  </div>
 								   
-								  <div class="content-tabs">
+								  <div class="content-tabs" id='ctab4'>
 									<p>Tratava da formação de professores para o ensino primário, que na época eram as quatro primeiras séries do ensino fundamental.</p>
 									<img src="../../img/uni2/MOOC1_unid2_tela4_imagem4.jpg" />
 								  </div>
 								</div>
-							  </div>
+							</div>
 
 							<p>Veja na linha do tempo a seguir as principais mudanças na estrutura do Ensino Médio. Clique no ícone correspondente a cada década para ouvir o áudio.</p>
 							
-							<div class="horizontal-timeline-icones">
-								<div class="icone-audio" style="left: 25%;">
-									<a class='icone-play' id="botao-play-70" onclick="playShow70()"><img src="../../img/uni2/icone-audio.png" class='icone-play' /></a>																		
-									<a class="icone-pause" id="botao-pause-70" onclick="pauseShow70()" style="display:none;"><img src="../../img/uni2/icone-audio2.png" /></a>
-									<audio id='player70'>
-										<source src="../../img/uni2/70.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
-									</audio>
+							<div class="timeline-geral">
+								<div class="horizontal-timeline-icones">
+									<div class="icone-audio" style="left: 25%;">
+										<a class='icone-play' id="botao-play-70" onclick="playShow70()"><img src="../../img/uni2/icone-audio.png" class='icone-play' /></a>																		
+										<a class="icone-pause" id="botao-pause-70" onclick="pauseShow70()" style="display:none;"><img src="../../img/uni2/icone-audio2.png" /></a>
+										<audio id='player70' controls='controls'>
+											<source src="../../img/uni2/70.mp3" type="audio/mp3"/>Seu navegador não suporta HTML5
+										</audio>
+									</div>
+									<div class="icone-audio" style="left: 50%;">
+										<a class='icone-play' id="botao-play-80" onclick="playShow80()"><img src="../../img/uni2/icone-audio.png" class='icone-play' /></a>																		
+										<a class="icone-pause" id="botao-pause-80" onclick="pauseShow80()" style="display:none;"><img src="../../img/uni2/icone-audio2.png" /></a>
+										<audio id='player80' controls='controls'>
+											<source src="../../img/uni2/80.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+										</audio>
+									</div>
+									<div class="icone-audio" style="left: 75%;">
+										<a class='icone-play' id="botao-play-90" onclick="playShow90()"><img src="../../img/uni2/icone-audio.png" class='icone-play' /></a>																		
+										<a class="icone-pause" id="botao-pause-90" onclick="pauseShow90()" style="display:none;"><img src="../../img/uni2/icone-audio2.png" /></a>
+										<audio id='player90' controls="controls">
+											<source src="../../img/uni2/90.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+										</audio>
+									</div>
+								</div> 
+								<div class="horizontal-timeline">
+									<div class="arrow-up" style="left: 25%;"></div>
+									<div class="arrow-up" style="left: 50%;"></div>
+									<div class="arrow-up" style="left: 75%;"></div>
 								</div>
-								<div class="icone-audio" style="left: 50%;">
-									<a class='icone-play' id="botao-play-80" onclick="playShow80()"><img src="../../img/uni2/icone-audio.png" class='icone-play' /></a>																		
-									<a class="icone-pause" id="botao-pause-80" onclick="pauseShow80()" style="display:none;"><img src="../../img/uni2/icone-audio2.png" /></a>
-									<audio id='player80'>
-										<source src="../../img/uni2/80.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
-									</audio>
-								</div>
-								<div class="icone-audio" style="left: 75%;">
-									<a class='icone-play' id="botao-play-90" onclick="playShow90()"><img src="../../img/uni2/icone-audio.png" class='icone-play' /></a>																		
-									<a class="icone-pause" id="botao-pause-90" onclick="pauseShow90()" style="display:none;"><img src="../../img/uni2/icone-audio2.png" /></a>
-									<audio id='player90'>
-										<source src="../../img/uni2/90.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
-									</audio>
-								</div>
-							</div> 
-							<div class="horizontal-timeline">
-								<div class="arrow-up" style="left: 25%;"></div>
-								<div class="arrow-up" style="left: 50%;"></div>
-								<div class="arrow-up" style="left: 75%;"></div>
+								<div class="horizontal-timeline-icones">
+									<div class="legenda-icone" style="left: 0%;">Anos</div>
+									<div class="legenda-icone" style="left: 25%;">70</div>
+									<div class="legenda-icone" style="left: 50%;">80</div>
+									<div class="legenda-icone" style="left: 75%;">90</div>
+								</div> 
 							</div>
-							<div class="horizontal-timeline-icones">
-								<div class="legenda-icone" style="left: 0%;">Anos</div>
-								<div class="legenda-icone" style="left: 25%;">70</div>
-								<div class="legenda-icone" style="left: 50%;">80</div>
-								<div class="legenda-icone" style="left: 75%;">90</div>
-							</div> 
-							
 							<div class='navegacao'>
 								<span class="lista-navegacao" style="margin-left:530px;">
 									<a href="#"><i class="fas fa-angle-double-up" style="font-size:48px;"></i></a>                                		                            
