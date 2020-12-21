@@ -91,12 +91,12 @@
 	}
 }
 
-.video-uni2 img{
+.video-uni2 img, .video-uni1 img{
 	width: 100%;
 	position: relative;	
   }
 
-.video-uni2 .video-player {
+.video-uni2 .video-player, .vide-uni1 .video-player {
 	width: 66%;
 	/* height: 90%;	 */
 	margin-top: -46%;
