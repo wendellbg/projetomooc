@@ -60,16 +60,16 @@
 							
 							<div class="tab">
 								<input type="radio" name="tabs" id="tab1" checked>
-								<label for="tab1">Científico</label>
+								<label for="tab1" onclick="exibeTab1()">Científico</label>
 						   
 								<input type="radio" name="tabs" id="tab2">
-								<label for="tab2">Clássico</label>
+								<label for="tab2" onclick="exibeTab2()">Clássico</label>
 						   
 								<input type="radio" name="tabs" id="tab3">
-								<label for="tab3">Técnico</label>
+								<label for="tab3" onclick="exibeTab3()">Técnico</label>
 						   
 								<input type="radio" name="tabs" id="tab4">
-								<label for="tab4">Normal</label>
+								<label for="tab4" onclick="exibeTab4()">Normal</label>
 						   
 								<div class="tabs">
 								  <div class="content-tabs" id="ctab1">									
@@ -98,21 +98,21 @@
 							
 							<div class="timeline-geral">
 								<div class="horizontal-timeline-icones">
-									<div class="icone-audio" style="left: 25%;">
+									<div class="icone-audio" style="left: 24%;">
 										<a class='icone-play' id="botao-play-70" onclick="playShow70()"><img src="../../img/uni2/icone-audio.png" class='icone-play' /></a>																		
 										<a class="icone-pause" id="botao-pause-70" onclick="pauseShow70()" style="display:none;"><img src="../../img/uni2/icone-audio2.png" /></a>
 										<audio id='player70' controls='controls'>
 											<source src="../../img/uni2/70.mp3" type="audio/mp3"/>Seu navegador não suporta HTML5
 										</audio>
 									</div>
-									<div class="icone-audio" style="left: 50%;">
+									<div class="icone-audio" style="left: 48%;">
 										<a class='icone-play' id="botao-play-80" onclick="playShow80()"><img src="../../img/uni2/icone-audio.png" class='icone-play' /></a>																		
 										<a class="icone-pause" id="botao-pause-80" onclick="pauseShow80()" style="display:none;"><img src="../../img/uni2/icone-audio2.png" /></a>
 										<audio id='player80' controls='controls'>
 											<source src="../../img/uni2/80.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
 										</audio>
 									</div>
-									<div class="icone-audio" style="left: 75%;">
+									<div class="icone-audio" style="left: 73%;">
 										<a class='icone-play' id="botao-play-90" onclick="playShow90()"><img src="../../img/uni2/icone-audio.png" class='icone-play' /></a>																		
 										<a class="icone-pause" id="botao-pause-90" onclick="pauseShow90()" style="display:none;"><img src="../../img/uni2/icone-audio2.png" /></a>
 										<audio id='player90' controls="controls">
@@ -248,6 +248,36 @@
 				console.log(evento.detail);
 			};
 
+			var aba1 = document.getElementById('ctab1');
+			var aba2 = document.getElementById('ctab2');
+			var aba3 = document.getElementById('ctab3');
+			var aba4 = document.getElementById('ctab4');
+
+			var exibeTab1 = function(){
+				aba1.style.display = "block";
+				aba2.style.display = 'none';
+				aba3.style.display = 'none';
+				aba4.style.display = 'none';
+			}
+			var exibeTab2 = function(){
+				aba2.style.display = "block";
+				aba1.style.display = 'none';
+				aba3.style.display = 'none';
+				aba4.style.display = 'none';
+			}
+			var exibeTab3 = function(){
+				aba3.style.display = "block";
+				aba2.style.display = 'none';
+				aba1.style.display = 'none';
+				aba4.style.display = 'none';
+			}
+			var exibeTab4 = function(){
+				aba4.style.display = "block";
+				aba2.style.display = 'none';
+				aba3.style.display = 'none';
+				aba1.style.display = 'none';
+			}
+
 
 			var audio70 = document.getElementById('player70');			
 			var play70 = document.getElementById('botao-play-70');
@@ -266,13 +296,17 @@
 				audio70.play();
 				play70.style.display = "none";
 				pause70.style.display = "inline-block";
+				audio70.style.display = "inline-block";
+				pauseShow80();
+				pauseShow90();
 			};
 
 			// Pause audio & mostra link de play
 			var pauseShow70 = function() {
 			 	audio70.pause();
 			 	play70.style.display = "block";
-			 	pause70.style.display = "none";
+				pause70.style.display = "none";
+				audio70.style.display = "none";
 			};
 
 
@@ -281,26 +315,33 @@
 				audio80.play();
 				play80.style.display = "none";
 				pause80.style.display = "inline-block";
+				audio80.style.display = "inline-block";
+				pauseShow70();
+				pauseShow90();
 			};
-
 			// Pause audio & mostra link de play
 			var pauseShow80 = function() {
 			 	audio80.pause();
 			 	play80.style.display = "block";
 			 	pause80.style.display = "none";
+				audio80.style.display = "none";
 			};
+			
 			// Play audio & mostra link de pause 
 			var playShow90 = function() {
 				audio90.play();
 				play90.style.display = "none";
 				pause90.style.display = "inline-block";
+				audio90.style.display = "inline-block";
+				pauseShow80();
+				pauseShow70();
 			};
-
 			// Pause audio & mostra link de play
 			var pauseShow90 = function() {
 			 	audio90.pause();
 			 	play90.style.display = "block";
-			 	pause90.style.display = "none";
+				pause90.style.display = "none";				 
+				audio90.style.display = "none";
 			};
 		</script>
 	</body>

@@ -8,8 +8,7 @@
     font-style: normal;
 }
 
-.timeline-geral{
-    display: block;
+.timeline-geral{    
     position: relative;
 }
 
@@ -19,7 +18,7 @@
     background: #fec13b;
     margin:0;
     border: 2px solid #fec13b;
-    border-radius: 3vh;
+    border-radius: 3vw;
     }
     
     .arrow-up{
@@ -27,23 +26,24 @@
     width: 0;
     height: 0;    
     background-color: #2a5caa;
-    border: 2vw solid #2a5caa;
-    border-radius: 2em;
+    border: 1.5vw solid #2a5caa;
+    border-radius: 3vw;
     vertical-align: baseline;
     top: -1vw;
     }
 
     .horizontal-timeline-icones{
         position: relative;
-        height: 2vh;        
-        margin: 12vh 0 6vh 0;        
+        height: 1vw;        
+        margin: 12vh 0 6vh 0;    
+
         }
     
      .icone-audio{      
         border-radius: 2em;          
         border: 2px solid white;   
         position: absolute;
-        width: 12vw;
+        width: 10vw;
         height:10vw;
         margin-left: -3.5vw;      
         top: -5vw;                
@@ -79,15 +79,31 @@
         
     }
 
-#player70, #player80, #player90{
-    position: relative;
-    top: 12vh;
-    height: 20%;    
-    display: inline-block;
-    width: 140%;
     
+#player70, #player80, #player90{
+    position: absolute;
+    top: -3vh;    
+    height: 2vh;    
+    display: inline-block;
+    width: 50vw;    
+    left: 0;
 }
 
+#player70{    
+    margin-left: -10vw;
+}
+
+#player80{
+    margin-left: -24vw;
+}
+
+#player90{
+    margin-left: -38vw;
+}
+
+#player70, #player80, #player90{
+    display: none;
+}
 
 
 
