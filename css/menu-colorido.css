@@ -152,13 +152,12 @@
 .divs-coloridas .cor7a, .divs-coloridas .i7:hover .cor7b{
     background-color: #b70306;
     color: #fff;    
-    transition: background-color .5s;
+    transition: background-color .5s;    
 }
 .divs-coloridas .cor7b, .divs-coloridas .i7:hover .cor7a{
     background-color: #ff2444;
     color: #000;
 } 
-
 
 .divs-coloridas{
     border: 3px solid #bbb;
@@ -166,7 +165,7 @@
     margin-top: 6em;
     padding-left: 1em ;
     padding-right: 1em;   
-    margin-bottom: 7em; 
+    margin-bottom: 4em; 
 }
 
 .divs-coloridas .item{
@@ -185,8 +184,12 @@
     padding-bottom: 60px;
     margin-right: 45px; 
 }
- .divs-coloridas .i7{
-    margin-bottom: -6em;
+ .divs-coloridas .i7 .titulo{
+    padding-bottom: 4em;
+}
+
+.divs-coloridas .i7{
+    margin-bottom: -3em;
 }
 
 .divs-coloridas .descricao{
@@ -199,6 +202,21 @@
     padding: 20px; 
     right: 0;
     top: 0;
+}
+
+@media screen and (max-width: 660px) {
+	.divs-coloridas .descricao{
+        width: 90%;
+        margin-left: 10%;
+        position: relative;
+    }   
+    .divs-coloridas .titulo{
+        padding-right: 0;
+        padding-bottom: 5%;
+    }
+    .divs-coloridas .i7 .titulo{
+        padding-bottom: 1em;
+    }
 }
 
 

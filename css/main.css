@@ -764,7 +764,7 @@
 
 			.wrapper.style1 .content .caixa-texto-topo {
 				font-size: 0.9em;
-				background-size: 70%;
+				background-size: 50%;
 				margin-left:0%; /* 10% ao inves de 15% impede encolimento do fundo */
 				margin-right:0%;
 			}
@@ -775,6 +775,7 @@
 				margin-top: 0%;
 				padding-bottom: 0%;
 				margin-bottom: 18%;
+				padding-top: 0;
 			}
 
 			.wrapper.style1 .content .caixa-texto-centro p{
@@ -782,7 +783,8 @@
 			}
 
 			.wrapper.style1 .content .caixa-texto-rodape{
-				background-size: 70%;
+				background-size: 50%;
+				font-size: 0.8em;
 			}
 
 			.wrapper.style1 .content .bt-navegacao{
@@ -815,6 +817,40 @@
 
 		} 
 
+		@media screen and (max-width: 550px) {
+			.wrapper.style1 .content .caixa-texto-topo, .wrapper.style1 .content .caixa-texto-rodape{
+				background-image: url(none);
+				background-color: #fec13b;
+				border-radius: 1em;	
+				margin-bottom: 2em;	
+				width: 80%;
+				padding: 2px 1px;	
+				margin-left: 10%;
+				transform: rotate(-5deg);	
+			}
+
+			.wrapper.style1 .content .caixa-texto-rodape{
+				background-image: url(none);
+				background-color: #fec13b;
+				border-radius: 1em;	
+				margin-top: -5em;	
+				width: 50%;
+				padding: 1px 1px;	
+				margin-left: 10%;
+				transform: rotate(-5deg);	
+			}
+			.wrapper.style1 .content .caixa-texto-topo p, .wrapper.style1 .content .caixa-texto-rodape p{
+				padding: 0;
+				margin: 0.5em;
+				transform: rotate(5deg);	
+			}
+
+			.wrapper.style1 .content .caixa-texto-centro{
+				padding-bottom: 10%;
+			}
+
+		}
+
  	.caixa-texto-centro p {
  		 padding-top: 3%;
  		 padding-bottom: 5%;
@@ -835,7 +871,7 @@
 		background-position: center;	
 		margin-left:0%;
 		margin-right:50%;
-		margin-top: -25%;
+		margin-top: -22%;
 		background-size: 50%;
 		width:auto;
 		height:auto;   
