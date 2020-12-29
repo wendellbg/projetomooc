@@ -14,17 +14,19 @@
 
 .horizontal-timeline {
     position: relative;    
-    height: 2vw;
+    height: 0;
     background: #fec13b;
     margin:0;
-    border: 2px solid #fec13b;
+    margin-top: 6vw;
+    padding-top: 1vw;
+    border: 0.5vw solid #fec13b;
     border-radius: 3vw;
     }
     
     .arrow-up{
     position: absolute;
-    width: 0;
-    height: 0;    
+    width: 2vw;
+    height: 2vw;    
     background-color: #2a5caa;
     border: 1.5vw solid #2a5caa;
     border-radius: 3vw;
@@ -45,29 +47,29 @@
         position: absolute;
         width: 10vw;
         height:10vw;
-        margin-left: -3.5vw;      
-        top: -5vw;                
+        margin-left: -2.5vw;      
+        top: -4vw;                
     }
 
     .icone-play img{
-        width: 12vw;
+        width: 10vw;
         height:10vw;       
         border: 2px solid #fff;
-        border-radius: 2em;
+        border-radius: 1em;
     }
 
     .icone-pause img{
-        width: 12vw;
+        width: 10vw;
         height:10vw;        
         border: 2px solid #2a5caa;
-        border-radius: 2em;
+        border-radius: 1em;
     }
 
     .icone-audio img:hover, .icone-play img:hover{
         background-color: #ebebeb;
         border: 2px solid #fec13b;
-        border-radius: 2em;
-        width: 12vw;
+        border-radius: 1em;
+        width: 10vw;
         height:10vw;
     }
 
@@ -78,14 +80,13 @@
         font-family: "Musket-Bold";
         
     }
-
     
 #player70, #player80, #player90{
     position: absolute;
-    top: -3vh;    
+    top: -2vh;    
     height: 2vh;    
     display: inline-block;
-    width: 50vw;    
+    width: 60vw;    
     left: 0;
 }
 
