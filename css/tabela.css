@@ -1,0 +1,50 @@
+.tabela{    
+    width: 100%;
+    text-align: left;      
+    font-weight: bold;   
+    margin: auto; 
+    border: solid 6px #ebebeb;
+    margin-bottom: 2em;
+    background-color: #fff;;
+}
+
+.tabela thead th{
+    font-size: 2.2em;  
+    font-family: "Musket-Bold";   
+    padding: 0.5em;  
+}
+
+.tabela tbody tr td{
+    vertical-align: middle;      
+    padding-right: 1em;      
+    padding-bottom: 1em;
+}
+
+.tabela tbody tr td p{
+    font-family: "Musket";
+    font-weight: normal; 
+    font-size: 1.2em;
+    border: 4px solid #ebebeb;
+    padding: 1em;
+}
+
+.tabela tbody tr th{        
+    padding-right: 1em;
+    padding-left: 1em;  
+    padding-bottom: 1em;           
+    vertical-align: middle;
+    width: 40%;
+    height: 100%;
+    font-weight: bold; 
+    background-color: #fff;
+    
+    /* border: 2px solid white; */
+}
+.tabela tbody th p{
+    background-color: #ebebeb;    
+    border: 4px solid #ebebeb;
+    font-size: 1.2em; 
+    font-family: "Musket-Bold";   
+    padding: 1em;
+    
+}

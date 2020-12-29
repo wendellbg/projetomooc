@@ -14,6 +14,16 @@
         url('../fonts/Musket-Bold.ttf.svg#Musket-Bold') format('svg'),
         url('../fonts/Musket-Bold.ttf.eot'),
         url('../fonts/Musket-Bold.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face{
+    font-family: 'Musket';    
+    src:url('../fonts/Musket.ttf.woff') format('woff'),
+        url('../fonts/Musket.ttf.svg#Musket') format('svg'),
+        url('../fonts/Musket.ttf.eot'),
+        url('../fonts/Musket.ttf.eot?#iefix') format('embedded-opentype'); 
     font-weight: normal;
     font-style: normal;
 }
