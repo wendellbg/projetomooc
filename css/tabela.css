@@ -2,49 +2,106 @@
     width: 100%;
     text-align: left;      
     font-weight: bold;   
-    margin: auto; 
-    border: solid 6px #ebebeb;
-    margin-bottom: 2em;
-    background-color: #fff;;
-}
-
-.tabela thead th{
-    font-size: 2.2em;  
-    font-family: "Musket-Bold";   
-    padding: 0.5em;  
-}
-
-.tabela tbody tr td{
-    vertical-align: middle;      
-    padding-right: 1em;      
-    padding-bottom: 1em;
-}
-
-.tabela tbody tr td p{
-    font-family: "Musket";
-    font-weight: normal; 
-    font-size: 1.2em;
-    border: 4px solid #ebebeb;
-    padding: 1em;
-}
-
-.tabela tbody tr th{        
-    padding-right: 1em;
-    padding-left: 1em;  
-    padding-bottom: 1em;           
-    vertical-align: middle;
-    width: 40%;
-    height: 100%;
-    font-weight: bold; 
+    margin-top: 8em; 
+    border: solid 6px #bbb;
+    margin-bottom: 8em;
     background-color: #fff;
     
-    /* border: 2px solid white; */
 }
-.tabela tbody th p{
-    background-color: #ebebeb;    
-    border: 4px solid #ebebeb;
-    font-size: 1.2em; 
-    font-family: "Musket-Bold";   
-    padding: 1em;
+.tabela::after{
+    margin-bottom: 2em;
+}
+
+.cabecalho-tabela{
+    margin-left: 0.5em;
+    font-size: 2.2em;
+    font-family: "Musket-Bold";
+    padding-top: 1.4em;
+}
+
+.tabela .linha-tabela{
+    height: 100%;    
+    width: 100%;
+    padding: 0;
+    display: flex;
+}
+.tabela .linha-tabela:before, .tabela .linha-tabela:after{
+    content: "";
+    display: table;
+}
+
+.tabela .linha-tabela:after{
+    clear: both;    
+}
+
+.tabela .coluna1{
+    width: 40%;    
+    margin-left: 1em;    
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-right: 1em;
+    padding: 0.5em;
+    border: 4px solid #bbb;
+    background-color: #bbb;
+    position: relative;
+    float: left;  
+}
+
+.tabela .coluna1 p{
+    font-family: "Musket-Bold";
+    font-weight: bold;
+    font-size: 1.2em;
+    position: absolute;
+    top: 50%;        
+    transform: translate(0, -50%);
     
+}
+
+.tabela .coluna2{   
+    width: 50%;    
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    border: 4px solid #bbb;
+    float: right;    
+    background-color: #fff;    
+}
+
+.tabela .coluna2 p{
+    min-height: 8vh;
+    font-family: "Musket";
+    font-size: 1.2em;
+    font-weight: normal;        
+}
+
+.tabela .cabecalho-tabela .imagem-tabela{
+    position: relative;
+    float: right;
+    Width: 10vw;
+    height: 10vw;
+    margin-top: -4em;        
+    margin-right: -5vw;    
+}
+
+@media screen and (max-width: 512px){
+    .tabela .cabecalho-tabela .imagem-tabela{        
+        Width: 20vw;
+        height: 20vw;        
+    }
+}
+
+@media screen and (max-width: 810px){
+    .tabela .cabecalho-tabela .imagem-tabela{        
+        Width: 15vw;
+        height: 15vw;        
+    }
+}
+@media screen and (max-width: 585px) {
+   
+    .tabela .linha-tabela p {
+        font-size: 1em;
+    }
+    .tabela .cabecalho-tabela{
+        font-size: 1.4em;
+    }
 }
