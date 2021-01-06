@@ -1,0 +1,91 @@
+.destaque-colunas{    
+    position: relative;
+    
+}
+
+.coluna-geral{    
+    width: 50%; 
+    margin: 0;   
+         
+    margin-bottom: 2em;    
+}
+
+.top-coluna img{       
+    display: block;    
+    margin-left: auto;
+    margin-right: auto;    
+    margin-bottom: 1em;
+    width: 70%;
+}
+
+.corpo-coluna{
+    width: 100%;       
+}
+
+.corpo-coluna .titulo-coluna{
+    width: 50%;    
+}
+
+.corpo-coluna .titulo-coluna p{
+    font-family: "Musket-Bold";
+    font-size: 1.6em;       
+    margin: auto;
+    text-align: center;    
+    width: 50%;
+}
+
+.corpo-coluna .texto-coluna p{    
+    margin: 1em 2em;
+    font-family: "Musket";
+    font-size: 1.2em;   
+    margin-top: 1em;
+    padding-bottom: 1em;
+}
+
+.coluna1{
+    position: relative;    
+    float:left;    
+}
+
+.coluna2{
+    position: relative;
+    float: right;
+}
+
+.coluna1 .corpo-coluna{    
+    background-image: url(../img/uni2/MOOC1_Uni2_tela6_imagem2a_back.png);        
+	background-repeat: no-repeat;
+    background-position: top;   
+    margin-right: 1vh;
+    background-size: 100% 100%;    
+    width: 100%;
+    /* height: 20vw;             */
+}
+
+.coluna2 .corpo-coluna{
+    background-image: url(../img/uni2/MOOC1_Uni2_tela6_imagem2b_back.png);
+    background-repeat: no-repeat;
+    background-position:top;    
+    margin-left: 1vh;
+    background-size: 100% 100%;      
+    width: 100%;
+    /* height: 20vw;  */
+}
+
+
+@media screen and (max-width: 1055px){
+    .corpo-coluna .titulo-coluna p{
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .coluna1{
+        width: 100%;        
+    }
+
+    .coluna2{
+        width: 100%;
+    }
+    
+}
