@@ -78,15 +78,23 @@
 
 .fique-por-dentro .texto span{
 	font-weight: 900;
-	font-size: 1.1em;
+	font-size: 1.4em;
 }
 
-@media screen and (max-width: 980px) {
-	.fique-por-dentro .texto span{
+@media screen and (max-width: 1410px) {
+	.fique-por-dentro .texto span{		
 		font-weight: 800;
 		font-size: 1.2em;
 	}
 }
+
+@media screen and (max-width: 1036px) {
+	.fique-por-dentro .texto span{
+		line-height: 1.2em;
+		
+	}
+}
+
 @media screen and (max-width: 800px) {
 	.fique-por-dentro .texto span{
 		font-size: 1.1em;
