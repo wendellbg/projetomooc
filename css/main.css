@@ -540,7 +540,7 @@
 			padding-bottom: .75rem;
 		}
 
-			.wrapper > header h2:after {
+			/* .wrapper > header h2:after {
 				content: '';
 				position: absolute;
 				margin: left;
@@ -550,7 +550,7 @@
 				width: 10%;
 				height: 1px;
 				background-color: rgba(0, 0, 0, 0.125);
-			}
+			} */
 
 		.wrapper > header p {
 			text-transform: uppercase;
@@ -797,7 +797,7 @@
 			.wrapper.style1 .content .bt-avanca{
 				padding: 10px 21px;
 				border-radius: 10px;
-				margin: 4px 2px;
+				/* margin: 4px 2px; */
 			}
 
 			.wrapper.style1 .content .coluna-50 {
