@@ -675,7 +675,7 @@
 		flex-flow: row wrap;
 	}
 	.content .coluna-50 {	/*@jlas*/
-		position: relative;
+		/* position: relative; */
 		width: 50%;
 		/*display: inline-block;*/
 	}
