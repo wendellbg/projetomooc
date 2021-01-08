@@ -95,7 +95,7 @@
    }
 
    .bt-avanca {
-		position: relative;
+		/* position: relative; */
 		background-color: #2a5caa;
 		border:none;
 		color: white;
@@ -104,7 +104,7 @@
 		text-decoration: none;
 		font-weight: 400;
 		letter-spacing:0.2em;
-		display: block;
+		display: block;		
 		font-size: 1rem;
 		font-family: "Catamaran", sans-serif;    
 		margin: 40px auto;
