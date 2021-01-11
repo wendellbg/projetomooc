@@ -861,7 +861,12 @@
 		 font-size: 18px;
 		 font-family: "Musket-Bold", sans-serif;
 		 text-align: justify;
- 	}
+	 }
+	 
+	.caixa-texto-centro.u3t1 p{		
+		padding-left: 15%;
+		min-height: 180px;
+	}
 	.caixa-texto-rodape {
 		display:block;
 		padding-left:5%;

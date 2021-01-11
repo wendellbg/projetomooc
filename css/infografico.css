@@ -1,0 +1,238 @@
+:root{
+    --tamanho: 20px;
+}
+
+
+@media screen and (max-width: 800px){
+    :root{
+        --tamanho: 16px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    :root{
+        --tamanho: 14px;
+    }
+}
+
+
+.infografico{
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    background-color: #fdc13c;
+    padding: 5%;
+    min-width: 500px;
+}
+
+.infografico .titulo-bola{
+    background-color: #2b5ca9;
+    text-align: center;
+    padding: 1em;
+    z-index: 5;
+}
+
+.infografico .titulo-bola:hover{
+    background-color: #010f36;    
+}
+
+ .infografico .titulo-bola span{
+    position: relative;
+    font-family: "Musket";
+    color: #fff;
+    width: 90%;
+    height: 90%;
+    /* font-size: 1.2em; */
+    font-size: var(--tamanho);
+    margin-left: 5%;
+    margin-right: 5%;
+    z-index: 10;
+}
+
+.infografico .titulo-bola.bola1, .infografico .titulo-bola.titulo-bola.bola1 .titulo-borda{
+    position: relative;
+    width: calc(var(--tamanho)*10);
+    height: calc(var(--tamanho)*10);
+    border-radius: 50%;
+    top: 5%;
+    z-index: 6;
+}
+
+.infografico .titulo-bola.bola1 .titulo-borda{
+    border: 2px solid #9ddddf;
+    margin-top: calc(var(--tamanho)*(-8));
+    margin-left: calc(var(--tamanho)*(-2));
+}
+
+.infografico .titulo-bola.bola3, .infografico .titulo-bola.titulo-bola.bola3 .titulo-borda{
+    position: relative;
+    width: calc(var(--tamanho)*11);
+    height:  calc(var(--tamanho)*11);
+    border-radius: 50%;
+    top: calc(var(--tamanho)*(-11));
+    left: calc(var(--tamanho)*(20));
+}
+
+.infografico .titulo-bola.titulo-bola.bola3 .titulo-borda{    
+    border: 2px solid #9ddddf;
+    top: calc(var(--tamanho)*(-9));
+    left: calc(var(--tamanho)*(-0.1));
+    
+} 
+
+.infografico .titulo-bola.bola2, .infografico .titulo-bola.titulo-bola.bola2 .titulo-borda{
+    position: relative;
+    width:  calc(var(--tamanho)*10);
+    height:  calc(var(--tamanho)*10);
+    border-radius: 50%;
+    top: calc(var(--tamanho)*(-5));
+    left: calc(var(--tamanho)*(11));
+}
+
+.infografico .titulo-bola.titulo-bola.bola2 .titulo-borda{
+    border: 2px solid #9ddddf;
+    top: calc(var(--tamanho)*(-8));
+    left:calc(var(--tamanho)*(-1));
+}
+
+
+.ligacao{
+    position: absolute;    
+    z-index: 0;
+    background-color: #2b5ca9;
+    width: calc(var(--tamanho)*1);
+    content: "";
+}
+
+.l1{
+    height: calc(var(--tamanho)*15);
+    transform: rotate(-45deg);
+    /* margin-top: -35%;
+    margin-left: 25%; */
+    top: calc(var(--tamanho)*(8));
+    left: calc(var(--tamanho)*(12));
+}
+
+.l2{
+    height: calc(var(--tamanho)*15);
+    transform: rotate(30deg);
+    top: calc(var(--tamanho)*(5));
+    left: calc(var(--tamanho)*(24));
+}
+
+
+.texto-topico{
+    background-color: #010f36;
+    color: #fff;
+    font-size: calc(var(--tamanho));    
+    padding: 1em;
+    padding-left: 50px;
+    border-radius: 1em;
+}
+
+.texto-topico li{
+    list-style: none;        
+    margin-bottom: 1em;
+}
+
+.texto-topico li::before{        
+    content:"·";
+    font-size:calc(var(--tamanho)*12);
+    vertical-align:top;       
+    margin-right:calc(var(--tamanho)*0.6);
+    margin-left: calc(var(--tamanho)*(-2.25));
+    line-height:calc(var(--tamanho)*1.8);
+}
+
+.seta{
+    width: calc(var(--tamanho)*(4));
+    height: calc(var(--tamanho)*(4));
+    background-color: #010f36;
+    padding: 0;
+    margin: 0;
+    content: "";
+    position: absolute;
+    z-index: 4;
+}
+
+.seta.s1{
+    top: calc(var(--tamanho)*(4));
+    left: calc(var(--tamanho)*(12));
+    transform: rotate(45deg);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear; 
+}
+
+.seta.s2{
+    width: calc(var(--tamanho)*(6));
+    height: calc(var(--tamanho)*(6));
+    top: calc(var(--tamanho)*(12));
+    left: calc(var(--tamanho)*(15));
+    transform: rotate(45deg);   
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.seta.s3{
+    width: calc(var(--tamanho)*(4));
+    height: calc(var(--tamanho)*(4));
+    top: calc(var(--tamanho)*(12));
+    left: calc(var(--tamanho)*(26));
+    transform: rotate(45deg);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;      
+}
+
+.infografico .texto-topico.t1{
+    position: absolute;
+    z-index: 10;
+    width: 6calc(var(--tamanho)*(10));
+    top: calc(var(--tamanho)*(2));
+    left: calc(var(--tamanho)*(14));
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.infografico .titulo-bola.bola1:hover ~ .texto-topico.t1, .infografico .titulo-bola.bola1:hover ~ .s1{
+    visibility: visible;
+    opacity: 1;
+}
+
+.infografico .texto-topico.t2{
+    position: absolute;
+    z-index: 10;
+    width: 6calc(var(--tamanho)*(11));
+    top: calc(var(--tamanho)*(0));
+    left: calc(var(--tamanho)*(1));    
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.infografico .titulo-bola.bola2:hover ~ .texto-topico.t2, .infografico .titulo-bola.bola2:hover ~ .s2{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.infografico .texto-topico.t3{
+    position: absolute;
+    z-index: 10;
+    width: 6calc(var(--tamanho)*(11));
+    top: calc(var(--tamanho)*(13));
+    left: calc(var(--tamanho)*(1));
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.infografico .titulo-bola.bola3:hover ~ .texto-topico.t3, .infografico .titulo-bola.bola3:hover ~ .s3{
+    visibility: visible;
+    opacity: 1;
+}
+
+
