@@ -9,11 +9,8 @@
     }
 }
 
-@media screen and (max-width: 600px){
-    :root{
-        --tamanho: 14px;
-    }
-}
+
+
 
 
 .infografico{
@@ -22,7 +19,7 @@
     z-index: 0;
     background-color: #fdc13c;
     padding: 5%;
-    min-width: 500px;
+    /* min-width: 500px; */
 }
 
 .infografico .titulo-bola{
@@ -156,8 +153,8 @@
 }
 
 .seta.s1{
-    top: calc(var(--tamanho)*(4));
-    left: calc(var(--tamanho)*(12));
+    top: calc(var(--tamanho)*(12));
+    left: calc(var(--tamanho)*(6));
     transform: rotate(45deg);
     visibility: hidden;
     opacity: 0;
@@ -188,10 +185,9 @@
 
 .infografico .texto-topico.t1{
     position: absolute;
-    z-index: 10;
-    width: 6calc(var(--tamanho)*(10));
-    top: calc(var(--tamanho)*(2));
-    left: calc(var(--tamanho)*(14));
+    z-index: 10;    
+    top: calc(var(--tamanho)*(14));
+    left: calc(var(--tamanho)*(1));
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
@@ -204,8 +200,7 @@
 
 .infografico .texto-topico.t2{
     position: absolute;
-    z-index: 10;
-    width: 6calc(var(--tamanho)*(11));
+    z-index: 10;    
     top: calc(var(--tamanho)*(0));
     left: calc(var(--tamanho)*(1));    
     visibility: hidden;
@@ -221,8 +216,7 @@
 
 .infografico .texto-topico.t3{
     position: absolute;
-    z-index: 10;
-    width: 6calc(var(--tamanho)*(11));
+    z-index: 10;    
     top: calc(var(--tamanho)*(13));
     left: calc(var(--tamanho)*(1));
     visibility: hidden;
@@ -236,3 +230,84 @@
 }
 
 
+
+@media screen and (max-width: 570px){
+    .infografico{
+        width: 120%;
+        margin-left: -10%;
+    }
+    :root{
+        --tamanho: 10px; 
+    }
+    .infografico .titulo-bola{
+        line-height: 1em;
+    }
+    
+    .infografico .titulo-bola span, .texto-topico{
+        font-size: 16px;        
+    }
+
+    .infografico .titulo-bola.bola1, .infografico .titulo-bola.titulo-bola.bola1 .titulo-borda{
+        width: calc(var(--tamanho)*12);
+        height: calc(var(--tamanho)*12);
+        left: calc(var(--tamanho)*(-1));
+        top: calc(var(--tamanho)*(-0.5));
+    }
+    .infografico .titulo-bola.titulo-bola.bola1 .titulo-borda{
+        left: calc(var(--tamanho)*(0));
+        top: calc(var(--tamanho)*(-1));
+    }
+    
+    .infografico .titulo-bola.bola2, .infografico .titulo-bola.titulo-bola.bola2 .titulo-borda{
+        width: calc(var(--tamanho)*14);
+        height: calc(var(--tamanho)*14);
+        left: calc(var(--tamanho)*5);
+    }
+    .infografico .titulo-bola.titulo-bola.bola2 .titulo-borda{
+        left: calc(var(--tamanho)*(-1));
+        top: calc(var(--tamanho)*(-9));
+    }
+
+    .infografico .titulo-bola.bola3, .infografico .titulo-bola.titulo-bola.bola3 .titulo-borda{
+        width: calc(var(--tamanho)*16);
+        height: calc(var(--tamanho)*16);
+        left: calc(var(--tamanho)*13);
+    }
+    .infografico .titulo-bola.titulo-bola.bola3 .titulo-borda{
+        left: calc(var(--tamanho)*(-2));
+        top: calc(var(--tamanho)*(-12));
+    }
+    
+    .l1{
+        left: calc(var(--tamanho)*(9));
+        top: calc(var(--tamanho)*(10));
+        transform: rotate(-20deg);
+        height: calc(var(--tamanho)*(20));
+    }
+
+    .l2{
+        left: calc(var(--tamanho)*(20));
+        top: calc(var(--tamanho)*(10));        
+        height: calc(var(--tamanho)*(20));
+    }
+
+    .texto-topico{
+        width: 90%;
+    }
+
+    .infografico .texto-topico.t2{
+        top: calc(var(--tamanho)*(-25));        
+    }
+
+    .infografico .texto-topico.t3{
+        top: calc(var(--tamanho)*(15));        
+    }
+    .seta.s2{
+        top: calc(var(--tamanho)*(20));   
+        left: calc(var(--tamanho)*(10))     
+    }
+    .seta.s3{
+        top: calc(var(--tamanho)*(10));   
+        left: calc(var(--tamanho)*(20));     
+    }
+}
