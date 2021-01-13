@@ -53,8 +53,8 @@
 }
 
 .material-complementar img{
-    width: 70%;
-    height: 70%;
+    width: 80%;
+    height: 80%;
     margin: auto;
     border: 1px solid white;        
     display:block;
@@ -110,18 +110,25 @@
 }
 
 @media screen and (max-width: 585px) {
-	.fique-por-dentro .imagem-fundo img{
-		display: none;
+	.fique-por-dentro{
+		margin-bottom: 30%;
 	}
-	.fique-por-dentro .texto {
-		background-color: #fec13b;
+	.fique-por-dentro .imagem-fundo img{
+		width: 125%;
+		height: 120%;
+		margin-left: -10%;		
 		display: block;
-		position: relative;
-		width: 100%;
-		margin: 0;
-		padding: 10px;
-		border: 4px solid #2a5caa;
-		border-radius: 1em;
+	}
+	.fique-por-dentro .texto {		
+			display: block;
+			position: relative;
+			background-color: #fec13b;
+			width: 88%;
+			margin-left: 1%;
+			margin-top: -58%;			
+			/* border: 4px solid #2a5caa; */
+			padding: 2%;
+			border-radius: 0.5em;		
 	}
 }
 
@@ -266,32 +273,49 @@ h3.texto-central b{
 
 @media screen and (max-width: 630px){
 	.box-atencao img{
-		display: none;
+		width: 120%;
+		margin-left: -10%;
 	}
-	.box-atencao .texto{
-		background-color: #e73435;				
-		display: block;
-		position: relative;
-		width: 100%;
-		margin: 0;
-		left: 0;
-		padding: 1em;
-		border: 4px solid #2a5caa;
-		border-radius: 1em;
+	.box-atencao .texto{		
+		width: 80%;
+		margin-left: -10%;		
 	}
 
 	.box-para-refletir img{
-		display: none;
+		width: 120%;
+		margin-left: -10%;
 	}
 	.box-para-refletir .texto{
-		background-color: #2a5caa;				
-		
+		width: 75%;
+		margin-left: -10%;
+	}
+}
+
+
+@media screen and (max-width: 475px){
+	
+	.box-para-refletir .texto{
+		display: block;
 		position: relative;
-		width: 100%;
-		margin: 0;
-		left: 0;
-		padding: 1em;
+		background-color: #2a5caa;
+		width: 90%;
+		margin-left: -18%;
+		margin-top: -49%;
 		border: 4px solid #fec13b;
-		border-radius: 1em;
+		padding: 2%;
+		border-radius: 0.5em;
+	}
+
+	.box-atencao .texto{
+		display: block;
+		position: relative;
+		background-color: #e73435;
+		width: 95%;
+		margin-left: -18%;
+		margin-top: -52%;
+		margin-bottom: 10%;
+		border: 4px solid #2a5caa;
+		padding: 2%;
+		border-radius: 0.5em;
 	}
 }
