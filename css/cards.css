@@ -60,7 +60,7 @@
 	font-family: "Musket", sans-serif;
 	line-height: 30px;
 	margin: 15px;
-	border-radius: 4px;
+	border-radius: 8px;
 	padding: 25px;
 	color: white;
 	font-size: 25px;
@@ -102,7 +102,9 @@
 	background-image: none;
 }
 
-
+.card:hover{
+	cursor: pointer;
+}
 
 
 
