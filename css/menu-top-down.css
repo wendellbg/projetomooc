@@ -48,12 +48,11 @@
   background: none;
   cursor: pointer;
   /* z-index: 90; */
-  margin-top: -8px;
-  margin-left: -8px;
-  padding-bottom: 33px;
-  padding-right: 33px;
-  border: 1px solid #2a5caa;
-  border-radius: 5%;
+  margin: -8px;
+  padding-bottom: 32px;
+  padding-right: 32px;
+  border: 2px solid #2a5caa;
+  border-radius: 12%;
 
 }
 .hamburguer span {
@@ -137,3 +136,12 @@
 	margin-top: -57px;
 }
 
+.lista-navegacao{
+  border: 2px solid #2a5caa;
+  padding: 0px 8px;
+  border-radius: 12%;
+}
+
+.lista-navegacao i{
+  font-size:30px;
+}
