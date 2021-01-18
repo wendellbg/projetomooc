@@ -164,7 +164,7 @@
 .seta.s2{
     width: calc(var(--tamanho)*(6));
     height: calc(var(--tamanho)*(6));
-    top: calc(var(--tamanho)*(12));
+    top: calc(var(--tamanho)*(27));
     left: calc(var(--tamanho)*(15));
     transform: rotate(45deg);   
     visibility: hidden;
@@ -201,10 +201,10 @@
 .infografico .texto-topico.t2{
     position: absolute;
     z-index: 10;    
-    top: calc(var(--tamanho)*(0));
+    top: calc(var(--tamanho)*(29));
     left: calc(var(--tamanho)*(1));    
-    visibility: hidden;
-    opacity: 0;
+    visibility: hidden; 
+    opacity: 0; 
     transition: visibility 0s, opacity 0.5s linear;
 }
 
@@ -296,14 +296,14 @@
     }
 
     .infografico .texto-topico.t2{
-        top: calc(var(--tamanho)*(-25));        
+        top: calc(var(--tamanho)*(40));        
     }
 
     .infografico .texto-topico.t3{
         top: calc(var(--tamanho)*(15));        
     }
     .seta.s2{
-        top: calc(var(--tamanho)*(20));   
+        top: calc(var(--tamanho)*(38));   
         left: calc(var(--tamanho)*(10))     
     }
     .seta.s3{
