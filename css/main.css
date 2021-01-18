@@ -1095,5 +1095,19 @@
 	.content .coluna-50.cards{
 		padding: 0 20px;
 	}
+	
+	.bg-video{
+		background-image: url(../../img/uni2/MOOC1_Uni2_tela5_video.jpg);
+		background-color: #2A5CAA;
+		max-width: 1000px;
+		position: relative;
+		margin: auto;
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding: 40px 120px 40px 120px;
+		margin-right: -4rem;
+		margin-left: -4rem;
+		margin-bottom: 40px;
+	}
  	
  
