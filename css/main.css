@@ -1067,23 +1067,25 @@
 		}
 	}
 
-	@media screen and (max-width: 560px){
-		.caixa-texto-centro.uni2 p{
+	@media screen and (max-width: 560px) {
+		.caixa-texto-centro.uni2 p {
 			padding-top: 48%;
 			padding-bottom: 45%;
 			background-position: top;
 			background-size: 120% 220%;
 		}
-		.caixa-texto-centro.uni2{
+
+		.caixa-texto-centro.uni2 {
 			margin-top: -60%;
 			margin-bottom: -40%;
 
 		}
-		.caixa-texto-rodape.uni2{
+
+		.caixa-texto-rodape.uni2 {
 			margin-top: -60%;
 			margin-bottom: 40%;
 		}
-		
+	}
 
  	.card-animado{
  		height: 450px;
