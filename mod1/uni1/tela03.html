@@ -4,11 +4,11 @@
 	<title>Mentoria</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="../../css/main.css"/>        
-	<link rel="stylesheet" href="../../css/menu-top-down.css"/>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-	<link rel="stylesheet" href="../../css/rodape.css"/>
-	<link rel="stylesheet" href="../../css/imagens.css"/>
+	<link rel="stylesheet" href="../../css/main.css?ver=1.1"/>
+	<link rel="stylesheet" href="../../css/menu-top-down.css?ver=1.1"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css?ver=1.1">
+	<link rel="stylesheet" href="../../css/rodape.css?ver=1.1"/>
+	<link rel="stylesheet" href="../../css/imagens.css?ver=1.1"/>
 	<style type="text/css">
 
 		/* Slideshow container */
@@ -16,10 +16,19 @@
 			max-width: 1000px;
 			position: relative;
 			margin: auto;
+			background-image: url(../../img/uni1/bg_slide_01.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			padding: 40px 120px 40px 120px;
+			margin-right: -4rem;
+			margin-left: -4rem;
+			margin-bottom: 40px;
 		}
 
 		.slideshow-container img {    
-			width: 100%;   
+			width: 100%;
+			margin: 0 auto;
+			border: 10px solid #fff;
 		}
 
 		/* Next & previous buttons */
@@ -29,25 +38,32 @@
 			top: 50%;
 			width: auto;
 			margin-top: -22px;
-			padding: 16px;
-			color: white;
-			background-color: #000;
+			padding: 8px 16px;
+			color: #2a5caa;
+			background-color: #fff;
 			font-weight: bold;
 			font-size: 22px;
 			transition: 0.6s ease;
-			border-radius: 0 3px 3px 0;
+			border-radius: 4px;
 			user-select: none;
+			text-decoration: none;
+		}
+
+		.prev{
+			margin-left: -60px;
 		}
 
 		/* Position the "next button" to the right */
 		.next {
 			right: 0;
-			border-radius: 3px 0 0 3px;
+			margin-right: 40px;
 		}
 
 		/* On hover, add a black background color with a little bit see-through */
 		.prev:hover, .next:hover {
-			background-color: rgba(0,0,0,0.8);
+			color: #fff;
+			background-color: #2a5caa;
+			border: 1px solid #fff;
 		}
 
 		/* Caption text */
@@ -55,7 +71,7 @@
 			color: #f2f2f2;
 			font-size: 15px;
 			padding: 8px 12px;
-			position: absolute;
+			/*position: absolute;*/
 			bottom: 8px;
 			width: 100%;
 			text-align: center;
@@ -66,7 +82,7 @@
 			color: #f2f2f2;
 			font-size: 12px;
 			padding: 8px 12px;
-			position: absolute;
+			/*position: absolute;*/
 			top: 0;
 		}
 
@@ -76,7 +92,7 @@
 			height: 15px;
 			width: 15px;
 			margin: 0 2px;
-			background-color: #bbb;
+			background-color: #fff;
 			border-radius: 50%;
 			display: inline-block;
 			transition: background-color 0.6s ease;
@@ -159,11 +175,11 @@
 						</div>
 					</div>-->
 					<div class="linha">
-						<div class="coluna-50"> 
-							<img class="imagem-cent" width="300" height="200" src="../../img/uni1/MOOC1_Uni1_tela3_imagem1.jpg" alt="imagem 1">
-						</div>							
-						<div class="coluna-50"> 
-							<img class="imagem-cent" width="300" height="200" src="../../img/uni1/MOOC1_Uni1_tela3_imagem1.jpg" alt="imagem 2" style="margin-left: 30px;">
+						<div class="coluna-50 box-img-le">
+							<img class="imagem-esq" src="../../img/uni1/tela03_01.png" alt="imagem 1">
+						</div>
+						<div class="coluna-50 box-img-ld">
+							<img class="imagem-dir" src="../../img/uni1/tela03_02.png" alt="imagem 1">
 						</div>
 					</div>	
 
@@ -192,13 +208,15 @@
 
 						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+						<br>
+						<div style="text-align: center">
+							<span class="ponto" onclick="currentSlide(1)"></span>
+							<span class="ponto" onclick="currentSlide(2)"></span>
+							<span class="ponto" onclick="currentSlide(3)"></span>
+						</div>
 					</div>
-					<br>
-					<div style="text-align: center">
-						<span class="ponto" onclick="currentSlide(1)"></span>    
-						<span class="ponto" onclick="currentSlide(2)"></span>    
-						<span class="ponto" onclick="currentSlide(3)"></span>
-					</div> 
+
 
 					<p>Dessa forma, o trabalho pode ser compreendido como o <b>exercício social da técnica</b>, com todas as dimensões associadas ao ato técnico: éticas, estéticas, ambientais, econômicas, identitárias, culturais</p>
 
@@ -209,8 +227,8 @@
 					
 					<div class='navegacao'>
 						<span class="lista-navegacao" style="float: right;">
-							<a href="#"><i class="fas fa-angle-double-up" style="font-size:48px;"></i></a>                                		                            
-						</span>                     
+							<a href="#"><i class="fas fa-angle-up"></i></a>
+						</span>
 						<span><a href="tela04.html"><button class="bt-avanca" type="button">PROSSEGUIR ></button></a></span>                                                                  							 
 						<span class='botoes-navegacao'>
 							<a href="tela02.html"><button class="bt-navegacao" type="button"><</button></a>
@@ -229,14 +247,24 @@
 
 					</div>
 					<hr>
-					<div class="linha">
-						<div class="coluna-50"> 
-							<img width="300" height="90" src="../../img/uni1/ifsc.png" alt="IFSC">
-						</div>							
-						<div class="coluna-50"> 
-							<img width="300" height="90" src="../../img/uni1/ifes.png" alt="IFES">
+					<div class="rodape linha">
+						<div class="coluna-50">
+							<img style="width:250px;margin-top:70px;" src="../../img/uni1/logo_mentoria.png" alt="IFSC">
 						</div>
-					</div>	       	
+						<div class="coluna-50">
+							<div class="linha">
+								<div class="coluna-50">
+									<p style="text-align:center">Realização:</p>
+									<img style="width:60px;" src="../../img/uni1/logo_mec.png" alt="IFSC">
+								</div>
+								<div class="coluna-50">
+									<p style="text-align:center">Produção:</p>
+									<img style="width:150px; margin-bottom: 10px;" src="../../img/uni1/ifsc.png" alt="IFSC">
+									<img style="width:150px" src="../../img/uni1/ifes.png" alt="IFES">
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 
 			</section>
