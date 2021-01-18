@@ -4,11 +4,11 @@
 		<title>Mentoria</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="../../css/main.css" />
-		<link rel="stylesheet" href="../../css/cards.css"/>
-		<link rel="stylesheet" href="../../css/menu-top-down.css"/>	
+		<link rel="stylesheet" href="../../css/main.css?ver=1.1" />
+		<link rel="stylesheet" href="../../css/cards.css?ver=1.1"/>
+		<link rel="stylesheet" href="../../css/menu-top-down.css?ver=1.1"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">	
-		<link rel="stylesheet" href="../../css/rodape.css"/>		
+		<link rel="stylesheet" href="../../css/rodape.css?ver=1.1"/>
 	</head>
 	<body>
 
@@ -28,7 +28,7 @@
 						<header class="special">
 								<div class="entire-menu">
 									<div class="menu-tit">
-										<div class="menu-tit-col1">  
+										<div class="menu-tit-col1">
 											<h2>Educação Profissional no Mundo do Trabalho</h2>
 										</div>
 										<div class="menu-tit-col2"> 	
@@ -53,7 +53,7 @@
 						</header>
 						<div class="content">
 							<div class="linha">
-								<div class="coluna-50">
+								<div class="coluna-50 box-img-le">
 									<img class="imagem-esq" src="../../img/uni1/tela02_01.png" alt="imagem 1">                           												
 								</div>								
                            		<div class="coluna-50">
@@ -71,7 +71,7 @@
                             	<p class="texto-separador">Clique nas cartas abaixo para descobrir:</p>
                             </span>	
                             <div class="linha">
-                            	<div class="coluna-50">	                                              				 
+                            	<div class="coluna-50 cards">
                             		<div class='card-animado'>                            	 
                                			<input type="checkbox" id="switch-1" />
 										<label class="flip-container-1" for="switch-1">
@@ -92,32 +92,32 @@
 										</label>
                             		</div>                           
                                </div>
-                               <div class="coluna-50">	                                              				 
+                               <div class="coluna-50 cards">
                             		<div class='card-animado'>                            	 
                                		<input type="checkbox" id="switch-2" />
-									    		<label class="flip-container-2" for="switch-2">
-											 	<div class="flipper">
-											 		<div class="front">
-														<div class="card red">
-															<div class="card-top">Dos 7,5 milhões de alunos do Ensino Médio, qual o percentual está matriculado em curso Técnico?</div>
-															<div class="card-bottom">02</div>
-														</div>
-													</div>
-												 	<div class="back">
-														<div class="card red">
-															 <div class="card-top">Em torno de 10% dos alunos do EM estão no ensino técnico. Você faz ideia da proporção em outros países?</div>
-														 	<div class="card-bottom"></div>
-													 	</div>
-												 	</div>
-											 	</div>
-									 	  		</label>
+										<label class="flip-container-2" for="switch-2">
+										<div class="flipper">
+											<div class="front">
+												<div class="card red">
+													<div class="card-top">Dos 7,5 milhões de alunos do Ensino Médio, qual o percentual está matriculado em curso Técnico?</div>
+													<div class="card-bottom">02</div>
+												</div>
+											</div>
+											<div class="back">
+												<div class="card red">
+													 <div class="card-top">Em torno de 10% dos alunos do EM estão no ensino técnico. Você faz ideia da proporção em outros países?</div>
+													<div class="card-bottom"></div>
+												</div>
+											</div>
+										</div>
+										</label>
                             		</div>                           
                                </div>                                            
                             </div>                                                                                 
                             <div class='navegacao'>
 								<span class="lista-navegacao" style="float: right;">
-									<a href="#"><i class="fas fa-angle-double-up" style="font-size:48px;"></i></a>                                		                            
-								</span>                     
+									<a href="#"><i class="fas fa-angle-up"></i></a>
+								</span>
 								<span><a href="tela03.html"><button class="bt-avanca" type="button">PROSSEGUIR ></button></a></span>                                                                  							 
 								<span class='botoes-navegacao'>
 									<a href="tela01.html"><button class="bt-navegacao" type="button"><</button></a>
@@ -135,15 +135,25 @@
 								<span class="legenda">Tela 2 de 7</span>  
 								
 							</div>
-                  			 <hr>
-                  			 <div class="linha">
-										<div class="coluna-50"> 
-											<img width="300" height="90" src="../../img/uni1/ifsc.png" alt="IFSC">
-										</div>							
-										<div class="coluna-50"> 
-											<img width="300" height="90" src="../../img/uni1/ifes.png" alt="IFES">
+							<hr>
+							<div class="rodape linha">
+								<div class="coluna-50">
+									<img style="width:250px;margin-top:70px;" src="../../img/uni1/logo_mentoria.png" alt="IFSC">
+								</div>
+								<div class="coluna-50">
+									<div class="linha">
+										<div class="coluna-50">
+											<p style="text-align:center">Realização:</p>
+											<img style="width:60px;" src="../../img/uni1/logo_mec.png" alt="IFSC">
 										</div>
-									</div> 	               
+										<div class="coluna-50">
+											<p style="text-align:center">Produção:</p>
+											<img style="width:150px; margin-bottom: 10px;" src="../../img/uni1/ifsc.png" alt="IFSC">
+											<img style="width:150px" src="../../img/uni1/ifes.png" alt="IFES">
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>											
 					</section>					
 				</div>				
@@ -151,6 +161,7 @@
 			
 
 		<!-- Footer -->
+		<footer id="footer">
 		</footer>
 
 
