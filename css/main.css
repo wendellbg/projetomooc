@@ -586,6 +586,7 @@
 
 				.wrapper > header h2 {
 					font-size: 1.2rem;
+					line-height: 1.5rem;
 				}
 
 					.wrapper > header h2:after {
@@ -595,7 +596,7 @@
 		}
 
 	.wrapper.style1 .content {
-		padding: 10rem;
+		padding: 4rem;
 		padding-top: 0; /* Elimina espaço desnecessário entre elementos.*/
 		min-height: 800px;
 		/* font-family: "Catamaran", sans-serif; */
@@ -606,9 +607,9 @@
 	}
 	.content hr {
 		border: 0;
-		border-bottom: solid 3px;
+		border-bottom: solid 2px;
 		margin: 40px 0;
-		border-bottom-color: gray;
+		border-bottom-color: #cccccc;
 	}
 
 		@media screen and (max-width: 1280px) {
@@ -682,10 +683,25 @@
 	.content .coluna-50 img {	/*@jlas*/				
 		width: 90%; 				
 	}
-	.content .coluna-50 .imagem-esq {
-		margin: 15px 15px 15px -48px;
-		width: 100%;				
+	.content .coluna-50 .imagem-esq{
+		margin: 0px 0px 0px 0px;
+		width: 110%;
 	}
+
+	.content .coluna-50 .imagem-dir{
+		margin: 0px -4rem 0px 0px;
+		width: 110%;
+	}
+
+	.content .box-img-le {
+		margin: 0px 4rem 0px -4rem;
+	}
+
+	.content .box-img-ld {
+		margin: 0px 0px 0px 0px;
+		text-align: right;
+	}
+
 	.content .coluna-50 p {
 		margin: 15% 0%;
 	}
@@ -731,39 +747,43 @@
 		margin-left:10%; /* 10% ao inves de 15% impede encolimento do fundo */
 		margin-right:10%; /* 10% ao inves de 15% impede encolimento do fundo */
 		margin-top: -50px;
-		background-size: 80%;  					
-		
+		background-size: 80%;  		
    }
- 	.caixa-texto-topo p { 	
+
+
+ 	.caixa-texto-topo p{
  		 padding-top: 10%;
  		 padding-bottom: 10%;
 		 text-align: center;
-		 color: #2a5caa;		 
+		 color: #2a5caa;
+		 font-weight: bold;	 
 		 font-size: 20px;
 		 font-family: "Musket" !important;
 		 	
  	}
 	.caixa-texto-centro {
 		display:block;
-		padding-left:2%;
-		padding-right:2%;
-		padding-bottom: 20%;
-		padding-top: 10%;
+		padding-left:5%;
+		padding-right:5%;
+		padding-bottom: 18%;
+		padding-top: 12%;
 		background-image: url(../img/uni1/tela01_bg.png);
 		background-repeat: no-repeat;
 		background-position: initial;
 		width:auto;
 		height: auto;		
-		margin-left:-8%;
-		margin-right:-6%;
+		margin-left:-4rem;
+		margin-right:-4rem;
 		margin-top: -10%;
 		background-size: 100%;   
    }
 
 
-	
-/* configurações da Tela 01 da Unidade 1 */
-	   @media screen and (max-width: 830px){
+
+
+
+	/* configurações da Tela 01 da Unidade 1 */
+	@media screen and (max-width: 830px){
 		.caixa-texto-topo.uni1{
 			width: 90%;
 			height: 90%;
@@ -775,70 +795,77 @@
 			margin-top: -30%;
 			font-size: 0.8em;
 		}
-		.wrapper.style1 .content .caixa-texto-centro.uni1{			
+		.wrapper.style1 .content .caixa-texto-centro.uni1{
 			background-position: top;
 			background-size: 100% 160%;
 			padding-bottom: 0%;
 			padding-top: 20%;
 		}
-		   .wrapper.style1 .content .caixa-texto-centro.uni1 p{			   
-			   padding-bottom: 30%;
-		   }
-	   }
+		.wrapper.style1 .content .caixa-texto-centro.uni1 p{
+			padding-bottom: 30%;
+		}
+	}
 
-	   @media screen and (max-width: 500px){
+	@media screen and (max-width: 500px){
 
 		.caixa-texto-topo.uni1{
 			margin-bottom: -30%;
 		}
-		.wrapper.style1 .content .caixa-texto-centro.uni1{			
+		.wrapper.style1 .content .caixa-texto-centro.uni1{
 			background-position: top;
 			background-size: 100% 180%;
 			padding-bottom: 15%;
 			padding-top: 45%;
-		}		
+		}
 
 		.caixa-texto-rodape.uni1{
 			width: 80%;
 			margin-top: -30%
 		}
-	   }
-   
+	}
    		/* Diminui o texto para não ultrapassar a imagem de fundo */
-   		@media screen and (max-width: 736px) {			
+   		@media screen and (max-width: 736px) {
 
-			/* configurações da Tela 01 da Unidade 3 */
 			.wrapper.style1 .content .caixa-texto-topo.uni3 {
 				font-size: 0.9em;
 				background-size: 50%;
 				margin-left:0%; /* 10% ao inves de 15% impede encolimento do fundo */
 				margin-right:0%;
 			}
+
 			.wrapper.style1 .content .caixa-texto-centro.uni3 {
 				/* background-image: url(none); */
 				/* background-color: #2a5caa; */
 				background-size: 120% 180%;
-				background-position: top;				
+				background-position: top;
 				margin-top: -15%;
-				padding-left: 0%;				
-				padding-bottom: 0%;
-				margin-bottom: 18%;
-				padding-top: -10%;
-				padding-bottom: 5%;								
+				padding-left: 0%;
 			}
 
-			.wrapper.style1 .content .caixa-texto-centro.uni3 p{
-				text-align: justify;				
+			.wrapper.style1 .content .caixa-texto-centro {
+				background-image: none;
+				background-color: #2a5caa;
+				margin-top: 0%;
+				padding-bottom: 0%;
+				margin-bottom: 18%;
+				padding-top: 0;
+			}
+
+			.wrapper.style1 .content .caixa-texto-centro.uni3 p {
+				text-align: justify;
 				padding-top: 00%;
 				margin-top: 5%;
 				margin-bottom: 0%;
-				padding-bottom: 0%;				
+				padding-bottom: 0%;
 				width: 100%
+			}
+
+			.wrapper.style1 .content .caixa-texto-centro p{
+				text-align: justify;
 			}
 
 			.wrapper.style1 .content .caixa-texto-rodape.uni3{
 				background-size: 50%;
-				margin-top: -30%;
 				font-size: 0.8em;
 			}
 
@@ -860,7 +887,8 @@
 				margin: 5px;
 			}
 
-			.wrapper.style1 .content .coluna-50 .imagem-esq {
+			.wrapper.style1 .content .coluna-50 .imagem-esq,
+			.wrapper.style1 .content .coluna-50 .imagem-dir {
 				margin: 0px 15px 0px 15px;
 				width: 100%;				
 			}
@@ -873,35 +901,53 @@
 		} 
 
 		@media screen and (max-width: 550px) {
+
 			.wrapper.style1 .content .caixa-texto-topo.uni3{
 				width: 90%;
 				height: 90%;
 				background-size: 80% 100%;
 				margin-bottom: 1em;
-			}	
+			}
+
+			.wrapper.style1 .content .caixa-texto-topo, .wrapper.style1 .content .caixa-texto-rodape{
+				background-image: none;
+				background-color: #fec13b;
+				border-radius: 8px;
+				width: 100%;
+				padding: 2px 1px;	
+				margin: 0;
+				transform: rotate(-3deg);
+				padding: 8px;
+			}
+
 			.wrapper.style1 .content .caixa-texto-topo.uni3 p{
 				width: 100%;
 				margin-bottom: -48%;
-				padding: 0.5em 0 1.5em 0;								
+				padding: 0.5em 0 1.5em 0;
 			}
 
-			.wrapper.style1 .content .caixa-texto-centro.uni3 {												
+
+			.wrapper.style1 .content .caixa-texto-topo{
+				margin-bottom: 22px;
+			}
+
+			.wrapper.style1 .content .caixa-texto-centro.uni3 {
 				margin-top: -20%;
-				padding-left: 0%;				
+				padding-left: 0%;
 				padding-bottom: 0%;
 				margin-bottom: 18%;
 				padding-top: -5%;
 				padding-bottom: -30%;
 			}
 
-			.wrapper.style1 .content .caixa-texto-centro.uni3 p{
+			.wrapper.style1 .content .caixa-texto-centro.uni3 p {
 				text-align: justify;
 				padding-top: 15%;
 				margin-top: 10%;
 				margin-bottom: 0%;
 				padding-left: 10%;
 				padding-right: 10%;
-				padding-bottom: 20%;				
+				padding-bottom: 20%;
 				width: 100%
 			}
 
@@ -909,15 +955,46 @@
 				width: 80%;
 				margin-top: -50%;
 				background-size: 60%;
-			}			
+			}
 
-			.wrapper.style1 .content .caixa-texto-centro.uni3{
+			.wrapper.style1 .content .caixa-texto-centro.uni3 {
 				padding-bottom: 10%;
 			}
 
+			.wrapper.style1 .content .caixa-texto-rodape{
+				background-image: none;
+				background-color: #fec13b;
+				border-radius: 8px;
+				margin-top: -20px;
+				width: 50%;
+				padding: 1px 1px;	
+				margin-left: 10%;
+				transform: rotate(-deg);
+			}
+			.wrapper.style1 .content .caixa-texto-topo p, .wrapper.style1 .content .caixa-texto-rodape p{
+				padding: 0;
+				margin: 0.5em;
+				transform: rotate(5deg);	
+			}
+
+			.wrapper.style1 .content .caixa-texto-centro{
+				padding-bottom: 20px;
+				padding-top: 20px;
+				margin-bottom: 0px;
+				margin-left: -2rem;
+				margin-right: -2rem;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+
+
 		}
 
- 	.caixa-texto-centro.uni1 p, .caixa-texto-centro.uni2 p , .caixa-texto-centro.uni3 p  {
+ 	.caixa-texto-centro p,
+	.caixa-texto-centro.uni1 p,
+	.caixa-texto-centro.uni2 p ,
+	.caixa-texto-centro.uni3 p  {
  		 padding-top: 3%;
  		 padding-bottom: 5%;
  		 padding-left: 13%;
@@ -928,8 +1005,8 @@
 		 font-family: "Musket";
 		 text-align: justify;
 	 }
-	 
-	.caixa-texto-centro.uni3 p{		
+
+	.caixa-texto-centro.uni3 p{
 		padding-left: 15%;
 		min-height: 180px;
 	}
@@ -948,26 +1025,25 @@
 		height:auto;   
    }
  	.caixa-texto-rodape p {
- 		 padding-top: 5%;
+ 		 padding-top: 10%;
  		 padding-bottom: 10%;
 		 text-align: center;
-		 color: #2a5caa;	
-		 font-family: "Musket" !important;	 	
-	 }
-
- 	.card-animado{
- 		height: 450px;
- 		margin-bottom: 50px;
+		 color: #2a5caa;
+		 font-weight: bold;	 
+		 font-size: 20px;
+		 font-family: "Musket" !important;
+		 	
  	}
-	 
-	 
-	 /* Alterações da Tela 01 da Unidade 02*/
-	 .caixa-texto-centro.uni2{
+
+
+
+	/* Alterações da Tela 01 da Unidade 02*/
+	.caixa-texto-centro.uni2{
 		padding-top: 15%;
 		background-position: top;
 		background-size: 100% 160%;
-   	}
-   	@media screen and (max-width: 760px){		   
+	}
+	@media screen and (max-width: 760px){
 		.caixa-texto-topo.uni2{
 			width: 90%;
 			height: 90%;
@@ -976,15 +1052,15 @@
 		}
 		.caixa-texto-rodape.uni2{
 			width: 80%;
-			background-size: 70%;				
+			background-size: 70%;
 		}
 		.caixa-texto-centro.uni2{
 			padding-top: 20%;
 			background-position: top;
 			background-size: 120% 180%;
-		}	
-		
-		.caixa-texto-centro.uni2 p{			
+		}
+
+		.caixa-texto-centro.uni2 p{
 			width: 100%;
 			padding-left: 5%;
 			padding-right: 5%;
@@ -992,20 +1068,30 @@
 	}
 
 	@media screen and (max-width: 560px){
-		.caixa-texto-centro.uni2 p{			
-			padding-top: 48%;		
-			padding-bottom: 45%;	
-			background-position: top;			
+		.caixa-texto-centro.uni2 p{
+			padding-top: 48%;
+			padding-bottom: 45%;
+			background-position: top;
 			background-size: 120% 220%;
-		}	
-		.caixa-texto-centro.uni2{	
+		}
+		.caixa-texto-centro.uni2{
 			margin-top: -60%;
 			margin-bottom: -40%;
-			
+
 		}
 		.caixa-texto-rodape.uni2{
 			margin-top: -60%;
 			margin-bottom: 40%;
 		}
+		
+
+ 	.card-animado{
+ 		height: 450px;
+ 		margin-bottom: 50px;
+ 	}
+
+	.content .coluna-50.cards{
+		padding: 0 20px;
 	}
+ 	
  
