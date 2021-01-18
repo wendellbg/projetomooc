@@ -24,21 +24,21 @@
 	background-color: #2a5caa;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 5px 20px;
     text-align: center;
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
     font-family: "Catamaran", sans-serif;    
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 14px;
+    border-radius: 8px;
     margin-left: 0px;			
 	}
 
 	.bt-navegacao.desativado{
-		background-color: #a6a6a6;
+		background-color: #BCD0E8;
 		pointer-events: none;
 	}	
 
@@ -58,15 +58,15 @@
 	}
 	
 	.botoes-navegacao input[type="radio"] + label:before{ 
-			   border: 1px solid #2a5caa;    
+			   border: 1px solid #2a5caa;
 			   content: "\00a0";    
 			   display: inline-block;    
 			   font: 18px/1em sans-serif;    
-			   height: 18px;    
-			   margin: 0 0.5em;    
+			   height: 12px;
+			   margin: 0 8px;
 			   padding:0;    
 			   vertical-align: center;    
-			   width: 18px;    
+			   width: 12px;
 			   border-radius:50%;
 		}
 		.botoes-navegacao input[type="radio"]:checked + label:before{
@@ -111,4 +111,30 @@
 		cursor: pointer;
 		border-radius: 12px;
 		/*margin-left: 55px;*/
+	}
+
+   .rodape .coluna-50{
+	   text-align:center;
+   }
+
+   .rodape .coluna-50:first-child{
+	   border-right: 2px solid #cccccc;
+   }
+
+	.rodape .coluna-50 .coluna-50:first-child{
+		border-right: none;
+	}
+
+	@media screen and (max-width: 980px) {
+		.rodape .coluna-50:first-child{
+			border-right: none;
+		}
+
+		.botoes-navegacao input[type="radio"] + label:before {
+			margin: 0 4px;
+		}
+
+		#footer{
+			min-height:0px
+		}
 	}
