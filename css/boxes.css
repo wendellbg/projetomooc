@@ -327,11 +327,12 @@ h3.texto-central b{
 		position: relative;
 		margin-left: 0;
 		border: 6px solid #fff;
+		background-color: #fff;
 	}
-	
+
 	.bg-video .titulo-video {
 		position: relative;
-		margin-bottom: 0;
+		margin-bottom: 10px;
 		margin-top: 0;
 		z-index: 2;
 		text-align: center;
