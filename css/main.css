@@ -1111,7 +1111,7 @@
 
 	.legenda-img{
 		text-align: center;
-		margin-top: -55px !important;
+		margin-top: -12% !important;
 		margin-left: 3rem !important;
 		margin-bottom: 30px !important;
 		font-size: 14px !important;
@@ -1122,3 +1122,9 @@
 	.content .imagem .legenda-img{
 		margin-left: 0 !important;
 	}
+
+@media screen and (max-width: 760px){
+	.legenda-img{
+		margin-top: -25px !important;
+	}
+}
