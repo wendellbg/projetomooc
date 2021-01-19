@@ -145,3 +145,12 @@
 .lista-navegacao i{
   font-size:30px;
 }
+
+.lista-navegacao:hover{
+  background-color: #2a5caa;
+  transition: 0.3s;
+}
+
+.lista-navegacao:hover a{
+  color: #fff;
+}
