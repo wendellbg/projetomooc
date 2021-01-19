@@ -5,7 +5,7 @@
     background-image: url(../img/uni1/bg_slide_01.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 40px 120px 40px 120px;
+    padding: 40px 20% 40px 20%;
     margin-right: -4rem;
     margin-left: -4rem;
     margin-bottom: 40px;
@@ -33,24 +33,26 @@
     border-radius: 4px;
     user-select: none;
     text-decoration: none;
-    border: 1px solid #fff;
+    /*border: 1px solid #fff;*/
 }
 
 .prev{
-    margin-left: -60px;
+    margin-left: 5%;
+    left: 0;
 }
 
 /* Position the "next button" to the right */
 .next {
     right: 0;
-    margin-right: 40px;
+    margin-right: 5%;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-    color: #fff;
-    background-color: #2a5caa;
-    border: 1px solid #fff;
+    /*color: #fff;*/
+    /*background-color: #2a5caa;*/
+    /*border: 1px solid #fff;*/
+    opacity: 0.5;
 }
 
 /* Caption text */
