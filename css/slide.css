@@ -1,0 +1,108 @@
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    background-image: url(../img/uni1/bg_slide_01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 120px 40px 120px;
+    margin-right: -4rem;
+    margin-left: -4rem;
+    margin-bottom: 40px;
+}
+
+.slideshow-container img {
+    width: 100%;
+    margin: 0 auto;
+    border: 6px solid #fff;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 8px 16px;
+    color: #2a5caa;
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 22px;
+    transition: 0.6s ease;
+    border-radius: 4px;
+    user-select: none;
+    text-decoration: none;
+    border: 1px solid #fff;
+}
+
+.prev{
+    margin-left: -60px;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    margin-right: 40px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    color: #fff;
+    background-color: #2a5caa;
+    border: 1px solid #fff;
+}
+
+/* Caption text */
+.texto {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    /*position: absolute;*/
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numero-slide {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    /*position: absolute;*/
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.ponto {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .ponto:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
