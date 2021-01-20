@@ -1,7 +1,5 @@
 .content .navegacao {
-  border: #fff 2px solid;		
-  background-color: #fff;
-  margin-top: 10%; /* elimina excesso de espaço (invés de 70%)*/
+  margin-top: 30px; /* elimina excesso de espaço (invés de 70%)*/
   right: 550px;
   left: 550px;
   bottom: 90px;
@@ -137,4 +135,11 @@
 		#footer{
 			min-height:0px
 		}
+	}
+
+	.bt-avanca:hover,
+	.bt-navegacao:hover,
+	.botoes-navegacao a:hover input[type="radio"] + label:before{
+		background-color: #020e36;
+		transition: 0.3s;
 	}
