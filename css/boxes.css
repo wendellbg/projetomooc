@@ -345,3 +345,74 @@ h3.texto-central b{
 		color: #fff;
 		text-shadow: 0px 0px 5px black;
 	}
+
+
+	/* Boxes Novo Estilo */
+	.box-info{
+		width: 100%;
+		display: flex;
+		padding: 5%;
+	}
+
+	.box-info img {
+		height: 120px;
+		position: absolute;
+		margin-left: -120px;
+		margin-top: -110px;
+	}
+
+	.box-info.text-white div,
+	.box-info.text-white div a{
+		color: #fff;
+	}
+
+	.box-info div a:hover{
+		transition-delay: 0.6ms;
+	}
+
+	.box-info .border-blue{
+		border: 6px solid #2A5CAA;
+		border-radius: 8px;
+		padding: 5% 5% 10% 10%;
+		margin-left: -85%;
+		margin-top: 5%;
+		width: 80%;
+	}
+
+	.box-info .bg-red{
+		background-color: #E73435;
+		border-radius: 8px;
+		padding: 20px;
+		margin-left: 15%;
+		margin-bottom: 5%;
+		width: 80%;
+
+	}
+
+	@media screen and (max-width: 585px) {
+		.box-info img {
+			margin-top: -120px;
+			/*position: relative !important;*/
+			left: 0;
+			margin-left: 0;
+		}
+
+		.box-info{
+			margin-top: 60px;
+			padding: 5px;
+			/*margin-left: -2rem;*/
+			/*margin-right: -2rem;*/
+		}
+
+		.box-info .border-blue{
+			width: 100% !important;
+			margin-left: -105% !important;
+			padding: 15% 5% 15% 10% !important;
+		}
+
+		.box-info .bg-red{
+			width: 100% !important;
+			margin-left: 5% !important;
+		}
+
+	}
