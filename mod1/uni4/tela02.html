@@ -134,8 +134,8 @@
 								</a>  									  									
 								<div class="menu">
 									<a href="../sumario.html" class='titulo-menu'>UNIDADE 4</a>
-									<a href="tela01.html" class='link-menu-atual'>Tela 01 - Apresentação</a>
-									<a href="tela02.html">Tela 02 - Itinerários Formativos</a>
+									<a href="tela01.html">Tela 01 - Apresentação</a>
+									<a href="tela02.html" class='link-menu-atual'>Tela 02 - Itinerários Formativos</a>
 									<a href="tela03.html">Tela 03 - Composição de Itinerários</a>
 									<a href="tela04.html">Tela 04 - Qualificação Profissional</a>
 									<a href="tela05.html">Tela 05 - Concluindo</a>
@@ -282,7 +282,7 @@
 							<a href="tela01.html"><button class="bt-navegacao" type="button"><</button></a>
 
 							<a href="tela01.html"><input type="radio" name="radio"><label for="radio"></label></a>                                		
-							<a href="tela02.html"><input type="radio" name="radio"><label for="radio"></label></a>
+							<a href="tela02.html"><input type="radio" name="radio" checked><label for="radio"></label></a>
 							<a href="tela03.html"><input type="radio" name="radio"><label for="radio"></label></a>
 							<a href="tela04.html"><input type="radio" name="radio"><label for="radio"></label></a>
 							<a href="tela05.html"><input type="radio" name="radio"><label for="radio"></label></a>				<a href="tela06.html"><input type="radio" name="radio"><label for="radio"></label></a>
@@ -316,11 +316,11 @@
 		console.clear(screen);
 		
 		var API = new BridgeRestApi();		
-		var id_unidade = "uni2";
-		var id_slide = "uni1/tela000.html";
-		var progresso = 14;
+		var id_unidade = "mod1_uni4";
+		var id_slide = "uni4/tela02.html";
+		var progresso = 34;
 		var progressoSalvo;
-		var porcentagem = "porcentagemUni2";
+		var porcentagem = "porcentagemUni4";
 
 			//Obtendo dados curso
 			window.addEventListener('load', function(){            
@@ -377,7 +377,7 @@
 				}else if(evento.detail["status"]==412){
 					//se for status 400, inicia a chave da porcentagem da unidade em questão
 					console.log("Inicializando a porcentagem da unidade");
-					API.registrarDadosGenericos(porcentagem,14);
+					API.registrarDadosGenericos(porcentagem,17);
 				}				
 			};
 
