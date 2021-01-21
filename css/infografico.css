@@ -17,20 +17,20 @@
     position: relative;
     width: 100%;
     z-index: 0;
-    background-color: #fdc13c;
+    background-color: #2b5ca9;
     padding: 5%;
     /* min-width: 500px; */
 }
 
 .infografico .titulo-bola{
-    background-color: #2b5ca9;
+    background-color: #fdc13c;
     text-align: center;
     padding: 1em;
     z-index: 5;
 }
 
 .infografico .titulo-bola:hover{
-    background-color: #010f36;    
+    background-color: #d5ae53;    
 }
 
  .infografico .titulo-bola span{
@@ -56,7 +56,7 @@
 }
 
 .infografico .titulo-bola.bola1 .titulo-borda{
-    border: 2px solid #9ddddf;
+    border: 2px solid #fffffb;
     margin-top: calc(var(--tamanho)*(-8));
     margin-left: calc(var(--tamanho)*(-2));
 }
@@ -71,7 +71,7 @@
 }
 
 .infografico .titulo-bola.titulo-bola.bola3 .titulo-borda{    
-    border: 2px solid #9ddddf;
+    border: 2px solid #fffffb;
     top: calc(var(--tamanho)*(-9));
     left: calc(var(--tamanho)*(-0.1));
     
@@ -87,7 +87,7 @@
 }
 
 .infografico .titulo-bola.titulo-bola.bola2 .titulo-borda{
-    border: 2px solid #9ddddf;
+    border: 2px solid #fffffb;
     top: calc(var(--tamanho)*(-8));
     left:calc(var(--tamanho)*(-1));
 }
@@ -96,7 +96,7 @@
 .ligacao{
     position: absolute;    
     z-index: 0;
-    background-color: #2b5ca9;
+    background-color: #fdc13c;
     width: calc(var(--tamanho)*1);
     content: "";
 }
@@ -119,12 +119,15 @@
 
 
 .texto-topico{
-    background-color: #010f36;
-    color: #fff;
+    background-color: #ffffff;
+    color: #000;
     font-size: calc(var(--tamanho));    
     padding: 1em;
     padding-left: 50px;
     border-radius: 1em;
+    border-bottom: 2px solid #2b5ca9;
+    border-left: 2px solid #2b5ca9;
+    border-right: 2px solid #2b5ca9;
 }
 
 .texto-topico li{
@@ -144,7 +147,7 @@
 .seta{
     width: calc(var(--tamanho)*(4));
     height: calc(var(--tamanho)*(4));
-    background-color: #010f36;
+    background-color: #fff;
     padding: 0;
     margin: 0;
     content: "";
