@@ -72,9 +72,11 @@ ul {
   list-style-type: none;
 } 
 
-.lista-topicos li{    
+.lista-topicos li{
     padding: 0.5em 1em;
     margin: 1em 0;
+    color: #2a5caa;
+    font-size: 30px;
 }
 
 .lista-topicos li img{
@@ -84,11 +86,30 @@ ul {
 .lista-topicos li span{
     display: inline-block;
     margin-left: 5px;  
-    width: 90%;    
-    border: 1px solid #2a5caa;
-    border-radius: 1em;
+    width: 90%;
+    color: #fff;
+    background-color: #2a5caa;
+    font-size: 20px;
+    /*border: 1px solid #2a5caa;*/
+    border-radius: 8px;
     font-weight: bold;
     padding: 5px 10px;
     vertical-align: middle;
+}
 
+
+.lista-topicos.yellow li span{
+    color: #2a5caa;
+    background-color: #fec13b;
+}
+
+@media screen and (max-width:560px){
+    .lista-topicos{
+        margin-left: -2rem;
+        margin-right: -2rem;
+    }
+
+    .lista-topicos li span{
+        width: 85%;
+    }
 }
