@@ -716,11 +716,13 @@
     	margin-top:;*/
     	display:block;	
 	}
+
 	.separador {
 		margin-top: 100px;
 		display: block;
 		border-top: 2px solid #2a5caa;
 	}
+
 	.separador .texto-separador {
 		background-color: #2a5caa;
 		color: white;
@@ -848,10 +850,14 @@
 			.wrapper.style1 .content .caixa-texto-centro {
 				background-image: none;
 				background-color: #2a5caa;
-				margin-top: 0%;
+				/*margin-top: 0%;*/
 				padding-bottom: 0%;
-				margin-bottom: 18%;
-				padding-top: 0;
+				/*margin-bottom: 18%;*/
+				margin: 0 -1.8rem 18% -1.8rem;
+				padding: 10px;
+				background-image: url(../img/uni1/bg_slide_01.jpg);
+				background-size: cover;
+				border-radius: 8px;
 			}
 
 			.wrapper.style1 .content .caixa-texto-centro.uni3 p {
@@ -988,6 +994,9 @@
 				margin-right: -2rem;
 				padding-left: 0px;
 				padding-right: 0px;
+				background-image: url(../img/uni1/bg_slide_01.jpg);
+				background-size: cover;
+				border-radius: 8px;
 			}
 
 
