@@ -51,21 +51,31 @@
         top: -4vw;                
     }
 
-    .icone-play img{
+    .icone-play{
         width: 10vw;
         height:10vw;       
         border: 2px solid #fff;
         border-radius: 1em;
+        display: block;
     }
 
-    .icone-pause img{
+    .icone-pause{
         width: 10vw;
         height:10vw;        
         border: 2px solid #2a5caa;
         border-radius: 1em;
     }
 
-    .icone-audio img:hover, .icone-play img:hover{
+    .icone-play img, .icone-pause img{
+        position: relative;
+        width: 180%;
+        height: 180%;
+        margin-left: -35%;
+        margin-top: -40%;
+        margin-bottom: -50%;
+    }
+
+    .icone-play:hover{
         background-color: #ebebeb;
         border: 2px solid #fec13b;
         border-radius: 1em;
