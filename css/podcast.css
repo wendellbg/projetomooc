@@ -5,21 +5,31 @@
         display: block;        
     }
 
-    .icone-play img{
-        border: 2px solid #fff;
+    .icone-play{
+        border: 2px solid #fff;      
+        display: block;                      
         border-radius: 1em;        
         margin: auto 40%;                        
         width: 20%;
     }
+    
+    .icone-play img, .icone-pause img{
+        position: relative;
+        width: 180%;
+        height: 180%;
+        margin-left: -35%;
+        margin-top: -40%;
+        margin-bottom: -50%;
 
-    .icone-pause img{
+    }
+    .icone-pause {
         border: 2px solid #2a5caa;
         border-radius: 1em;        
         margin: auto 40%;                        
         width: 20%;
-    }
+    }            
 
-    .icone-audio img:hover, .icone-play img:hover{
+    .icone-play:hover{
         background-color: #ebebeb;
         border: 2px solid #fec13b;
         border-radius: 1em;                
