@@ -53,8 +53,8 @@ Main components
   position: relative;
   z-index: 2;
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: inherit;
   background: #d95353; /* #2a5caa */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
