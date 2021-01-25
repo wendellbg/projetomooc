@@ -18,6 +18,13 @@
     background-color: #fff;
 }
 
+@media screen and (max-width: 560px) {
+    .slideshow-container {
+        margin-left: -2rem;
+        margin-right: -2rem;
+    }
+}
+
 /* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
