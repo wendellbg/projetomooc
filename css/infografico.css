@@ -233,7 +233,6 @@
 }
 
 
-
 @media screen and (max-width: 570px){
     .infografico{
         width: 120%;
@@ -280,6 +279,7 @@
         left: calc(var(--tamanho)*(-2));
         top: calc(var(--tamanho)*(-12));
     }
+    
     
     .l1{
         left: calc(var(--tamanho)*(9));

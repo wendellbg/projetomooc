@@ -6,8 +6,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding: 40px 20% 40px 20%;
-    margin-right: -4rem;
-    margin-left: -4rem;
+    /*margin-right: -4rem;*/
+    /*margin-left: -4rem;*/
     margin-bottom: 40px;
 }
 
@@ -17,6 +17,7 @@
     border: 6px solid #fff;
     background-color: #fff;
 }
+
 
 /* Next & previous buttons */
 .prev, .next {
@@ -46,6 +47,26 @@
 .next {
     right: 0;
     margin-right: 5%;
+}
+
+@media screen and (max-width: 560px) {
+
+    .prev{
+        top: 40%;
+        margin-left: 0;
+        left: 0;
+        border-radius: 0 8px 8px 0;
+        padding: 8px 8px;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        top: 40%;
+        right: 0;
+        margin-right: 0;
+        border-radius: 8px 0 0 8px;
+        padding: 8px 8px;
+    }
 }
 
 /* On hover, add a black background color with a little bit see-through */
