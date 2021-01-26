@@ -6,8 +6,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding: 40px 20% 40px 20%;
-    margin-right: -4rem;
-    margin-left: -4rem;
+    /*margin-right: -4rem;*/
+    /*margin-left: -4rem;*/
     margin-bottom: 40px;
 }
 
@@ -20,8 +20,8 @@
 
 @media screen and (max-width: 560px) {
     .slideshow-container {
-        margin-left: -2rem;
-        margin-right: -2rem;
+        /*margin-left: -2rem;*/
+        /*margin-right: -2rem;*/
     }
 }
 
