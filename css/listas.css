@@ -1,0 +1,21 @@
+ul {
+	list-style: none;
+}
+.item {
+	position: relative;
+	margin: 10px 10px;
+	font-family:"Affogato-Regular", sans-serif;
+	font-size: 20px;
+
+}
+.item::before {
+	content: '';
+	position: relative;
+	left: 0;
+	top: 0;
+	padding: 0px 12px;
+	background-image: url("../img/uni5/circle.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-right: 10px;	
+}

@@ -20,12 +20,15 @@
 	transform: rotateY(180deg);
 }
 .front, .back{
- 	position: absolute;
- 	width: 96%;
+	/*min-height: 550px;*/
+ 	/*position: absolute;*/
+ 	width: 100%;
  	height: 100%;
  	backface-visibility: hidden;
 }
 .back {
+	position: absolute;
+	top: 0;
 	transform: rotateY(180deg);
 }
 #switch-1 {
@@ -34,18 +37,20 @@
 #switch-2 {
 	display: none;
 }
-/*.card-animado-1 {*/
-/*	width: 350px;*/
-/*	height: 300px;*/
-/*}*/
-/*.card-animado-2 {*/
-/*	width: 200px;*/
-/*	height: 300px;*/
-/*}*/
 
+/*.card-animado{*/
+/*	min-height: 150px;*/
+/*	margin-bottom: 50px;*/
+/*}*/
 
 .card-animado {
 	width: 100%;
+}
+
+.card:hover{
+	border: 4px solid #ffffff;
+	box-shadow: inset 0 0 1em rgba(0,0,0,0.3), 0 0 1em gray;
+	transition-duration: 0.3s;
 }
 
 .card.yellow{
@@ -57,9 +62,9 @@
 }
 
 .card{
+	max-width: 300px;
 	font-family: "Musket", sans-serif;
 	line-height: 30px;
-	margin: 15px;
 	border-radius: 8px;
 	padding: 25px;
 	color: white;
@@ -68,6 +73,8 @@
 	background-repeat: no-repeat;
 	background-image: url(../img/uni1/bg_card.png);
 	background-position: -110px -50px;
+	margin: 0 auto;
+	border: 4px solid #ffffff;
 }
 
 .card-top{

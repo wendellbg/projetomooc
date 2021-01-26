@@ -133,66 +133,6 @@
 	}
 }
 
-.video-uni2 img, .video-uni1 img{
-	width: 130%;
-	position: relative;
-	margin-left: -15%;
-	display: inline-block;
-}
-
-.video-uni2 .titulo-video span{
-	font-family: "Musket-Bold";
-	font-size: 1.8em;
-}
-
-.video-uni1 .titulo-video span{
-	font-family: "Musket-Bold";
-	font-size: 1.4em;
-}
-
-.video-uni2 .titulo-video, .video-uni1 .titulo-video{
-	position: relative;
-	margin-bottom: -10%;
-	margin-top: 10%;
-	z-index: 2;
-	text-align: center;
-	width: 100%;
-	color: #fff;
-	text-shadow: 0px 0px 5px black;
-}
-
-@media screen and (max-width:460px){
-	.video-uni2 .titulo-video span{
-		font-size: 1.2em;
-	}
-}
-
-@media screen and (max-width:560px){
-	.video-uni1 .titulo-video{
-		margin-bottom: 0%;
-		margin-top: 10%;
-	}
-	.video-uni1 .titulo-video span{
-		text-shadow: none;
-	}
-
-	.bg-video{
-		padding: 50px 5px;
-		margin-right: -2rem;
-		margin-left: -2rem;
-	}
-}
-
-.video-uni2 .video-player, .video-uni1 .video-player {
-	width: 80%;
-	/* height: 90%;	 */
-	margin-top: -55%;
-	position: relative;
-	margin-left: 12%;
-	border: 4px solid #fff;
-}
-
-
 h3.texto-central{
 	text-align: center;
 	color: #fff;
@@ -326,18 +266,37 @@ h3.texto-central b{
 	}
 }
 
-	.bg-video .video-player {
+/* Video */
+
+	.video{
+		background-image: url(../img/uni2/MOOC1_Uni2_tela5_video.jpg);
+		background-color: #2A5CAA;
+		position: relative;
+		margin: auto;
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding: 50px 8rem;
+		margin-bottom: 40px;
+	}
+
+	.video-player {
 		width: 100% !important;
 		/* height: 90%;	 */
-		margin-top: 0;
-		position: relative;
-		margin-left: 0;
+		margin: 0 auto;
 		border: 6px solid #fff;
 		background-color: #fff;
 	}
 
-	.bg-video .titulo-video {
-		position: relative;
+	/*.video-player {*/
+	/*	width: 80%;*/
+	/*	!* height: 90%;	 *!*/
+	/*	margin-top: -55%;*/
+	/*	position: relative;*/
+	/*	margin-left: 12%;*/
+	/*	border: 4px solid #fff;*/
+	/*}*/
+
+	.titulo-video {
 		margin-bottom: 15px;
 		margin-top: 0;
 		z-index: 2;
@@ -347,8 +306,38 @@ h3.texto-central b{
 		text-shadow: 0px 0px 5px black;
 	}
 
+	.titulo-video span{
+		font-family: "Musket-Bold";
+		font-size: 1.4em;
+		z-index: 2;
+		text-align: center;
+		width: 100%;
+		color: #fff;
+		text-shadow: 0px 0px 5px black;
+	}
 
-	/* Boxes Novo Estilo */
+
+@media screen and (max-width:560px){
+	.titulo-video span{
+		text-shadow: none;
+		font-size: 1.2em;
+	}
+
+	.video{
+		padding: 30px 10px;
+	}
+
+}
+
+@media screen and (max-width: 736px) {
+	.video{
+		padding: 30px 2rem;
+	}
+
+}
+
+
+/* Boxes Novo Estilo */
 	.box-info{
 		width: 100%;
 		display: flex;
@@ -446,8 +435,6 @@ h3.texto-central b{
 		.box-info{
 			margin-top: 60px;
 			padding: 5px;
-			/*margin-left: -2rem;*/
-			/*margin-right: -2rem;*/
 		}
 
 		.box-info .border-blue,
