@@ -723,7 +723,7 @@ header p {
 
 @media screen and (max-width: 550px) {
     .boas-vindas{
-        background: none;
+        background: none !important;
         width: 100%;
         padding: 10px;
         margin-top: 0px;
@@ -731,7 +731,7 @@ header p {
 
     .caixa-texto-topo,
     .caixa-texto-rodape{
-        background-image: none;
+        background-image: none !important;
         border-radius: 8px;
         width: 100%;
         padding: 2px 1px;
@@ -746,7 +746,7 @@ header p {
     }
 
     .caixa-texto-rodape{
-        background-image: none;
+        background-image: none !important;
         border-radius: 8px;
         width: 50%;
         padding: 2px;
