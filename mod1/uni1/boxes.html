@@ -1,137 +1,525 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Mentoria</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../../css/mooc1.css?ver=1.1"/>
-    <link rel="stylesheet" href="../../css/boxes.css?ver=1.2"/>
-</head>
-<body>
+.imagem .imagem-ampla {
+	width: 100%;
+	height: 100%;
+	padding: auto;
+	margin: auto;
+	margin-bottom: 40px;
+}
 
-<!-- Header -->
-<header id="header">
-    <div class="logo"><a href="../sumario.html">UNIDADE 1</a></div>
-</header>
+.material-complementar .texto{
+	position: absolute;
+	top: 25%;
+	left: 30%;
+	width: 45%;
+	vertical-align: middle;
 
-<!-- Main -->
-<section id="main">
-    <div class="inner">
-        <!-- One -->
-        <section id="one" class="wrapper style1">
+}
 
-            <header class="special">
-                <div class="entire-menu">
-                    <div class="menu-tit">
-                        <div class="menu-tit-col1">
-                            <h2>Estilos de caixas de informação</h2>
-                        </div>
-                        <div class="menu-tit-col2">
-                            <input type="checkbox" id="change-hamburguer" />
-                            <a class="hamburguer" href="#">
-                                <span></span>
-                                <label for="change-hamburguer"></label>
-                            </a>
-                            <div class="menu">
-                                <a href="../sumario.html" class='titulo-menu'>UNIDADE 1</a>
-                                <a href="tela01.html">Tela 01 - Apresentação</a>
-                                <a href="tela02.html">Tela 02 - Educação profissional no mundo do trabalho</a>
-                                <a href="tela03.html">Tela 03 - Técnica e Trabalho</a>
-                                <a href="tela04.html" >Tela 04 - Como aprendemos as técnicas?</a>
-                                <a href="tela05.html" class='link-menu-atual'>Tela 05 - Educação profissional e educação propedêutica</a>
-                                <a href="tela06.html">Tela 06</a>
-                                <a href="tela07.html">Tela 07 - Educação Profissional no Ensino Médio</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
+.material-complementar .texto{
+	text-align: center;
+}
+.material-complementar .texto span a{
+	font-weight: 800;
+	font-size: 2em;
+	color: #fff;
+}
 
-            <!--Caixa Atenção-->
-            <section class="box-info text-white">
-                <div class="bg-red"></div>
-                <div class="border-blue">
-                    <img src="../../img/padrao/icon_atencao.png" />
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum erat eu maximus elementum. Fusce condimentum massa ac quam gravida, ut hendrerit sapien rhoncus. Integer varius libero in venenatis egestas. Phasellus vitae sapien et est consectetur tincidunt. Integer eu odio odio. In vitae libero ac enim rhoncus fermentum a id augue.</p>
-                </div>
-            </section>
+.material-complementar .texto span a:hover{
+	background-color: #fff;
+	color: #e73435;
+	text-decoration:underline;
+}
 
-            <!--Caixa Citação-->
-            <section class="box-info text-white">
-                <div class="bg-blue"></div>
-                <div class="border-dark-blue">
-                    <img src="../../img/uni1/icon_citacao_top1.png" />
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum erat eu maximus elementum. Fusce condimentum massa ac quam gravida, ut hendrerit sapien rhoncus. Integer varius libero in venenatis egestas.</p>
-                    <p>In vitae libero ac enim rhoncus fermentum a id augue.</p>
-                    <div align="right"> <img class="right" src="../../img/padrao/icon_citacao_bottom1.png" /></div>
-                </div>
-            </section>
+@media screen and (max-width: 720px) {
+	.material-complementar .texto span a{
+		font-size: 1.4em;
+	}
+}
 
-            <!--Caixa Fique por dentro-->
-            <section class="box-info text-blue">
-                <div class="bg-yellow"></div>
-                <div class="border-blue">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum erat eu maximus elementum. Fusce condimentum massa ac quam gravida, ut hendrerit sapien rhoncus. Integer varius libero in venenatis egestas. Phasellus vitae sapien et est consectetur tincidunt. Integer eu odio odio. In vitae libero ac enim rhoncus fermentum a id augue.</p>
-                    <div align="right"> <img class="right" src="../../img/padrao/icon_fique_por_dentro.png" /></div>
-                </div>
-            </section>
+@media screen and (max-width: 540px) {
+	.material-complementar .texto{
+		font-size: 1em;
+		line-height: 120%;
+	}
+}
 
-            <!--Caixa Para Refletir-->
-            <section class="box-info text-white">
-                <div class="bg-blue"></div>
-                <div class="border-yellow">
-                    <img src="../../img/padrao/icon_refletir.png" />
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum erat eu maximus elementum. Fusce condimentum massa ac quam gravida, ut hendrerit sapien rhoncus. Integer varius libero in venenatis egestas. Phasellus vitae sapien et est consectetur tincidunt. Integer eu odio odio. In vitae libero ac enim rhoncus fermentum a id augue.</p>
-                </div>
-            </section>
+@media screen and (max-width: 420px) {
+	.material-complementar .texto{
+		font-size: 0.7em;
+	}
+}
 
-            <!--Caixa Material Complementar-->
-            <section class="box-info text-white">
-                <div class="bg-red"></div>
-                <div class="border-blue">
-                    <img src="../../img/padrao/icon_complementar.png" />
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum erat eu maximus elementum. Fusce condimentum massa ac quam gravida, ut hendrerit sapien rhoncus. Integer varius libero in venenatis egestas. Phasellus vitae sapien et est consectetur tincidunt. Integer eu odio odio. In vitae libero ac enim rhoncus fermentum a id augue.</p>
-                </div>
-            </section>
+.fique-por-dentro, .material-complementar, .box-atencao, .box-para-refletir{
+	position: relative;
+}
 
-            <!--Caixa Citação 2-->
-            <section class="box-info text-blue">
-                <div class="bg-yellow"></div>
-                <div class="border-blue">
-                    <img src="../../img/padrao/icon_citacao_top.png" />
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum erat eu maximus elementum.</p>
-                    <div align="right"> <img class="right" src="../../img/padrao/icon_citacao_bottom.png" /></div>
-                </div>
-            </section>
+.material-complementar img{
+	width: 80%;
+	height: 80%;
+	margin: auto;
+	border: 1px solid white;
+	display:block;
+}
 
-            <div class="content footer">
-                <!--Rodapé-->
-                <hr/>
-                <div class="row rodape">
-                    <div class="6u 12u$(small)">
-                        <p></p>
-                        <img src="../../img/padrao/logo_mentoria.png" alt="IFSC">
-                    </div>
-                    <div class="2u 12u$(small)">
-                        <p>Realização:</p>
-                        <img src="../../img/padrao/logo_mec.png" alt="IFSC">
-                    </div>
-                    <div class="4u 12u$(small)">
-                        <p>Produção:</p>
-                        <img src="../../img/padrao/ifsc.png" alt="IFSC">
-                        <img src="../../img/padrao/ifes.png" alt="IFES">
-                    </div>
-                </div><!--Rodapé-->
-            </div>
-        </section>
-    </div>
-</section>
+.fique-por-dentro img{
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+	border: 1px solid white;
+	display:block;
+}
+
+.fique-por-dentro .texto{
+	position: absolute;
+	top: 0;
+	width: 65%;
+	margin-top: 10%;
+	margin-left: 10%;
+}
+
+.fique-por-dentro .texto span{
+	font-weight: 900;
+	font-size: 1.4em;
+}
+
+@media screen and (max-width: 1410px) {
+	.fique-por-dentro .texto span{
+		font-weight: 800;
+		font-size: 1.2em;
+	}
+}
+
+@media screen and (max-width: 1036px) {
+	.fique-por-dentro .texto span{
+		line-height: 1.2em;
+
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.fique-por-dentro .texto span{
+		font-size: 1.1em;
+		line-height: 1em;
+	}
+}
+
+@media screen and (max-width: 660px) {
+	.fique-por-dentro .texto span{
+		font-weight: 600;
+		font-size: 0.9em;
+	}
+}
+
+@media screen and (max-width: 585px) {
+	.fique-por-dentro{
+		margin-bottom: 30%;
+	}
+	.fique-por-dentro .imagem-fundo img{
+		width: 125%;
+		height: 120%;
+		margin-left: -10%;
+		display: block;
+	}
+	.fique-por-dentro .texto {
+		display: block;
+		position: relative;
+		background-color: #fec13b;
+		width: 88%;
+		margin-left: 1%;
+		margin-top: -58%;
+		/* border: 4px solid #2a5caa; */
+		padding: 2%;
+		border-radius: 0.5em;
+	}
+}
+
+h3.texto-central{
+	text-align: center;
+	color: #fff;
+	font-size: 1.5em;
+	background-color: #2a5caa;
+	border-radius: 1em;
+	width: auto;
+	padding: 1em;
+	font-family: "Musket-Bold";
+}
+
+h3.texto-central b{
+	color: #2a5caa;
+	display: none;
+}
+
+h3.texto-central b{
+	color: #fff;
+	font-size: 2em;
+	display: block;
+	transition: color .5s ;
+}
+
+.box-atencao  img, .box-para-refletir img{
+	width: 80%;
+	margin: auto;
+	display: block;
+}
+
+.box-atencao .texto{
+	position: absolute;
+	color: #fff;
+	top: 23%;
+	left: 28%;
+	width: 54%;
+	vertical-align: middle;
+	text-align: justify;
+	font-size: 1.4em;
+}
+
+@media screen and (max-width: 1440px){
+	.box-atencao .texto{
+		font-size: 1.2em;
+	}
+}
+
+@media screen and (max-width: 1060px){
+	.box-atencao .texto{
+		font-size: 1em;
+	}
+}
 
 
-<!-- Footer -->
-<footer id="footer">
-</footer>
+.box-para-refletir .texto{
+	position: absolute;
+	color: #fff;
+	top: 25%;
+	left: 30%;
+	width: 52%;
+	vertical-align: middle;
+	text-align: justify;
+	font-size: 1.4em;
+}
+
+@media screen and (max-width: 1510px){
+	.box-para-refletir .texto{
+		font-size: 1.2em;
+	}
+}
+
+@media screen and (max-width: 1360px){
+	.box-para-refletir .texto{
+		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 670px){
+	.box-para-refletir .texto{
+		line-height: 1.4em;
+	}
+}
 
 
-</body>
-</html>
+
+@media screen and (max-width: 630px){
+	.box-atencao img{
+		width: 120%;
+		margin-left: -10%;
+	}
+	.box-atencao .texto{
+		width: 80%;
+		margin-left: -10%;
+	}
+
+	.box-para-refletir img{
+		width: 120%;
+		margin-left: -10%;
+	}
+	.box-para-refletir .texto{
+		width: 75%;
+		margin-left: -10%;
+	}
+}
+
+
+@media screen and (max-width: 475px){
+
+	.box-para-refletir .texto{
+		display: block;
+		position: relative;
+		background-color: #2a5caa;
+		width: 90%;
+		margin-left: -18%;
+		margin-top: -49%;
+		border: 4px solid #fec13b;
+		padding: 2%;
+		border-radius: 0.5em;
+	}
+
+	.box-atencao .texto{
+		display: block;
+		position: relative;
+		background-color: #e73435;
+		width: 95%;
+		margin-left: -18%;
+		margin-top: -52%;
+		margin-bottom: 10%;
+		border: 4px solid #2a5caa;
+		padding: 2%;
+		border-radius: 0.5em;
+	}
+}
+
+/* Video */
+
+	.video{
+		background-image: url(../img/padrao/bg_video_01.jpg);
+		background-color: #2A5CAA;
+		position: relative;
+		margin: auto;
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding: 50px 8rem;
+		margin-bottom: 40px;
+	}
+
+	.video-player {
+		width: 100% !important;
+		/* height: 90%;	 */
+		margin: 0 auto;
+		border: 6px solid #fff;
+		background-color: #fff;
+	}
+
+	/*.video-player {*/
+	/*	width: 80%;*/
+	/*	!* height: 90%;	 *!*/
+	/*	margin-top: -55%;*/
+	/*	position: relative;*/
+	/*	margin-left: 12%;*/
+	/*	border: 4px solid #fff;*/
+	/*}*/
+
+	.titulo-video {
+		margin-bottom: 15px;
+		margin-top: 0;
+		z-index: 2;
+		text-align: center;
+		width: 100%;
+		color: #fff;
+		text-shadow: 0px 0px 5px black;
+	}
+
+	.titulo-video span{
+		font-family: "Musket-Bold";
+		font-size: 1.4em;
+		z-index: 2;
+		text-align: center;
+		width: 100%;
+		color: #fff;
+		text-shadow: 0px 0px 5px black;
+	}
+
+
+@media screen and (max-width:560px){
+	.titulo-video span{
+		text-shadow: none;
+		font-size: 1.2em;
+	}
+
+	.video{
+		padding: 30px 10px;
+	}
+
+}
+
+@media screen and (max-width: 736px) {
+	.video{
+		padding: 30px 2rem;
+	}
+
+}
+
+
+/* Boxes Novo Estilo */
+	.box-info{
+		width: 100%;
+		display: flex;
+		padding: 5%;
+	}
+
+	.box-info img {
+		height: 120px;
+		position: absolute;
+		margin-left: -120px;
+		margin-top: -110px;
+	}
+
+	.box-info .right {
+		height: 120px;
+		position: absolute;
+		margin-left: 10px;
+		margin-top: 0px;
+	}
+
+	.box-info.text-white div,
+	.box-info.text-white div a{
+		color: #fff;
+	}
+
+	.box-info.text-blue div,
+	.box-info.text-blue div a{
+		color: #2A5CAA;
+	}
+
+	.box-info div a:hover{
+		transition-delay: 0.6ms;
+	}
+
+	.box-info .border-blue,
+	.box-info .border-dark-blue,
+	.box-info .border-yellow{
+		border: 6px solid;
+		border-radius: 8px;
+		padding: 5% 5% 10% 10%;
+		margin-left: -85%;
+		margin-top: 5%;
+		width: 80%;
+	}
+
+	.box-info .border-blue{
+		border-color: #2A5CAA;
+	}
+
+	.box-info .border-dark-blue{
+		border-color: #020E36;
+	}
+
+	.box-info .border-yellow{
+		border-color: #FEC13B;
+	}
+
+	.box-info .bg-red,
+	.box-info .bg-blue,
+	.box-info .bg-yellow{
+		border-radius: 8px;
+		padding: 20px;
+		margin-left: 15%;
+		margin-bottom: 5%;
+		width: 80%;
+
+	}
+
+	.box-info .bg-blue{
+		background-color: #2A5CAA;
+	}
+
+	.box-info .bg-red{
+		background-color: #E73435;
+	}
+
+	.box-info .bg-yellow{
+		background-color: #FEC13B;
+	}
+
+	@media screen and (max-width: 585px) {
+		.box-info img {
+			margin-top: -120px;
+			/*position: relative !important;*/
+			left: 0;
+			margin-left: 0;
+		}
+
+		.box-info .right {
+			right: 0;
+			margin-right: 0;
+			left: auto;
+		}
+
+		.box-info{
+			margin-top: 60px;
+			padding: 5px;
+		}
+
+		.box-info .border-blue,
+		.box-info .border-dark-blue,
+		.box-info .border-yellow{
+			width: 100% !important;
+			margin-left: -105% !important;
+			padding: 15% 5% 15% 10% !important;
+		}
+
+		.box-info .bg-red,
+		.box-info .bg-blue,
+		.box-info .bg-yellow{
+			width: 100% !important;
+			margin-left: 5% !important;
+		}
+
+	}
+
+.image.border-blue{
+	border: 3px solid #2a5caa;
+	border-radius: 8px;
+	padding: 10px;
+	width: 90% !important;
+	margin: 0 auto !important;
+	margin-top: 60px !important;
+}
+
+.image .subtitulo{
+	margin-top: -40px;
+}
+
+.subtitulo{
+	background-image: none;
+	border-radius: 8px;
+	padding: 2px 1px;
+	margin: 0;
+	transform: rotate(-2deg);
+	width: 70%;
+	margin: 0 auto;
+}
+
+.border-blue .subtitulo{
+	border-right: 3px solid #2a5caa;
+	border-bottom: 3px solid #2a5caa;
+	background-color: #fec13b;
+}
+
+.subtitulo p{
+	padding: 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	transform: rotate(2deg);
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.border-blue .subtitulo p{
+	color: #2a5caa;
+}
+
+@media screen and (max-width: 980px) {
+	.image.border-blue{
+		min-width: unset !important;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.image.border-blue{
+		border: none;
+		width: 100%;
+		padding: 10px 0px;
+		margin-top: 60px !important;
+	}
+
+	.subtitulo{
+		width: 90%;
+		padding: 6px 2px;
+	}
+
+	.subtitulo p{
+		padding: 2px;
+		font-size: 17px;
+		line-height: 22px;
+	}
+
+}
