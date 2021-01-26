@@ -2529,20 +2529,21 @@ header p {
     border-radius: 4px;
 }
 
-.footer .lista-navegacao{
+.footer .bt-topo{
     padding: 0px 8px;
     border-radius: 12%;
+    float: right;
 }
 
-.footer .lista-navegacao i{
+.footer .bt-topo i{
     font-size:30px;
 }
 
-.footer .lista-navegacao:hover{
+.footer .bt-topo:hover{
     transition: 0.3s;
 }
 
-.footer .lista-navegacao:hover a{
+.footer .bt-topo:hover a{
     color: #fff;
 }
 
