@@ -50,6 +50,7 @@
 .coluna2{
     position: relative;
     float: right;
+    margin-bottom: 5em;
 }
 
 .coluna1 .corpo-coluna{    
