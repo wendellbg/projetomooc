@@ -4,10 +4,8 @@
 		<title>Mentoria</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="../../css/main.css"/>
-		<link rel="stylesheet" href="../../css/menu-top-down.css"/>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-		<link rel="stylesheet" href="../../css/rodape.css"/>
+		<link rel="stylesheet" href="../../css/mooc1.css?ver=1.0" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">		
 		<link rel="stylesheet" href="../../css/tabs.css"/>
 		<link rel="stylesheet" href="../../css/timeline.css"/>
 		<link rel="stylesheet" href="../../css/fontes.css"/>
@@ -99,22 +97,22 @@
 							<div class="timeline-geral">
 								<div class="horizontal-timeline-icones">
 									<div class="icone-audio" style="left: 24%;">
-										<a class='icone-play' id="botao-play-70" onclick="playShow70()"><img src="../../img/uni2/icone-audio.png" class='icone-play' /></a>																		
-										<a class="icone-pause" id="botao-pause-70" onclick="pauseShow70()" style="display:none;"><img src="../../img/uni2/icone-audio2.png" /></a>
+										<a class='icone-play' id="botao-play-70" onclick="playShow70()"><img src="../../img/uni2/icone-audio.png"/></a>																		
+										<a class="icone-pause" id="botao-pause-70" onclick="pauseShow70()" style="display:none;"><img src="../../img/uni2/icone-audio2.gif" /></a>
 										<audio id='player70' controls='controls'>
 											<source src="../../img/uni2/70.mp3" type="audio/mp3"/>Seu navegador não suporta HTML5
 										</audio>
 									</div>
 									<div class="icone-audio" style="left: 48%;">
-										<a class='icone-play' id="botao-play-80" onclick="playShow80()"><img src="../../img/uni2/icone-audio.png" class='icone-play' /></a>																		
-										<a class="icone-pause" id="botao-pause-80" onclick="pauseShow80()" style="display:none;"><img src="../../img/uni2/icone-audio2.png" /></a>
+										<a class='icone-play' id="botao-play-80" onclick="playShow80()"><img src="../../img/uni2/icone-audio.png"/></a>																		
+										<a class="icone-pause" id="botao-pause-80" onclick="pauseShow80()" style="display:none;"><img src="../../img/uni2/icone-audio2.gif" /></a>
 										<audio id='player80' controls='controls'>
 											<source src="../../img/uni2/80.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
 										</audio>
 									</div>
 									<div class="icone-audio" style="left: 73%;">
-										<a class='icone-play' id="botao-play-90" onclick="playShow90()"><img src="../../img/uni2/icone-audio.png" class='icone-play' /></a>																		
-										<a class="icone-pause" id="botao-pause-90" onclick="pauseShow90()" style="display:none;"><img src="../../img/uni2/icone-audio2.png" /></a>
+										<a class='icone-play' id="botao-play-90" onclick="playShow90()"><img src="../../img/uni2/icone-audio.png" /></a>																		
+										<a class="icone-pause" id="botao-pause-90" onclick="pauseShow90()" style="display:none;"><img src="../../img/uni2/icone-audio2.gif" /></a>
 										<audio id='player90' controls="controls">
 											<source src="../../img/uni2/90.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
 										</audio>
@@ -132,6 +130,10 @@
 									<div class="legenda-icone" style="left: 75%;">90</div>
 								</div> 
 							</div>
+						</div>
+					
+						<!-- Conteúdo -->
+						<div class="content footer">
 							<div class='navegacao'>
 								<span class="lista-navegacao" style="float: right;">
 									<a href="#"><i class="fas fa-angle-up"></i></a>
@@ -147,36 +149,35 @@
 									<a href="tela05.html"><input type="radio" name="radio"><label for="radio"></label></a>
 									<a href="tela06.html"><input type="radio" name="radio"><label for="radio"></label></a>
 									<a href="tela07.html"><input type="radio" name="radio"><label for="radio"></label></a>
-									
+
 									<a href="tela05.html"><button class="bt-navegacao" type="button">></button></a>
 								</span>                                 
 								<span class="legenda">Tela 4 de 7</span>  
-								
+
 							</div>
-							<hr>
-							<div class="rodape linha">
-								<div class="coluna-50">
-									<img style="width:250px;margin-top:70px;" src="../../img/uni1/logo_mentoria.png" alt="IFSC">
+							<!--Rodapé-->
+							<hr/>
+							<div class="row rodape">
+								<div class="6u 12u$(small)">
+									<p></p>
+									<img src="../../img/uni1/logo_mentoria.png" alt="IFSC">
 								</div>
-								<div class="coluna-50">
-									<div class="linha">
-										<div class="coluna-50">
-											<p style="text-align:center">Realização:</p>
-											<img style="width:60px;" src="../../img/uni1/logo_mec.png" alt="IFSC">
-										</div>
-										<div class="coluna-50">
-											<p style="text-align:center">Produção:</p>
-											<img style="width:150px; margin-bottom: 10px;" src="../../img/uni1/ifsc.png" alt="IFSC">
-											<img style="width:150px" src="../../img/uni1/ifes.png" alt="IFES">
-										</div>
-									</div>
+								<div class="2u 12u$(small)">
+									<p>Realização:</p>
+									<img src="../../img/uni1/logo_mec.png" alt="IFSC">
 								</div>
-							</div>     	
+								<div class="4u 12u$(small)">
+									<p>Produção:</p>
+									<img src="../../img/uni1/ifsc.png" alt="IFSC">
+									<img src="../../img/uni1/ifes.png" alt="IFES">
+								</div>
+							</div><!--Rodapé-->
+
 						</div>
-						
+
 					</section>
-				</div>				
-			</section>
+		</div>				
+	</section>
 
 		<!-- Footer -->
 			<footer id="footer">              
