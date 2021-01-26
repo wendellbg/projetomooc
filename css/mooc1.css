@@ -12,7 +12,7 @@ body{
 }
 
 body:after {
-	background-image: url(../img/uni1/bg_header.png);
+	background-image: url(../img/padrao/bg_header.png);
 }
 
 a {
@@ -25,11 +25,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Boas Vindas */
 .boas-vindas{
-	background-image: url(../img/uni1/tela01_box_text.png);
+	background-image: url(../img/padrao/tela01_box_text.png);
 }
 
 .caixa-texto-topo {
-	background-image: url(../img/uni1/tela01_box1.png);
+	background-image: url(../img/padrao/tela01_box1.png);
 }
 
 .caixa-texto-topo p{
@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .caixa-texto-rodape {
-	background-image: url(../img/uni1/tela01_box2.png);
+	background-image: url(../img/padrao/tela01_box2.png);
 }
 .caixa-texto-rodape p {
 	color: #2a5caa;
@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 	.caixa-texto-centro{
-		background-image: url(../img/uni1/bg_slide_01.jpg);
+		background-image: url(../img/padrao/bg_slide_01.jpg);
 		background-color: #2a5caa;
 	}
 }
@@ -81,19 +81,19 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer */
 #footer{
-	background-image: url(../img/uni1/bg_footer.png);
+	background-image: url(../img/padrao/bg_footer.png);
 }
 
-.footer .lista-navegacao{
+.footer .bt-topo{
 	border: 2px solid #2a5caa;
 }
 
 
-.footer .lista-navegacao:hover{
+.footer .bt-topo:hover{
 	background-color: #2a5caa;
 }
 
-.footer .lista-navegacao:hover a{
+.footer .bt-topo:hover a{
 	color: #fff;
 }
 
