@@ -1,0 +1,135 @@
+@import url(font-awesome.min.css);
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+@import url(padrao.css?ver=1.2);
+@import url(fontes.css?ver=1.2);
+@import url(menu-top-down.css?ver=1.2);
+
+body{
+	background-color: #eeeeee;
+	/*background-image: url(../img/uni1/bg_mooc1.png);*/
+	/*background-size: contain !important;*/
+}
+
+body:after {
+	background-image: url(../img/padrao/bg_header.png);
+}
+
+a {
+	color: #2a5caa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #2a5caa;
+}
+
+/* Boas Vindas */
+.boas-vindas{
+	background-image: url(../img/padrao/tela01_box_text.png);
+}
+
+.caixa-texto-topo {
+	background-image: url(../img/padrao/tela01_box1.png);
+}
+
+.caixa-texto-topo p{
+	color: #2a5caa;
+}
+
+.caixa-texto-centro p {
+	color: #fff;
+}
+
+.caixa-texto-rodape {
+	background-image: url(../img/padrao/tela01_box2.png);
+}
+.caixa-texto-rodape p {
+	color: #2a5caa;
+}
+
+@media screen and (max-width: 550px) {
+	.caixa-texto-topo,
+	.caixa-texto-rodape{
+		background-color: #fec13b;
+	}
+
+	.caixa-texto-rodape{
+		background-color: #fec13b;
+	}
+
+	.caixa-texto-centro{
+		background-image: url(../img/padrao/bg_slide_01.jpg);
+		background-color: #2a5caa;
+	}
+}
+
+/* Separador */
+.separador {
+	border-top: 2px solid #2a5caa;
+}
+
+.separador .texto-separador {
+	background-color: #2a5caa;
+	color: white;
+}
+
+
+.content .navegacao h3 {
+	color: #fff;
+	background-color: #2a5caa;
+}
+
+/* Footer */
+#footer{
+	background-image: url(../img/padrao/bg_footer.png);
+}
+
+.footer .bt-topo{
+	border: 2px solid #2a5caa;
+}
+
+
+.footer .bt-topo:hover{
+	background-color: #2a5caa;
+}
+
+.footer .bt-topo:hover a{
+	color: #fff;
+}
+
+/* Navegação */
+.bt-navegacao {
+	background-color: #2a5caa;
+	color: white;
+
+}
+
+.bt-navegacao.desativado{
+	background-color: #BCD0E8;
+}
+
+.botoes-navegacao input[type="radio"] + label:before{
+	border: 1px solid #2a5caa;
+}
+
+.botoes-navegacao input[type="radio"]:checked + label:before{
+	background: #2a5caa;
+	color: #FFF;
+	border: 1px solid #2a5caa;
+}
+
+
+.navegacao .legenda{
+	color: #2a5caa;
+}
+
+.bt-avanca {
+	background-color: #2a5caa;
+	color: white;
+}
+
+.bt-avanca:hover,
+.bt-navegacao:hover,
+.botoes-navegacao a:hover input[type="radio"] + label:before{
+	background-color: #020e36;
+}

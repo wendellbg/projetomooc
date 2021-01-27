@@ -1,12 +1,4 @@
-@font-face {
-    font-family: 'Musket-Bold';
-    src:url('../fonts/Musket-Bold.ttf.woff') format('woff'),
-        url('../fonts/Musket-Bold.ttf.svg#Musket-Bold') format('svg'),
-        url('../fonts/Musket-Bold.ttf.eot'),
-        url('../fonts/Musket-Bold.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 .timeline-geral{    
     position: relative;
@@ -59,6 +51,14 @@
         display: block;
     }
 
+    .icone-play:hover{
+        background-color: #ebebeb;
+        border: 2px solid #fec13b;
+        border-radius: 1em;
+        width: 10vw;
+        height:10vw;
+    }
+
     .icone-pause{
         width: 10vw;
         height:10vw;        
@@ -75,13 +75,7 @@
         margin-bottom: -50%;
     }
 
-    .icone-play:hover{
-        background-color: #ebebeb;
-        border: 2px solid #fec13b;
-        border-radius: 1em;
-        width: 10vw;
-        height:10vw;
-    }
+  
 
     .legenda-icone{
         position: absolute;
@@ -92,16 +86,15 @@
     }
     
 #player70, #player80, #player90{
-    position: absolute;
-    top: -2vh;    
-    height: 2vh;    
+    position: absolute; 
+    top: -2vh;            
+    height: 2vh;  
     display: inline-block;
-    width: 50vw;    
-    left: 0;
+    width: 58vw;        
 }
 
 #player70{    
-    margin-left: -10vw;
+    margin-left: -10.5vw;   
 }
 
 #player80{

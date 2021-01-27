@@ -136,21 +136,3 @@
 	margin-top: -57px;
 }
 
-.lista-navegacao{
-  border: 2px solid #2a5caa;
-  padding: 0px 8px;
-  border-radius: 12%;
-}
-
-.lista-navegacao i{
-  font-size:30px;
-}
-
-.lista-navegacao:hover{
-  background-color: #2a5caa;
-  transition: 0.3s;
-}
-
-.lista-navegacao:hover a{
-  color: #fff;
-}

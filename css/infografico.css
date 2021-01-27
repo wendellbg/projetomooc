@@ -111,9 +111,9 @@
 }
 
 .l2{
-    height: calc(var(--tamanho)*15);
+    height: calc(var(--tamanho)*16);
     transform: rotate(30deg);
-    top: calc(var(--tamanho)*(5));
+    top: calc(var(--tamanho)*(7));
     left: calc(var(--tamanho)*(24));
 }
 
