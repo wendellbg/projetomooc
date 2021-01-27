@@ -133,72 +133,14 @@
 	}
 }
 
-.video-uni2 img, .video-uni1 img{
-	width: 130%;
-	position: relative;
-	margin-left: -15%;
-	display: inline-block;
-}
-
-.video-uni2 .titulo-video span{
-	font-family: "Musket-Bold";
-	font-size: 1.8em;
-}
-
-.video-uni1 .titulo-video span{
-	font-family: "Musket-Bold";
-	font-size: 1.4em;
-}
-
-.video-uni2 .titulo-video, .video-uni1 .titulo-video{
-	position: relative;
-	margin-bottom: -10%;
-	margin-top: 10%;
-	z-index: 2;
-	text-align: center;
-	width: 100%;
-	color: #fff;
-	text-shadow: 0px 0px 5px black;
-}
-
-@media screen and (max-width:460px){
-	.video-uni2 .titulo-video span{
-		font-size: 1.2em;
-	}
-}
-
-@media screen and (max-width:560px){
-	.video-uni1 .titulo-video{
-		margin-bottom: 0%;
-		margin-top: 10%;
-	}
-	.video-uni1 .titulo-video span{
-		text-shadow: none;
-	}
-
-	.bg-video{
-		padding: 50px 5px;
-		margin-right: -2rem;
-		margin-left: -2rem;
-	}
-}
-
-.video-uni2 .video-player, .video-uni1 .video-player {
-	width: 80%;
-	/* height: 90%;	 */
-	margin-top: -55%;
-	position: relative;
-	margin-left: 12%;
-	border: 4px solid #fff;
-}
-
-
 h3.texto-central{
 	text-align: center;
 	color: #fff;
 	font-size: 1.5em;
 	background-color: #2a5caa;
-	border-radius: 1em;
+	background-image: url(../img/padrao/bg_slide_01.jpg);
+	background-size: cover;
+	border-radius: 8px;
 	width: auto;
 	padding: 1em;
 	font-family: "Musket-Bold";
@@ -326,18 +268,37 @@ h3.texto-central b{
 	}
 }
 
-	.bg-video .video-player {
+/* Video */
+
+	.video{
+		background-image: url(../img/padrao/bg_video_01.jpg);
+		background-color: #2A5CAA;
+		position: relative;
+		margin: auto;
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding: 50px 8rem;
+		margin-bottom: 40px;
+	}
+
+	.video-player {
 		width: 100% !important;
 		/* height: 90%;	 */
-		margin-top: 0;
-		position: relative;
-		margin-left: 0;
+		margin: 0 auto;
 		border: 6px solid #fff;
 		background-color: #fff;
 	}
 
-	.bg-video .titulo-video {
-		position: relative;
+	/*.video-player {*/
+	/*	width: 80%;*/
+	/*	!* height: 90%;	 *!*/
+	/*	margin-top: -55%;*/
+	/*	position: relative;*/
+	/*	margin-left: 12%;*/
+	/*	border: 4px solid #fff;*/
+	/*}*/
+
+	.titulo-video {
 		margin-bottom: 15px;
 		margin-top: 0;
 		z-index: 2;
@@ -347,8 +308,38 @@ h3.texto-central b{
 		text-shadow: 0px 0px 5px black;
 	}
 
+	.titulo-video span{
+		font-family: "Musket-Bold";
+		font-size: 1.4em;
+		z-index: 2;
+		text-align: center;
+		width: 100%;
+		color: #fff;
+		text-shadow: 0px 0px 5px black;
+	}
 
-	/* Boxes Novo Estilo */
+
+@media screen and (max-width:560px){
+	.titulo-video span{
+		text-shadow: none;
+		font-size: 1.2em;
+	}
+
+	.video{
+		padding: 30px 10px;
+	}
+
+}
+
+@media screen and (max-width: 736px) {
+	.video{
+		padding: 30px 2rem;
+	}
+
+}
+
+
+/* Boxes Novo Estilo */
 	.box-info{
 		width: 100%;
 		display: flex;
@@ -446,8 +437,6 @@ h3.texto-central b{
 		.box-info{
 			margin-top: 60px;
 			padding: 5px;
-			/*margin-left: -2rem;*/
-			/*margin-right: -2rem;*/
 		}
 
 		.box-info .border-blue,
@@ -466,3 +455,73 @@ h3.texto-central b{
 		}
 
 	}
+
+.image.border-blue{
+	border: 3px solid #2a5caa;
+	border-radius: 8px;
+	padding: 10px;
+	width: 90% !important;
+	margin: 0 auto !important;
+	margin-top: 60px !important;
+}
+
+.image .subtitulo{
+	margin-top: -40px;
+}
+
+.subtitulo{
+	background-image: none;
+	border-radius: 8px;
+	padding: 2px 1px;
+	margin: 0;
+	transform: rotate(-2deg);
+	width: 70%;
+	margin: 0 auto;
+}
+
+.border-blue .subtitulo{
+	border-right: 3px solid #2a5caa;
+	border-bottom: 3px solid #2a5caa;
+	background-color: #fec13b;
+}
+
+.subtitulo p{
+	padding: 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	transform: rotate(2deg);
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.border-blue .subtitulo p{
+	color: #2a5caa;
+}
+
+@media screen and (max-width: 980px) {
+	.image.border-blue{
+		min-width: unset !important;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.image.border-blue{
+		border: none;
+		width: 100%;
+		padding: 10px 0px;
+		margin-top: 60px !important;
+	}
+
+	.subtitulo{
+		width: 90%;
+		padding: 6px 2px;
+	}
+
+	.subtitulo p{
+		padding: 2px;
+		font-size: 17px;
+		line-height: 22px;
+	}
+
+}
