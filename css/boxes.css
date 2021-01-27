@@ -138,7 +138,9 @@ h3.texto-central{
 	color: #fff;
 	font-size: 1.5em;
 	background-color: #2a5caa;
-	border-radius: 1em;
+	background-image: url(../img/padrao/bg_slide_01.jpg);
+	background-size: cover;
+	border-radius: 8px;
 	width: auto;
 	padding: 1em;
 	font-family: "Musket-Bold";
@@ -497,15 +499,29 @@ h3.texto-central b{
 	color: #2a5caa;
 }
 
+@media screen and (max-width: 980px) {
+	.image.border-blue{
+		min-width: unset !important;
+	}
+}
+
 @media screen and (max-width: 550px) {
 	.image.border-blue{
 		border: none;
-		width: 100px;
+		width: 100%;
 		padding: 10px 0px;
 		margin-top: 60px !important;
 	}
 
 	.subtitulo{
 		width: 90%;
+		padding: 6px 2px;
 	}
+
+	.subtitulo p{
+		padding: 2px;
+		font-size: 17px;
+		line-height: 22px;
+	}
+
 }
