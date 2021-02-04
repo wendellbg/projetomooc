@@ -282,12 +282,19 @@ h3.texto-central b{
 	}
 
 	.video-player {
-		width: 100% !important;
+		 /* width: 100% !important; */
 		/* height: 90%;	 */
 		margin: 0 auto;
 		border: 6px solid #fff;
 		background-color: #fff;
 	}
+
+	.video-player embed{
+		--tamanho-video:80vh;
+		width: var(--tamanho-video);
+		height: calc(var(--tamanho-video)/2);		
+		margin: 0 auto;		
+	}	
 
 	/*.video-player {*/
 	/*	width: 80%;*/
