@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: #2a5caa;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 585px) {
 	.caixa-texto-topo,
 	.caixa-texto-rodape{
 		background-color: #fec13b;
@@ -60,6 +60,10 @@ h1, h2, h3, h4, h5, h6 {
 	.caixa-texto-centro{
 		background-image: url(../img/padrao/bg_slide_01.jpg);
 		background-color: #2a5caa;
+	}
+	.caixa-texto-topo:before, .caixa-texto-rodape:before{
+		background-color: #fec13b;
+		border: 3px solid #fec13b;
 	}
 }
 

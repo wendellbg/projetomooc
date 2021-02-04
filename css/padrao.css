@@ -721,7 +721,7 @@ header p {
     font-family: "Musket" !important;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 585px) {
     .boas-vindas{
         background: none !important;
         width: 100%;
@@ -738,7 +738,7 @@ header p {
         margin: 0;
         transform: rotate(-3deg);
         padding: 8px;
-    }
+    }  
 
     .caixa-texto-topo{
         margin: 0 auto;
@@ -760,6 +760,7 @@ header p {
         padding-top: 15px;
         padding-bottom: 15px;
         transform: rotate(3deg);
+        background-color: #fec13b;
     }
 
     .caixa-texto-centro{
@@ -767,6 +768,21 @@ header p {
         background-size: cover;
         border-radius: 8px;
     }
+
+    .caixa-texto-rodape p{
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .caixa-texto-topo:before, .caixa-texto-rodape:before{
+        content: "";
+        position: absolute;        
+        border-radius: 8px;
+        top: -10%; bottom: -11%; left: -1%; right: -2%;
+        z-index: -1;      
+        -webkit-transform: perspective(50em) rotateX(-30deg);
+        transform: perspective(50em) rotateX(-30deg);
+      }
 }
 
 /* Spotlight */
