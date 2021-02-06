@@ -573,6 +573,15 @@ h3.texto-central b{
 	background-image: url(../img/padrao/tela01_box1.png);
 }
 
+.titulo-externo-box.blue p{
+	color: #ffffff;
+}
+
+.titulo-externo-box.blue {
+	background-image: url(../img/padrao/tela01_box1_blue.png);
+}
+
+
 @media screen and (max-width: 550px) {
 
 	.titulo-externo-box{
@@ -589,6 +598,10 @@ h3.texto-central b{
 		margin-top: -70px;
 	}
 
+	.titulo-externo-box.blue {
+		background-color: #2a5caa;
+	}
+
 	.titulo-externo-box.yellow {
 		background-color: #fec13b;
 	}
@@ -600,4 +613,50 @@ h3.texto-central b{
 		transform: rotate(3deg);
 	}
 
+}
+
+
+.downloads{
+	text-align: right;
+	padding-top: 5px;
+	margin: 0;
+}
+
+@media screen and (max-width: 550px) {
+	.downloads{
+		text-align: center;
+	}
+}
+
+.bt-download-media {
+	border: none;
+	padding: 5px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	font-family: "Catamaran", sans-serif;
+	margin: 4px 2px;
+	cursor: pointer;
+	margin-left: 0px;
+	background: #2a5caa;
+	color: rgba(255, 255, 255, 0.6);
+	border-radius: 4px;
+}
+
+
+.bt-download-media:hover{
+	transition: 0.3s;
+	background-color: #173151;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.video .downloads .bt-download-media:hover{
+	background-color: #173151;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.video .downloads .bt-download-media {
+	background: #1c3c6b;
+	color: rgba(255, 255, 255, 0.6);
 }
