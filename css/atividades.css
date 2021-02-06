@@ -122,6 +122,11 @@
     font-weight: bold;
 }
   
+/* .botao-atividade button.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+} */
+
 .botao-atividade button{
     background:#2a5caa;        
     color:#ffffff;
