@@ -35,10 +35,9 @@
         border-radius: 8px;
         margin: auto 40%;
         width: 20%;
+        cursor: pointer;
     }
 
     .controles-podcast{
         width: 100%;
     }
-
-
