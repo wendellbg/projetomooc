@@ -1,18 +1,18 @@
-    .icone-audio{      
-        border-radius: 2em;          
-        border: 2px solid #2a5caa;   
-        padding-top: 1em;
-        display: block;        
+    .icone-audio{
+        border-radius: 8px;
+        border: 2px solid #2a5caa;
+        padding: 10px;
+        display: block;
     }
 
     .icone-play{
-        border: 2px solid #fff;      
-        display: block;                      
-        border-radius: 1em;        
-        margin: auto 40%;                        
+        border: 2px solid #fff;
+        display: block;
+        border-radius: 8px;
+        margin: auto 40%;
         width: 20%;
     }
-    
+
     .icone-play img, .icone-pause img{
         position: relative;
         width: 180%;
@@ -24,21 +24,21 @@
     }
     .icone-pause {
         border: 2px solid #2a5caa;
-        border-radius: 1em;        
-        margin: auto 40%;                        
+        border-radius: 8px;
+        margin: auto 40%;
         width: 20%;
-    }            
+    }
 
     .icone-play:hover{
         background-color: #ebebeb;
         border: 2px solid #fec13b;
-        border-radius: 1em;                
-        margin: auto 40%;                        
+        border-radius: 8px;
+        margin: auto 40%;
         width: 20%;
     }
 
     .controles-podcast{
-        width: 100%;              
+        width: 100%;
     }
 
 
