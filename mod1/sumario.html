@@ -1359,19 +1359,7 @@
 
 </div>
 </section>
-      <!--<p><a href="./uni1/teste01.html">Teste de porcentagem</a></p>
-      <div id='espaco'></div>
-      <section id='rodape'>
-				<div id='linha'></div>
-				<div class="links">
-					<span class="label-link copyright">INICIATIVA:<a href="https://www.mec.gov.br/" target="_blank" class="logo-capes-white"><img src="../img/uni1/mec.jpg"></a></span>
-					<span class="label-link copyright">REALIZAÇÃO:<a href="https://www.capes.gov.br" target="_blank" class="logo-capes-white"><img src="../img/uni1/logo-capes.png"></a></span>
-					<span class="label-link copyright">PRODUÇÃO:<a href="http://www.labtime.ufg.br/" target="_blank" class="logo-labtime-white"><img src="../img/uni1/marca_labtime.png"></a></span> 
-					<span class="label-link copyright"><a href="http://www.ufg.br/" target="_blank" class="logo-ufg-white"><img src="../img/uni1/marca_ufg.png"></a></span>
-					<div class="copyright final"><p>2020. CAPES - PROGRAMA DE ACOLHIMENTO DA UNIVERSIDADE ABERTA DO BRASIL</p></div>    	
-				</div>
-			</section> -->
-
+    
       <!-- Footer -->
       <footer id="footer">
       </footer>
@@ -1382,35 +1370,32 @@
        console.clear(screen);
        var API = new BridgeRestApi();
 			//a variável da quantidade de Unidades que há no Curso
-			var quantUnidades=6;
+			var quantUnidades=5;
 			//contagem das unidades para referência a cada laço for. começa em 1
 			var uniAtual = 1;
 
-			console.log("Começando o teste");
-			window.addEventListener('load', function(){ 
-				//o for vai criar o array com as chaves das unidades e chamar a função obterDadosGenericos com essas chaves				
-       console.log("\n\nUnidade 1");										
-					//primeiro verifica os dados salvos
-					API.obterDadosGenericos("porcentagemUni1");									
-					console.log("\n\nUnidade 2");										
-					//primeiro verifica os dados salvos
-					API.obterDadosGenericos("porcentagemUni2");									
-					console.log("\n\nUnidade 3");										
-					//primeiro verifica os dados salvos
-					API.obterDadosGenericos("porcentagemUni3");									
-					console.log("\n\nUnidade 4");										
-					//primeiro verifica os dados salvos
-					API.obterDadosGenericos("porcentagemUni4");									
-					console.log("\n\nUnidade 5");										
-					//primeiro verifica os dados salvos
-					API.obterDadosGenericos("porcentagemUni5");			
-					console.log("\n\nUnidade 6");										
-					//primeiro verifica os dados salvos
-					API.obterDadosGenericos("porcentagemUni6");									
-       });
+		console.log("Começando o teste");
+    window.addEventListener('load', function(){ 
+		    //o for vai criar o array com as chaves das unidades e chamar a função obterDadosGenericos com essas chaves				
+        console.log("\n\nUnidade 1");										
+				//primeiro verifica os dados salvos
+				API.obterDadosGenericos("porcentagemUni1");									
+				console.log("\n\nUnidade 2");										
+				//primeiro verifica os dados salvos
+				API.obterDadosGenericos("porcentagemUni2");									
+				console.log("\n\nUnidade 3");										
+				//primeiro verifica os dados salvos
+				API.obterDadosGenericos("porcentagemUni3");									
+				console.log("\n\nUnidade 4");										
+				//primeiro verifica os dados salvos
+				API.obterDadosGenericos("porcentagemUni4");									
+				console.log("\n\nUnidade 5");										
+				//primeiro verifica os dados salvos
+				API.obterDadosGenericos("porcentagemUni5");															
+    });
 
-			//Adicionando listener para o evento dos dados genériocs		
-			window.addEventListener("evObtemDadosGenericos",function(evento){			
+		//Adicionando listener para o evento dos dados genériocs		
+		window.addEventListener("evObtemDadosGenericos",function(evento){			
 				console.log("\n\nObtendo os dados genéricos: ");            							
 				console.log("Status do evento: "+evento.detail['status']);								
 				
@@ -1456,14 +1441,7 @@
             circulo = document.getElementById("circulo-uni5");
             progresso.innerHTML=""+porcentagem+"%";
             circulo.className="c100 p"+porcentagem;
-            break;
-            case "porcentagemUni6":
-            console.log("Unidade 6 tem "+(porcentagem)+"% concluída"); 									
-            progresso = document.getElementById("progresso-uni6");
-            circulo = document.getElementById("circulo-uni6");
-            progresso.innerHTML=""+porcentagem+"%";
-            circulo.className="c100 p"+porcentagem;
-            break;
+            break;            
           }				
 					//se a unidade não foi iniciada, registra os dados Genéricos da unidade com 0%
 				}else{
@@ -1491,29 +1469,12 @@
            case "porcentagemUni5":						
            API.registrarDadosGenericos("porcentagemUni5",0);
            console.log("Porcentagem da Unidade 5 Iniciada");	   
-           break;
-
-           case "porcentagemUni6":						
-           API.registrarDadosGenericos("porcentagemUni6",0);
-           console.log("Porcentagem da Unidade 6 Iniciada");	   
-           break;
+           break;          
          }
        }			
 				//depois de tratar os dados, pula para a próxima unidade.			
 				uniAtual++;
 			});
-
-			//A variável pct busca a chave 1 que armazena os valores das porcentagens de cada slide
-			/**
-			var pct = localStorage.getItem(1),
-			progresso = document.getElementById("progresso"),
-			circulo = document.getElementById("circulo");
-				
-			function mostra_porcentagem(p) {
-				progresso.innerHTML=""+p+"%";
-				circulo.className="c100 p"+p;
-			}
-			**/
 			
 		</script>
 

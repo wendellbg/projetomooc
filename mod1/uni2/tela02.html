@@ -4,8 +4,191 @@
 	<title>Mentoria</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="../../css/mooc1.css?ver=1.1" />
+	<!-- <link rel="stylesheet" href="../../css/mooc1.css?ver=1.1" /> -->
 	<link rel="stylesheet" href="../../css/atividades.css" />
+	<link rel="stylesheet" href="../../css/main.css" />
+	<link rel="stylesheet" href="../../css/rodape.css" />
+	<link rel="stylesheet" href="../../css/menu-top-down.css" />
+	<link rel="stylesheet" href="../../css/fontes.css" />
+
+	<style>
+		.questao{
+    background-color: #2a5caa;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em 0;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.titulo-questao{
+    background-color: #fec13b;
+    color: #000;
+    position: relative;    
+    display: block;
+    padding: 0.2em;    
+    width: 260px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-left: -50px;
+    border-radius: 0.5em;
+}
+
+.enunciado-questao{
+    text-decoration: underline;
+    padding: 1em 0;
+}
+
+.area-respostas{
+    width: 90%;
+    margin: auto;
+}
+
+.resposta-texto{
+    width: 90%;
+    margin: auto;
+    height: 200px;
+    padding: 0.5em;
+    color: #2a5caa;
+    font-size: 1em;
+    border: 1px solid #000;
+    border-radius:0.5em;
+    -moz-border-radius:0.5em;
+    -webkit-border-radius:0.5em;
+    box-shadow: 1px 1px 3px #000;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+}
+
+
+
+.resposta-texto:focus{       
+    outline: none;
+    border: 3px solid #fec13b;
+    border-radius: 0.5em;
+    -moz-border-radius:0.5em;
+    -webkit-border-radius:0.5em;
+    box-shadow: 1px 1px 3px #fec13b;
+    -moz-box-shadow: 1px 1px 3px #fec13b;
+    -webkit-box-shadow: 1px 1px 3px #fec13b;
+        
+}
+
+.opcao-resposta input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;    
+}
+  
+.opcao-resposta input + label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px;  
+    padding-right: 10px;    
+    border: 2px solid transparent;
+    border-radius: 1em;  
+    
+}
+
+.opcao-resposta input[type=radio] + label::before {
+    content: '';
+    position: absolute;
+    left: 3px;        
+    top: 2px;
+    width: 25px;    
+    height: 25px;    
+    border-radius: 50%;
+    border: solid 2px #fff;
+    vertical-align: middle;
+    
+}
+
+.opcao-resposta input:hover + label:hover{
+    border: 2px solid #fff;
+}
+
+.opcao-resposta input[type=radio]:checked + label::after {
+    content: '';
+    background-color: #000;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    position: absolute;
+    left: 7px;
+    top: 6px;
+}
+.opcao-resposta input[type=radio]:checked + label::before{
+    content: '';
+    position: absolute;
+    left: 3px;        
+    top: 2px;
+    width: 25px;    
+    height: 25px;    
+    border-radius: 50%;
+    border: solid 2px #000;
+    vertical-align: middle;
+}
+
+.opcao-resposta input[type=radio]:checked + label{
+    background-color: #fec13b;
+    color: #000;
+    font-weight: bold;
+}
+  
+/* .botao-atividade button.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+} */
+
+.botao-atividade button{
+    background:#2a5caa;        
+    color:#ffffff;
+    padding: 1em;
+    border-radius: 1em;
+    font-size: 1em;
+    font-family: "Musket";
+    outline: none;    
+    border-radius: 0.5em;
+    letter-spacing: 0.2em;
+    /* -moz-border-radius:0.5em;
+    -webkit-border-radius:0.5em;
+    box-shadow: 1px 1px 3px #fec13b;
+    -moz-box-shadow: 1px 1px 3px #fec13b;
+    -webkit-box-shadow: 1px 1px 3px #fec13b; */
+}
+  
+.mensagem-alerta{
+    display: none;
+    background-color: #E73435;
+    color: #fff;
+    border: 4px solid #2a5caa;
+    border-radius: 0.5em; 
+    padding: 2em;   
+    width: 80%;
+    margin: auto;
+    text-align: center;
+	font-size: 1.4em; 
+}
+
+.mensagem-ok{
+    display: none;
+    background-color: #2a5caa;
+    color: #fff;
+    border: 4px solid #fec13b;
+    border-radius: 0.5em; 
+    padding: 2em;   
+    width: 80%;
+    margin: auto;
+    text-align: center;
+	font-size: 1.4em;
+}
+
+.mensagem-ok a{
+    color: red;
+}
+
+</style>
 
 </head>
 <body>
@@ -53,7 +236,10 @@
 			<!-- Formulário para o quiz -->
 			<div class="content">
 				<div class="atividade" id='quiz-uni2'>
-					<form action="#" onsubmit="salvarDados()" name="form_quiz_uni2" method="POST">
+					<div id='mensagem-alerta'>						
+					</div>
+
+					<form action="#" onsubmit="salvarDados(this); return false;" name="form_quiz_uni2" method="POST">
 						<div class="questao">
 							<div class="titulo-questao">Questão 1</div>
 							<div class="enunciado-questao">
@@ -138,10 +324,11 @@
 							</div>
 						</div>
 						<div class="botao-atividade">
-							<button type="submit" id="botao-quiz-uni2" onclick="salvarDados()" >ENVIAR RESPOSTAS</button>
+							<button type="button" id="botao-quiz-uni2" onclick="salvarDados()" >ENVIAR RESPOSTAS</button>
 						</div>
 					</form>
 				</div>
+				<a href="testerespostas.html">Clique aqui para ver as respostas</a>
 				
 			</div>
 
@@ -184,8 +371,8 @@
 						<img src="../../img/padrao/ifsc.png" alt="IFSC">
 						<img src="../../img/padrao/ifes.png" alt="IFES">
 					</div>
-				</div><!--Rodapé-->
-
+				</div>
+				<!--Rodapé-->
 		</section>
 	</div>
 </section>
@@ -204,6 +391,8 @@
 	var progresso = 28;
 	var progressoSalvo;
 	var porcentagem = "porcentagemUni2";
+	var verificando_quais_dados=1;
+	var erros = 0;
 
 	//Obtendo dados curso
 	window.addEventListener('load', function(){
@@ -221,79 +410,144 @@
 	//Quando obtém a porcentagem da unidade em questão, executa esta função
 	window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
 	function resultadoObtemDadosGenericos (evento){
-		console.log(evento.detail);
 
-		//testando se o status é 200, unidade já iniciada
-		if(evento.detail["status"]==200){
-			var i=0;
-			var cont = 0;
-			//O evento retorna um vetor. É preciso pesquisar em qual posição está a porcentagem da unidade atual
-			while(i==0){
-				if(evento.detail["data"][cont]["chave"]==porcentagem){
-					console.log("achou na posição "+cont);
-					console.log(evento.detail["data"][cont]["chave"]);
-					i=1;
-				}else{
-					console.log("não encontrou na posição "+cont);
-					console.log(evento.detail["data"][cont]["chave"]);
-					cont=cont+1;
-					if(cont==10){
+		//testa se os dados genéricos testados são para a porcentagem ou para as respostas
+		console.log("Teste de dados aqui:::::::: "+verificando_quais_dados);
+
+		if(verificando_quais_dados==1){
+			console.log(evento.detail);
+
+			//testando se o status é 200, unidade já iniciada
+			if(evento.detail["status"]==200){
+				var i=0;
+				var cont = 0;
+				//O evento retorna um vetor. É preciso pesquisar em qual posição está a porcentagem da unidade atual
+				while(i==0){
+					if(evento.detail["data"][cont]["chave"]==porcentagem){
+						console.log("achou na posição "+cont);
+						console.log(evento.detail["data"][cont]["chave"]);
 						i=1;
+					}else{
+						console.log("não encontrou na posição "+cont);
+						console.log(evento.detail["data"][cont]["chave"]);
+						cont=cont+1;
+						if(cont==10){
+							i=1;
+						}
 					}
+
 				}
 
+				//depois que encontrar a posição certa, verifica o progresso atual
+				progressoSalvo = evento.detail["data"][cont]["valor"];
+				console.log("Valor de Porcentagem atual: "+progressoSalvo);
+
+				if(progressoSalvo < progresso){
+					//registrando a porcentagem da Unidade em questão
+					API.registrarDadosGenericos(porcentagem,progresso);
+					console.log('Registrando nova porcentagem: '+progresso);
+				}else{
+					//Se o cursista estiver revendo a tela, o progresso Salvo será maior, então não altera nada.
+					console.log("Porcentagem não alterada.");
+				}
+
+			}else if(evento.detail["status"]==412){
+				//se for status 400, inicia a chave da porcentagem da unidade em questão
+				console.log("Inicializando a porcentagem da unidade");
+				API.registrarDadosGenericos(porcentagem,14);
 			}
 
-			//depois que encontrar a posição certa, verifica o progresso atual
-			progressoSalvo = evento.detail["data"][cont]["valor"];
-			console.log("Valor de Porcentagem atual: "+progressoSalvo);
-
-			if(progressoSalvo < progresso){
-				//registrando a porcentagem da Unidade em questão
-				API.registrarDadosGenericos(porcentagem,progresso);
-				console.log('Registrando nova porcentagem: '+progresso);
-			}else{
-				//Se o cursista estiver revendo a tela, o progresso Salvo será maior, então não altera nada.
-				console.log("Porcentagem não alterada.");
-			}
-
-		}else if(evento.detail["status"]==412){
-			//se for status 400, inicia a chave da porcentagem da unidade em questão
-			console.log("Inicializando a porcentagem da unidade");
-			API.registrarDadosGenericos(porcentagem,14);
+		//aqui é quando a verificação é para o formulário	
+		}else{
+			console.log("\nObtendo os dados genéricos: ");            							
+			console.log("Status do evento: "+evento.detail['status']);								
+			
+			//verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
+			if(evento.detail["status"]=="200"){
+				
+				//se a unidade já foi iniciada, então pode exibir a mensagem informando que a atiidade já foi completada
+				// **************** (VER COM EQUIPE) *****************
+				var resposta = evento.detail["data"][0]["valor"];
+				console.log(evento.detail["data"]);				
+				mensagem.textContent = "Você já enviou estas respostas";
+				mensagem.className = "mensagem-alerta";
+				mensagem.style.dispay = "block";
+				window.scrollTo(0, 0);
+				erros++;								
+			
+				//se a unidade não foi iniciada, registra os dados Genéricos com as respostas:
+			}else{								
+				API.registrarDadosGenericos("r1_2_1",r1_2_1);
+				console.log("Resposta 1: "+r1_2_1);	   
+				API.registrarDadosGenericos("r1_2_2t",r1_2_2t);
+				console.log("Resposta 2t: "+r1_2_2t);	   
+				API.registrarDadosGenericos("r1_2_3",r1_2_3);
+				console.log("Resposta 3: "+r1_2_3);	   
+				API.registrarDadosGenericos("r1_2_3t",r1_2_3t);
+				console.log("Resposta 3t: "+r1_2_3t);	   
+				API.registrarDadosGenericos("r1_2_4t",r1_2_4t);
+				console.log("Resposta 4t: "+r1_2_4t);	   
+			}						
 		}
 	};
 
 	window.addEventListener('evObtemRegistraDadosGenericos', resultadoRegistrarDadosGenericos, false);
 	function resultadoRegistrarDadosGenericos (evento){
-		console.log("Verificando porcentagem registrada");
+		console.log("Verificando dados registrados");
 		console.log(evento.detail);
 	};
 
 	/*************** salvando as respostas nas variáveis do sistema *****/
 	var botao = document.getElementById("botao-quiz-uni2");
-	
-	
-	function salvarDados(){
-		console.log("função aqui");
-		
-		r1 = document.form_quiz_uni2.resposta_1.value, 		
-		r2t = document.form_quiz_uni2.resposta_2_texto.value, 
-		r3 = document.form_quiz_uni2.resposta_3.value, 				
-		r3t = document.form_quiz_uni2.resposta_3_texto.value, 
-		//r4t = document.form_quiz_uni2.resposta_4_texto.value;
-		
-		console.log("\n..."+r1+"\n"+r2t+"\n"+r3+"\n"+r3t);
+	var mensagem = document.getElementById("mensagem-alerta");
 
+	function salvarDados(){		
+		console.log("função aqui");		
+		verificando_quais_dados =2;
+		erros = 0;
 
+		r1_2_1 = document.form_quiz_uni2.resposta_1.value, 		
+		r1_2_2t = document.form_quiz_uni2.resposta_2_texto.value, 
+		r1_2_3 = document.form_quiz_uni2.resposta_3.value, 				
+		r1_2_3t = document.form_quiz_uni2.resposta_3_texto.value, 
+		r1_2_4t = document.form_quiz_uni2.resposta_4_texto.value;
 		
-	}
+		console.log("\n..."+r1_2_1+"\n"+r1_2_2t+"\n"+r1_2_3+"\n"+r1_2_3t+"\n"+r1_2_4t);
 
-	
-	
-	
-	
-	
+		if(r1_2_1==null){
+			erros++;
+		}else if(r1_2_2t==""){
+			erros++;
+		}else if(r1_2_3==null){
+			erros++;
+		}else if(r1_2_3t==""){
+			erros++;
+		}else if(r1_2_4t==""){
+			erros++;
+		}
+
+		if(erros>0){
+			mensagem.className = "mensagem-alerta";
+			mensagem.textContent = "Por favor preencha todos os campos";	
+			mensagem.style.display = "block";
+			window.scrollTo(0, 0);
+			return false;			
+		}else{
+			console.log("\nChecando respostas");										
+			//primeiro verifica dados salvos da primeira resposta. Se encontrar é porque já enviou anteriormente.		
+			API.obterDadosGenericos("induzindoerror1_2_1");	
+			
+			if(erros>0){
+				return false;
+			}
+			//se não houver erro, envia o form
+			mensagem.className = "mensagem-ok";
+			mensagem.style.display ="block";			
+			mensagem.innerHTML="Dados Enviados com sucesso!<br /><a href='testerespostas.html>Clique para ver suas respostas</a>";					
+			console.log("ocorreu tudo certo. Tem que aparecer o link");
+			window.scrollTo(0, 0);
+		}
+	}	
 </script>
 </body>
 </html>
