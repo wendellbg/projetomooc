@@ -4,106 +4,9 @@
 	<title>Mentoria</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="../../css/main.css"/>
-	<link rel="stylesheet" href="../../css/cards2.css"/>
-	<link rel="stylesheet" href="../../css/menu-top-down.css"/>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-	<link rel="stylesheet" href="../../css/rodape.css"/>
-	<style type="text/css">
-
-		/* Slideshow container */
-		.slideshow-container {    
-			max-width: 1000px;
-			position: relative;
-			margin: auto;
-		}
-
-		.slideshow-container img {    
-			width: 100%;   
-		}
-
-		/* Next & previous buttons */
-		.prev, .next {
-			cursor: pointer;
-			position: absolute;
-			top: 50%;
-			width: auto;
-			margin-top: -22px;
-			padding: 16px;
-			color: white;
-			background-color: #000;
-			font-weight: bold;
-			font-size: 22px;
-			transition: 0.6s ease;
-			border-radius: 0 3px 3px 0;
-			user-select: none;
-		}
-
-		/* Position the "next button" to the right */
-		.next {
-			right: 0;
-			border-radius: 3px 0 0 3px;
-		}
-
-		/* On hover, add a black background color with a little bit see-through */
-		.prev:hover, .next:hover {
-			background-color: rgba(0,0,0,0.8);
-		}
-
-		/* Caption text */
-		.texto {
-			color: #f2f2f2;
-			font-size: 15px;
-			padding: 8px 12px;
-			position: absolute;
-			bottom: 8px;
-			width: 100%;
-			text-align: center;
-		}
-
-		/* Number text (1/3 etc) */
-		.numero-slide {
-			color: #f2f2f2;
-			font-size: 12px;
-			padding: 8px 12px;
-			position: absolute;
-			top: 0;
-		}
-
-		/* The dots/bullets/indicators */
-		.ponto {
-			cursor: pointer;
-			height: 15px;
-			width: 15px;
-			margin: 0 2px;
-			background-color: #bbb;
-			border-radius: 50%;
-			display: inline-block;
-			transition: background-color 0.6s ease;
-		}
-
-		.active, .ponto:hover {
-			background-color: #717171;
-		}
-
-		/* Fading animation */
-		.fade {
-			-webkit-animation-name: fade;
-			-webkit-animation-duration: 1.5s;
-			animation-name: fade;
-			animation-duration: 1.5s;
-		}
-
-		@-webkit-keyframes fade {
-			from {opacity: .4}
-			to {opacity: 1}
-		}
-
-		@keyframes fade {
-			from {opacity: .4}
-			to {opacity: 1}
-		}
-	</style>
+	<link rel="stylesheet" href="../../css/mooc1.css?ver=1.1"/>
+	<link rel="stylesheet" href="../../css/slide.css?ver=1.1"/>
+	<link rel="stylesheet" href="../../css/cards.css"/>
 </head>
 <body>
 
@@ -147,124 +50,93 @@
 				</header>
 
 				<div class="content">
-
 					<p>Para começarmos vamos fazer algumas perguntas, mas gostaríamos que você pensasse nas pessoas que estão por trás desses eventos:</p>
+				</div>
 
-					<!-- Container do slideshow-->
-					<div class="slideshow-container">
-						<div class="mySlides fade">
-							<div class="numero-slide">1 / 4</div>
-							<img src="../../img/uni4/MOOC1_Uni4_tela2_imagem1a.jpg" alt="imagem 1">
-							<div class="texto">Figura 1</div>
-						</div>    
-
-						<div class="mySlides fade">
-							<div class="numero-slide">2 / 4</div>
-							<img class="imagem-cent" src="../../img/uni4/MOOC1_Uni4_tela2_imagem1b.jpg" alt="imagem 1">
-							<div class="texto">Figura 2</div>
-						</div> 
-
-						<div class="mySlides fade">
-							<div class="numero-slide">3 / 4</div>
-							<img src="../../img/uni4/MOOC1_Uni4_tela2_imagem1c.jpg" alt="imagem 3">
-							<div class="texto">Figura 3</div>
-						</div> 
-
-						<div class="mySlides fade">
-							<div class="numero-slide">3 / 4</div>
-							<img src="../../img/uni4/MOOC1_Uni4_tela2_imagem1d.jpg" alt="imagem 4">
-							<div class="texto">Figura 4</div>
-						</div> 
-
-						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				<!-- Container do slideshow-->
+				<div class="slideshow-container">
+					<div class="mySlides fade">
+						<div class="numero-slide">1 / 4</div>
+						<img src="../../img/uni4/MOOC1_Uni4_tela2_imagem1a.jpg" alt="Pessoa sendo vacinada">
+						<div class="texto">Figura 01<br>Fonte: Chang Doung/Unsplash</div>
 					</div>
+
+					<div class="mySlides fade">
+						<div class="numero-slide">2 / 4</div>
+						<img class="imagem-cent" src="../../img/uni4/MOOC1_Uni4_tela2_imagem1b.jpg" alt="Pessoa segurando pão">
+						<div class="texto">Figura 02<br>Fonte: Freepik/Freepik</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numero-slide">3 / 4</div>
+						<img src="../../img/uni4/MOOC1_Uni4_tela2_imagem1c.jpg" alt="Pessoa usando celular">
+						<div class="texto">Figura 03<br>Fonte: Jannoon/Freepik</div>
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numero-slide">4 / 4</div>
+						<img src="../../img/uni4/MOOC1_Uni4_tela2_imagem1d.jpg" alt="Mecânico">
+						<div class="texto">Figura 04<br>Fonte: Jcomp/Freepik</div>
+					</div>
+
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
 					<br>
 					<div style="text-align: center">
-						<span class="ponto" onclick="currentSlide(1)"></span>    
-						<span class="ponto" onclick="currentSlide(2)"></span>    
+						<span class="ponto" onclick="currentSlide(1)"></span>
+						<span class="ponto" onclick="currentSlide(2)"></span>
 						<span class="ponto" onclick="currentSlide(3)"></span>
 						<span class="ponto" onclick="currentSlide(4)"></span>
-					</div> 
-					
+					</div>
+				</div>
+
+				<div class="content">
 					<p>Essas perguntas nos ajudam a compreender que em todas as coisas boas e ruins de nossa vida, precisamos da ajuda de alguém. Por outro lado, nosso trabalho do dia a dia também impacta a vida de alguém. Somos seres sociais porque precisamos dos outros e eles de nós.</p>
 
-					<p>Clique nos cartões e reflita sobre as questões a seguir</p>
+					<span class="separador">
+						<p class="texto-separador">Clique nos cartões e reflita sobre as questões a seguir</p>
+					</span>
 
-					<div class="linha">
-						<div class="coluna-50">	                                              				 
-							<div class='card-animado'>                            	 
+					<div class="row">
+						<div class="6u 12u$(small)">
+							<div class='card-animado card-img'>
 								<input type="checkbox" id="switch-1" />
 								<label class="flip-container-1" for="switch-1">
 									<div class="flipper">
 										<div class="front">															
 											<div class="card yellow">
-												<img src="../../img/uni4/Card1.jpg" alt="Card 1">
+												<img src="../../img/uni4/Card1.jpg" alt="mecânico com cliente">
+												<p class="legenda">Figura 05<br>Fonte: Peoplecreations/Freepik</p>
 											</div>
 										</div>
 										<div class="back">
 											<div class="card yellow">
-												<div class="card-top">Como as pessoas que compartilham seu trabalho conosco escolheram suas profissões?</div>												
+												<div class="card-top">
+													Como as pessoas que compartilham seu trabalho conosco escolheram suas profissões?
+												</div>
 											</div>
 										</div>
 									</div>
 								</label>
 							</div>                           
 						</div>
-						<div class="coluna-50">	                                              				 
-							<div class='card-animado'>                            	 
+						<div class="6u 12u$(small)">
+							<div class='card-animado card-img'>
 								<input type="checkbox" id="switch-2" />
 								<label class="flip-container-2" for="switch-2">
 									<div class="flipper">
 										<div class="front">
 											<div class="card red">
-												<img src="../../img/uni4/Card2.jpg" alt="Card 2">
+												<img src="../../img/uni4/Card2.jpg" alt="químico sênior">
+												<p class="legenda">Figura 06<br>Fonte: Nat. Cancer Institute/Unsplash</p>
 											</div>
 										</div>
 										<div class="back">
 											<div class="card red">
-												<div class="card-top">Como descobriram que gostam de algo que passam a fazer ao longo de suas vidas?</div>								
-											</div>
-										</div>
-									</div>
-								</label>
-							</div>                           
-						</div>                                            
-					</div>    
-
-					<div class="linha">
-						<div class="coluna-50">	                                              				 
-							<div class='card-animado'>                            	 
-								<input type="checkbox" id="switch-3" />
-								<label class="flip-container-3" for="switch-3">
-									<div class="flipper">
-										<div class="front">															
-											<div class="card yellow">
-												<img src="../../img/uni4/Card3.jpg" alt="Card 3">
-											</div>
-										</div>
-										<div class="back">
-											<div class="card yellow">
-												<div class="card-top">Como orientar uma jovem ou um jovem que ainda não descobriu seus interesses?</div>												
-											</div>
-										</div>
-									</div>
-								</label>
-							</div>                           
-						</div>
-						<div class="coluna-50">	                                              				 
-							<div class='card-animado'>                            	 
-								<input type="checkbox" id="switch-4" />
-								<label class="flip-container-4" for="switch-4">
-									<div class="flipper">
-										<div class="front">
-											<div class="card red">
-												<img src="../../img/uni4/Card4.jpg" alt="Card 4">
-											</div>
-										</div>
-										<div class="back">
-											<div class="card red">
-												<div class="card-top">Onde localizar as possibilidades formativas para tantas profissões? Quantas profissões existem?</div>								
+												<div class="card-top">
+													Como descobriram que gostam de algo que passam a fazer ao longo de suas vidas?
+												</div>
 											</div>
 										</div>
 									</div>
@@ -273,10 +145,59 @@
 						</div>                                            
 					</div>
 
+					<div class="row">
+						<div class="6u 12u$(small)">
+							<div class='card-animado card-img'>
+								<input type="checkbox" id="switch-3" />
+								<label class="flip-container-3" for="switch-3">
+									<div class="flipper">
+										<div class="front">															
+											<div class="card orange">
+												<img src="../../img/uni4/Card3.jpg" alt="Professor e estudantes jovens">
+												<p class="legenda">Figura 07<br>Fonte: Cottonbro/Pexels</p>
+											</div>
+										</div>
+										<div class="back">
+											<div class="card orange">
+												<div class="card-top">
+													Como orientar uma jovem ou um jovem que ainda não descobriu seus interesses?
+												</div>
+											</div>
+										</div>
+									</div>
+								</label>
+							</div>                           
+						</div>
+						<div class="6u 12u$(small)">
+							<div class='card-animado card-img'>
+								<input type="checkbox" id="switch-4" />
+								<label class="flip-container-4" for="switch-4">
+									<div class="flipper">
+										<div class="front">
+											<div class="card blue">
+												<img src="../../img/uni4/Card4.jpg" alt="Card 4">
+												<p class="legenda">Figura 08<br>Fonte: Pch.Vector/Freepik</p>
+											</div>
+										</div>
+										<div class="back">
+											<div class="card blue">
+												<div class="card-top">
+													Onde localizar as possibilidades formativas para tantas profissões? Quantas profissões existem?
+												</div>
+											</div>
+										</div>
+									</div>
+								</label>
+							</div>                           
+						</div>                                            
+					</div>
+				</div>
+				<!-- Conteúdo Footer -->
+				<div class="content footer">
 					<div class='navegacao'>
-						<span class="lista-navegacao" style="float: right;">
-							<a href="#"><i class="fas fa-angle-double-up" style="font-size:48px;"></i></a>                                		                            
-						</span>                     
+						<span class="bt-topo">
+							<a href="#"><i class="fas fa-angle-up"></i></a>
+						</span>
 						<span><a href="tela03.html"><button class="bt-avanca" type="button">PROSSEGUIR ></button></a></span>                                                                  							 
 						<span class='botoes-navegacao'>
 							<a href="tela01.html"><button class="bt-navegacao" type="button"><</button></a>
@@ -292,15 +213,23 @@
 						<span class="legenda">Tela 2 de 6</span>  
 
 					</div>
-					<hr>
-					<div class="linha">
-						<div class="coluna-50"> 
-							<img width="300" height="90" src="../../img/uni1/ifsc.png" alt="IFSC">
-						</div>							
-						<div class="coluna-50"> 
-							<img width="300" height="90" src="../../img/uni1/ifes.png" alt="IFES">
+					<!--Rodapé-->
+					<hr/>
+					<div class="row rodape">
+						<div class="6u 12u$(small)">
+							<p></p>
+							<img src="../../img/padrao/logo_mentoria.png" alt="IFSC">
 						</div>
-					</div>	       	
+						<div class="2u 12u$(small)">
+							<p>Realização:</p>
+							<img src="../../img/padrao/logo_mec.png" alt="IFSC">
+						</div>
+						<div class="4u 12u$(small)">
+							<p>Produção:</p>
+							<img src="../../img/padrao/ifsc.png" alt="IFSC">
+							<img src="../../img/padrao/ifes.png" alt="IFES">
+						</div>
+					</div><!--Rodapé-->
 				</div>
 
 			</section>
