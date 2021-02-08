@@ -4,9 +4,8 @@
 		<title>Mentoria</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="../../css/mooc1.css?ver1.1" />
-        <link rel="stylesheet" href="../../css/fontes.css"/>
-        <link rel="stylesheet" href="../../css/boxes.css"/>
+		<link rel="stylesheet" href="../../css/mooc1.css?ver=1.1"/>
+		<link rel="stylesheet" href="../../css/boxes.css?ver=1.4"/>
         <link rel="stylesheet" href="../../css/zoom.css"/>
 	</head>
 	<body>
@@ -53,18 +52,19 @@
 							
 							<p>Como vimos no Podcast, cada trilha educativa pode ser individual, nem sempre precisa ser um curso para uma turma, isto é, há a possibilidade de que <b>o aluno escolha uma trajetória única, que só ele daquela turma da BNCC seguirá!</b></p>
                             <p> Achou complexo? Vamos rever as possibilidades…</p>
-                            <p><b>A formação para o trabalho</b>, ou seja, a educação para a vida laboral é <b>o objeto da Educação Profissional</b>. Como o mundo do trabalho é diverso e amplo, assim também é a educação profissional.</p> 
-                            
-                             <!--Caixa Atenção-->
-            				<section class="box-info text-white">
-                				<div class="bg-red"></div>
-                				<div class="border-blue">
+                            <p><b>A formação para o trabalho</b>, ou seja, a educação para a vida laboral é <b>o objeto da Educação Profissional</b>. Como o mundo do trabalho é diverso e amplo, assim também é a educação profissional.</p>
+
+							<!--Caixa Atenção-->
+							<div class="titulo-externo-box blue"><p>Atenção</p></div>
+							<section class="box-info text-white">
+								<div class="bg-red"></div>
+								<div class="border-blue">
 									<img src="../../img/padrao/icon_atencao.png" />
 									<p>A educação profissional também deve possibilitar uma grande variedade de formações ou cursos, para que as mais diversas atividades laborais possam ser contempladas no ambiente escolar de formação para o trabalho.</p>
 								</div>
 							</section>
 
-                            <p>Vamos comentar duas grandes possibilidade e os caminhos que cada uma pode permitir:</p>
+                            <p>Vamos comentar duas 	grandes possibilidade e os caminhos que cada uma pode permitir:</p>
                             
                             <h3>Curso Técnico de Nível Médio</h3>
                             
@@ -75,17 +75,19 @@
                                     <img class="imagem-normal" src="../../img/uni3/MOOC1_uni3_tela3_imagem2.jpg" />
                                 </a>
                                 <div class="lightbox-target" id="zoom">
-                                    <a href="#"><img class="imagem-full" src="../../img/uni3/MOOC1_uni3_tela3_imagem2.jpg" /></a>
-                                    <a href="#" class='lightbox-close'></a>                                                                
-                            	</div>     
-							</div>   							
+                                    <a href="#"><img class="imagem-full" src="../../img/uni3/MOOC1_uni3_tela3_imagem2.jpg" alt="Infográfico sobre a Base Nacional Comum Curricular" /></a>
+                                    <a href="#" class='lightbox-close'></a>
+								</div>
+								<p class="legenda">Figura 02 - Fonte: Imagem produzida pela equipe gráfica do projeto.</p>
+							</div>
+
 						</div>
-							<!-- Conteúdo -->
-							<div class="content footer">
-								<div class='navegacao'>
-									<span class="bt-topo">
-										<a href="#"><i class="fas fa-angle-up"></i></a>
-									</span>                    
+						<!-- Conteúdo -->
+						<div class="content footer">
+							<div class='navegacao'>
+								<span class="bt-topo">
+									<a href="#"><i class="fas fa-angle-up"></i></a>
+								</span>
 								<span><a href="tela04.html"><button class="bt-avanca" type="button">PROSSEGUIR ></button></a></span>                                                                  							 
 								<span class='botoes-navegacao'>
 									<a href="tela02.html"><button class="bt-navegacao" type="button"><</button></a>
@@ -101,7 +103,6 @@
 								<span class="legenda">Tela 3 de 5</span>  
 								
 							</div>
-
 							<!--Rodapé-->
 							<hr/>
 							<div class="row rodape">
@@ -119,12 +120,11 @@
 									<img src="../../img/padrao/ifes.png" alt="IFES">
 								</div>
 							</div><!--Rodapé-->
-
 						</div>
+						
 					</section>
-				</div>
+				</div>				
 			</section>
-
 
 		<!-- Footer -->
 			<footer id="footer">              
@@ -135,11 +135,11 @@
 			console.clear(screen);
 		
 			var API = new BridgeRestApi();		
-			var id_unidade = "mod1_uni3";
-			var id_slide = "uni3/tela03.html";
-			var progresso = 60;
+			var id_unidade = "uni2";
+			var id_slide = "uni1/tela000.html";
+			var progresso = 14;
 			var progressoSalvo;
-			var porcentagem = "porcentagemUni3";
+			var porcentagem = "porcentagemUni2";
 			
 			//Obtendo dados curso
 			window.addEventListener('load', function(){            
@@ -196,7 +196,7 @@
 				}else if(evento.detail["status"]==412){
 					//se for status 400, inicia a chave da porcentagem da unidade em questão
 					console.log("Inicializando a porcentagem da unidade");
-					API.registrarDadosGenericos(porcentagem,20);
+					API.registrarDadosGenericos(porcentagem,14);
 				}				
 			};
 
