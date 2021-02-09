@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+ }
+
 .questao{
     background-color: #2a5caa;
     border-radius: 1em;
@@ -21,8 +25,7 @@
     border-radius: 0.5em;
 }
 
-.enunciado-questao{
-    text-decoration: underline;
+.enunciado-questao{    
     padding: 1em 0;
 }
 
