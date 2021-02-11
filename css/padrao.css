@@ -743,7 +743,7 @@ header p {
         margin: 0;
         transform: rotate(-3deg);
         padding: 8px;
-    }  
+    }
 
     .caixa-texto-topo{
         margin: 0 auto;
@@ -765,7 +765,6 @@ header p {
         padding-top: 15px;
         padding-bottom: 15px;
         transform: rotate(3deg);
-        background-color: #fec13b;
     }
 
     .caixa-texto-centro{
@@ -781,13 +780,13 @@ header p {
     }
     .caixa-texto-topo:before, .caixa-texto-rodape:before{
         content: "";
-        position: absolute;        
+        position: absolute;
         border-radius: 8px;
         top: -10%; bottom: -11%; left: -1%; right: -2%;
-        z-index: -1;      
+        z-index: -1;
         -webkit-transform: perspective(50em) rotateX(-30deg);
         transform: perspective(50em) rotateX(-30deg);
-      }
+    }
 }
 
 /* Spotlight */
@@ -2552,8 +2551,12 @@ header p {
 
 .footer .bt-topo{
     padding: 0px 8px;
-    border-radius: 12%;
-    float: right;
+    border-radius: 4px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #020e36;
+    position: fixed;
+    opacity: .8;
 }
 
 .footer .bt-topo i{
@@ -2562,6 +2565,8 @@ header p {
 
 .footer .bt-topo:hover{
     transition: 0.3s;
+    cursor: pointer;
+    opacity:1;
 }
 
 .footer .bt-topo:hover a{
@@ -2644,10 +2649,13 @@ header p {
 /*    background-color: transparent;*/
 /*}*/
 
+a .bt-avanca {
+    padding: 15px 32px;
+}
+
 .bt-avanca {
     /* position: relative; */
     border:none;
-    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     font-weight: 400;
@@ -2658,6 +2666,11 @@ header p {
     margin: 40px auto;
     cursor: pointer;
     border-radius: 12px;
+}
+
+.bt-avanca a {
+    padding: 15px 32px;
+    display: inline-block;
 }
 
 
