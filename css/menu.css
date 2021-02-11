@@ -3,8 +3,14 @@
 }
 
 .hide:target + .show, .hide:target ~  .details {
-  display: block; 
+  display: inline-block;
+  width: 100%;
 }
+.hide{
+  display: inline-block;
+  width: 100%;
+}
+
 
 .menu-opcoes {
   background: #2A5CAA;
