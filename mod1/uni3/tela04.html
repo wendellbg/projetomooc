@@ -4,18 +4,21 @@
 		<title>Mentoria</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="../../css/mooc1.css?ver=1.1"/>
+		<link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
 		<link rel="stylesheet" href="../../css/infografico.css?ver=1.2"/>
 
+		<script src="../../js/jquery-2.1.1.js"></script>
+		<script src="../../js/bt-topo.js"></script> <!-- Botão de Voltar ao Topo -->
 	</head>
 	<body>
 
-		<!-- Header -->
-			<header id="header">
-				<div class="logo">
-					<a href="../sumario.html">UNIDADE 3</a>
-				</div>				
-			</header>			
+	<!-- Header -->
+	<header id="header">
+		<div class="logo">
+			<a href="../sumario.html">UNIDADE 3</a>
+			<h3>Apresentação do itinerário para a Educação Profissional</h3>
+		</div>
+	</header>
 
 		<!-- Main -->
 			<section id="main">
@@ -37,11 +40,11 @@
   										</a>  									  									
   										<div class="menu">
 											<a href="../sumario.html" class='titulo-menu'>UNIDADE 3</a>
-	    									<a href="tela01.html">Tela 01 - Apresentação</a>
-   	 										<a href="tela02.html">Tela 02 - Itinerários Formativos</a>
-    										<a href="tela03.html">Tela 03 - Composição de Itinerários</a>
-    										<a href="tela04.html" class='link-menu-atual'>Tela 04 - Qualificação Profissional</a>
-    										<a href="tela05.html">Tela 05 - Concluindo</a>
+	    									<a href="tela01.html">3.01 - Apresentação</a>
+   	 										<a href="tela02.html">3.02 - Itinerários Formativos</a>
+    										<a href="tela03.html">3.03 - Composição de Itinerários</a>
+    										<a href="tela04.html" class='link-menu-atual'>3.04 - Qualificação Profissional</a>
+    										<a href="tela05.html">3.05 - Concluindo</a>
   										</div>
   									</div>	
   								</div>	
@@ -110,10 +113,12 @@
 						<!-- Conteúdo -->
 						<div class="content footer">
 							<div class='navegacao'>
-								<span class="bt-topo">
+								<div class="bt-topo">
 									<a href="#"><i class="fas fa-angle-up"></i></a>
-								</span>
-								<span><a href="tela05.html"><button class="bt-avanca" type="button">PROSSEGUIR ></button></a></span>                                                                  							 
+								</div>
+								<div>
+									<button class="bt-avanca" type="button"><a href="tela05.html">PROSSEGUIR ></a></button>
+								</div>
 								<span class='botoes-navegacao'>
 									<a href="tela04.html"><button class="bt-navegacao desativado" type="button"><</button></a>
 
@@ -125,7 +130,7 @@
 									
 									<a href="tela05.html"><button class="bt-navegacao" type="button">></button></a>
 								</span>                                 
-								<span class="legenda">Tela 4 de 5</span>  
+								<span class="legenda">4 de 5</span>
 								
 							</div>
 							<!--Rodapé-->
