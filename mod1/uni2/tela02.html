@@ -4,195 +4,8 @@
 	<title>Mentoria</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!-- <link rel="stylesheet" href="../../css/mooc1.css?ver=1.1" /> -->
-	<link rel="stylesheet" href="../../css/atividades.css" />
-	<link rel="stylesheet" href="../../css/main.css" />
-	<link rel="stylesheet" href="../../css/rodape.css" />
-	<link rel="stylesheet" href="../../css/menu-top-down.css" />
-	<link rel="stylesheet" href="../../css/fontes.css" />
-
-	<style>
-
-html{
-   scroll-behavior: smooth;
-}
-		.questao{
-    background-color: #2a5caa;
-    border-radius: 1em;
-    padding: 1em;
-    margin: 1em 0;
-    color: #fff;
-    font-size: 1.5em;
-}
-
-.titulo-questao{
-    background-color: #fec13b;
-    color: #000;
-    position: relative;    
-    display: block;
-    padding: 0.2em;    
-    width: 260px;
-    font-size: 1.5em;
-    font-weight: bold;
-    text-align: center;
-    margin-left: -50px;
-    border-radius: 0.5em;
-}
-
-.enunciado-questao{
-    text-decoration: underline;
-    padding: 1em 0;
-}
-
-.area-respostas{
-    width: 90%;
-    margin: auto;
-}
-
-.resposta-texto{
-    width: 90%;
-    margin: auto;
-    height: 200px;
-    padding: 0.5em;
-    color: #2a5caa;
-    font-size: 1em;
-    border: 1px solid #000;
-    border-radius:0.5em;
-    -moz-border-radius:0.5em;
-    -webkit-border-radius:0.5em;
-    box-shadow: 1px 1px 3px #000;
-    -moz-box-shadow: 1px 1px 3px #000;
-    -webkit-box-shadow: 1px 1px 3px #000;
-}
-
-
-
-.resposta-texto:focus{       
-    outline: none;
-    border: 3px solid #fec13b;
-    border-radius: 0.5em;
-    -moz-border-radius:0.5em;
-    -webkit-border-radius:0.5em;
-    box-shadow: 1px 1px 3px #fec13b;
-    -moz-box-shadow: 1px 1px 3px #fec13b;
-    -webkit-box-shadow: 1px 1px 3px #fec13b;
-        
-}
-
-.opcao-resposta input {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;    
-}
-  
-.opcao-resposta input + label {
-    position: relative;
-    cursor: pointer;
-    padding-left: 30px;  
-    padding-right: 10px;    
-    border: 2px solid transparent;
-    border-radius: 1em;  
-    
-}
-
-.opcao-resposta input[type=radio] + label::before {
-    content: '';
-    position: absolute;
-    left: 3px;        
-    top: 2px;
-    width: 25px;    
-    height: 25px;    
-    border-radius: 50%;
-    border: solid 2px #fff;
-    vertical-align: middle;
-    
-}
-
-.opcao-resposta input:hover + label:hover{
-    border: 2px solid #fff;
-}
-
-.opcao-resposta input[type=radio]:checked + label::after {
-    content: '';
-    background-color: #000;
-    width: 17px;
-    height: 17px;
-    border-radius: 50%;
-    position: absolute;
-    left: 7px;
-    top: 6px;
-}
-.opcao-resposta input[type=radio]:checked + label::before{
-    content: '';
-    position: absolute;
-    left: 3px;        
-    top: 2px;
-    width: 25px;    
-    height: 25px;    
-    border-radius: 50%;
-    border: solid 2px #000;
-    vertical-align: middle;
-}
-
-.opcao-resposta input[type=radio]:checked + label{
-    background-color: #fec13b;
-    color: #000;
-    font-weight: bold;
-}
-  
-/* .botao-atividade button.disabled {
-    pointer-events: none;
-    opacity: 0.5;
-} */
-
-.botao-atividade button{
-    background:#2a5caa;        
-    color:#ffffff;
-    padding: 1em;
-    border-radius: 1em;
-    font-size: 1em;
-    font-family: "Musket";
-    outline: none;    
-    border-radius: 0.5em;
-    letter-spacing: 0.2em;
-    /* -moz-border-radius:0.5em;
-    -webkit-border-radius:0.5em;
-    box-shadow: 1px 1px 3px #fec13b;
-    -moz-box-shadow: 1px 1px 3px #fec13b;
-    -webkit-box-shadow: 1px 1px 3px #fec13b; */
-}
-  
-.mensagem-alerta{
-    display: none;
-    background-color: #E73435;
-    color: #fff;
-    border: 4px solid #2a5caa;
-    border-radius: 0.5em; 
-    padding: 2em;   
-    width: 80%;
-    margin: auto;
-    text-align: center;
-	font-size: 1.4em; 
-}
-
-.mensagem-ok{
-    display: none;
-    background-color: #2a5caa;
-    color: #fff;
-    border: 4px solid #fec13b;
-    border-radius: 0.5em; 
-    padding: 2em;   
-    width: 80%;
-    margin: auto;
-    text-align: center;
-	font-size: 1.4em;
-}
-
-.mensagem-ok a{
-    color: red;
-}
-
-</style>
+	 <link rel="stylesheet" href="../../css/mooc1.css?ver=1.1" />
+	<link rel="stylesheet" href="../../css/atividades.css?ver=1.1" />
 
 </head>
 <body>
@@ -201,6 +14,7 @@ html{
 <header id="header">
 	<div class="logo">
 		<a href="../sumario.html">UNIDADE 2</a>
+		<h3>Educação Profissional no novo Ensino Médio</h3>
 	</div>
 </header>
 
@@ -224,13 +38,13 @@ html{
 							</a>
 							<div class="menu">
 								<a href="../sumario.html" class='titulo-menu'>UNIDADE 2</a>
-								<a href="tela01.html">Tela 01 - Apresentação</a>
-								<a href="tela02.html" class='link-menu-atual'>Tela 02 - Experiência com o Ensino Médio</a>
-								<a href="tela03.html">Tela 03 - Desafios para a Educação Profissional</a>
-								<a href="tela04.html">Tela 04 - Trajetória Recente do Ensino Médio no Brasil</a>
-								<a href="tela05.html">Tela 05 - O Novo Ensino Médio</a>
-								<a href="tela06.html">Tela 06 - Itinerários Formativos</a>
-								<a href="tela07.html">Tela 07 - Autonomia do Estudante</a>
+								<a href="tela01.html">2.01 - Apresentação</a>
+								<a href="tela02.html" class='link-menu-atual'>2.02 - Experiência com o Ensino Médio</a>
+								<a href="tela03.html">2.03 - Desafios para a Educação Profissional</a>
+								<a href="tela04.html">2.04 - Trajetória Recente do Ensino Médio no Brasil</a>
+								<a href="tela05.html">2.05 - O Novo Ensino Médio</a>
+								<a href="tela06.html">2.06 - Itinerários Formativos</a>
+								<a href="tela07.html">2.07 - Autonomia do Estudante</a>
 							</div>
 						</div>
 					</div>
@@ -240,18 +54,18 @@ html{
 			<!-- Formulário para o quiz -->
 			<div class="content">
 				<div class="atividade" id='quiz-uni2'>
-					<div id='mensagem-alerta'>						
+					<div id='mensagem-alerta'>
 					</div>
 
 					<form action="#" onsubmit="salvarDados(this); return false;" name="form_quiz_uni2" method="POST">
 						<div class="questao">
 							<div class="titulo-questao">Questão 1</div>
 							<div class="enunciado-questao">
-								<span>Como foi seu Ensino Médio?</span>							
+								<span>Como foi seu Ensino Médio?</span>
 							</div>
 							<div class="area-respostas">
 								<div class='opcao-resposta'>
-									<input type="radio" name="resposta_1" id="resposta_1_1" value="Formação Geral" required>								
+									<input type="radio" name="resposta_1" id="resposta_1_1" value="Formação Geral" required>
 									<label for="resposta_1_1" class="texto-opcao">Formação Geral</label>
 								</div>
 								<div class="opcao-resposta">
@@ -268,15 +82,15 @@ html{
 								</div>
 								<div class="opcao-resposta">
 									<input type="radio" name="resposta_1" id="resposta_1_5" value="PROEJA">
-									<label for="resposta_1_5" class="texto-opcao">PROEJA</label>		
-								</div>							
-							</div>																				
+									<label for="resposta_1_5" class="texto-opcao">PROEJA</label>
+								</div>
+							</div>
 						</div>
 
 						<div class="questao">
 							<div class="titulo-questao">Questão 2</div>
 							<div class="enunciado-questao">
-								<span>Como você acredita que foi o Ensino Médio dos outros alunos deste curso? E da maioria dos alunos pelo Brasil?</span>							
+								<span>Como você acredita que foi o Ensino Médio dos outros alunos deste curso? E da maioria dos alunos pelo Brasil?</span>
 							</div>
 							<div class="area-respostas">
 								<textarea class="resposta-texto" id='resposta_2_texto' name='resposta_2_texto' required></textarea>
@@ -286,9 +100,9 @@ html{
 						<div class="questao">
 							<div class="titulo-questao">Questão 3</div>
 							<div class="enunciado-questao">
-								<span>Você tem ideia do percentual de seus colegas do terceiro ano do ensino médio que entraram na faculdade?</span>							
+								<span>Você tem ideia do percentual de seus colegas do terceiro ano do ensino médio que entraram na faculdade?</span>
 							</div>
-							<div class="area-respostas">						
+							<div class="area-respostas">
 								<div class="opcao-resposta">
 									<input type="radio" name="resposta_3" id="resposta_3_1" value="Menos de 10%" required>
 									<label for="resposta_3_1" class="texto-opcao">Menos de 10%</label>
@@ -307,21 +121,21 @@ html{
 								</div>
 								<div class="opcao-resposta">
 									<input type="radio" name="resposta_3" id="resposta_3_5" value="Mais de 70%">
-									<label for="resposta_3_5" class="texto-opcao">Mais de 70%</label>		
-								</div>							
-							</div>																				
+									<label for="resposta_3_5" class="texto-opcao">Mais de 70%</label>
+								</div>
+							</div>
 							<div class="enunciado-questao">
-								<span>E o que te faz chegar na resposta acima?</span>							
+								<span>E o que te faz chegar na resposta acima?</span>
 							</div>
 							<div class="area-respostas">
 								<textarea class="resposta-texto" id='resposta_3_texto' required></textarea>
 							</div>
 						</div>
-								
+
 						<div class="questao">
 							<div class="titulo-questao">Questão 4</div>
 							<div class="enunciado-questao">
-								<span>Que importância tem para você uma formação profissional durante o Ensino Médio?</span>							
+								<span>Que importância tem para você uma formação profissional durante o Ensino Médio?</span>
 							</div>
 							<div class="area-respostas">
 								<textarea class="resposta-texto" id='resposta_4_texto' required></textarea>
@@ -333,17 +147,19 @@ html{
 					</form>
 				</div>
 				<a href="testerespostas.html">Clique aqui para ver as respostas</a>
-				
+
 			</div>
 
 			<!-- Conteúdo -->
 			<div class="content footer">
 				<div class='navegacao'>
-					<span class="bt-topo">
+					<div class="bt-topo">
 						<a href="#"><i class="fas fa-angle-up"></i></a>
-					</span>
-					<span><a href="tela03.html"><button class="bt-avanca" type="button">PROSSEGUIR ></button></a></span>
-					<span class='botoes-navegacao'>
+					</div>
+					<div>
+						<button class="bt-avanca" type="button"><a href="tela03.html">PROSSEGUIR ></a></button>
+					</div>
+					<div class='botoes-navegacao'>
 						<a href="tela01.html"><button class="bt-navegacao" type="button"><</button></a>
 
 						<a href="tela01.html"><input type="radio" name="radio"><label for="radio"></label></a>
@@ -355,8 +171,8 @@ html{
 						<a href="tela07.html"><input type="radio" name="radio"><label for="radio"></label></a>
 
 						<a href="tela03.html"><button class="bt-navegacao" type="button">></button></a>
-					</span>
-					<span class="legenda">Tela 2 de 7</span>
+					</div>
+					<span class="legenda">2 de 7</span>
 
 				</div>
 				<!--Rodapé-->
@@ -461,37 +277,37 @@ html{
 				API.registrarDadosGenericos(porcentagem,14);
 			}
 
-		//aqui é quando a verificação é para o formulário	
+			//aqui é quando a verificação é para o formulário	
 		}else{
-			console.log("\nObtendo os dados genéricos: ");            							
-			console.log("Status do evento: "+evento.detail['status']);								
-			
+			console.log("\nObtendo os dados genéricos: ");
+			console.log("Status do evento: "+evento.detail['status']);
+
 			//verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
 			if(evento.detail["status"]=="200"){
-				
+
 				//se a unidade já foi iniciada, então pode exibir a mensagem informando que a atiidade já foi completada
 				// **************** (VER COM EQUIPE) *****************
 				var resposta = evento.detail["data"][0]["valor"];
-				console.log(evento.detail["data"]);				
+				console.log(evento.detail["data"]);
 				mensagem.textContent = "Você já enviou estas respostas";
 				mensagem.className = "mensagem-alerta";
 				mensagem.style.dispay = "block";
 				window.scrollTo(0, 0);
-				erros++;								
-			
+				erros++;
+
 				//se a unidade não foi iniciada, registra os dados Genéricos com as respostas:
-			}else{								
+			}else{
 				API.registrarDadosGenericos("r1_2_1",r1_2_1);
-				console.log("Resposta 1: "+r1_2_1);	   
+				console.log("Resposta 1: "+r1_2_1);
 				API.registrarDadosGenericos("r1_2_2t",r1_2_2t);
-				console.log("Resposta 2t: "+r1_2_2t);	   
+				console.log("Resposta 2t: "+r1_2_2t);
 				API.registrarDadosGenericos("r1_2_3",r1_2_3);
-				console.log("Resposta 3: "+r1_2_3);	   
+				console.log("Resposta 3: "+r1_2_3);
 				API.registrarDadosGenericos("r1_2_3t",r1_2_3t);
-				console.log("Resposta 3t: "+r1_2_3t);	   
+				console.log("Resposta 3t: "+r1_2_3t);
 				API.registrarDadosGenericos("r1_2_4t",r1_2_4t);
-				console.log("Resposta 4t: "+r1_2_4t);	   
-			}						
+				console.log("Resposta 4t: "+r1_2_4t);
+			}
 		}
 	};
 
@@ -505,17 +321,17 @@ html{
 	var botao = document.getElementById("botao-quiz-uni2");
 	var mensagem = document.getElementById("mensagem-alerta");
 
-	function salvarDados(){		
-		console.log("função aqui");		
+	function salvarDados(){
+		console.log("função aqui");
 		verificando_quais_dados =2;
 		erros = 0;
 
-		r1_2_1 = document.form_quiz_uni2.resposta_1.value, 		
-		r1_2_2t = document.form_quiz_uni2.resposta_2_texto.value, 
-		r1_2_3 = document.form_quiz_uni2.resposta_3.value, 				
-		r1_2_3t = document.form_quiz_uni2.resposta_3_texto.value, 
-		r1_2_4t = document.form_quiz_uni2.resposta_4_texto.value;
-		
+		r1_2_1 = document.form_quiz_uni2.resposta_1.value,
+				r1_2_2t = document.form_quiz_uni2.resposta_2_texto.value,
+				r1_2_3 = document.form_quiz_uni2.resposta_3.value,
+				r1_2_3t = document.form_quiz_uni2.resposta_3_texto.value,
+				r1_2_4t = document.form_quiz_uni2.resposta_4_texto.value;
+
 		console.log("\n..."+r1_2_1+"\n"+r1_2_2t+"\n"+r1_2_3+"\n"+r1_2_3t+"\n"+r1_2_4t);
 
 		if(r1_2_1==null){
@@ -532,26 +348,26 @@ html{
 
 		if(erros>0){
 			mensagem.className = "mensagem-alerta";
-			mensagem.textContent = "Por favor preencha todos os campos";	
+			mensagem.textContent = "Por favor preencha todos os campos";
 			mensagem.style.display = "block";
 			window.scrollTo(0, 0);
-			return false;			
+			return false;
 		}else{
-			console.log("\nChecando respostas");										
+			console.log("\nChecando respostas");
 			//primeiro verifica dados salvos da primeira resposta. Se encontrar é porque já enviou anteriormente.		
-			API.obterDadosGenericos("induzindoerro_r1_2_1");	
-			
+			API.obterDadosGenericos("induzindoerro_r1_2_1");
+
 			if(erros>0){
 				return false;
 			}
 			//se não houver erro, envia o form
 			mensagem.className = "mensagem-ok";
-			mensagem.style.display ="block";			
-			mensagem.innerHTML="Dados Enviados com sucesso!<br /><a href='testerespostas.html>Clique para ver suas respostas</a>";					
+			mensagem.style.display ="block";
+			mensagem.innerHTML="Dados Enviados com sucesso!<br /><a href='testerespostas.html>Clique para ver suas respostas</a>";
 			console.log("ocorreu tudo certo. Tem que aparecer o link");
 			window.scrollTo(0, 0);
 		}
-	}	
-</script>
-</body>
-</html>
+	}
+	</script>
+	</body>
+	</html>
