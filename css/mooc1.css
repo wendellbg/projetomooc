@@ -19,6 +19,11 @@ a {
 	color: #2a5caa;
 }
 
+.bt-avanca a{
+	color: #fff;
+	text-decoration: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	color: #2a5caa;
 }
