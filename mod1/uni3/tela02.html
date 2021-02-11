@@ -4,9 +4,12 @@
 	<title>Mentoria</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="../../css/mooc1.css?ver=1.1"/>
+	<link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
 	<link rel="stylesheet" href="../../css/boxes.css?ver=1.4"/>
 	<link rel="stylesheet" href="../../css/podcast.css?ver=1.1"/>
+
+	<script src="../../js/jquery-2.1.1.js"></script>
+	<script src="../../js/bt-topo.js"></script> <!-- Botão de Voltar ao Topo -->
 </head>
 <body>
 
@@ -14,6 +17,7 @@
 <header id="header">
 	<div class="logo">
 		<a href="../sumario.html">UNIDADE 3</a>
+		<h3>Apresentação do itinerário para a Educação Profissional</h3>
 	</div>
 </header>
 
@@ -37,11 +41,11 @@
 							</a>
 							<div class="menu">
 								<a href="../sumario.html" class='titulo-menu'>UNIDADE 3</a>
-								<a href="tela01.html">Tela 01 - Apresentação</a>
-								<a href="tela02.html" class='link-menu-atual'>Tela 02 - Itinerários Formativos</a>
-								<a href="tela03.html">Tela 03 - Composição de Itinerários</a>
-								<a href="tela04.html">Tela 04 - Qualificação Profissional</a>
-								<a href="tela05.html">Tela 05 - Concluindo</a>
+								<a href="tela01.html">3.01 - Apresentação</a>
+								<a href="tela02.html" class='link-menu-atual'>3.02 - Itinerários Formativos</a>
+								<a href="tela03.html">3.03 - Composição de Itinerários</a>
+								<a href="tela04.html">3.04 - Qualificação Profissional</a>
+								<a href="tela05.html">3.05 - Concluindo</a>
 							</div>
 						</div>
 					</div>
@@ -54,10 +58,11 @@
 				<p>Cada pessoa que tenha a possibilidade de escolher seu futuro, segundo suas aspirações, será um cidadão mais realizado e participativo dos desafios de sua profissão, contribuindo para o desenvolvimento de toda a sociedade.</p>
 			</div>
 
-				<div class="imagem">
-					<img class="imagem-ampla" src="../../img/uni3/MOOC1_uni3_tela2_imagem1b.png" />
-					<p class="legenda-img">Figura 01 - Fonte: (Wavebreackmedia/Freepik) e editada pela produção do projeto</p>
-				</div>
+			<!-- Imagem Única-->
+			<div class="image fit flush largura-60">
+				<img src="../../img/uni3/MOOC1_uni3_tela2_imagem1b.png" />
+				<p class="legenda-img">Figura 01 - Fonte: (Wavebreackmedia/Freepik) e editada pela produção do projeto</p>
+			</div>
 
 			<div class="content">
 				<p>Com o novo Ensino Médio, <b>abrem-se novas possibilidades formativas e uma diversidade de caminhos laborais que o estudante pode escolher.</b></p>
@@ -79,11 +84,13 @@
 			<!-- Conteúdo -->
 			<div class="content footer">
 				<div class='navegacao'>
-					<span class="bt-topo">
+					<div class="bt-topo">
 						<a href="#"><i class="fas fa-angle-up"></i></a>
-					</span>
-					<span><a href="tela03.html"><button class="bt-avanca" type="button">PROSSEGUIR ></button></a></span>
-					<span class='botoes-navegacao'>
+					</div>
+					<div>
+						<button class="bt-avanca" type="button"><a href="tela03.html">PROSSEGUIR ></a></button>
+					</div>
+					<div class='botoes-navegacao'>
 						<a href="tela01.html"><button class="bt-navegacao" type="button"><</button></a>
 
 						<a href="tela01.html"><input type="radio" name="radio"><label for="radio"></label></a>
@@ -95,8 +102,8 @@
 						<a href="tela07.html"><input type="radio" name="radio"><label for="radio"></label></a>
 
 						<a href="tela03.html"><button class="bt-navegacao" type="button">></button></a>
-					</span>
-					<span class="legenda">Tela 2 de 7</span>
+					</div>
+					<div class="legenda">2 de 7</div>
 
 				</div>
 
