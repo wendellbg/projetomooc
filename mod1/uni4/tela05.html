@@ -5,7 +5,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel='stylesheet' href="../../css/mooc1.css?ver=1.2" />
-		<link rel="stylesheet" href="../../css/boxes.css?ver=1.4"/>
+		<link rel="stylesheet" href="../../css/boxes.css?ver=1.5"/>
+		<link rel="stylesheet" href="../../css/slide.css?ver=1.2"/>
 		<link rel="stylesheet" href="../../css/menu-colorido.css?ver=1.1"/>
 
 		<script src="../../js/jquery-2.1.1.js"></script>
@@ -105,9 +106,95 @@
 							</div>
 						</div>
 
-						<div class="imagem">
-							<img class="imagem-ampla" src="../../img/uni4/infografico_01.jpg" />
-							<p class="legenda">Figura 10 - Fonte: (Stories/Freepik) e editada pela produção do projeto</p>
+						<div class="content no-top">
+
+							<!-- Imagem Única-->
+							<div class="image fit flush largura-60">
+								<img class="imagem-ampla" src="../../img/uni4/MOOC1_Uni4_tela5_imagem1a.jpg" />
+								<p class="legenda">Figura 10 - Fonte: (Stories/Freepik) e editada pela produção do projeto</p>
+							</div>
+
+							<div class="row container-mini-box">
+								<div class="3u 12u$(small) container-mini-box">
+									<div class="mini-box red">
+										São mais de 200 Cursos Técnicos em diferentes áreas do conhecimento
+									</div>
+								</div>
+								<div class="3u 12u$(small) container-mini-box">
+									<div class="mini-box red">
+										Para conhecer os cursos, acesse o <a href="http://portal.mec.gov.br/docman/novembro-2017-pdf/77451-cnct-3a-edicao-pdf-1/file" target="_blank">Catálogo Nacional de Cursos Técnicos</a>
+									</div>
+								</div>
+								<div class="3u 12u$(small) container-mini-box">
+									<div class="mini-box red">
+										Para conhecer os Cursos Superiores de Tecnologia, acesse o <a href="http://portal.mec.gov.br/index.php?option=com_docman&view=download&alias=98211-cncst-2016-a&category_slug=outubro-2018-pdf-1&Itemid=30192" target="_blank">Catálogo Nacional de Cursos Superiores de Tecnologia</a>
+									</div>
+								</div>
+								<div class="3u 12u$(small) container-mini-box">
+									<div class="mini-box red">
+										Para saber onde os cursos são ofertados, acesse o <a href="http://sistec.mec.gov.br/login/login" target="_blank">Sistema Nacional de Informações da Educação Profissional e Tecnológica - MEC</a>
+									</div>
+								</div>
+							</div>
+
+							<span class="separador">
+								<p class="texto-separador">Conheça alguns Cursos Técnicos de Nível Médio de diversas instituições que são ofertantes:</p>
+							</span>
+						</div>
+
+						<!-- Container do slideshow-->
+						<div class="slideshow-container">
+							<div class="mySlides fade">
+								<div class="numero-slide">1 / 5</div>
+								<div class='titulo-video'><span>Curso Técnico em Panificação</span></div>
+								<div class='video-player'>
+									<iframe width="720" height="405" src="https://www.youtube.com/embed/nKWcBbBXt9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+							</div>
+
+							<div class="mySlides fade">
+								<div class="numero-slide">2 / 5</div>
+								<div class='titulo-video'><span>Curso Técnico em Jogos Digitais</span></div>
+								<div class='video-player'>
+									<iframe width="720" height="405" src="https://www.youtube.com/embed/7L-hRlSJTAI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+							</div>
+
+							<div class="mySlides fade">
+								<div class="numero-slide">3 / 5</div>
+								<div class='titulo-video'><span>Curso Técnico em Eventos</span></div>
+								<div class='video-player'>
+									<iframe width="720" height="405" src="https://www.youtube.com/embed/6LKIp2kLpyQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+							</div>
+
+							<div class="mySlides fade">
+								<div class="numero-slide">4 / 5</div>
+								<div class='titulo-video'><span>Curso Técnico em Edificações</span></div>
+								<div class='video-player'>
+									<iframe width="720" height="405" src="https://www.youtube.com/embed/CjFImu2Jwqg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+							</div>
+
+							<div class="mySlides fade">
+								<div class="numero-slide">5 / 5</div>
+								<div class='titulo-video'><span>Curso Técnico em Mecatrônica</span></div>
+								<div class='video-player'>
+									<iframe width="720" height="405" src="https://www.youtube.com/embed/_HJbFoErli4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+							</div>
+
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+							<br>
+							<div style="text-align: center">
+								<span class="ponto" onclick="currentSlide(1)"></span>
+								<span class="ponto" onclick="currentSlide(2)"></span>
+								<span class="ponto" onclick="currentSlide(3)"></span>
+								<span class="ponto" onclick="currentSlide(4)"></span>
+								<span class="ponto" onclick="currentSlide(5)"></span>
+							</div>
 						</div>
 
 						<div class="content">
@@ -240,6 +327,35 @@
 				console.log(evento.detail);
 			};
 
+		</script>
+
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+				showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+				showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("dot");
+				if (n > slides.length) {slideIndex = 1}
+				if (n < 1) {slideIndex = slides.length}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block";
+				dots[slideIndex-1].className += " active";
+			}
 		</script>
 	</body>
 </html>
