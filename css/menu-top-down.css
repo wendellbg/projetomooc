@@ -79,9 +79,9 @@
   opacity: 0;
 }
 #change-hamburguer:checked ~ .menu {
-  max-height: 400px; /* estava limitado a 200px e não mostrava todas as 7 opçoes do menu*/
+  max-height: 600px; /* estava limitado a 200px e não mostrava todas as 7 opçoes do menu*/
   margin-top: 20px;
-  width: 60%;
+  width: 80%;
   border: 2px solid #2a5caa;
 }
 .menu {

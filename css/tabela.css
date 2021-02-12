@@ -3,10 +3,13 @@
     text-align: left;      
     font-weight: bold;   
     margin-top: 8em; 
-    border: solid 6px #bbb;
+    border: 0px;
     margin-bottom: 8em;
-    background-color: #fff;
-    
+    background-color: #eeeeee;
+    border-radius: 8px;
+    margin-bottom: 4em;
+    padding-bottom: 20px;
+
 }
 .tabela::after{
     margin-bottom: 2em;
@@ -14,13 +17,14 @@
 
 .cabecalho-tabela{
     margin-left: 0.5em;
-    font-size: 2.2em;
+    font-size: 2em;
     font-family: "Musket-Bold";
     padding-top: 1.4em;
+    line-height: 1.2em;
 }
 
 .tabela .linha-tabela{
-    height: 100%;    
+    height: 100%;
     width: 100%;
     padding: 0;
     display: flex;
@@ -31,39 +35,39 @@
 }
 
 .tabela .linha-tabela:after{
-    clear: both;    
+    clear: both;
 }
 
 .tabela .coluna1{
-    width: 40%;    
-    margin-left: 1em;    
+    width: 40%;
+    margin-left: 1em;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     margin-right: 1em;
-    border: 4px solid #bbb;
-    background-color: #bbb;
+    padding: 0.5em;
+    border: 0px;
+    background-color: #ccc;
     position: relative;
-    float: left;  
+    float: left;
 }
 
 .tabela .coluna1 p{
     font-family: "Musket-Bold";
     font-weight: bold;
     font-size: 1.2em;
-    position: absolute;
-    padding-top: 20%;
-    padding-bottom: 20%;
-    top: 50%;        
-    transform: translate(0, -50%);
-    
+    padding: 5px;
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*transform: translate(0, -50%);*/
+
 }
 
-.tabela .coluna2{   
-    width: 50%;    
+.tabela .coluna2{
+    width: 50%;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     padding: 0.5em;
-    border: 4px solid #bbb;
+    border: 0px;
     float: right;    
     background-color: #fff;    
 }
@@ -80,8 +84,8 @@
     float: right;
     Width: 10vw;
     height: 10vw;
-    margin-top: -4.6em;        
-    margin-right: -5vw;    
+    margin-top: -4em;
+    margin-right: -3vw;
 }
 
 @media screen and (max-width: 512px){
@@ -101,8 +105,7 @@
    
     .tabela .linha-tabela p {
         font-size: 1em;
-        padding-top: 20%;
-        padding-bottom: 20%;
+        line-height: 1.4em;
     }
     .tabela .cabecalho-tabela{
         font-size: 1.4em;

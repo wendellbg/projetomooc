@@ -1,0 +1,418 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Mentoria</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- <link rel="stylesheet" href="../../css/mooc1.css?ver=1.1" /> -->
+	<link rel="stylesheet" href="../../css/atividades.css" />
+	<link rel="stylesheet" href="../../css/main.css" />
+	<link rel="stylesheet" href="../../css/rodape.css" />
+	<link rel="stylesheet" href="../../css/menu-top-down.css" />
+	<link rel="stylesheet" href="../../css/fontes.css" />
+
+	<style>
+		.questao{
+    background-color: #2a5caa;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em 0;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.titulo-questao{
+    background-color: #fec13b;
+    color: #000;
+    position: relative;    
+    display: block;
+    padding: 0.2em;    
+    width: 260px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-left: -50px;
+    border-radius: 0.5em;
+}
+
+.enunciado-questao{
+    text-decoration: underline;
+    padding: 1em 0;
+}
+
+.area-respostas{
+    width: 90%;
+    margin: auto;
+}
+
+.resposta-texto{
+    width: 90%;
+    margin: auto;
+    height: 200px;
+    padding: 0.5em;
+    color: #2a5caa;
+    font-size: 1em;
+    border: 1px solid #000;
+    border-radius:0.5em;
+    -moz-border-radius:0.5em;
+    -webkit-border-radius:0.5em;
+    box-shadow: 1px 1px 3px #000;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+}
+
+
+
+.resposta-texto:focus{       
+    outline: none;
+    border: 3px solid #fec13b;
+    border-radius: 0.5em;
+    -moz-border-radius:0.5em;
+    -webkit-border-radius:0.5em;
+    box-shadow: 1px 1px 3px #fec13b;
+    -moz-box-shadow: 1px 1px 3px #fec13b;
+    -webkit-box-shadow: 1px 1px 3px #fec13b;
+        
+}
+
+.opcao-resposta input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;    
+}
+  
+.opcao-resposta input + label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px;  
+    padding-right: 10px;    
+    border: 2px solid transparent;
+    border-radius: 1em;  
+    
+}
+
+.opcao-resposta input[type=radio] + label::before {
+    content: '';
+    position: absolute;
+    left: 3px;        
+    top: 2px;
+    width: 25px;    
+    height: 25px;    
+    border-radius: 50%;
+    border: solid 2px #fff;
+    vertical-align: middle;
+    
+}
+
+.opcao-resposta input:hover + label:hover{
+    border: 2px solid #fff;
+}
+
+.opcao-resposta input[type=radio]:checked + label::after {
+    content: '';
+    background-color: #000;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    position: absolute;
+    left: 7px;
+    top: 6px;
+}
+.opcao-resposta input[type=radio]:checked + label::before{
+    content: '';
+    position: absolute;
+    left: 3px;        
+    top: 2px;
+    width: 25px;    
+    height: 25px;    
+    border-radius: 50%;
+    border: solid 2px #000;
+    vertical-align: middle;
+}
+
+.opcao-resposta input[type=radio]:checked + label{
+    background-color: #fec13b;
+    color: #000;
+    font-weight: bold;
+}
+  
+/* .botao-atividade button.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+} */
+
+.botao-atividade button{
+    background:#2a5caa;        
+    color:#ffffff;
+    padding: 1em;
+    border-radius: 1em;
+    font-size: 1em;
+    font-family: "Musket";
+    outline: none;    
+    border-radius: 0.5em;
+    letter-spacing: 0.2em;
+    /* -moz-border-radius:0.5em;
+    -webkit-border-radius:0.5em;
+    box-shadow: 1px 1px 3px #fec13b;
+    -moz-box-shadow: 1px 1px 3px #fec13b;
+    -webkit-box-shadow: 1px 1px 3px #fec13b; */
+}
+  
+.mensagem-alerta{
+    display: none;
+    background-color: #E73435;
+    color: #fff;
+    border: 4px solid #2a5caa;
+    border-radius: 0.5em; 
+    padding: 2em;   
+    width: 80%;
+    margin: auto;
+    text-align: center;
+	font-size: 1.4em; 
+}
+
+.mensagem-ok{
+    display: none;
+    background-color: #2a5caa;
+    color: #fff;
+    border: 4px solid #fec13b;
+    border-radius: 0.5em; 
+    padding: 2em;   
+    width: 80%;
+    margin: auto;
+    text-align: center;
+	font-size: 1.4em;
+}
+
+.area-respostas .resposta-salva{
+    background-color: #ccc;
+    color: #000;
+    border-radius: 0.5em; 
+    padding: 1em;   
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- Header -->
+<header id="header">
+	<div class="logo">
+		<a href="../sumario.html">UNIDADE 2</a>
+	</div>
+</header>
+
+<!-- Main -->
+<section id="main">
+	<div class="inner">
+		<!-- One -->
+		<section id="one" class="wrapper style1">
+
+			<header class="special">
+				<div class="entire-menu">
+					<div class="menu-tit">
+						<div class="menu-tit-col1">
+							<h2>Experiência com o Ensino Médio</h2>
+						</div>
+						<div class="menu-tit-col2">
+							<input type="checkbox" id="change-hamburguer" />
+							<a class="hamburguer" href="#">
+								<span></span>
+								<label for="change-hamburguer"></label>
+							</a>
+							<div class="menu">
+								<a href="../sumario.html" class='titulo-menu'>UNIDADE 2</a>
+								<a href="tela01.html">Tela 01 - Apresentação</a>
+								<a href="tela02.html" class='link-menu-atual'>Tela 02 - Experiência com o Ensino Médio</a>
+								<a href="tela03.html">Tela 03 - Desafios para a Educação Profissional</a>
+								<a href="tela04.html">Tela 04 - Trajetória Recente do Ensino Médio no Brasil</a>
+								<a href="tela05.html">Tela 05 - O Novo Ensino Médio</a>
+								<a href="tela06.html">Tela 06 - Itinerários Formativos</a>
+								<a href="tela07.html">Tela 07 - Autonomia do Estudante</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<!-- Formulário para o quiz -->
+			<div class="content">
+				<div class="atividade" id='quiz-uni2'>					
+						<div class="questao">
+							<div class="titulo-questao">Questão 1</div>
+							<div class="enunciado-questao">
+								<span>Como foi seu Ensino Médio?</span>							
+							</div>
+							<div class="area-respostas">
+								<p id="r1_2_1" class='resposta-salva'></p>												
+							</div>																				
+						</div>
+
+						<div class="questao">
+							<div class="titulo-questao">Questão 2</div>
+							<div class="enunciado-questao">
+								<span>Como você acredita que foi o Ensino Médio dos outros alunos deste curso? E da maioria dos alunos pelo Brasil?</span>							
+							</div>
+							<div class="area-respostas">
+								<p class="resposta-salva" id='r1_2_2t'></p>
+							</div>
+						</div>
+
+						<div class="questao">
+							<div class="titulo-questao">Questão 3</div>
+							<div class="enunciado-questao">
+								<span>Você tem ideia do percentual de seus colegas do terceiro ano do ensino médio que entraram na faculdade?</span>							
+							</div>
+							<div class="area-respostas">						
+								<p id="r1_2_3" class="resposta-salva"></p>								
+							</div>																				
+							<div class="enunciado-questao">
+								<span>E o que te faz chegar na resposta acima?</span>							
+							</div>
+							<div class="area-respostas">
+								<p class="resposta-salva" id='r1_2_3t'></p>
+							</div>
+						</div>
+								
+						<div class="questao">
+							<div class="titulo-questao">Questão 4</div>
+							<div class="enunciado-questao">
+								<span>Que importância tem para você uma formação profissional durante o Ensino Médio?</span>							
+							</div>
+							<div class="area-respostas">
+								<p class="resposta-salva" id='r1_2_4t'></p>
+							</div>
+						</div>						
+				</div>
+				
+			</div>
+
+			<!-- Conteúdo -->
+			<div class="content footer">
+				<div class='navegacao'>
+					<span class="bt-topo">
+						<a href="#"><i class="fas fa-angle-up"></i></a>
+					</span>
+					<span><a href="tela03.html"><button class="bt-avanca" type="button">PROSSEGUIR ></button></a></span>
+					<span class='botoes-navegacao'>
+						<a href="tela01.html"><button class="bt-navegacao" type="button"><</button></a>
+
+						<a href="tela01.html"><input type="radio" name="radio"><label for="radio"></label></a>
+						<a href="tela02.html"><input type="radio" name="radio" checked><label for="radio"></label></a>
+						<a href="tela03.html"><input type="radio" name="radio"><label for="radio"></label></a>
+						<a href="tela04.html"><input type="radio" name="radio"><label for="radio"></label></a>
+						<a href="tela05.html"><input type="radio" name="radio"><label for="radio"></label></a>
+						<a href="tela06.html"><input type="radio" name="radio"><label for="radio"></label></a>
+						<a href="tela07.html"><input type="radio" name="radio"><label for="radio"></label></a>
+
+						<a href="tela03.html"><button class="bt-navegacao" type="button">></button></a>
+					</span>
+					<span class="legenda">Tela 2 de 7</span>
+
+				</div>
+				<!--Rodapé-->
+				<hr/>
+				<div class="row rodape">
+					<div class="6u 12u$(small)">
+						<p></p>
+						<img src="../../img/padrao/logo_mentoria.png" alt="IFSC">
+					</div>
+					<div class="2u 12u$(small)">
+						<p>Realização:</p>
+						<img src="../../img/padrao/logo_mec.png" alt="IFSC">
+					</div>
+					<div class="4u 12u$(small)">
+						<p>Produção:</p>
+						<img src="../../img/padrao/ifsc.png" alt="IFSC">
+						<img src="../../img/padrao/ifes.png" alt="IFES">
+					</div>
+				</div>
+				<!--Rodapé-->
+		</section>
+	</div>
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
+<script>
+	console.clear(screen);
+
+	var API = new BridgeRestApi();	
+    var qual_resposta;	
+
+	//Obtendo dados curso
+	window.addEventListener('load', function(evento){
+		console.log(evento.detail);
+		//verifica as respostas salvas
+        qual_resposta = "r1_2_1";
+		API.obterDadosGenericos("r1_2_1");
+        qual_resposta = "r1_2_2t";
+        API.obterDadosGenericos("r1_2_2t");
+        qual_resposta = "r1_2_3";
+        API.obterDadosGenericos("r1_2_3");
+        qual_resposta = "r1_2_3t";
+        API.obterDadosGenericos("r1_2_3t");
+        qual_resposta = "r1_2_4t";
+        API.obterDadosGenericos("r1_2_4t");
+	});
+
+	//A cada resposta encontrada, executa esta função
+	window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
+	function resultadoObtemDadosGenericos (evento){
+
+		//testa se os dados genéricos testados são para a porcentagem ou para as respostas				
+			console.log("\nObtendo os dados genéricos (respostas): ");            							
+			console.log("Status do evento: "+evento.detail['status']);								
+			
+			//verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
+			if(evento.detail["status"]=="200"){
+				
+				//vai completando o conteúdo dos parágrafos de resposta com os dados genéricos salvos				
+				var resposta = evento.detail["data"][0]["valor"];
+				switch (evento.detail["data"][0]["chave"]){
+                    case ("r1_2_1"):{
+                        console.log("\ndata: "+evento.detail["data"]+"\nqual: "+qual_resposta+"\nconteudo:"+resposta);	
+                        var div = document.getElementById("r1_2_1");
+				        div.textContent = resposta;		
+                        break;
+                    }
+                    case ("r1_2_2t"):{
+                        console.log("\ndata: "+evento.detail["data"]+"\nqual: "+qual_resposta+"\nconteudo:"+resposta);	
+                        var div = document.getElementById("r1_2_2t");
+				        div.textContent = resposta;		
+                        break;
+                    }
+                    case ("r1_2_3"):{
+                        console.log("\ndata: "+evento.detail["data"]+"\nqual: "+qual_resposta+"\nconteudo:"+resposta);	
+                        var div = document.getElementById("r1_2_3");
+				        div.textContent = resposta;		
+                        break;
+                    }
+                    case ("r1_2_3t"):{
+                        console.log("\ndata: "+evento.detail["data"]+"\nqual: "+qual_resposta+"\nconteudo:"+resposta);	
+                        var div = document.getElementById("r1_2_3t");
+				        div.textContent = resposta;		
+                        break;
+                    }
+                    case ("r1_2_4t"):{
+                        console.log("\ndata: "+evento.detail["data"]+"\nqual: "+qual_resposta+"\nconteudo:"+resposta);	
+                        var div = document.getElementById("r1_2_4t");
+				        div.textContent = resposta;		
+                        break;
+                    }
+                }
+                
+				
+				//se a unidade não foi iniciada, registra os dados Genéricos com as respostas:
+			}else{												
+				console.log("Algum erro ocorreu");	   
+			}								
+	};
+
+</script>
+</body>
+</html>

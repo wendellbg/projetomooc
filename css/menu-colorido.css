@@ -127,6 +127,8 @@
 .divs-coloridas .cor4b, .divs-coloridas .i4:hover .cor4a{
     background-color: #0142fc;
     color: #000;
+    /*background-color: #2a5caa;*/
+    /*color: #ffffff;*/
 }
 
 .divs-coloridas .cor5a, .divs-coloridas .i5:hover .cor5b{
@@ -160,12 +162,13 @@
 } 
 
 .divs-coloridas{
-    border: 3px solid #bbb;
+    border: 3px solid #ccc;
     font-family: "Musket-Bold";
     margin-top: 6em;
     padding-left: 1em ;
     padding-right: 1em;   
-    margin-bottom: 4em; 
+    margin-bottom: 4em;
+    border-radius: 8px;
 }
 
 .divs-coloridas .item{
@@ -175,7 +178,7 @@
 }
 
  .divs-coloridas .titulo{
-    border-radius: 0.2em;    
+    border-radius: 8px;
     font-size: 1.8em;
     line-height: 1em;
     padding-left: 15px;
@@ -199,7 +202,7 @@
 .divs-coloridas .descricao{
     font-family: "Affogato-Regular";
     font-size: 1.4em;
-    border-radius: 0.2em;
+    border-radius: 8px;
     line-height: 1em;    
     width: 65%;        
     position: absolute;      
@@ -220,6 +223,14 @@
     }
     .divs-coloridas .i7 .titulo{
         padding-bottom: 1em;
+    }
+
+    .divs-coloridas .titulo{
+        border-bottom-right-radius: 0;
+    }
+
+    .divs-coloridas .descricao{
+        border-top-left-radius: 0;
     }
 }
 

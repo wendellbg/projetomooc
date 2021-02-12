@@ -4,7 +4,9 @@
 	<title>Mentoria</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="../../css/mooc1.css?ver=1.0" />
+	 <link rel="stylesheet" href="../../css/mooc1.css?ver=1.1" />
+	<link rel="stylesheet" href="../../css/atividades.css?ver=1.1" />
+
 </head>
 <body>
 
@@ -12,6 +14,7 @@
 <header id="header">
 	<div class="logo">
 		<a href="../sumario.html">UNIDADE 2</a>
+		<h3>Educação Profissional no novo Ensino Médio</h3>
 	</div>
 </header>
 
@@ -35,31 +38,128 @@
 							</a>
 							<div class="menu">
 								<a href="../sumario.html" class='titulo-menu'>UNIDADE 2</a>
-								<a href="tela01.html">Tela 01 - Apresentação</a>
-								<a href="tela02.html" class='link-menu-atual'>Tela 02 - Experiência com o Ensino Médio</a>
-								<a href="tela03.html">Tela 03 - Desafios para a Educação Profissional</a>
-								<a href="tela04.html">Tela 04 - Trajetória Recente do Ensino Médio no Brasil</a>
-								<a href="tela05.html">Tela 05 - O Novo Ensino Médio</a>
-								<a href="tela06.html">Tela 06 - Itinerários Formativos</a>
-								<a href="tela07.html">Tela 07 - Autonomia do Estudante</a>
+								<a href="tela01.html">2.01 - Apresentação</a>
+								<a href="tela02.html" class='link-menu-atual'>2.02 - Experiência com o Ensino Médio</a>
+								<a href="tela03.html">2.03 - Desafios para a Educação Profissional</a>
+								<a href="tela04.html">2.04 - Trajetória Recente do Ensino Médio no Brasil</a>
+								<a href="tela05.html">2.05 - O Novo Ensino Médio</a>
+								<a href="tela06.html">2.06 - Itinerários Formativos</a>
+								<a href="tela07.html">2.07 - Autonomia do Estudante</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</header>
 
+			<!-- Formulário para o quiz -->
 			<div class="content">
+				<div class="atividade" id='quiz-uni2'>
+					<div id='mensagem-alerta'>
+					</div>
+
+					<form action="#" onsubmit="salvarDados(this); return false;" name="form_quiz_uni2" method="POST">
+						<div class="questao">
+							<div class="titulo-questao">Questão 1</div>
+							<div class="enunciado-questao">
+								<span>Como foi seu Ensino Médio?</span>
+							</div>
+							<div class="area-respostas">
+								<div class='opcao-resposta'>
+									<input type="radio" name="resposta_1" id="resposta_1_1" value="Formação Geral" required>
+									<label for="resposta_1_1" class="texto-opcao">Formação Geral</label>
+								</div>
+								<div class="opcao-resposta">
+									<input type="radio" name="resposta_1" id="resposta_1_2" value="Técnico">
+									<label for="resposta_1_2" class="texto-opcao">Técnico</label>
+								</div>
+								<div class="opcao-resposta">
+									<input type="radio" name="resposta_1" id="resposta_1_3" value="Normal">
+									<label for="resposta_1_3" class="texto-opcao">Normal</label>
+								</div>
+								<div class="opcao-resposta">
+									<input type="radio" name="resposta_1" id="resposta_1_4" value="EJA">
+									<label for="resposta_1_4" class="texto-opcao">EJA</label>
+								</div>
+								<div class="opcao-resposta">
+									<input type="radio" name="resposta_1" id="resposta_1_5" value="PROEJA">
+									<label for="resposta_1_5" class="texto-opcao">PROEJA</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="questao">
+							<div class="titulo-questao">Questão 2</div>
+							<div class="enunciado-questao">
+								<span>Como você acredita que foi o Ensino Médio dos outros alunos deste curso? E da maioria dos alunos pelo Brasil?</span>
+							</div>
+							<div class="area-respostas">
+								<textarea class="resposta-texto" id='resposta_2_texto' name='resposta_2_texto' required></textarea>
+							</div>
+						</div>
+
+						<div class="questao">
+							<div class="titulo-questao">Questão 3</div>
+							<div class="enunciado-questao">
+								<span>Você tem ideia do percentual de seus colegas do terceiro ano do ensino médio que entraram na faculdade?</span>
+							</div>
+							<div class="area-respostas">
+								<div class="opcao-resposta">
+									<input type="radio" name="resposta_3" id="resposta_3_1" value="Menos de 10%" required>
+									<label for="resposta_3_1" class="texto-opcao">Menos de 10%</label>
+								</div>
+								<div class="opcao-resposta">
+									<input type="radio" name="resposta_3" id="resposta_3_2" value="Entre 10 e 20%">
+									<label for="resposta_3_2" class="texto-opcao">Entre 10 e 20%</label>
+								</div>
+								<div class="opcao-resposta">
+									<input type="radio" name="resposta_3" id="resposta_3_3" value="Entre 20 e 50%">
+									<label for="resposta_3_3" class="texto-opcao">Entre 20 e 50%</label>
+								</div>
+								<div class="opcao-resposta">
+									<input type="radio" name="resposta_3" id="resposta_3_4" value="Entre 50 e 70%">
+									<label for="resposta_3_4" class="texto-opcao">Entre 50 e 70%</label>
+								</div>
+								<div class="opcao-resposta">
+									<input type="radio" name="resposta_3" id="resposta_3_5" value="Mais de 70%">
+									<label for="resposta_3_5" class="texto-opcao">Mais de 70%</label>
+								</div>
+							</div>
+							<div class="enunciado-questao">
+								<span>E o que te faz chegar na resposta acima?</span>
+							</div>
+							<div class="area-respostas">
+								<textarea class="resposta-texto" id='resposta_3_texto' required></textarea>
+							</div>
+						</div>
+
+						<div class="questao">
+							<div class="titulo-questao">Questão 4</div>
+							<div class="enunciado-questao">
+								<span>Que importância tem para você uma formação profissional durante o Ensino Médio?</span>
+							</div>
+							<div class="area-respostas">
+								<textarea class="resposta-texto" id='resposta_4_texto' required></textarea>
+							</div>
+						</div>
+						<div class="botao-atividade">
+							<button type="button" id="botao-quiz-uni2" onclick="salvarDados()" >ENVIAR RESPOSTAS</button>
+						</div>
+					</form>
+				</div>
+				<a href="testerespostas.html">Clique aqui para ver as respostas</a>
 
 			</div>
 
 			<!-- Conteúdo -->
 			<div class="content footer">
 				<div class='navegacao'>
-					<span class="bt-topo">
+					<div class="bt-topo">
 						<a href="#"><i class="fas fa-angle-up"></i></a>
-					</span>
-					<span><a href="tela03.html"><button class="bt-avanca" type="button">PROSSEGUIR ></button></a></span>
-					<span class='botoes-navegacao'>
+					</div>
+					<div>
+						<button class="bt-avanca" type="button"><a href="tela03.html">PROSSEGUIR ></a></button>
+					</div>
+					<div class='botoes-navegacao'>
 						<a href="tela01.html"><button class="bt-navegacao" type="button"><</button></a>
 
 						<a href="tela01.html"><input type="radio" name="radio"><label for="radio"></label></a>
@@ -71,8 +171,8 @@
 						<a href="tela07.html"><input type="radio" name="radio"><label for="radio"></label></a>
 
 						<a href="tela03.html"><button class="bt-navegacao" type="button">></button></a>
-					</span>
-					<span class="legenda">Tela 2 de 7</span>
+					</div>
+					<span class="legenda">2 de 7</span>
 
 				</div>
 				<!--Rodapé-->
@@ -91,8 +191,8 @@
 						<img src="../../img/padrao/ifsc.png" alt="IFSC">
 						<img src="../../img/padrao/ifes.png" alt="IFES">
 					</div>
-				</div><!--Rodapé-->
-
+				</div>
+				<!--Rodapé-->
 		</section>
 	</div>
 </section>
@@ -111,6 +211,8 @@
 	var progresso = 28;
 	var progressoSalvo;
 	var porcentagem = "porcentagemUni2";
+	var verificando_quais_dados=1;
+	var erros = 0;
 
 	//Obtendo dados curso
 	window.addEventListener('load', function(){
@@ -128,55 +230,144 @@
 	//Quando obtém a porcentagem da unidade em questão, executa esta função
 	window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
 	function resultadoObtemDadosGenericos (evento){
-		console.log(evento.detail);
 
-		//testando se o status é 200, unidade já iniciada
-		if(evento.detail["status"]==200){
-			var i=0;
-			var cont = 0;
-			//O evento retorna um vetor. É preciso pesquisar em qual posição está a porcentagem da unidade atual
-			while(i==0){
-				if(evento.detail["data"][cont]["chave"]==porcentagem){
-					console.log("achou na posição "+cont);
-					console.log(evento.detail["data"][cont]["chave"]);
-					i=1;
-				}else{
-					console.log("não encontrou na posição "+cont);
-					console.log(evento.detail["data"][cont]["chave"]);
-					cont=cont+1;
-					if(cont==10){
+		//testa se os dados genéricos testados são para a porcentagem ou para as respostas
+		console.log("Teste de dados aqui:::::::: "+verificando_quais_dados);
+
+		if(verificando_quais_dados==1){
+			console.log(evento.detail);
+
+			//testando se o status é 200, unidade já iniciada
+			if(evento.detail["status"]==200){
+				var i=0;
+				var cont = 0;
+				//O evento retorna um vetor. É preciso pesquisar em qual posição está a porcentagem da unidade atual
+				while(i==0){
+					if(evento.detail["data"][cont]["chave"]==porcentagem){
+						console.log("achou na posição "+cont);
+						console.log(evento.detail["data"][cont]["chave"]);
 						i=1;
+					}else{
+						console.log("não encontrou na posição "+cont);
+						console.log(evento.detail["data"][cont]["chave"]);
+						cont=cont+1;
+						if(cont==10){
+							i=1;
+						}
 					}
+
 				}
 
+				//depois que encontrar a posição certa, verifica o progresso atual
+				progressoSalvo = evento.detail["data"][cont]["valor"];
+				console.log("Valor de Porcentagem atual: "+progressoSalvo);
+
+				if(progressoSalvo < progresso){
+					//registrando a porcentagem da Unidade em questão
+					API.registrarDadosGenericos(porcentagem,progresso);
+					console.log('Registrando nova porcentagem: '+progresso);
+				}else{
+					//Se o cursista estiver revendo a tela, o progresso Salvo será maior, então não altera nada.
+					console.log("Porcentagem não alterada.");
+				}
+
+			}else if(evento.detail["status"]==412){
+				//se for status 400, inicia a chave da porcentagem da unidade em questão
+				console.log("Inicializando a porcentagem da unidade");
+				API.registrarDadosGenericos(porcentagem,14);
 			}
 
-			//depois que encontrar a posição certa, verifica o progresso atual
-			progressoSalvo = evento.detail["data"][cont]["valor"];
-			console.log("Valor de Porcentagem atual: "+progressoSalvo);
+			//aqui é quando a verificação é para o formulário	
+		}else{
+			console.log("\nObtendo os dados genéricos: ");
+			console.log("Status do evento: "+evento.detail['status']);
 
-			if(progressoSalvo < progresso){
-				//registrando a porcentagem da Unidade em questão
-				API.registrarDadosGenericos(porcentagem,progresso);
-				console.log('Registrando nova porcentagem: '+progresso);
+			//verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
+			if(evento.detail["status"]=="200"){
+
+				//se a unidade já foi iniciada, então pode exibir a mensagem informando que a atiidade já foi completada
+				// **************** (VER COM EQUIPE) *****************
+				var resposta = evento.detail["data"][0]["valor"];
+				console.log(evento.detail["data"]);
+				mensagem.textContent = "Você já enviou estas respostas";
+				mensagem.className = "mensagem-alerta";
+				mensagem.style.dispay = "block";
+				window.scrollTo(0, 0);
+				erros++;
+
+				//se a unidade não foi iniciada, registra os dados Genéricos com as respostas:
 			}else{
-				//Se o cursista estiver revendo a tela, o progresso Salvo será maior, então não altera nada.
-				console.log("Porcentagem não alterada.");
+				API.registrarDadosGenericos("r1_2_1",r1_2_1);
+				console.log("Resposta 1: "+r1_2_1);
+				API.registrarDadosGenericos("r1_2_2t",r1_2_2t);
+				console.log("Resposta 2t: "+r1_2_2t);
+				API.registrarDadosGenericos("r1_2_3",r1_2_3);
+				console.log("Resposta 3: "+r1_2_3);
+				API.registrarDadosGenericos("r1_2_3t",r1_2_3t);
+				console.log("Resposta 3t: "+r1_2_3t);
+				API.registrarDadosGenericos("r1_2_4t",r1_2_4t);
+				console.log("Resposta 4t: "+r1_2_4t);
 			}
-
-		}else if(evento.detail["status"]==412){
-			//se for status 400, inicia a chave da porcentagem da unidade em questão
-			console.log("Inicializando a porcentagem da unidade");
-			API.registrarDadosGenericos(porcentagem,14);
 		}
 	};
 
 	window.addEventListener('evObtemRegistraDadosGenericos', resultadoRegistrarDadosGenericos, false);
 	function resultadoRegistrarDadosGenericos (evento){
-		console.log("Verificando porcentagem registrada");
+		console.log("Verificando dados registrados");
 		console.log(evento.detail);
 	};
 
-</script>
-</body>
-</html>
+	/*************** salvando as respostas nas variáveis do sistema *****/
+	var botao = document.getElementById("botao-quiz-uni2");
+	var mensagem = document.getElementById("mensagem-alerta");
+
+	function salvarDados(){
+		console.log("função aqui");
+		verificando_quais_dados =2;
+		erros = 0;
+
+		r1_2_1 = document.form_quiz_uni2.resposta_1.value,
+				r1_2_2t = document.form_quiz_uni2.resposta_2_texto.value,
+				r1_2_3 = document.form_quiz_uni2.resposta_3.value,
+				r1_2_3t = document.form_quiz_uni2.resposta_3_texto.value,
+				r1_2_4t = document.form_quiz_uni2.resposta_4_texto.value;
+
+		console.log("\n..."+r1_2_1+"\n"+r1_2_2t+"\n"+r1_2_3+"\n"+r1_2_3t+"\n"+r1_2_4t);
+
+		if(r1_2_1==null){
+			erros++;
+		}else if(r1_2_2t==""){
+			erros++;
+		}else if(r1_2_3==null){
+			erros++;
+		}else if(r1_2_3t==""){
+			erros++;
+		}else if(r1_2_4t==""){
+			erros++;
+		}
+
+		if(erros>0){
+			mensagem.className = "mensagem-alerta";
+			mensagem.textContent = "Por favor preencha todos os campos";
+			mensagem.style.display = "block";
+			window.scrollTo(0, 0);
+			return false;
+		}else{
+			console.log("\nChecando respostas");
+			//primeiro verifica dados salvos da primeira resposta. Se encontrar é porque já enviou anteriormente.		
+			API.obterDadosGenericos("induzindoerro_r1_2_1");
+
+			if(erros>0){
+				return false;
+			}
+			//se não houver erro, envia o form
+			mensagem.className = "mensagem-ok";
+			mensagem.style.display ="block";
+			mensagem.innerHTML="Dados Enviados com sucesso!<br /><a href='testerespostas.html>Clique para ver suas respostas</a>";
+			console.log("ocorreu tudo certo. Tem que aparecer o link");
+			window.scrollTo(0, 0);
+		}
+	}
+	</script>
+	</body>
+	</html>

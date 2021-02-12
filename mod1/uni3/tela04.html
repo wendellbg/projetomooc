@@ -4,22 +4,21 @@
 		<title>Mentoria</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="../../css/main.css"/>
-		<link rel="stylesheet" href="../../css/menu-top-down.css"/>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-		<link rel="stylesheet" href="../../css/rodape.css"/>
-		<link rel="stylesheet" href="../../css/fontes.css"/>
-		<link rel="stylesheet" href="../../css/infografico.css"/>
+		<link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
+		<link rel="stylesheet" href="../../css/infografico.css?ver=1.2"/>
 
+		<script src="../../js/jquery-2.1.1.js"></script>
+		<script src="../../js/bt-topo.js"></script> <!-- Botão de Voltar ao Topo -->
 	</head>
 	<body>
 
-		<!-- Header -->
-			<header id="header">
-				<div class="logo">
-					<a href="../sumario.html">UNIDADE 3</a>
-				</div>				
-			</header>			
+	<!-- Header -->
+	<header id="header">
+		<div class="logo">
+			<a href="../sumario.html">UNIDADE 3</a>
+			<h3>Apresentação do itinerário para a Educação Profissional</h3>
+		</div>
+	</header>
 
 		<!-- Main -->
 			<section id="main">
@@ -41,11 +40,11 @@
   										</a>  									  									
   										<div class="menu">
 											<a href="../sumario.html" class='titulo-menu'>UNIDADE 3</a>
-	    									<a href="tela01.html">Tela 01 - Apresentação</a>
-   	 										<a href="tela02.html">Tela 02 - Itinerários Formativos</a>
-    										<a href="tela03.html">Tela 03 - Composição de Itinerários</a>
-    										<a href="tela04.html" class='link-menu-atual'>Tela 04 - Qualificação Profissional</a>
-    										<a href="tela05.html">Tela 05 - Concluindo</a>
+	    									<a href="tela01.html">3.01 - Apresentação</a>
+   	 										<a href="tela02.html">3.02 - Itinerários Formativos</a>
+    										<a href="tela03.html">3.03 - Composição de Itinerários</a>
+    										<a href="tela04.html" class='link-menu-atual'>3.04 - Qualificação Profissional</a>
+    										<a href="tela05.html">3.05 - Concluindo</a>
   										</div>
   									</div>	
   								</div>	
@@ -55,7 +54,11 @@
 						<div class="content">
 							
 							<p>Essas atividades educativas incluem ao menos três possibilidades formativas, veja o infográfico: </p>
-							
+
+							<span class="separador">
+								<p class="texto-separador">Passe o mouse sobre os tópicos para visualizar:</p>
+							</span>
+
 							<div class='infografico'>
 																
 								<div class='titulo-bola bola1'>									
@@ -98,21 +101,26 @@
 										<li>Os espaços educativos podem compor o itinerário formação técnica e profissional, cada qual em suas possibilidades, desde que a escola mantenha convênio educacional.</li>
 										<li>O estágio supervisionado pela escola também pode compor uma qualificação dentro deste itinerário. Por exemplo, um aluno pode fazer estágio em uma atividade laboral e sua carga horária fazer parte da formação profissional
 											a que se refere este itinerário, desde que haja um programa de estágio devidamente avaliado pela escola.</li>
-										
 									</ul>
 								</div>
 								<div class='seta s1'></div>
 								<div class='seta s2'></div>
 								<div class='seta s3'></div>
 							</div>
-							
+							<p class="legenda">Figura 03 - Fonte: Imagem produzida pela equipe gráfica do projeto.</p>
+
+						</div>
+						<!-- Conteúdo -->
+						<div class="content footer">
 							<div class='navegacao'>
-								<span class="lista-navegacao" style="float: right;">
-									<a href="#"><i class="fas fa-angle-double-up" style="font-size:48px;"></i></a>                                		                            
-								</span>                     
-								<span><a href="tela05.html"><button class="bt-avanca" type="button">PROSSEGUIR ></button></a></span>                                                                  							 
+								<div class="bt-topo">
+									<a href="#"><i class="fas fa-angle-up"></i></a>
+								</div>
+								<div>
+									<button class="bt-avanca" type="button"><a href="tela05.html">PROSSEGUIR ></a></button>
+								</div>
 								<span class='botoes-navegacao'>
-									<a href="tela03.html"><button class="bt-navegacao" type="button"><</button></a>
+									<a href="tela04.html"><button class="bt-navegacao desativado" type="button"><</button></a>
 
 									<a href="tela01.html"><input type="radio" name="radio"><label for="radio"></label></a>                                		
 									<a href="tela02.html"><input type="radio" name="radio"><label for="radio"></label></a>
@@ -122,18 +130,26 @@
 									
 									<a href="tela05.html"><button class="bt-navegacao" type="button">></button></a>
 								</span>                                 
-								<span class="legenda">Tela 4 de 5</span>  
+								<span class="legenda">4 de 5</span>
 								
 							</div>
-							<hr>
-                  	<div class="linha">
-								<div class="coluna-50"> 
-									<img width="300" height="90" src="../../img/uni1/ifsc.png" alt="IFSC">
-								</div>							
-								<div class="coluna-50"> 
-										<img width="300" height="90" src="../../img/uni1/ifes.png" alt="IFES">
+							<!--Rodapé-->
+							<hr/>
+							<div class="row rodape">
+								<div class="6u 12u$(small)">
+									<p></p>
+									<img src="../../img/padrao/logo_mentoria.png" alt="IFSC">
 								</div>
-							</div>	       	
+								<div class="2u 12u$(small)">
+									<p>Realização:</p>
+									<img src="../../img/padrao/logo_mec.png" alt="IFSC">
+								</div>
+								<div class="4u 12u$(small)">
+									<p>Produção:</p>
+									<img src="../../img/padrao/ifsc.png" alt="IFSC">
+									<img src="../../img/padrao/ifes.png" alt="IFES">
+								</div>
+							</div><!--Rodapé-->
 						</div>
 						
 					</section>
@@ -149,11 +165,11 @@
 			console.clear(screen);
 		
 			var API = new BridgeRestApi();		
-			var id_unidade = "mod1_uni3";
-			var id_slide = "uni3/tela04.html";
-			var progresso = 80;
+			var id_unidade = "uni2";
+			var id_slide = "uni1/tela000.html";
+			var progresso = 14;
 			var progressoSalvo;
-			var porcentagem = "porcentagemUni3";
+			var porcentagem = "porcentagemUni2";
 			
 			//Obtendo dados curso
 			window.addEventListener('load', function(){            
@@ -210,7 +226,7 @@
 				}else if(evento.detail["status"]==412){
 					//se for status 400, inicia a chave da porcentagem da unidade em questão
 					console.log("Inicializando a porcentagem da unidade");
-					API.registrarDadosGenericos(porcentagem,20);
+					API.registrarDadosGenericos(porcentagem,14);
 				}				
 			};
 

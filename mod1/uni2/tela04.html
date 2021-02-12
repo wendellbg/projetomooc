@@ -4,10 +4,13 @@
 	<title>Mentoria</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="../../css/mooc1.css?ver=1.1" />
+	<link rel="stylesheet" href="../../css/mooc1.css?ver=1.2" />
 	<link rel="stylesheet" href="../../css/tabs.css"/>
-	<link rel="stylesheet" href="../../css/timeline.css"/>
-	<link rel="stylesheet" href="../../css/fontes.css"/>
+	<link rel="stylesheet" href="../../css/timeline.css?ver=1.1"/>
+	<link rel="stylesheet" href="../../css/boxes.css?ver=1.4" />
+
+	<script src="../../js/jquery-2.1.1.js"></script>
+	<script src="../../js/bt-topo.js"></script> <!-- Botão de Voltar ao Topo -->
 </head>
 <body>
 
@@ -15,6 +18,7 @@
 <header id="header">
 	<div class="logo">
 		<a href="../sumario.html">UNIDADE 2</a>
+		<h3>Educação Profissional no novo Ensino Médio</h3>
 	</div>
 </header>
 
@@ -38,13 +42,13 @@
 							</a>
 							<div class="menu">
 								<a href="../sumario.html" class='titulo-menu'>UNIDADE 2</a>
-								<a href="tela01.html">Tela 01 - Apresentação</a>
-								<a href="tela02.html">Tela 02 - Experiência com o Ensino Médio</a>
-								<a href="tela03.html">Tela 03 - Desafios para a Educação Profissional</a>
-								<a href="tela04.html" class='link-menu-atual'>Tela 04 - Trajetória Recente do Ensino Médio no Brasil</a>
-								<a href="tela05.html">Tela 05 - O Novo Ensino Médio</a>
-								<a href="tela06.html">Tela 06 - Itinerários Formativos</a>
-								<a href="tela07.html">Tela 07 - Autonomia do Estudante</a>
+								<a href="tela01.html">2.01 - Apresentação</a>
+								<a href="tela02.html">2.02 - Experiência com o Ensino Médio</a>
+								<a href="tela03.html">2.03 - Desafios para a Educação Profissional</a>
+								<a href="tela04.html" class='link-menu-atual'>2.04 - Trajetória Recente do Ensino Médio no Brasil</a>
+								<a href="tela05.html">2.05 - O Novo Ensino Médio</a>
+								<a href="tela06.html">2.06 - Itinerários Formativos</a>
+								<a href="tela07.html">2.07 - Autonomia do Estudante</a>
 							</div>
 						</div>
 					</div>
@@ -71,27 +75,35 @@
 					<div class="tabs">
 						<div class="content-tabs" id="ctab1">
 							<p>Abordava mais intensamente as ciências naturais: física, química, biologia além de um bom enfoque em matemática.</p>
-							<img src="../../img/uni2/MOOC1_unid2_tela4_imagem1.jpg">
+							<img src="../../img/uni2/MOOC1_unid2_tela4_imagem1.jpg" alt="Aula na modalidade científica" />
+							<p class="legenda">Figura 01 - Fonte: (SchoolPRPro/Pixabay)</p>
 						</div>
 
 						<div class="content-tabs" id='ctab2'>
 							<p>Dedicava-se mais às humanidades e artes: filosofia, história, sociologia, língua e literatura.</p>
-							<img src="../../img/uni2/MOOC1_unid2_tela4_imagem2.jpg" />
+							<img src="../../img/uni2/MOOC1_unid2_tela4_imagem2.jpg" alt="Aula na modalidade clássica" />
+							<p class="legenda">Figura 02 - Fonte: (Max Fischer/Pexels) e editada pela produção do projeto</p>
 						</div>
 
 						<div class="content-tabs" id='ctab3'>
 							<p>Desdobrava-se em três grupos, segundo os três principais setores da economia à época: Agropecuária, Comércio e Indústria. Havia escolas agrotécnicas, escolas técnicas de comércio e escolas técnicas industriais. O Setor de comércio também incluía os serviços, por isso os cursos da saúde e do turismo faziam parte desse grupo.</p>
-							<img src="../../img/uni2/MOOC1_unid2_tela4_imagem3.jpg" />
+							<img src="../../img/uni2/MOOC1_unid2_tela4_imagem3.jpg" alt="Aula na modalidade técnico" />
+							<p class="legenda">Figura 03 - Fonte: (RawPixel/Freepik)</p>
 						</div>
 
 						<div class="content-tabs" id='ctab4'>
 							<p>Tratava da formação de professores para o ensino primário, que na época eram as quatro primeiras séries do ensino fundamental.</p>
-							<img src="../../img/uni2/MOOC1_unid2_tela4_imagem4.jpg" />
+							<img src="../../img/uni2/MOOC1_unid2_tela4_imagem4.jpg" alt="Aula na modalidade normal" />
+							<p class="legenda">Figura 04 - Fonte: (Tima Miroshnichenko/Pexels)</p>
 						</div>
 					</div>
 				</div>
 
-				<p>Veja na linha do tempo a seguir as principais mudanças na estrutura do Ensino Médio. Clique no ícone correspondente a cada década para ouvir o áudio.</p>
+				<p>Veja na linha do tempo a seguir as principais mudanças na estrutura do Ensino Médio.</p>
+
+				<span class="separador">
+					<p class="texto-separador">Clique no ícone correspondente a cada década para ouvir o áudio:</p>
+				</span>
 
 				<div class="timeline-geral">
 					<div class="horizontal-timeline-icones">
@@ -128,17 +140,23 @@
 						<div class="legenda-icone" style="left: 50%;">80</div>
 						<div class="legenda-icone" style="left: 75%;">90</div>
 					</div>
+					<div class="downloads">
+						<a href="#"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto dos áudios</button></a>
+					</div>
 				</div>
+
 			</div>
 
 			<!-- Conteúdo -->
 			<div class="content footer">
 				<div class='navegacao'>
-					<span class="bt-topo">
+					<div class="bt-topo">
 						<a href="#"><i class="fas fa-angle-up"></i></a>
-					</span>
-					<span><a href="tela05.html"><button class="bt-avanca" type="button">PROSSEGUIR ></button></a></span>
-					<span class='botoes-navegacao'>
+					</div>
+					<div>
+						<button class="bt-avanca" type="button"><a href="tela05.html">PROSSEGUIR ></a></button>
+					</div>
+					<div class='botoes-navegacao'>
 						<a href="tela03.html"><button class="bt-navegacao" type="button"><</button></a>
 
 						<a href="tela01.html"><input type="radio" name="radio"><label for="radio"></label></a>
@@ -150,8 +168,8 @@
 						<a href="tela07.html"><input type="radio" name="radio"><label for="radio"></label></a>
 
 						<a href="tela05.html"><button class="bt-navegacao" type="button">></button></a>
-					</span>
-					<span class="legenda">Tela 4 de 7</span>
+					</div>
+					<div class="legenda">4 de 7</div>
 
 				</div>
 				<!--Rodapé-->
