@@ -1,21 +1,62 @@
-ul {
-	list-style: none;
+.div-colorida{
+    border: 3px solid #ccc;
+    font-family: "Musket-Bold";
+    margin-top: 1em;
+    margin-left: 4em;
+    margin-right: 4em;
+    padding-left: 1em ;
+    padding-right: 1em;   
+    margin-bottom: 1em;
+    border-radius: 8px;
 }
-.item {
-	position: relative;
-	margin: 10px 10px;
-	font-family:"Affogato-Regular", sans-serif;
-	font-size: 20px;
-
+.div-colorida .item1{
+    margin-bottom: 8em;
+    margin-top: 1em;
+    margin-left: -32em;
+    margin-right: -2em;      
+    position: relative;    
 }
-.item::before {
-	content: '';
-	position: relative;
-	left: 0;
-	top: 0;
-	padding: 0px 12px;
-	background-image: url("../img/uni5/circle.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin-right: 10px;	
+.div-colorida .item2{
+    margin-bottom: 15em;
+    margin-top: 1em;
+    margin-left: -32em;
+    margin-right: -2em;
+    position: relative;    
+}
+.div-colorida .item3{
+    margin-bottom: 22em;
+    margin-top: 1em;
+    margin-left: -32em;
+    margin-right: -2em;
+    position: relative;    
+}
+.div-colorida .descricao{
+    font-family: "Affogato-Regular";
+    font-size: 1.4em;
+    border-radius: 8px;
+    line-height: 1em;    
+    width: 65%;        
+    position: absolute;      
+    padding: 20px; 
+    right: 0;
+    top: 0;
+}
+.div-colorida .cor1 {
+    background-color: #e73435;
+    color: #fff; 
+}
+.div-colorida .cor2 {
+    background-color: #2a5caa;
+    color: #fff; 
+}
+.div-colorida .cor3 {
+    background-color: #fec13b;
+    color: #fff; 
+}
+ul { 
+	list-style-type: disc;	
+} 
+li { 
+	list-style-type: disc; 
+	list-style-position: inside; 
 }
