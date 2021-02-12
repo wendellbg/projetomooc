@@ -582,7 +582,7 @@ h3.texto-central b{
 }
 
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 585px) {
 
 	.titulo-externo-box{
 		background-image: none !important;
@@ -659,4 +659,45 @@ h3.texto-central b{
 .video .downloads .bt-download-media {
 	background: #1c3c6b;
 	color: rgba(255, 255, 255, 0.6);
+}
+
+.container-mini-box{
+	display: flex;
+}
+
+.mini-box{
+	padding: 15px;
+	margin: 0 auto;
+	text-align: justify;
+	border-radius: 8px;
+}
+
+.mini-box.red{
+	background-color: #e73435;
+	color: #fff;
+	border-right: 4px solid #000;
+	border-bottom: 4px solid #000;
+}
+
+.mini-box.red a{
+	font-weight: bolder;
+	color: #020e36;
+	text-decoration: none;
+}
+
+.mini-box.red a:hover{
+	font-weight: bolder;
+	color: #2A5CAA;
+	text-decoration: none;
+}
+
+.mini-box.red:hover{
+	/*opacity: 0.9;*/
+}
+
+@media screen and (max-width: 585px) {
+	.container-mini-box{
+		display: unset;
+		margin-bottom: 5px;
+	}
 }
