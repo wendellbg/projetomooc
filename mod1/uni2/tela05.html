@@ -4,9 +4,11 @@
 	<title>Mentoria</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="../../css/mooc1.css?ver=1.1" />
-	<link rel="stylesheet" href="../../css/boxes.css?ver=1.3" />
+	<link rel="stylesheet" href="../../css/mooc1.css?ver=1.2" />
+	<link rel="stylesheet" href="../../css/boxes.css?ver=1.4" />
 
+	<script src="../../js/jquery-2.1.1.js"></script>
+	<script src="../../js/bt-topo.js"></script> <!-- Botão de Voltar ao Topo -->
 </head>
 <body>
 
@@ -14,6 +16,7 @@
 <header id="header">
 	<div class="logo">
 		<a href="../sumario.html">UNIDADE 2</a>
+		<h3>Educação Profissional no novo Ensino Médio</h3>
 	</div>
 </header>
 
@@ -37,13 +40,13 @@
 							</a>
 							<div class="menu">
 								<a href="../sumario.html" class='titulo-menu'>UNIDADE 2</a>
-								<a href="tela01.html">Tela 01 - Apresentação</a>
-								<a href="tela02.html">Tela 02 - Experiência com o Ensino Médio</a>
-								<a href="tela03.html">Tela 03 - Desafios para a Educação Profissional</a>
-								<a href="tela04.html">Tela 04 - Trajetória Recente do Ensino Médio no Brasil</a>
-								<a href="tela05.html" class='link-menu-atual'>Tela 05 - O Novo Ensino Médio</a>
-								<a href="tela06.html">Tela 06 - Itinerários Formativos</a>
-								<a href="tela07.html">Tela 07 - Autonomia do Estudante</a>
+								<a href="tela01.html">2.01 - Apresentação</a>
+								<a href="tela02.html">2.02 - Experiência com o Ensino Médio</a>
+								<a href="tela03.html">2.03 - Desafios para a Educação Profissional</a>
+								<a href="tela04.html">2.04 - Trajetória Recente do Ensino Médio no Brasil</a>
+								<a href="tela05.html" class='link-menu-atual'>2.05 - O Novo Ensino Médio</a>
+								<a href="tela06.html">2.06 - Itinerários Formativos</a>
+								<a href="tela07.html">2.07 - Autonomia do Estudante</a>
 							</div>
 						</div>
 					</div>
@@ -55,11 +58,12 @@
 				<p>Como você observou, o ensino médio no Brasil, desde os anos 1980, tem sido ofertado em apenas duas possibilidades: <b>ensino médio geral (ou propedêutico)</b> e <b>ensino técnico de nível médio.</b></p>
 
 				<!--Caixa Fique por dentro-->
+				<div class="titulo-externo-box blue"><p>Fique por dentro</p></div>
 				<section class="box-info text-blue">
 					<div class="bg-yellow"></div>
 					<div class="border-blue">
 						<p>É importante destacar que o ensino técnico de nível médio tem cerca de dez por cento das matrículas do total de estudantes na faixa etária do ensino médio. Para comparação: nos países ditos desenvolvidos o técnico corresponde à metade das matrículas do ensino médio.</p>
-						<div align="right"> <img class="right" src="../../img/padrao/icon_fique_por_dentro.png" /></div>
+						<div align="right"> <img class="right" src="../../img/padrao/icon_fique_por_dentro.gif" /></div>
 					</div>
 				</section>
 
@@ -72,15 +76,21 @@
 				<div class='video-player'>
 					<iframe width="720" height="405" src="https://www.youtube.com/embed/bMr4VRVcBiE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
+				<div class="downloads">
+					<a href="#"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do vídeo</button></a>
+					<a href="#"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o áudio do vídeo</button></a>
+				</div>
 			</div>
 
 			<!-- Conteúdo -->
 			<div class="content footer">
 				<div class='navegacao'>
-					<span class="bt-topo">
+					<div class="bt-topo">
 						<a href="#"><i class="fas fa-angle-up"></i></a>
-					</span>
-					<span><a href="tela06.html"><button class="bt-avanca" type="button">PROSSEGUIR ></button></a></span>
+					</div>
+					<div>
+						<button class="bt-avanca" type="button"><a href="tela06.html">PROSSEGUIR ></a></button>
+					</div>
 					<span class='botoes-navegacao'>
 						<a href="tela04.html"><button class="bt-navegacao" type="button"><</button></a>
 
@@ -94,7 +104,7 @@
 
 						<a href="tela06.html"><button class="bt-navegacao" type="button">></button></a>
 					</span>
-					<span class="legenda">Tela 5 de 7</span>
+					<div class="legenda">5 de 7</div>
 
 				</div>
 				<!--Rodapé-->
