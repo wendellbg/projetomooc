@@ -4,22 +4,21 @@
 		<title>Mentoria</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="../../css/main.css"/>
-		<link rel="stylesheet" href="../../css/menu-top-down.css"/>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-		<link rel="stylesheet" href="../../css/rodape.css"/>
-		<link rel="stylesheet" href="../../css/fontes.css"/>
-		<link rel="stylesheet" href="../../css/boxes.css" />
+		<link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
+		<link rel="stylesheet" href="../../css/boxes.css?ver=1.2" />
+
+		<script src="../../js/jquery-2.1.1.js"></script>
+		<script src="../../js/bt-topo.js"></script> <!-- Botão de Voltar ao Topo -->
 	</head>
 	<body>
 
-		<!-- Header -->
-			<header id="header">
-				<div class="logo">
-					<a href="../sumario.html">UNIDADE 5</a>
-				</div>				
-			</header>			
-
+	<!-- Header -->
+	<header id="header">
+		<div class="logo">
+			<a href="../sumario.html">UNIDADE 5</a>
+			<h3>Possibilidades de escolha de itinerário técnico e profissional para o aluno</h3>
+		</div>
+	</header>
 		<!-- Main -->
 			<section id="main">
 				<div class="inner">
@@ -30,7 +29,7 @@
 							<div class="entire-menu">
 								<div class="menu-tit">
 									<div class="menu-tit-col1"> 
-										<h2></h2>
+										<h2>5.05</h2>
 									</div>
 									<div class="menu-tit-col2">											
 										<input type="checkbox" id="change-hamburguer" />  															
@@ -40,13 +39,13 @@
   										</a>  									  									
   										<div class="menu">
 											<a href="../sumario.html" class='titulo-menu'>UNIDADE 5</a>
-	    									<a href="tela01.html" class='link-menu-atual'>Tela 01 - Apresentação</a>
-   	 										<a href="tela02.html">Tela 02 - Afinidade Profissional</a>
-    										<a href="tela03.html">Tela 03 - </a>
-    										<a href="tela04.html">Tela 04 - Processo de busca</a>
-    										<a href="tela05.html">Tela 05 - </a>
-    										<a href="tela06.html">Tela 06 - Concluindo</a>
-    										<a href="tela07.html">Tela 07 - Questionário</a>
+	    									<a href="tela01.html">5.01 - Apresentação</a>
+   	 										<a href="tela02.html">5.02 - Afinidade Profissional</a>
+    										<a href="tela03.html">5.03 - </a>
+    										<a href="tela04.html">5.04 - Processo de busca</a>
+    										<a href="tela05.html" class='link-menu-atual'>5.05 - </a>
+    										<a href="tela06.html">5.06 - Concluindo</a>
+    										<a href="tela07.html">5.07 - Questionário</a>
   										</div>
   									</div>	
   								</div>	
@@ -58,50 +57,61 @@
                             <p>É importante nesse processo apoiarmos e fornecer subsídios para que as escolhas sejam pessoais, próprias, não induzidas pelos pais ou outras influências externas. Quanto mais autonomia houver na escolha, mais intensa será a busca de informações e acertada a decisão.</p>
                             
                             <p>Para nós, educadores, o principal papel é provocar nos estudantes a curiosidade e abrir todas as possibilidades, colaborando com indicação de material para informações sobre as profissões e as possibilidades formativas. No vídeo a seguir abordamos algumas discussões sobre como nós, professores, podemos ajudar nossos alunos nesse processo.</p>
-                            
+						</div>
 
-							<div class="video-uni2">
-								<div class='imagem-fundo'>										
-									<div class='titulo-video'><span>Título do Vídeo</span></div>
-										<img src="../../img/uni2/MOOC1_Uni2_tela5_video.jpg" />																				
-									</div>
-									<div class='video-player'>
-									<video width="100%" height="100%" controls="controls" autoplay="autoplay">
-							            <source src="../../../../video/Novo ensino médio.mp4" type="video/mp4">                                        
-							        </video>
-								</div>
-							</div>                            
-                                            
+						<div class="video">
+							<div class='titulo-video'><span>Título do Vídeo ???</span></div>
+							<div class='video-player'>
+								<iframe width="720" height="405" src="https://www.youtube.com/embed/bMr4VRVcBiE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+							<div class="downloads">
+								<a href="#"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do vídeo</button></a>
+								<a href="#"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o áudio do vídeo</button></a>
+							</div>
+						</div>
+
+						<!-- Conteúdo -->
+						<div class="content footer">
 							<div class='navegacao'>
-								<span class="lista-navegacao" style="float: right;">
-									<a href="#"><i class="fas fa-angle-double-up" style="font-size:48px;"></i></a>                                		                            
-								</span>                     
-								<span><a href="tela06.html"><button class="bt-avanca" type="button">PROSSEGUIR ></button></a></span>                                                                  							 
-								<span class='botoes-navegacao'>
+								<div class="bt-topo">
+									<a href="#"><i class="fas fa-angle-up"></i></a>
+								</div>
+								<div>
+									<button class="bt-avanca" type="button"><a href="tela06.html">PROSSEGUIR ></a></button>
+								</div>
+								<div class='botoes-navegacao'>
 									<a href="tela04.html"><button class="bt-navegacao" type="button"><</button></a>
 
 									<a href="tela01.html"><input type="radio" name="radio"><label for="radio"></label></a>                                		
 									<a href="tela02.html"><input type="radio" name="radio"><label for="radio"></label></a>
 									<a href="tela03.html"><input type="radio" name="radio"><label for="radio"></label></a>
 									<a href="tela04.html"><input type="radio" name="radio"><label for="radio"></label></a>
-                                    <a href="tela05.html"><input type="radio" name="radio"><label for="radio"></label></a>		
+                                    <a href="tela05.html"><input type="radio" name="radio" checked><label for="radio"></label></a>
                                     <a href="tela06.html"><input type="radio" name="radio"><label for="radio"></label></a>		
                                     <a href="tela07.html"><input type="radio" name="radio"><label for="radio"></label></a>					
 									
 									<a href="tela06.html"><button class="bt-navegacao" type="button">></button></a>
-								</span>                                 
-								<span class="legenda">Tela 5 de 7</span>  
+								</div>
+								<div class="legenda">5 de 7</div>
 								
 							</div>
-							<hr>
-                  	<div class="linha">
-								<div class="coluna-50"> 
-									<img width="300" height="90" src="../../img/uni1/ifsc.png" alt="IFSC">
-								</div>							
-								<div class="coluna-50"> 
-										<img width="300" height="90" src="../../img/uni1/ifes.png" alt="IFES">
+							<!--Rodapé-->
+							<hr/>
+							<div class="row rodape">
+								<div class="6u 12u$(small)">
+									<p></p>
+									<img src="../../img/padrao/logo_mentoria.png" alt="IFSC">
 								</div>
-							</div>	       	
+								<div class="2u 12u$(small)">
+									<p>Realização:</p>
+									<img src="../../img/padrao/logo_mec.png" alt="IFSC">
+								</div>
+								<div class="4u 12u$(small)">
+									<p>Produção:</p>
+									<img src="../../img/padrao/ifsc.png" alt="IFSC">
+									<img src="../../img/padrao/ifes.png" alt="IFES">
+								</div>
+							</div><!--Rodapé-->
 						</div>
 						
 					</section>
