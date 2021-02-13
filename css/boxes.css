@@ -325,6 +325,7 @@ h3.texto-central b{
 .titulo-video span{
 	font-family: "Musket-Bold";
 	font-size: 1.4em;
+	line-height: 1.2em;
 	z-index: 2;
 	text-align: center;
 	width: 100%;
@@ -352,6 +353,29 @@ h3.texto-central b{
 
 }
 
+.video .row .titulo-video{
+	margin-bottom: 5px;
+}
+
+.video .row .titulo-video span {
+	font-size: 1.0em;
+	line-height: 1.2em;
+}
+
+.video .video-player {
+	margin-bottom: 30px;
+}
+
+@media screen and (max-width:560px){
+	.video .row .titulo-video{
+		margin-top: 20px;
+	}
+
+	.video .row .titulo-video span {
+		font-size: 1.4em;
+	}
+
+}
 
 /* Boxes Novo Estilo */
 .box-info{
