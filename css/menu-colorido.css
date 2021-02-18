@@ -44,6 +44,17 @@
     transition: background-color .5s;
 }
 
+.menu-colorido .details a {
+    text-decoration: underline;
+    font-size: unset;
+}
+
+.menu-colorido .details a:hover {
+    text-decoration: none;
+    font-size: unset;
+}
+
+
 /* .box1a, .box2a, .box3a, .box4a, .box5a{
     padding: 1em;
 } */
