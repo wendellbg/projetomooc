@@ -4,21 +4,23 @@
 		<title>Mentoria</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="../../css/main.css"/>
-		<link rel="stylesheet" href="../../css/menu-top-down.css"/>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-		<link rel="stylesheet" href="../../css/rodape.css"/>
-		<link rel="stylesheet" href="../../css/listas.css"/>
-		
+		<link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
+<!--		<link rel="stylesheet" href="../../css/efeito.css?ver=1.2"/>-->
+<!--		<link rel="stylesheet" href="../../css/boxes.css?ver=1.4"/>-->
+		<link rel="stylesheet" href="../../css/zoom.css?ver=1.1"/>
+
+		<script src="../../js/jquery-2.1.1.js"></script>
+		<script src="../../js/bt-topo.js"></script> <!-- Botão de Voltar ao Topo -->
 	</head>
 	<body>
 
-		<!-- Header -->
-			<header id="header">
-				<div class="logo">
-					<a href="../sumario.html">UNIDADE 5</a>
-				</div>				
-			</header>			
+	<!-- Header -->
+	<header id="header">
+		<div class="logo">
+			<a href="../sumario.html">UNIDADE 5</a>
+			<h3>Possibilidades de escolha de itinerário técnico e profissional para o aluno</h3>
+		</div>
+	</header>
 
 		<!-- Main -->
 			<section id="main">
@@ -30,7 +32,7 @@
 							<div class="entire-menu">
 								<div class="menu-tit">
 									<div class="menu-tit-col1"> 
-										<h2></h2>
+										<h2>Afinidade Profissional</h2>
 									</div>
 									<div class="menu-tit-col2">											
 										<input type="checkbox" id="change-hamburguer" />  															
@@ -40,13 +42,13 @@
   										</a>  									  									
   										<div class="menu">
 											<a href="../sumario.html" class='titulo-menu'>UNIDADE 5</a>
-	    									<a href="tela01.html" class='link-menu-atual'>Tela 01 - Apresentação</a>
-   	 										<a href="tela02.html">Tela 02 - Afinidade Profissional</a>
-    										<a href="tela03.html">Tela 03 - </a>
-    										<a href="tela04.html">Tela 04 - Processo de busca</a>
-    										<a href="tela05.html">Tela 05 - </a>
-    										<a href="tela06.html">Tela 06 - Concluindo</a>
-    										<a href="tela07.html">Tela 07 - Questionário</a>
+	    									<a href="tela01.html">5.01 - Apresentação</a>
+   	 										<a href="tela02.html">5.02 - Afinidade Profissional</a>
+    										<a href="tela03.html" class='link-menu-atual'>5.03 - Afinidade Profissional</a>
+    										<a href="tela04.html">5.04 - Processo de busca</a>
+    										<a href="tela05.html">5.05 - Processo de busca</a>
+    										<a href="tela06.html">5.06 - Concluindo</a>
+    										<a href="tela07.html">5.07 - Questionário</a>
   										</div>
   									</div>	
   								</div>	
@@ -57,52 +59,77 @@
 							
 							<p>Agora falaremos um pouco sobre as possibilidades de escolha de cada aluno, que certamente precisará da ajuda de educadores para construir suas possibilidades e fazer suas escolhas.</p>
                             <p>Observe na imagem a seguir como um docente pode ajudar o estudante em suas possibilidades de escolha.  Como essas perguntas podem contribuir no processo de reflexão do aluno para a escolha da formação profissional?</p>
-                            
-                            <div class='listas'>
-                            	<ul>
-                            		<li class="item">Que tipo de atividade lhe chama a atenção?</li>
-                            		<li class="item" >Seus familiares (mãe, pai, tias e tios, primas e primos, avós etc.) trabalham com atividades em que você participa?</li> 
-                            		<li class="item">Alguma dessas atividades lhe atrai?</li>
-                            		<li class="item">O que você imagina estar fazendo daqui a dez anos?</li>
-                            		<li class="item">Você tem amigos ou parentes que exercem uma profissão em que você se interessa ou desperta curiosidade?</li>
-                            		<li class="item">Que tipo de atividade lhe desperta mais interesse?</li>
-                            	</ul>
-                            </div>	
 
+							<div class="imagem-zoom">
+								<a href="#zoom" class="lightbox">
+									<img class="imagem-normal" alt="alunos escutando professor" src="../../img/uni5/MOOC1_Unidade5_tela3_imagem1.jpg" />
+								</a>
+								<div class="lightbox-target" id="zoom">
+									<a href="#"><img class="imagem-full" src="../../img/uni5/MOOC1_Unidade5_tela3_imagem1.jpg" alt="Infográfico sobre a Base Nacional Comum Curricular" /></a>
+									<a href="#" class='lightbox-close'></a>
+								</div>
+								<p class="legenda">Figura 01 - Fonte: (Kate Man/Freepik) e editada pela produção do projeto</p>
+							</div>
+
+<!--							<div class="lista-topicos yellow">-->
+<!--								<ul>-->
+<!--									<li class="in-left-1">&#10095;&#10095;<span>Que tipo de atividade lhe chama a atenção?</span></li>-->
+<!--									<li class="in-left-2">&#10095;&#10095;<span>Seus familiares (mãe, pai, tias e tios, primas e primos, avós etc.) trabalham com atividades em que você participa?</span></li>-->
+<!--									<li class="in-left-3">&#10095;&#10095;<span>Alguma dessas atividades lhe atrai?</span></li>-->
+<!--									<li class="in-left-4">&#10095;&#10095;<span>O que você imagina estar fazendo daqui a dez anos?</span></li>-->
+<!--									<li class="in-left-5">&#10095;&#10095;<span>Você tem amigos ou parentes que exercem uma profissão em que você se interessa ou desperta curiosidade?</span></li>-->
+<!--									<li class="in-left-6">&#10095;&#10095;<span>Que tipo de atividade lhe desperta mais interesse?</span></li>-->
+
+<!--								</ul>-->
+<!--							</div>-->
 
                             <p>Essas perguntas são apenas uma provocação, junto a outros questionamentos sobre a formação dos interesses dos estudantes, que será o tema do Curso Processos de Orientação Educacional e Profissional, deste programa de formação em Mentoria para a Educação Profissional</p>
                             
                             <p>O que propomos aqui é que  um passo importante neste processo é poder identificar esses interesses ou possibilidades com alguma formação possível, para melhor compreensão dos saberes e fazeres que se desdobrarão no futuro.</p>
+						</div>
+
+						<!-- Conteúdo Footer -->
+						<div class="content footer">
 							<div class='navegacao'>
-								<span class="lista-navegacao" style="float: right;">
-									<a href="#"><i class="fas fa-angle-double-up" style="font-size:48px;"></i></a>                                		                            
-								</span>                     
-								<span><a href="tela04.html"><button class="bt-avanca" type="button">PROSSEGUIR ></button></a></span>                                                                  							 
-								<span class='botoes-navegacao'>
+								<div class="bt-topo">
+									<a href="#"><i class="fas fa-angle-up"></i></a>
+								</div>
+								<div>
+									<button class="bt-avanca" type="button"><a href="tela04.html">PROSSEGUIR ></a></button>
+								</div>
+								<div class='botoes-navegacao'>
 									<a href="tela02.html"><button class="bt-navegacao" type="button"><</button></a>
 
 									<a href="tela01.html"><input type="radio" name="radio"><label for="radio"></label></a>                                		
 									<a href="tela02.html"><input type="radio" name="radio"><label for="radio"></label></a>
-									<a href="tela03.html"><input type="radio" name="radio"><label for="radio"></label></a>
+									<a href="tela03.html"><input type="radio" name="radio" checked><label for="radio"></label></a>
 									<a href="tela04.html"><input type="radio" name="radio"><label for="radio"></label></a>
                                     <a href="tela05.html"><input type="radio" name="radio"><label for="radio"></label></a>		
                                     <a href="tela06.html"><input type="radio" name="radio"><label for="radio"></label></a>		
                                     <a href="tela07.html"><input type="radio" name="radio"><label for="radio"></label></a>					
 									
 									<a href="tela04.html"><button class="bt-navegacao" type="button">></button></a>
-								</span>                                 
-								<span class="legenda">Tela 3 de 7</span>  
+								</div>
+								<div class="legenda">3 de 7</div>
 								
 							</div>
-							<hr>
-                  	<div class="linha">
-								<div class="coluna-50"> 
-									<img width="300" height="90" src="../../img/uni1/ifsc.png" alt="IFSC">
-								</div>							
-								<div class="coluna-50"> 
-										<img width="300" height="90" src="../../img/uni1/ifes.png" alt="IFES">
+							<!--Rodapé-->
+							<hr/>
+							<div class="row rodape">
+								<div class="6u 12u$(small)">
+									<p></p>
+									<img src="../../img/padrao/logo_mentoria.png" alt="IFSC">
 								</div>
-							</div>	       	
+								<div class="2u 12u$(small)">
+									<p>Realização:</p>
+									<img src="../../img/padrao/logo_mec.png" alt="IFSC">
+								</div>
+								<div class="4u 12u$(small)">
+									<p>Produção:</p>
+									<img src="../../img/padrao/ifsc.png" alt="IFSC">
+									<img src="../../img/padrao/ifes.png" alt="IFES">
+								</div>
+							</div><!--Rodapé-->
 						</div>
 						
 					</section>
