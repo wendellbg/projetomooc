@@ -71,7 +71,7 @@ html{
 }
 
 .linha-grande {
-    width: 100%;
+    width: 75%;
 }
 
 
@@ -111,6 +111,73 @@ html{
     font-size: 0.8em;
 }
 
+.area-radios{
+    display: inline-block;
+    width: 20%;
+    margin-left: 20px;
+    vertical-align: top;
+}
+
+.area-radios input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.area-radios input + label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 35px;
+    padding-right: 10px;
+    border: 2px solid transparent;
+    border-radius: 1em;
+
+}
+
+.area-radios input[type=radio] + label::before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 2px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: solid 2px #fff;
+    vertical-align: middle;
+
+}
+
+.area-radios input:hover + label:hover{
+    border: 2px solid #fff;
+}
+
+.area-radios input[type=radio]:checked + label::after {
+    content: '';
+    background-color: #2A5CAA;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    position: absolute;
+    left: 7px;
+    top: 6px;
+}
+.area-radios input[type=radio]:checked + label::before{
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 2px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: solid 2px #2A5CAA;
+    vertical-align: middle;
+}
+
+.area-radios input[type=radio]:checked + label{
+    background-color: #fec13b;
+    color: #2A5CAA;
+    font-weight: bold;
+}
 
 .mensagem-alerta{
     display: none;
