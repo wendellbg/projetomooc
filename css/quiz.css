@@ -3,7 +3,7 @@ html{
 }
 
 .questao{
-    background-color: #010f36;
+    background-color: #2a5caa;
     border-radius: 8px;
     padding: 1em;
     margin: 1em 0 2em 0;
@@ -21,21 +21,6 @@ html{
 	position: absolute;
 	margin-left: -50px;
 	margin-top: -60px;
-}
-
-.titulo-questao{
-    background-color: #fec13b;
-    color: #000;
-    font-family: "Musket", sans-serif;
-    position: relative;
-    display: block;
-    padding: 0.2em;
-    width: 260px;
-    font-size: 1em;
-    font-weight: bold;
-    text-align: center;
-    margin-left: -50px;
-    border-radius: 8px;
 }
 
 .enunciado-questao{
