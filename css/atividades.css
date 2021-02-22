@@ -131,7 +131,6 @@ html{
     padding-right: 10px;
     border: 2px solid transparent;
     border-radius: 1em;
-
 }
 
 .area-radios input[type=radio] + label::before {
@@ -144,7 +143,6 @@ html{
     border-radius: 50%;
     border: solid 2px #fff;
     vertical-align: middle;
-
 }
 
 .area-radios input:hover + label:hover{
@@ -178,6 +176,13 @@ html{
     color: #2A5CAA;
     font-weight: bold;
 }
+
+.checkbox-resposta{
+    display: inline-block;
+    width: 5%;    
+    vertical-align: top;
+}
+
 
 .mensagem-alerta{
     display: none;
