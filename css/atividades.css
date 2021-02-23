@@ -5,7 +5,8 @@ html{
 .questao{
     background-color: #010f36;
     border-radius: 8px;
-    padding: 1em;
+    padding-top: 1em;
+    padding-left: 1em;
     margin: 1em 0 2em 0;
     color: #fff;
     font-size: 1.5em;
@@ -63,31 +64,40 @@ html{
 
 .texto-resposta{    
     position: relative;
-    width: 45%;
+    width: 40%;
     font-size: 0.8em;    
     margin-left: 0;
+    margin-right: 2%;
     display: inline-block;
     text-align: justify;   
 }
 
 .linha-grande {
-    width: 75%;
+    width: 90%;
+    margin-right: 0;
 }
-
 
 .area-inputs {
     width: 25%;    
-    height: 2em;    
+    height: 2em;  
+    margin-right: 2%;  
     display: inline-block;
     background-color:#010f36;
-    border: 2px dotted white;    
+    border: 2px dashed white;    
     border-radius: 8px;        
     text-align: center;
     vertical-align: top;       
-    font-size: 0.8em;
-    
-     
+    font-size: 0.8em;    
 }
+
+.area-inputs.over{
+    background-color: #ccc;
+}
+
+.q1-3{
+    height: 60px;
+}
+
 /* .area-inputs input{    
     border: 2px dotted white;
     background-color: #010f36;        
@@ -100,21 +110,23 @@ html{
 
 .area-opcoes{
     width: 25%;    
+    height: 100%;
     display: inline-block;
     background-color: white;
     color: #010f36;
-    border-radius: 8px;
-    /* width: 200px; */    
+    border-radius: 8px;        
     text-align: center;
     vertical-align: top;   
     right: 0; 
     font-size: 0.8em;
+
+    cursor: move;
 }
 
 .area-radios{
     display: inline-block;
-    width: 20%;
-    margin-left: 20px;
+    width: 35%;
+    margin-left: 0;
     vertical-align: top;
 }
 
@@ -151,7 +163,7 @@ html{
 
 .area-radios input[type=radio]:checked + label::after {
     content: '';
-    background-color: #2A5CAA;
+    background-color: #010f36;
     width: 17px;
     height: 17px;
     border-radius: 50%;
@@ -167,13 +179,13 @@ html{
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    border: solid 2px #2A5CAA;
+    border: solid 2px #010f36;
     vertical-align: middle;
 }
 
 .area-radios input[type=radio]:checked + label{
     background-color: #fec13b;
-    color: #2A5CAA;
+    color: #010f36;
     font-weight: bold;
 }
 
@@ -188,7 +200,7 @@ html{
     display: none;
     background-color: #E73435;
     color: #fff;
-    border: 2px solid #2a5caa;
+    border: 2px solid #010f36;
     border-radius: 8px;
     padding: 20px;
     width: 100%;
@@ -199,7 +211,7 @@ html{
 
 .mensagem-ok{
     display: none;
-    background-color: #2a5caa;
+    background-color: #010f36;
     color: #fff;
     border: 4px solid #fec13b;
     border-radius: 0.5em;

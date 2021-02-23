@@ -85,24 +85,25 @@ s
                                 <div class="area-respostas">
                                     <div class="linha-resposta">
                                         <div class='texto-resposta'>                                        
-                                            <label for="resposta_1_1" class="texto-opcao">a) É o fundamento do trabalho e um dos mais importantes traços que identificam nossa humanidade.</label>
+                                            <span class="texto-opcao">a) É o fundamento do trabalho e um dos mais importantes traços que identificam nossa humanidade.</span>
                                         </div>
-                                        <div class="area-inputs">
+                                        <div class="area-inputs caixa-drop">
                                             <span class='input-resposta'></span>
                                         </div>                                                                            
-                                        <div class="area-opcoes" draggable="true">
+                                        <div class="area-opcoes caixa-drop" draggable="true">
                                             <span class="palavra-resposta">Técnica</span>
                                         </div>
+                                        
                                     </div>
 
                                     <div class="linha-respostas">
                                         <div class="texto-resposta">                                        
-                                            <label for="resposta_1_2" class="texto-opcao">b) Exercício social da técnica com todas as dimensões associadas ao ato técnico: éticas, estéticas, ambientais, econômicas, identitárias, culturais.</label>                                        
+                                            <span class="texto-opcao">b) Exercício social da técnica com todas as dimensões associadas ao ato técnico: éticas, estéticas, ambientais, econômicas, identitárias, culturais.</span>                                       
                                         </div>
-                                        <div class="area-inputs">
+                                        <div class="area-inputs caixa-drop">
                                             <span class='input-resposta'></span>
                                         </div>   
-                                        <div class="area-opcoes" draggable="true">
+                                        <div class="area-opcoes caixa-drop" draggable="true">
                                             <span class="palavra-resposta">Trabalho</span>
                                         </div>
                                     </div>
@@ -121,10 +122,10 @@ s
                                         <div class='texto-resposta'>                                        
                                             <label for="resposta_2_1" class="texto-opcao">a) Consolidados pela cultura, devem possibilitar a cada pessoa construir sua existência.</label>
                                         </div>
-                                        <div class="area-inputs">
+                                        <div class="area-inputs caixa-drop q1-3">
                                             <span class='input-resposta'></span>
                                         </div>                                                                            
-                                        <div class="area-opcoes" draggable="true">
+                                        <div class="area-opcoes caixa-drop q1-3" draggable="true">
                                             <span class="palavra-resposta">Compartilhamento de saberes</span>
                                         </div>
                                     </div>
@@ -133,10 +134,10 @@ s
                                         <div class="texto-resposta">                                        
                                             <label for="resposta_1_2" class="texto-opcao">b) Construção da capacidade de intervir conscientemente no mundo para produzir a existência.</label>                                        
                                         </div>
-                                        <div class="area-inputs">
+                                        <div class="area-inputs caixa-drop q1-3">
                                             <span class='input-resposta'></span>
                                         </div>  
-                                        <div class="area-opcoes" draggable="true">
+                                        <div class="area-opcoes caixa-drop q1-3" draggable="true">
                                             <span class="palavra-resposta">Intervenção consciente</span>
                                         </div>
                                     </div>
@@ -145,10 +146,10 @@ s
                                         <div class="texto-resposta">                                        
                                             <label for="resposta_3_3" class="texto-opcao">c) Composto de vários elementos: autonomia, emancipação, participação, inserção social, etc.</label>                                        
                                         </div>
-                                        <div class="area-inputs">
+                                        <div class="area-inputs caixa-drop q1-3">
                                             <span class='input-resposta'></span>
                                         </div>    
-                                        <div class="area-opcoes" draggable="true">
+                                        <div class="area-opcoes caixa-drop q1-3" draggable="true">
                                             <span class="palavra-resposta">Construção da Existência</span>
                                         </div>
                                     </div>
@@ -319,73 +320,71 @@ s
 
     var API = new BridgeRestApi();
     var id_unidade = "mod1_uni1";
-    var id_slide = "uni1/ativ01.html";
+    var id_slide = "uni1/atividade01.html";
     var progresso = 100;
     var progressoSalvo;
-    var porcentagem = "porcentagemUni1";
+    
 
-    //Obtendo dados curso
-    window.addEventListener('load', function(){
-        API.obterDadosCurso();
-    })
+    //// Eventos do Drag and Drop /////
+    document.addEventListener('DOMContentLoaded', (event) => {
 
-    window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
-    function resultadoObterDadosCurso(evento){
-        console.log(evento.detail);
-        //antes de registrar a porcentagem, verifica a porcentagem atual:
-        API.obterDadosGenericos(porcentagem);
-    }
+        var dragSrcEl = null;
 
-
-    //Quando obtém a porcentagem da unidade em questão, executa esta função
-    window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
-    function resultadoObtemDadosGenericos (evento){
-        console.log(evento.detail);
-
-        //testando se o status é 200, unidade já iniciada
-        if(evento.detail["status"]==200){
-            var i=0;
-            var cont = 0;
-            //O evento retorna um vetor. É preciso pesquisar em qual posição está a porcentagem da unidade atual
-            while(i==0){
-                if(evento.detail["data"][cont]["chave"]==porcentagem){
-                    console.log("achou na posição "+cont);
-                    console.log(evento.detail["data"][cont]["chave"]);
-                    i=1;
-                }else{
-                    console.log("não encontrou na posição "+cont);
-                    console.log(evento.detail["data"][cont]["chave"]);
-                    cont=cont+1;
-                    if(cont==10){
-                        i=1;
-                    }
-                }
-
-            }
-            progressoSalvo = evento.detail["data"][cont]["valor"];
-            console.log("Valor de Porcentagem atual: "+progressoSalvo);
-
-            if(progressoSalvo < progresso){
-                //registrando a porcentagem da Unidade 1
-                API.registrarDadosGenericos(porcentagem,progresso);
-                console.log('Registrando nova porcentagem: '+progresso);
-            }else{
-                //Se o cursista estiver revendo a tela, o progresso Salvo será maior, então não altera nada.
-                console.log("Porcentagem não alterada.");
-            }
-
-        }else if(evento.detail["status"]==412){
-            //se for status 400, inicia a chave da porcentagem da unidade em questão
-            console.log("Inicializando a porcentagem da unidade");
-            API.registrarDadosGenericos(porcentagem,14);
+        function handleDragStart(e) {
+            this.style.opacity = '0.4';
+            dragSrcEl = this;
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData('text/html', this.innerHTML);
         }
-    };
 
-    window.addEventListener('evObtemRegistraDadosGenericos', resultadoRegistrarDadosGenericos, false);
-    function resultadoRegistrarDadosGenericos (evento){
-        console.log("Verificando porcentagem registrada");
-        console.log(evento.detail);
-    };
+        function handleDragOver(e) {
+            if (e.preventDefault) {
+                e.preventDefault();
+            }
+
+            e.dataTransfer.dropEffect = 'move';
+            return false;
+        }
+
+        function handleDragEnter(e) {
+            this.classList.add('over');
+        }
+
+        function handleDragLeave(e) {
+            this.classList.remove('over');
+        }
+
+        function handleDrop(e) {
+            if (e.stopPropagation) {
+                e.stopPropagation(); // stops the browser from redirecting.
+            }
+        
+            if (dragSrcEl != this) {
+                dragSrcEl.innerHTML = this.innerHTML;
+                this.innerHTML = e.dataTransfer.getData('text/html');
+            }
+        
+            return false;
+        }
+
+        function handleDragEnd(e) {
+            this.style.opacity = '1';
+        
+            items.forEach(function (item) {
+                item.classList.remove('over');
+            });
+        }
+
+        let items = document.querySelectorAll('.caixa-drop');
+        items.forEach(function(item) {
+            item.addEventListener('dragstart', handleDragStart, false);
+            item.addEventListener('dragenter', handleDragEnter, false);
+            item.addEventListener('dragover', handleDragOver, false);
+            item.addEventListener('dragleave', handleDragLeave, false);
+            item.addEventListener('drop', handleDrop, false);
+            item.addEventListener('dragend', handleDragEnd, false);
+        });
+    });
 
 </script>
 
