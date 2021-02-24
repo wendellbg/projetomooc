@@ -165,40 +165,33 @@ s
                                 </div>
                                 <div class="area-respostas">
                                     <div class="linha-resposta">
-                                        <div class='checkbox-resposta'>
+                                        <div class='texto-resposta  linha-grande'>                                           
                                             <input type="checkbox" id='r1_3_1' name='r1_3_1' value="r1_3_1">
-                                        </div>
-                                        <div class='texto-resposta linha-grande'>                                        
-                                            <span class="texto-opcao">a) Reduzir as matrículas no ensino propedêutico</span>
+                                            <label for='r1_3_1' class="texto-opcao">a) Reduzir as matrículas no ensino propedêutico</label>
                                         </div>                                       
                                     </div>
 
                                     <div class="linha-resposta">
-                                        <div class='checkbox-resposta'>
+                                        <div class='texto-resposta  linha-grande'> 
                                             <input type="checkbox" id='r1_3_2' name='r1_3_2' value="r1_3_2">
-                                        </div>
-                                        <div class='texto-resposta linha-grande'>                                        
-                                            <span class="texto-opcao">b) Ampliar o número de matrículas nos cursos técnicos e de qualificação</span>
+                                            <label for='r1_3_2' class="texto-opcao">b) Ampliar o número de matrículas nos cursos técnicos e de qualificação</label>
                                         </div>                                       
                                     </div>
 
                                     <div class="linha-resposta">
-                                        <div class='checkbox-resposta'>
-                                            <input type="checkbox" id='r1_3_3' name='r1_3_3' value="r1_3_3">
-                                        </div>
-                                        <div class='texto-resposta  linha-grande'>                                        
-                                            <span class="texto-opcao">c) Respeitar as demandas formativas locais na oferta de cursos</span>
+                                        <div class='texto-resposta  linha-grande'>   
+                                            <input type="checkbox" id='r1_3_3' name='r1_3_3' value="r1_3_3">                                                                             
+                                            <label for="r1_3_3" class="texto-opcao">c) Respeitar as demandas formativas locais na oferta de cursos</label>
                                         </div>                                       
                                     </div>
 
                                     <div class="linha-resposta">
-                                        <div class='checkbox-resposta'>
-                                            <input type="checkbox" id='r1_3_4' name='r1_3_4' value="r1_3_4">
-                                        </div>
-                                        <div class='texto-resposta  linha-grande'>                                        
-                                            <span class="texto-opcao">d) Reduzir as matrículas no ensino propedêutico</span>
-                                        </div>                                       
+                                        <div class='texto-resposta  linha-grande'>   
+                                            <input type="checkbox" id='r1_3_4' name='r1_3_4' value="r1_3_4">                                        
+                                            <label for='r1_3_4' class="texto-opcao">d) Reduzir as matrículas no ensino propedêutico</label>
+                                        </div>                                                                               
                                     </div>
+                                   <p>&nbsp;</p>
 
                                 </div>
                             </div>
@@ -389,7 +382,7 @@ s
 		}else{
 			console.log("\nChecando respostas"+id_atividade);
 			//primeiro verifica dados salvos da primeira resposta. Se encontrar é porque já enviou anteriormente.		
-			API.obterRespostaAtividade("uni1_ativ1");//modificar
+			API.obterRespostaAtividade(id_atividade);//modificar
 
 			if(erros>0){
 				return false;
@@ -416,7 +409,7 @@ s
         if(evento.detail["status"]=="200"){
 
             //Se o cursista já enviou alguma resposta, vai encontrar aqui. Então vai aparecer uma mensagem de alerta.				
-            nota_atividade = evento.detail["data"][0]["nota"];
+            nota_atividade = evento.detail.data.notaAtividade;
             console.log(evento.detail["data"]);
             //mensagem.textContent = "Você já enviou estas respostas";
             mensagem.innerHTML = "Você já enviou estas respostas<br />Sua nota foi: "+nota_atividade+"<br /><br /><a class='link-proxima-unidade' href='tela02.html'>PROSSEGUIR ></a>";
@@ -428,6 +421,7 @@ s
         }else{
             //se ainda não tiver enviado as respostas, registra as re respostas com as funções da API:
             console.log("Registrando respostas:");
+            console.log(evento.detail);
             API.registrarRespostaAtividade({
                 "identificador": "uni1_ativ1",//modificar
                 "questoes": [
@@ -439,7 +433,7 @@ s
 	    					{ "chave": "r1_1_2", "valor": r1_1_2.innerHTML}							
                         ]
                     },{                    
-                    "identificador": "r1_2",                    
+                        "identificador": "r1_2",                    
                         "gabaritos": [
                             { "chave": "r1_2_1", "valor": r1_2_1.innerHTML},
                             { "chave": "r1_2_2", "valor": r1_2_2.innerHTML},
@@ -488,7 +482,7 @@ s
 	window .addEventListener( "evRegistraRespostaAtividade" ,resultadoRegistrarRespostaAtividade, false );
     function resultadoRegistrarRespostaAtividade (evento){
         console .log(evento.detail);
-        nota_atividade = evento.detail["data"][0]["nota"];
+        nota_atividade = evento.detail.data.notaAtividade;
     }
 
     //// Eventos do Drag and Drop /////
