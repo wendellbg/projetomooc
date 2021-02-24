@@ -245,7 +245,7 @@
 								<span>Como foi seu Ensino Médio?</span>							
 							</div>
 							<div class="area-respostas">
-								<p id="r1_2_1" class='resposta-salva'></p>												
+								<p id="q2_2_1" class='resposta-salva'></p>												
 							</div>																				
 						</div>
 
@@ -255,7 +255,7 @@
 								<span>Como você acredita que foi o Ensino Médio dos outros alunos deste curso? E da maioria dos alunos pelo Brasil?</span>							
 							</div>
 							<div class="area-respostas">
-								<p class="resposta-salva" id='r1_2_2t'></p>
+								<p class="resposta-salva" id='q2_2_2t'></p>
 							</div>
 						</div>
 
@@ -265,13 +265,13 @@
 								<span>Você tem ideia do percentual de seus colegas do terceiro ano do ensino médio que entraram na faculdade?</span>							
 							</div>
 							<div class="area-respostas">						
-								<p id="r1_2_3" class="resposta-salva"></p>								
+								<p id="q2_2_3" class="resposta-salva"></p>								
 							</div>																				
 							<div class="enunciado-questao">
 								<span>E o que te faz chegar na resposta acima?</span>							
 							</div>
 							<div class="area-respostas">
-								<p class="resposta-salva" id='r1_2_3t'></p>
+								<p class="resposta-salva" id='q2_2_3t'></p>
 							</div>
 						</div>
 								
@@ -281,7 +281,7 @@
 								<span>Que importância tem para você uma formação profissional durante o Ensino Médio?</span>							
 							</div>
 							<div class="area-respostas">
-								<p class="resposta-salva" id='r1_2_4t'></p>
+								<p class="resposta-salva" id='q2_2_4t'></p>
 							</div>
 						</div>						
 				</div>
@@ -348,16 +348,16 @@
 	window.addEventListener('load', function(evento){
 		console.log(evento.detail);
 		//verifica as respostas salvas
-        qual_resposta = "r1_2_1";
-		API.obterDadosGenericos("r1_2_1");
-        qual_resposta = "r1_2_2t";
-        API.obterDadosGenericos("r1_2_2t");
-        qual_resposta = "r1_2_3";
-        API.obterDadosGenericos("r1_2_3");
-        qual_resposta = "r1_2_3t";
-        API.obterDadosGenericos("r1_2_3t");
-        qual_resposta = "r1_2_4t";
-        API.obterDadosGenericos("r1_2_4t");
+        qual_resposta = "q2_2_1";
+		API.obterDadosGenericos("q2_2_1");
+        qual_resposta = "q2_2_2t";
+        API.obterDadosGenericos("q2_2_2t");
+        qual_resposta = "q2_2_3";
+        API.obterDadosGenericos("q2_2_3");
+        qual_resposta = "q2_2_3t";
+        API.obterDadosGenericos("q2_2_3t");
+        qual_resposta = "q2_2_4t";
+        API.obterDadosGenericos("q2_2_4t");
 	});
 
 	//A cada resposta encontrada, executa esta função
@@ -366,7 +366,7 @@
 
 		//testa se os dados genéricos testados são para a porcentagem ou para as respostas				
 			console.log("\nObtendo os dados genéricos (respostas): ");            							
-			console.log("Status do evento: "+evento.detail['status']);								
+			console.log("Status do evento: "+evento.detail["data"]);								
 			
 			//verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
 			if(evento.detail["status"]=="200"){
@@ -374,33 +374,33 @@
 				//vai completando o conteúdo dos parágrafos de resposta com os dados genéricos salvos				
 				var resposta = evento.detail["data"][0]["valor"];
 				switch (evento.detail["data"][0]["chave"]){
-                    case ("r1_2_1"):{
+                    case ("q2_2_1"):{
                         console.log("\ndata: "+evento.detail["data"]+"\nqual: "+qual_resposta+"\nconteudo:"+resposta);	
-                        var div = document.getElementById("r1_2_1");
+                        var div = document.getElementById("q2_2_1");
 				        div.textContent = resposta;		
                         break;
                     }
-                    case ("r1_2_2t"):{
+                    case ("q2_2_2t"):{
                         console.log("\ndata: "+evento.detail["data"]+"\nqual: "+qual_resposta+"\nconteudo:"+resposta);	
-                        var div = document.getElementById("r1_2_2t");
+                        var div = document.getElementById("q2_2_2t");
 				        div.textContent = resposta;		
                         break;
                     }
-                    case ("r1_2_3"):{
-                        console.log("\ndata: "+evento.detail["data"]+"\nqual: "+qual_resposta+"\nconteudo:"+resposta);	
-                        var div = document.getElementById("r1_2_3");
+                    case ("q2_2_3"):{
+                        console.log("\nxxxdata: "+evento.detail["data"]+"\nqual: "+qual_resposta+"\nconteudo:"+resposta);	
+                        var div = document.getElementById("q2_2_3");
 				        div.textContent = resposta;		
                         break;
                     }
-                    case ("r1_2_3t"):{
+                    case ("q2_2_3t"):{
                         console.log("\ndata: "+evento.detail["data"]+"\nqual: "+qual_resposta+"\nconteudo:"+resposta);	
-                        var div = document.getElementById("r1_2_3t");
+                        var div = document.getElementById("q2_2_3t");
 				        div.textContent = resposta;		
                         break;
                     }
-                    case ("r1_2_4t"):{
+                    case ("q2_2_4t"):{
                         console.log("\ndata: "+evento.detail["data"]+"\nqual: "+qual_resposta+"\nconteudo:"+resposta);	
-                        var div = document.getElementById("r1_2_4t");
+                        var div = document.getElementById("q2_2_4t");
 				        div.textContent = resposta;		
                         break;
                     }

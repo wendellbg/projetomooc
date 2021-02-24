@@ -87,16 +87,15 @@ html{
     border-radius: 8px;        
     text-align: center;
     vertical-align: top;       
-    font-size: 0.8em;    
+    font-size: 0.8em;  
+    padding: 2px;  
 }
 
 .area-inputs.over{
     background-color: #ccc;
 }
 
-.q1-3{
-    height: 60px;
-}
+
 
 /* .area-inputs input{    
     border: 2px dotted white;
@@ -121,6 +120,10 @@ html{
     font-size: 0.8em;
 
     cursor: move;
+}
+
+.q1-2{
+    height: 80px;
 }
 
 .area-radios{
@@ -211,19 +214,34 @@ html{
 
 .mensagem-ok{
     display: none;
-    background-color: #010f36;
+    background-color: #2a5caa;
     color: #fff;
     border: 4px solid #fec13b;
     border-radius: 0.5em;
-    padding: 2em;
+    padding: 1em;
     width: 80%;
     margin: auto;
     text-align: center;
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 
 .mensagem-ok a{
-    color: red;
+    background:#fff;
+    color: #2a5caa;
+    padding: 0.5em;
+    margin-top: 200px;
+    border: 1px solid #fff;
+    border-radius: 8px;    
+    font-family: "Affogato-Regular";
+    letter-spacing: 0.2em;
+    font-size: 1em;
+    outline: none;    
+    text-decoration: none;
+}
+
+.mensagem-ok a:hover{
+    background-color: #2a5caa;
+    color: #fff;
 }
 
 
@@ -233,3 +251,7 @@ html{
     border-radius: 8px;
     padding: 20px;
 }
+
+/* #r1_1_1 span.palavra-resposta{
+    background-color: red;
+} */
