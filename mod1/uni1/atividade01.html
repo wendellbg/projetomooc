@@ -76,7 +76,7 @@ s
                 <div class="atividade" id='quiz-uni2'>
 					<div id='mensagem-alerta'>
 					</div>
-                    <form action="#" onsubmit="salvarDados(this); return false;" name="form_quiz_uni2" method="POST">
+                    <form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni1" method="POST">
                             <div class="questao">
                                 <div class="titulo-questao">Questão 1</div>
                                 <div class="enunciado-questao">
@@ -87,11 +87,11 @@ s
                                         <div class='texto-resposta'>                                        
                                             <span class="texto-opcao">a) É o fundamento do trabalho e um dos mais importantes traços que identificam nossa humanidade.</span>
                                         </div>
-                                        <div class="area-inputs caixa-drop">
-                                            <span class='input-resposta'></span>
+                                        <div class="area-inputs caixa-drop" draggable="true" id='r1_1_1' name='r1_1_1'>
+                                            <span class='input-resposta' name='r1_1_texto'></span>
                                         </div>                                                                            
                                         <div class="area-opcoes caixa-drop" draggable="true">
-                                            <span class="palavra-resposta">Técnica</span>
+                                            <span class="palavra-resposta" name='r1_1_texto'>Técnica</span>
                                         </div>
                                         
                                     </div>
@@ -100,11 +100,11 @@ s
                                         <div class="texto-resposta">                                        
                                             <span class="texto-opcao">b) Exercício social da técnica com todas as dimensões associadas ao ato técnico: éticas, estéticas, ambientais, econômicas, identitárias, culturais.</span>                                       
                                         </div>
-                                        <div class="area-inputs caixa-drop">
-                                            <span class='input-resposta'></span>
+                                        <div class="area-inputs caixa-drop" id='r1_1_2' name='r1_1_2'>
+                                            <span class='input-resposta' name='r1_1_texto'></span>
                                         </div>   
                                         <div class="area-opcoes caixa-drop" draggable="true">
-                                            <span class="palavra-resposta">Trabalho</span>
+                                            <span class="palavra-resposta"  name='r1_1_texto'>Trabalho</span>
                                         </div>
                                     </div>
 
@@ -120,37 +120,37 @@ s
                                 <div class="area-respostas">
                                     <div class="linha-resposta">
                                         <div class='texto-resposta'>                                        
-                                            <label for="resposta_2_1" class="texto-opcao">a) Consolidados pela cultura, devem possibilitar a cada pessoa construir sua existência.</label>
+                                            <span class="texto-opcao">a) Consolidados pela cultura, devem possibilitar a cada pessoa construir sua existência.</span>
                                         </div>
-                                        <div class="area-inputs caixa-drop q1-3">
-                                            <span class='input-resposta'></span>
+                                        <div class="area-inputs caixa-drop q1-2" id='r1_2_1' name='r1_2_1'>
+                                            <span class='input-resposta' name='r1_2_texto'></span>
                                         </div>                                                                            
-                                        <div class="area-opcoes caixa-drop q1-3" draggable="true">
-                                            <span class="palavra-resposta">Compartilhamento de saberes</span>
+                                        <div class="area-opcoes caixa-drop q1-2" draggable="true">
+                                            <span class="palavra-resposta" name='r1_2_texto'>Partilhar saberes</span>
                                         </div>
                                     </div>
 
                                     <div class="linha-respostas">
                                         <div class="texto-resposta">                                        
-                                            <label for="resposta_1_2" class="texto-opcao">b) Construção da capacidade de intervir conscientemente no mundo para produzir a existência.</label>                                        
+                                            <span class="texto-opcao">b) Construção da capacidade de intervir conscientemente no mundo para produzir a existência.</span>
                                         </div>
-                                        <div class="area-inputs caixa-drop q1-3">
-                                            <span class='input-resposta'></span>
+                                        <div class="area-inputs caixa-drop q1-2" id='r1_2_2' name='r1_2_2'>
+                                            <span class='input-resposta' name='r1_2_texto'></span>
                                         </div>  
-                                        <div class="area-opcoes caixa-drop q1-3" draggable="true">
-                                            <span class="palavra-resposta">Intervenção consciente</span>
+                                        <div class="area-opcoes caixa-drop q1-2" draggable="true">
+                                            <span class="palavra-resposta" name='r1_2_texto'>Intervenção consciente</span>
                                         </div>
                                     </div>
 
                                     <div class="linha-respostas">
                                         <div class="texto-resposta">                                        
-                                            <label for="resposta_3_3" class="texto-opcao">c) Composto de vários elementos: autonomia, emancipação, participação, inserção social, etc.</label>                                        
+                                            <span class="texto-opcao">c) Composto de vários elementos: autonomia, emancipação, participação, inserção social, etc.</span>                                           
                                         </div>
-                                        <div class="area-inputs caixa-drop q1-3">
-                                            <span class='input-resposta'></span>
+                                        <div class="area-inputs caixa-drop q1-2" id='r1_2_3' name='r1_2_3'>
+                                            <span class='input-resposta' name='r1_2_texto'></span>
                                         </div>    
-                                        <div class="area-opcoes caixa-drop q1-3" draggable="true">
-                                            <span class="palavra-resposta">Construção da Existência</span>
+                                        <div class="area-opcoes caixa-drop q1-2" draggable="true">
+                                            <span class="palavra-resposta" name='r1_2_texto'>Construção da Existência</span>
                                         </div>
                                     </div>
 
@@ -166,41 +166,37 @@ s
                                 <div class="area-respostas">
                                     <div class="linha-resposta">
                                         <div class='checkbox-resposta'>
-                                            <input type="checkbox" value="(  )" >
+                                            <input type="checkbox" id='r1_3_1' name='r1_3_1' value="r1_3_1">
                                         </div>
                                         <div class='texto-resposta linha-grande'>                                        
-                                            <label for="resposta_2_1" class="texto-opcao">Reduzir as matrículas no ensino propedêutico
-                                            </label>
+                                            <span class="texto-opcao">Reduzir as matrículas no ensino propedêutico</span>
                                         </div>                                       
                                     </div>
 
                                     <div class="linha-resposta">
                                         <div class='checkbox-resposta'>
-                                            <input type="checkbox" value="(  )" >
+                                            <input type="checkbox" id='r1_3_2' name='r1_3_2' value="r1_3_2">
                                         </div>
                                         <div class='texto-resposta linha-grande'>                                        
-                                            <label for="resposta_2_1" class="texto-opcao">Ampliar o número de matrículas nos cursos técnicos e de qualificação
-                                            </label>
+                                            <span class="texto-opcao">Ampliar o número de matrículas nos cursos técnicos e de qualificação</span>
                                         </div>                                       
                                     </div>
 
                                     <div class="linha-resposta">
                                         <div class='checkbox-resposta'>
-                                            <input type="checkbox" value="(  )" >
+                                            <input type="checkbox" id='r1_3_3' name='r1_3_3' value="r1_3_3">
                                         </div>
                                         <div class='texto-resposta  linha-grande'>                                        
-                                            <label for="resposta_2_1" class="texto-opcao">Respeitar as demandas formativas locais na oferta de cursos
-                                            </label>
+                                            <span class="texto-opcao">Respeitar as demandas formativas locais na oferta de cursos</span>
                                         </div>                                       
                                     </div>
 
                                     <div class="linha-resposta">
                                         <div class='checkbox-resposta'>
-                                            <input type="checkbox" value="(  )" >
+                                            <input type="checkbox" id='r1_3_4' name='r1_3_4' value="r1_3_4">
                                         </div>
                                         <div class='texto-resposta  linha-grande'>                                        
-                                            <label for="resposta_2_1" class="texto-opcao">Reduzir as matrículas no ensino propedêutico
-                                            </label>
+                                            <span class="texto-opcao">Reduzir as matrículas no ensino propedêutico</span>
                                         </div>                                       
                                     </div>
 
@@ -219,10 +215,10 @@ s
                                             <span class="texto-opcao ">a) A maioria dos egressos do ensino médio vai para a faculdade.</span>                                        
                                         </div>
                                         <div class="area-radios">
-                                            <input type="radio" name="resposta_4_1" id="resposta_4_1_v" value="v" required>
-                                            <label for="resposta_4_1_v" class="texto-opcao">V</label>
-                                            <input type="radio" name="resposta_4_1" id="resposta_4_1_f" value="f" required>
-                                            <label for="resposta_4_1_f" class="texto-opcao">F</label>
+                                            <input type="radio" name="r1_4_1" id="r1_4_1_v" value="v" required>
+                                            <label for="r1_4_1_v" class="texto-opcao">V</label>
+                                            <input type="radio" name="r1_4_1" id="r1_4_1_f" value="f" required>
+                                            <label for="r1_4_1_f" class="texto-opcao">F</label>
                                                 
                                         </div>                                        
                                     </div>
@@ -233,10 +229,10 @@ s
                                             </span>                                        
                                         </div>
                                         <div class="area-radios">
-                                            <input type="radio" name="resposta_4_2" id="resposta_4_2_v" value="v" required>
-                                            <label for="resposta_4_2_v" class="texto-opcao">V</label>
-                                            <input type="radio" name="resposta_4_2" id="resposta_4_2_f" value="f" required>    
-                                            <label for="resposta_4_2_f" class="texto-opcao">F</label>
+                                            <input type="radio" name="r1_4_2" id="r1_4_2_v" value="v" required>
+                                            <label for="r1_4_2_v" class="texto-opcao">V</label>
+                                            <input type="radio" name="r1_4_2" id="r1_4_2_f" value="f" required>    
+                                            <label for="r1_4_2_f" class="texto-opcao">F</label>
                                             
                                         </div>                                        
                                     </div>
@@ -245,10 +241,10 @@ s
                                             <span class="texto-opcao">c) Cada vez que a educação profissional amplia sua oferta, mais pessoas têm oportunidade de ampliar sua capacidade laboral.</span>
                                         </div>
                                         <div class="area-radios">
-                                            <input type="radio" name="resposta_4_3" id="resposta_4_3_v" value="v" required>
-                                            <label for="resposta_4_3_v" class="texto-opcao">V</label>
-                                            <input type="radio" name="resposta_4_3" id="resposta_4_3_f" value="f" required>
-                                            <label for="resposta_4_3_f" class="texto-opcao">F</label>
+                                            <input type="radio" name="r1_4_3" id="r1_4_3_v" value="v" required>
+                                            <label for="r1_4_3_v" class="texto-opcao">V</label>
+                                            <input type="radio" name="r1_4_3" id="r1_4_3_f" value="f" required>
+                                            <label for="r1_4_3_f" class="texto-opcao">F</label>
                                                 
                                         </div>                                        
                                     </div>
@@ -258,10 +254,10 @@ s
 
                                         </div>
                                         <div class="area-radios">
-                                            <input type="radio" name="resposta_4_4" id="resposta_4_4_v" value="v" required>
-                                            <label for="resposta_4_4_v" class="texto-opcao">V</label>                                            
-                                            <input type="radio" name="resposta_4_4" id="resposta_4_4_f" value="f" required>    
-                                            <label for="resposta_4_4_f" class="texto-opcao">F</label>
+                                            <input type="radio" name="r1_4_4" id="r1_4_4_v" value="v" required>
+                                            <label for="r1_4_4_v" class="texto-opcao">V</label>                                            
+                                            <input type="radio" name="r1_4_4" id="r1_4_4_f" value="f" required>    
+                                            <label for="r1_4_4_f" class="texto-opcao">F</label>
                                             
                                         </div>                                        
                                     </div>
@@ -269,8 +265,15 @@ s
                                 </div>
                             </div>
                             
-
+                        <div class="botao-atividade">
+                            <button type="button" id="botao-atividade-uni1" onclick="salvarDados()" >ENVIAR RESPOSTAS</button>
+                        </div>
                     </form>
+
+                    <!-- <div id='mensagem-resumo'>
+                        Dados Enviados com sucesso!
+                        <a href='testerespostas.html'>Clique para ver suas respostas</a>
+					</div> -->
                 </div>
             </div>
 
@@ -319,11 +322,237 @@ s
     console.clear(screen);
 
     var API = new BridgeRestApi();
-    var id_unidade = "mod1_uni1";
-    var id_slide = "uni1/atividade01.html";
-    var progresso = 100;
-    var progressoSalvo;
-    
+    var id_unidade = "mod1_uni1";//modificar
+    var id_slide = "uni1/atividade01.html";//modificar
+    //var progresso = 100;
+    //var progressoSalvo;
+    //var porcentagem = "porcentagemUni1";//modificar
+	//var verificando_quais_dados=1;
+	var erros = 0;
+
+    //Obtendo dados curso
+	// window.addEventListener('load', function(){
+	// 	API.obterDadosCurso();
+	// })
+
+	// window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
+	// function resultadoObterDadosCurso(evento){
+	// 	console.log(evento.detail);
+	// 	//antes de registrar as respostas, verifica se o cursista já enviou alguma vez
+	// 	//API.obterDadosGenericos(r1_1_1);//modificar
+	// }
+
+    /*************** Verificando se todas as respostas foram enviadas. *****/
+    var botao = document.getElementById("botao-atividade-uni1");//modificar
+	var mensagem = document.getElementById("mensagem-alerta");    
+
+	function salvarDados(){
+		console.log("função aqui");
+		//verificando_quais_dados = 2;
+		erros = 0;
+        
+        //aqui vai pegar os valores de cada exercício.
+
+        //esses são os de drag and drop
+		r1_1_1 = document.querySelector("#r1_1_1 span.palavra-resposta"),        
+        r1_1_2 = document.querySelector("#r1_1_2 span.palavra-resposta"),
+		
+        r1_2_1 = document.querySelector("#r1_2_1 span.palavra-resposta"),
+        r1_2_2 = document.querySelector("#r1_2_2 span.palavra-resposta"),
+        r1_2_3 = document.querySelector("#r1_2_3 span.palavra-resposta"),
+		
+        //aqui os checkbox
+        r1_3_1 = document.form_atividade_uni1.r1_3_1.checked,
+        r1_3_2 = document.form_atividade_uni1.r1_3_2.checked,
+        r1_3_3 = document.form_atividade_uni1.r1_3_3.checked,
+        r1_3_4 = document.form_atividade_uni1.r1_3_4.checked,
+		
+        //aqui os rádios de v ou f
+        r1_4_1 = document.form_atividade_uni1.r1_4_1.value,
+        r1_4_2 = document.form_atividade_uni1.r1_4_2.value,
+        r1_4_3 = document.form_atividade_uni1.r1_4_3.value,
+		r1_4_4 = document.form_atividade_uni1.r1_4_4.value;
+
+		console.log("\nQuestão 1: "+r1_1_1+", "+r1_1_2+"\nQuestão 2: "+r1_2_1+", "+r1_2_2+", "+r1_2_3);
+        console.log("\nQuestão 3: "+r1_3_1+", "+r1_3_2+", "+r1_3_3+", "+r1_3_4+"\nQuestão 4: "+r1_4_1+", "+r1_4_2+", "+r1_4_3+", "+r1_4_4);
+
+        //testando se todos os exercícios (menos os checkbox) estão preenchidos.
+		if(r1_1_1==null){
+			erros++;
+		}else if(r1_1_2==null){
+			erros++;
+        }else if(r1_2_1==null){
+			erros++;
+        }else if(r1_2_2==null){
+			erros++;
+        }else if(r1_2_3==null){
+			erros++;
+		}else if(r1_4_1==""){
+			erros++;
+		}else if(r1_4_2==""){
+			erros++;
+		}else if(r1_4_3==""){
+			erros++;
+        }else if(r1_4_4==""){
+			erros++;
+		}
+
+		if(erros>0){
+            //caso algum não esteja preenchido, exibe mensagem de erro
+			mensagem.className = "mensagem-alerta";
+			mensagem.textContent = "Por favor preencha todos os campos";
+			mensagem.style.display = "block";
+			window.scrollTo(0, 0);
+			return false;
+		}else{
+			console.log("\nChecando respostas");
+			//primeiro verifica dados salvos da primeira resposta. Se encontrar é porque já enviou anteriormente.		
+			API.obterDadosGenericos("induzindoerro___r1_1_1");//modificar
+
+			if(erros>0){
+				return false;
+			}
+			//se não houver erro, exibe mensagem de OK
+			mensagem.className = "mensagem-ok";
+			mensagem.style.display ="block";
+			//esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
+            mensagem.innerHTML="Dados Enviados com sucesso!<br /><BR /><a class='link-proxima-unidade' href='tela02.html'>PROSSEGUIR ></a>";
+            console.log("ocorreu tudo certo. Tem que aparecer o link");
+			window.scrollTo(0, 0);
+		}
+	}
+
+
+	//Quando obtém a porcentagem da unidade em questão, executa esta função
+	window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
+	function resultadoObtemDadosGenericos (evento){
+
+		//testa se os dados genéricos testados são para a porcentagem ou para as respostas
+		//console.log("Teste de dados aqui:::::::: "+verificando_quais_dados);
+
+		// if(verificando_quais_dados==1){
+		// 	console.log(evento.detail);
+
+		// 	//testando se o status é 200, unidade já iniciada
+		// 	if(evento.detail["status"]==200){
+		// 		var i=0;
+		// 		var cont = 0;
+		// 		//O evento retorna um vetor. É preciso pesquisar em qual posição está a porcentagem da unidade atual
+		// 		while(i==0){
+		// 			if(evento.detail["data"][cont]["chave"]==porcentagem){
+		// 				console.log("achou na posição "+cont);
+		// 				console.log(evento.detail["data"][cont]["chave"]);
+		// 				i=1;
+		// 			}else{
+		// 				console.log("não encontrou na posição "+cont);
+		// 				console.log(evento.detail["data"][cont]["chave"]);
+		// 				cont=cont+1;
+		// 				if(cont==10){
+		// 					i=1;
+		// 				}
+		// 			}
+
+		// 		}
+
+		// 		//depois que encontrar a posição certa, verifica o progresso atual
+		// 		progressoSalvo = evento.detail["data"][cont]["valor"];
+		// 		console.log("Valor de Porcentagem atual: "+progressoSalvo);
+
+		// 		if(progressoSalvo < progresso){
+		// 			//registrando a porcentagem da Unidade em questão
+		// 			API.registrarDadosGenericos(porcentagem,progresso);
+		// 			console.log('Registrando nova porcentagem: '+progresso);
+		// 		}else{
+		// 			//Se o cursista estiver revendo a tela, o progresso Salvo será maior, então não altera nada.
+		// 			console.log("Porcentagem não alterada.");
+		// 		}
+
+			// }else if(evento.detail["status"]==412){
+			// 	//se for status 400, inicia a chave da porcentagem da unidade em questão
+			// 	console.log("Inicializando a porcentagem da unidade");
+			// 	API.registrarDadosGenericos(porcentagem,14);
+			// }
+
+		
+            //aqui é quando a verificação é para o formulário	
+		// }else{
+			console.log("\nObtendo os dados genéricos das respostas: ");
+			console.log("Status do evento: "+evento.detail['status']);
+
+			//verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
+			if(evento.detail["status"]=="200"){
+
+				//Se o cursista já enviou alguma resposta, vai encontrar aqui. Então vai aparecer uma mensagem de alerta.				
+				var resposta = evento.detail["data"][0]["valor"];
+				console.log(evento.detail["data"]);
+				//mensagem.textContent = "Você já enviou estas respostas";
+				mensagem.innerHTML = "Você já enviou estas respostas<br /><br /><a class='link-proxima-unidade' href='tela02.html'>PROSSEGUIR ></a>";
+                mensagem.className = "mensagem-ok";
+				mensagem.style.dispay = "block";
+				window.scrollTo(0, 0);
+				erros++;
+
+				//se ainda não tiver enviado as respostas, registra os dados Genéricos com as respostas:
+			}else{
+                //para os drag and drop, precisa pegar o texto com o innerHTML
+				API.registrarDadosGenericos("r1_1_1",r1_1_1.innerHTML);
+				console.log("Resposta 1_1: "+r1_1_1);
+                API.registrarDadosGenericos("r1_1_2",r1_1_2.innerHTML);
+				console.log("Resposta 1_2: "+r1_1_2);
+				API.registrarDadosGenericos("r1_2_1",r1_2_1.innerHTML);
+				console.log("Resposta 2_1: "+r1_2_1);
+                API.registrarDadosGenericos("r1_2_2",r1_2_2.innerHTML);
+				console.log("Resposta 2_2: "+r1_2_2);
+                API.registrarDadosGenericos("r1_2_3",r1_2_3.innerHTML);
+				console.log("Resposta 2_3: "+r1_2_3);
+				API.registrarDadosGenericos("r1_2_3",r1_2_3.innerHTML);
+				console.log("Resposta 3: "+r1_2_3);
+				
+                //para os checkbox, testa se está marcado (v) ou não (f)
+                if(r1_3_1 == true){
+                    API.registrarDadosGenericos("r1_3_1","v");    
+                }else{
+                    API.registrarDadosGenericos("r1_3_1","f");    
+                }                
+				console.log("Resposta 3_1: "+r1_3_1);
+                if(r1_3_2 == true){
+                    API.registrarDadosGenericos("r1_3_2","v");    
+                }else{
+                    API.registrarDadosGenericos("r1_3_2","f");    
+                }                
+				console.log("Resposta 3_2: "+r1_3_2);
+                if(r1_3_3 == true){
+                    API.registrarDadosGenericos("r1_3_3","v");    
+                }else{
+                    API.registrarDadosGenericos("r1_3_3","f");    
+                }                
+				console.log("Resposta 3_3: "+r1_3_3);
+                if(r1_3_4 == true){
+                    API.registrarDadosGenericos("r1_3_4","v");    
+                }else{
+                    API.registrarDadosGenericos("r1_3_4","f");    
+                }                
+				console.log("Resposta 3_4: "+r1_3_4);
+				
+                //para os radio, já pode pegar o próprio valor do item
+                API.registrarDadosGenericos("r1_4_1",r1_4_1);
+				console.log("Resposta 4_1: "+r1_4_1);
+                API.registrarDadosGenericos("r1_4_2",r1_4_2);
+				console.log("Resposta 4_2: "+r1_4_2);
+                API.registrarDadosGenericos("r1_4_3",r1_4_3);
+				console.log("Resposta 4_3: "+r1_4_3);
+                API.registrarDadosGenericos("r1_4_4",r1_4_4);
+				console.log("Resposta 4_4: "+r1_4_4);
+			}
+	//	}
+	};
+
+    //função de controle, pra exibir no console o resultado do envio das respostas (registraDadosGenericos)
+	window.addEventListener('evObtemRegistraDadosGenericos', resultadoRegistrarDadosGenericos, false);
+	function resultadoRegistrarDadosGenericos (evento){
+		console.log("Verificando dados registrados");
+		console.log(evento.detail);
+	};
 
     //// Eventos do Drag and Drop /////
     document.addEventListener('DOMContentLoaded', (event) => {
@@ -356,7 +585,7 @@ s
 
         function handleDrop(e) {
             if (e.stopPropagation) {
-                e.stopPropagation(); // stops the browser from redirecting.
+                e.stopPropagation();
             }
         
             if (dragSrcEl != this) {

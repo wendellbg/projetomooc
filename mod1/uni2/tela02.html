@@ -158,7 +158,7 @@
 						</div>
 					</form>
 				</div>
-				<a href="testerespostas.html">Clique aqui para ver as respostas</a>
+				<!-- <a href="testerespostas.html">Clique aqui para ver as respostas</a> -->
 
 			</div>
 
@@ -301,24 +301,24 @@
 				// **************** (VER COM EQUIPE) *****************
 				var resposta = evento.detail["data"][0]["valor"];
 				console.log(evento.detail["data"]);
-				mensagem.textContent = "Você já enviou estas respostas";
-				mensagem.className = "mensagem-alerta";
+				mensagem.innerHTML = "Você já enviou estas respostas<br /><br /><a class='link-proxima-unidade' href='tela02.html'>PROSSEGUIR ></a>";
+				mensagem.className = "mensagem-ok";
 				mensagem.style.dispay = "block";
 				window.scrollTo(0, 0);
 				erros++;
 
 				//se a unidade não foi iniciada, registra os dados Genéricos com as respostas:
 			}else{
-				API.registrarDadosGenericos("r1_2_1",r1_2_1);
-				console.log("Resposta 1: "+r1_2_1);
-				API.registrarDadosGenericos("r1_2_2t",r1_2_2t);
-				console.log("Resposta 2t: "+r1_2_2t);
-				API.registrarDadosGenericos("r1_2_3",r1_2_3);
-				console.log("Resposta 3: "+r1_2_3);
-				API.registrarDadosGenericos("r1_2_3t",r1_2_3t);
-				console.log("Resposta 3t: "+r1_2_3t);
-				API.registrarDadosGenericos("r1_2_4t",r1_2_4t);
-				console.log("Resposta 4t: "+r1_2_4t);
+				API.registrarDadosGenericos("q2_2_1",q2_2_1);
+				console.log("Resposta 1: "+q2_2_1);
+				API.registrarDadosGenericos("q2_2_2t",q2_2_2t);
+				console.log("Resposta 2t: "+q2_2_2t);
+				API.registrarDadosGenericos("q2_2_3",q2_2_3);
+				console.log("Resposta 3: "+q2_2_3);
+				API.registrarDadosGenericos("q2_2_3t",q2_2_3t);
+				console.log("Resposta 3t: "+q2_2_3t);
+				API.registrarDadosGenericos("q2_2_4t",q2_2_4t);
+				console.log("Resposta 4t: "+q2_2_4t);
 			}
 		}
 	};
@@ -338,23 +338,23 @@
 		verificando_quais_dados =2;
 		erros = 0;
 
-		r1_2_1 = document.form_quiz_uni2.resposta_1.value,
-				r1_2_2t = document.form_quiz_uni2.resposta_2_texto.value,
-				r1_2_3 = document.form_quiz_uni2.resposta_3.value,
-				r1_2_3t = document.form_quiz_uni2.resposta_3_texto.value,
-				r1_2_4t = document.form_quiz_uni2.resposta_4_texto.value;
+		q2_2_1 = document.form_quiz_uni2.resposta_1.value,
+				q2_2_2t = document.form_quiz_uni2.resposta_2_texto.value,
+				q2_2_3 = document.form_quiz_uni2.resposta_3.value,
+				q2_2_3t = document.form_quiz_uni2.resposta_3_texto.value,
+				q2_2_4t = document.form_quiz_uni2.resposta_4_texto.value;
 
-		console.log("\n..."+r1_2_1+"\n"+r1_2_2t+"\n"+r1_2_3+"\n"+r1_2_3t+"\n"+r1_2_4t);
+		console.log("Respostas::::	\n"+q2_2_1+"\n"+q2_2_2t+"\n"+q2_2_3+"\n"+q2_2_3t+"\n"+q2_2_4t);
 
-		if(r1_2_1==null){
+		if(q2_2_1==""){
 			erros++;
-		}else if(r1_2_2t==""){
+		}else if(q2_2_2t==""){
 			erros++;
-		}else if(r1_2_3==null){
+		}else if(q2_2_3==""){
 			erros++;
-		}else if(r1_2_3t==""){
+		}else if(q2_2_3t==""){
 			erros++;
-		}else if(r1_2_4t==""){
+		}else if(q2_2_4t==""){
 			erros++;
 		}
 
@@ -367,7 +367,7 @@
 		}else{
 			console.log("\nChecando respostas");
 			//primeiro verifica dados salvos da primeira resposta. Se encontrar é porque já enviou anteriormente.		
-			API.obterDadosGenericos("induzindoerro_r1_2_1");
+			API.obterDadosGenericos("q2_2_1");
 
 			if(erros>0){
 				return false;
@@ -375,7 +375,7 @@
 			//se não houver erro, envia o form
 			mensagem.className = "mensagem-ok";
 			mensagem.style.display ="block";
-			mensagem.innerHTML="Dados Enviados com sucesso!<br /><a href='testerespostas.html>Clique para ver suas respostas</a>";
+			mensagem.innerHTML="Dados Enviados com sucesso!<br /><BR /><a class='link-proxima-unidade' href='tela02.html'>PROSSEGUIR ></a>";
 			console.log("ocorreu tudo certo. Tem que aparecer o link");
 			window.scrollTo(0, 0);
 		}
