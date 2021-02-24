@@ -56,10 +56,10 @@
 						"identificador": "r1_3",
 						"enunciado": "São reconhecidos como desafios da Educação profissional (assinale todas as alternativas corretas):",
 						"gabaritos": [
-							{ "chave": "r1_3_1", "valor": "", "alternativa": "a) Reduzir as matrículas no ensino propedêutico" },
-							{ "chave": "r1_3_2", "valor": "", "alternativa": "b) Ampliar o número de matrículas nos cursos técnicos e de qualificação" },
-							{ "chave": "r1_3_3", "valor": "", "alternativa": "c) Respeitar as demandas formativas locais na oferta de cursos" },
-							{ "chave": "r1_3_4", "valor": "", "alternativa": "d) Reduzir as matrículas no ensino propedêutico" }
+							{ "chave": "r1_3_1", "valor": "f", "alternativa": "a) Reduzir as matrículas no ensino propedêutico" },
+							{ "chave": "r1_3_2", "valor": "v", "alternativa": "b) Ampliar o número de matrículas nos cursos técnicos e de qualificação" },
+							{ "chave": "r1_3_3", "valor": "v", "alternativa": "c) Oferecer cursos por todo o território nacional" },
+							{ "chave": "r1_3_4", "valor": "v", "alternativa": "d) Respeitar as demandas formativas locais na oferta de cursos" }
 						]
 					},
 					{
