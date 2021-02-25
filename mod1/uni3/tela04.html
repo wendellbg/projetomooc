@@ -15,7 +15,7 @@
 	<!-- Header -->
 	<header id="header">
 		<div class="logo">
-			<a href="../sumario.html">UNIDADE 3</a>
+			<a href="tela01.html">UNIDADE 3</a>
 			<h3>Apresentação do itinerário para a Educação Profissional</h3>
 		</div>
 	</header>
@@ -25,7 +25,10 @@
 				<div class="inner">
 				<!-- One -->
 					<section id="one" class="wrapper style1">
-						
+						<div class="botao-sumario">				
+							<span class='link-visivel'><a href="../sumario.html">S</a></span>			
+							<span class='link-hover'><a href="../sumario.html">SUMÁRIO DO CURSO</a></span>				
+						</div>
 						<header class="special">
 							<div class="entire-menu">
 								<div class="menu-tit">
@@ -39,7 +42,7 @@
 	    									<label for="change-hamburguer"></label>
   										</a>  									  									
   										<div class="menu">
-											<a href="../sumario.html" class='titulo-menu'>UNIDADE 3</a>
+											<a href="tela01.html" class='titulo-menu'>UNIDADE 3</a>
 	    									<a href="tela01.html">3.01 - Apresentação</a>
    	 										<a href="tela02.html">3.02 - Itinerários Formativos</a>
     										<a href="tela03.html">3.03 - Composição de Itinerários</a>
@@ -120,7 +123,7 @@
 									<button class="bt-avanca" type="button"><a href="tela05.html">PROSSEGUIR ></a></button>
 								</div>
 								<span class='botoes-navegacao'>
-									<a href="tela04.html"><button class="bt-navegacao desativado" type="button"><</button></a>
+									<a href="tela04.html"><button class="bt-navegacao" type="button"><</button></a>
 
 									<a href="tela01.html"><input type="radio" name="radio"><label for="radio"></label></a>                                		
 									<a href="tela02.html"><input type="radio" name="radio"><label for="radio"></label></a>
@@ -167,7 +170,7 @@
 			var API = new BridgeRestApi();		
 			var id_unidade = "uni2";
 			var id_slide = "uni1/tela000.html";
-			var progresso = 14;
+			var progresso = 80;
 			var progressoSalvo;
 			var porcentagem = "porcentagemUni2";
 			
@@ -206,8 +209,7 @@
 							if(cont==10){
 								i=1;	
 							}
-						}
-						
+						}						
 					}
 					
 					//depois que encontrar a posição certa, verifica o progresso atual

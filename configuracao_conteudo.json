@@ -122,7 +122,7 @@
 			"nome": "Qualificação Profissional"
 		},{
 			"identificador": "uni3_tela05",
-			"nome": "Qualificação Profissional"
+			"nome": "Concluindo"
 		}]
 	},{		
 		"identificador": "mod1_uni4",
@@ -147,7 +147,7 @@
 		}]
 	},{		
 		"identificador": "mod1_uni5",
-		"nome": "Unidade 5",
+		"nome": "Possibilidades de escolha de itinerário técnico e profissional para o aluno",
 		"descricao": "",
 		"permitePorcentagem": "true",
 		"topicos": [{
@@ -155,16 +155,16 @@
 			"nome": "Apresentação"
 		},{
 			"identificador": "uni5_tela02",
-			"nome": "Afinidade Profissional"
+			"nome": "Afinidade Profissional 1"
 		},{
 			"identificador": "uni5_tela03",
-			"nome": "Tela 03"
+			"nome": "Afinidade Profissional 2"
 		},{
 			"identificador": "uni5_tela04",
-			"nome": "Processo de busca"
+			"nome": "Processo de busca 1"
 		},{
 			"identificador": "uni5_tela05",
-			"nome": "Tela 05"
+			"nome": "Processo de busca 2"
 		},{
 			"identificador": "uni5_tela06",
 			"nome": "Concluindo"
