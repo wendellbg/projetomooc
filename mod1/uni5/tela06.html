@@ -14,7 +14,7 @@
 	<!-- Header -->
 	<header id="header">
 		<div class="logo">
-			<a href="../sumario.html">UNIDADE 5</a>
+			<a href="tela01.html">UNIDADE 5</a>
 			<h3>Possibilidades de escolha de itinerário técnico e profissional para o aluno</h3>
 		</div>
 	</header>
@@ -24,7 +24,11 @@
 				<div class="inner">
 				<!-- One -->
 					<section id="one" class="wrapper style1">
-						
+						<div class="botao-sumario">				
+							<span class='link-visivel'><a href="../sumario.html">S</a></span>			
+							<span class='link-hover'><a href="../sumario.html">SUMÁRIO DO CURSO</a></span>				
+						</div>
+
 						<header class="special">
 							<div class="entire-menu">
 								<div class="menu-tit">
@@ -38,14 +42,13 @@
 	    									<label for="change-hamburguer"></label>
   										</a>  									  									
   										<div class="menu">
-											<a href="../sumario.html" class='titulo-menu'>UNIDADE 5</a>
-	    									<a href="tela01.html" class='link-menu-atual'>5.01 - Apresentação</a>
-   	 										<a href="tela02.html">5.02 - Afinidade Profissional</a>
-    										<a href="tela03.html">5.03 - Afinidade Profissional</a>
-    										<a href="tela04.html">5.04 - Processo de busca</a>
-    										<a href="tela05.html">5.05 - Processo de busca</a>
-    										<a href="tela06.html">5.06 - Concluindo</a>
-    										<a href="tela07.html">5.07 - Questionário</a>
+											<a href="tela01.html" class='titulo-menu'>UNIDADE 5</a>
+	    									<a href="tela01.html">5.01 - Apresentação</a>
+   	 										<a href="tela02.html">5.02 - Afinidade Profissional 1</a>
+    										<a href="tela03.html">5.03 - Afinidade Profissional 2</a>
+    										<a href="tela04.html">5.04 - Processo de busca 1</a>
+    										<a href="tela05.html">5.05 - Processo de busca 2</a>
+    										<a href="tela06.html" class='link-menu-atual'>5.06 - Concluindo</a>    										
   										</div>
   									</div>	
   								</div>	
@@ -63,7 +66,7 @@
 									<a href="#"><i class="fas fa-angle-up"></i></a>
 								</div>
 								<div>
-									<button class="bt-avanca" type="button"><a href="tela07.html">PROSSEGUIR ></a></button>
+									<button class="bt-avanca" type="button"><a href="atividade01.html">ATIVIDADES ></a></button>
 								</div>
 								<div class='botoes-navegacao'>
 									<a href="tela05.html"><button class="bt-navegacao" type="button"><</button></a>
@@ -74,11 +77,10 @@
 									<a href="tela04.html"><input type="radio" name="radio"><label for="radio"></label></a>
                                     <a href="tela05.html"><input type="radio" name="radio"><label for="radio"></label></a>		
                                     <a href="tela06.html"><input type="radio" name="radio" checked><label for="radio"></label></a>
-                                    <a href="tela07.html"><input type="radio" name="radio"><label for="radio"></label></a>					
-									
-									<a href="tela07.html"><button class="bt-navegacao" type="button">></button></a>
+                                    									
+									<button class="bt-navegacao desativado" type="button">></button>
 								</div>
-								<div class="legenda">6 de 7</div>
+								<div class="legenda">6 de 6</div>
 							</div>
 							<!--Rodapé-->
 							<hr/>
@@ -112,11 +114,11 @@
 			console.clear(screen);
 		
 			var API = new BridgeRestApi();		
-			var id_unidade = "uni2";
-			var id_slide = "uni1/tela000.html";
-			var progresso = 14;
+			var id_unidade = "mod1_uni5";
+			var id_slide = "uni5_tela06.html";
+			var progresso = 100;
 			var progressoSalvo;
-			var porcentagem = "porcentagemUni2";
+			var porcentagem = "porcentagemUni5";
 			
 			//Obtendo dados curso
 			window.addEventListener('load', function(){            
