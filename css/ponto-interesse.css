@@ -254,8 +254,8 @@ Main components
 @media only screen and (min-width: 600px) {
   .cd-single-point .cd-more-info {
     position: absolute;
-    width: 220px;
-    height: 160px;
+    width: 260px;
+    height: 180px;
     padding: 1em;
     overflow-y: visible;
     line-height: 1.4;
@@ -337,8 +337,8 @@ Main components
     margin-bottom: 0;
   }
   .cd-single-point .cd-more-info p {
-    font-size: 14px;
-    font-size: 0.875rem;
+    font-size: 18px;
+    /*font-size: 0.875rem;*/
     line-height: 20px;
   }
 }
