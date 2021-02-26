@@ -7,6 +7,7 @@ html{
     border-radius: 8px;
     padding-top: 1em;
     padding-left: 1em;
+    padding-bottom: 1em;
     margin: 1em 0 2em 0;
     color: #fff;
     font-size: 1.5em;
@@ -49,13 +50,13 @@ html{
     text-decoration: none   ;
     padding-bottom:1em;    
     font-weight: bold; 
-    font-size: 0.8em;   
+    font-size: 0.8em;       
 }
 
-.enunciado-questao p{
+.enunciado-questao p, .texto-resposta p{
     width: 95%;
     margin-bottom: 10px;
-    margin-top: 20px;
+    margin-top: 20px;    
 }
 
 .enunciado-questao p.link{
@@ -69,6 +70,7 @@ html{
     padding: 10px;
     text-decoration: none;
     font-weight: normal;
+    display: inline-block;
 }
 
 .enunciado-questao a:hover{
@@ -81,14 +83,14 @@ html{
 }
 
 .linha-respostas{    
-    padding: 20px 0;  
+    padding: 20px 0 0 0;  
     width: 100%;  
 }
 
 
 .texto-resposta{    
     position: relative;
-    width: 40%;
+    width: 60%;
     font-size: 0.8em;    
     margin-left: 0;
     margin-right: 2%;
@@ -97,7 +99,7 @@ html{
 }
 
 .linha-grande {
-    width: 90%;
+    width: 95%;
     margin-right: 0;
 }
 
@@ -131,6 +133,27 @@ html{
 
 .caixa-drop_1_2{
     height: 70px;
+}
+
+.caixa-drop_5_1{
+    height: 80px;
+}
+
+.caixa-drop_5_2{    
+    margin: 0;
+    width: 180px;
+    font-size: 90%;
+}
+
+.caixa-drop_5_3{
+    height: 70px;
+    width: 200px;
+}
+
+.legenda-resposta{
+    color:#fec13b;
+    margin-bottom: 0;
+    margin-top: 1em;
 }
 
 .palavra-resposta{
@@ -281,12 +304,7 @@ input[type="checkbox"]:checked + label {
     font-size: 1em;
     font-family: "Musket";
     outline: none;
-    letter-spacing: 0.2em;
-    /* -moz-border-radius:0.5em;
-    -webkit-border-radius:0.5em;
-    box-shadow: 1px 1px 3px #fec13b;
-    -moz-box-shadow: 1px 1px 3px #fec13b;
-    -webkit-box-shadow: 1px 1px 3px #fec13b; */
+    letter-spacing: 0.2em;  
 }
 
 .botao-atividade button:hover{
@@ -359,6 +377,14 @@ input[type="checkbox"]:checked + label {
     .area-inputs, .area-opcoes{
         display: block;
         margin-left: 20px;
+    }
+
+    .caixa-drop_5_2, .caixa-drop_5_3{
+        display: inline-block;        
+    }
+    .caixa-drop_5_3{
+        font-size: 80%;
+        width: 120px;
     }
 
     .legenda-input{
