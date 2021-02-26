@@ -652,7 +652,8 @@ h3.texto-central b{
 	}
 }
 
-.bt-download-media {
+.bt-download-media,
+.bt-link-externo{
 	border: none;
 	padding: 5px 20px;
 	text-align: center;
@@ -668,8 +669,13 @@ h3.texto-central b{
 	border-radius: 4px;
 }
 
+.bt-link-externo{
+	color: #fff;
+	font-size: 14px;
+}
 
-.bt-download-media:hover{
+.bt-download-media:hover,
+.bt-link-externo:hover{
 	transition: 0.3s;
 	background-color: #173151;
 	color: rgba(255, 255, 255, 0.9);
