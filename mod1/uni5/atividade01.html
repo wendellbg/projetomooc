@@ -59,7 +59,7 @@
 						<div class="content">
 							<p>
 								Nas unidades 3 e 4 você elaborou uma proposta de itinerário formativo, agora você deverá fazer uma pesquisa e apontar possíveis instituições de educação profissional que poderiam ofertar este itinerário. Não esqueça de postar os seus achados no fórum,
-								<a href="#">Clicando aqui.</a>
+								<a href="https://hmg.labtime.ufg.br/avamec/#/instituicao/setec/curso/6036/ferramenta/forum/topico/listar" target="_blank">Clicando aqui.</a>
 							</p>
 							
 							<form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni1" method="POST">
@@ -188,7 +188,7 @@
 								</div> 
 							
 								<div class="botao-atividade">
-									<button type="button" id="botao-atividade-uni1" onclick="salvarDados()" >ENVIAR RESPOSTAS</button>
+									<button type="button" id="botao-atividade-uni5" onclick="salvarDados()" >ENVIAR RESPOSTAS</button>
 								</div>								
 							</form>
 
@@ -196,29 +196,7 @@
 
 						<!-- Conteúdo -->
 						<div class="content footer">
-							<div class='navegacao'>
-								<div class="bt-topo">
-									<a href="#"><i class="fas fa-angle-up"></i></a>
-								</div>
-								<div>
-									<button class="bt-avanca" type="button"><a href="../sumario.html">PROSSEGUIR ></a></button>
-								</div>
-								<div class='botoes-navegacao'>
-									<a href="tela06.html"><button class="bt-navegacao" type="button"><</button></a>
-
-									<a href="tela01.html"><input type="radio" name="radio"><label for="radio"></label></a>                                		
-									<a href="tela02.html"><input type="radio" name="radio"><label for="radio"></label></a>
-									<a href="tela03.html"><input type="radio" name="radio"><label for="radio"></label></a>
-									<a href="tela04.html"><input type="radio" name="radio"><label for="radio"></label></a>
-                                    <a href="tela05.html"><input type="radio" name="radio"><label for="radio"></label></a>		
-                                    <a href="tela06.html"><input type="radio" name="radio"><label for="radio"></label></a>		
-                                    <a href="tela07.html"><input type="radio" name="radio" checked><label for="radio"></label></a>
-
-									<button class="bt-navegacao desativado" type="button">></button>
-								</div>
-								<div class="legenda">7 de 7</div>
-								
-							</div>
+							
 							<!--Rodapé-->
 							<hr/>
 							<div class="row rodape">
@@ -250,79 +228,164 @@
 		<script>
 			console.clear(screen);
 		
-			var API = new BridgeRestApi();		
-			var id_unidade = "uni2";
-			var id_slide = "uni1/tela000.html";
-			var progresso = 14;
-			var progressoSalvo;
-			var porcentagem = "porcentagemUni2";
-			
-			//Obtendo dados curso
-			window.addEventListener('load', function(){            
-				API.obterDadosCurso();
-			})
-			
-			window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
-			function resultadoObterDadosCurso(evento){            
-				console.log(evento.detail); 
-				//antes de registrar a porcentagem, verifica a porcentagem atual:
-				API.obterDadosGenericos(porcentagem);				                
+			var API = new BridgeRestApi();
+			var id_unidade = "mod1_uni5";//modificar
+			var id_slide = "uni5/atividade01.html";//modificar
+			var id_atividade = "uni5_ativ1";//modificar
+			var nota_atividade = 0;
+			var nota_atividade_nova=0;
+			var erros = 0;
+
+			/*************** Verificando se todas as respostas foram enviadas. *****/
+			var botao = document.getElementById("botao-atividade-uni5");//modificar
+			var mensagem = document.getElementById("mensagem-alerta");    
+
+			function salvarDados(){
+				console.log("função aqui");				
+				erros = 0;
+				
+				//aqui vai pegar os valores de cada exercício.
+
+				//esses são os de drag and drop
+				r5_1_1 = document.querySelector("#r5_1_1 span.palavra-resposta"),        
+				r5_1_2 = document.querySelector("#r5_1_2 span.palavra-resposta"),
+				
+				r5_2_1 = document.querySelector("#r5_2_1 span.palavra-resposta"),
+				r5_2_2 = document.querySelector("#r5_2_2 span.palavra-resposta"),
+				r5_2_3 = document.querySelector("#r5_2_3 span.palavra-resposta"),
+				r5_2_4 = document.querySelector("#r5_2_4 span.palavra-resposta"),
+				r5_2_5 = document.querySelector("#r5_2_5 span.palavra-resposta"),
+				r5_2_6 = document.querySelector("#r5_2_6 span.palavra-resposta"),
+				r5_2_7 = document.querySelector("#r5_2_7 span.palavra-resposta");
+				
+				//Linhas só pra testar as respostas
+				// console.log("\nQuestão 1: "+r1_1_1.innerHTML+", "+r1_1_2.innerHTML+"\nQuestão 2: "+r1_2_1.innerHTML+", "+r1_2_2.innerHTML+", "+r1_2_3.innerHTML);
+				// console.log("\nQuestão 3: "+r1_3_1+", "+r1_3_2+", "+r1_3_3+", "+r1_3_4+"\nQuestão 4: "+r1_4_1+", "+r1_4_2+", "+r1_4_3+", "+r1_4_4);
+
+				//testando se todos os exercícios (menos os checkbox) estão preenchidos.
+				if(r5_1_1==null){
+					erros++;
+				}else if(r5_1_2==null){
+					erros++;
+				}else if(r5_2_1==null){
+					erros++;
+				}else if(r5_2_2==null){
+					erros++;
+				}else if(r5_2_3==null){
+					erros++;
+				}else if(r5_2_4==null){
+					erros++;
+				}else if(r5_2_5==null){
+					erros++;
+				}else if(r5_2_6==null){
+					erros++;
+				}else if(r5_2_5==null){
+					erros++;
+				}
+
+				if(erros>0){
+					//caso algum não esteja preenchido, exibe mensagem de erro
+					mensagem.className = "mensagem-alerta";
+					mensagem.textContent = "Por favor preencha todos os campos";
+					mensagem.style.display = "block";
+					window.scrollTo(0, 0);
+					return false;
+				}else{
+					console.log("\nChecando respostas"+id_atividade);
+					//primeiro verifica dados salvos da primeira resposta. Se encontrar é porque já enviou anteriormente.		
+					API.obterRespostaAtividade("uni5_ativ1");//modificar
+
+					if(erros>0){
+						return false;
+					}			
+				}
 			}
 
 
 			//Quando obtém a porcentagem da unidade em questão, executa esta função
-			window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
-			function resultadoObtemDadosGenericos (evento){
-				console.log(evento.detail);
+			window .addEventListener( "evObtemDadosRespostaAtividade" , resultadoObtemRespostaAtividade, false );
+			function resultadoObtemRespostaAtividade(evento){
 
-				//testando se o status é 200, unidade já iniciada
-				if(evento.detail["status"]==200){
-					var i=0;
-					var cont = 0;
-					//O evento retorna um vetor. É preciso pesquisar em qual posição está a porcentagem da unidade atual
-					while(i==0){						
-						if(evento.detail["data"][cont]["chave"]==porcentagem){
-							console.log("achou na posição "+cont);
-							console.log(evento.detail["data"][cont]["chave"]);
-							i=1;
-						}else{							
-							console.log("não encontrou na posição "+cont);							
-							console.log(evento.detail["data"][cont]["chave"]);	
-							cont=cont+1;													
-							if(cont==10){
-								i=1;	
+				console.log("\nObtendo as respostas: ");
+				console.log("Status do evento: "+evento.detail['status']);
+
+				//verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
+				if(evento.detail["status"]=="200"){
+
+					//Se o cursista já enviou alguma resposta, vai encontrar aqui. Então vai aparecer uma mensagem de alerta.				
+					nota_atividade = evento.detail.data.nota;
+					console.log(evento.detail["data"]);
+					console.log("Atividades já foram enviadas antes.");            
+					mensagem.innerHTML = "Você já enviou estas respostas!<br />Sua nota foi: "+nota_atividade+"<br /><br /><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR ></a>";
+					mensagem.className = "mensagem-ok";
+					mensagem.style.dispay = "block";
+					window.scrollTo(0, 0);
+					erros++;
+					
+				}else{
+					//se ainda não tiver enviado as respostas, registra as re respostas com as funções da API:
+					console.log("Registrando respostas:");
+					console.log(evento.detail);
+					API.registrarRespostaAtividade({
+						"identificador": "uni5_ativ1",//modificar
+						"questoes": [
+							{
+								//Onde houver os exercícios de drag and drop precisa pegar o innerHTML
+								"identificador": "r5_1",                    
+								"gabaritos": [
+									{ "chave": "r5_1_1", "valor": r5_1_1.innerHTML},
+									{ "chave": "r5_1_2", "valor": r5_1_2.innerHTML}							
+								]
+							},{                    
+								"identificador": "r5_2",                    
+								"gabaritos": [
+									{ "chave": "r5_2_1", "valor": r5_2_1.innerHTML},
+									{ "chave": "r5_2_2", "valor": r5_2_2.innerHTML},
+									{ "chave": "r5_2_3", "valor": r5_2_3.innerHTML},							
+									{ "chave": "r5_2_4", "valor": r5_2_4.innerHTML},							
+									{ "chave": "r5_2_5", "valor": r5_2_5.innerHTML},							
+									{ "chave": "r5_2_6", "valor": r5_2_6.innerHTML},							
+									{ "chave": "r5_2_7", "valor": r5_2_7.innerHTML}							
+								]							
 							}
-						}
-						
-					}
-					
-					//depois que encontrar a posição certa, verifica o progresso atual
-					progressoSalvo = evento.detail["data"][cont]["valor"];
-					console.log("Valor de Porcentagem atual: "+progressoSalvo);
-					
-					if(progressoSalvo < progresso){
-						//registrando a porcentagem da Unidade em questão
-						API.registrarDadosGenericos(porcentagem,progresso);
-						console.log('Registrando nova porcentagem: '+progresso); 						
-					}else{
-						//Se o cursista estiver revendo a tela, o progresso Salvo será maior, então não altera nada.
-						console.log("Porcentagem não alterada.");
-					}
-					
-				}else if(evento.detail["status"]==412){
-					//se for status 400, inicia a chave da porcentagem da unidade em questão
-					console.log("Inicializando a porcentagem da unidade");
-					API.registrarDadosGenericos(porcentagem,14);
-				}				
+						]
+					})
+
+					//Testes para exibir as respostas enviadas:            
+					console.log("Resposta 1_1: "+r5_1_1.innerHTML);
+					console.log("Resposta 1_2: "+r5_1_2.innerHTML);
+					console.log("Resposta 2_1: "+r5_2_1.innerHTML);
+					console.log("Resposta 2_2: "+r5_2_2.innerHTML);
+					console.log("Resposta 2_3: "+r5_2_3.innerHTML);            
+					console.log("Resposta 2_4: "+r5_2_4.innerHTML);            
+					console.log("Resposta 2_5: "+r5_2_5.innerHTML);            
+					console.log("Resposta 2_6: "+r5_2_6.innerHTML);            
+					console.log("Resposta 2_7: "+r5_2_7.innerHTML);            
+			
+				}	
 			};
 
-			window.addEventListener('evObtemRegistraDadosGenericos', resultadoRegistrarDadosGenericos, false);
-			function resultadoRegistrarDadosGenericos (evento){
-				console.log("Verificando porcentagem registrada");
-				console.log(evento.detail);
-			};
-
-
+			//função de controle, pra exibir no console o resultado do envio das respostas (registraRespostaAtividade)
+			window .addEventListener( "evRegistraRespostaAtividade" ,resultadoRegistrarRespostaAtividade, false );
+			function resultadoRegistrarRespostaAtividade (evento){
+				console .log(evento.detail);
+				nota_atividade= evento.detail.data.notaAtividade;
+				if(erros==0){
+					//se não houver erro, exibe mensagem de OK
+					mensagem.className = "mensagem-ok";
+					mensagem.style.display ="block";
+					//esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
+					mensagem.innerHTML="Dados Enviados com sucesso!<br />Sua nota foi: "+nota_atividade+"<br /><BR /><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR ></a>";
+					console.log("Ocorreu tudo certo. Tem que aparecer o link");
+					window.scrollTo(0, 0);
+				}else{
+					//caso algum não esteja preenchido, exibe mensagem de erro
+					mensagem.className = "mensagem-alerta";
+					mensagem.textContent = "Ocorreu algum erro! Tente Novamente...";
+					mensagem.style.display = "block";
+					window.scrollTo(0, 0);
+				}
+			}
 
 			//// Eventos do Drag and Drop /////
 			var dragSrcEl = null;

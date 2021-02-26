@@ -20,7 +20,7 @@ html{
     position: relative;
     display: block;
     padding: 0;
-    width: 260px;
+    width: 60%;
     font-size: 1em;
     font-weight: bold;
     text-align: left;
@@ -59,11 +59,30 @@ html{
     margin-top: 20px;    
 }
 
+.enunciado-questao b{
+    color:#fff;    
+    /* text-shadow: 2px 2px 5px #fec13b; */
+    text-shadow: 1px 1px 2px #010f36, 0 0 20px #fff, 0 0 5px #fff;
+}
+
 .enunciado-questao p.link{
     text-align: center;
     margin-top: 2em;
 }
-.enunciado-questao a{
+
+.enunciado-questao a.link-texto{
+    padding: 2px 5px;   
+    color: #fec13b;
+    text-decoration: underline;
+}
+
+.enunciado-questao a.link-texto:hover{
+    color: #010f36;
+    background-color: #fff;
+    border-radius: 4px;    
+}
+
+.enunciado-questao p.link a{
     background-color: #fff;
     border: 2px solid #fff;
     border-radius: 10px;
@@ -73,7 +92,7 @@ html{
     display: inline-block;
 }
 
-.enunciado-questao a:hover{
+.enunciado-questao p.link a:hover{
     background-color: #fec13b;
 }
 
