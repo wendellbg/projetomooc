@@ -65,6 +65,11 @@ html{
     text-shadow: 1px 1px 2px #010f36, 0 0 20px #fff, 0 0 5px #fff;
 }
 
+.enunciado-questao ul{
+    list-style-position: inside;
+    list-style: disc;
+    margin-left: 20px;
+}
 .enunciado-questao p.link{
     text-align: center;
     margin-top: 2em;
