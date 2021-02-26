@@ -48,7 +48,31 @@ html{
 .enunciado-questao{
     text-decoration: none   ;
     padding-bottom:1em;    
-    font-weight: bold;    
+    font-weight: bold; 
+    font-size: 0.8em;   
+}
+
+.enunciado-questao p{
+    width: 95%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.enunciado-questao p.link{
+    text-align: center;
+    margin-top: 2em;
+}
+.enunciado-questao a{
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.enunciado-questao a:hover{
+    background-color: #fec13b;
 }
 
 .area-respostas{    
@@ -79,7 +103,17 @@ html{
 
 .area-inputs span.palavra-resposta{
     background-color: #fec13b;
-    font-weight: bold;
+    font-weight: bold;    
+}
+
+.legenda-input{
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    margin-right: -10px;
+    margin-left: 10px;
+    margin-top: 0;          
+    
 }
 
 .area-inputs, .area-opcoes{
@@ -87,9 +121,9 @@ html{
     vertical-align: top;
     border-radius: 8px;      
     width: 140px;    
-    margin: 10px;
+    margin: 10px 2px 5px 5px;
     padding: 1px;
-    border: 2px dashed #fff ;
+    border: 2px dashed #fff ;    
 }
 .caixa-drop_1_1{
     height: 50px;    
@@ -111,7 +145,7 @@ html{
     margin: auto;   
     right: 0; 
     font-size: 0.8em;
-    cursor: move;
+    cursor: move;    
 }
 
 .area-radios{
@@ -320,5 +354,17 @@ input[type="checkbox"]:checked + label {
 	.texto-resposta{
         width: 90%;
         margin-right: 0;
+    }
+
+    .area-inputs, .area-opcoes{
+        display: block;
+        margin-left: 20px;
+    }
+
+    .legenda-input{
+        display: block;        
+        width: 20px;
+        margin-bottom: -50px;
+        margin-left: -10px;
     }
 }

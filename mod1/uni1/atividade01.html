@@ -47,7 +47,7 @@ s
 				<div class="entire-menu">
 					<div class="menu-tit">
 						<div class="menu-tit-col1">
-							<h2>Unidade 01 - Avaliação</h2>
+							<h2>Unidade 1 - Avaliação</h2>
 						</div>
 						<div class="menu-tit-col2">
 							<input type="checkbox" id="change-hamburguer" />
@@ -87,7 +87,9 @@ s
                                         <div class='texto-resposta'>                                        
                                             <span class="texto-opcao">a) É o fundamento do trabalho e um dos mais importantes traços que identificam nossa humanidade.</span>
                                         </div>
-                                        <div class="area-inputs caixa-drop_1_1" id='r1_1_1' name='r1_1_1' ondrop="drop(event)" ondragover="allowDrop(event)">                                            
+                                        <span class="legenda-input">a)</span>
+                                        <div class="area-inputs caixa-drop_1_1" id='r1_1_1' name='r1_1_1' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                            <p></p>                                         
                                         </div>                                                                            
                                         <div class="area-opcoes caixa-drop_1_1" id='opcao1_1_1' ondrop="drop(event)" ondragover="allowDrop(event)">
                                             <span class="palavra-resposta" name='r1_1_texto' id='r1_1' draggable="true" ondragstart="drag(event)">Técnica</span>
@@ -99,7 +101,9 @@ s
                                         <div class="texto-resposta">                                        
                                             <span class="texto-opcao">b) Exercício social da técnica com todas as dimensões associadas ao ato técnico: éticas, estéticas, ambientais, econômicas, identitárias, culturais.</span>                                       
                                         </div>
+                                        <span class="legenda-input">b)</span>
                                         <div class="area-inputs caixa-drop_1_1" id='r1_1_2' name='r1_1_2' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                            <p></p>
                                         </div>   
                                         <div class="area-opcoes caixa-drop_1_1" id='opcao1_1_2' ondrop="drop(event)" ondragover="allowDrop(event)">
                                             <span class="palavra-resposta"  name='r1_2_texto' id='r1_2' draggable="true" ondragstart="drag(event)">Trabalho</span>
@@ -120,7 +124,9 @@ s
                                         <div class='texto-resposta'>                                        
                                             <span class="texto-opcao">a) Consolidada pela cultura, devem possibilitar a cada pessoa construir sua existência.</span>
                                         </div>
+                                        <span class="legenda-input">a)</span>
                                         <div class="area-inputs caixa-drop_1_2" id='r1_2_1' name='r1_2_1' ondrop="drop(event)" ondragover="allowDrop(event)">                                            
+                                            <p></p>
                                         </div>                                                                            
                                         <div class="area-opcoes caixa-drop_1_2" id='opcao1_2_1' ondrop="drop(event)" ondragover="allowDrop(event)">
                                             <span class="palavra-resposta" name='r2_1_texto' id='r2_1' draggable="true" ondragstart="drag(event)">Construção da Existência</span>
@@ -131,7 +137,9 @@ s
                                         <div class="texto-resposta">                                        
                                             <span class="texto-opcao">b) Construção da capacidade de intervir conscientemente no mundo para produzir a existência.</span>
                                         </div>
+                                        <span class="legenda-input">b)</span>
                                         <div class="area-inputs caixa-drop_1_2" id='r1_2_2' name='r1_2_2' ondrop="drop(event)" ondragover="allowDrop(event)">                                            
+                                            <p></p>
                                         </div>                                                                            
                                         <div class="area-opcoes caixa-drop_1_2" id='opcao1_2_2' ondrop="drop(event)" ondragover="allowDrop(event)">
                                             <span class="palavra-resposta" name='r2_2_texto' id='r2_2' draggable="true" ondragstart="drag(event)">Partilha de Saberes</span>
@@ -142,7 +150,9 @@ s
                                         <div class="texto-resposta">                                        
                                             <span class="texto-opcao">c) Composto de vários elementos: autonomia, emancipação, participação, inserção social, etc.</span>                                           
                                         </div>
+                                        <span class="legenda-input">c)</span>
                                         <div class="area-inputs caixa-drop_1_2" id='r1_2_3' name='r1_2_3' ondrop="drop(event)" ondragover="allowDrop(event)">                                            
+                                            <p></p>
                                         </div>                                                                            
                                         <div class="area-opcoes caixa-drop_1_2" id='opcao1_2_3' ondrop="drop(event)" ondragover="allowDrop(event)">
                                             <span class="palavra-resposta" name='r2_3_texto' id='r2_3' draggable="true" ondragstart="drag(event)">Intervenção consciente</span>
@@ -490,20 +500,34 @@ s
     }
 
     //// Eventos do Drag and Drop /////
-    function allowDrop(ev) {
-        ev.preventDefault();
-    }
+        var dragSrcEl = null;
 
-    function drag(ev){
-        ev.dataTransfer.setData("text",ev.target.id);
-    }
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
 
-    function drop(ev){
-        
-        ev.preventDefault();
-        var data=ev.dataTransfer.getData("text");
-        ev.target.appendChild(document.getElementById(data));
-    }
+        function drag(ev){
+            /**ev.dataTransfer.setData("text",ev.target.id); **/
+            ev.dataTransfer.setData ("src", ev.target.id);
+                       
+        }
+
+        function drop(ev){
+            
+            ev.preventDefault();
+            // var data=ev.dataTransfer.getData("text");
+            // ev.target.appendChild(document.getElementById(data));
+
+            var src = document.getElementById(ev.dataTransfer.getData ("src"));
+            var srcParent = src.parentNode;
+            var tgt = ev.currentTarget.firstElementChild;
+            
+            ev.currentTarget.replaceChild (src, tgt);
+            srcParent.appendChild (tgt);
+        }
+    
+
+
 
 </script>
 

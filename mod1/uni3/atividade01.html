@@ -1,10 +1,12 @@
-<!DOCTYPE HTML>
+	<!DOCTYPE HTML>
 <html>
 	<head>
 		<title>Mentoria</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
+        <link rel="stylesheet" href="../../css/boxes.css?ver=1.4"/>
+		<link rel="stylesheet" href="../../css/atividades.css?ver=1.1"/>
 
 		<script src="../../js/jquery-2.1.1.js"></script>
 		<script src="../../js/bt-topo.js"></script> <!-- Botão de Voltar ao Topo -->
@@ -14,10 +16,11 @@
 	<!-- Header -->
 	<header id="header">
 		<div class="logo">
-			<a href="tela01.html">UNIDADE 5</a>
-			<h3>Possibilidades de escolha de itinerário técnico e profissional para o aluno</h3>
+			<a href="tela01.html">UNIDADE 3</a>
+			<h3>Apresentação do itinerário para a Educação Profissional</h3>
 		</div>
 	</header>
+
 		<!-- Main -->
 			<section id="main">
 				<div class="inner">
@@ -32,7 +35,7 @@
 							<div class="entire-menu">
 								<div class="menu-tit">
 									<div class="menu-tit-col1"> 
-										<h2>Unidade 5 - Avaliação</h2>
+										<h2>Unidade 3 - Avaliação</h2>
 									</div>
 									<div class="menu-tit-col2">											
 										<input type="checkbox" id="change-hamburguer" />  															
@@ -41,14 +44,12 @@
 	    									<label for="change-hamburguer"></label>
   										</a>  									  									
   										<div class="menu">
-											<a href="tela01.html" class='titulo-menu link-menu-atual'>UNIDADE 5</a>
-	    									<a href="tela01.html">5.01 - Apresentação</a>
-   	 										<a href="tela02.html">5.02 - Afinidade Profissional</a>
-    										<a href="tela03.html">5.03 - Afinidade Profissional</a>
-    										<a href="tela04.html">5.04 - Processo de busca</a>
-    										<a href="tela05.html">5.05 - Processo de busca</a>
-    										<a href="tela06.html">5.06 - Concluindo</a>
-    										<a href="tela07.html">5.07 - Questionário</a>
+											<a href="tela01.html" class='titulo-menu link-menu-atual'>UNIDADE 3</a>
+	    									<a href="tela01.html">3.01 - Apresentação</a>
+   	 										<a href="tela02.html">3.02 - Itinerários Formativos</a>
+    										<a href="tela03.html">3.03 - Composição de Itinerários</a>
+    										<a href="tela04.html">3.04 - Qualificação Profissional</a>
+    										<a href="tela05.html">3.05 - Concluindo</a>
   										</div>
   									</div>	
   								</div>	
@@ -56,9 +57,20 @@
 						</header>
 						
 						<div class="content">
-							Texto...
+							
+							<div class="questao">
+                                <div class="titulo-questao">Questão 1</div>
+                                <div class="enunciado-questao">
+                                    <p>Vimos na unidade 3 que existem diferentes tipos de itinerários formativos, cursos de qualificação e cursos técnicos.</p>
+									<p>A proposta da atividade é fazer um levantamento do contexto econômico da sua região. Procure perceber quais são os principais ramos de atuação para um estudante egresso da formação profissional (tipos de indústria, serviços, turismo, saúde, pecuária, agroeconomia, entre outros) e compartilhe no fórum seus principais achados. </p>
+									<p>Além disso, é possível citar profissões que permitem atividades inovadoras e o desenvolvimento de atividades empreendedoras (artesanato, tecnologias computacionais, comércio e serviços, economia colaborativa, cooperativismo, entre outros).</p>
+									<p class='link'><a href="#">Clique aqui para compartilhar no fórum suas contribuições</a></p>									
+									</p>
+                                </div>
+                                
+                            </div> 
+							
 						</div>
-
 						<!-- Conteúdo -->
 						<div class="content footer">
 							<div class='navegacao'>
@@ -66,22 +78,8 @@
 									<a href="#"><i class="fas fa-angle-up"></i></a>
 								</div>
 								<div>
-									<button class="bt-avanca" type="button"><a href="../sumario.html">PROSSEGUIR ></a></button>
+									<button class="bt-avanca" type="button"><a href="atividade01.html">UNIDADE 4 ></a></button>
 								</div>
-								<div class='botoes-navegacao'>
-									<a href="tela06.html"><button class="bt-navegacao" type="button"><</button></a>
-
-									<a href="tela01.html"><input type="radio" name="radio"><label for="radio"></label></a>                                		
-									<a href="tela02.html"><input type="radio" name="radio"><label for="radio"></label></a>
-									<a href="tela03.html"><input type="radio" name="radio"><label for="radio"></label></a>
-									<a href="tela04.html"><input type="radio" name="radio"><label for="radio"></label></a>
-                                    <a href="tela05.html"><input type="radio" name="radio"><label for="radio"></label></a>		
-                                    <a href="tela06.html"><input type="radio" name="radio"><label for="radio"></label></a>		
-                                    <a href="tela07.html"><input type="radio" name="radio" checked><label for="radio"></label></a>
-
-									<button class="bt-navegacao desativado" type="button">></button>
-								</div>
-								<div class="legenda">7 de 7</div>
 								
 							</div>
 							<!--Rodapé-->
@@ -118,7 +116,7 @@
 			var API = new BridgeRestApi();		
 			var id_unidade = "uni2";
 			var id_slide = "uni1/tela000.html";
-			var progresso = 14;
+			var progresso = 100;
 			var progressoSalvo;
 			var porcentagem = "porcentagemUni2";
 			
