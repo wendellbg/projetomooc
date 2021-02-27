@@ -48,7 +48,9 @@ html{
 .enunciado-questao{
     text-decoration: none   ;
     padding-bottom:1em;    
-    font-weight: bold;    
+    font-weight: bold;
+    text-align: justify;
+    margin-right: 2%;    
 }
 
 .area-respostas{    
