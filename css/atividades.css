@@ -7,6 +7,7 @@ html{
     border-radius: 8px;
     padding-top: 1em;
     padding-left: 1em;
+    padding-bottom: 1em;
     margin: 1em 0 2em 0;
     color: #fff;
     font-size: 1.5em;
@@ -19,7 +20,7 @@ html{
     position: relative;
     display: block;
     padding: 0;
-    width: 260px;
+    width: 60%;
     font-size: 1em;
     font-weight: bold;
     text-align: left;
@@ -53,20 +54,63 @@ html{
     margin-right: 2%;    
 }
 
+.enunciado-questao p, .texto-resposta p{
+    width: 95%;
+    margin-bottom: 10px;
+    margin-top: 20px;    
+}
+
+.enunciado-questao b{
+    color:#fff;    
+    /* text-shadow: 2px 2px 5px #fec13b; */
+    text-shadow: 1px 1px 2px #010f36, 0 0 20px #fff, 0 0 5px #fff;
+}
+
+.enunciado-questao p.link{
+    text-align: center;
+    margin-top: 2em;
+}
+
+.enunciado-questao a.link-texto{
+    padding: 2px 5px;   
+    color: #fec13b;
+    text-decoration: underline;
+}
+
+.enunciado-questao a.link-texto:hover{
+    color: #010f36;
+    background-color: #fff;
+    border-radius: 4px;    
+}
+
+.enunciado-questao p.link a{
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: normal;
+    display: inline-block;
+}
+
+.enunciado-questao p.link a:hover{
+    background-color: #fec13b;
+}
+
 .area-respostas{    
     margin: 0;    
     position: relative;
 }
 
 .linha-respostas{    
-    padding: 20px 0;  
+    padding: 20px 0 0 0;  
     width: 100%;  
 }
 
 
 .texto-resposta{    
     position: relative;
-    width: 40%;
+    width: 60%;
     font-size: 0.8em;    
     margin-left: 0;
     margin-right: 2%;
@@ -75,13 +119,23 @@ html{
 }
 
 .linha-grande {
-    width: 90%;
+    width: 95%;
     margin-right: 0;
 }
 
 .area-inputs span.palavra-resposta{
     background-color: #fec13b;
-    font-weight: bold;
+    font-weight: bold;    
+}
+
+.legenda-input{
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    margin-right: -10px;
+    margin-left: 10px;
+    margin-top: 0;          
+    
 }
 
 .area-inputs, .area-opcoes{
@@ -89,9 +143,9 @@ html{
     vertical-align: top;
     border-radius: 8px;      
     width: 140px;    
-    margin: 10px;
+    margin: 10px 2px 5px 5px;
     padding: 1px;
-    border: 2px dashed #fff ;
+    border: 2px dashed #fff ;    
 }
 .caixa-drop_1_1{
     height: 50px;    
@@ -99,6 +153,27 @@ html{
 
 .caixa-drop_1_2{
     height: 70px;
+}
+
+.caixa-drop_5_1{
+    height: 80px;
+}
+
+.caixa-drop_5_2{    
+    margin: 0;
+    width: 180px;
+    font-size: 90%;
+}
+
+.caixa-drop_5_3{
+    height: 70px;
+    width: 200px;
+}
+
+.legenda-resposta{
+    color:#fec13b;
+    margin-bottom: 0;
+    margin-top: 1em;
 }
 
 .palavra-resposta{
@@ -113,7 +188,7 @@ html{
     margin: auto;   
     right: 0; 
     font-size: 0.8em;
-    cursor: move;
+    cursor: move;    
 }
 
 .area-radios{
@@ -249,12 +324,7 @@ input[type="checkbox"]:checked + label {
     font-size: 1em;
     font-family: "Musket";
     outline: none;
-    letter-spacing: 0.2em;
-    /* -moz-border-radius:0.5em;
-    -webkit-border-radius:0.5em;
-    box-shadow: 1px 1px 3px #fec13b;
-    -moz-box-shadow: 1px 1px 3px #fec13b;
-    -webkit-box-shadow: 1px 1px 3px #fec13b; */
+    letter-spacing: 0.2em;  
 }
 
 .botao-atividade button:hover{
@@ -322,5 +392,25 @@ input[type="checkbox"]:checked + label {
 	.texto-resposta{
         width: 90%;
         margin-right: 0;
+    }
+
+    .area-inputs, .area-opcoes{
+        display: block;
+        margin-left: 20px;
+    }
+
+    .caixa-drop_5_2, .caixa-drop_5_3{
+        display: inline-block;        
+    }
+    .caixa-drop_5_3{
+        font-size: 80%;
+        width: 120px;
+    }
+
+    .legenda-input{
+        display: block;        
+        width: 20px;
+        margin-bottom: -50px;
+        margin-left: -10px;
     }
 }
