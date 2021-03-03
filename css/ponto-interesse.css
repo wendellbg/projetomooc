@@ -407,6 +407,64 @@ Main components
     width: 40px !important;
     height: 40px !important;
   }
+
+  .ponto-imagem  .cd-single-point .cd-more-info{
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+/* Pontos com Imagem Infografico 1*/
+.ponto-imagem.infografico1 .cd-single-point > a{
+  width: 180px;
+  height: 180px;
+  background: #FEC13B !important;
+}
+
+.ponto-imagem.infografico1 .cd-single-point .cd-more-info li{
+  list-style-type: circle;
+  list-style-position: inside;
+  margin-bottom: 15px;
+  color: #758eb1;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.ponto-imagem.infografico1 .cd-single-point .cd-more-info ul{
+  margin-top: 15px;
+}
+
+.ponto-imagem.infografico1 .cd-single-point .cd-more-info{
+  width: 650px;
+  height: 250px;
+}
+
+.ponto-imagem.infografico1 .ponto3-uni3-tela4 .cd-more-info{
+  height: 350px;
+}
+
+/*.ponto-imagem.infografico1 .cd-single-point.is-open .cd-more-info.cd-top {*/
+/*  bottom: 120%;*/
+/*}*/
+
+/*.ponto-imagem.infografico1 .cd-single-point.is-open .cd-more-info.cd-bottom {*/
+/*  top: 120%;*/
+/*}*/
+
+
+@media screen and (max-width: 560px) {
+  .ponto-imagem.infografico1 .cd-single-point > a {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .ponto-imagem.infografico1 .ponto3-uni3-tela4 .cd-more-info,
+  .ponto-imagem.infografico1 .cd-single-point .cd-more-info{
+    width: 100%;
+    height: 100%;
+  }
+
 }
 
 
@@ -439,6 +497,22 @@ Main components
 .cd-single-point.ponto3-uni1-tela4{
   top: 75%;
   left: 5%;
+}
+
+
+.cd-single-point.ponto1-uni3-tela4{
+  top: 12%;
+  left: 15%;
+}
+
+.cd-single-point.ponto2-uni3-tela4{
+  bottom: 25%;
+  right: 42%;
+}
+
+.cd-single-point.ponto3-uni3-tela4{
+  top: 30%;
+  right: 15%;
 }
 
 .cd-single-point.titulo-bola{
