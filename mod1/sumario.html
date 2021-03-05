@@ -252,9 +252,10 @@
     font-size: 120px;
     width: 1em;
     height: 1em;
+    margin-left: auto;
     border-radius: 50%;
-    float: left;
-    margin: 0 0.1em 0.1em 0;
+    /* float: left; 
+    margin: 0 0.1em 0.1em 0; */    
     background-color: #cccccc;
   }
   .c100 *,
@@ -1089,24 +1090,47 @@
     color: #e08833;
   }
 
-  .link-unidade{  
-    border:#efefef solid 2px;
+  .link-unidade{     
+    border-radius: 8px;    
+    height: 360px;
+    width: 220px;
+    transition: all .2s ease-in-out;
+    position: relative;
+    text-align: center;
+    margin-bottom: 2em;
+    margin-right: 10px;
+    display: inline-block;
+    border-right: 1px solid #2a5caa;
+    border-left: 1px solid #2a5caa;
+    border-bottom: 1px solid #2a5caa;    
+    /* border:#efefef solid 2px;
     margin: 10% 0 0 10%;
     padding: 2em auto;  
     align-items: center;
     position: relative;  
     text-align: center;
-    float:left;
-    
+    float:left; */    
   }
+
+  .link-unidade:hover{
+    box-shadow: 0 0 8px 0 rgb(0 0 0 / 50%);
+  }
+
+  .imagem-area-card-unidade{
+    border-radius: 8px 8px 0 0;
+    height: 140px;
+    object-fit: cover;
+    width: 100%;
+  }
+
   .teste{
     display: inline-block;
   }
 
   #div-uni1{
-   background-color: #efefef;
-   border-color:#efefef;
-   border-radius: 4px;
+   background-color: #fff;
+   border-color:#2a5caa;
+   border-radius: 8px;
    border-top-width: 2px;   
  }
  #div-uni1 p {
@@ -1116,9 +1140,9 @@
    text-transform: uppercase;
  }
  #div-uni2{
-   background-color: #efefef;
-   border-color:#efefef;
-   border-radius: 4px; 
+   background-color: #fff;
+   border-color:#2a5caa;
+   border-radius: 8px; 
    border-top-width: 2px; 
  }
  #div-uni2 p {
@@ -1128,9 +1152,9 @@
    text-transform: uppercase;
  }
  #div-uni3{
-   background-color: #efefef;
-   border-color:#efefef;
-   border-radius: 4px;
+   background-color: #fff;
+   border-color:#2a5caa;
+   border-radius: 8px;
    border-top-width: 2px;  
  }
  #div-uni3 p {
@@ -1140,9 +1164,9 @@
    text-transform: uppercase;
  }
  #div-uni4{
-   background-color: #efefef;
-   border-color:#efefef;
-   border-radius: 4px;
+   background-color: #fff;
+   border-color:#2a5caa;
+   border-radius: 8px;
    border-top-width: 2px;  
  }
  #div-uni4 p {
@@ -1152,9 +1176,9 @@
    text-transform: uppercase;
  }
  #div-uni5{
-   background-color: #efefef;
-   border-color:#efefef;
-   border-radius: 4px;
+   background-color: #fff;
+   border-color:#2a5caa;
+   border-radius: 8px;
    border-top-width: 2px;  
  }
  #div-uni5 p {
@@ -1164,7 +1188,7 @@
    text-transform: uppercase;
  }
  #div-uni6{
-   background-color: #efefef;
+   background-color: #fff;
    border-color:#efefef;
    border-radius: 4px;
    border-top-width: 2px;  
@@ -1178,31 +1202,36 @@
  #circulo-uni1 {
    display: block;
    margin-top: 12px;
-   margin-left: 12px;
+   margin-left: auto;
+   margin-right: auto;
    margin-bottom: 20px;		
  }	
  #circulo-uni2 {
    display: block;
    margin-top: 12px;
-   margin-left: 12px;
+   margin-left: auto;
+   margin-right: auto;
    margin-bottom: 20px;	
  }
  #circulo-uni3 {
    display: block;
    margin-top: 12px;
-   margin-left: 12px;
+   margin-left: auto;
+   margin-right: auto;
    margin-bottom: 20px;	
  }
  #circulo-uni4 {
    display: block;
    margin-top: 12px;
-   margin-left: 12px;
+   margin-left: auto;
+   margin-right: auto;
    margin-bottom: 20px;	
  }
  #circulo-uni5 {
    display: block;
    margin-top: 12px;
-   margin-left: 12px;
+   margin-left: auto;
+   margin-right: auto;
    margin-bottom: 20px;	
  }
  #espaco{
@@ -1211,7 +1240,24 @@
   margin: 3em;
 }
 .bt-padrao {
+  border: 2px solid #2a5caa;
+  background-color: #2a5caa;
+  color: #fff;
+  border-radius: 24px;
+  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);   
+  font-weight: 400;
+  margin-right: 17px;
+  min-width: 160px;
+  padding: 5px 30px;
+  margin: auto;
+  text-transform: uppercase;
+  cursor: pointer;
   position: relative;
+  line-height: 2em;
+  line-height: 36px;
+
+
+  /* position: relative;
   background-color: #2a5caa;
   border: none;
   color: white;
@@ -1223,12 +1269,25 @@
   font-family: "Catamaran", sans-serif;    
   margin: 4px 2px 30px 2px;
   cursor: pointer;
-  border-radius: 12px;    
+  border-radius: 12px;     */
 }
 
 .caixa-sumario{
-  display: inline-block;
+  display: inline-block;  
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
 
+@media screen and (min-width: 480px) and (max-width: 767px){
+  .link-unidade {
+    width: 380px;
+    height: 500px;
+  }
+  .imagem-area-card-unidade{
+    height: 230px;
+  }
 }
 
 </style>
@@ -1279,6 +1338,7 @@
     <div class="content">    
       <div class="caixa-sumario">							
         <div class="link-unidade" id="div-uni1">
+          <img class="imagem-area-card-unidade" alt="Unidade 1" src="../img/padrao/01.jpg">
           <div class="c100 p0" id="circulo-uni1">
             <span id="progresso-uni1">0%</span>
             <div class="slice">
@@ -1286,11 +1346,12 @@
               <div class="fill"></div>
             </div>
           </div>								
-          <p>UNIDADE 1</p>
+          <!-- <p>UNIDADE 1</p> -->
           <span><a href="./uni1/tela01.html"><button class="bt-padrao">ACESSAR ></button></a></span>
         </div>
 
-        <div class="link-unidade" id="div-uni2">	
+        <div class="link-unidade" id="div-uni2">	          
+          <img class="imagem-area-card-unidade" alt="Unidade 1" src="../img/padrao/02.jpg">
           <div class="c100 p0" id="circulo-uni2">
           <span id="progresso-uni2">0%</span>
           <div class="slice">
@@ -1298,11 +1359,12 @@
             <div class="fill"></div>
           </div>
           </div>
-          <p>UNIDADE 2</p>
+          <!-- <p>UNIDADE 2</p> -->
           <span><a href="./uni2/tela01.html"><button class="bt-padrao">ACESSAR ></button></a></span>								
         </div>
 
-        <div class="link-unidade" id="div-uni3">	
+        <div class="link-unidade" id="div-uni3">          
+          <img class="imagem-area-card-unidade" alt="Unidade 1" src="../img/padrao/03.jpg">	
           <div class="c100 p0" id="circulo-uni3">
             <span id="progresso-uni3">0%</span>
             <div class="slice">
@@ -1310,11 +1372,12 @@
               <div class="fill"></div>
             </div>
           </div>
-          <p>UNIDADE 3</p>
+          <!-- <p>UNIDADE 3</p> -->
           <span><a href="./uni3/tela01.html"><button class="bt-padrao">ACESSAR ></button></a></span>
         </div>
 
         <div class="link-unidade" id="div-uni4">	
+          <img class="imagem-area-card-unidade" alt="Unidade 1" src="../img/padrao/04.jpg">
           <div class="c100 p0" id="circulo-uni4">
             <span id="progresso-uni4">0%</span>
             <div class="slice">
@@ -1322,11 +1385,12 @@
               <div class="fill"></div>
             </div>
           </div>
-          <p>UNIDADE 4</p>
+          <!-- <p>UNIDADE 4</p> -->
           <span><a href="./uni4/tela01.html"><button class="bt-padrao">ACESSAR ></button></a></span>								
         </div>
 
         <div class="link-unidade" id="div-uni5">	
+          <img class="imagem-area-card-unidade" alt="Unidade 1" src="../img/padrao/05.jpg">
           <div class="c100 p0" id="circulo-uni5">
             <span id="progresso-uni5">0%</span>
             <div class="slice">
@@ -1334,7 +1398,7 @@
               <div class="fill"></div>
             </div>
           </div>
-          <p>UNIDADE 5</p>
+          <!-- <p>UNIDADE 5</p> -->
           <span><a href="./uni5/tela01.html"><button class="bt-padrao">ACESSAR ></button></a></span>
         </div>
       </div>  
