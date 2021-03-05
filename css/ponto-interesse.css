@@ -428,6 +428,15 @@ Main components
   background: #FEC13B !important;
 }
 
+.ponto-imagem.infografico1 .cd-single-point > a:hover{
+  width: 190px;
+  height: 190px;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
 .ponto-imagem.infografico1 .cd-single-point .cd-more-info li{
   list-style-type: circle;
   list-style-position: inside;
@@ -471,6 +480,15 @@ Main components
   width: 80px;
   height: 80px;
   background: #FEC13B !important;
+}
+
+.ponto-imagem.infografico2 .cd-single-point > a:hover{
+  width: 90px;
+  height: 90px;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .ponto-imagem.infografico2 .cd-single-point .cd-more-info{
