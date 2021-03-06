@@ -142,9 +142,17 @@ html{
     display: inline-block;         
 }
 
-.referencias-categorias, .area-categorias, .linha-inputs{
+.referencias-categorias, .area-categorias{
     width: 95%;
     padding-left: 140px;      
+}
+
+.linha-inputs{
+    padding-left: 140px;
+    width: 95%;
+    height: 20px;
+    margin-top: -60px;    
+
 }
 
 .area-categorias, .linha-inputs{
@@ -155,24 +163,22 @@ html{
     padding: 0;
 }
 
-.linha-inputs{        
-    height: 20px;
-    margin-top: -60px;
-    
-}
-
 .referencias-categorias .texto-opcao, .input-categorias{    
     margin-right: 0;
     margin-top: -20px;
     position: absolute;
     z-index: 5;  
+    
 }
 
 .input-categorias{
     z-index: 2;
+    width: 10px;
+    margin-top: -10px;    
+    line-height: 10px;
 }
 
-.area-categorias .texto-opcao{
+.area-categorias .texto-cat{
     content: "";
     /* border: 2px dashed #fff; */
     position: absolute;
@@ -184,9 +190,15 @@ html{
     z-index: 2;
 }
 
-.area-categorias .texto-opcao:hover{
+.area-categorias .texto-cat:hover{
     /* background-color: #2a5caa;         */
     border: 2px dashed #fff;
+    
+}
+.area-categorias .texto-cat:hover + .area-legendas .texto-legenda{
+    opacity: 1;
+    transition: 0.3s;
+    z-index: 99;    
 }
 
 .referencias-categorias .cat1, .area-categorias .cat1, .linha-inputs .cat1{
@@ -262,6 +274,7 @@ html{
 
 .caixa-drop_2_1{
     height: 80px;
+    line-height: 100%;    
 }
 
 .caixa-drop_2_2{    
@@ -360,6 +373,23 @@ html{
     cursor: move;    
 }
 
+.texto-legenda{
+    /* display: none;  */
+    opacity: 0;
+    border-radius: 8px;
+    padding: 5px;    
+    position: fixed;
+    background-color: #fff;
+    border: 2px solid #010f36;
+    color: #010f36;
+    bottom: 5%;
+    left: 15%;    
+    margin-right: 25%;    
+    width: 70%;
+    text-align: left;
+    z-index: 99;
+}
+
 .area-radios{
     display: inline-block;
     width: 35%;
@@ -369,7 +399,7 @@ html{
 
 .area-radios input {
     position: absolute;
-    z-index: -1;
+    z-index: 2;
     opacity: 0;
 }
 
