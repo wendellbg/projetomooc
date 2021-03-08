@@ -92,10 +92,10 @@
 										<div class="linha-respostas">
 											<p class="legenda-resposta">Opções de Resposta:</p>
 											<div class="area-opcoes caixa-drop_5_1" id='opcao5_1_1' ondrop="drop(event)" ondragover="allowDrop(event)">
-												<span class="palavra-resposta" name='r5_1_texto_1' id='r5_1_texto_1' draggable="true" ondragstart="drag(event)">Estratégia “Pesquisa”</span>
+												<span class="palavra-resposta" name='r5_1_texto_1' id='r5_1_texto_1' draggable="true" ondragstart="drag(event)">Estratégia 'Pesquisa'</span>
 											</div>
 											<div class="area-opcoes caixa-drop_5_1" id='opcao5_1_2' ondrop="drop(event)" ondragover="allowDrop(event)">
-												<span class="palavra-resposta"  name='r5_1_texto_2' id='r5_1_texto_2' draggable="true" ondragstart="drag(event)">Estratégia “Ferramentas”</span>
+												<span class="palavra-resposta"  name='r5_1_texto_2' id='r5_1_texto_2' draggable="true" ondragstart="drag(event)">Estratégia 'Ferramentas'</span>
 											</div>											
 										</div>
 	
@@ -179,12 +179,9 @@
 											</div>
 											<div class="area-opcoes caixa-drop_5_3" id='opcao5_2_7' ondrop="drop(event)" ondragover="allowDrop(event)">
 												<span class="palavra-resposta" name='r5_2_texto_7' id='r5_2_texto_7' draggable="true" ondragstart="drag(event)">realidade laboral</span>
-											</div>
-												
-										</div>
-										
-									</div>                                 
-									
+											</div>												
+										</div>										
+									</div>    
 								</div> 
 							
 								<div class="botao-atividade">
@@ -279,7 +276,7 @@
 					erros++;
 				}else if(r5_2_6==null){
 					erros++;
-				}else if(r5_2_5==null){
+				}else if(r5_2_7==null){
 					erros++;
 				}
 
@@ -360,8 +357,7 @@
 					console.log("Resposta 2_4: "+r5_2_4.innerHTML);            
 					console.log("Resposta 2_5: "+r5_2_5.innerHTML);            
 					console.log("Resposta 2_6: "+r5_2_6.innerHTML);            
-					console.log("Resposta 2_7: "+r5_2_7.innerHTML);            
-			
+					console.log("Resposta 2_7: "+r5_2_7.innerHTML);           			
 				}	
 			};
 
@@ -375,7 +371,7 @@
 					mensagem.className = "mensagem-ok";
 					mensagem.style.display ="block";
 					//esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
-					mensagem.innerHTML="Dados Enviados com sucesso!<br />Sua nota foi: "+nota_atividade+"<br /><BR /><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR ></a>";
+					mensagem.innerHTML="Dados Enviados com sucesso!<br />Sua nota foi: "+nota_atividade+"<br /><BR /><a class='link-proxima-unidade' href='../sumario.html'>PROSSEGUIR ></a>";
 					console.log("Ocorreu tudo certo. Tem que aparecer o link");
 					window.scrollTo(0, 0);
 				}else{

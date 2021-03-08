@@ -168,6 +168,36 @@
 		},{
 			"identificador": "uni5_tela06",
 			"nome": "Concluindo"
-		}]
+		}],
+		"atividades": [
+			{
+				"identificador": "uni5_ativ1",
+				"nomeAtividade": "Avaliação - Unidade 5",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r5_1",
+						"enunciado": "Sobre as estratégias que o professor pode utilizar para ajudar os alunos no seu processo de escolha do campo ou curso profissional, relacione a estratégia com a sua ação.",
+						"gabaritos": [
+							{ "chave": "r5_1_1", "valor": "Estratégia 'Ferramentas'", "alternativa": "a) Ação: Ajudar o aluno a dominar ferramentas que o permita escolher uma área de interesse e possibilidades de formação." },
+							{ "chave": "r5_1_2", "valor": "Estratégia 'Pesquisa'", "alternativa": "b) Ação: Ajudar o aluno a encontrar informações necessárias para compreensão dos campos de atuação profissional e, assim, melhorar suas possibilidades de decisão." }							
+						]
+					},{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r5_2",
+						"enunciado": "Vimos que existem muitas formas do professor apoiar e fornecer subsídios para ajudar que as escolhas dos alunos sejam pessoais e não induzidas por influências externas. Complete o texto a seguir com alguns dos conceitos chaves das estratégias discutidas na unidade 5",
+						"gabaritos": [
+							{ "chave": "r5_2_1", "valor": "curiosidade", "alternativa": "Palavra 1" },
+							{ "chave": "r5_2_2", "valor": "profissionais da área", "alternativa": "Palavra 2" },					
+							{ "chave": "r5_2_3", "valor": "contextualizar os saberes", "alternativa": "Palavra 3" },
+							{ "chave": "r5_2_4", "valor": "realidade laboral", "alternativa": "Palavra 4" },
+							{ "chave": "r5_2_5", "valor": "possibilidades de aplicação", "alternativa": "Palavra 5" },
+							{ "chave": "r5_2_6", "valor": "professores ou divulgadores", "alternativa": "Palavra 6" },
+							{ "chave": "r5_2_7", "valor": "visita a uma escola técnica", "alternativa": "Palavra 7" }
+						]
+					}
+				]
+			}
+		]
 	}
 ]
