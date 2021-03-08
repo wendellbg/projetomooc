@@ -114,11 +114,13 @@ html{
 
 .linha-branca{
     width: 95%;
-    border: 2px solid #fff;
+    border: 2px solid #010f36;
     border-radius: 5px;
     margin-bottom: 15px;
-    z-index: 1;
+    padding-top: 0;
+    background-color: #2a5caa;    
 }
+
 
 .linha-branca .texto-resposta{
     width: 130px;
@@ -169,13 +171,20 @@ html{
     position: absolute;
     z-index: 5;  
     
+    
 }
 
 .input-categorias{
     z-index: 2;
     width: 10px;
-    margin-top: -10px;    
+    margin-top: -30px;    
     line-height: 10px;
+}
+
+.resposta-marcada{
+    background-color: #fec13b;
+    color: #010f36;
+    font-weight: bold;
 }
 
 .area-categorias .texto-cat{
@@ -192,7 +201,7 @@ html{
 
 .area-categorias .texto-cat:hover{
     /* background-color: #2a5caa;         */
-    border: 2px dashed #fff;
+    /* border: 2px dashed #fff; */
     
 }
 .area-categorias .texto-cat:hover + .area-legendas .texto-legenda{
