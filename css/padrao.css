@@ -1096,6 +1096,25 @@ header p {
     width: 100%;
 }
 
+/* Legenda Image */
+.legenda-img{
+    padding: 0 4rem 0.5rem;
+    text-align: center;
+    margin-top: -10% !important;
+    margin-bottom: 30px !important;
+    font-size: 14px !important;
+    line-height: 16px !important;
+}
+
+.legenda{
+    padding: 0 4rem 0.5rem;
+    text-align: center;
+    margin-top: 5px !important;
+    margin-bottom: 30px !important;
+    font-size: 14px !important;
+    line-height: 16px !important;
+}
+
 /* Tamanhos Image */
 .image.largura-60{
     padding: 0 20%;
@@ -1128,25 +1147,6 @@ header p {
         line-height: 12px !important;
     }
 
-}
-
-/* Legenda Image */
-.legenda-img{
-    padding: 0 4rem 0.5rem;
-    text-align: center;
-    margin-top: -10% !important;
-    margin-bottom: 30px !important;
-    font-size: 14px !important;
-    line-height: 16px !important;
-}
-
-.legenda{
-    padding: 0 4rem 0.5rem;
-    text-align: center;
-    margin-top: 5px !important;
-    margin-bottom: 30px !important;
-    font-size: 14px !important;
-    line-height: 16px !important;
 }
 
 

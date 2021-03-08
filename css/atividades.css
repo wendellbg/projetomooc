@@ -66,6 +66,11 @@ html{
     text-shadow: 1px 1px 2px #010f36, 0 0 20px #fff, 0 0 5px #fff;
 }
 
+.enunciado-questao ul{
+    list-style-position: inside;
+    list-style: disc;
+    margin-left: 20px;
+}
 .enunciado-questao p.link{
     text-align: center;
     margin-top: 2em;
@@ -107,6 +112,119 @@ html{
     width: 100%;  
 }
 
+.linha-branca{
+    width: 95%;
+    border: 2px solid #010f36;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding-top: 0;
+    background-color: #2a5caa;    
+}
+
+
+.linha-branca .texto-resposta{
+    width: 130px;
+    text-align: center;        
+}
+
+.categorias{    
+    width: 95%;    
+}
+
+.categorias .texto-resposta{
+    width: 100%;
+}
+.categorias .texto-opcao{
+    /* border: 2px dashed #fff; */
+    text-decoration: underline;
+    text-align: left;    
+    border-radius: 5px;
+    padding: 2px;
+    margin: 5px 0;
+    display: inline-block;         
+}
+
+.referencias-categorias, .area-categorias{
+    width: 95%;
+    padding-left: 140px;      
+}
+
+.linha-inputs{
+    padding-left: 140px;
+    width: 95%;
+    height: 20px;
+    margin-top: -60px;    
+
+}
+
+.area-categorias, .linha-inputs{
+    position: absolute;
+}
+.referencias-categorias .texto-resposta, .area-categorias .texto-resposta, .linha-inputs .texto-resposta{
+    width: 100%;
+    padding: 0;
+}
+
+.referencias-categorias .texto-opcao, .input-categorias{    
+    margin-right: 0;
+    margin-top: -20px;
+    position: absolute;
+    z-index: 5;  
+    
+    
+}
+
+.input-categorias{
+    z-index: 2;
+    width: 10px;
+    margin-top: -30px;    
+    line-height: 10px;
+}
+
+.resposta-marcada{
+    background-color: #fec13b;
+    color: #010f36;
+    font-weight: bold;
+}
+
+.area-categorias .texto-cat{
+    content: "";
+    /* border: 2px dashed #fff; */
+    position: absolute;
+    height: 1370px;
+    margin-top: -55px;
+    margin-right: -5px;
+    width: 20px;  
+    border-radius: 5px;  
+    z-index: 2;
+}
+
+.area-categorias .texto-cat:hover{
+    /* background-color: #2a5caa;         */
+    /* border: 2px dashed #fff; */
+    
+}
+.area-categorias .texto-cat:hover + .area-legendas .texto-legenda{
+    opacity: 1;
+    transition: 0.3s;
+    z-index: 99;    
+}
+
+.referencias-categorias .cat1, .area-categorias .cat1, .linha-inputs .cat1{
+    right: 85%;
+}
+.referencias-categorias .cat2, .area-categorias .cat2, .linha-inputs .cat2{
+    right: 65%;
+}
+.referencias-categorias .cat3, .area-categorias .cat3, .linha-inputs .cat3{
+    right: 45%;
+}
+.referencias-categorias .cat4, .area-categorias .cat4, .linha-inputs .cat4{
+    right: 25%;
+}
+.referencias-categorias .cat5, .area-categorias .cat5, .linha-inputs .cat5{
+    right: 5%;
+}
 
 .texto-resposta{    
     position: relative;
@@ -118,9 +236,17 @@ html{
     text-align: justify;   
 }
 
+.texto-opcao b{
+    color: #fff;
+    font-weight: bold;
+}
 .linha-grande {
     width: 95%;
     margin-right: 0;
+}
+
+.linha-menor{
+    width: 40%;
 }
 
 .area-inputs span.palavra-resposta{
@@ -153,6 +279,71 @@ html{
 
 .caixa-drop_1_2{
     height: 70px;
+}
+
+.caixa-drop_2_1{
+    height: 80px;
+    line-height: 100%;    
+}
+
+.caixa-drop_2_2{    
+    width: 95%; 
+    min-height: 40px;   
+}
+
+.caixa-drop_2_3{
+    width: 47.5%;
+    margin-left: 0;    
+    margin-right: 0;
+    border-radius: 0;
+    min-height: 50px;
+}
+
+.caixa-drop_2_3b{
+    width: 47.5%;
+    margin-left: 0;    
+    margin-right: 0;
+    border-radius: 0;
+    min-height: 50px;
+    border: 2px solid #fff;
+}
+
+.caixa-drop_2_3b .input-texto{
+    width: 100%;
+    min-height: 45px;   
+    font-size: 0.8em;
+    background-color: #fec13b;
+    border: 2px solid #010f36;
+    outline: none;
+}
+
+.caixa-drop_2_3b .input-texto:focus{
+    outline: none;
+    border: 2px solid #fec13b;    
+}
+
+.caixa-drop_2_3b .input-texto:placeholder-shown{
+    background-color: #fff;
+}
+
+.coluna-1, .coluna-2{
+    width: 50%;
+    border: 2px solid #fff;
+    padding: 5px;
+}
+
+.coluna-1{
+    float: left;
+}
+.coluna-2{
+    float: right;
+}
+
+.caixa-drop_2_3b .campo-inativo:placeholder-shown{
+    background-color: #777;        
+}
+.caixa-drop_2_3b .campo-inativo:focus{
+    border: 2px solid #777;    
 }
 
 .caixa-drop_5_1{
@@ -191,6 +382,23 @@ html{
     cursor: move;    
 }
 
+.texto-legenda{
+    /* display: none;  */
+    opacity: 0;
+    border-radius: 8px;
+    padding: 5px;    
+    position: fixed;
+    background-color: #fff;
+    border: 2px solid #010f36;
+    color: #010f36;
+    bottom: 5%;
+    left: 15%;    
+    margin-right: 25%;    
+    width: 70%;
+    text-align: left;
+    z-index: 99;
+}
+
 .area-radios{
     display: inline-block;
     width: 35%;
@@ -200,7 +408,7 @@ html{
 
 .area-radios input {
     position: absolute;
-    z-index: -1;
+    z-index: 2;
     opacity: 0;
 }
 
@@ -315,24 +523,46 @@ input[type="checkbox"]:checked + label {
 
 
 .botao-atividade button{
-    background:#010f36;
+    background:#266866;
     color:#ffffff;
     padding: 1em;
     border: 0;
     border-radius: 8px;
-    border: 2px solid #010f36;
+    border: 2px solid #266866;
     font-size: 1em;
     font-family: "Musket";
     outline: none;
     letter-spacing: 0.2em;  
 }
 
+.resposta-texto{
+    width: 95%;
+    margin: auto;
+    height: 200px;
+    padding: 0.5em;
+    color: #2a5caa;
+    font-size: 1em;
+    border-radius:8px;
+    /*box-shadow: 1px 1px 3px #000;*/
+    /*-moz-box-shadow: 1px 1px 3px #000;*/
+    /*-webkit-box-shadow: 1px 1px 3px #000;*/
+}
+
+.resposta-texto:focus{
+    outline: none;
+    border: 2px solid #fec13b;
+    /*box-shadow: 1px 1px 3px #fec13b;*/
+    /*-moz-box-shadow: 1px 1px 3px #fec13b;*/
+    /*-webkit-box-shadow: 1px 1px 3px #fec13b;*/
+
+}
+
 .botao-atividade button:hover{
     cursor: pointer;
     font-weight: bold;
     background-color: #fec13b;
-    color: #010f36;    
-    border-color: #010f36;
+    color: #266866;    
+    border-color: #266866;
 }
 
 .mensagem-alerta{
@@ -412,5 +642,35 @@ input[type="checkbox"]:checked + label {
         width: 20px;
         margin-bottom: -50px;
         margin-left: -10px;
+    }
+
+    .caixa-drop_2_2{
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .coluna-1, .coluna-2{
+        display: block;        
+        width: 100%;
+        margin-left: 0;
+        float: left;
+    }
+
+    .coluna-2{
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+    .caixa-drop_2_3{
+        width: 90%;
+        margin-left: 0;
+        margin-bottom: 0;
+        margin-top: 1em;
+    }
+
+    .caixa-drop_2_3b{
+        margin-top: 0;
+        width: 90%;
+        margin-left: 0;
+        font-size: 0.9em;
     }
 }
