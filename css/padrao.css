@@ -782,7 +782,7 @@ header p {
         content: "";
         position: absolute;
         border-radius: 8px;
-        top: -10%; bottom: -11%; left: -1%; right: -2%;
+        /*top: -10%; bottom: -11%; left: -1%; right: -2%; Erro de exibição em iphone*/
         z-index: -1;
         -webkit-transform: perspective(50em) rotateX(-30deg);
         transform: perspective(50em) rotateX(-30deg);
