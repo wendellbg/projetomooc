@@ -543,7 +543,8 @@ input[type="checkbox"]:checked + label {
     font-size: 1em;
     font-family: "Musket";
     outline: none;
-    letter-spacing: 0.2em;  
+    letter-spacing: 0.2em; 
+    transition: 0.3s; 
 }
 
 .resposta-texto{
@@ -574,6 +575,7 @@ input[type="checkbox"]:checked + label {
     background-color: #fec13b;
     color: #266866;    
     border-color: #266866;
+    transition: 0.3s; 
 }
 
 .mensagem-alerta{
