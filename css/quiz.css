@@ -5,29 +5,36 @@ html{
 .questao{
     background-color: #2a5caa;
     border-radius: 8px;
-    padding: 1em;
-    margin: 1em 0 2em 0;
+    padding: 1em 0;
+    margin: 1em 0 2em 1em;
     color: #fff;
     font-size: 1.5em;
 }
 
 .titulo-questao-imagem{   
-    font-family: "Musket", sans-serif;        
-    margin-left: -10px;    
+    font-family: "Musket", sans-serif;               
 }
 
 .titulo-questao-imagem img{
-    height: 120px;
-	position: absolute;
-	margin-left: -50px;
-	margin-top: -60px;
+    height: 120px;	
+	margin-right: 20px;	
+    float: right;
+    display: flex;
+    
 }
 
 .enunciado-questao{
     text-decoration: none   ;
-    padding-bottom:1em;
+    background-color: #fec13b;
+    color: #2a5caa;
+    width: 80%;
+    display: inline-block;
+    margin-left: -50px;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    padding-bottom:1em;    
     padding-left: 60px;
-    
+    padding-right: 10px;    
 }
 
 .area-respostas{
@@ -124,25 +131,25 @@ html{
 } */
 
 .botao-atividade button{
-    background:#2a5caa;
-    color:#ffffff;
-    padding: 1em;
-    border: 0;
+    background:#266866;
+    color:#fff;
+    border: 2px solid #266866;
+    padding: 1em;    
     border-radius: 8px;
     font-size: 1em;
     font-family: "Musket";
     outline: none;
     letter-spacing: 0.2em;
-    /* -moz-border-radius:0.5em;
-    -webkit-border-radius:0.5em;
-    box-shadow: 1px 1px 3px #fec13b;
-    -moz-box-shadow: 1px 1px 3px #fec13b;
-    -webkit-box-shadow: 1px 1px 3px #fec13b; */
+    transition: 0.3s;
 }
 
 .botao-atividade button:hover{
     cursor: pointer;
-    background-color: #020e36;
+    background-color: #fec13b;
+    color: #266866;
+    border: 2px solid #266866;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .mensagem-alerta{
