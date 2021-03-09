@@ -1127,13 +1127,13 @@
     display: inline-block;
   }
 
-  #div-uni1{
+  #div-uni1, #div-uni0{
    background-color: #fff;
    border-color:#2a5caa;
    border-radius: 8px;
    border-top-width: 2px;   
  }
- #div-uni1 p {
+ #div-uni1 p , #div-uni0 p{
    text-align: center;
    font-size: 18px;
    color: #898989;
@@ -1199,7 +1199,7 @@
    color: #898989;
    text-transform: uppercase;
  }
- #circulo-uni1 {
+ #circulo-uni1, #circulo-uni0 {
    display: block;
    margin-top: 12px;
    margin-left: auto;
@@ -1348,7 +1348,19 @@ header.special, .entire-menu{
       </header>
 
     <div class="content">    
-      <div class="caixa-sumario">							
+      <div class="caixa-sumario">		
+        <div class="link-unidade" id="div-uni0">
+          <img class="imagem-area-card-unidade" alt="Bem-vindo!" title='Bem-vindo!' src="../img/padrao/01.jpg">
+          <div class="c100 p0" id="circulo-uni0">
+            <span id="progresso-uni0">0%</span>
+            <div class="slice">
+              <div class="bar"></div>
+              <div class="fill"></div>
+            </div>
+          </div>								
+          <!-- <p>UNIDADE 1</p> -->
+          <span><a href="./uni1/tela01.html"><button class="bt-padrao">ACESSAR ></button></a></span>
+        </div>					
         <div class="link-unidade" id="div-uni1">
           <img class="imagem-area-card-unidade" alt="Educação Profissional no mundo contemporâneo" title='Educação Profissional no mundo contemporâneo' src="../img/padrao/01.jpg">
           <div class="c100 p0" id="circulo-uni1">

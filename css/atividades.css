@@ -118,13 +118,20 @@ html{
     border-radius: 5px;
     margin-bottom: 15px;
     padding-top: 0;
-    background-color: #2a5caa;    
+    /* background-color: #2a5caa;   */
+    z-index: 22;  
 }
 
 
 .linha-branca .texto-resposta{
     width: 130px;
-    text-align: center;        
+    text-align: center;  
+    z-index: 22;      
+}
+
+.linha-branca:hover{
+    border: 2px solid #fff;
+    z-index: 22;
 }
 
 .categorias{    
@@ -141,7 +148,8 @@ html{
     border-radius: 5px;
     padding: 2px;
     margin: 5px 0;
-    display: inline-block;         
+    display: inline-block; 
+    transition: 0.3s;        
 }
 
 .referencias-categorias, .area-categorias{
@@ -153,7 +161,7 @@ html{
     padding-left: 140px;
     width: 95%;
     height: 20px;
-    margin-top: -60px;    
+    margin-top: -40px;    
 
 }
 
@@ -168,17 +176,20 @@ html{
 .referencias-categorias .texto-opcao, .input-categorias{    
     margin-right: 0;
     margin-top: -20px;
-    position: absolute;
-    z-index: 5;  
+    position: absolute;     
     
     
 }
 
 .input-categorias{
-    z-index: 2;
+    
     width: 10px;
-    margin-top: -30px;    
+    margin-top: -30px;      
     line-height: 10px;
+}
+
+.input-categorias input{
+    margin-left: -4px;
 }
 
 .resposta-marcada{
@@ -196,18 +207,15 @@ html{
     margin-right: -5px;
     width: 20px;  
     border-radius: 5px;  
-    z-index: 2;
+    z-index: 1;
+    transition: 0.3s;
 }
 
-.area-categorias .texto-cat:hover{
-    /* background-color: #2a5caa;         */
-    /* border: 2px dashed #fff; */
-    
-}
-.area-categorias .texto-cat:hover + .area-legendas .texto-legenda{
-    opacity: 1;
-    transition: 0.3s;
-    z-index: 99;    
+/* .area-categorias .texto-cat:hover{ */
+.cat-hover{
+    background-color: #2a5caa; 
+    transition: 0.3s;   
+    z-index: 1;             
 }
 
 .referencias-categorias .cat1, .area-categorias .cat1, .linha-inputs .cat1{
@@ -396,7 +404,8 @@ html{
     margin-right: 25%;    
     width: 70%;
     text-align: left;
-    z-index: 99;
+    transition: 0.3s;
+    z-index: 99; 
 }
 
 .area-radios{
@@ -408,7 +417,7 @@ html{
 
 .area-radios input {
     position: absolute;
-    z-index: 2;
+    
     opacity: 0;
 }
 
