@@ -190,6 +190,8 @@ html{
 
 .input-categorias input{
     margin-left: -4px;
+    transform: scale(1.5);
+    color: #010f36;
 }
 
 .resposta-marcada{
@@ -213,7 +215,8 @@ html{
 
 /* .area-categorias .texto-cat:hover{ */
 .cat-hover{
-    background-color: #2a5caa; 
+    background-color: rgba(42, 92, 170, 0.5);
+    
     transition: 0.3s;   
     z-index: 1;             
 }
@@ -403,7 +406,7 @@ html{
     left: 15%;    
     margin-right: 25%;    
     width: 70%;
-    text-align: left;
+    text-align: center;
     transition: 0.3s;
     z-index: 99; 
 }
@@ -416,8 +419,7 @@ html{
 }
 
 .area-radios input {
-    position: absolute;
-    
+    position: absolute;    
     opacity: 0;
 }
 
