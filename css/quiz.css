@@ -32,7 +32,8 @@ html{
     margin-left: -50px;
     border-radius: 1em;
     margin-bottom: 1em;
-    padding-bottom:1em;    
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 60px;
     padding-right: 10px;    
 }

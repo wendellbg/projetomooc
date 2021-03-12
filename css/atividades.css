@@ -554,19 +554,12 @@ input[type="checkbox"]:checked + label {
     padding: 0.5em;
     color: #2a5caa;
     font-size: 1em;
-    border-radius:8px;
-    /*box-shadow: 1px 1px 3px #000;*/
-    /*-moz-box-shadow: 1px 1px 3px #000;*/
-    /*-webkit-box-shadow: 1px 1px 3px #000;*/
+    border-radius:8px;    
 }
 
 .resposta-texto:focus{
     outline: none;
     border: 2px solid #fec13b;
-    /*box-shadow: 1px 1px 3px #fec13b;*/
-    /*-moz-box-shadow: 1px 1px 3px #fec13b;*/
-    /*-webkit-box-shadow: 1px 1px 3px #fec13b;*/
-
 }
 
 .botao-atividade button:hover{

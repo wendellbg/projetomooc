@@ -106,7 +106,7 @@
 		"atividades": [
 			{
 				"identificador": "uni2_ativ1",
-				"nomeAtividade": "Avaliação - Unidade 2",				
+				"nomeAtividade": "Avaliação - Unidade 2 (Atividades 1 e 2)",				
 				"questoes": [
 					{
 						"tipoQuestaoString": "PROPORCIONAL",
@@ -145,6 +145,28 @@
 						]
 					}
 				]
+			},{					
+				"identificador": "uni2_ativ3",
+				"nomeAtividade": "Avaliação 2 - Unidade 2 (Atividade 3)",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "MODERADA",
+						"identificador": "r2_3",
+						"tipoEnvio": "TEXTO",
+						"enunciado": "Um dos ganhos do ensino médio é o desenvolvimento da autonomia do estudante para compor seu itinerário formativo. Considerando o ensino médio com a formação profissional em Estatística Aplicada, criee um itinerário formativo com diferentes componentes curriculares. Arraste e solte os componentes e defina sua carga horária levando em conta o limite de 2.400 horas."
+					}
+				]
+			},{
+				"identificador": "uni2_ativ4",
+				"nomeAtividade": "Avaliação - Unidade 2 (Atividade 4)",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "MODERADA",					
+						"identificador": "r2_4",
+						"tipoEnvio": "TEXTO",
+						"enunciado": "Como o novo ensino médio poderá ampliar as opções de atuação do aluno egresso no mundo do trabalho?"
+					}
+				]				
 			}
 		]
 	},{		
