@@ -157,3 +157,26 @@ h1, h2, h3, h4, h5, h6 {
 .botoes-navegacao a:hover input[type="radio"] + label:before{
 	background-color: #020e36;
 }
+
+.bt-avanca.atividades {
+	color: #2a5caa;
+	background-color: #fec13b;
+	border-right: 2px solid;
+	border-bottom: 2px solid;
+}
+
+.bt-avanca.atividades a {
+	color: #2a5caa;
+}
+
+.bt-avanca.atividades:hover a {
+	color: #fec13b;
+}
+
+.bt-avanca.atividades:hover {
+	background-color: #020e36;
+	border-color: #fff;
+}
+
+
+
