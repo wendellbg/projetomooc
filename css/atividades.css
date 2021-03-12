@@ -396,6 +396,7 @@ html{
 .texto-legenda{
     /* display: none;  */
     opacity: 0;
+    display:none;
     border-radius: 8px;
     padding: 5px;    
     position: fixed;

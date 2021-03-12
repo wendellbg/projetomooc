@@ -74,7 +74,7 @@ s
 
             <!-- Conteúdo -->
             <div class="content">
-                <div class="atividade" id='quiz-uni2'>
+                <div class="atividade" id='atividade-uni2'>
 					<div id='mensagem-alerta'>
 					</div>
                     <form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni2" method="POST">
@@ -813,7 +813,7 @@ s
 		}else{
 			console.log("\nChecando respostas: "+id_atividade);
 			//primeiro verifica dados salvos da primeira resposta. Se encontrar é porque já enviou anteriormente.		
-			API.obterRespostaAtividade("uni2_ativ1_induzindo_erro");
+			API.obterRespostaAtividade("uni2_ativ1");
 			if(erros>0){
 				return false;
 			}			
@@ -1035,6 +1035,7 @@ s
         texto_cat.classList.add("cat-hover");
         let texto_legenda =document.querySelector(".texto-legenda."+cat);
         texto_legenda.style.opacity=1;
+        texto_legenda.style.display="block";
     }
     function radio_hoverOut(cat){        
         let texto_opcao = document.querySelector(".texto-opcao."+cat);
@@ -1043,6 +1044,7 @@ s
         texto_cat.classList.remove("cat-hover");
         let texto_legenda =document.querySelector(".texto-legenda."+cat);
         texto_legenda.style.opacity=0;
+        texto_legenda.style.display="none";
     }
 </script>
 
