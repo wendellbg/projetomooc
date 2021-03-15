@@ -10,6 +10,7 @@
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-5XZ9DSX69N"></script>
+    <script src="../../js/DragDropTouch.js"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
@@ -73,7 +74,7 @@ s
 
             <!-- Conteúdo -->
             <div class="content">
-                <div class="atividade" id='quiz-uni2'>
+                <div class="atividade" id='atividade-uni1'>
 					<div id='mensagem-alerta'>
 					</div>
                     <form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni1" method="POST">
@@ -270,7 +271,7 @@ s
                             </div>
                             
                         <div class="botao-atividade">
-                            <button type="button" id="botao-atividade-uni1" onclick="salvarDados()" >ENVIAR RESPOSTAS</button>
+                            <button type="button" id="botao-atividade-uni1" onclick="salvarDados()" ><i class="fas fa-check"></i> ENVIAR RESPOSTAS</button>
                         </div>
                     </form>
                     
@@ -295,11 +296,12 @@ s
                         <p></p>
                         <img src="../../img/padrao/logo_mentoria.png" alt="IFSC">
                     </div>
-                    <div class="2u 12u$(small)">
+                    <div class="3u 12u$(small)">
                         <p>Realização:</p>
                         <img src="../../img/padrao/logo_mec.png" alt="IFSC">
+						<p class="small"><b>Secretaria de Educação Profissional e Tecnológica</b></p>
                     </div>
-                    <div class="4u 12u$(small)">
+                    <div class="3u 12u$(small)">
                         <p>Produção:</p>
                         <img src="../../img/padrao/ifsc.png" alt="IFSC">
                         <img src="../../img/padrao/ifes.png" alt="IFES">
@@ -418,7 +420,7 @@ s
             nota_atividade = evento.detail.data.nota;
             console.log(evento.detail["data"]);
             console.log("Atividades já foram enviadas antes.");            
-            mensagem.innerHTML = "Você já enviou estas respostas!<br />Sua nota foi: "+nota_atividade+"<br /><br /><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR ></a>";
+            mensagem.innerHTML = "Você já enviou estas respostas!<br />Sua nota foi: "+nota_atividade+"<br /><br /><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
             mensagem.className = "mensagem-ok";
             mensagem.style.dispay = "block";
             window.scrollTo(0, 0);
@@ -494,7 +496,7 @@ s
 			mensagem.className = "mensagem-ok";
 			mensagem.style.display ="block";
 			//esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
-            mensagem.innerHTML="Dados Enviados com sucesso!<br />Sua nota foi: "+nota_atividade+"<br /><BR /><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR ></a>";
+            mensagem.innerHTML="Dados Enviados com sucesso!<br />Sua nota foi: "+nota_atividade+"<br /><BR /><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
             console.log("Ocorreu tudo certo. Tem que aparecer o link");
 			window.scrollTo(0, 0);
         }else{
