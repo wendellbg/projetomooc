@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	 <link rel="stylesheet" href="../../css/mooc1.css?ver=1.1" />
 	<link rel="stylesheet" href="../../css/quiz.css?ver=1.1" />
+	<link rel="stylesheet" href="../../css/boxes.css?ver=1.1"/>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-5XZ9DSX69N"></script>
@@ -70,11 +71,14 @@
 					<div id='mensagem-alerta'>
 					</div>
 
+					<div class="image fit flush largura-90">
+						<img src="../../img/uni2/MOOC1_Uni2_tela2_capa_quiz.jpg">
+					</div>
 					<form action="#" onsubmit="salvarDados(this); return false;" name="form_quiz_uni2" method="POST">
 						<div class="questao">
-							<div class="titulo-questao-imagem">
-								<img src="../../img/padrao/icon_atencao.gif" />							
+							<div class="titulo-questao-imagem">														
 								<div class="enunciado-questao">Como foi seu Ensino Médio?</div>
+								<img src="../../img/uni2/MOOC1_Uni2_tela02_icone_quiz.png" />	
 							</div>
 							<div class="area-respostas">
 								<div class='opcao-resposta'>
@@ -101,8 +105,9 @@
 						</div>
 
 						<div class="questao">
-							<div class="titulo-questao-imagem"><img src="../../img/padrao/icon_atencao.gif" />							
+							<div class="titulo-questao-imagem">
 								<div class="enunciado-questao">Como você acredita que foi o Ensino Médio dos outros alunos deste curso? E da maioria dos alunos pelo Brasil?</div>
+								<img src="../../img/uni2/MOOC1_Uni2_tela02_icone_quiz.png" />	
 							</div>
 							<div class="area-respostas">
 								<textarea class="resposta-texto" id='resposta_2_texto' name='resposta_2_texto' required></textarea>
@@ -110,8 +115,9 @@
 						</div>
 
 						<div class="questao">
-							<div class="titulo-questao-imagem"><img src="../../img/padrao/icon_atencao.gif" />							
+							<div class="titulo-questao-imagem">
 								<div class="enunciado-questao">Você tem ideia do percentual de seus colegas do terceiro ano do ensino médio que entraram na faculdade?</div>
+								<img src="../../img/uni2/MOOC1_Uni2_tela02_icone_quiz.png" />
 							</div>
 							<div class="area-respostas">
 								<div class="opcao-resposta">
@@ -135,6 +141,7 @@
 									<label for="resposta_3_5" class="texto-opcao">Mais de 70%</label>
 								</div>
 							</div>
+							<p></p>
 							
 							<div class="titulo-questao-imagem">														
 								<div class="enunciado-questao">E o que te faz chegar na resposta acima?</div>
@@ -145,16 +152,16 @@
 						</div>
 
 						<div class="questao">
-							<div class="titulo-questao-imagem">
-								<img src="../../img/padrao/icon_atencao.gif" />							
+							<div class="titulo-questao-imagem">														
 								<div class="enunciado-questao">Que importância tem para você uma formação profissional durante o Ensino Médio?</div>
+								<img src="../../img/uni2/MOOC1_Uni2_tela02_icone_quiz.png" />
 							</div>
 							<div class="area-respostas">
 								<textarea class="resposta-texto" id='resposta_4_texto' required></textarea>
 							</div>
 						</div>
 						<div class="botao-atividade">
-							<button type="button" id="botao-quiz-uni2" onclick="salvarDados()" >ENVIAR RESPOSTAS</button>
+							<button type="button" id="botao-quiz-uni2" onclick="salvarDados()" ><i class="fas fa-check"></i> ENVIAR RESPOSTAS</button>
 						</div>
 					</form>
 				</div>
@@ -169,7 +176,7 @@
 						<a href="#"><i class="fas fa-angle-up"></i></a>
 					</div>
 					<div>
-						<button class="bt-avanca" type="button"><a href="tela03.html">PROSSEGUIR ></a></button>
+						<!-- <button class="bt-avanca" type="button"><a href="tela03.html">PROSSEGUIR &#10095;</a></button> -->
 					</div>
 					<div class='botoes-navegacao'>
 						<a href="tela01.html"><button class="bt-navegacao" type="button"><</button></a>
@@ -194,11 +201,12 @@
 						<p></p>
 						<img src="../../img/padrao/logo_mentoria.png" alt="IFSC">
 					</div>
-					<div class="2u 12u$(small)">
+					<div class="3u 12u$(small)">
 						<p>Realização:</p>
 						<img src="../../img/padrao/logo_mec.png" alt="IFSC">
+						<p class="small"><b>Secretaria de Educação Profissional e Tecnológica</b></p>
 					</div>
-					<div class="4u 12u$(small)">
+					<div class="3u 12u$(small)">
 						<p>Produção:</p>
 						<img src="../../img/padrao/ifsc.png" alt="IFSC">
 						<img src="../../img/padrao/ifes.png" alt="IFES">
@@ -301,7 +309,7 @@
 				// **************** (VER COM EQUIPE) *****************
 				var resposta = evento.detail["data"][0]["valor"];
 				console.log(evento.detail["data"]);
-				mensagem.innerHTML = "Você já enviou estas respostas<br /><br /><a class='link-proxima-unidade' href='tela02.html'>PROSSEGUIR ></a>";
+				mensagem.innerHTML = "Você já enviou estas respostas<br /><br /><a class='link-proxima-unidade' href='tela03.html'>PROSSEGUIR &#10095;</a>";
 				mensagem.className = "mensagem-ok";
 				mensagem.style.dispay = "block";
 				window.scrollTo(0, 0);
@@ -375,7 +383,7 @@
 			//se não houver erro, envia o form
 			mensagem.className = "mensagem-ok";
 			mensagem.style.display ="block";
-			mensagem.innerHTML="Dados Enviados com sucesso!<br /><BR /><a class='link-proxima-unidade' href='tela02.html'>PROSSEGUIR ></a>";
+			mensagem.innerHTML="Dados Enviados com sucesso!<br /><BR /><a class='link-proxima-unidade' href='tela03.html'>PROSSEGUIR &#10095;</a>";
 			console.log("ocorreu tudo certo. Tem que aparecer o link");
 			window.scrollTo(0, 0);
 		}
