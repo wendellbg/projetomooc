@@ -5,6 +5,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
+	<link rel="stylesheet" href="../../css/introjs.min.css" />
 	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-5XZ9DSX69N"></script>
@@ -18,6 +19,11 @@
 
 	<script src="../../js/jquery-2.1.1.js"></script>
 	<script src="../../js/bt-topo.js"></script> <!-- Botão de Voltar ao Topo -->
+	<style>
+		.intro-atividade{
+			padding-top: 8px;
+		}
+	</style>
 	
 
 </head>
@@ -30,16 +36,15 @@
 		<h3>Educação Profissional no mundo contemporâneo</h3>
 	</div>
 </header>
-s
+
 <!-- Main -->
 <section id="main">
 	<div class="inner">
 		<!-- One -->
 		<section id="one" class="wrapper style1">
 
-			<div class="botao-sumario">				
-					<span class='link-visivel'><a href="../sumario.html">S</a></span>			
-					<span class='link-hover'><a href="../sumario.html">SUMÁRIO DO CURSO</a></span>				
+			<div class="botao-sumario">
+					<a class="link-progresso" href="../sumario.html"><i class="fas fa-tasks"></i> PROGRESSO</a>
 			</div>
 			<header class="special">
 				<div class="entire-menu">
@@ -51,7 +56,7 @@ s
 							<input type="checkbox" id="change-hamburguer" />
 							<a class="hamburguer" href="#">
 								<span></span>
-								<label for="change-hamburguer"></label>
+								<label class="intro-menu" for="change-hamburguer"></label>
 							</a>
 							<div class="menu">
 								<a href="tela01.html" class='titulo-menu'>UNIDADE 1</a>
@@ -98,7 +103,7 @@ s
 						<a href="tela04.html"><input type="radio" name="radio"><label for="radio"></label></a>
 						<a href="tela05.html"><input type="radio" name="radio"><label for="radio"></label></a>
 						<a href="tela06.html"><input type="radio" name="radio"><label for="radio"></label></a>
-						<a href="tela07.html"><input type="radio" name="radio"><label for="radio"></label></a>
+						<a class="intro-atividade" href="tela07.html"><input type="radio" name="radio"><label for="radio"></label></a>
 
 						<a href="tela02.html"><button class="bt-navegacao" type="button">></button></a>
 					</span>
@@ -211,5 +216,39 @@ s
 	};
 
 </script>
+
+<script src="../../js/intro.min.js"></script>
+<script>
+	introJs().setOptions({
+		steps: [{
+			title: 'Olá 👋',
+			intro: 'Aprenda a navegar nas páginas das unidades.'
+		},
+			{
+				title: 'Menu',
+				element: document.querySelector('.intro-menu'),
+				intro: 'Aqui você encontra os temas de cada tela da unidade.'
+			},
+			{
+				title: 'Prosseguir',
+				element: document.querySelector('.bt-avanca'),
+				intro: 'Este botão está no final de cada tela da unidade.'
+			},
+			{
+				title: 'Atividade',
+				element: document.querySelector('.intro-atividade'),
+				intro: 'Na última tela, você encontra a Atividade Avaliativa daquela unidade.'
+			},
+			{
+				title: 'Progresso',
+				element: document.querySelector('.link-progresso'),
+				intro: 'Clicando aqui, você visualiza o seu progresso em todo o curso.'
+			}]
+	}).start();
+
+	//Intro.js scans the webpage and finds all elements with `data-intro` attribute
+	//introJs().start();
+</script>
+
 </body>
 </html>
