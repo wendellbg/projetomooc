@@ -144,11 +144,11 @@
 	console.clear(screen);
 
 	var API = new BridgeRestApi();
-	var id_unidade = "mod1_uni1";
-	var id_slide = "uni1/tela02.html";
-	var progresso = 28;
+	var id_unidade = "mod1_uni0";
+	var id_slide = "uni0/tela02.html";
+	var progresso = 100;
 	var progressoSalvo;
-	var porcentagem = "porcentagemUni1";
+	var porcentagem = "porcentagemUni0";
 
 	//Obtendo dados curso
 	window.addEventListener('load', function(){
@@ -193,6 +193,7 @@
 
 			if(progressoSalvo < progresso){
 				//registrando a porcentagem da Unidade 1
+				
 				API.registrarDadosGenericos(porcentagem,progresso);
 				console.log('Registrando nova porcentagem: '+progresso);
 			}else{
