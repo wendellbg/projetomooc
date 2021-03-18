@@ -1474,6 +1474,9 @@
   console.log("Começando o teste");
   window.addEventListener('load', function(){
     //o for vai criar o array com as chaves das unidades e chamar a função obterDadosGenericos com essas chaves
+    console.log("\n\nUnidade 0");
+    //primeiro verifica os dados salvos
+    API.obterDadosGenericos("porcentagemUni0");
     console.log("\n\nUnidade 1");
     //primeiro verifica os dados salvos
     API.obterDadosGenericos("porcentagemUni1");
@@ -1502,6 +1505,14 @@
       var porcentagem = evento.detail["data"][0]["valor"];
       console.log(evento.detail["data"]);
       switch (evento.detail["data"][0]["chave"]){
+        case "porcentagemUni0":
+          console.log("Unidade 0 tem "+(porcentagem)+"% concluída");
+          progresso = document.getElementById("progresso-uni0");
+          circulo = document.getElementById("circulo-uni0");
+          progresso.innerHTML=""+porcentagem+"%";
+          circulo.className="c100 p"+porcentagem;
+          break;
+          
         case "porcentagemUni1":
           console.log("Unidade 1 tem "+(porcentagem)+"% concluída");
           progresso = document.getElementById("progresso-uni1");
@@ -1543,6 +1554,11 @@
       //se a unidade não foi iniciada, registra os dados Genéricos da unidade com 0%
     }else{
       switch (evento.detail["data"][0]["chave"]){
+        case "porcentagemUni0":
+          API.registrarDadosGenericos("porcentagemUni0",0);
+          console.log("Porcentagem da Unidade 0 Iniciada");
+          break;
+
         case "porcentagemUni1":
           API.registrarDadosGenericos("porcentagemUni1",0);
           console.log("Porcentagem da Unidade 1 Iniciada");
