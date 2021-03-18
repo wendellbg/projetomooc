@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
 	<link rel="stylesheet" href="../../css/introjs.min.css" />
+	<link rel="stylesheet" href="../../css/boxes.css?ver=1.4"/>
 	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-5XZ9DSX69N"></script>
@@ -47,6 +48,9 @@
 					<a class="link-progresso" href="../sumario.html"><i class="fas fa-tasks"></i> PROGRESSO</a>
 			</div>
 			<header class="special">
+				<div class="div-intro">
+					<a class="class_name" href="javascript:void(0);" onclick="javascript:introguide.start();"><button class="bt-link-externo" type="button"><i class="fas fa-question-circle"></i> Dicas sobre este ambiente</button></a>
+				</div>
 				<div class="entire-menu">
 					<div class="menu-tit">
 						<div class="menu-tit-col1">
@@ -219,7 +223,8 @@
 
 <script src="../../js/intro.min.js"></script>
 <script>
-	introJs().setOptions({
+
+	var introguide = introJs().setOptions({
 		steps: [{
 			title: 'Olá 👋',
 			intro: 'Aprenda a navegar nas páginas das unidades.'
@@ -244,7 +249,29 @@
 				element: document.querySelector('.link-progresso'),
 				intro: 'Clicando aqui, você visualiza o seu progresso em todo o curso.'
 			}]
-	}).start();
+	});
+
+	// var introguide = introJs();
+	// and check for it when deciding whether to start.
+	window.addEventListener('load', function () {
+		var doneTour = localStorage.getItem('IntroUnidade') === 'Concluido';
+		if (doneTour) {
+			return;
+		}
+		else {
+			introguide.start()
+
+			introguide.oncomplete(function () {
+				localStorage.setItem('IntroUnidade', 'Concluido');
+			});
+
+			introguide.onexit(function () {
+				localStorage.setItem('IntroUnidade', 'Concluido');
+			});
+		}
+	});
+
+
 
 	//Intro.js scans the webpage and finds all elements with `data-intro` attribute
 	//introJs().start();
