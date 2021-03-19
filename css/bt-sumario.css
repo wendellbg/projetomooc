@@ -1,7 +1,7 @@
 .botao-sumario{
     position: absolute;
-    top: 5%;
-    left: 5%; 
+    top: 4%;
+    left: 4%;
     margin: 0;    
 }
 
@@ -28,12 +28,12 @@
     /* display: none; */
     overflow: hidden;
     opacity: 0;
-    transition: all 0.5s ease;    
+    transition: all 0.5s ease;
 }
 
 .botao-sumario:hover .link-visivel{
     opacity: 0;
-    transition: all 0.5s ease;      
+    transition: all 0.5s ease;
 }
 .botao-sumario:hover .link-hover{
     /* display: inline; */
@@ -50,3 +50,20 @@
     padding-left: 15px;
     transition: all 0.5s ease;
 }
+
+.botao-sumario .link-progresso{
+    background-color: #fff;
+    color:#2a5caa;
+    opacity:0.9;
+    border-radius: 10px;
+    margin:0;
+    padding: 10px 15px;
+}
+
+.botao-sumario .link-progresso:hover{
+    background-color: #fec13b;
+
+}
+
+
+
