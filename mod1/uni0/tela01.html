@@ -60,17 +60,18 @@
 					
 				</div>
 			</header>
-			<div class="content">
-			</div>
-			<div class="video fundo-claro">
-				<div class='titulo-video'><span>Título</span></div>
+
+
+
+			<div class="video">
+				<div class='titulo-video'><span>Desafios da Educação Profissional no Brasil</span></div>
 				<div class='video-player'>
 					<iframe width="720" height="405" src="https://www.youtube.com/embed/_q_B_zkEn68" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
-				<div class="downloads">
-					<a target="_blank" href="../../downloads/#"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do vídeo</button></a>
-					<a target="_blank" href="../../downloads/#"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o áudio do vídeo</button></a>
-				</div>
+                </div>
+                <div class="downloads">
+                    <a target="_blank" href="../../downloads/Un1-video.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do vídeo</button></a>
+                    <a target="_blank" href="../../downloads/Un1-video.mp3"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o áudio do vídeo</button></a>
+                </div>
 			</div>
 
 
@@ -126,9 +127,9 @@
 	console.clear(screen);
 
 	var API = new BridgeRestApi();
-	var id_unidade = "mod01_uni0";
+	var id_unidade = "mod1_uni0";
 	var id_slide = "uni0/tela01.html";
-	var progresso = 14;
+	var progresso = 50;
 	var progressoSalvo;
 	var porcentagem = "porcentagemUni0";
 
@@ -168,7 +169,6 @@
 						i=1;
 					}
 				}
-
 			}
 
 			//depois que encontrar a posição certa, verifica o progresso atual
@@ -187,7 +187,7 @@
 		}else if(evento.detail["status"]==412){
 			//se for status 400, inicia a chave da porcentagem da unidade em questão
 			console.log("Inicializando a porcentagem da unidade");
-			API.registrarDadosGenericos(porcentagem,14);
+			API.registrarDadosGenericos(porcentagem,50);
 		}
 	};
 
@@ -196,6 +196,10 @@
 		console.log("Verificando porcentagem registrada");
 		console.log(evento.detail);
 	};
+
+	document.getElementById('link-pesquisa').addEventListener('click', function(){
+  		location.replace('tela02.html');
+	});
 
 </script>
 

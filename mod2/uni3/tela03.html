@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../../css/mooc1.css?ver=1.1"/>
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2"/>
+    <link rel="stylesheet" href="../../css/podcast.css?ver=1.1"/>
 </head>
 <body>
 
@@ -85,11 +86,27 @@
             </div>            
 
             <!-- Imagem Única-->
-            <div class="image fit flush largura-70">
-                <img src=" ../../img/uni3/MOOC2_UNIDADE3_Tela03_Imagem01.jpg" alt="Imagem 1">
-                <p class="legenda-img"></p>
-            </div>
-            <br>                        
+            <div class="content no-top">
+                <div class="image fit flush largura-70">
+                    <img src=" ../../img/uni3/MOOC2_UNIDADE3_Tela03_Imagem01.jpg" alt="Imagem professor ensinando alunos a soldar">
+                    <p class="legenda-img"></p>
+                </div>
+            </div>    
+
+            <br>
+            
+            <div class="content no-top">
+                <div class="icone-audio">
+                    <a class='icone-play' id="botao-play-podcast" onclick="playShowPod()"><img src="../../img/uni3/icone-audio.png"/></a>
+                    <a class="icone-pause" id="botao-pause-podcast" onclick="pauseShowPod()" style="display:none;"><img src="../../img/uni3/icone-audio2.gif" /></a>
+                    <audio id='playerPodcast' class='controles-podcast' controls='controls'>
+                        <source src="../../img/uni3/audio_1.mp3" type="audio/mp3" />Seu navegador não suporta HTML5 -->
+                    </audio>
+                    <div class="downloads">
+                        <a target="_blank" href="../../downloads/Un3-podcast.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
+                    </div>
+                </div>               
+            </div>                        
 
             <!-- Conteúdo Footer -->
             <div class="content footer">
