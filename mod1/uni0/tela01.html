@@ -5,7 +5,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
-	<link rel="stylesheet" href="../../css/boxes.css?ver=1.4" />
+	<link rel="stylesheet" href="../../css/boxes.css?ver=1.5" />
 	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-5XZ9DSX69N"></script>
@@ -19,7 +19,6 @@
 
 	<script src="../../js/jquery-2.1.1.js"></script>
 	<script src="../../js/bt-topo.js"></script> <!-- Botão de Voltar ao Topo -->
-	
 
 </head>
 <body>
@@ -30,7 +29,7 @@
 		<a href="tela01.html">BOAS-VINDAS</a>
 	</div>
 </header>
-s
+
 <!-- Main -->
 <section id="main">
 	<div class="inner">
@@ -38,8 +37,7 @@ s
 		<section id="one" class="wrapper style1">
 
 			<div class="botao-sumario">				
-					<span class='link-visivel'><a href="../sumario.html">S</a></span>			
-					<span class='link-hover'><a href="../sumario.html">SUMÁRIO DO CURSO</a></span>				
+					<a class="link-progresso" href="../sumario.html"><i class="fas fa-tasks"></i> PROGRESSO</a>
 			</div>
 			<header class="special">
 				<div class="entire-menu">
@@ -65,43 +63,29 @@ s
 
 
 
-
 			<div class="video">
 				<div class='titulo-video'><span>Desafios da Educação Profissional no Brasil</span></div>
 				<div class='video-player'>
-					<iframe width="720" height="405" src="https://www.youtube.com/embed/_q_B_zkEn68" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
-				<div class="downloads">
-					<a target="_blank" href="../../downloads/#"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do vídeo</button></a>
-					<a target="_blank" href="../../downloads/#"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o áudio do vídeo</button></a>
-				</div>
 			</div>
-			<div class="content">
-				<p>Bem-vindo ao curso Educação Profissional: Estrutura e Possibilidades Formativas. Este é um curso on-line, no qual você terá acesso a conteúdos interativos, indicações de leituras complementares e reflexões teórico-práticas voltadas para atuação do professor no processo de <b>mentoria dos alunos</b> para a escolha de seu itinerário de formação.</p>
-				<p>O curso tem <b>5 unidades</b> formado por conceitos teóricos, atividades reflexivas e avaliativas. O tempo de dedicação previsto para a conclusão do curso é de <b>40 horas</b>. É importante que você divida o seu tempo semanalmente durante o período do curso para a conclusão das atividades previstas.</p>
-				<p>Antes de começarmos, gostaríamos de conhecer você melhor, assim como suas expectativas com relação ao curso. Não deixe de responder ao questionário, a seguir.</p>
-			</div>
+
 
 			<!-- Conteúdo Footer -->
 			<div class="content footer">
-				<div>
-					<button class="bt-avanca atividades" type="button"><a href="https://hmg.labtime.ufg.br/avamec/#/instituicao/setec/curso/6116/turma/6136/ferramenta/pesquisa/3743/responder" target="_blank" id="link-pesquisa"><i class="fas fa-question-circle"></i> QUESTIONÁRIO &#10095;&#10095;</a></button>
+				<div class='navegacao'>
+					<div class="bt-topo">
+						<a href="#"><i class="fas fa-angle-up"></i></a>
+					</div>
+					<div><button class="bt-avanca" type="button"><a href="tela02.html">PROSSEGUIR &#10095;</a></button></div>
+					<div class='botoes-navegacao'>
+						<button class="bt-navegacao desativado" type="button"><</button>
+
+						<a href="tela01.html"><input type="radio" checked name="radio"><label for="radio"></label></a>
+						<a href="tela02.html"><input type="radio" name="radio"><label for="radio"></label></a>
+
+						<a href="tela02.html"><button class="bt-navegacao" type="button">></button></a>
+					</div>
+					<span class="legenda">1 de 2</span>
 				</div>
-<!--				<div class='navegacao'>-->
-<!--					<div class="bt-topo">-->
-<!--						<a href="#"><i class="fas fa-angle-up"></i></a>-->
-<!--					</div>-->
-<!--					<div><button class="bt-avanca" type="button"><a href="tela02.html">PROSSEGUIR &#10095;</a></button></div>-->
-<!--					<div class='botoes-navegacao'>-->
-<!--						<button class="bt-navegacao desativado" type="button"><</button>-->
-
-<!--						<a href="tela01.html"><input type="radio" checked name="radio"><label for="radio"></label></a>-->
-<!--						<a href="tela02.html"><input type="radio" name="radio"><label for="radio"></label></a>-->
-
-<!--						<a href="tela02.html"><button class="bt-navegacao" type="button">></button></a>-->
-<!--					</div>-->
-<!--					<span class="legenda">1 de 7</span>-->
-<!--				</div>-->
 
 				<!--Rodapé-->
 				<hr/>
@@ -212,5 +196,6 @@ s
 	});
 
 </script>
+
 </body>
 </html>
