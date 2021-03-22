@@ -276,9 +276,15 @@ h3.texto-central b{
 	position: relative;
 	margin: auto;
 	background-size: cover;
+	background-position: center;
 	background-repeat: no-repeat;
 	padding: 50px 8rem;
 	margin-bottom: 40px;
+}
+
+.video.fundo-claro{
+	background-image: url(../img/padrao/bg_video_02.png);
+	background-color: transparent;
 }
 
 .video-player {
@@ -333,6 +339,11 @@ h3.texto-central b{
 	text-shadow: 0px 0px 5px black;
 }
 
+.fundo-claro .titulo-video,
+.fundo-claro .titulo-video span{
+	color: #2A5CAA;
+	text-shadow: none;
+}
 
 @media screen and (max-width:560px){
 	.titulo-video span{
