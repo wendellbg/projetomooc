@@ -67,7 +67,7 @@ s
 
 
 			<div class="video">
-				<div class='titulo-video'><span>Título</span></div>
+				<div class='titulo-video'><span>Desafios da Educação Profissional no Brasil</span></div>
 				<div class='video-player'>
 					<iframe width="720" height="405" src="https://www.youtube.com/embed/_q_B_zkEn68" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
@@ -85,7 +85,7 @@ s
 			<!-- Conteúdo Footer -->
 			<div class="content footer">
 				<div>
-					<button class="bt-avanca atividades" type="button"><a href="#"><i class="fas fa-question-circle"></i> QUESTIONÁRIO &#10095;&#10095;</a></button>
+					<button class="bt-avanca atividades" type="button"><a href="https://hmg.labtime.ufg.br/avamec/#/instituicao/setec/curso/6116/turma/6136/ferramenta/pesquisa/3743/responder" target="_blank" id="link-pesquisa"><i class="fas fa-question-circle"></i> QUESTIONÁRIO &#10095;&#10095;</a></button>
 				</div>
 <!--				<div class='navegacao'>-->
 <!--					<div class="bt-topo">-->
@@ -137,11 +137,11 @@ s
 	console.clear(screen);
 
 	var API = new BridgeRestApi();
-	var id_unidade = "mod1_uni1";
-	var id_slide = "uni1/tela01.html";
-	var progresso = 14;
+	var id_unidade = "mod1_uni0";
+	var id_slide = "uni0/tela01.html";
+	var progresso = 50;
 	var progressoSalvo;
-	var porcentagem = "porcentagemUni1";
+	var porcentagem = "porcentagemUni0";
 
 	//Obtendo dados curso
 	window.addEventListener('load', function(){
@@ -179,7 +179,6 @@ s
 						i=1;
 					}
 				}
-
 			}
 
 			//depois que encontrar a posição certa, verifica o progresso atual
@@ -198,7 +197,7 @@ s
 		}else if(evento.detail["status"]==412){
 			//se for status 400, inicia a chave da porcentagem da unidade em questão
 			console.log("Inicializando a porcentagem da unidade");
-			API.registrarDadosGenericos(porcentagem,14);
+			API.registrarDadosGenericos(porcentagem,50);
 		}
 	};
 
@@ -207,6 +206,10 @@ s
 		console.log("Verificando porcentagem registrada");
 		console.log(evento.detail);
 	};
+
+	document.getElementById('link-pesquisa').addEventListener('click', function(){
+  		location.replace('tela02.html');
+	});
 
 </script>
 </body>
