@@ -235,121 +235,25 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
+
+<!-- Funções de acesso à biblioteca do Avamec-->
+<script src="../../js/funcoes-4.js"></script>
 <script>
 	console.clear(screen);
 
 	var API = new BridgeRestApi();
 	var id_unidade = "mod1_uni2";
-	var id_slide = "uni2/tela02.html";
-	var progresso = 28;
-	var progressoSalvo;
-	var porcentagem = "porcentagemUni2";
-	var verificando_quais_dados=1;
-	var erros = 0;
-
+	var id_slide = "uni2/tela02.html";//alterar
+	var unidade=2;//alterar
+	var tela="uni2tela2";//alterar
+	
 	//Obtendo dados curso
 	window.addEventListener('load', function(){
-		API.obterDadosCurso();
-	})
+    	API.obterDadosCurso();
+	});
+</script>
 
-	window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
-	function resultadoObterDadosCurso(evento){
-		console.log(evento.detail);
-		//antes de registrar a porcentagem, verifica a porcentagem atual:
-		API.obterDadosGenericos(porcentagem);
-	}
-
-
-	//Quando obtém a porcentagem da unidade em questão, executa esta função
-	window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
-	function resultadoObtemDadosGenericos (evento){
-
-		//testa se os dados genéricos testados são para a porcentagem ou para as respostas
-		console.log("Teste de dados aqui:::::::: "+verificando_quais_dados);
-
-		if(verificando_quais_dados==1){
-			console.log(evento.detail);
-
-			//testando se o status é 200, unidade já iniciada
-			if(evento.detail["status"]==200){
-				var i=0;
-				var cont = 0;
-				//O evento retorna um vetor. É preciso pesquisar em qual posição está a porcentagem da unidade atual
-				while(i==0){
-					if(evento.detail["data"][cont]["chave"]==porcentagem){
-						console.log("achou na posição "+cont);
-						console.log(evento.detail["data"][cont]["chave"]);
-						i=1;
-					}else{
-						console.log("não encontrou na posição "+cont);
-						console.log(evento.detail["data"][cont]["chave"]);
-						cont=cont+1;
-						if(cont==10){
-							i=1;
-						}
-					}
-
-				}
-
-				//depois que encontrar a posição certa, verifica o progresso atual
-				progressoSalvo = evento.detail["data"][cont]["valor"];
-				console.log("Valor de Porcentagem atual: "+progressoSalvo);
-
-				if(progressoSalvo < progresso){
-					//registrando a porcentagem da Unidade em questão
-					API.registrarDadosGenericos(porcentagem,progresso);
-					console.log('Registrando nova porcentagem: '+progresso);
-				}else{
-					//Se o cursista estiver revendo a tela, o progresso Salvo será maior, então não altera nada.
-					console.log("Porcentagem não alterada.");
-				}
-
-			}else if(evento.detail["status"]==412){
-				//se for status 400, inicia a chave da porcentagem da unidade em questão
-				console.log("Inicializando a porcentagem da unidade");
-				API.registrarDadosGenericos(porcentagem,14);
-			}
-
-			//aqui é quando a verificação é para o formulário	
-		}else{
-			console.log("\nObtendo os dados genéricos: ");
-			console.log("Status do evento: "+evento.detail['status']);
-
-			//verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
-			if(evento.detail["status"]=="200"){
-
-				//se a unidade já foi iniciada, então pode exibir a mensagem informando que a atiidade já foi completada
-				// **************** (VER COM EQUIPE) *****************
-				var resposta = evento.detail["data"][0]["valor"];
-				console.log(evento.detail["data"]);
-				mensagem.innerHTML = "Você já enviou estas respostas<br /><br /><a class='link-proxima-unidade' href='tela03.html'>PROSSEGUIR &#10095;</a>";
-				mensagem.className = "mensagem-ok";
-				mensagem.style.dispay = "block";
-				window.scrollTo(0, 0);
-				erros++;
-
-				//se a unidade não foi iniciada, registra os dados Genéricos com as respostas:
-			}else{
-				API.registrarDadosGenericos("q2_2_1",q2_2_1);
-				console.log("Resposta 1: "+q2_2_1);
-				API.registrarDadosGenericos("q2_2_2t",q2_2_2t);
-				console.log("Resposta 2t: "+q2_2_2t);
-				API.registrarDadosGenericos("q2_2_3",q2_2_3);
-				console.log("Resposta 3: "+q2_2_3);
-				API.registrarDadosGenericos("q2_2_3t",q2_2_3t);
-				console.log("Resposta 3t: "+q2_2_3t);
-				API.registrarDadosGenericos("q2_2_4t",q2_2_4t);
-				console.log("Resposta 4t: "+q2_2_4t);
-			}
-		}
-	};
-
-	window.addEventListener('evObtemRegistraDadosGenericos', resultadoRegistrarDadosGenericos, false);
-	function resultadoRegistrarDadosGenericos (evento){
-		console.log("Verificando dados registrados");
-		console.log(evento.detail);
-	};
-
+<script>
 	/*************** salvando as respostas nas variáveis do sistema *****/
 	var botao = document.getElementById("botao-quiz-uni2");
 	var mensagem = document.getElementById("mensagem-alerta");
