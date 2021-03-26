@@ -11,6 +11,9 @@
 	<script src="../../js/jquery-2.1.1.js"></script>
 	<script src="../../js/bt-topo.js"></script>
 
+	<!-- Funções de acesso à biblioteca do Avamec-->
+	<script src="../../js/funcoes.js"></script>
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
 	<script>
@@ -141,8 +144,10 @@
 	var API = new BridgeRestApi();
 	var id_unidade = "mod1_uni0";
 	var id_slide = "uni0/tela01.html";
-	var progresso = 50;
-	var progressoSalvo;
+	var unidade=0;
+	var tela="uni0tela1";	
+	//var progresso = 50;
+	//var progressoSalvo;
 	var porcentagem = "porcentagemUni0";
 
 	//Obtendo dados curso
@@ -153,8 +158,8 @@
 	window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
 	function resultadoObterDadosCurso(evento){
 		console.log(evento.detail);
-		//antes de registrar a porcentagem, verifica a porcentagem atual:
-		API.obterDadosGenericos(porcentagem);
+		//vai registrar a porcentagem desta página:
+		verifica_porcentagem(unidade,tela);
 	}
 
 
