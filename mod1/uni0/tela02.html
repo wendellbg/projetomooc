@@ -11,6 +11,9 @@
 	<script src="../../js/jquery-2.1.1.js"></script>
 	<script src="../../js/bt-topo.js"></script>
 
+	<!-- Funções de acesso à biblioteca do Avamec-->
+	<script src="../../js/funcoes-4.js"></script>
+	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
 	<script>
@@ -135,76 +138,19 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
-<script>
+<<script>
 	console.clear(screen);
 
 	var API = new BridgeRestApi();
 	var id_unidade = "mod1_uni0";
-	var id_slide = "uni0/tela02.html";
-	var progressoSalvo;
+	var id_slide = "uni0/tela02.html";//alterar
+	var unidade=0;//alterar
+	var tela="uni0tela2";//alterar
+	
+	//Obtendo dados curso
 	window.addEventListener('load', function(){
-		API.obterDadosCurso();
-	})
-
-	window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
-	function resultadoObterDadosCurso(evento){
-		console.log(evento.detail);
-		//antes de registrar a porcentagem, verifica a porcentagem atual:
-		API.obterDadosGenericos(porcentagem);
-	}
-
-
-	//Quando obtém a porcentagem da unidade em questão, executa esta função
-	window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
-	function resultadoObtemDadosGenericos (evento){
-		console.log(evento.detail);
-
-		//testando se o status é 200, unidade já iniciada
-		if(evento.detail["status"]==200){
-			var i=0;
-			var cont = 0;
-			//O evento retorna um vetor. É preciso pesquisar em qual posição está a porcentagem da unidade atual
-			while(i==0){
-				if(evento.detail["data"][cont]["chave"]==porcentagem){
-					console.log("achou na posição "+cont);
-					console.log(evento.detail["data"][cont]["chave"]);
-					i=1;
-				}else{
-					console.log("não encontrou na posição "+cont);
-					console.log(evento.detail["data"][cont]["chave"]);
-					cont=cont+1;
-					if(cont==10){
-						i=1;
-					}
-				}
-
-			}
-			progressoSalvo = evento.detail["data"][cont]["valor"];
-			console.log("Valor de Porcentagem atual: "+progressoSalvo);
-
-			if(progressoSalvo < progresso){
-				//registrando a porcentagem da Unidade 1
-				
-				API.registrarDadosGenericos(porcentagem,progresso);
-				console.log('Registrando nova porcentagem: '+progresso);
-			}else{
-				//Se o cursista estiver revendo a tela, o progresso Salvo será maior, então não altera nada.
-				console.log("Porcentagem não alterada.");
-			}
-
-		}else if(evento.detail["status"]==412){
-			//se for status 400, inicia a chave da porcentagem da unidade em questão
-			console.log("Inicializando a porcentagem da unidade");
-			API.registrarDadosGenericos(porcentagem,14);
-		}
-	};
-
-	window.addEventListener('evObtemRegistraDadosGenericos', resultadoRegistrarDadosGenericos, false);
-	function resultadoRegistrarDadosGenericos (evento){
-		console.log("Verificando porcentagem registrada");
-		console.log(evento.detail);
-	};
-
+    	API.obterDadosCurso();
+	});
 </script>
 
 </body>
