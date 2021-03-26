@@ -63,7 +63,7 @@ function resultadoObtemDadosGenericos (evento){
 
         //calcula a porcentagem de conclusão de acordo com a quantidade de telas na unidade
         console.log("calcular a porcentagem de "+quant_telas_vistas+" telas");
-        porcentagem=(100/quant_telas[unidade])*quant_telas_vistas;
+        porcentagem=Math.round((100/quant_telas[unidade])*quant_telas_vistas);
         console.log("Porcentagem total é: "+porcentagem);
         console.log("aqui registra a porcentagem no sistema");
         API.registrarPorcentagemConclusaoUnidade(id_unidade,porcentagem);
