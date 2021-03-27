@@ -1327,7 +1327,7 @@
       </header>
 
       <div class="content">
-        <div class="caixa-sumario">
+        <div class="caixa-sumario" id="botao-continuar">
           <span><a href="#"><button class="bt-padrao">CONTINUAR DE ONDE PAREI ></button></a></span>
         </div>
         <p></p>
@@ -1411,6 +1411,8 @@
             <!-- <p>UNIDADE 5</p> -->
             <span><a href="./uni5/tela01.html"><button class="bt-padrao">ACESSAR ></button></a></span>
           </div>
+
+          <div style="display: block;"></div>
 
           <div class="link-unidade" id="div-encerramento" style="display: none;">
             <img class="imagem-area-card-unidade" alt="Encerramento" title="Encerramento" src="../img/padrao/06.jpg">
@@ -1510,7 +1512,7 @@
           progresso.innerHTML=""+porcentagem+"%";
           circulo.className="c100 p"+porcentagem;          
           porcentagem_geral+=porcentagem;
-          //bloquear outras unidades se essa porcentagem for menor que 100
+          //bloquear outras unidades se essa porcentagem for menor que 100          
           if(porcentagem<100){
             console.log("\nunidade 0 não tem 100%");
             div1=document.querySelector("#div-uni1 span a");
@@ -1523,6 +1525,9 @@
             div4.style.display="none";            
             div5=document.querySelector("#div-uni5 span a");
             div5.style.display="none";
+            bt_continuar=document.querySelector("#botao-continuar");
+            bt_continuar.style.display="none";
+            
           }  
           break;
           
@@ -1588,8 +1593,15 @@
     controle_id_unidade++;
     console.log("Controle="+controle_id_unidade);
     verifica_unidades(controle_id_unidade);
-    
   };
+
+  API.obterUltimaPaginaAcessada();
+  window .addEventListener( "evObtemUltimaPaginaAcessada" ,resultadoObtemUltimaPaginaAcessada, false );
+  function resultadoObtemUltimaPaginaAcessada (evento){
+      console .log(evento.detail);
+        let bt_continuar=document.querySelector("#botao-continuar span a");          
+        bt_continuar.href=evento.detail["data"];
+  }
 
 </script>
 
