@@ -38,7 +38,7 @@ window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos
 function resultadoObtemDadosGenericos (evento){
 
     //testa se os dados genéricos testados são para a porcentagem ou para as respostas
-	console.log("Teste de dados aqui:::::::: "+verificando_quais_dados);
+	console.log("Teste de dados aqui: "+verificando_quais_dados);
 
 	//verificação normal, para porcentagem
     if(verificando_quais_dados==1){
@@ -67,6 +67,7 @@ function resultadoObtemDadosGenericos (evento){
         console.log("Porcentagem total é: "+porcentagem);
         console.log("aqui registra a porcentagem no sistema");
         API.registrarPorcentagemConclusaoUnidade(id_unidade,porcentagem);
+        API.registrarUltimaPaginaAcessada(id_unidade,id_slide);
     
     //Verificação para envio do formulário Uni2Tela2
     }else{
@@ -106,4 +107,9 @@ window .addEventListener( "evRegistraPorcentagemConclusaoUnidade" ,resultadoRegi
 function resultadoRegistrarPorcentagemConclusaoUnidade (evento){
     console.log(evento.detail);
     console.log("\nETAPA 4\nTendo a porcentagem registrada");
+}
+
+window .addEventListener( "evObtemRegistraUltimaPaginaAcessada" ,resultadoRegistrarUltimaPaginaAcessada, false );
+function resultadoRegistrarUltimaPaginaAcessada (evento){
+    console .log(evento.detail);
 }
