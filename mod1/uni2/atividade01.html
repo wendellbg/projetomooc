@@ -684,6 +684,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
+<script src="../../js/funcoes_atividades.js"></script>
 <script>
     console.clear(screen);
 
@@ -728,7 +729,7 @@
 
         //Para a questão 2, as respostas ficarão em um vetor
         
-        for(let i=1;i<=20; i++){                        
+        for(let i=1;i<=20; i++){                      
             let erros_radios=0;
             let name_radio = "r2_2_"+i;
             //a variável pega o radio pelo nome, recebendo um vetor
@@ -820,8 +821,8 @@
 			return false;
 		}else{
 			console.log("\nChecando respostas: "+id_atividade);
-			//primeiro verifica dados salvos da primeira resposta. Se encontrar é porque já enviou anteriormente.		
-			API.obterRespostaAtividade("uni2_ativ1");
+			//verificando qual tentativa é esta.
+            verificando_tentativas("quant_"+id_atividade);     
 			if(erros>0){
 				return false;
 			}			
@@ -829,97 +830,95 @@
 	}
 
 
-	//Quando obtém a porcentagem da unidade em questão, executa esta função
+	//Depois que verifica as tentativas de resposta, verifica as respostas salvas;
 	window .addEventListener( "evObtemDadosRespostaAtividade" , resultadoObtemRespostaAtividade, false );
     function resultadoObtemRespostaAtividade(evento){
 
         console.log("\nObtendo as respostas: ");
         console.log("Status do evento: "+evento.detail['status']);
-
         //verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
         if(evento.detail["status"]=="200"){
-
-            //Se o cursista já enviou alguma resposta, vai encontrar aqui. Então vai aparecer uma mensagem de alerta.				
             nota_atividade = evento.detail.data.nota;
-            console.log(evento.detail["data"]);
-            console.log("Atividades já foram enviadas antes.");            
-            mensagem.innerHTML = "Você já enviou estas respostas!<br />Sua nota foi: "+nota_atividade+"<br /><br /><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
-            mensagem.className = "mensagem-ok";
-            mensagem.style.dispay = "block";
-            window.scrollTo(0, 0);
-            erros++;
-            
-        }else{
-            //se ainda não tiver enviado as respostas, registra as re respostas com as funções da API:
-            console.log("Registrando respostas:");
-            console.log(evento.detail);
-            
-            API.registrarRespostaAtividade({
-                "identificador": "uni2_ativ1",//modificar
-                "questoes": [
-                    {
-                        //Onde houver os exercícios de drag and drop precisa pegar o innerHTML
-                        "identificador": "r2_1",                    
-                        "gabaritos": [
-                            { "chave": "r2_1_1", "valor": r2_1_1.innerHTML},
-                            { "chave": "r2_1_2", "valor": r2_1_2.innerHTML},
-	    					{ "chave": "r2_1_3", "valor": r2_1_3.innerHTML}							
-                        ]
-                    },{                    
-                        "identificador": "r2_2",                    
-                        "gabaritos": [
-                            { "chave": "r2_2_1", "valor": vetor_r2_2[1]},
-                            { "chave": "r2_2_2", "valor": vetor_r2_2[2]},
-                            { "chave": "r2_2_3", "valor": vetor_r2_2[3]},
-                            { "chave": "r2_2_4", "valor": vetor_r2_2[4]},
-                            { "chave": "r2_2_5", "valor": vetor_r2_2[5]},
-                            { "chave": "r2_2_6", "valor": vetor_r2_2[6]},
-                            { "chave": "r2_2_7", "valor": vetor_r2_2[7]},
-                            { "chave": "r2_2_8", "valor": vetor_r2_2[8]},
-                            { "chave": "r2_2_9", "valor": vetor_r2_2[9]},
-                            { "chave": "r2_2_10", "valor": vetor_r2_2[10]},
-                            { "chave": "r2_2_11", "valor": vetor_r2_2[11]},
-                            { "chave": "r2_2_12", "valor": vetor_r2_2[12]},
-                            { "chave": "r2_2_13", "valor": vetor_r2_2[13]},
-                            { "chave": "r2_2_14", "valor": vetor_r2_2[14]},
-                            { "chave": "r2_2_15", "valor": vetor_r2_2[15]},
-                            { "chave": "r2_2_16", "valor": vetor_r2_2[16]},
-                            { "chave": "r2_2_17", "valor": vetor_r2_2[17]},
-                            { "chave": "r2_2_18", "valor": vetor_r2_2[18]},
-                            { "chave": "r2_2_19", "valor": vetor_r2_2[19]},
-	    					{ "chave": "r2_2_20", "valor": vetor_r2_2[20]}							
-                        ]
-                    }
-                ]
-            });
-            
-            
-            API.registrarRespostaAtividade({
-                "identificador": "uni2_ativ3",
-                "questoes": [
-                    {                        
-                        "identificador": "r2_3",                    
-                        "texto": resposta_r2_3
-                    }
-                ]
-            });
-            
-            API.registrarRespostaAtividade({
-                "identificador": "uni2_ativ4",
-                "questoes": [
-                    {                        
-                        "identificador": "r2_4",                    
-                        "texto": resposta_r2_4
-                    }
-                ]
-            });
+            console.log("Voltando para a função principal. Quant respostas: "+quant_respostas+" e max: "+max_quant_tentativas);            
+            if(quant_respostas>=max_quant_tentativas){
+                console.log("Já foram 3 tentativas");
+                mensagem.className = "mensagem-ok";
+                mensagem.style.display = "block";
+                mensagem.innerHTML="Você já enviou estas respostas 3 vezes!<br />Sua maior nota é: "+nota_atividade+"<br /><p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";                
+                window.scrollTo(0, 0);
+                //erros++;
+            }else{
+                //se ainda não tiver enviado as respostas, registra as re respostas com as funções da API:
+                console.log("Registrando respostas:");
+                console.log(evento.detail);
+                
+                API.registrarRespostaAtividade({
+                    "identificador": "uni2_ativ1",//modificar
+                    "questoes": [
+                        {
+                            //Onde houver os exercícios de drag and drop precisa pegar o innerHTML
+                            "identificador": "r2_1",                    
+                            "gabaritos": [
+                                { "chave": "r2_1_1", "valor": r2_1_1.innerHTML},
+                                { "chave": "r2_1_2", "valor": r2_1_2.innerHTML},
+                                { "chave": "r2_1_3", "valor": r2_1_3.innerHTML}							
+                            ]
+                        },{                    
+                            "identificador": "r2_2",                    
+                            "gabaritos": [
+                                { "chave": "r2_2_1", "valor": vetor_r2_2[1]},
+                                { "chave": "r2_2_2", "valor": vetor_r2_2[2]},
+                                { "chave": "r2_2_3", "valor": vetor_r2_2[3]},
+                                { "chave": "r2_2_4", "valor": vetor_r2_2[4]},
+                                { "chave": "r2_2_5", "valor": vetor_r2_2[5]},
+                                { "chave": "r2_2_6", "valor": vetor_r2_2[6]},
+                                { "chave": "r2_2_7", "valor": vetor_r2_2[7]},
+                                { "chave": "r2_2_8", "valor": vetor_r2_2[8]},
+                                { "chave": "r2_2_9", "valor": vetor_r2_2[9]},
+                                { "chave": "r2_2_10", "valor": vetor_r2_2[10]},
+                                { "chave": "r2_2_11", "valor": vetor_r2_2[11]},
+                                { "chave": "r2_2_12", "valor": vetor_r2_2[12]},
+                                { "chave": "r2_2_13", "valor": vetor_r2_2[13]},
+                                { "chave": "r2_2_14", "valor": vetor_r2_2[14]},
+                                { "chave": "r2_2_15", "valor": vetor_r2_2[15]},
+                                { "chave": "r2_2_16", "valor": vetor_r2_2[16]},
+                                { "chave": "r2_2_17", "valor": vetor_r2_2[17]},
+                                { "chave": "r2_2_18", "valor": vetor_r2_2[18]},
+                                { "chave": "r2_2_19", "valor": vetor_r2_2[19]},
+                                { "chave": "r2_2_20", "valor": vetor_r2_2[20]}							
+                            ]
+                        }
+                    ]
+                });
+                
+                
+                API.registrarRespostaAtividade({
+                    "identificador": "uni2_ativ3",
+                    "questoes": [
+                        {                        
+                            "identificador": "r2_3",                    
+                            "texto": resposta_r2_3
+                        }
+                    ]
+                });
+                
+                API.registrarRespostaAtividade({
+                    "identificador": "uni2_ativ4",
+                    "questoes": [
+                        {                        
+                            "identificador": "r2_4",                    
+                            "texto": resposta_r2_4
+                        }
+                    ]
+                });
 
-            //Testes para exibir as respostas enviadas:            
-            console.log("Resposta 2_1: "+r2_1_1.innerHTML);
-            console.log("Resposta 2_1: "+r2_1_2.innerHTML);
-            console.log("Resposta 2_1: "+r2_1_3.innerHTML);
-            console.log("Resposta Texto da 2_3: "+resposta_r2_3);
-            console.log("Resposta Texto da 2_4: "+resposta_r2_4);
+                //Testes para exibir as respostas enviadas:            
+                console.log("Resposta 2_1: "+r2_1_1.innerHTML);
+                console.log("Resposta 2_1: "+r2_1_2.innerHTML);
+                console.log("Resposta 2_1: "+r2_1_3.innerHTML);
+                console.log("Resposta Texto da 2_3: "+resposta_r2_3);
+                console.log("Resposta Texto da 2_4: "+resposta_r2_4);
+            }
         }	
 	};
 
@@ -928,20 +927,23 @@
     function resultadoRegistrarRespostaAtividade (evento){
         console .log(evento.detail);
         //só faz essa parte, calculando a nota, quando estiver testando a uni2_ativ1. As outras são de texto, não tem nota
-        if(evento.detail.data.identificador=="uni2_ativ1"){
-            nota_atividade = evento.detail.data.notaAtividade;  
-            console.log("A nota nas 2 primeiras atividades foi: "+nota_atividade);
-            nota_atividade = (((2*nota_atividade)+20)/4);
-            console.log("A nota final: "+nota_atividade);
-            id_atividade="uni2_ativ1_notaOK";
-        }            
+        // if(evento.detail.data.identificador=="uni2_ativ1"){
+        //     nota_atividade = evento.detail.data.notaAtividade;  
+        //     console.log("A nota nas 2 primeiras atividades foi: "+nota_atividade);
+        //     nota_atividade = (((2*nota_atividade)+20)/4);
+        //     console.log("A nota final: "+nota_atividade);
+        //     id_atividade="uni2_ativ1_notaOK";
+        // }            
 
         if(erros==0){
             //se não houver erro, exibe mensagem de OK
 			mensagem.className = "mensagem-ok";
 			mensagem.style.display ="block";
+            if(nota_atividade_nova>nota_atividade){
+                nota_atividade=nota_atividade_nova;
+            }
 			//esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
-            mensagem.innerHTML="Dados Enviados com sucesso!<br />Sua nota foi: "+nota_atividade+"<br /><BR /><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
+            mensagem.innerHTML="Dados Enviados com sucesso!<br />Esta é sua "+(quant_respostas+1)+"ª tentativa de "+max_quant_tentativas+" possíveis.<br />Sua nota foi: "+nota_atividade_nova+"<br />Sua nota mais alta nesta atividade é: "+nota_atividade+"<p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
             console.log("Ocorreu tudo certo. Tem que aparecer o link");
 			window.scrollTo(0, 0);
         }else{
