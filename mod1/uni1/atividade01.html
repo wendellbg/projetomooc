@@ -435,7 +435,8 @@
                 mensagem.innerHTML="Você já enviou estas respostas 3 vezes!<br />Sua maior nota é: "+nota_atividade+"<br /><p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";                
                 window.scrollTo(0, 0);
                 //erros++;
-            }else{        
+            }
+        }else{        
                 //se ainda não tiver enviado as respostas, ou se for dentro do máximio de tentativas,
                 // registra as re respostas com as funções da API:
                 console.log("Registrando respostas:");
@@ -494,7 +495,7 @@
                 console.log("Resposta 4_3: "+r1_4_3);
                 console.log("Resposta 4_4: "+r1_4_4);
             }
-        }	
+        	
 	};
 
     //função de controle, pra exibir no console o resultado do envio das respostas (registraRespostaAtividade)
