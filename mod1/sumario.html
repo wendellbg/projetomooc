@@ -1414,7 +1414,7 @@
 
           <div style="display: block;"></div>
 
-          <div class="link-unidade" id="div-encerramento" style="display: none;">
+          <div class="link-unidade" id="div-encerramento">
             <img class="imagem-area-card-unidade" alt="Encerramento" title="Encerramento" src="../img/padrao/06.jpg">
             <div class="c100 p0" id="circulo-encerramento">
               <span id="progresso-encerramento">0%</span>
@@ -1424,7 +1424,7 @@
               </div>
             </div>
             <!-- <p>UNIDADE 5</p> -->
-            <span><a href="./encerramento/index.html"><button class="bt-padrao">ACESSAR ></button></a></span>
+            <span><a href="./encerramento/index.html" style="display: none;"><button class="bt-padrao">ACESSAR ></button></a></span>
           </div>
 
         </div>
@@ -1586,7 +1586,7 @@
     //porcentagem_geral=900;
     console.log("\nPorc. Geral="+(porcentagem_geral/5));  
     if((porcentagem_geral/5)>=80){
-      let div_encerramento = document.querySelector("#div-encerramento");
+      let div_encerramento = document.querySelector("#div-encerramento span a");
       div_encerramento.style.display="inline-block";
     }
 
