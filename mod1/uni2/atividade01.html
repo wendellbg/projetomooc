@@ -801,15 +801,15 @@
             } 
             //r2_3_1 = document.querySelector("#r2_3_1 span.palavra-resposta");
         }        
-		console.log("total de horas: "+total);
-        console.log(resposta_r2_3);
+		//console.log("total de horas: "+total);
+        //console.log(resposta_r2_3);
 
         //aqui o texto da atividade 4
         resposta_r2_4 = document.form_atividade_uni2.r2_4_texto.value;
         if(r2_4_texto==""){
             erros++;            
         }else{
-            console.log("Texto da 4 preenchido: "+resposta_r2_4);            
+            //console.log("Texto da 4 preenchido: "+resposta_r2_4);            
         }
 
 		if(erros>0){
@@ -820,7 +820,7 @@
 			window.scrollTo(0, 0);
 			return false;
 		}else{
-			console.log("\nChecando respostas: "+id_atividade);
+			//console.log("\nChecando respostas: "+id_atividade);
 			//verificando qual tentativa é esta.            
             verificando_tentativas("quant_"+id_atividade);     
 			if(erros>0){
@@ -839,15 +839,16 @@
         //verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
         if(evento.detail["status"]=="200"){
             nota_atividade = evento.detail.data.nota;
-            console.log("Voltando para a função principal. Quant respostas: "+quant_respostas+" e max: "+max_quant_tentativas);            
-            if(quant_respostas>=max_quant_tentativas){
-                console.log("Já foram 3 tentativas");
+            //console.log("Voltando para a função principal. Quant respostas: "+quant_respostas+" e max: "+max_quant_tentativas);            
+            if(quant_respostas>max_quant_tentativas){
+                //"Já atingiu o máximo de tentativas
                 mensagem.className = "mensagem-ok";
                 mensagem.style.display = "block";
                 mensagem.innerHTML="Você já enviou estas respostas 3 vezes!<br />Sua maior nota é: "+nota_atividade+"<br /><p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";                
                 window.scrollTo(0, 0);
-                //erros++;
-            }else{
+                erros++;
+            }
+            if(erros==0){
                 //se ainda não tiver enviado as respostas, registra as re respostas com as funções da API:
                 console.log("Registrando respostas:");
                 console.log(evento.detail);
@@ -913,11 +914,11 @@
                 });
 
                 //Testes para exibir as respostas enviadas:            
-                console.log("Resposta 2_1: "+r2_1_1.innerHTML);
-                console.log("Resposta 2_1: "+r2_1_2.innerHTML);
-                console.log("Resposta 2_1: "+r2_1_3.innerHTML);
-                console.log("Resposta Texto da 2_3: "+resposta_r2_3);
-                console.log("Resposta Texto da 2_4: "+resposta_r2_4);
+                // console.log("Resposta 2_1: "+r2_1_1.innerHTML);
+                // console.log("Resposta 2_1: "+r2_1_2.innerHTML);
+                // console.log("Resposta 2_1: "+r2_1_3.innerHTML);
+                // console.log("Resposta Texto da 2_3: "+resposta_r2_3);
+                // console.log("Resposta Texto da 2_4: "+resposta_r2_4);
             }
         }	
 	};
@@ -934,9 +935,9 @@
             
             if(evento.detail.data.identificador=="uni2_ativ1"){
                 nota_atividade_nova = evento.detail.data.notaAtividade;  
-                console.log("A nota nas 2 primeiras atividades foi: "+nota_atividade);
+                //console.log("A nota nas 2 primeiras atividades foi: "+nota_atividade);
                 //nota_atividade = (((2*nota_atividade)+20)/4);
-                console.log("A nota final: "+nota_atividade);
+                //console.log("A nota final: "+nota_atividade);
                 //id_atividade="uni2_ativ1_notaOK";
                 if(nota_atividade_nova>nota_atividade){
                     nota_atividade=nota_atividade_nova;
@@ -1009,7 +1010,7 @@
 
         //se a conta der menos que 2400, reabilita os campos.
         }else{            
-            console.log("Aqui quando ainda não deu 2400");
+            //console.log("Aqui quando ainda não deu 2400");
             total = soma_temp;
             object.value = valor_agora == 0 ? "" : valor_agora;        
 
@@ -1038,7 +1039,7 @@
 
     ///// Funções para exibir a legenda da categoria quando passar o mouse sobre um botão de rádio /////
     function radio_hover(cat){    
-        console.log("cat="+cat);
+        //console.log("cat="+cat);
         let texto_opcao = document.querySelector(".texto-opcao."+cat);
         texto_opcao.classList.add("cat-hover");        
         let texto_cat =document.querySelector(".texto-cat."+cat);
