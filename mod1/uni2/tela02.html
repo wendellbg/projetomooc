@@ -174,7 +174,7 @@
 							</div>
 						</div>
 						<div class="botao-atividade">
-							<button type="button" id="botao-quiz-uni2" onclick="salvarDados()" ><i class="fas fa-check"></i> ENVIAR RESPOSTAS</button>
+							<button type="button" id="botao-quiz-uni2" onclick="verifica_quiz_enviado()" ><i class="fas fa-check"></i> ENVIAR RESPOSTAS</button>
 						</div>
 					</form>
 				</div>
@@ -188,8 +188,11 @@
 					<div class="bt-topo">
 						<a href="#"><i class="fas fa-angle-up"></i></a>
 					</div>
-					<div>
-						<!-- <button class="bt-avanca" type="button"><a href="tela03.html">PROSSEGUIR &#10095;</a></button> -->
+					<div id="botao-atividades" style="display: none;">
+                        <button class="bt-avanca atividades" type="button"><a href="atividade01.html"><i class="fas fa-pencil-alt"></i> ATIVIDADES &#10095;&#10095;</a></button>
+                    </div>
+					<div id="botao-prosseguir" style="display: none;">
+						<button class="bt-avanca" type="button"><a href="tela03.html">PROSSEGUIR &#10095;</a></button>
 					</div>
 					<div class='botoes-navegacao'>
 						<a href="tela01.html"><button class="bt-navegacao" type="button"><</button></a>
@@ -237,7 +240,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
 
 <!-- Funções de acesso à biblioteca do Avamec-->
-<script src="../../js/funcoes-5.js"></script>
+<script src="../../js/funcoes-porcentagem.js"></script>
 <script>
 	console.clear(screen);
 
@@ -246,10 +249,12 @@
 	var id_slide = "mod1/uni2/tela02.html";//alterar
 	var unidade=2;//alterar
 	var tela="uni2tela2";//alterar
+	var erros=0;
 	
 	//Obtendo dados curso
-	window.addEventListener('load', function(){
-    	API.obterDadosCurso();
+	window.addEventListener('load', function(){		    	
+		verificando_quais_dados=1;
+		API.obterDadosCurso();								
 	});
 </script>
 
@@ -258,9 +263,16 @@
 	var botao = document.getElementById("botao-quiz-uni2");
 	var mensagem = document.getElementById("mensagem-alerta");
 
+	function verifica_quiz_enviado(){	
+		verificando_quais_dados=2;	
+		console.log("\nChecando respostas");
+		//primeiro verifica dados salvos da primeira resposta. Se encontrar é porque já enviou anteriormente.		
+		API.obterDadosGenericos("q2_2_1");				
+	}
+
 	function salvarDados(){
 		console.log("função aqui");
-		verificando_quais_dados =2;
+		//verificando_quais_dados=3;
 		erros = 0;
 
 		q2_2_1 = document.form_quiz_uni2.resposta_1.value,
@@ -269,7 +281,7 @@
 				q2_2_3t = document.form_quiz_uni2.resposta_3_texto.value,
 				q2_2_4t = document.form_quiz_uni2.resposta_4_texto.value;
 
-		console.log("Respostas::::	\n"+q2_2_1+"\n"+q2_2_2t+"\n"+q2_2_3+"\n"+q2_2_3t+"\n"+q2_2_4t);
+		//console.log("Respostas::::	\n"+q2_2_1+"\n"+q2_2_2t+"\n"+q2_2_3+"\n"+q2_2_3t+"\n"+q2_2_4t);
 
 		if(q2_2_1==""){
 			erros++;
@@ -289,21 +301,26 @@
 			mensagem.style.display = "block";
 			window.scrollTo(0, 0);
 			return false;
-		}else{
-			console.log("\nChecando respostas");
-			//primeiro verifica dados salvos da primeira resposta. Se encontrar é porque já enviou anteriormente.		
-			API.obterDadosGenericos("q2_2_1");
-
-			if(erros>0){
-				return false;
-			}
+		}else{			
 			//se não houver erro, envia o form
+			API.registrarDadosGenericos("q2_2_1",q2_2_1);
+			//console.log("Resposta 1: "+q2_2_1);
+			API.registrarDadosGenericos("q2_2_2t",q2_2_2t);
+			//console.log("Resposta 2t: "+q2_2_2t);
+			API.registrarDadosGenericos("q2_2_3",q2_2_3);
+			//console.log("Resposta 3: "+q2_2_3);
+			API.registrarDadosGenericos("q2_2_3t",q2_2_3t);
+			//console.log("Resposta 3t: "+q2_2_3t);
+			API.registrarDadosGenericos("q2_2_4t",q2_2_4t);
+			//console.log("Resposta 4t: "+q2_2_4t);
+
 			mensagem.className = "mensagem-ok";
 			mensagem.style.display ="block";
 			mensagem.innerHTML="Dados Enviados com sucesso!<br /><BR /><a class='link-proxima-unidade' href='tela03.html'>PROSSEGUIR &#10095;</a>";
 			console.log("ocorreu tudo certo. Tem que aparecer o link");
 			window.scrollTo(0, 0);
 		}
+		
 	}
 	</script>
 	</body>
