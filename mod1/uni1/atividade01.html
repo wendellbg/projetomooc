@@ -328,12 +328,13 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
+<script src="funcoes_atividades-5.js"></script>
 <script>
     console.clear(screen);
 
     var API = new BridgeRestApi();
     var id_unidade = "mod1_uni1";//modificar
-    var id_slide = "uni1/atividade01.html";//modificar
+    var id_slide = "mod1/uni1/atividade01.html";//modificar
     var id_atividade = "uni1_ativ1";//modificar
     var nota_atividade = 0;
     var nota_atividade_nova=0;
@@ -403,16 +404,17 @@
 			window.scrollTo(0, 0);
 			return false;
 		}else{
-			console.log("\nChecando respostas"+id_atividade);
-			//primeiro verifica dados salvos da primeira resposta. Se encontrar é porque já enviou anteriormente.		
-			API.obterRespostaAtividade("uni1_ativ1");//modificar
-
+			console.log("\nChecando respostas"+id_atividade);			
+            //primeiro verifica dados salvos da primeira resposta. Se encontrar é porque já enviou anteriormente.		
+			API.obterRespostaAtividade("uni1_ativ1");//modificar            
 			if(erros>0){
 				return false;
 			}			
 		}
-	}
+	};
 
+    
+    
 
 	//Quando obtém a porcentagem da unidade em questão, executa esta função
 	window .addEventListener( "evObtemDadosRespostaAtividade" , resultadoObtemRespostaAtividade, false );
@@ -420,22 +422,22 @@
 
         console.log("\nObtendo as respostas: ");
         console.log("Status do evento: "+evento.detail['status']);
+        
+        //Função que verifica qual é a tentativa de envio de respostas que está sendo feita;    
+        API.obterDadosGenericos("quant_"+id_atividade);  
 
-        //verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
-        if(evento.detail["status"]=="200"){
-
-            //Se o cursista já enviou alguma resposta, vai encontrar aqui. Então vai aparecer uma mensagem de alerta.				
+        console.log("Tentativa==="+quant_respostas);
+        if(quant_respostas>max_quant_tentativas){
             nota_atividade = evento.detail.data.nota;
-            console.log(evento.detail["data"]);
-            console.log("Atividades já foram enviadas antes.");            
-            mensagem.innerHTML = "Você já enviou estas respostas!<br />Sua nota foi: "+nota_atividade+"<br /><br /><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
+            console.log("Mensagem de 3 envios de respostas.");
             mensagem.className = "mensagem-ok";
-            mensagem.style.dispay = "block";
+            mensagem.style.display = "block";
+            mensagem.innerHTML="Você já enviou estas respostas 3 vezes!<br />Sua nota foi: "+nota_atividade+"<br /><br /><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";                
             window.scrollTo(0, 0);
-            erros++;
-            
-        }else{
-            //se ainda não tiver enviado as respostas, registra as re respostas com as funções da API:
+            //erros++;
+        }else{        
+            //se ainda não tiver enviado as respostas, ou se for dentro do máximio de tentativas,
+            // registra as re respostas com as funções da API:
             console.log("Registrando respostas:");
             console.log(evento.detail);
             API.registrarRespostaAtividade({
@@ -504,13 +506,13 @@
 			mensagem.className = "mensagem-ok";
 			mensagem.style.display ="block";
 			//esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
-            mensagem.innerHTML="Dados Enviados com sucesso!<br />Sua nota foi: "+nota_atividade+"<br /><BR /><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
+            mensagem.innerHTML="Dados Enviados com sucesso!<br />Esta é sua "+quant_respostas+"ª tentativa de "+max_quant_tentativas+" possíveis.<br />Sua nota foi: "+nota_atividade+"<br /><BR /><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
             console.log("Ocorreu tudo certo. Tem que aparecer o link");
 			window.scrollTo(0, 0);
         }else{
             //caso algum não esteja preenchido, exibe mensagem de erro
 			mensagem.className = "mensagem-alerta";
-			mensagem.textContent = "Ocorreu algum erro! Tente Novamente...";
+			mensagem.innerHTML = "Ocorreu algum erro! Tente Novamente...";
 			mensagem.style.display = "block";
 			window.scrollTo(0, 0);
         }
