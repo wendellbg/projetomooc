@@ -250,6 +250,7 @@
 			</footer>
 
 		<script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>	
+		<script src="../../js/funcoes_atividades.js"></script>
 		<script>
 			console.clear(screen);
 		
@@ -258,7 +259,7 @@
 			var id_slide = "uni5/atividade01.html";//modificar
 			var id_atividade = "uni5_ativ1";//modificar
 			var nota_atividade = 0;
-			var nota_atividade_nova=0;
+			var nota_atividade_nova=0;			
 			var erros = 0;
 
 			/*************** Verificando se todas as respostas foram enviadas. *****/
@@ -316,10 +317,9 @@
 					window.scrollTo(0, 0);
 					return false;
 				}else{
-					console.log("\nChecando respostas"+id_atividade);
-					//primeiro verifica dados salvos da primeira resposta. Se encontrar é porque já enviou anteriormente.		
-					API.obterRespostaAtividade("uni5_ativ1");//modificar
-
+					console.log("\nChecando respostas "+id_atividade);
+					//verificando qual tentativa é esta.
+					verificando_tentativas("quant_"+id_atividade);            
 					if(erros>0){
 						return false;
 					}			
@@ -327,28 +327,28 @@
 			}
 
 
-			//Quando obtém a porcentagem da unidade em questão, executa esta função
+			//Depois que verifica as tentativas de resposta, verifica as respostas salvas;
 			window .addEventListener( "evObtemDadosRespostaAtividade" , resultadoObtemRespostaAtividade, false );
 			function resultadoObtemRespostaAtividade(evento){
 
 				console.log("\nObtendo as respostas: ");
-				console.log("Status do evento: "+evento.detail['status']);
-
+				console.log("Status do evento: "+evento.detail['status']);          
 				//verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
-				if(evento.detail["status"]=="200"){
-
-					//Se o cursista já enviou alguma resposta, vai encontrar aqui. Então vai aparecer uma mensagem de alerta.				
+				if(evento.detail["status"]=="200"){  
+					//Se já tiver enviado (200) então verifica quantas tentativas foram feitas.          
 					nota_atividade = evento.detail.data.nota;
-					console.log(evento.detail["data"]);
-					console.log("Atividades já foram enviadas antes.");            
-					mensagem.innerHTML = "Você já enviou estas respostas!<br />Sua nota foi: "+nota_atividade+"<br /><br /><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
-					mensagem.className = "mensagem-ok";
-					mensagem.style.dispay = "block";
-					window.scrollTo(0, 0);
-					erros++;
-					
-				}else{
-					//se ainda não tiver enviado as respostas, registra as re respostas com as funções da API:
+					console.log("Voltando para a função principal. Quant respostas: "+quant_respostas+" e max: "+max_quant_tentativas);            
+					if(quant_respostas>=max_quant_tentativas){
+						console.log("Já foram 3 tentativas");
+						mensagem.className = "mensagem-ok";
+						mensagem.style.display = "block";
+						mensagem.innerHTML="Você já enviou estas respostas 3 vezes!<br />Sua maior nota é: "+nota_atividade+"<br /><p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";                
+						window.scrollTo(0, 0);
+						erros++;
+            		}
+				}
+				if(erros==0){        
+					//se ainda não tiver enviado as respostas, ou estiver dentro das tentativas, registra as re respostas com as funções da API:
 					console.log("Registrando respostas:");
 					console.log(evento.detail);
 					API.registrarRespostaAtividade({
@@ -387,19 +387,24 @@
 					console.log("Resposta 2_6: "+r5_2_6.innerHTML);            
 					console.log("Resposta 2_7: "+r5_2_7.innerHTML);           			
 				}	
+				
 			};
 
 			//função de controle, pra exibir no console o resultado do envio das respostas (registraRespostaAtividade)
 			window .addEventListener( "evRegistraRespostaAtividade" ,resultadoRegistrarRespostaAtividade, false );
 			function resultadoRegistrarRespostaAtividade (evento){
 				console .log(evento.detail);
-				nota_atividade= evento.detail.data.notaAtividade;
+				nota_atividade_nova= evento.detail.data.notaAtividade;
 				if(erros==0){
 					//se não houver erro, exibe mensagem de OK
+					console.log("Aqui envia uma nova tentativa, são "+quant_respostas+" salvas");
 					mensagem.className = "mensagem-ok";
-					mensagem.style.display ="block";
+					mensagem.style.display ="block";			
+					if(nota_atividade_nova>nota_atividade){
+						nota_atividade=nota_atividade_nova;
+					}
 					//esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
-					mensagem.innerHTML="Dados Enviados com sucesso!<br />Sua nota foi: "+nota_atividade+"<br /><BR /><a class='link-proxima-unidade' href='../sumario.html'>PROSSEGUIR &#10095;</a>";
+					mensagem.innerHTML="Dados Enviados com sucesso!<br />Esta é sua "+(quant_respostas)+"ª tentativa de "+max_quant_tentativas+" possíveis.<br />Sua nota foi: "+nota_atividade_nova+"<br />Sua nota mais alta nesta atividade é: "+nota_atividade+"<p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
 					console.log("Ocorreu tudo certo. Tem que aparecer o link");
 					window.scrollTo(0, 0);
 				}else{

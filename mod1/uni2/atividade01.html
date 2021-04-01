@@ -692,8 +692,8 @@
     var id_unidade = "mod1_uni2";//modificar
     var id_slide = "uni2/atividade01.html";//modificar
     var id_atividade = "uni2_ativ1";//modificar
-    var nota_atividade = 0;
-    var nota_atividade_parcial=0;
+    var nota_atividade = 0;    
+    var nota_atividade_nova=0;
 	var erros = 0;
 
     var vetor_r2_2=[];
@@ -821,7 +821,7 @@
 			return false;
 		}else{
 			console.log("\nChecando respostas: "+id_atividade);
-			//verificando qual tentativa é esta.
+			//verificando qual tentativa é esta.            
             verificando_tentativas("quant_"+id_atividade);     
 			if(erros>0){
 				return false;
@@ -927,20 +927,20 @@
     function resultadoRegistrarRespostaAtividade (evento){
         console .log(evento.detail);
         //só faz essa parte, calculando a nota, quando estiver testando a uni2_ativ1. As outras são de texto, não tem nota
-        // if(evento.detail.data.identificador=="uni2_ativ1"){
-        //     nota_atividade = evento.detail.data.notaAtividade;  
-        //     console.log("A nota nas 2 primeiras atividades foi: "+nota_atividade);
-        //     nota_atividade = (((2*nota_atividade)+20)/4);
-        //     console.log("A nota final: "+nota_atividade);
-        //     id_atividade="uni2_ativ1_notaOK";
-        // }            
-
         if(erros==0){
             //se não houver erro, exibe mensagem de OK
-			mensagem.className = "mensagem-ok";
+            mensagem.className = "mensagem-ok";
 			mensagem.style.display ="block";
-            if(nota_atividade_nova>nota_atividade){
-                nota_atividade=nota_atividade_nova;
+            
+            if(evento.detail.data.identificador=="uni2_ativ1"){
+                nota_atividade_nova = evento.detail.data.notaAtividade;  
+                console.log("A nota nas 2 primeiras atividades foi: "+nota_atividade);
+                //nota_atividade = (((2*nota_atividade)+20)/4);
+                console.log("A nota final: "+nota_atividade);
+                //id_atividade="uni2_ativ1_notaOK";
+                if(nota_atividade_nova>nota_atividade){
+                    nota_atividade=nota_atividade_nova;
+                }
             }
 			//esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
             mensagem.innerHTML="Dados Enviados com sucesso!<br />Esta é sua "+(quant_respostas+1)+"ª tentativa de "+max_quant_tentativas+" possíveis.<br />Sua nota foi: "+nota_atividade_nova+"<br />Sua nota mais alta nesta atividade é: "+nota_atividade+"<p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";

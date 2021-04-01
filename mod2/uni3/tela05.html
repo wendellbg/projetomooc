@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../css/mooc1.css?ver=1.1"/>
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2"/>
     <link rel="stylesheet" href="../../css/slide.css?ver=1.1"/>
+    <link rel="stylesheet" href="../../css/podcast.css?ver=1.1"/>    
 </head>
 <body>
 
@@ -101,15 +102,27 @@
                 </div>
             </div>
 
+            <div class="icone-audio">
+                <a class='icone-play' id="botao-play-podcast" onclick="playShowPod()"><img src="../../img/uni3/icone-audio.png"/></a>
+                <a class="icone-pause" id="botao-pause-podcast" onclick="pauseShowPod()" style="display:none;"><img src="../../img/uni3/icone-audio2.gif" /></a>
+                <audio id='playerPodcast' class='controles-podcast' controls='controls'>                   
+                     <source src="../../img/uni3/audio_2.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+                </audio>
+                <div class="downloads">
+                    <a target="_blank" href="../../downloads/Un3-podcast.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
+                </div>
+            </div>
+            <br>            
             <div class="content no-top">
                 <p>O esquema se forma “no decorrer de uma atividade e de uma experiência, no encontro com uma variedade de situações, cujas propriedades são diferentes” (PASTRÉ; MAYEN; VERGNAUD, 2019, p. 18)</p>
             </div>
 
-            <!-- Imagem Única-->
+           <!-- Imagem Única-->
             <div class="content no-top">
                 <div class="image fit flush largura-70">
-                    <img src=" ../../img/uni3/MOOC2_UNIDADE3_Tela05_Imagem01.jpg" alt="Infografico estático">
-                    <p class="legenda-img">Figura </p>
+                    <img id="imagem" onclick="trocar()" src="../../img/uni3/MOOC2_UNIDADE3_Tela05_Imagem02.jpg" alt="Infografico estático">
+                    <br><br><br>
+                    <p class="legenda-img">Clique nas caixas de texto para ampliar</p>
                 </div>
             </div>
 
@@ -271,6 +284,28 @@
         }
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " active";
+    }
+</script>
+<script type="text/javascript">
+    var currentImgIndex=1;
+    var ImgSrcArray = [ //Aqui você vai inserir o caminho para as imagens 
+    '../../img/uni3/MOOC2_UNIDADE3_Tela05_Imagem02a.jpg',
+    '../../img/uni3/MOOC2_UNIDADE3_Tela05_Imagem02b.jpg',
+    '../../img/uni3/MOOC2_UNIDADE3_Tela05_Imagem02c.jpg',
+    '../../img/uni3/MOOC2_UNIDADE3_Tela05_Imagem02d.jpg',
+    '../../img/uni3/MOOC2_UNIDADE3_Tela05_Imagem02e.jpg',
+    '../../img/uni3/MOOC2_UNIDADE3_Tela05_Imagem02.jpg',
+    ];
+
+    function trocar(){
+
+      if(currentImgIndex == ImgSrcArray.length) //reseta quando o contador for igual ao tamanho da array e volta a 1° img
+      {
+        currentImgIndex=0;
+      }
+      document.getElementById("imagem").src=ImgSrcArray[currentImgIndex]; //altera a img do elemento "imagem" de acordo com o indice
+        currentImgIndex++; // incrementa a nossa referencia
+
     }
 </script>
 </body>
