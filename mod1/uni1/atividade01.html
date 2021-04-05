@@ -8,23 +8,32 @@
     <link rel="stylesheet" href="../../css/efeito.css?ver=1.2"/>
     <link rel="stylesheet" href="../../css/atividades.css?ver=1.1" />
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-5XZ9DSX69N"></script>
-    <script src="../../js/DragDropTouch.js"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+    <!-- Botão de Voltar ao Topo -->
+    <script src="../../js/jquery-2.1.1.js"></script>
+    <script src="../../js/bt-topo.js"></script>
 
-	  gtag('config', 'G-5XZ9DSX69N');
-	</script>  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-	<script src="../../js/jquery-2.1.1.js"></script>
-	<script src="../../js/bt-topo.js"></script> <!-- Botão de Voltar ao Topo -->
-	
+        gtag('config', 'G-SB34EK30YV');
+    </script>
 
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MK4H2FJ');</script>
+    <!-- End Google Tag Manager -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MK4H2FJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- Header -->
 <header id="header">
@@ -33,7 +42,7 @@
 		<h3>Educação Profissional no mundo contemporâneo</h3>
 	</div>
 </header>
-s
+
 <!-- Main -->
 <section id="main">
 	<div class="inner">
@@ -319,12 +328,13 @@ s
 
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
+<script src="../../js/funcoes_atividades.js"></script>
 <script>
     console.clear(screen);
 
     var API = new BridgeRestApi();
     var id_unidade = "mod1_uni1";//modificar
-    var id_slide = "uni1/atividade01.html";//modificar
+    var id_slide = "mod1/uni1/atividade01.html";//modificar
     var id_atividade = "uni1_ativ1";//modificar
     var nota_atividade = 0;
     var nota_atividade_nova=0;
@@ -335,7 +345,12 @@ s
 	var mensagem = document.getElementById("mensagem-alerta");    
 
 	function salvarDados(){
-		console.log("função aqui");
+        nota_atividade_nova=0;
+        nota_atividade=0;
+        quant_respostas=0;        
+        erros=0;
+
+		//console.log("função aqui");
 		//verificando_quais_dados = 2;
 		erros = 0;
         
@@ -394,39 +409,37 @@ s
 			window.scrollTo(0, 0);
 			return false;
 		}else{
-			console.log("\nChecando respostas"+id_atividade);
-			//primeiro verifica dados salvos da primeira resposta. Se encontrar é porque já enviou anteriormente.		
-			API.obterRespostaAtividade("uni1_ativ1");//modificar
-
+			//console.log("\nChecando respostas"+id_atividade);			            
+			//verificando qual tentativa é esta.
+            verificando_tentativas("quant_"+id_atividade);            
 			if(erros>0){
 				return false;
 			}			
 		}
-	}
+	};
 
-
-	//Quando obtém a porcentagem da unidade em questão, executa esta função
+	//Depois que verifica as tentativas de resposta, verifica as respostas salvas;
 	window .addEventListener( "evObtemDadosRespostaAtividade" , resultadoObtemRespostaAtividade, false );
     function resultadoObtemRespostaAtividade(evento){
 
-        console.log("\nObtendo as respostas: ");
-        console.log("Status do evento: "+evento.detail['status']);
-
+        //console.log("\nObtendo as respostas: ");
+        console.log("Status do evento: "+evento.detail['status']);          
         //verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
-        if(evento.detail["status"]=="200"){
-
-            //Se o cursista já enviou alguma resposta, vai encontrar aqui. Então vai aparecer uma mensagem de alerta.				
+        if(evento.detail["status"]=="200"){            
             nota_atividade = evento.detail.data.nota;
-            console.log(evento.detail["data"]);
-            console.log("Atividades já foram enviadas antes.");            
-            mensagem.innerHTML = "Você já enviou estas respostas!<br />Sua nota foi: "+nota_atividade+"<br /><br /><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
-            mensagem.className = "mensagem-ok";
-            mensagem.style.dispay = "block";
-            window.scrollTo(0, 0);
-            erros++;
-            
-        }else{
-            //se ainda não tiver enviado as respostas, registra as re respostas com as funções da API:
+            console.log("Voltando para a função principal. Quant respostas: "+quant_respostas+" e max: "+max_quant_tentativas);            
+            if(quant_respostas>max_quant_tentativas){
+                //Já atingiu o máximo de tentativas
+                mensagem.className = "mensagem-ok";
+                mensagem.style.display = "block";
+                mensagem.innerHTML="Você já fez "+max_quant_tentativas+" tentativas!<br />Sua maior nota é: "+nota_atividade+"<br /><p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";                
+                window.scrollTo(0, 0);
+                erros++;
+            }
+        }
+        if(erros==0){        
+            //se ainda não tiver enviado as respostas, ou se for dentro do máximio de tentativas,
+            // registra as re respostas com as funções da API:
             console.log("Registrando respostas:");
             console.log(evento.detail);
             API.registrarRespostaAtividade({
@@ -437,14 +450,14 @@ s
                         "identificador": "r1_1",                    
                         "gabaritos": [
                             { "chave": "r1_1_1", "valor": r1_1_1.innerHTML},
-	    					{ "chave": "r1_1_2", "valor": r1_1_2.innerHTML}							
+                            { "chave": "r1_1_2", "valor": r1_1_2.innerHTML}							
                         ]
                     },{                    
                         "identificador": "r1_2",                    
                         "gabaritos": [
                             { "chave": "r1_2_1", "valor": r1_2_1.innerHTML},
                             { "chave": "r1_2_2", "valor": r1_2_2.innerHTML},
-	    					{ "chave": "r1_2_3", "valor": r1_2_3.innerHTML}							
+                            { "chave": "r1_2_3", "valor": r1_2_3.innerHTML}							
                         ]
                     },{
                         //Onde houver os checkbox, testar se é true para registrar v ou f
@@ -453,7 +466,7 @@ s
                             { "chave": "r1_3_1", "valor": (r1_3_1==true ? "v" : "f")},
                             { "chave": "r1_3_2", "valor": (r1_3_2==true ? "v" : "f")},
                             { "chave": "r1_3_3", "valor": (r1_3_3==true ? "v" : "f")},
-	    					{ "chave": "r1_3_4", "valor": (r1_3_4==true ? "v" : "f")}							
+                            { "chave": "r1_3_4", "valor": (r1_3_4==true ? "v" : "f")}							
                         ]
                     },{
                         //Onde houver os checkbox, testar se é true para registrar v ou f
@@ -462,46 +475,50 @@ s
                             { "chave": "r1_4_1", "valor": r1_4_1},
                             { "chave": "r1_4_2", "valor": r1_4_2},
                             { "chave": "r1_4_3", "valor": r1_4_3},
-	    					{ "chave": "r1_4_4", "valor": r1_4_4}							
+                            { "chave": "r1_4_4", "valor": r1_4_4}							
                         ]
                     }
                 ]
             })
 
             //Testes para exibir as respostas enviadas:            
-            console.log("Resposta 1_1: "+r1_1_1.innerHTML);
-            console.log("Resposta 1_2: "+r1_1_2.innerHTML);
-            console.log("Resposta 2_1: "+r1_2_1.innerHTML);
-            console.log("Resposta 2_2: "+r1_2_2.innerHTML);
-            console.log("Resposta 2_3: "+r1_2_3.innerHTML);            
-            console.log("Resposta 3_1: "+(r1_3_1==true ? "v" : "f"));
-            console.log("Resposta 3_2: "+(r1_3_2==true ? "v" : "f"));
-            console.log("Resposta 3_3: "+(r1_3_3==true ? "v" : "f"));
-            console.log("Resposta 3_4: "+(r1_3_4==true ? "v" : "f"));
-            console.log("Resposta 4_1: "+r1_4_1);
-            console.log("Resposta 4_2: "+r1_4_2);
-            console.log("Resposta 4_3: "+r1_4_3);
-            console.log("Resposta 4_4: "+r1_4_4);
-        }	
+            // console.log("Resposta 1_1: "+r1_1_1.innerHTML);
+            // console.log("Resposta 1_2: "+r1_1_2.innerHTML);
+            // console.log("Resposta 2_1: "+r1_2_1.innerHTML);
+            // console.log("Resposta 2_2: "+r1_2_2.innerHTML);
+            // console.log("Resposta 2_3: "+r1_2_3.innerHTML);            
+            // console.log("Resposta 3_1: "+(r1_3_1==true ? "v" : "f"));
+            // console.log("Resposta 3_2: "+(r1_3_2==true ? "v" : "f"));
+            // console.log("Resposta 3_3: "+(r1_3_3==true ? "v" : "f"));
+            // console.log("Resposta 3_4: "+(r1_3_4==true ? "v" : "f"));
+            // console.log("Resposta 4_1: "+r1_4_1);
+            // console.log("Resposta 4_2: "+r1_4_2);
+            // console.log("Resposta 4_3: "+r1_4_3);
+            // console.log("Resposta 4_4: "+r1_4_4);
+        }        	
 	};
 
     //função de controle, pra exibir no console o resultado do envio das respostas (registraRespostaAtividade)
 	window .addEventListener( "evRegistraRespostaAtividade" ,resultadoRegistrarRespostaAtividade, false );
     function resultadoRegistrarRespostaAtividade (evento){
         console .log(evento.detail);
-        nota_atividade= evento.detail.data.notaAtividade;
+        nota_atividade_nova= evento.detail.data.notaAtividade;
         if(erros==0){
             //se não houver erro, exibe mensagem de OK
+            //console.log("Aqui envia uma nova tentativa, são "+quant_respostas+" salvas");
 			mensagem.className = "mensagem-ok";
-			mensagem.style.display ="block";
-			//esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
-            mensagem.innerHTML="Dados Enviados com sucesso!<br />Sua nota foi: "+nota_atividade+"<br /><BR /><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
-            console.log("Ocorreu tudo certo. Tem que aparecer o link");
+			mensagem.style.display ="block";			
+            if(nota_atividade_nova>nota_atividade){
+                nota_atividade=nota_atividade_nova;
+            }
+            //esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
+            mensagem.innerHTML="Dados Enviados com sucesso!<br />Esta é sua "+(quant_respostas+1)+"ª tentativa de "+max_quant_tentativas+" possíveis.<br />Sua nota foi: "+nota_atividade_nova+"<br />Sua nota mais alta nesta atividade é: "+nota_atividade+"<p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
+            //"Ocorreu tudo certo. Tem que aparecer o link
 			window.scrollTo(0, 0);
         }else{
             //caso algum não esteja preenchido, exibe mensagem de erro
 			mensagem.className = "mensagem-alerta";
-			mensagem.textContent = "Ocorreu algum erro! Tente Novamente...";
+			mensagem.innerHTML = "Ocorreu algum erro! Tente Novamente...";
 			mensagem.style.display = "block";
 			window.scrollTo(0, 0);
         }

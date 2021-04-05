@@ -8,23 +8,32 @@
     <link rel="stylesheet" href="../../css/efeito.css?ver=1.2"/>
     <link rel="stylesheet" href="../../css/atividades.css?ver=1.1" />
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-5XZ9DSX69N"></script>
-    <script src="../../js/DragDropTouch.js"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+    <!-- Botão de Voltar ao Topo -->
+    <script src="../../js/jquery-2.1.1.js"></script>
+    <script src="../../js/bt-topo.js"></script>
 
-	  gtag('config', 'G-5XZ9DSX69N');
-	</script>  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-	<script src="../../js/jquery-2.1.1.js"></script>
-	<script src="../../js/bt-topo.js"></script> <!-- Botão de Voltar ao Topo -->
-	
+        gtag('config', 'G-SB34EK30YV');
+    </script>
 
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MK4H2FJ');</script>
+    <!-- End Google Tag Manager -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MK4H2FJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- Header -->
 <header id="header">
@@ -33,7 +42,7 @@
 		<h3>Educação Profissional no novo Ensino Médio</h3>
 	</div>
 </header>
-s
+
 <!-- Main -->
 <section id="main">
 	<div class="inner">
@@ -142,7 +151,7 @@ s
 
                                     <div class="linha-resposta categorias">
                                         <div class='texto-resposta'>                                        
-                                            <span class="texto-opcao cat1" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');">1) Linguagem e seus tecnologias.</span>
+                                            <span class="texto-opcao cat1" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');">1) Linguagem e suas tecnologias.</span>
                                             <span class="texto-opcao cat2" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');">2) Matemática e suas tecnologias.</span>
                                             <span class="texto-opcao cat3" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');">3) Ciências Humanas e Sociais Aplicadas.</span>                                           
                                             <span class="texto-opcao cat4" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');">4) Ciências da Natureza e suas tecnologias.</span>        
@@ -166,7 +175,7 @@ s
                                                 <div class="texto-cat cat1">
                                                 </div>
                                                 <div class='area-legendas'>
-                                                    <span class="texto-legenda cat1">Linguagem e seus tecnologias.</span>
+                                                    <span class="texto-legenda cat1">Linguagem e suas tecnologias.</span>
                                                 </div>
                                             </div>
 
@@ -525,7 +534,8 @@ s
                             <div class="questao">
                                 <div class="titulo-questao">Questão 3</div>
                                 <div class="enunciado-questao">
-                                    <span>Um dos ganhos do ensino médio é o desenvolvimento da autonomia do estudante para compor seu itinerário formativo. Considerando o ensino médio com a formação profissional em Estatística Aplicada, crie um itinerário formativo com diferentes componentes curriculares. Arraste e solte os componentes e defina sua carga horária levando em conta o limite de 2.400 horas.</span>
+                                    <span>Um dos ganhos do ensino médio é o desenvolvimento da autonomia do estudante para compor seu itinerário formativo. Considerando o ensino médio com a formação profissional em Estatística Aplicada, crie um itinerário formativo com diferentes componentes curriculares. Arraste e solte os componentes e defina sua carga horária levando em conta o limite de 2.400 horas*.</span>
+                                    
                                 </div>
                                 <div class="area-respostas">
                                     <div class="linha-respostas">
@@ -612,6 +622,8 @@ s
                                             <span class="palavra-resposta" name='r2_3_texto_5' id='r2_3_texto_5' draggable="true" ondragstart="drag(event)">Disciplinas</span>
                                         </div>
                                     </div>
+                                    <p></p>
+                                    <p>* Esta carga horária é a atualmente praticada. Conforme a  lei nº 13.415/2017,  deverá ser ampliada progressivamente para um míniimo de mil horas anuais</p>
                                 </div>                                 
                             </div> 
 
@@ -675,6 +687,7 @@ s
 
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
+<script src="../../js/funcoes_atividades.js"></script>
 <script>
     console.clear(screen);
 
@@ -682,8 +695,8 @@ s
     var id_unidade = "mod1_uni2";//modificar
     var id_slide = "uni2/atividade01.html";//modificar
     var id_atividade = "uni2_ativ1";//modificar
-    var nota_atividade = 0;
-    var nota_atividade_parcial=0;
+    var nota_atividade = 0;    
+    var nota_atividade_nova=0;
 	var erros = 0;
 
     var vetor_r2_2=[];
@@ -719,7 +732,7 @@ s
 
         //Para a questão 2, as respostas ficarão em um vetor
         
-        for(let i=1;i<=20; i++){                        
+        for(let i=1;i<=20; i++){                      
             let erros_radios=0;
             let name_radio = "r2_2_"+i;
             //a variável pega o radio pelo nome, recebendo um vetor
@@ -732,7 +745,7 @@ s
                     let nome_cat;
                     switch (r3_radio[j].value){
                         case("cat1"):
-                            nome_cat ="Linguagem e seus tecnologias.";
+                            nome_cat ="Linguagem e suas tecnologias.";
                             break;
                         case("cat2"):
                             nome_cat ="Matemática e suas tecnologias.";
@@ -791,15 +804,15 @@ s
             } 
             //r2_3_1 = document.querySelector("#r2_3_1 span.palavra-resposta");
         }        
-		console.log("total de horas: "+total);
-        console.log(resposta_r2_3);
+		//console.log("total de horas: "+total);
+        //console.log(resposta_r2_3);
 
         //aqui o texto da atividade 4
         resposta_r2_4 = document.form_atividade_uni2.r2_4_texto.value;
         if(r2_4_texto==""){
             erros++;            
         }else{
-            console.log("Texto da 4 preenchido: "+resposta_r2_4);            
+            //console.log("Texto da 4 preenchido: "+resposta_r2_4);            
         }
 
 		if(erros>0){
@@ -810,9 +823,9 @@ s
 			window.scrollTo(0, 0);
 			return false;
 		}else{
-			console.log("\nChecando respostas: "+id_atividade);
-			//primeiro verifica dados salvos da primeira resposta. Se encontrar é porque já enviou anteriormente.		
-			API.obterRespostaAtividade("uni2_ativ1");
+			//console.log("\nChecando respostas: "+id_atividade);
+			//verificando qual tentativa é esta.            
+            verificando_tentativas("quant_"+id_atividade);     
 			if(erros>0){
 				return false;
 			}			
@@ -820,97 +833,96 @@ s
 	}
 
 
-	//Quando obtém a porcentagem da unidade em questão, executa esta função
+	//Depois que verifica as tentativas de resposta, verifica as respostas salvas;
 	window .addEventListener( "evObtemDadosRespostaAtividade" , resultadoObtemRespostaAtividade, false );
     function resultadoObtemRespostaAtividade(evento){
 
         console.log("\nObtendo as respostas: ");
         console.log("Status do evento: "+evento.detail['status']);
-
         //verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
         if(evento.detail["status"]=="200"){
-
-            //Se o cursista já enviou alguma resposta, vai encontrar aqui. Então vai aparecer uma mensagem de alerta.				
             nota_atividade = evento.detail.data.nota;
-            console.log(evento.detail["data"]);
-            console.log("Atividades já foram enviadas antes.");            
-            mensagem.innerHTML = "Você já enviou estas respostas!<br />Sua nota foi: "+nota_atividade+"<br /><br /><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
-            mensagem.className = "mensagem-ok";
-            mensagem.style.dispay = "block";
-            window.scrollTo(0, 0);
-            erros++;
-            
-        }else{
-            //se ainda não tiver enviado as respostas, registra as re respostas com as funções da API:
-            console.log("Registrando respostas:");
-            console.log(evento.detail);
-            
-            API.registrarRespostaAtividade({
-                "identificador": "uni2_ativ1",//modificar
-                "questoes": [
-                    {
-                        //Onde houver os exercícios de drag and drop precisa pegar o innerHTML
-                        "identificador": "r2_1",                    
-                        "gabaritos": [
-                            { "chave": "r2_1_1", "valor": r2_1_1.innerHTML},
-                            { "chave": "r2_1_2", "valor": r2_1_2.innerHTML},
-	    					{ "chave": "r2_1_3", "valor": r2_1_3.innerHTML}							
-                        ]
-                    },{                    
-                        "identificador": "r2_2",                    
-                        "gabaritos": [
-                            { "chave": "r2_2_1", "valor": vetor_r2_2[1]},
-                            { "chave": "r2_2_2", "valor": vetor_r2_2[2]},
-                            { "chave": "r2_2_3", "valor": vetor_r2_2[3]},
-                            { "chave": "r2_2_4", "valor": vetor_r2_2[4]},
-                            { "chave": "r2_2_5", "valor": vetor_r2_2[5]},
-                            { "chave": "r2_2_6", "valor": vetor_r2_2[6]},
-                            { "chave": "r2_2_7", "valor": vetor_r2_2[7]},
-                            { "chave": "r2_2_8", "valor": vetor_r2_2[8]},
-                            { "chave": "r2_2_9", "valor": vetor_r2_2[9]},
-                            { "chave": "r2_2_10", "valor": vetor_r2_2[10]},
-                            { "chave": "r2_2_11", "valor": vetor_r2_2[11]},
-                            { "chave": "r2_2_12", "valor": vetor_r2_2[12]},
-                            { "chave": "r2_2_13", "valor": vetor_r2_2[13]},
-                            { "chave": "r2_2_14", "valor": vetor_r2_2[14]},
-                            { "chave": "r2_2_15", "valor": vetor_r2_2[15]},
-                            { "chave": "r2_2_16", "valor": vetor_r2_2[16]},
-                            { "chave": "r2_2_17", "valor": vetor_r2_2[17]},
-                            { "chave": "r2_2_18", "valor": vetor_r2_2[18]},
-                            { "chave": "r2_2_19", "valor": vetor_r2_2[19]},
-	    					{ "chave": "r2_2_20", "valor": vetor_r2_2[20]}							
-                        ]
-                    }
-                ]
-            });
-            
-            
-            API.registrarRespostaAtividade({
-                "identificador": "uni2_ativ3",
-                "questoes": [
-                    {                        
-                        "identificador": "r2_3",                    
-                        "texto": resposta_r2_3
-                    }
-                ]
-            });
-            
-            API.registrarRespostaAtividade({
-                "identificador": "uni2_ativ4",
-                "questoes": [
-                    {                        
-                        "identificador": "r2_4",                    
-                        "texto": resposta_r2_4
-                    }
-                ]
-            });
+            //console.log("Voltando para a função principal. Quant respostas: "+quant_respostas+" e max: "+max_quant_tentativas);            
+            if(quant_respostas>max_quant_tentativas){
+                //"Já atingiu o máximo de tentativas
+                mensagem.className = "mensagem-ok";
+                mensagem.style.display = "block";
+                mensagem.innerHTML="Você já enviou estas respostas 3 vezes!<br />Sua maior nota é: "+nota_atividade+"<br /><p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";                
+                window.scrollTo(0, 0);
+                erros++;
+            }
+            if(erros==0){
+                //se ainda não tiver enviado as respostas, registra as re respostas com as funções da API:
+                console.log("Registrando respostas:");
+                console.log(evento.detail);
+                
+                API.registrarRespostaAtividade({
+                    "identificador": "uni2_ativ1",//modificar
+                    "questoes": [
+                        {
+                            //Onde houver os exercícios de drag and drop precisa pegar o innerHTML
+                            "identificador": "r2_1",                    
+                            "gabaritos": [
+                                { "chave": "r2_1_1", "valor": r2_1_1.innerHTML},
+                                { "chave": "r2_1_2", "valor": r2_1_2.innerHTML},
+                                { "chave": "r2_1_3", "valor": r2_1_3.innerHTML}							
+                            ]
+                        },{                    
+                            "identificador": "r2_2",                    
+                            "gabaritos": [
+                                { "chave": "r2_2_1", "valor": vetor_r2_2[1]},
+                                { "chave": "r2_2_2", "valor": vetor_r2_2[2]},
+                                { "chave": "r2_2_3", "valor": vetor_r2_2[3]},
+                                { "chave": "r2_2_4", "valor": vetor_r2_2[4]},
+                                { "chave": "r2_2_5", "valor": vetor_r2_2[5]},
+                                { "chave": "r2_2_6", "valor": vetor_r2_2[6]},
+                                { "chave": "r2_2_7", "valor": vetor_r2_2[7]},
+                                { "chave": "r2_2_8", "valor": vetor_r2_2[8]},
+                                { "chave": "r2_2_9", "valor": vetor_r2_2[9]},
+                                { "chave": "r2_2_10", "valor": vetor_r2_2[10]},
+                                { "chave": "r2_2_11", "valor": vetor_r2_2[11]},
+                                { "chave": "r2_2_12", "valor": vetor_r2_2[12]},
+                                { "chave": "r2_2_13", "valor": vetor_r2_2[13]},
+                                { "chave": "r2_2_14", "valor": vetor_r2_2[14]},
+                                { "chave": "r2_2_15", "valor": vetor_r2_2[15]},
+                                { "chave": "r2_2_16", "valor": vetor_r2_2[16]},
+                                { "chave": "r2_2_17", "valor": vetor_r2_2[17]},
+                                { "chave": "r2_2_18", "valor": vetor_r2_2[18]},
+                                { "chave": "r2_2_19", "valor": vetor_r2_2[19]},
+                                { "chave": "r2_2_20", "valor": vetor_r2_2[20]}							
+                            ]
+                        }
+                    ]
+                });
+                
+                
+                API.registrarRespostaAtividade({
+                    "identificador": "uni2_ativ3",
+                    "questoes": [
+                        {                        
+                            "identificador": "r2_3",                    
+                            "texto": resposta_r2_3
+                        }
+                    ]
+                });
+                
+                API.registrarRespostaAtividade({
+                    "identificador": "uni2_ativ4",
+                    "questoes": [
+                        {                        
+                            "identificador": "r2_4",                    
+                            "texto": resposta_r2_4
+                        }
+                    ]
+                });
 
-            //Testes para exibir as respostas enviadas:            
-            console.log("Resposta 2_1: "+r2_1_1.innerHTML);
-            console.log("Resposta 2_1: "+r2_1_2.innerHTML);
-            console.log("Resposta 2_1: "+r2_1_3.innerHTML);
-            console.log("Resposta Texto da 2_3: "+resposta_r2_3);
-            console.log("Resposta Texto da 2_4: "+resposta_r2_4);
+                //Testes para exibir as respostas enviadas:            
+                // console.log("Resposta 2_1: "+r2_1_1.innerHTML);
+                // console.log("Resposta 2_1: "+r2_1_2.innerHTML);
+                // console.log("Resposta 2_1: "+r2_1_3.innerHTML);
+                // console.log("Resposta Texto da 2_3: "+resposta_r2_3);
+                // console.log("Resposta Texto da 2_4: "+resposta_r2_4);
+            }
         }	
 	};
 
@@ -919,20 +931,23 @@ s
     function resultadoRegistrarRespostaAtividade (evento){
         console .log(evento.detail);
         //só faz essa parte, calculando a nota, quando estiver testando a uni2_ativ1. As outras são de texto, não tem nota
-        if(evento.detail.data.identificador=="uni2_ativ1"){
-            nota_atividade = evento.detail.data.notaAtividade;  
-            console.log("A nota nas 2 primeiras atividades foi: "+nota_atividade);
-            nota_atividade = (((2*nota_atividade)+20)/4);
-            console.log("A nota final: "+nota_atividade);
-            id_atividade="uni2_ativ1_notaOK";
-        }            
-
         if(erros==0){
             //se não houver erro, exibe mensagem de OK
-			mensagem.className = "mensagem-ok";
+            mensagem.className = "mensagem-ok";
 			mensagem.style.display ="block";
+            
+            if(evento.detail.data.identificador=="uni2_ativ1"){
+                nota_atividade_nova = evento.detail.data.notaAtividade;  
+                //console.log("A nota nas 2 primeiras atividades foi: "+nota_atividade);
+                //nota_atividade = (((2*nota_atividade)+20)/4);
+                //console.log("A nota final: "+nota_atividade);
+                //id_atividade="uni2_ativ1_notaOK";
+                if(nota_atividade_nova>nota_atividade){
+                    nota_atividade=nota_atividade_nova;
+                }
+            }
 			//esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
-            mensagem.innerHTML="Dados Enviados com sucesso!<br />Sua nota foi: "+nota_atividade+"<br /><BR /><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
+            mensagem.innerHTML="Dados Enviados com sucesso!<br />Esta é sua "+(quant_respostas+1)+"ª tentativa de "+max_quant_tentativas+" possíveis.<br />Sua nota foi: "+nota_atividade_nova+"<br />Sua nota mais alta nesta atividade é: "+nota_atividade+"<p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
             console.log("Ocorreu tudo certo. Tem que aparecer o link");
 			window.scrollTo(0, 0);
         }else{
@@ -998,7 +1013,7 @@ s
 
         //se a conta der menos que 2400, reabilita os campos.
         }else{            
-            console.log("Aqui quando ainda não deu 2400");
+            //console.log("Aqui quando ainda não deu 2400");
             total = soma_temp;
             object.value = valor_agora == 0 ? "" : valor_agora;        
 
@@ -1027,7 +1042,7 @@ s
 
     ///// Funções para exibir a legenda da categoria quando passar o mouse sobre um botão de rádio /////
     function radio_hover(cat){    
-        console.log("cat="+cat);
+        //console.log("cat="+cat);
         let texto_opcao = document.querySelector(".texto-opcao."+cat);
         texto_opcao.classList.add("cat-hover");        
         let texto_cat =document.querySelector(".texto-cat."+cat);
