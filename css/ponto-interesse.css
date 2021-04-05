@@ -588,6 +588,30 @@ Main components
   right: 8%;
 }
 
+.cd-single-point.ponto1-uni2-tela5{
+  top: 10%;
+  right: 48%;
+}
+
+.cd-single-point.ponto2-uni2-tela5{
+  top: 45%;
+  right: 15%;
+}
+
+.cd-single-point.ponto3-uni2-tela5{
+  top: 75%;
+  right: 32%;
+}
+
+.cd-single-point.ponto4-uni2-tela5{
+  top: 75%;
+  right: 60%;
+}
+
+.cd-single-point.ponto5-uni2-tela5{
+  top: 45%;
+  right: 80%;
+}
 
 .cd-single-point.titulo-bola{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
