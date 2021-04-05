@@ -1199,35 +1199,14 @@
       color: #898989;
       text-transform: uppercase;
     }
-    #circulo-uni1, #circulo-uni0 {
-      display: block;
-      margin-top: 12px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 20px;
-    }
-    #circulo-uni2 {
-      display: block;
-      margin-top: 12px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 20px;
-    }
-    #circulo-uni3 {
-      display: block;
-      margin-top: 12px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 20px;
-    }
-    #circulo-uni4 {
-      display: block;
-      margin-top: 12px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 20px;
-    }
-    #circulo-uni5 {
+
+    #circulo-uni0,
+    #circulo-uni1,
+    #circulo-uni2,
+    #circulo-uni3,
+    #circulo-uni4,
+    #circulo-uni5,
+    #circulo-encerramento{
       display: block;
       margin-top: 12px;
       margin-left: auto;
@@ -1310,7 +1289,7 @@
 <!-- Header -->
 <header id="header">
   <div class="logo">
-    <a href="#">Mentoria para a Educação Profissional 1</a>
+    <a href="#">Mentoria para a Educação Profissional</a>
     <h3>Estrutura do novo Ensino médio e possibilidades formativas</h3>
   </div>
 </header>
@@ -1348,6 +1327,12 @@
       </header>
 
       <div class="content">
+        <div class="caixa-sumario" id="botao-continuar">
+          <span><a href="#"><button class="bt-padrao">CONTINUAR DE ONDE PAREI ></button></a></span>
+        </div>
+        <p></p>
+        
+
         <div class="caixa-sumario">
           <div class="link-unidade" id="div-uni0">
             <img class="imagem-area-card-unidade" alt="Bem-vindo!" title='Bem-vindo!' src="../img/padrao/00.jpg">
@@ -1361,6 +1346,7 @@
             <!-- <p>UNIDADE 1</p> -->
             <span><a href="./uni0/tela01.html"><button class="bt-padrao">ACESSAR ></button></a></span>
           </div>
+          <div style="display: block;"></div>
           <div class="link-unidade" id="div-uni1">
             <img class="imagem-area-card-unidade" alt="Educação Profissional no mundo contemporâneo" title='Educação Profissional no mundo contemporâneo' src="../img/padrao/01.jpg">
             <div class="c100 p0" id="circulo-uni1">
@@ -1425,6 +1411,22 @@
             <!-- <p>UNIDADE 5</p> -->
             <span><a href="./uni5/tela01.html"><button class="bt-padrao">ACESSAR ></button></a></span>
           </div>
+
+          <div style="display: block;"></div>
+
+          <div class="link-unidade" id="div-encerramento">
+            <img class="imagem-area-card-unidade" alt="Encerramento" title="Encerramento" src="../img/padrao/06.jpg">
+            <div class="c100 p0" id="circulo-encerramento">
+              <span id="progresso-encerramento">0%</span>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+            </div>
+            <!-- <p>UNIDADE 5</p> -->
+            <span><a href="./encerramento/index.html" style="display: none;"><button class="bt-padrao">ACESSAR ></button></a></span>
+          </div>
+
         </div>
       </div>
 
@@ -1463,131 +1465,141 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
 
+<!-- Funções de acesso à biblioteca do Avamec-->
+
 <script type="text/javascript">
-  console.clear(screen);
-  var API = new BridgeRestApi();
-  //a variável da quantidade de Unidades que há no Curso
-  var quantUnidades=5;
-  //contagem das unidades para referência a cada laço for. começa em 1
-  var uniAtual = 1;
+      console.clear(screen);
+			var API = new BridgeRestApi();												
+			var controle_id_unidade="0";
+      var nome_unidade="";
+      var porcentagem_geral=0;
 
-  console.log("Começando o teste");
-  window.addEventListener('load', function(){
-    //o for vai criar o array com as chaves das unidades e chamar a função obterDadosGenericos com essas chaves
-    console.log("\n\nUnidade 0");
-    //primeiro verifica os dados salvos
-    API.obterDadosGenericos("porcentagemUni0");
-    console.log("\n\nUnidade 1");
-    //primeiro verifica os dados salvos
-    API.obterDadosGenericos("porcentagemUni1");
-    console.log("\n\nUnidade 2");
-    //primeiro verifica os dados salvos
-    API.obterDadosGenericos("porcentagemUni2");
-    console.log("\n\nUnidade 3");
-    //primeiro verifica os dados salvos
-    API.obterDadosGenericos("porcentagemUni3");
-    console.log("\n\nUnidade 4");
-    //primeiro verifica os dados salvos
-    API.obterDadosGenericos("porcentagemUni4");
-    console.log("\n\nUnidade 5");
-    //primeiro verifica os dados salvos
-    API.obterDadosGenericos("porcentagemUni5");
-  });
+      //Obtendo as porcentagens de todas as unidade:
+			window.addEventListener('load', function(){
+			  //verifica a porcentagem de todas as unidades
+        console.log("Começando o teste\ncontrole="+controle_id_unidade)+"\nnomeUnidade="+nome_unidade;               
+        verifica_unidades(controle_id_unidade);
+      });
 
-  //Adicionando listener para o evento dos dados genériocs
-  window.addEventListener("evObtemDadosGenericos",function(evento){
-    console.log("\n\nObtendo os dados genéricos: ");
+      function verifica_unidades(num_controle){
+        if(num_controle<=5){
+          nome_unidade="mod1_uni"+num_controle;
+          console.log("nome_unidade="+nome_unidade);
+          API.obterPorcentagemConclusaoUnidade(nome_unidade);        
+        }else{
+          console.log("Acabou de fazer as 5 unidades");
+        }
+      }
+
+  //Adicionando listener para o evento da porcentagem  
+  window.addEventListener("evObtemPorcentagemConclusaoUnidade",resultadoObterPorcentagemConclusaoUnidade, false );
+  function resultadoObterPorcentagemConclusaoUnidade (evento){
+    console.log(evento.detail);
+    console.log("\n\nObtendo porcentagem\ncontrole="+controle_id_unidade);
     console.log("Status do evento: "+evento.detail['status']);
-
+    
     //verifica qual o código retornado, pra saber se a unidade já foi começada
     if(evento.detail["status"]=="200"){
       //se a unidade já foi iniciada, então vai ter porcentagem.
-      var porcentagem = evento.detail["data"][0]["valor"];
-      console.log(evento.detail["data"]);
-      switch (evento.detail["data"][0]["chave"]){
-        case "porcentagemUni0":
+      var porcentagem = evento.detail["data"];                
+      console.log(evento.detail["data"]+"\ntestando: "+nome_unidade+"\nporcentagem="+porcentagem);            
+      switch (nome_unidade){
+        case "mod1_uni0":
           console.log("Unidade 0 tem "+(porcentagem)+"% concluída");
           progresso = document.getElementById("progresso-uni0");
           circulo = document.getElementById("circulo-uni0");
           progresso.innerHTML=""+porcentagem+"%";
-          circulo.className="c100 p"+porcentagem;
+          circulo.className="c100 p"+porcentagem;          
+          porcentagem_geral+=porcentagem;
+          //bloquear outras unidades se essa porcentagem for menor que 100          
+          if(porcentagem<100){
+            console.log("\nunidade 0 não tem 100%");
+            div1=document.querySelector("#div-uni1 span a");
+            div1.style.display="none";
+            div2=document.querySelector("#div-uni2 span a");
+            div2.style.display="none";
+            div3=document.querySelector("#div-uni3 span a");
+            div3.style.display="none";
+            div4=document.querySelector("#div-uni4 span a");
+            div4.style.display="none";            
+            div5=document.querySelector("#div-uni5 span a");
+            div5.style.display="none";
+            bt_continuar=document.querySelector("#botao-continuar");
+            bt_continuar.style.display="none";
+            
+          }  
           break;
           
-        case "porcentagemUni1":
+        case "mod1_uni1":
           console.log("Unidade 1 tem "+(porcentagem)+"% concluída");
           progresso = document.getElementById("progresso-uni1");
           circulo = document.getElementById("circulo-uni1");
           progresso.innerHTML=""+porcentagem+"%";
           circulo.className="c100 p"+porcentagem;
+          porcentagem_geral+=porcentagem;          
           break;
 
-        case "porcentagemUni2":
+        case "mod1_uni2":
           console.log("Unidade 2 tem "+(porcentagem)+"% concluída");
           progresso = document.getElementById("progresso-uni2");
           circulo = document.getElementById("circulo-uni2");
           progresso.innerHTML=""+porcentagem+"%";
           circulo.className="c100 p"+porcentagem;
+          porcentagem_geral+=porcentagem;          
           break;
 
-        case "porcentagemUni3":
+        case "mod1_uni3":
           console.log("Unidade 3 tem "+(porcentagem)+"% concluída");
           progresso = document.getElementById("progresso-uni3");
           circulo = document.getElementById("circulo-uni3");
           progresso.innerHTML=""+porcentagem+"%";
-          circulo.className="c100 p"+porcentagem;
+          circulo.className="c100 p"+porcentagem; 
+          porcentagem_geral+=porcentagem;         
           break;
-        case "porcentagemUni4":
+
+        case "mod1_uni4":
           console.log("Unidade 4 tem "+(porcentagem)+"% concluída");
           progresso = document.getElementById("progresso-uni4");
           circulo = document.getElementById("circulo-uni4");
           progresso.innerHTML=""+porcentagem+"%";
-          circulo.className="c100 p"+porcentagem;
+          circulo.className="c100 p"+porcentagem; 
+          porcentagem_geral+=porcentagem;         
           break;
-        case "porcentagemUni5":
+
+        case "mod1_uni5":
           console.log("Unidade 5 tem "+(porcentagem)+"% concluída");
           progresso = document.getElementById("progresso-uni5");
           circulo = document.getElementById("circulo-uni5");
           progresso.innerHTML=""+porcentagem+"%";
           circulo.className="c100 p"+porcentagem;
+          porcentagem_geral+=porcentagem;          
           break;
       }
-      //se a unidade não foi iniciada, registra os dados Genéricos da unidade com 0%
+      
     }else{
-      switch (evento.detail["data"][0]["chave"]){
-        case "porcentagemUni0":
-          API.registrarDadosGenericos("porcentagemUni0",0);
-          console.log("Porcentagem da Unidade 0 Iniciada");
-          break;
-
-        case "porcentagemUni1":
-          API.registrarDadosGenericos("porcentagemUni1",0);
-          console.log("Porcentagem da Unidade 1 Iniciada");
-          break;
-
-        case "porcentagemUni2":
-          API.registrarDadosGenericos("porcentagemUni2",0);
-          console.log("Porcentagem da Unidade 2 Iniciada");
-          break;
-
-        case "porcentagemUni3":
-          API.registrarDadosGenericos("porcentagemUni3",0);
-          console.log("Porcentagem da Unidade 3 Iniciada");
-          break;
-
-        case "porcentagemUni4":
-          API.registrarDadosGenericos("porcentagemUni4",0);
-          console.log("Porcentagem da Unidade 4 Iniciada");
-          break;
-
-        case "porcentagemUni5":
-          API.registrarDadosGenericos("porcentagemUni5",0);
-          console.log("Porcentagem da Unidade 5 Iniciada");
-          break;
-      }
+      console.log("\n\n\nERRO");      
     }
-    //depois de tratar os dados, pula para a próxima unidade.
-    uniAtual++;
-  });
+
+    //aqui verifica se todas as unidades foram finalizadas. Se sim, exibe a unidade de encerramento.   
+    //porcentagem_geral=900;
+    console.log("\nPorc. Geral="+(porcentagem_geral/5));  
+    if((porcentagem_geral/5)>=80){
+      let div_encerramento = document.querySelector("#div-encerramento span a");
+      div_encerramento.style.display="inline-block";
+    }
+
+    controle_id_unidade++;
+    console.log("Controle="+controle_id_unidade);
+    verifica_unidades(controle_id_unidade);
+  };
+
+  API.obterUltimaPaginaAcessada();
+  window .addEventListener( "evObtemUltimaPaginaAcessada" ,resultadoObtemUltimaPaginaAcessada, false );
+  function resultadoObtemUltimaPaginaAcessada (evento){
+      console .log(evento.detail);
+        let bt_continuar=document.querySelector("#botao-continuar span a");          
+        bt_continuar.href=evento.detail["data"];
+  }
 
 </script>
 

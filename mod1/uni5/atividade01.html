@@ -7,10 +7,32 @@
 		<link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
 		<link rel="stylesheet" href="../../css/atividades.css?ver=1.1" />
 
+		<!-- Botão de Voltar ao Topo -->
 		<script src="../../js/jquery-2.1.1.js"></script>
-		<script src="../../js/bt-topo.js"></script> <!-- Botão de Voltar ao Topo -->
+		<script src="../../js/bt-topo.js"></script>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-SB34EK30YV');
+		</script>
+
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+					new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-MK4H2FJ');</script>
+		<!-- End Google Tag Manager -->
 	</head>
 	<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MK4H2FJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 
 	<!-- Header -->
 	<header id="header">
@@ -56,15 +78,15 @@
 						
 						<div class="content">
 
-							<div class="atividade" id='atividade-uni5'>							
+							<div class="atividade" id='atividade-uni5'>	
+								<div id='mensagem-alerta'>
+								</div>						
 								<p>
 									Nas unidades 3 e 4 você elaborou uma proposta de itinerário formativo, agora você deverá fazer uma pesquisa e apontar possíveis instituições de educação profissional que poderiam ofertar este itinerário. Não esqueça de postar os seus achados no fórum,
-									<a href="https://hmg.labtime.ufg.br/avamec/#/instituicao/setec/curso/6036/ferramenta/forum/topico/listar" target="_blank">Clicando aqui.</a>
+									<!-- <a href="https://hmg.labtime.ufg.br/avamec/#/instituicao/setec/curso/6036/ferramenta/forum/topico/listar" target="_blank">Clicando aqui.</a> -->
+									clicando no ícone o ícone "Fórum" <img src="../../img/uni0/icone_Forum.png" style="margin-bottom: -20px;"> no menu de usuário.
 								</p>
 
-								<div id='mensagem-alerta'>
-								</div>
-								
 								<form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni5" method="POST">
 									<div class="questao">
 										<div class="titulo-questao">Questão 1</div>
@@ -227,6 +249,7 @@
 			</footer>
 
 		<script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>	
+		<script src="../../js/funcoes_atividades.js"></script>
 		<script>
 			console.clear(screen);
 		
@@ -235,7 +258,7 @@
 			var id_slide = "uni5/atividade01.html";//modificar
 			var id_atividade = "uni5_ativ1";//modificar
 			var nota_atividade = 0;
-			var nota_atividade_nova=0;
+			var nota_atividade_nova=0;			
 			var erros = 0;
 
 			/*************** Verificando se todas as respostas foram enviadas. *****/
@@ -243,7 +266,7 @@
 			var mensagem = document.getElementById("mensagem-alerta");    
 
 			function salvarDados(){
-				console.log("função aqui");				
+				//console.log("função aqui");				
 				erros = 0;
 				
 				//aqui vai pegar os valores de cada exercício.
@@ -293,10 +316,9 @@
 					window.scrollTo(0, 0);
 					return false;
 				}else{
-					console.log("\nChecando respostas"+id_atividade);
-					//primeiro verifica dados salvos da primeira resposta. Se encontrar é porque já enviou anteriormente.		
-					API.obterRespostaAtividade("uni5_ativ1");//modificar
-
+					console.log("\nChecando respostas "+id_atividade);
+					//verificando qual tentativa é esta.
+					verificando_tentativas("quant_"+id_atividade);            
 					if(erros>0){
 						return false;
 					}			
@@ -304,28 +326,28 @@
 			}
 
 
-			//Quando obtém a porcentagem da unidade em questão, executa esta função
+			//Depois que verifica as tentativas de resposta, verifica as respostas salvas;
 			window .addEventListener( "evObtemDadosRespostaAtividade" , resultadoObtemRespostaAtividade, false );
 			function resultadoObtemRespostaAtividade(evento){
 
 				console.log("\nObtendo as respostas: ");
-				console.log("Status do evento: "+evento.detail['status']);
-
+				console.log("Status do evento: "+evento.detail['status']);          
 				//verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
-				if(evento.detail["status"]=="200"){
-
-					//Se o cursista já enviou alguma resposta, vai encontrar aqui. Então vai aparecer uma mensagem de alerta.				
+				if(evento.detail["status"]=="200"){  
+					//Se já tiver enviado (200) então verifica quantas tentativas foram feitas.          
 					nota_atividade = evento.detail.data.nota;
-					console.log(evento.detail["data"]);
-					console.log("Atividades já foram enviadas antes.");            
-					mensagem.innerHTML = "Você já enviou estas respostas!<br />Sua nota foi: "+nota_atividade+"<br /><br /><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
-					mensagem.className = "mensagem-ok";
-					mensagem.style.dispay = "block";
-					window.scrollTo(0, 0);
-					erros++;
-					
-				}else{
-					//se ainda não tiver enviado as respostas, registra as re respostas com as funções da API:
+					console.log("Voltando para a função principal. Quant respostas: "+quant_respostas+" e max: "+max_quant_tentativas);            
+					if(quant_respostas>max_quant_tentativas){
+						console.log("Máximo de envios.");
+						mensagem.className = "mensagem-ok";
+						mensagem.style.display = "block";
+						mensagem.innerHTML="Você já fez "+max_quant_tentativas+" tentativas!<br />Sua maior nota é: "+nota_atividade+"<br /><p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";                
+						window.scrollTo(0, 0);
+						erros++;
+            		}
+				}
+				if(erros==0){        
+					//se ainda não tiver enviado as respostas, ou estiver dentro das tentativas, registra as re respostas com as funções da API:
 					console.log("Registrando respostas:");
 					console.log(evento.detail);
 					API.registrarRespostaAtividade({
@@ -354,30 +376,35 @@
 					})
 
 					//Testes para exibir as respostas enviadas:            
-					console.log("Resposta 1_1: "+r5_1_1.innerHTML);
-					console.log("Resposta 1_2: "+r5_1_2.innerHTML);
-					console.log("Resposta 2_1: "+r5_2_1.innerHTML);
-					console.log("Resposta 2_2: "+r5_2_2.innerHTML);
-					console.log("Resposta 2_3: "+r5_2_3.innerHTML);            
-					console.log("Resposta 2_4: "+r5_2_4.innerHTML);            
-					console.log("Resposta 2_5: "+r5_2_5.innerHTML);            
-					console.log("Resposta 2_6: "+r5_2_6.innerHTML);            
-					console.log("Resposta 2_7: "+r5_2_7.innerHTML);           			
+					// console.log("Resposta 1_1: "+r5_1_1.innerHTML);
+					// console.log("Resposta 1_2: "+r5_1_2.innerHTML);
+					// console.log("Resposta 2_1: "+r5_2_1.innerHTML);
+					// console.log("Resposta 2_2: "+r5_2_2.innerHTML);
+					// console.log("Resposta 2_3: "+r5_2_3.innerHTML);            
+					// console.log("Resposta 2_4: "+r5_2_4.innerHTML);            
+					// console.log("Resposta 2_5: "+r5_2_5.innerHTML);            
+					// console.log("Resposta 2_6: "+r5_2_6.innerHTML);            
+					// console.log("Resposta 2_7: "+r5_2_7.innerHTML);           			
 				}	
+				
 			};
 
 			//função de controle, pra exibir no console o resultado do envio das respostas (registraRespostaAtividade)
 			window .addEventListener( "evRegistraRespostaAtividade" ,resultadoRegistrarRespostaAtividade, false );
 			function resultadoRegistrarRespostaAtividade (evento){
 				console .log(evento.detail);
-				nota_atividade= evento.detail.data.notaAtividade;
+				nota_atividade_nova= evento.detail.data.notaAtividade;
 				if(erros==0){
 					//se não houver erro, exibe mensagem de OK
+					//console.log("Aqui envia uma nova tentativa, são "+quant_respostas+" salvas");
 					mensagem.className = "mensagem-ok";
-					mensagem.style.display ="block";
+					mensagem.style.display ="block";			
+					if(nota_atividade_nova>nota_atividade){
+						nota_atividade=nota_atividade_nova;
+					}
 					//esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
-					mensagem.innerHTML="Dados Enviados com sucesso!<br />Sua nota foi: "+nota_atividade+"<br /><BR /><a class='link-proxima-unidade' href='../sumario.html'>PROSSEGUIR &#10095;</a>";
-					console.log("Ocorreu tudo certo. Tem que aparecer o link");
+					mensagem.innerHTML="Dados Enviados com sucesso!<br />Esta é sua "+(quant_respostas)+"ª tentativa de "+max_quant_tentativas+" possíveis.<br />Sua nota foi: "+nota_atividade_nova+"<br />Sua nota mais alta nesta atividade é: "+nota_atividade+"<p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
+					//"Ocorreu tudo certo. Tem que aparecer o link
 					window.scrollTo(0, 0);
 				}else{
 					//caso algum não esteja preenchido, exibe mensagem de erro

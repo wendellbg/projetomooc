@@ -625,6 +625,22 @@ input[type="checkbox"]:checked + label {
     padding: 20px;
 }
 
+.texto-alternativo-1{
+    display: inline;
+}
+.texto-alternativo-2{
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .texto-alternativo-1{
+        display: none;
+    }
+    .texto-alternativo-2{
+        display: inline;
+    }
+}
+
 @media screen and (max-width: 680px) {
 	.texto-resposta{
         width: 90%;

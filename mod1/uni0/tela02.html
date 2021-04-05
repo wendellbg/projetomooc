@@ -7,32 +7,34 @@
 	<link rel="stylesheet" href="../../css/mooc1.css?ver=1.2" />
 	<link rel="stylesheet" href="../../css/boxes.css?ver=1.3"/>
 
+	<!-- Botão de Voltar ao Topo -->
+	<script src="../../js/jquery-2.1.1.js"></script>
+	<script src="../../js/bt-topo.js"></script>
 
+	<!-- Funções de acesso à biblioteca do Avamec-->
+	<script src="../../js/funcoes-5.js"></script>
+	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-5XZ9DSX69N"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 
-		gtag('config', 'G-5XZ9DSX69N');
+		gtag('config', 'G-SB34EK30YV');
 	</script>
-
-	<script src="../../js/jquery-2.1.1.js"></script>
-	<script src="../../js/bt-topo.js"></script> <!-- Botão de Voltar ao Topo -->
 
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-W9Q4PWW');</script>
+	})(window,document,'script','dataLayer','GTM-MK4H2FJ');</script>
 	<!-- End Google Tag Manager -->
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9Q4PWW"
-				  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MK4H2FJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- Header -->
@@ -75,18 +77,20 @@
 			</header>
 
 			<div class="content">
-				<div class="content">
-					<p>Bem-vindo ao curso Educação Profissional: Estrutura e Possibilidades Formativas. Este é um curso on-line, no qual você terá acesso a conteúdos interativos, indicações de leituras complementares e reflexões teórico-práticas voltadas para atuação do professor no processo de <b>mentoria dos alunos</b> para a escolha de seu itinerário de formação.</p>
-					<p>O curso tem <b>5 unidades</b> formado por conceitos teóricos, atividades reflexivas e avaliativas. O tempo de dedicação previsto para a conclusão do curso é de <b>40 horas</b>. É importante que você divida o seu tempo semanalmente durante o período do curso para a conclusão das atividades previstas.</p>
-					<p>Antes de começarmos, gostaríamos de conhecer você melhor, assim como suas expectativas com relação ao curso. Não deixe de responder ao questionário, a seguir.</p>
-				</div>
+				<p>Bem-vindo ao curso Educação Profissional: Estrutura e Possibilidades Formativas. Este é um curso on-line, no qual você terá acesso a conteúdos interativos, indicações de leituras complementares e reflexões teórico-práticas voltadas para atuação do professor no processo de <b>mentoria dos alunos</b> para a escolha de seu itinerário de formação.</p>
+				<p>O curso tem <b>5 unidades</b> formado por conceitos teóricos, atividades reflexivas e avaliativas. O tempo de dedicação previsto para a conclusão do curso é de <b>40 horas</b>. É importante que você divida o seu tempo semanalmente durante o período do curso para a conclusão das atividades previstas.</p>
+				<p>Antes de começarmos, gostaríamos de conhecer você melhor, assim como suas expectativas com relação ao curso. Não deixe de responder ao questionário, a seguir.</p>
+			
+				<p>Para responder a pesquisa, acesse o ícone "Pesquisa" <img src="../../img/uni0/icone_Pesquisa.png" style="margin-bottom: -20px;"> no menu de usuário.</p>
+				<p>E depois volte para a página onde parou pelo ícone "Início do Curso" <img src="../../img/uni0/icone_Inicio.png" style="margin-bottom: -20px;"></p>
 			</div>
 
 
 			<!-- Conteúdo -->
 			<div class="content footer">
 				<div>
-					<button class="bt-avanca atividades" type="button"><a href="#"><i class="fas fa-question-circle"></i> QUESTIONÁRIO &#10095;&#10095;</a></button>
+					<!-- <button class="bt-avanca atividades" type="button"><a href="#"><i class="fas fa-question-circle"></i> QUESTIONÁRIO &#10095;&#10095;</a></button> -->
+
 				</div>
 				<div class='navegacao'>
 					<div class="bt-topo">
@@ -95,6 +99,7 @@
 <!--					<div>-->
 <!--						<button class="bt-avanca" type="button"><a href="../uni1/tela01.html">UNIDADE 1 &#10095;</a></button>-->
 <!--					</div>-->
+					<div><button class="bt-avanca" type="button"><a href="tela03.html">PROSSEGUIR &#10095;</a></button></div>
 					<div class='botoes-navegacao'>
 						<a href="tela01.html"><button class="bt-navegacao" type="button"><</button></a>
 
@@ -143,71 +148,17 @@
 
 	var API = new BridgeRestApi();
 	var id_unidade = "mod1_uni0";
-	var id_slide = "uni0/tela02.html";
-	var progressoSalvo;
+	var id_slide = "mod1/uni0/tela02.html";//alterar
+	var unidade=0;//alterar
+	var tela="uni0tela2";//alterar
+	
+	//Obtendo dados curso
 	window.addEventListener('load', function(){
-		API.obterDadosCurso();
-	})
-
-	window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
-	function resultadoObterDadosCurso(evento){
-		console.log(evento.detail);
-		//antes de registrar a porcentagem, verifica a porcentagem atual:
-		API.obterDadosGenericos(porcentagem);
-	}
-
-
-	//Quando obtém a porcentagem da unidade em questão, executa esta função
-	window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
-	function resultadoObtemDadosGenericos (evento){
-		console.log(evento.detail);
-
-		//testando se o status é 200, unidade já iniciada
-		if(evento.detail["status"]==200){
-			var i=0;
-			var cont = 0;
-			//O evento retorna um vetor. É preciso pesquisar em qual posição está a porcentagem da unidade atual
-			while(i==0){
-				if(evento.detail["data"][cont]["chave"]==porcentagem){
-					console.log("achou na posição "+cont);
-					console.log(evento.detail["data"][cont]["chave"]);
-					i=1;
-				}else{
-					console.log("não encontrou na posição "+cont);
-					console.log(evento.detail["data"][cont]["chave"]);
-					cont=cont+1;
-					if(cont==10){
-						i=1;
-					}
-				}
-
-			}
-			progressoSalvo = evento.detail["data"][cont]["valor"];
-			console.log("Valor de Porcentagem atual: "+progressoSalvo);
-
-			if(progressoSalvo < progresso){
-				//registrando a porcentagem da Unidade 1
-				
-				API.registrarDadosGenericos(porcentagem,progresso);
-				console.log('Registrando nova porcentagem: '+progresso);
-			}else{
-				//Se o cursista estiver revendo a tela, o progresso Salvo será maior, então não altera nada.
-				console.log("Porcentagem não alterada.");
-			}
-
-		}else if(evento.detail["status"]==412){
-			//se for status 400, inicia a chave da porcentagem da unidade em questão
-			console.log("Inicializando a porcentagem da unidade");
-			API.registrarDadosGenericos(porcentagem,14);
-		}
-	};
-
-	window.addEventListener('evObtemRegistraDadosGenericos', resultadoRegistrarDadosGenericos, false);
-	function resultadoRegistrarDadosGenericos (evento){
-		console.log("Verificando porcentagem registrada");
-		console.log(evento.detail);
-	};
-
+    	API.obterDadosCurso();
+	});
+	
+	API.registrarUltimaPaginaAcessada(id_unidade,id_slide);
+	
 </script>
 
 </body>
