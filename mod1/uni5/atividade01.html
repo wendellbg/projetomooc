@@ -78,16 +78,15 @@
 						
 						<div class="content">
 
-							<div class="atividade" id='atividade-uni5'>							
+							<div class="atividade" id='atividade-uni5'>	
+								<div id='mensagem-alerta'>
+								</div>						
 								<p>
 									Nas unidades 3 e 4 você elaborou uma proposta de itinerário formativo, agora você deverá fazer uma pesquisa e apontar possíveis instituições de educação profissional que poderiam ofertar este itinerário. Não esqueça de postar os seus achados no fórum,
 									<!-- <a href="https://hmg.labtime.ufg.br/avamec/#/instituicao/setec/curso/6036/ferramenta/forum/topico/listar" target="_blank">Clicando aqui.</a> -->
 									clicando no ícone o ícone "Fórum" <img src="../../img/uni0/icone_Forum.png" style="margin-bottom: -20px;"> no menu de usuário.
 								</p>
 
-								<div id='mensagem-alerta'>
-								</div>
-								
 								<form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni5" method="POST">
 									<div class="questao">
 										<div class="titulo-questao">Questão 1</div>
@@ -267,7 +266,7 @@
 			var mensagem = document.getElementById("mensagem-alerta");    
 
 			function salvarDados(){
-				console.log("função aqui");				
+				//console.log("função aqui");				
 				erros = 0;
 				
 				//aqui vai pegar os valores de cada exercício.
@@ -338,11 +337,11 @@
 					//Se já tiver enviado (200) então verifica quantas tentativas foram feitas.          
 					nota_atividade = evento.detail.data.nota;
 					console.log("Voltando para a função principal. Quant respostas: "+quant_respostas+" e max: "+max_quant_tentativas);            
-					if(quant_respostas>=max_quant_tentativas){
-						console.log("Já foram 3 tentativas");
+					if(quant_respostas>max_quant_tentativas){
+						console.log("Máximo de envios.");
 						mensagem.className = "mensagem-ok";
 						mensagem.style.display = "block";
-						mensagem.innerHTML="Você já enviou estas respostas 3 vezes!<br />Sua maior nota é: "+nota_atividade+"<br /><p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";                
+						mensagem.innerHTML="Você já fez "+max_quant_tentativas+" tentativas!<br />Sua maior nota é: "+nota_atividade+"<br /><p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";                
 						window.scrollTo(0, 0);
 						erros++;
             		}
@@ -377,15 +376,15 @@
 					})
 
 					//Testes para exibir as respostas enviadas:            
-					console.log("Resposta 1_1: "+r5_1_1.innerHTML);
-					console.log("Resposta 1_2: "+r5_1_2.innerHTML);
-					console.log("Resposta 2_1: "+r5_2_1.innerHTML);
-					console.log("Resposta 2_2: "+r5_2_2.innerHTML);
-					console.log("Resposta 2_3: "+r5_2_3.innerHTML);            
-					console.log("Resposta 2_4: "+r5_2_4.innerHTML);            
-					console.log("Resposta 2_5: "+r5_2_5.innerHTML);            
-					console.log("Resposta 2_6: "+r5_2_6.innerHTML);            
-					console.log("Resposta 2_7: "+r5_2_7.innerHTML);           			
+					// console.log("Resposta 1_1: "+r5_1_1.innerHTML);
+					// console.log("Resposta 1_2: "+r5_1_2.innerHTML);
+					// console.log("Resposta 2_1: "+r5_2_1.innerHTML);
+					// console.log("Resposta 2_2: "+r5_2_2.innerHTML);
+					// console.log("Resposta 2_3: "+r5_2_3.innerHTML);            
+					// console.log("Resposta 2_4: "+r5_2_4.innerHTML);            
+					// console.log("Resposta 2_5: "+r5_2_5.innerHTML);            
+					// console.log("Resposta 2_6: "+r5_2_6.innerHTML);            
+					// console.log("Resposta 2_7: "+r5_2_7.innerHTML);           			
 				}	
 				
 			};
@@ -397,7 +396,7 @@
 				nota_atividade_nova= evento.detail.data.notaAtividade;
 				if(erros==0){
 					//se não houver erro, exibe mensagem de OK
-					console.log("Aqui envia uma nova tentativa, são "+quant_respostas+" salvas");
+					//console.log("Aqui envia uma nova tentativa, são "+quant_respostas+" salvas");
 					mensagem.className = "mensagem-ok";
 					mensagem.style.display ="block";			
 					if(nota_atividade_nova>nota_atividade){
@@ -405,7 +404,7 @@
 					}
 					//esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
 					mensagem.innerHTML="Dados Enviados com sucesso!<br />Esta é sua "+(quant_respostas)+"ª tentativa de "+max_quant_tentativas+" possíveis.<br />Sua nota foi: "+nota_atividade_nova+"<br />Sua nota mais alta nesta atividade é: "+nota_atividade+"<p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
-					console.log("Ocorreu tudo certo. Tem que aparecer o link");
+					//"Ocorreu tudo certo. Tem que aparecer o link
 					window.scrollTo(0, 0);
 				}else{
 					//caso algum não esteja preenchido, exibe mensagem de erro
