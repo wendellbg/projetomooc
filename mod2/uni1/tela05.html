@@ -4,11 +4,12 @@
     <title>Mentoria</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../../css/mooc1.css?ver=1.1"/>
+    <link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2" />
     <link rel="stylesheet" href="../../css/slide.css?ver=1.1"/>
     <link rel="stylesheet" href="../../css/fontes.css"/>    
     <link rel="stylesheet" href="../../css/listas.css"/>
+    <link rel="stylesheet" href="../../css/colunas.css?ver=1.1"/>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5XZ9DSX69N"></script>
     <script>
@@ -17,19 +18,7 @@
       gtag('js', new Date());
 
       gtag('config', 'G-5XZ9DSX69N');
-    </script>
-    <style>
-        .box {
-            width: 300px;
-            display: inline-block;
-            margin-left: 1%;
-            margin-right: 1%;
-            padding: 2%;
-        } 
-        .box img {
-            max-width: 300px;
-        }
-    </style>
+    </script>    
 </head>
 <body>
 
@@ -84,47 +73,62 @@
                     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EQ_CNCOBP5U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                    
                 </div>
             </div>
-                               
-            <div class="content no-top">
-                <p>No entanto, neste sentido amplo e existencial que estamos seguindo aqui, afinal, todos nós, qualquer que seja nosso trabalho, somos técnicos.</p>            
+            
+            <!-- Conteúdo -->
+            <div class="content">
+                <div class="row">
+                    <div class="6u 12u$(small) coluna-geral coluna1">
+                        <div class='top-coluna'>
+                            <img class='topo1' src="../../img/uni1/MOOC2_Uni1_tela5_imagem1a.jpg" />
+                            <legend style="text-align: center;">Figura 1: Soldador</legend>
+                        </div>                        
+                    </div>
+                    <div class="6u 12u$(small) coluna-geral coluna2">
+                        <div class='top-coluna'>
+                            <img class='topo2' src=" ../../img/uni1/MOOC2_Uni1_tela5_imagem1b.jpg" />
+                            <legend style="text-align: center;">Figura 2: Enfermeira</legend>
+                        </div>                        
+                    </div>
+                    <div class="6u 12u$(small) coluna-geral coluna3">
+                        <div class='top-coluna'>
+                            <img class='topo3' src="../../img/uni1/MOOC2_Uni1_tela5_imagem1c.jpg" />
+                            <legend style="text-align: center;">Figura 3: Professor</legend>
+                        </div>                        
+                    </div>              
+                </div>
             </div>
 
-            <div class="box">
-                <img src=" ../../img/uni1/MOOC2_Uni1_tela5_imagem1a.jpg" alt="Industria">
-                <span><center>Indústria</center></span>
-            </div>
-            <div class="box">
-                <img src=" ../../img/uni1/MOOC2_Uni1_tela5_imagem1b.jpg" alt="Saúde">
-                <span><center>Saúde</center></span>
-            </div>
-            <div class="box">
-                <img src=" ../../img/uni1/MOOC2_Uni1_tela5_imagem1c.jpg" alt="Professor">
-                <span><center>Professor</center></span>
-            </div>
+            <div class="content no-top">
+                <p>No entanto, neste sentido amplo e existencial que estamos seguindo aqui, afinal, todos nós, qualquer que seja nosso trabalho, somos técnicos.</p>            
+            </div>            
                        
             <div class="content no-top">
                 <center><h2>Somos técnicos porque somos humanos, somos humanos porque somos técnicos!</h2><center>            
             </div>
-            <!-- Conteúdo Footer -->
+
+            <!-- Conteúdo -->
             <div class="content footer">
                 <div class='navegacao'>
-					<span class="bt-topo">
-						<a href="#"><i class="fas fa-angle-up"></i></a>
-					</span>
-                    <button class="bt-avanca desativado" type="button">PROSSEGUIR ></button></a></span>
-                    <span class='botoes-navegacao'>
-    					<a href="tela04.html"><button class="bt-navegacao" type="button"><</button>
+                    <div class="bt-topo">
+                        <a href="#"><i class="fas fa-angle-up"></i></a>
+                    </div>
+                    <div>
+                        <button class="bt-avanca desativado" type="button"><a href="tela07.html">PROSSEGUIR &#10095;</a></button>
+                    </div>
+                    <div class='botoes-navegacao'>
+                        <a href="tela04.html"><button class="bt-navegacao" type="button"><</button></a>
 
-						<a href="tela01.html"><input type="radio" name="radio"><label for="radio"></label></a>
-						<a href="tela02.html"><input type="radio" name="radio"><label for="radio"></label></a>
-						<a href="tela03.html"><input type="radio" name="radio"><label for="radio"></label></a>
-						<a href="tela04.html"><input type="radio" name="radio"><label for="radio"></label></a>
-						<a href="tela05.html"><input type="radio" checked name="radio"><label for="radio"></label></a>
-						
-						<button class="bt-navegacao desativado" type="button">></button></a>
-					</span>
-                    <span class="legenda">Tela 5 de 5</span>
-                </div>
+                        <a href="tela01.html"><input type="radio" name="radio"><label for="radio"></label></a>
+                        <a href="tela02.html"><input type="radio" name="radio"><label for="radio"></label></a>
+                        <a href="tela03.html"><input type="radio" name="radio"><label for="radio"></label></a>
+                        <a href="tela04.html"><input type="radio" name="radio"><label for="radio"></label></a>
+                        <a href="tela05.html"><input type="radio" checked name="radio"><label for="radio"></label></a>                        
+
+                        <button class="bt-navegacao" type="button">></button></a>
+                    </div>
+                <div class="legenda">5 de 5</div>
+
+            </div>            
 
                 <!--Rodapé-->
                 <hr/>
