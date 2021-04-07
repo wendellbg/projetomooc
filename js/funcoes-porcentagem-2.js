@@ -67,7 +67,8 @@ function resultadoObtemDadosGenericos (evento){
         //console.log("Porcentagem total é: "+porcentagem);
         
         if((porcentagem==100)&&(unidade!=0)&&(ultima_tela==1)){
-            document.querySelector("#botao-atividades").style.display="block";                        
+            document.querySelector("#botao-atividades button").classList.remove("bt-desativado");
+            document.querySelector("#botao-atividades button").classList.add("atividades");
         }
 
         //se for a tela 2 da unidade 2, verifica se o quiz já foi enviado.

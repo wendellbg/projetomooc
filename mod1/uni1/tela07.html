@@ -106,9 +106,9 @@
                     <div class="bt-topo">
                         <a href="#"><i class="fas fa-angle-up"></i></a>
                     </div>
-                    <div id="botao-atividades" style="display: none;">
-                        <button class="bt-avanca atividades" type="button"><a href="atividade01.html"><i class="fas fa-pencil-alt"></i> ATIVIDADES &#10095;&#10095;</a></button>
-                    </div>
+                    <div id="botao-atividades">
+                        <button class="bt-avanca bt-desativado" type="button"><a href="atividade01.html"><i class="fas fa-pencil-alt"></i> ATIVIDADES &#10095;&#10095;</a></button>
+                    </div>                   
                     <div>
                         <button class="bt-avanca" type="button"><a href="../uni2/index.html">UNIDADE 2 &#10095;</a></button>
                     </div>
@@ -167,12 +167,13 @@
 	var id_slide = "mod1/uni1/tela07.html";//alterar
 	var unidade=1;//alterar
 	var tela="uni1tela7";//alterar
-    var ultima_tela=1;
+    var ultima_tela=1;  
 	
 	//Obtendo dados curso
 	window.addEventListener('load', function(){
     	API.obterDadosCurso();
 	});
+  
 </script>
 
 </body>
