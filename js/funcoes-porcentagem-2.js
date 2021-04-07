@@ -2,7 +2,7 @@
 var quant_telas_vistas=0;	
 var porcentagem = 0;
 //esse vetor tem as quantidades de telas de cada unidade;
-var quant_telas=[2,7,7,5,5,6];
+var quant_telas=[3,7,7,5,5,6];
 var nome_tela="";
 
 var verificando_quais_dados=1;
@@ -30,7 +30,7 @@ function verifica_porcentagem(unidade,tela){
     for(let i=1;i<=quant_telas[unidade];i++){        
         nome_tela="uni"+unidade+"tela"+i;        
         //console.log("\nETAPA 2\nVerificando a tela "+i+" da unidade "+unidade+", variável="+nome_tela);					
-        API.obterDadosGenericos(nome_tela);    			
+        API.obterDadosGenericos(nome_tela);            			
     }    	   	    	
 }
 
@@ -66,9 +66,16 @@ function resultadoObtemDadosGenericos (evento){
         porcentagem=Math.round((100/quant_telas[unidade])*quant_telas_vistas);
         //console.log("Porcentagem total é: "+porcentagem);
         
-        if(porcentagem==100){
-            document.querySelector("#botao-atividades").style.display="block";            
+        if((porcentagem==100)&&(unidade!=0)&&(ultima_tela==1)){
+            document.querySelector("#botao-atividades button").classList.remove("bt-desativado");
+            document.querySelector("#botao-atividades button").classList.add("atividades");
         }
+
+        //se for a tela 2 da unidade 2, verifica se o quiz já foi enviado.
+        if(tela=="uni2tela2"){
+            verifica_quiz_enviado();
+        }
+
         //"aqui registra a porcentagem no sistema
         API.registrarPorcentagemConclusaoUnidade(id_unidade,porcentagem);
         API.registrarUltimaPaginaAcessada(id_unidade,id_slide);

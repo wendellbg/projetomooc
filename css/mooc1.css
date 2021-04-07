@@ -158,11 +158,19 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #020e36;
 }
 
-.bt-avanca.atividades {
+.bt-avanca.atividades{	
 	color: #2a5caa;
 	background-color: #fec13b;
 	border-right: 2px solid;
 	border-bottom: 2px solid;
+}
+
+.bt-desativado{
+	pointer-events: none;
+	color: #000;
+	background-color: #999;
+	border-right: 2px solid;
+	border-bottom: 2px solid;	
 }
 
 .bt-avanca.atividades a {
