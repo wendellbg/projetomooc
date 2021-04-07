@@ -54,6 +54,15 @@ h1, h2, h3, h4, h5, h6 {
 	color: #fff;
 }
 
+.caixa-texto-centro ul, ol, li {
+	color: #fff;
+	font-family: "Affogato-Regular";
+    font-size: 20px;
+    line-height: 28px;
+    list-style-type: disc;
+    list-style-position: inside;    
+}
+
 .caixa-texto-rodape {
 	background-image: url(../img/padrao/tela01_box2.png);
 }
