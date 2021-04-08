@@ -12,11 +12,11 @@ body{
 }
 
 body:after {
-	background-image: url(../img/padrao/bg_header.png);
+	background-image: url(../img/padrao/mooc2/bg_header.png);
 }
 
 a {
-	color: #2a5caa;
+	color: #E6292E;
 }
 
 .bt-avanca a{
@@ -25,7 +25,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: #2a5caa;
+	color: #E6292E;
 }
 
 
@@ -39,15 +39,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Boas Vindas */
 .boas-vindas{
-	background-image: url(../img/padrao/tela01_box_text.png);
+	background-image: url(../img/padrao/tela01_box_text_red.png);
 }
 
 .caixa-texto-topo {
-	background-image: url(../img/padrao/tela01_box1.png);
+	background-image: url(../img/padrao/tela01_box1_blue.png);
 }
 
 .caixa-texto-topo p{
-	color: #2a5caa;
+	color: #fff;
 }
 
 .caixa-texto-centro p {
@@ -55,61 +55,61 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .caixa-texto-rodape {
-	background-image: url(../img/padrao/tela01_box2.png);
+	background-image: url(../img/padrao/tela01_box2_blue.png);
 }
 .caixa-texto-rodape p {
-	color: #2a5caa;
+	color: #fff;
 }
 
 @media screen and (max-width: 585px) {
 	.caixa-texto-topo,
 	.caixa-texto-rodape{
-		background-color: #fec13b;
+		background-color: #2A5CAA;
 	}
 
 	.caixa-texto-topo:before, .caixa-texto-rodape:before{
-		background-color: #fec13b;
-		border: 3px solid #fec13b;
+		background-color: #2A5CAA;
+		border: 3px solid #2A5CAA;
 	}
 
 	.caixa-texto-rodape{
-		background-color: #fec13b;
+		background-color: #2A5CAA;
 	}
 
 	.caixa-texto-centro{
-		background-image: url(../img/padrao/bg_slide_01.jpg);
-		background-color: #2a5caa;
+		background-image: url(../img/padrao/mooc2/bg_slide_01.jpg);
+		background-color: #E6292E;
 	}
 }
 
 /* Separador */
 .separador {
-	border-top: 2px solid #2a5caa;
+	border-top: 2px solid #E6292E;
 }
 
 .separador .texto-separador {
-	background-color: #2a5caa;
+	background-color: #E6292E;
 	color: white;
 }
 
 
 .content .navegacao h3 {
 	color: #fff;
-	background-color: #2a5caa;
+	background-color: #E6292E;
 }
 
 /* Footer */
 #footer{
-	background-image: url(../img/padrao/bg_footer.png);
+	background-image: url(../img/padrao/mooc2/bg_footer.png);
 }
 
 .footer .bt-topo{
-	background-color: #020e36;
+	background-color: #7C141E;
 }
 
 
 .footer .bt-topo:hover{
-	background-color: #2A5CAA;
+	background-color: #E6292E;
 }
 
 .footer .bt-topo a{
@@ -118,32 +118,32 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navegação */
 .bt-navegacao {
-	background-color: #2a5caa;
+	background-color: #E6292E;
 	color: white;
 
 }
 
 .bt-navegacao.desativado{
-	background-color: #BCD0E8;
+	background-color: #F7C1C8;
 }
 
 .botoes-navegacao input[type="radio"] + label:before{
-	border: 1px solid #2a5caa;
+	border: 1px solid #E6292E;
 }
 
 .botoes-navegacao input[type="radio"]:checked + label:before{
-	background: #2a5caa;
+	background: #E6292E;
 	color: #FFF;
-	border: 1px solid #2a5caa;
+	border: 1px solid #E6292E;
 }
 
 
 .navegacao .legenda{
-	color: #2a5caa;
+	color: #E6292E;
 }
 
 .bt-avanca {
-	background-color: #2a5caa;
+	background-color: #E6292E;
 	color: white;
 }
 
@@ -155,18 +155,18 @@ h1, h2, h3, h4, h5, h6 {
 .bt-avanca:hover,
 .bt-navegacao:hover,
 .botoes-navegacao a:hover input[type="radio"] + label:before{
-	background-color: #020e36;
+	background-color: #7C141E;
 }
 
 .bt-avanca.atividades {
-	color: #2a5caa;
+	color: #E6292E;
 	background-color: #fec13b;
 	border-right: 2px solid;
 	border-bottom: 2px solid;
 }
 
 .bt-avanca.atividades a {
-	color: #2a5caa;
+	color: #E6292E;
 }
 
 .bt-avanca.atividades:hover a {
@@ -174,9 +174,56 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bt-avanca.atividades:hover {
-	background-color: #020e36;
+	background-color: #7C141E;
 	border-color: #fff;
 }
 
+/* Mudanças expecificas */
+.mooc2 .slideshow-container{
+	background-image: url(../img/padrao/mooc2/bg_slide_01.jpg);
+	background-position: center;
+}
+
+.mooc2 .video {
+	background-image: url(../img/padrao/mooc2/bg_video_01.jpg);
+}
 
 
+.mooc2 .hamburguer label{
+	border: 2px solid #E6292E;
+}
+
+.mooc2 .hamburguer:after,
+.mooc2 .hamburguer:before,
+.mooc2 .hamburguer span{
+	background: #E6292E;
+}
+
+.mooc2 .menu a.titulo-menu {
+	text-align: center;
+	width: 100%;
+	color: #E6292E;
+	font-size: large;
+}
+
+.mooc2 .menu a.link-menu-atual {
+	color: #E6292E;
+}
+
+.mooc2 .menu a:hover,
+.mooc2 .menu a.link-menu-atual:hover {
+	background-color: #E6292E;
+	color: #fff;
+}
+
+.mooc2 #change-hamburguer:checked ~ .menu{
+	border: 2px solid #E6292E;
+}
+
+.mooc2 .prev, .mooc2 .next {
+	color: #E6292E;
+}
+
+.mooc2 #header > .logo a {
+	text-shadow: 0px 0px 5px black;
+}
