@@ -137,8 +137,6 @@ h3.texto-central{
 	text-align: center;
 	color: #fff;
 	font-size: 1.5em;
-	background-color: #2a5caa;
-	background-image: url(../img/padrao/bg_slide_01.jpg);
 	background-size: cover;
 	border-radius: 8px;
 	width: auto;
@@ -146,10 +144,6 @@ h3.texto-central{
 	font-family: "Musket-Bold";
 }
 
-h3.texto-central b{
-	color: #2a5caa;
-	display: none;
-}
 
 h3.texto-central b{
 	color: #fff;
@@ -269,10 +263,7 @@ h3.texto-central b{
 }
 
 /* Video */
-
 .video{
-	background-image: url(../img/padrao/bg_video_01.jpg);
-	background-color: #2A5CAA;
 	position: relative;
 	margin: auto;
 	background-size: cover;
@@ -280,11 +271,6 @@ h3.texto-central b{
 	background-repeat: no-repeat;
 	padding: 50px 8rem;
 	margin-bottom: 40px;
-}
-
-.video.fundo-claro{
-	background-image: url(../img/padrao/bg_video_02.png);
-	background-color: transparent;
 }
 
 .video-player {
@@ -337,12 +323,6 @@ h3.texto-central b{
 	width: 100%;
 	color: #fff;
 	text-shadow: 0px 0px 5px black;
-}
-
-.fundo-claro .titulo-video,
-.fundo-claro .titulo-video span{
-	color: #2A5CAA;
-	text-shadow: none;
 }
 
 @media screen and (max-width:560px){
@@ -675,31 +655,12 @@ h3.texto-central b{
 	margin: 4px 2px;
 	cursor: pointer;
 	margin-left: 0px;
-	background: #2a5caa;
-	color: rgba(255, 255, 255, 0.6);
 	border-radius: 4px;
 }
 
 .bt-link-externo{
 	color: #fff;
 	font-size: 14px;
-}
-
-.bt-download-media:hover,
-.bt-link-externo:hover{
-	transition: 0.3s;
-	background-color: #173151;
-	color: rgba(255, 255, 255, 0.9);
-}
-
-.video .downloads .bt-download-media:hover{
-	background-color: #173151;
-	color: rgba(255, 255, 255, 0.9);
-}
-
-.video .downloads .bt-download-media {
-	background: #1c3c6b;
-	color: rgba(255, 255, 255, 0.6);
 }
 
 .container-mini-box{

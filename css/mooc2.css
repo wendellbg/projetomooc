@@ -181,11 +181,13 @@ h1, h2, h3, h4, h5, h6 {
 /* Mudanças expecificas */
 .mooc2 .slideshow-container{
 	background-image: url(../img/padrao/mooc2/bg_slide_01.jpg);
+	background-color: #E6292E;
 	background-position: center;
 }
 
 .mooc2 .video {
 	background-image: url(../img/padrao/mooc2/bg_video_01.jpg);
+	background-color: #E6292E;
 }
 
 
