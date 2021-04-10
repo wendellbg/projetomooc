@@ -168,9 +168,22 @@ h1, h2, h3, h4, h5, h6 {
 .bt-desativado{
 	pointer-events: none;
 	color: #000;
-	background-color: #999;
+	background-color: #bbb;
 	border-right: 2px solid;
 	border-bottom: 2px solid;	
+}
+
+.mensagem-flutuante{
+	background-color:#bbb;
+	color: #000;
+	border: 2px solid #000;
+	position: relative;
+	margin: 0;	
+	display: none;
+	padding: 1em;
+	border-radius: 8px;
+	width: 80%;
+	margin: auto;
 }
 
 .bt-avanca.atividades a {
