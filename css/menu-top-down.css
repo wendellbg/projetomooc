@@ -27,7 +27,6 @@
   display: block;
   width: 100%;
   height: 4px;
-  background: #2a5caa;
   left: 0;
   position: absolute;
   -webkit-transition: all 300ms ease-in-out;
@@ -51,7 +50,6 @@
   margin: -8px;
   padding-bottom: 32px;
   padding-right: 32px;
-  border: 2px solid #2a5caa;
   border-radius: 12%;
 
 }
@@ -82,7 +80,6 @@
   max-height: 600px; /* estava limitado a 200px e não mostrava todas as 7 opçoes do menu*/
   margin-top: 20px;
   /* width: 80%; */
-  border: 2px solid #2a5caa;
 }
 .menu {
   max-height: 0;
@@ -105,21 +102,14 @@
   display: block;
   /* text-transform: uppercase; */
 }
-.menu a:hover, .menu a.link-menu-atual:hover, .menu a.titulo-menu:hover{
-  /* border-left: 5px solid #e57373; */
-  color: white;
-  background-color: #2a5caa;
-}
 
 .menu a.link-menu-atual{
-  color: #2a5caa;
   background:#ccc;
 }
 
 .menu a.titulo-menu{
   text-align: center;
   width: 100%;
-  color: #2a5caa;
   font-size: large;
 }
 

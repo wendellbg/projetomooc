@@ -2,7 +2,6 @@
 .slideshow-container {
     position: relative;
     margin: auto;
-    background-image: url(../img/uni1/bg_slide_01.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     padding: 40px 20% 40px 20%;
@@ -27,7 +26,6 @@
     width: auto;
     margin-top: -22px;
     padding: 8px 16px;
-    color: #2a5caa;
     background-color: #fff;
     font-weight: bold;
     font-size: 22px;
