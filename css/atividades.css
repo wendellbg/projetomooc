@@ -632,6 +632,19 @@ input[type="checkbox"]:checked + label {
     display: none;
 }
 
+.resposta-correta{
+    font-size: 0.8em;
+    background-color: rgba(42, 92, 170, 0.5);
+    width: 95%;
+    margin:0;
+    padding: 0.5em;
+    border-radius: 8px;
+}
+
+.resposta-correta span{
+    color:#fec13b;    
+}
+
 @media screen and (max-width: 1000px) {
     .texto-alternativo-1{
         display: none;
