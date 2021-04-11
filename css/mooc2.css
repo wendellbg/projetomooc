@@ -178,6 +178,44 @@ h1, h2, h3, h4, h5, h6 {
 	border-color: #fff;
 }
 
+
+h3.texto-central{
+	background-color: #2a5caa;
+	background-image: url(../img/padrao/bg_slide_01.jpg);
+}
+
+h3.texto-central b{
+	color: #2a5caa;
+}
+
+.fundo-claro .titulo-video,
+.fundo-claro .titulo-video span{
+	color: #E6292E;
+	text-shadow: none;
+}
+
+.bt-download-media,
+.bt-link-externo{
+	background: #E6292E;
+	color: rgba(255, 255, 255, 0.6);
+}
+.bt-download-media:hover,
+.bt-link-externo:hover{
+	transition: 0.3s;
+	background-color: #7C141E;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.video .downloads .bt-download-media:hover{
+	background-color: #7C141E;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.video .downloads .bt-download-media {
+	background: #931B2C;
+	color: rgba(255, 255, 255, 0.6);
+}
+
 /* Mudanças expecificas */
 .mooc2 .slideshow-container{
 	background-image: url(../img/padrao/mooc2/bg_slide_01.jpg);
