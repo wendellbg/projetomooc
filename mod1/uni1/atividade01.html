@@ -29,6 +29,23 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MK4H2FJ');</script>
     <!-- End Google Tag Manager -->
+    
+    <style>
+        .atividades{	
+    	    color: #010f36;
+    	    background-color: #fec13b;
+    	    border-right: 2px solid;
+        	border: 2px solid;
+            border-radius: 8px;
+            padding: 20px;
+            width: 100%;
+            margin: auto;
+            margin-top: 1em;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.4em;
+       }
+    </style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -84,6 +101,9 @@
             <div class="content">
                 <div class="atividade" id='atividade-uni1'>
 					<div id='mensagem-alerta'>
+					</div>
+                    <div id='mensagem-tentativas' class="atividades">
+                        Você tem 3 tentativas para responder as atividades
 					</div>
                     <form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni1" method="POST">
                             <div class="questao">
@@ -328,7 +348,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
-<script src="../../js/funcoes_atividades.js"></script>
+<!-- <script src="../../js/funcoes_atividades.js"></script> -->
 <script>
     console.clear(screen);
 
@@ -512,7 +532,7 @@
                 nota_atividade=nota_atividade_nova;
             }
             //esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
-            mensagem.innerHTML="Dados Enviados com sucesso!<br />Esta é sua "+(quant_respostas+1)+"ª tentativa de "+max_quant_tentativas+" possíveis.<br />Sua nota foi: "+nota_atividade_nova+"<br />Sua nota mais alta nesta atividade é: "+nota_atividade+"<p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
+            mensagem.innerHTML="Dados Enviados com sucesso!<br />Esta é sua "+(quant_respostas)+"ª tentativa de "+max_quant_tentativas+" possíveis.<br />Sua nota foi: "+nota_atividade_nova+"<br />Sua nota mais alta nesta atividade é: "+nota_atividade+"<p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
             //"Ocorreu tudo certo. Tem que aparecer o link
 			window.scrollTo(0, 0);
         }else{
@@ -552,7 +572,43 @@
         }
     
 
+//////////////////Daqui para baixo entrará no arquivo funcoes_atividades.js
 
+var quant_tentativas=0;
+var max_quant_tentativas=3;
+var quant_respostas=0;
+
+    function verificando_tentativas(unidade){
+        //console.log("\n\nVerificando tentativas aqui");
+        API.obterDadosGenericos(unidade);
+    }
+
+    window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
+    function resultadoObtemDadosGenericos (evento){
+        console.log(evento.detail);
+        //console.log("\nObtendo os dados genéricos (tentativas): ");
+        //console.log("Status do evento: "+evento.detail['status']);
+
+        //verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
+        if(evento.detail["status"]=="200"){
+            //se a unidade já foi enviada, verifica a quantidade, para saber se atingiu o máximo
+            //console.log(evento.detail["data"]);
+            let quant_salva = evento.detail["data"][0]["valor"];            
+            //console.log("tentativas salvas: "+quant_salva);
+            if(quant_salva<max_quant_tentativas){
+                quant_respostas=parseInt(quant_salva)+1;                
+            }else{       
+                quant_respostas=parseInt(4);         
+            }            
+        }else{                                  
+            //se não encontrou a chave da unidade, é porque esta é a primeira vez que ele envia as respostas.
+            quant_respostas=parseInt(1);            
+        }
+        //console.log("quant respostas="+quant_respostas);
+        API.registrarDadosGenericos("quant_"+id_atividade,quant_respostas);        
+        API.obterRespostaAtividade(id_atividade);           
+    } 
+    
 
 </script>
 
