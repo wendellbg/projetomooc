@@ -10,9 +10,9 @@
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
     <script src="../../js/bt-topo.js"></script>
-
-	<!-- Funções de acesso à biblioteca do Avamec-->
-	<script src="../../js/funcoes-porcentagem-2.js"></script>
+    
+    <!-- Funções de acesso à biblioteca do Avamec-->
+	<!-- <script src="funcoes-porcentagem-2.js"></script> -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
@@ -31,6 +31,43 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MK4H2FJ');</script>
     <!-- End Google Tag Manager -->
+<style>
+    
+.bt-desativado, .bt-desativado:hover{
+	color: #000;
+	background-color: #bbb;
+	border-right: 2px solid;
+	border-bottom: 2px solid;	
+}
+.bt-desativado a{
+	pointer-events: none;
+}
+
+.mensagem-flutuante{	
+	font-size: 1.2em;
+	position: absolute;
+	width: 90%;		
+	margin-top:-6em;
+	left: 5%;	
+	display: none; 
+	padding: 1em;
+	border-radius: 8px;	
+}
+
+.mensagem-flutuante.incompleta{
+    background-color:#bbb;
+	color: #000;
+	border: 2px solid #000;
+}
+
+.mensagem-flutuante.completa{
+    color: #2a5caa;
+	background-color: #fec13b;
+	border: 2px solid #2a5caa;
+}
+
+
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -107,7 +144,9 @@
                         <a href="#"><i class="fas fa-angle-up"></i></a>
                     </div>
                     <div id="botao-atividades">
-                        <button class="bt-avanca bt-desativado" type="button"><a href="atividade01.html"><i class="fas fa-pencil-alt"></i> ATIVIDADES &#10095;&#10095;</a></button>
+                        <div class='mensagem-flutuante incompleta'>Complete os 100% na unidade para reponder as atividades</div>
+                        <div class='mensagem-flutuante completa'>Você atingiu 100% nesta unidade. Faça as atividades!</div>
+                        <button class="bt-avanca bt-desativado" type="button" ><a href="atividade01.html" ><i class="fas fa-pencil-alt"></i> ATIVIDADES &#10095;&#10095;</a></button>                        
                     </div>                   
                     <div>
                         <button class="bt-avanca" type="button"><a href="../uni2/index.html">UNIDADE 2 &#10095;</a></button>
@@ -159,6 +198,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
+
 <script>
 	console.clear(screen);
 
@@ -174,6 +214,144 @@
     	API.obterDadosCurso();
 	});
   
+    var botao = document.querySelector("#botao-atividades .bt-avanca");  
+    
+    botao.addEventListener("mouseover",function(){
+        if(botao.classList.contains('bt-desativado')){
+            let mensagem = document.querySelector(".mensagem-flutuante.incompleta").style.display="block";
+        }else{
+            let mensagem = document.querySelector(".mensagem-flutuante.completa").style.display="block";
+        }                    
+    });
+
+    botao.addEventListener('mouseout',function(){
+        if(botao.classList.contains('bt-desativado')){
+            let mensagem = document.querySelector(".mensagem-flutuante.incompleta").style.display="none";
+        }else{
+            let mensagem = document.querySelector(".mensagem-flutuante.completa").style.display="none";
+        }    
+    });
+    
+    
+                var quant_telas_vistas=0;	
+                var porcentagem = 0;
+                //esse vetor tem as quantidades de telas de cada unidade;
+                var quant_telas=[3,7,7,5,5,6];
+                var nome_tela="";
+
+                var verificando_quais_dados=1;
+
+                window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
+                function resultadoObterDadosCurso(evento){
+                    console.log(evento.detail);
+                    
+                    //vai registrar a porcentagem desta página: 
+                    //console.log("\nETAPA 1\nRegistrando a tela atual como Verificada");
+                    API.registrarDadosGenericos(tela,1);
+                }
+
+                window .addEventListener( "evObtemRegistraDadosGenericos" ,resultadoRegistrarDadosGenericos, false );
+                function resultadoRegistrarDadosGenericos (evento){
+                    //console.log("Registrando os dados desta tela.");
+                    console .log(evento.detail);
+                    //Depois da tela registrada, entra na função para verificar as outras telas da unidade
+                    verifica_porcentagem(unidade,tela);
+                }
+
+                function verifica_porcentagem(unidade,tela){
+                    //O sistema vai verificar todas as telas de todas as unidades, pra saber quais foram vistas.        	
+                    //Este for pesquisará quantas telas foram vistas dentro da unidade atual    
+                    for(let i=1;i<=quant_telas[unidade];i++){        
+                        nome_tela="uni"+unidade+"tela"+i;        
+                        //console.log("\nETAPA 2\nVerificando a tela "+i+" da unidade "+unidade+", variável="+nome_tela);					
+                        API.obterDadosGenericos(nome_tela);            			
+                    }    	   	    	
+                }
+
+                window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
+                function resultadoObtemDadosGenericos (evento){
+
+                    //testa se os dados genéricos testados são para a porcentagem ou para as respostas
+                    //console.log("Teste de dados aqui: "+verificando_quais_dados);
+
+                    //verificação normal, para porcentagem
+                    if(verificando_quais_dados==1){
+
+                        console.log(evento.detail);
+                        //aqui verifica se está testando o nome da tela, para não contabilizar errado
+                        var tela_atual=0; 		
+                        
+                        //testando se o status é 200, a tela já foi visitada antes
+                        if(evento.detail["status"]==200){
+                            //se achou a tela, é porque ela já foi vista. então retorna 1
+                            tela_atual=1;
+                            //console.log("igual, valor 1");
+                        }else{
+                            tela_atual=0;
+                            //console.log("diferente, valor 0");
+                        }		    	
+                        
+                        //atualizando a quantidade de telas vistas		
+                        quant_telas_vistas=quant_telas_vistas+tela_atual;             
+                        //console.log("\nETAPA 3\nSomar as telas vistas: "+quant_telas_vistas);
+
+                        //calcula a porcentagem de conclusão de acordo com a quantidade de telas na unidade
+                        //console.log("calcular a porcentagem de "+quant_telas_vistas+" telas");
+                        porcentagem=Math.round((100/quant_telas[unidade])*quant_telas_vistas);
+                        //console.log("Porcentagem total é: "+porcentagem);
+                        
+                        if((porcentagem==100)&&(unidade!=0)&&(ultima_tela==1)){
+                        //if(teste==1){
+                            document.querySelector("#botao-atividades button").classList.remove("bt-desativado");                            
+                            document.querySelector("#botao-atividades button").classList.add("atividades");
+                            console.log("Ativar botão de atividades");
+                        }
+
+                        //se for a tela 2 da unidade 2, verifica se o quiz já foi enviado.
+                        if(tela=="uni2tela2"){
+                            verifica_quiz_enviado();
+                        }
+
+                        //"aqui registra a porcentagem no sistema
+                        API.registrarPorcentagemConclusaoUnidade(id_unidade,porcentagem);
+                        API.registrarUltimaPaginaAcessada(id_unidade,id_slide);
+                    
+                    //Verificação para envio do formulário Uni2Tela2
+                    }else if(verificando_quais_dados==2){
+                        console.log("\nObtendo os dados genéricos: ");
+                        console.log("Status do evento: "+evento.detail['status']);
+
+                        //verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
+                        if(evento.detail["status"]=="200"){
+
+                            //se a unidade já foi iniciada, então pode exibir a mensagem informando que o quiz foi enviado, e o botão            
+                            var resposta = evento.detail["data"][0]["valor"];
+                            console.log(evento.detail["data"]);
+                            mensagem.innerHTML = "Você já enviou estas respostas<br /><br /><a class='link-proxima-unidade' href='tela03.html'>PROSSEGUIR &#10095;</a>";
+                            mensagem.className = "mensagem-ok";
+                            mensagem.style.display = "block";            
+                            //window.scrollTo(0, 0);
+                            document.querySelector("#botao-quiz-uni2").style.display="none";            
+                            document.querySelector("#botao-prosseguir").style.display="block";
+                            erros++;
+
+                            //se a unidade não foi iniciada, registra os dados Genéricos com as respostas:
+                        }else{
+                            salvarDados();
+                        }
+                    }
+                }	
+
+                window .addEventListener( "evRegistraPorcentagemConclusaoUnidade" ,resultadoRegistrarPorcentagemConclusaoUnidade, false );
+                function resultadoRegistrarPorcentagemConclusaoUnidade (evento){
+                    console.log(evento.detail);
+                    //console.log("\nETAPA 4\nTendo a porcentagem registrada");
+                }
+
+                window .addEventListener( "evObtemRegistraUltimaPaginaAcessada" ,resultadoRegistrarUltimaPaginaAcessada, false );
+                function resultadoRegistrarUltimaPaginaAcessada (evento){
+                    console .log(evento.detail);
+                }
 </script>
 
 </body>
