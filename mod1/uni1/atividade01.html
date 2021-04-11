@@ -33,8 +33,7 @@
     <style>
         .atividades{	
     	    color: #010f36;
-    	    background-color: #fec13b;
-    	    border-right: 2px solid;
+    	    background-color: #fec13b;    	    
         	border: 2px solid;
             border-radius: 8px;
             padding: 20px;
@@ -44,6 +43,20 @@
             font-weight: bold;
             text-align: center;
             font-size: 1.4em;
+       }
+
+       .botao-mensagem{
+            border-color: #010f36;
+            background-color:#fec13b;
+            color:#010f36;
+            border: 2px solid;
+            border-radius: 8px;
+            padding:10px;
+            margin: 10px;
+       }
+       .botao-mensagem:hover{
+            background-color: #010f36;
+            color:#fec13b;
        }
     </style>
 </head>
@@ -102,8 +115,7 @@
                 <div class="atividade" id='atividade-uni1'>
 					<div id='mensagem-alerta'>
 					</div>
-                    <div id='mensagem-tentativas' class="atividades">
-                        Você tem 3 tentativas para responder as atividades
+                    <div id='mensagem-tentativas' class="atividades">                        
 					</div>
                     <form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni1" method="POST">
                             <div class="questao">
@@ -359,10 +371,22 @@
     var nota_atividade = 0;
     var nota_atividade_nova=0;
 	var erros = 0;
+    var envio=0;
+    var texto_mensagem_padrao="Você pode fazer no máximo 3 tentativas para responder as atividades.";
+    var texto_mensagem_tentativa="";
+    var texto_mensagem_nota="";
+    var texto_mensagem_fim="<br>Você pode tentar novamente ou prosseguir para a próxima atividade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
+    var texto_mensagem_revisao="<p></p><a class='botao-mensagem' href='revisao01.html'>Veja aqui a revisão da atividade.</a>";
+
+    window.addEventListener('load', function(){
+        console.log("carregando a página");
+    	API.obterDadosGenericos("quant_"+id_atividade);
+	});
 
     /*************** Verificando se todas as respostas foram enviadas. *****/
     var botao = document.getElementById("botao-atividade-uni1");//modificar
 	var mensagem = document.getElementById("mensagem-alerta");    
+    var mensagem_tentativas = document.getElementById("mensagem-tentativas");  
 
 	function salvarDados(){
         nota_atividade_nova=0;
@@ -370,12 +394,7 @@
         quant_respostas=0;        
         erros=0;
 
-		//console.log("função aqui");
-		//verificando_quais_dados = 2;
-		erros = 0;
-        
         //aqui vai pegar os valores de cada exercício.
-
         //esses são os de drag and drop
 		r1_1_1 = document.querySelector("#r1_1_1 span.palavra-resposta"),        
         r1_1_2 = document.querySelector("#r1_1_2 span.palavra-resposta"),
@@ -441,23 +460,34 @@
 	//Depois que verifica as tentativas de resposta, verifica as respostas salvas;
 	window .addEventListener( "evObtemDadosRespostaAtividade" , resultadoObtemRespostaAtividade, false );
     function resultadoObtemRespostaAtividade(evento){
-
         //console.log("\nObtendo as respostas: ");
         console.log("Status do evento: "+evento.detail['status']);          
         //verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
-        if(evento.detail["status"]=="200"){            
+        if(evento.detail["status"]=="200"){           
             nota_atividade = evento.detail.data.nota;
             console.log("Voltando para a função principal. Quant respostas: "+quant_respostas+" e max: "+max_quant_tentativas);            
-            if(quant_respostas>max_quant_tentativas){
+            texto_mensagem_nota="<br>Sua nota mais alta é "+nota_atividade;            
+            var texto_mensagem_total="";
+            texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim;                                
+            if(quant_respostas>=max_quant_tentativas){
+                console.log("\n\nMax de mensagens aqui");
                 //Já atingiu o máximo de tentativas
-                mensagem.className = "mensagem-ok";
-                mensagem.style.display = "block";
-                mensagem.innerHTML="Você já fez "+max_quant_tentativas+" tentativas!<br />Sua maior nota é: "+nota_atividade+"<br /><p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";                
-                window.scrollTo(0, 0);
+                if(envio==1){
+                    console.log("\n\nEnvio=1");
+                    mensagem.className = "mensagem-alerta";
+    			    mensagem.innerHTML = "Você já fez suas "+max_quant_tentativas+" tentativas.";
+	    		    mensagem.style.display = "block";                                     
+                }                
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>"+texto_mensagem_revisao;                                
                 erros++;
-            }
+            }else if(nota_atividade==10){
+                console.log("\n\nNota 10 aqui");
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+texto_mensagem_revisao;
+            }            
+            mensagem_tentativas.innerHTML=texto_mensagem_total;            
+            window.scrollTo(0, 0);
         }
-        if(erros==0){        
+        if(erros==0){       
             //se ainda não tiver enviado as respostas, ou se for dentro do máximio de tentativas,
             // registra as re respostas com as funções da API:
             console.log("Registrando respostas:");
@@ -532,7 +562,17 @@
                 nota_atividade=nota_atividade_nova;
             }
             //esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
-            mensagem.innerHTML="Dados Enviados com sucesso!<br />Esta é sua "+(quant_respostas)+"ª tentativa de "+max_quant_tentativas+" possíveis.<br />Sua nota foi: "+nota_atividade_nova+"<br />Sua nota mais alta nesta atividade é: "+nota_atividade+"<p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
+            mensagem.innerHTML="Dados Enviados com sucesso!<br />";
+            texto_mensagem_nota="<br />Sua nota foi: "+nota_atividade_nova+"<br />Sua nota mais alta nesta atividade é: "+nota_atividade;
+            let texto_mensagem_total="";
+            if(quant_respostas>=max_quant_tentativas){
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>"+texto_mensagem_revisao;
+            }else if(nota_atividade==10){
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+texto_mensagem_revisao;
+            }else{
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim;
+            }
+            mensagem_tentativas.innerHTML=texto_mensagem_total;            
             //"Ocorreu tudo certo. Tem que aparecer o link
 			window.scrollTo(0, 0);
         }else{
@@ -578,38 +618,57 @@ var quant_tentativas=0;
 var max_quant_tentativas=3;
 var quant_respostas=0;
 
-    function verificando_tentativas(unidade){
+    function verificando_tentativas(tentativas_unidade){
         //console.log("\n\nVerificando tentativas aqui");
-        API.obterDadosGenericos(unidade);
+        envio=1;
+        API.obterDadosGenericos(tentativas_unidade);
     }
 
     window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
     function resultadoObtemDadosGenericos (evento){
         console.log(evento.detail);
-        //console.log("\nObtendo os dados genéricos (tentativas): ");
-        //console.log("Status do evento: "+evento.detail['status']);
 
         //verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
         if(evento.detail["status"]=="200"){
             //se a unidade já foi enviada, verifica a quantidade, para saber se atingiu o máximo
-            //console.log(evento.detail["data"]);
+            console.log(evento.detail["data"]);
             let quant_salva = evento.detail["data"][0]["valor"];            
             //console.log("tentativas salvas: "+quant_salva);
-            if(quant_salva<max_quant_tentativas){
-                quant_respostas=parseInt(quant_salva)+1;                
-            }else{       
-                quant_respostas=parseInt(4);         
-            }            
+            envio==1 ? quant_respostas=quant_salva+1 : quant_respostas=quant_salva;
+            if(envio==0){                                
+                let vez = quant_salva==1 ? "vez" : "vezes";
+                //texto_mensagem_tentativa=texto_mensagem_tentativa;
+                texto_mensagem_tentativa="<br>Você já enviou "+quant_salva+" "+vez+".";
+                mensagem_tentativas.innerHTML=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_fim;
+                console.log("\nJá verificou envio, quant-salva="+quant_salva);
+            }else{
+                if(quant_salva<max_quant_tentativas){
+                    quant_respostas=parseInt(quant_salva)+1;                
+                }else{                        
+                    quant_respostas=parseInt(3);         
+                }                
+            }          
+            API.registrarDadosGenericos("quant_"+id_atividade,quant_respostas);        
+            API.obterRespostaAtividade(id_atividade);
         }else{                                  
             //se não encontrou a chave da unidade, é porque esta é a primeira vez que ele envia as respostas.
-            quant_respostas=parseInt(1);            
+            console.log("Carreagndo a página, envio="+envio);
+            if(envio==0){
+                quant_respostas=0;
+                mensagem_tentativas.innerHTML=texto_mensagem_padrao+"<br>Você ainda não fez nenhuma.";                
+                console.log("mensagem zerada");
+            }else{
+                quant_respostas=parseInt(1);
+                //console.log("quant respostas="+quant_respostas);
+                texto_mensagem_tentativa="<br>Esta é sua primeira tentativa.";
+                API.registrarDadosGenericos("quant_"+id_atividade,quant_respostas);        
+                API.obterRespostaAtividade(id_atividade);
+            }
         }
-        //console.log("quant respostas="+quant_respostas);
-        API.registrarDadosGenericos("quant_"+id_atividade,quant_respostas);        
-        API.obterRespostaAtividade(id_atividade);           
+                   
     } 
-    
-
+    console.log(texto_mensagem_tentativa);
+    mensagem_tentativas.innerHTML=texto_mensagem_tentativa;
 </script>
 
 </body>
