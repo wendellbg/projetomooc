@@ -267,3 +267,15 @@ h3.texto-central b{
 .mooc2 #header > .logo a {
 	text-shadow: 0px 0px 5px black;
 }
+
+.mooc2 .icone-audio {
+	border: 2px solid #E6292E;
+}
+
+.mooc2 .icone-pause {
+	border: 2px solid #E6292E;
+}
+
+.mooc2 .icone-play:hover {
+	border: 2px solid #fec13b;
+}

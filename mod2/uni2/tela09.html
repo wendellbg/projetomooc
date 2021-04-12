@@ -4,23 +4,38 @@
     <title>Mentoria</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../../css/mooc1.css?ver=1.1"/>
-    <link rel="stylesheet" href="../../css/boxes.css?ver=1.4" />    
+    <link rel="stylesheet" href="../../css/mooc2.css?ver=1.1"/>
+    <link rel="stylesheet" href="../../css/boxes.css?ver=1.4" />
 
+    <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
-    <script src="../../js/bt-topo.js"></script> <!-- Botão de Voltar ao Topo -->
+    <script src="../../js/bt-topo.js"></script>
+
+    <!-- Funções de acesso à biblioteca do Avamec-->
+    <script src="../../js/funcoes-5.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5XZ9DSX69N"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-      gtag('config', 'G-5XZ9DSX69N');
-  </script>
+        gtag('config', 'G-SB34EK30YV');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MK4H2FJ');</script>
+    <!-- End Google Tag Manager -->
 </head>
-<body>
+<body class="mooc2">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MK4H2FJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
     <!-- Header -->
     <header id="header">
@@ -34,6 +49,9 @@
         <div class="inner">
             <!-- One -->
             <section id="one" class="wrapper style1">
+                <div class="botao-sumario">
+                    <a class="link-progresso" href="../sumario.html"><i class="fas fa-tasks"></i> PROGRESSO</a>
+                </div>
 
                 <header class="special">
                     <div class="entire-menu">
@@ -49,15 +67,15 @@
                                 </a>
                                 <div class="menu">
                                     <a href="../sumario.html" class='titulo-menu'>UNIDADE 2</a>
-                                    <a href="tela01.html" class='link-menu-atual'>Tela 01 - Apresentação</a>
-                                    <a href="tela02.html">Tela 02 - A Técnica como Saber</a>
-                                    <a href="tela03.html">Tela 03 - A Técnica como Saber</a>
-                                    <a href="tela04.html">Tela 04 - Como aprendemos as técnicas?</a>
-                                    <a href="tela05.html">Tela 05 - O que é saber técnico?</a>
-                                    <a href="tela06.html">Tela 06 - O que é saber técnico?</a>
-                                    <a href="tela07.html">Tela 07 - O que é Tecnologia? </a>
-                                    <a href="tela08.html">Tela 08 - O que é Tecnologia?</a>
-                                    <a href="tela09.html">Tela 09 - Para concluir.</a>
+                                    <a href="tela01.html" class='link-menu-atual'>2.01 - Apresentação</a>
+                                    <a href="tela02.html">2.02 - A Técnica como Saber</a>
+                                    <a href="tela03.html">2.03 - A Técnica como Saber</a>
+                                    <a href="tela04.html">2.04 - Como aprendemos as técnicas?</a>
+                                    <a href="tela05.html">2.05 - O que é saber técnico?</a>
+                                    <a href="tela06.html">2.06 - O que é saber técnico?</a>
+                                    <a href="tela07.html">2.07 - O que é Tecnologia? </a>
+                                    <a href="tela08.html">2.08 - O que é Tecnologia?</a>
+                                    <a href="tela09.html">2.09 - Para concluir.</a>
                                 </div>
                             </div>
                         </div>
@@ -93,12 +111,12 @@
                 <!-- Conteúdo Footer -->
                 <div class="content footer">
                     <div class='navegacao'>
-                       <span class="bt-topo">
+                       <div class="bt-topo">
                           <a href="#"><i class="fas fa-angle-up"></i></a>
-                      </span>
-                      <span><a href="tela01.html"><button class="bt-avanca" type="button">PROSSEGUIR ></button></a></span>
-                      <span class='botoes-navegacao'>
-                        <a href="tela08.html"><button class="bt-navegacao" type="button"><</button>
+                      </div>
+                      <div><a href="tela01.html"><button class="bt-avanca" type="button">PROSSEGUIR ></button></a></div>
+                      <div class='botoes-navegacao'>
+                          <a href="tela08.html"><button class="bt-navegacao" type="button"><</button></a>
 
                           <a href="tela01.html"><input type="radio" name="radio"><label for="radio"></label></a>
                           <a href="tela02.html"><input type="radio" name="radio"><label for="radio"></label></a>
@@ -111,8 +129,8 @@
                           <a href="tela09.html"><input type="radio" checked name="radio"><label for="radio"></label></a>
 
                           <a href="tela01.html"><button class="bt-navegacao" type="button">></button></a>
-                      </span>
-                      <span class="legenda">Tela 9 de 9</span>
+                      </div>
+                      <span class="legenda">9 de 9</span>
                   </div>
 
                   <!--Rodapé-->
