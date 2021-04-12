@@ -293,3 +293,14 @@ h3.texto-central b{
 	color: #2a5caa;
 }
 
+.icone-audio {
+	border: 2px solid #2a5caa;
+}
+
+.icone-pause {
+	border: 2px solid #2a5caa;
+}
+
+.icone-play:hover {
+	border: 2px solid #fec13b;
+}
