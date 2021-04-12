@@ -228,6 +228,11 @@ h3.texto-central b{
 	background-color: #E6292E;
 }
 
+.mooc2 .video.fundo-claro{
+	background-image: url(../img/padrao/mooc2/bg_video_02.png);
+	background-size: contain;
+	background-color: transparent;
+}
 
 .mooc2 .hamburguer label{
 	border: 2px solid #E6292E;
