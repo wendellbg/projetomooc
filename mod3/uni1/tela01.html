@@ -4,8 +4,7 @@
     <title>Mentoria</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../../css/mooc3.css?ver=1.1"/>
-    <link rel="stylesheet" href="../../css/slide.css?ver=1.1"/>
+    <link rel="stylesheet" href="../../css/mooc3.css?ver=1.1"/>    
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
@@ -68,11 +67,12 @@
                             <div class="menu">
                                 <a href="../sumario.html" class='titulo-menu'>UNIDADE 1</a>
                                 <a href="tela01.html" class='link-menu-atual'>Tela 01 - Apresentação</a>
-                                <a href="tela02.html">Tela 02 - </a>
-                                <a href="tela03.html">Tela 03 - Educação para a carreira</a>
-                                <a href="tela04.html">Tela 04 - Como educar para a carreira?</a>
-                                <a href="tela05.html">Tela 05 - Experiência de orientação para a carreira em uma Escola Técnica</a>
-                                <a href="tela06.html">Tela 06 - Desafios para as escolas brasileiras</a>                                
+                                <a href="tela02.html">Tela 02 - Escolha da Carreira</a>
+                                <a href="tela03.html">Tela 03 - Escolha da Carreira</a>
+                                <a href="tela04.html">Tela 04 - Educação para a carreira</a>
+                                <a href="tela05.html">Tela 05 - Como educar para a carreira?</a>
+                                <a href="tela06.html">Tela 06 - Experiência de orientação para a carreira em uma Escola Técnica</a>
+                                <a href="tela06.html">Tela 07 - Desafios para as escolas brasileiras</a>
                             </div>
                         </div>
                     </div>
@@ -98,56 +98,7 @@
                 </div>
                 <div class="caixa-texto-rodape"><p>Vamos lá?!</p></div>
             </div>
-            <br>
-            <div class="content no-top">
-                <p>Em sua experiência docente você já deve ter se deparado com situações em que os estudantes se sentem aflitos no momento de escolha da carreira.</p>
-            </div>
-
-            <!-- Container do slideshow-->
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <div class="numero-slide">1 / 4</div>
-                    <img src="../../img/uni1/imagem1.jpg" alt="Imagem 1">
-                    <div class="texto">Figura 1</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numero-slide">2 / 4</div>
-                    <img class="imagem-cent" src="../../img/uni1/imagem2.jpg" alt="Imagem 2">
-                    <div class="texto">Figura 2</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numero-slide">3 / 4</div>
-                    <img src="../../img/uni1/imagem3.jpg" alt="Imagem 3">
-                    <div class="texto">Figura 3</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numero-slide">3 / 4</div>
-                    <img src="../../img/uni1/imagem4.jpg" alt="Imagem 4">
-                    <div class="texto">Figura 4</div>
-                </div>
-
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                <br>
-                <div style="text-align: center">
-                    <span class="ponto" onclick="currentSlide(1)"></span>
-                    <span class="ponto" onclick="currentSlide(2)"></span>
-                    <span class="ponto" onclick="currentSlide(3)"></span>
-                    <span class="ponto" onclick="currentSlide(4)"></span>
-                </div>
-            </div>
-
-            <div class="content no-top">
-                <p>Possivelmente você já deve ter feito essas e outras questões ao longo de sua trajetória como professor.</p>
-            </div>
-
-            <div class="content no-top">
-                <p>Se for esse o caso, não se preocupe. Aqui, ajudamos você a entender o conceito da educação para a carreira no contexto escolar, além de discutir suas diferentes possibilidades de implementação.</p>
-            </div>
+            <br>            
 
             <!-- Conteúdo Footer -->
             <div class="content footer">
@@ -164,11 +115,12 @@
 						<a href="tela03.html"><input type="radio" name="radio"><label for="radio"></label></a>
 						<a href="tela04.html"><input type="radio" name="radio"><label for="radio"></label></a>
 						<a href="tela05.html"><input type="radio" name="radio"><label for="radio"></label></a>
-						<a href="tela06.html"><input type="radio" name="radio"><label for="radio"></label></a>						
+						<a href="tela06.html"><input type="radio" name="radio"><label for="radio"></label></a>
+                        <a href="tela07.html"><input type="radio" name="radio"><label for="radio"></label></a>						
 
 						<a href="tela02.html"><button class="bt-navegacao" type="button">></button></a>
 					</div>
-                    <span class="legenda">Tela 1 de 6</span>
+                    <span class="legenda">Tela 1 de 7</span>
                 </div>
 
                 <!--Rodapé-->
@@ -276,34 +228,6 @@
         console.log(evento.detail);
     };
 
-</script>
-<script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-    }
 </script>
 </body>
 </html>
