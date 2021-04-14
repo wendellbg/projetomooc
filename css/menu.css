@@ -28,7 +28,6 @@
 
 .details {
   border-top: 3px solid #fec13b;
-  background: #2A5CAA;
   color:#fff;
   padding: 15px 0;
   margin-top: 15px;
@@ -56,4 +55,24 @@
   opacity: 0.6;
   color: #fff;
   transition-delay: 0.3ms;
+}
+
+
+.menu-opcoes.red {
+  background: #E6292E;
+  border-right: 3px solid #020E36;
+  border-bottom: 3px solid #020E36;
+}
+
+.menu-opcoes.red .show {
+  color: #020E36;
+}
+
+.menu-opcoes.red .details {
+  border-top: 3px solid #020E36;
+  background: #E6292E;
+}
+
+.menu-opcoes.red a:hover {
+  color: #020E36;
 }

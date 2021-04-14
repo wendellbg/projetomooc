@@ -69,6 +69,7 @@ function resultadoObtemDadosGenericos (evento){
         if((porcentagem==100)&&(unidade!=0)&&(ultima_tela==1)){
             document.querySelector("#botao-atividades button").classList.remove("bt-desativado");
             document.querySelector("#botao-atividades button").classList.add("atividades");
+            console.log("Ativar botão de atividades");
         }
 
         //se for a tela 2 da unidade 2, verifica se o quiz já foi enviado.
