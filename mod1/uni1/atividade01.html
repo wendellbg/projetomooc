@@ -372,11 +372,12 @@
     var nota_atividade_nova=0;
 	var erros = 0;
     var envio=0;
-    var texto_mensagem_padrao="Você pode fazer no máximo 3 tentativas para responder as atividades.";
+    var texto_mensagem_padrao_0="Responda às atividades e, ao final, clique em \"Enviar Respostas\".<br>Você tem até 3 tentavias de envio e ficará registrada a nota mais alta.";
+    var texto_mensagem_padrao="Lembre-se, você tem até 3 tentativas de envio e ficará registrada a nota mais alta.";
     var texto_mensagem_tentativa="";
     var texto_mensagem_nota="";
-    var texto_mensagem_fim="<br>Você pode tentar novamente ou prosseguir para a próxima atividade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
-    var texto_mensagem_revisao="<p></p><a class='botao-mensagem' href='revisao01.html'>Veja aqui a revisão da atividade.</a>";
+    var texto_mensagem_fim="<br>Você pode tentar novamente ou prosseguir para a próxima atividade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PRÓXIMA UNIDADE &#10095;</a>";
+    var texto_mensagem_revisao="<p>Após acessar o GABARITO, você NÃO poderá enviar novas respostas.</p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
 
     window.addEventListener('load', function(){
         console.log("carregando a página");
@@ -444,7 +445,7 @@
             //caso algum não esteja preenchido, exibe mensagem de erro
 			mensagem.className = "mensagem-alerta";
 			mensagem.textContent = "Por favor preencha todos os campos";
-			mensagem.style.display = "block";
+			mensagem.style.display = "inline-block";
 			window.scrollTo(0, 0);
 			return false;
 		}else{
@@ -476,7 +477,7 @@
                     console.log("\n\nEnvio=1");
                     mensagem.className = "mensagem-alerta";
     			    mensagem.innerHTML = "Você já fez suas "+max_quant_tentativas+" tentativas.";
-	    		    mensagem.style.display = "block";                                     
+	    		    mensagem.style.display = "inline-block";                                     
                 }                
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>"+texto_mensagem_revisao;                                
                 erros++;
@@ -557,7 +558,7 @@
             //se não houver erro, exibe mensagem de OK
             //console.log("Aqui envia uma nova tentativa, são "+quant_respostas+" salvas");
 			mensagem.className = "mensagem-ok";
-			mensagem.style.display ="block";			
+			mensagem.style.display ="inline-block";			
             if(nota_atividade_nova>nota_atividade){
                 nota_atividade=nota_atividade_nova;
             }
@@ -579,7 +580,7 @@
             //caso algum não esteja preenchido, exibe mensagem de erro
 			mensagem.className = "mensagem-alerta";
 			mensagem.innerHTML = "Ocorreu algum erro! Tente Novamente...";
-			mensagem.style.display = "block";
+			mensagem.style.display = "inline-block";
 			window.scrollTo(0, 0);
         }
     }
@@ -638,7 +639,7 @@ var quant_respostas=0;
             if(envio==0){                                
                 let vez = quant_salva==1 ? "vez" : "vezes";
                 //texto_mensagem_tentativa=texto_mensagem_tentativa;
-                texto_mensagem_tentativa="<br>Você já enviou "+quant_salva+" "+vez+".";
+                texto_mensagem_tentativa="<br>Você já respondeu "+quant_salva+" "+vez+".";
                 mensagem_tentativas.innerHTML=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_fim;
                 console.log("\nJá verificou envio, quant-salva="+quant_salva);
             }else{
@@ -655,7 +656,7 @@ var quant_respostas=0;
             console.log("Carreagndo a página, envio="+envio);
             if(envio==0){
                 quant_respostas=0;
-                mensagem_tentativas.innerHTML=texto_mensagem_padrao+"<br>Você ainda não fez nenhuma.";                
+                mensagem_tentativas.innerHTML=texto_mensagem_padrao_0+"<br>Você ainda não fez nenhuma.";                
                 console.log("mensagem zerada");
             }else{
                 quant_respostas=parseInt(1);
