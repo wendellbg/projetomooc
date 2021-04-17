@@ -93,10 +93,22 @@ ul {
     vertical-align: middle;
 }
 
+.lista-topicos.yellow li{
+    color: #2a5caa;
+}
 
 .lista-topicos.yellow li span{
     color: #2a5caa;
     background-color: #fec13b;
+}
+
+.lista-topicos.red li span{
+    color: #020E36;
+    background-color: #E6292E;
+}
+
+.lista-topicos.red li{
+    color: #020E36;
 }
 
 @media screen and (max-width:560px){
