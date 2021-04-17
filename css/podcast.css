@@ -1,6 +1,5 @@
     .icone-audio{
         border-radius: 8px;
-        border: 2px solid #2a5caa;
         padding: 10px;
         display: block;
     }
@@ -15,6 +14,7 @@
 
     .icone-play img, .icone-pause img{
         position: relative;
+        border-radius: 8px;
         width: 180%;
         height: 180%;
         margin-left: -35%;
@@ -23,7 +23,6 @@
 
     }
     .icone-pause {
-        border: 2px solid #2a5caa;
         border-radius: 8px;
         margin: auto 40%;
         width: 20%;
@@ -31,7 +30,6 @@
 
     .icone-play:hover{
         background-color: #ebebeb;
-        border: 2px solid #fec13b;
         border-radius: 8px;
         margin: auto 40%;
         width: 20%;
