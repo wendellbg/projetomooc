@@ -7,8 +7,65 @@
 		"topicos": [{
 			"identificador": "uni0_tela01",
 			"nome": "Boas-Vindas"
-		}]
-	},{
+		}],
+		"atividades": [
+			{
+				"identificador": "uni0_ativ1",
+				"nomeAtividade": "Pesquisa",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "INTEGRAL",
+						"identificador": "r0_1",
+						"enunciado": "Você é...",
+						"gabaritos": [
+							{ "chave": "r0_1_a", "valor": "v", "alternativa": "Professor/gestor do Ensino Fundamental da rede pública" },
+							{ "chave": "r0_1_b", "valor": "v", "alternativa": "Professor/gestor do Ensino Fundamental da rede privada" },
+							{ "chave": "r0_1_c", "valor": "v", "alternativa": "Professor/gestor do Ensino Médio da rede pública" },
+							{ "chave": "r0_1_d", "valor": "v", "alternativa": "Professor/gestor do Ensino Médio da rede privada" },
+							{ "chave": "r0_1_e", "valor": "v", "alternativa": "Outro profissional da Educação" },
+							{ "chave": "r0_1_f", "valor": "v", "alternativa": "Responsável por aluno/a da Educação Básica" },
+							{ "chave": "r0_1_g", "valor": "v", "alternativa": "Aluno/a da Educação Básica" }							
+						]
+					},
+					{
+						"tipoQuestaoString": "INTEGRAL",
+						"identificador": "r0_2",
+						"enunciado": "Qual o seu principal motivo para a realização do curso?",
+						"gabaritos": [							
+							{ "chave": "r0_2_a", "valor": "v", "alternativa": "Aquisição de conhecimentos" },
+							{ "chave": "r0_2_b", "valor": "v", "alternativa": "Solicitação do gestor da escola" },
+							{ "chave": "r0_2_c", "valor": "v", "alternativa": "Necessidade para atuação profissional" },
+							{ "chave": "r0_2_d", "valor": "v", "alternativa": "Para obter ascensão funcional" },
+							{ "chave": "r0_2_e", "valor": "v", "alternativa": "Outros" }							
+						]
+					},
+					{
+						"tipoQuestaoString": "INTEGRAL",
+						"identificador": "r0_3",	
+						"enunciado": "O que você pretende?",
+						"gabaritos": [							
+							{ "chave": "r0_3_a", "valor": "v", "alternativa": "Concluir o curso e receber o certificado" },
+							{ "chave": "r0_3_b", "valor": "v", "alternativa": "Começar a fazer o curso, talvez concluir" },							
+							{ "chave": "r0_3_c", "valor": "v", "alternativa": "Apenas dar uma olhada no curso, por curiosidade" }							
+						]
+					},
+					{
+						"tipoQuestaoString": "INTEGRAL",
+						"identificador": "r0_4",
+						"enunciado": "Quais competências você gostaria de desenvolver neste curso?",
+						"gabaritos": [							
+							{ "chave": "r0_4_a", "valor": "v", "alternativa": "Conhecer as normas e procedimentos relativos ao novo Ensino Médio em direção à escolha de itinerários formativos." },
+							{ "chave": "r0_4_b", "valor": "v", "alternativa": "Conhecer melhor o itinerário formativo de Formação técnica e profissional." },
+							{ "chave": "r0_4_c", "valor": "v", "alternativa": "Compreender melhor os processos de orientação (ou mentoria) educacional e profissional." },
+							{ "chave": "r0_4_d", "valor": "v", "alternativa": "Conhecer os tipos de ações que podem ser realizados para ajudar os estudantes a escolherem seus itinerários." },
+							{ "chave": "r0_4_e", "valor": "v", "alternativa": "Sintonizar os conteúdos de suas componentes curriculares aos itinerários formativos e ao mundo do trabalho." }							
+						]
+					}
+				]
+			}
+		]
+	},
+	{
 		"identificador": "mod1_uni1",
 		"nome": "Educação Profissional no mundo contemporâneo",
 		"descricao": "",
