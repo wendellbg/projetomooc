@@ -4,13 +4,40 @@
     <title>Mentoria</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
-    <link rel="stylesheet" href="../../css/boxes.css?ver=1.2"/>
-    <link rel="stylesheet" href="../../css/slide.css?ver=1.3"/>
+    <link rel="stylesheet" href="../../css/mooc2.css?ver=1.2"/>
+    <link rel="stylesheet" href="../../css/boxes.css?ver=1.2"/>    
     <link rel="stylesheet" href="../../css/podcast.css?ver=1.1"/>
     <link rel="stylesheet" href="../../css/ponto-interesse.css?ver=1.2"/>        
+<!-- Botão de Voltar ao Topo -->
+    <script src="../../js/jquery-2.1.1.js"></script>
+    <script src="../../js/bt-topo.js"></script>
+
+    <!-- Funções de acesso à biblioteca do Avamec-->
+    <script src="../../js/funcoes-5.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-SB34EK30YV');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MK4H2FJ');
+    </script>
+    <!-- End Google Tag Manager -->
 </head>
-<body>
+<body class="mooc2">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MK4H2FJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- Header -->
 <header id="header">
@@ -24,7 +51,9 @@
     <div class="inner">
         <!-- One -->
         <section id="one" class="wrapper style1">
-
+            <div class="botao-sumario">
+                <a class="link-progresso" href="../sumario.html"><i class="fas fa-tasks"></i> PROGRESSO</a>
+            </div>
             <header class="special">
                 <div class="entire-menu">
                     <div class="menu-tit">
@@ -63,48 +92,10 @@
 
             <div class="content no-top">
                 <p>Sem descartar modelos teóricos (são importantíssimos ou até essenciais em muitos casos), vejamos o que se ganha na compreensão da aprendizagem profissional que se preocupa em entender o que acontece na vida de um adulto e de um trabalhador.</p>
-            </div>
-
-            <!-- Container do slideshow-->
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <div class="numero-slide">1 / 4</div>
-                    <img src="../../img/uni2/MOOC2_UNID2_Tela02_Imagem01.jpg" alt="imagem 1">
-                    <div class="texto">Figura 1</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numero-slide">2 / 4</div>
-                    <img class="imagem-cent" src="../../img/uni2/MOOC2_UNID2_Tela02_Imagem02.jpg" alt="imagem 2">
-                    <div class="texto">Figura 2</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numero-slide">3 / 4</div>
-                    <img src="../../img/uni2/MOOC2_UNID2_Tela02_Imagem03.jpg" alt="imagem 3">
-                    <div class="texto">Figura 3</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numero-slide">4 / 4</div>
-                    <img src="../../img/uni2/MOOC2_UNID2_Tela02_Imagem04.jpg" alt="imagem 4">
-                    <div class="texto">Figura 4</div>
-                </div>
-
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                <br>
-                <div style="text-align: center">
-                    <span class="ponto" onclick="currentSlide(1)"></span>
-                    <span class="ponto" onclick="currentSlide(2)"></span>
-                    <span class="ponto" onclick="currentSlide(3)"></span>
-                    <span class="ponto" onclick="currentSlide(4)"></span>
-                </div>
-            </div>
+            </div>            
 
             <div class="icone-audio">
-                <a class='icone-play' id="botao-play-podcast" onclick="playShowPod()"><img src="../../img/uni3/icone-audio.png"/></a>
+                <a style="margin-left: 40%; margin-right: 40%; margin-top: 10%; margin-bottom: 10%;" class='icone-play' id="botao-play-podcast" onclick="playShowPod()"><img <img style="width:320%; margin-left: -100%;" src="../../img/uni3/MOOC2_UNIDADE3_Tela05_Imagem01.jpg"/></a>
                 <a class="icone-pause" id="botao-pause-podcast" onclick="pauseShowPod()" style="display:none;"><img src="../../img/uni3/icone-audio2.gif" /></a>
                 <audio id='playerPodcast' class='controles-podcast' controls='controls'>                   
                      <source src="../../img/uni3/audio_2.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
@@ -305,34 +296,6 @@
         console.log(evento.detail);
     };
 
-</script>
-<script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-    }
 </script>
 <script type="text/javascript">
     var currentImgIndex=1;
