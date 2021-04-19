@@ -36,6 +36,43 @@
         cursor: pointer;
     }
 
+
     .controles-podcast{
         width: 100%;
+        border-radius: 8px;
+        background-color: #F1F3F4;
+        border: 2px solid #F1F3F4;
+    }
+
+    .audio-gif .controles-podcast{
+        margin-top: 10px;
+    }
+
+    .audio-gif .icone-audio{
+        margin-bottom: 20px;
+    }
+
+
+
+    .audio-gif .icone-play,
+    .audio-gif .icone-pause,
+    .audio-gif .icone-play img,
+    .audio-gif .icone-pause img{
+        margin: 0 auto;
+        width: 100%;
+        display: block;
+        border: none;
+    }
+
+    .audio-gif .icone-play:hover,
+    .audio-gif .icone-play img:hover,
+    .audio-gif .icone-pause img:hover{
+        margin: 0 auto;
+        width: 100%;
+        opacity: 0.8;
+        background-color: #E73435;
+    }
+
+    .audio-gif .downloads {
+        text-align: center;
     }
