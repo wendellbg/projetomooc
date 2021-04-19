@@ -34,7 +34,7 @@ function verifica_porcentagem(unidade,tela){
     }    	   	    	
 }
 
-window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
+window .addEventListener("evObtemDadosGenericos", resultadoObtemDadosGenericos,false );
 function resultadoObtemDadosGenericos (evento){
 
     //testa se os dados genéricos testados são para a porcentagem ou para as respostas
@@ -99,7 +99,9 @@ function resultadoObtemDadosGenericos (evento){
             document.querySelector("#botao-quiz-uni2").style.display="none";            
             document.querySelector("#botao-prosseguir").style.display="block";
             erros++;
-
+            
+            verificando_quais_dados=1;
+		    API.obterDadosCurso();  
             //se a unidade não foi iniciada, registra os dados Genéricos com as respostas:
         }else{
             salvarDados();
