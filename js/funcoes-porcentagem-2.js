@@ -34,7 +34,7 @@ function verifica_porcentagem(unidade,tela){
     }    	   	    	
 }
 
-window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
+window .addEventListener("evObtemDadosGenericos", resultadoObtemDadosGenericos,false );
 function resultadoObtemDadosGenericos (evento){
 
     //testa se os dados genéricos testados são para a porcentagem ou para as respostas
