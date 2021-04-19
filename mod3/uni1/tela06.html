@@ -91,7 +91,12 @@
 
             <div class="content no-top">
                 <p>Este é um exemplo de ação de educação para a carreira que utiliza a estratégia Aditiva. Portanto, para que tivesse o caráter de disciplina, foi construída a seguinte matriz curricular.</p>
-            </div>    
+            </div>
+
+            <!-- Imagem Única-->
+            <div class="image fit flush largura-70">
+                <img src=" ../../img/uni1/MOOC3_Uni1_tela6_imagem1.jpg" alt="Matriz Curricular">                
+            </div>
 
             <div class="content no-top">
                 <p>A partir dessa matriz curricular, foram desenvolvidas atividades que pudessem trabalhar os conteúdos propostos, aula a aula. No total, foram ministradas vinte e quatro aulas. Dessa etapa, participaram os trinta e três alunos do primeiro ano do ensino médio integrado em Administração, sendo dezesseis meninos e dezessete meninas com idade de quatorze e quinze anos.</p>
@@ -106,10 +111,11 @@
             </div>
 
             <!-- Imagem Única-->
-            <div class="image fit flush largura-60">
-                <img src=" ../../img/uni1/imagem1.png" alt="Imagem 1">
-                <p class="legenda-img">Figura 01 - Fonte: ...</p>
-            </div>
+            <div class="image fit flush largura-70">
+                <img id="troca_imagem" onclick="trocar()" src=" ../../img/uni1/MOOC3_Uni1_tela6_imagem2.jpg" alt="Imagem 2">
+                <p style="margin-top: 4% !important;" class="legenda-img">Clique na imagem para interagir com ela</p>                
+            </div>             
+
             
             <div class="content no-top">
                 <p>Esse caso exemplifica bem como podemos colocar em prática os conceitos que discutimos até agora. Mesmo assim, há desafios a serem encarados. Vamos a eles, então.</p>
@@ -252,6 +258,23 @@
         console.log(evento.detail);
     };
 
+</script>
+<script type="text/javascript">
+   var ImagemAtual = 0; 
+   var VetorImgens = [
+   " ../../img/uni1/MOOC3_Uni1_tela6_imagem2a.jpg",
+   " ../../img/uni1/MOOC3_Uni1_tela6_imagem2b.jpg",
+   " ../../img/uni1/MOOC3_Uni1_tela6_imagem2c.jpg" //não tem vírgula
+];
+
+function trocar(){
+   if(ImagemAtual == VetorImgens.length) //reseta quando o contatador for igual ao tamanho da array e volta a 1° img
+  {
+    ImagemAtual=0;
+  }
+  document.getElementById("troca_imagem").src=VetorImgens[ImagemAtual]; //altera a img do elemento "troca_imagem" de acordo com o indice
+    ImagemAtual++; // incrementa a nossa referencia
+}
 </script>
 </body>
 </html>

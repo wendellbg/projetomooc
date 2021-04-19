@@ -127,18 +127,22 @@
                 <p>A proposta da Educação para a Carreira era integrar o desenvolvimento da carreira às demais dimensões da vida humana. e se fundamentava em quatro grandes pilares:</p>
             </div>
 
-            <div class="content no-top">
-                <p><b>Escola:</b> Escola como lugar privilegiado para se refletir sobre a preparação para o trabalho</p>
-                <p><b>Comunidade:</b> Parceria entre escola e a comunidade mais ampla (família, empregadores, governo)</p>
-                <p><b>Trabalho:</b> Realização de atividades que são socialmente benéficas para si e para os demais.</p>
-                <p><b>Currículo:</b> Entender a Educação para a Carreira como parte do currículo escolar.</p>
+            <!-- Imagem Única-->
+            <div class="image fit flush largura-70">
+                <img id="troca_imagem" onclick="trocar()" src=" ../../img/uni1/MOOC3_Uni1_tela4_imagem3.jpg" alt="Imagem 3">
+                <p style="margin-top: 4% !important;" class="legenda-img">Clique na imagem para interagir com ela</p>                
             </div>                        
 
-            <div class="content no-top">
-                <p>Há relatos de que Thomas Jefferson e Benjamin Franklin, séculos atrás, entendiam que a educação escolar deveria ser socialmente útil. Entendiam que a escola poderia buscar desenvolver no indivíduo habilidades que pudessem ser aproveitadas futuramente, quando este ingressasse no mundo do trabalho.</p>
-            </div>         
+            <!--Caixa Fique por dentro-->
+            <section class="box-info text-blue">
+                <div class="bg-yellow"></div>
+                <div class="border-blue">
+                    <p>Há relatos de que Thomas Jefferson e Benjamin Franklin, séculos atrás, entendiam que a educação escolar deveria ser socialmente útil. Entendiam que a escola poderia buscar desenvolver no indivíduo habilidades que pudessem ser aproveitadas futuramente, quando este ingressasse no mundo do trabalho.</p>
+                    <div align="right"> <img class="right" src="../../img/padrao/icon_fique_por_dentro.png" /></div>
+                </div>
+            </section>                 
             
-             <div class="content no-top">
+            <div class="content no-top">
                 <p><b>No contexto brasileiro, a legislação educacional</b> já prevê a preparação para o trabalho como objetivo da educação básica.</p>
             </div>            
 
@@ -270,6 +274,25 @@
         console.log(evento.detail);
     };
 
+</script>
+<script type="text/javascript">
+   var ImagemAtual = 0; 
+   var VetorImgens = [
+   " ../../img/uni1/MOOC3_Uni1_tela4_imagem3a.jpg",
+   " ../../img/uni1/MOOC3_Uni1_tela4_imagem3b.jpg",
+   " ../../img/uni1/MOOC3_Uni1_tela4_imagem3c.jpg",
+   " ../../img/uni1/MOOC3_Uni1_tela4_imagem3d.jpg",
+   " ../../img/uni1/MOOC3_Uni1_tela4_imagem3e.jpg" //não tem vírgula
+];
+
+function trocar(){
+   if(ImagemAtual == VetorImgens.length) //reseta quando o contatador for igual ao tamanho da array e volta a 1° img
+  {
+    ImagemAtual=0;
+  }
+  document.getElementById("troca_imagem").src=VetorImgens[ImagemAtual]; //altera a img do elemento "troca_imagem" de acordo com o indice
+    ImagemAtual++; // incrementa a nossa referencia
+}
 </script>
 </body>
 </html>
