@@ -273,6 +273,7 @@ h3.texto-central b{
 	margin-bottom: 40px;
 }
 
+.video-interativo,
 .video-player {
 	/* width: 100% !important; */
 	/* height: 90%;	 */
@@ -293,6 +294,9 @@ h3.texto-central b{
 	width: 100%;
 	height: 100%;
 }
+
+
+
 
 
 /*.video-player {*/
