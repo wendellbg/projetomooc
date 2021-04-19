@@ -420,11 +420,7 @@
         r1_4_2 = document.form_atividade_uni1.r1_4_2.value,
         r1_4_3 = document.form_atividade_uni1.r1_4_3.value,
 		r1_4_4 = document.form_atividade_uni1.r1_4_4.value;
-
-        //Linhas só pra testar as respostas
-		// console.log("\nQuestão 1: "+r1_1_1.innerHTML+", "+r1_1_2.innerHTML+"\nQuestão 2: "+r1_2_1.innerHTML+", "+r1_2_2.innerHTML+", "+r1_2_3.innerHTML);
-        // console.log("\nQuestão 3: "+r1_3_1+", "+r1_3_2+", "+r1_3_3+", "+r1_3_4+"\nQuestão 4: "+r1_4_1+", "+r1_4_2+", "+r1_4_3+", "+r1_4_4);
-
+        
         //testando se todos os exercícios (menos os checkbox) estão preenchidos.
 		if(r1_1_1==null){
 			erros++;
@@ -625,7 +621,6 @@
             ev.currentTarget.replaceChild (src, tgt);
             srcParent.appendChild (tgt);
         }
-    
 
 //////////////////Daqui para baixo entrará no arquivo funcoes_atividades.js
 
@@ -693,8 +688,6 @@ var quant_respostas=0;
                 revisao_vista=1;
             }
         }
-        
-        
     } 
     console.log(texto_mensagem_tentativa);
     mensagem_tentativas.innerHTML=texto_mensagem_tentativa;
