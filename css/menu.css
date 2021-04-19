@@ -76,3 +76,24 @@
 .menu-opcoes.red a:hover {
   color: #020E36;
 }
+
+
+.menu-opcoes.darkblue-red {
+  background: #020E36;
+  border-right: 3px solid #E6292E;
+  border-bottom: 3px solid #E6292E;
+}
+
+.menu-opcoes.darkblue-red .show {
+  color: white;
+}
+
+.menu-opcoes.darkblue-red .details {
+  border-top: 3px solid #E6292E;
+  background: #020E36;
+}
+
+.menu-opcoes.darkblue-red a:hover {
+  color: #E6292E;
+}
+

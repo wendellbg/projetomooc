@@ -508,6 +508,11 @@ Main components
 
 }
 
+/* Mooc2 Uni2 Tela 7 */
+.border .cd-single-point .cd-more-info{
+  width: 300px;
+  height: 250px;
+}
 
 
 
@@ -613,6 +618,39 @@ Main components
   right: 80%;
 }
 
+.cd-single-point.ponto1-uni2-tela7{
+  top: 18%;
+  left: 35%;
+}
+
+.cd-single-point.ponto2-uni2-tela7{
+  top: 46%;
+  left: 36%;
+}
+
+.cd-single-point.ponto3-uni2-tela7{
+  bottom: 18%;
+  left: 38%;
+}
+
+
+.cd-single-point.ponto4-uni2-tela7{
+  top: 28%;
+  right: 38%;
+}
+
+.cd-single-point.ponto5-uni2-tela7{
+  bottom: 18%;
+  right: 40%;
+}
+
+
+
 .cd-single-point.titulo-bola{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.border.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 100%;
 }

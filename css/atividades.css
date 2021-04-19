@@ -48,7 +48,7 @@ html{
 
 .enunciado-questao{
     text-decoration: none   ;
-    padding-bottom:1em;    
+    /* padding-bottom:1em;     */
     font-weight: bold;
     text-align: justify;
     margin-right: 2%;    
@@ -417,6 +417,10 @@ html{
     width: 35%;
     margin-left: 0;
     vertical-align: top;
+}
+
+.area-radios.linha-grande{
+    width: 95%;
 }
 
 .area-radios input {
