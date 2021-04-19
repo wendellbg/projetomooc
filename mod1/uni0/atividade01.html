@@ -355,9 +355,12 @@
 			//Se já tiver enviado (200) então exibe a mensagem e libera os 100% da unidade de boas-vindas         
 			botao.style.display="none";
 			mensagem.className = "mensagem-ok";
-			mensagem.textContent = "Você já enviou as respostas, avance para a próxima Unidade!<p></p><a class='link-proxima-unidade' href='../uni1/index.html'>PROSSEGUIR &#10095;</a>";
+			mensagem.innerHTML = "Você já enviou as respostas, avance para a próxima Unidade!<p></p><a href='../uni1/index.html' class='link-proxima-unidade'>PROSSEGUIR &#10095;</a>";
 			mensagem.style.display = "block";
 			window.scrollTo(0, 0);
+			setTimeout(function() {
+    			window.location.href = "tela03.html";
+			}, 5000);
 		}else{
 			//se ainda não tiver enviado as respostas, ou estiver dentro das tentativas, registra as re respostas com as funções da API:
 			console.log("Registrando respostas:");
@@ -414,17 +417,17 @@
 			window .addEventListener( "evRegistraRespostaAtividade" ,resultadoRegistrarRespostaAtividade, false );
 			function resultadoRegistrarRespostaAtividade (evento){
 				console .log(evento.detail);
-				nota_atividade_nova= evento.detail.data.notaAtividade;
+				//nota_atividade_nova= evento.detail.data.notaAtividade;
 				if(erros==0){
 					//se não houver erro, exibe mensagem de OK
-					//console.log("Aqui envia uma nova tentativa, são "+quant_respostas+" salvas");
-					mensagem.className = "mensagem-ok";
-					mensagem.style.display ="block";			
-					if(nota_atividade_nova>nota_atividade){
-						nota_atividade=nota_atividade_nova;
-					}
+					//console.log("Aqui envia uma nova tentativa, são "+quant_respostas+" salvas");					
+					// if(nota_atividade_nova>nota_atividade){
+					// 	nota_atividade=nota_atividade_nova;
+					// }
 					//esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
 					mensagem.innerHTML="Dados Enviados com sucesso!<br /><br><a class='link-proxima-unidade' href='tela03.html'>PROSSEGUIR &#10095;</a>";					
+					mensagem.className = "mensagem-ok";
+					mensagem.style.display ="block";			
 					//"Ocorreu tudo certo. Tem que aparecer o link
 					window.scrollTo(0, 0);
 				}else{
