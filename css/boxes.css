@@ -273,7 +273,6 @@ h3.texto-central b{
 	margin-bottom: 40px;
 }
 
-.video-interativo,
 .video-player {
 	/* width: 100% !important; */
 	/* height: 90%;	 */
@@ -287,6 +286,7 @@ h3.texto-central b{
 	padding-bottom: 56.25%; /* 16:9 */
 	height: 0;
 }
+
 .video-player iframe {
 	position: absolute;
 	top: 0;
@@ -295,18 +295,17 @@ h3.texto-central b{
 	height: 100%;
 }
 
+.video-interativo {
+	margin: 0 auto;
+	border: 6px solid #fff;
+	background-color: #fff;
+	margin-bottom: 20px;
+}
 
+.video-interativo iframe {
+	display: block;
+}
 
-
-
-/*.video-player {*/
-/*	width: 80%;*/
-/*	!* height: 90%;	 *!*/
-/*	margin-top: -55%;*/
-/*	position: relative;*/
-/*	margin-left: 12%;*/
-/*	border: 4px solid #fff;*/
-/*}*/
 
 .titulo-video {
 	margin-bottom: 15px;
