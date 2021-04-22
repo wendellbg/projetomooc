@@ -100,10 +100,13 @@
             </div>
 
             <div class="content no-top">
-                <p>Existem três grandes tipos de estratégias:</p>
-                <p><b>Infusivas:</b> disseminação transversal (em diferentes disciplinas e em todos os níveis escolares) de questões sobre os valores, conhecimentos e atitudes relevantes ao desenvolvimento vocacional e da carreira.</p>
-                <p><b>Aditivas:</b> implementação da educação para a carreira, integrada no horário escolar, tal como se de uma disciplina se tratasse, a ser ministrada por um orientador profissional, um educador para a carreira</p>
-                <p><b>Mistas:</b> integração da educação para a carreira nas disciplinas de ciências sociais e humanas.</p>
+                <p>Existem três grandes tipos de estratégias:</p>               
+            </div> 
+
+            <!-- Imagem Única-->
+            <div class="image fit flush largura-65">
+                <img id="troca_imagem" onclick="trocar()" src=" ../../img/uni1/MOOC3_Uni1_tela5_imagem1.jpg" alt="Imagem 3">
+                <p style="margin-top: 4% !important;" class="legenda-img">Clique na imagem para interagir com ela</p>                
             </div>            
 
             <!--Caixa Para Refletir-->
@@ -261,6 +264,23 @@
         console.log(evento.detail);
     };
 
+</script>
+<script type="text/javascript">
+   var ImagemAtual = 0; 
+   var VetorImgens = [
+   " ../../img/uni1/MOOC3_Uni1_tela5_imagem1a.jpg",
+   " ../../img/uni1/MOOC3_Uni1_tela5_imagem1b.jpg",
+   " ../../img/uni1/MOOC3_Uni1_tela5_imagem1c.jpg" //não tem vírgula
+];
+
+function trocar(){
+   if(ImagemAtual == VetorImgens.length) //reseta quando o contatador for igual ao tamanho da array e volta a 1° img
+  {
+    ImagemAtual=0;
+  }
+  document.getElementById("troca_imagem").src=VetorImgens[ImagemAtual]; //altera a img do elemento "troca_imagem" de acordo com o indice
+    ImagemAtual++; // incrementa a nossa referencia
+}
 </script>
 </body>
 </html>
