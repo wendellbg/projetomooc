@@ -238,7 +238,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
 
 <!-- Funções de acesso à biblioteca do Avamec-->
-<script src="../../js/funcoes-porcentagem-2.js"></script>
+<script src="../../js/funcoes-porcentagem-6.js"></script>
 <script>
 	console.clear(screen);
 
@@ -249,10 +249,12 @@
 	var tela="uni2tela2";//alterar
 	var erros=0;
 	var ultima_tela=0;
+	var envio=0;
 	
 	//Obtendo dados curso
 	window.addEventListener('load', function(){		    	
 		verificando_quais_dados=2;	
+		envio=0;
 		console.log("\nChecando respostas");
 		//primeiro verifica dados salvos da primeira resposta. Se encontrar é porque já enviou anteriormente.		
 		API.obterDadosGenericos("q2_2_1");
@@ -266,6 +268,7 @@
 
 	function verifica_quiz_enviado(){	
 		verificando_quais_dados=2;	
+		envio=1;
 		console.log("\nChecando respostas");
 		//primeiro verifica dados salvos da primeira resposta. Se encontrar é porque já enviou anteriormente.		
 		API.obterDadosGenericos("q2_2_1");			
@@ -320,8 +323,7 @@
 			mensagem.innerHTML="Dados Enviados com sucesso!<br /><BR /><a class='link-proxima-unidade' href='tela03.html'>PROSSEGUIR &#10095;</a>";
 			console.log("ocorreu tudo certo. Tem que aparecer o link");
 			window.scrollTo(0, 0);
-		}
-		
+		}		
 	}
 	</script>
 	</body>
