@@ -65,6 +65,7 @@
 							<div class="menu">
 								<a href="tela01.html" class='titulo-menu'>BOAS-VINDAS</a>
 								<a href="tela01.html" class='link-menu-atual'>0.01 - Mensagem de boas-vindas</a>
+								<a href="tela02.html" class='link-menu'>0.02 - Boas-vindas</a>
 							</div>
 						</div>
 					</div>
@@ -201,34 +202,34 @@
 							<div class="enunciado-questao">
 								<span>Quais competências você gostaria de desenvolver neste curso?</span>
 							</div>
-							<div class="area-respostas">                                    
+							<div class="area-respostas">
 								<div class="linha-respostas">
-									<div class="area-radios linha-grande">                                        
-										<input type="radio" name="r0_4" id="r0_4_a" value="a" required>
+									<div class='texto-resposta  linha-grande'>                                        
+										<input type="checkbox" name="r0_4_a" id="r0_4_a" value="a" >
 										<label for="r0_4_a" class="texto-opcao">a) Conhecer as normas e procedimentos relativos ao novo Ensino Médio em direção à escolha de itinerários formativos.</label>
 									</div> 
 								</div>
-								<div class="linha-respostas">                                               
-									<div class="area-radios linha-grande">                                        
-										<input type="radio" name="r0_4" id="r0_4_b" value="b" required>
+								<div class="linha-respostas">
+									<div class='texto-resposta  linha-grande'>                                        
+										<input type="checkbox" name="r0_4_b" id="r0_4_b" value="b" >
 										<label for="r0_4_b" class="texto-opcao">b) Conhecer melhor o itinerário formativo de Formação técnica e profissional.</label>
 									</div>                   
 								</div>
-								<div class="linha-respostas">                             
-									<div class="area-radios linha-grande">                                        
-										<input type="radio" name="r0_4" id="r0_4_c" value="c" required>
+								<div class="linha-respostas">
+									<div class='texto-resposta  linha-grande'>                                        
+										<input type="checkbox" name="r0_4_c" id="r0_4_c" value="c" >
 										<label for="r0_4_c" class="texto-opcao">c) Compreender melhor os processos de orientação (ou mentoria) educacional e profissional.</label>
 									</div>                   
 								</div>
-								<div class="linha-respostas">                             
-									<div class="area-radios linha-grande">                                        
-										<input type="radio" name="r0_4" id="r0_4_d" value="d" required>
+								<div class="linha-respostas">
+									<div class='texto-resposta  linha-grande'>                                        
+										<input type="checkbox" name="r0_4_d" id="r0_4_d" value="d" >
 										<label for="r0_4_d" class="texto-opcao">d) Conhecer os tipos de ações que podem ser realizados para ajudar os estudantes a escolherem seus itinerários.</label>
 									</div>                   
 								</div>
-								<div class="linha-respostas">                             
-									<div class="area-radios linha-grande">                                        
-										<input type="radio" name="r0_4" id="r0_4_e" value="e" required>
+								<div class="linha-respostas">
+									<div class='texto-resposta  linha-grande'>                                        
+										<input type="checkbox" name="r0_4_e" id="r0_4_e" value="e" >
 										<label for="r0_4_e" class="texto-opcao">e) Sintonizar os conteúdos de suas componentes curriculares aos itinerários formativos e ao mundo do trabalho.</label>
 									</div>                   
 								</div>                                                                         
@@ -313,7 +314,11 @@
 		r0_1 = document.form_atividade_uni0.r0_1.value,     
 		r0_2 = document.form_atividade_uni0.r0_2.value,     
 		r0_3 = document.form_atividade_uni0.r0_3.value,     
-		r0_4 = document.form_atividade_uni0.r0_4.value
+		r0_4_a = document.form_atividade_uni0.r0_4_a.value,
+		r0_4_b = document.form_atividade_uni0.r0_4_b.value,
+		r0_4_c = document.form_atividade_uni0.r0_4_c.value,
+		r0_4_d = document.form_atividade_uni0.r0_4_d.value,
+		r0_4_e = document.form_atividade_uni0.r0_4_e.value
 		
 		//testando se todos os exercícios estão preenchidos.
 		if(r0_1==""){
@@ -321,8 +326,6 @@
 		}else if(r0_2==""){
 			erros++;
 		}else if(r0_3==""){
-			erros++;
-		}else if(r0_4==""){
 			erros++;
 		}
 
@@ -342,7 +345,6 @@
 			}						
 		}
 	}
-
 
 	//Depois que verifica as tentativas de resposta, verifica as respostas salvas;
 	window .addEventListener( "evObtemDadosRespostaAtividade" , resultadoObtemRespostaAtividade, false );
@@ -401,11 +403,11 @@
 					{						
 						"identificador": "r0_4",                    
 						"gabaritos": [							
-							{ "chave": "r0_4_a", "valor": r0_4},
-							{ "chave": "r0_4_b", "valor": r0_4},
-							{ "chave": "r0_4_c", "valor": r0_4},
-							{ "chave": "r0_4_d", "valor": r0_4},
-							{ "chave": "r0_4_e", "valor": r0_4}
+							{ "chave": "r0_4_a", "valor": r0_4_a},
+							{ "chave": "r0_4_b", "valor": r0_4_b},
+							{ "chave": "r0_4_c", "valor": r0_4_c},
+							{ "chave": "r0_4_d", "valor": r0_4_d},
+							{ "chave": "r0_4_e", "valor": r0_4_e}
 						]
 					}
 				]

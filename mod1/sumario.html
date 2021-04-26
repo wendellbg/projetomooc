@@ -1423,7 +1423,7 @@
                 <div class="fill"></div>
               </div>
             </div>
-            <!-- <p>UNIDADE 5</p> -->
+            <!-- <p>UNIDADE DE ENCERRAMENTO </p> -->
             <span><a href="./encerramento/index.html" style="display: none;"><button class="bt-padrao">ACESSAR  &#10095;</button></a></span>
           </div>
 
@@ -1589,6 +1589,7 @@
     if((porcentagem_geral/5)>=80){
       let div_encerramento = document.querySelector("#div-encerramento span a");
       div_encerramento.style.display="inline-block";
+      API.registrarDadosGenericos("porcentagemGeral",1);
     }
 
     controle_id_unidade++;
