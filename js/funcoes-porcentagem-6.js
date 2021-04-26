@@ -1,4 +1,3 @@
-
 var quant_telas_vistas=0;	
 var porcentagem = 0;
 //esse vetor tem as quantidades de telas de cada unidade;
@@ -34,13 +33,13 @@ function verifica_porcentagem(unidade,tela){
     }    	   	    	
 }
 
-window .addEventListener("evObtemDadosGenericos", resultadoObtemDadosGenericos,false );
+window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
 function resultadoObtemDadosGenericos (evento){
 
     //testa se os dados genéricos testados são para a porcentagem ou para as respostas
-	//console.log("Teste de dados aqui: "+verificando_quais_dados);
+    //console.log("Teste de dados aqui: "+verificando_quais_dados);
 
-	//verificação normal, para porcentagem
+    //verificação normal, para porcentagem
     if(verificando_quais_dados==1){
 
         console.log(evento.detail);
@@ -67,7 +66,8 @@ function resultadoObtemDadosGenericos (evento){
         //console.log("Porcentagem total é: "+porcentagem);
         
         if((porcentagem==100)&&(unidade!=0)&&(ultima_tela==1)){
-            document.querySelector("#botao-atividades button").classList.remove("bt-desativado");
+        //if(teste==1){
+            document.querySelector("#botao-atividades button").classList.remove("bt-desativado");                            
             document.querySelector("#botao-atividades button").classList.add("atividades");
             console.log("Ativar botão de atividades");
         }
@@ -99,13 +99,8 @@ function resultadoObtemDadosGenericos (evento){
             document.querySelector("#botao-quiz-uni2").style.display="none";            
             document.querySelector("#botao-prosseguir").style.display="block";
             erros++;
-            
-            verificando_quais_dados=1;
-		    API.obterDadosCurso();  
+
             //se a unidade não foi iniciada, registra os dados Genéricos com as respostas:
-        }else if(envio==0){
-            verificando_quais_dados=1;
-		    API.obterDadosCurso();  
         }else{
             salvarDados();
         }
