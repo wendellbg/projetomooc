@@ -41,8 +41,7 @@ function resultadoObtemDadosGenericos (evento){
 
     //verificação normal, para porcentagem
     if(verificando_quais_dados==1){
-
-        console.log(evento.detail);
+        console.log("Status do evento: "+evento.detail);
         //aqui verifica se está testando o nome da tela, para não contabilizar errado
         var tela_atual=0; 		
         
@@ -99,11 +98,27 @@ function resultadoObtemDadosGenericos (evento){
             document.querySelector("#botao-quiz-uni2").style.display="none";            
             document.querySelector("#botao-prosseguir").style.display="block";
             erros++;
-
+            
+            verificando_quais_dados=1;
+		    API.obterDadosCurso();  
             //se a unidade não foi iniciada, registra os dados Genéricos com as respostas:
+        }else if(envio==0){
+            verificando_quais_dados=1;
+		    API.obterDadosCurso();  
         }else{
             salvarDados();
         }
+    
+    //verificação de porcentagem para a última tela, sobre o botão de Encerramento 
+    }else if(verificando_quais_dados==3){
+        console.log("Status do evento: "+evento.detail['status']);
+        if(evento.detail["status"]=="200"){            
+            document.querySelector("#botao-encerramento button").classList.remove("bt-desativado");                            
+            document.querySelector("#botao-atividades button").classList.add("atividades");
+            console.log("Ativar botão de Encerramento");
+        }
+        verificando_quais_dados=1;
+        API.obterDadosCurso();
     }
 }	
 

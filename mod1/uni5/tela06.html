@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
+		<link rel="stylesheet" href="../../css/telas_finais.css"/>
 
 		<!-- Botão de Voltar ao Topo -->
 		<script src="../../js/jquery-2.1.1.js"></script>
@@ -93,6 +94,8 @@
 								</div>
 								 
 								<div id="botao-encerramento">
+									<div class='mensagem-flutuante incompleta'>Complete todo o curso para acessar a unidade de Encerramento</div>
+									<div class='mensagem-flutuante completa'>Você completou o curso! Agora vá para a unidade de Encerramento</div>
 									<button class="bt-avanca bt-desativado" type="button"><a href="../encerramento/index.html">ENCERRAMENTO DO CURSO &#10095;</a></button>
 								</div>
 								<div class='botoes-navegacao'>
@@ -158,20 +161,37 @@
 			});
 
 			var botao = document.querySelector("#botao-atividades .bt-avanca");  
-    
+			var botao_encerramento = document.querySelector("#botao-encerramento .bt-avanca");  
+
 			botao.addEventListener("mouseover",function(){
 				if(botao.classList.contains('bt-desativado')){
-					let mensagem = document.querySelector(".mensagem-flutuante.incompleta").style.display="block";
+					let mensagem = document.querySelector("#botao-atividades .mensagem-flutuante.incompleta").style.display="block";
 				}else{
-					let mensagem = document.querySelector(".mensagem-flutuante.completa").style.display="block";
+					let mensagem = document.querySelector("#botao-atividades .mensagem-flutuante.completa").style.display="block";
 				}                    
 			});
 
 			botao.addEventListener('mouseout',function(){
 				if(botao.classList.contains('bt-desativado')){
-					let mensagem = document.querySelector(".mensagem-flutuante.incompleta").style.display="none";
+					let mensagem = document.querySelector("#botao-atividades .mensagem-flutuante.incompleta").style.display="none";
 				}else{
-					let mensagem = document.querySelector(".mensagem-flutuante.completa").style.display="none";
+					let mensagem = document.querySelector("#botao-atividades .mensagem-flutuante.completa").style.display="none";
+				}    
+			});
+
+			botao_encerramento.addEventListener("mouseover",function(){
+				if(botao.classList.contains('bt-desativado')){
+					let mensagem = document.querySelector("#botao-encerramento .mensagem-flutuante.incompleta").style.display="block";
+				}else{
+					let mensagem = document.querySelector("#botao-encerramento .mensagem-flutuante.completa").style.display="block";
+				}                    
+			});
+
+			botao_encerramento.addEventListener('mouseout',function(){
+				if(botao.classList.contains('bt-desativado')){
+					let mensagem = document.querySelector("#botao-encerramento .mensagem-flutuante.incompleta").style.display="none";
+				}else{
+					let mensagem = document.querySelector("#botao-encerramento .mensagem-flutuante.completa").style.display="none";
 				}    
 			});
 		</script>
