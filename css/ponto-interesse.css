@@ -686,7 +686,20 @@ Main components
   right: 36%;
 }
 
+.cd-single-point.ponto1-mooc3-uni3-tela3{
+  top: 25%;
+  right: 46%;
+}
 
+.cd-single-point.ponto2-mooc3-uni3-tela3{
+  top: 95%;
+  right: 56%;
+}
+
+.cd-single-point.ponto3-mooc3-uni3-tela3{
+  top: 95%;
+  right: 36%;
+}
 
 .cd-single-point.titulo-bola{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
