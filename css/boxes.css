@@ -369,6 +369,15 @@ h3.texto-central b{
 		font-size: 1.4em;
 	}
 
+	.video .row .video-player {
+		margin-bottom: 5px;
+		margin-top: 15px;
+	}
+
+	.video .row .downloads {
+		margin-bottom: 10px;
+	}
+
 }
 
 /* Boxes Novo Estilo */
@@ -658,6 +667,10 @@ h3.texto-central b{
 	text-align: right;
 	padding-top: 5px;
 	margin: 0;
+}
+
+.row .downloads{
+	text-align: center;
 }
 
 @media screen and (max-width: 550px) {
