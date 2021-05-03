@@ -38,19 +38,21 @@ var quant_respostas=0;
                 //se a unidade já foi enviada, verifica a quantidade, para saber se atingiu o máximo            
                 let quant_salva = evento.detail["data"][0]["valor"];            
                 //console.log("tentativas salvas: "+quant_salva);
-                envio==1 ? quant_respostas=quant_salva+1 : quant_respostas=quant_salva;
+                //envio==1 ? quant_respostas=quant_salva+1 : quant_respostas=quant_salva;
                 if(envio==0){                                
-                    let vez = quant_salva==1 ? "vez" : "vezes";
-                    //texto_mensagem_tentativa=texto_mensagem_tentativa;
+                    let vez = quant_salva==1 ? "vez" : "vezes";                    
                     texto_mensagem_tentativa="<br>Você já respondeu "+quant_salva+" "+vez+".";
                     mensagem_tentativas.innerHTML=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_fim;
                     console.log("\nJá verificou envio, quant-salva="+quant_salva);
+                    quant_respostas = quant_salva;
                 }else{
                     if(quant_salva<max_quant_tentativas){
                         quant_respostas=parseInt(quant_salva)+1;                
                     }else{                        
                         quant_respostas=parseInt(3);         
-                    }                
+                    } 
+                    let vez = quant_respostas==1 ? "vez" : "vezes";                    
+                    texto_mensagem_tentativa="<br>Você já respondeu "+quant_respostas+" "+vez+".";                                                    
                 }          
                 API.registrarDadosGenericos("quant_"+id_atividade,quant_respostas);        
                 API.obterRespostaAtividade(id_atividade);
@@ -72,7 +74,7 @@ var quant_respostas=0;
                 }
             }
             revisao_teste=1;
-            API.obterDadosGenericos("uni1_revisao");
+            API.obterDadosGenericos(revisao_unidade);
             console.log("verificando revisão. revisao_teste="+revisao_teste);
         }else{
             //aqui está verificando se a página de revisão foi acessada
@@ -80,13 +82,13 @@ var quant_respostas=0;
                 console.log(evento.detail["data"]);            
                 revisao_vista=1;
             }            
-        }
-    } 
-    console.log(texto_mensagem_tentativa);
-    mensagem_tentativas.innerHTML=texto_mensagem_tentativa;
+        }     
+        //console.log(texto_mensagem_tentativa);
+        //mensagem_tentativas.innerHTML=texto_mensagem_tentativa;
+    }
 
     function verifica_revisao(){
        if(revisao_vista==1){
-           document.querySelector("#botao-atividade-uni1").style.display="none";
+           document.querySelector(".botao-atividade button").style.display="none";
        } 
     }

@@ -143,7 +143,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>	
 				
 		<!-- Funções de acesso à biblioteca do Avamec-->
-		<script src="../../js/funcoes-porcentagem-8.js"></script>
+		<script src="../../js/funcoes-porcentagem-10.js"></script>
 		<script>
 			console.clear(screen);
 
@@ -180,7 +180,7 @@
 			});
 
 			botao_encerramento.addEventListener("mouseover",function(){
-				if(botao.classList.contains('bt-desativado')){
+				if(botao_encerramento.classList.contains('bt-desativado')){
 					let mensagem = document.querySelector("#botao-encerramento .mensagem-flutuante.incompleta").style.display="block";
 				}else{
 					let mensagem = document.querySelector("#botao-encerramento .mensagem-flutuante.completa").style.display="block";
@@ -188,7 +188,7 @@
 			});
 
 			botao_encerramento.addEventListener('mouseout',function(){
-				if(botao.classList.contains('bt-desativado')){
+				if(botao_encerramento.classList.contains('bt-desativado')){
 					let mensagem = document.querySelector("#botao-encerramento .mensagem-flutuante.incompleta").style.display="none";
 				}else{
 					let mensagem = document.querySelector("#botao-encerramento .mensagem-flutuante.completa").style.display="none";
