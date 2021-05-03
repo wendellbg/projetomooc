@@ -689,7 +689,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
-<script src="../../js/funcoes_atividades-4.js"></script>
+<script src="../../js/funcoes_atividades-8.js"></script>
 
 <script>
     console.clear(screen);
@@ -880,7 +880,7 @@
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a nota máxima!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
             }else if(nota_atividade>=6){
                 console.log("\nAtingiu a média aqui");
-                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a !<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a média!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                
             }
             else{
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você deve atingir a média ou fazer as três tentativas para poder ver o gabarito."+texto_mensagem_fim;
@@ -888,7 +888,7 @@
             mensagem_tentativas.innerHTML=texto_mensagem_total;            
             window.scrollTo(0, 0);
         }
-        if(erros==0){
+        if(erros==0 && envio==1){
             //se ainda não tiver enviado as respostas, ou se for dentro do máximio de tentativas,
             // registra as re respostas com as funções da API: 
             console.log("Registrando respostas:");
