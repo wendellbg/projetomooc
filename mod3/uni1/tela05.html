@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../../css/mooc3.css?ver=1.1"/>
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2" />
     <link rel="stylesheet" href="../../css/podcast.css?ver=1.1"/>
+    <link rel="stylesheet" href="../../css/ponto-interesse.css?ver=1.6"/>
+
 
 
     <!-- Botão de Voltar ao Topo -->
@@ -69,13 +71,13 @@
                             </a>
                             <div class="menu">
                                 <a href="../sumario.html" class='titulo-menu'>UNIDADE 1</a>
-                                <a href="tela01.html" class='link-menu-atual'>1.01 - Apresentação</a>
+                                <a href="tela01.html">1.01 - Apresentação</a>
                                 <a href="tela02.html">1.02 - Escolha da Carreira</a>
                                 <a href="tela03.html">1.03 - Escolha da Carreira</a>
                                 <a href="tela04.html">1.04 - Educação para a carreira</a>
-                                <a href="tela05.html">1.05 - Como educar para a carreira?</a>
+                                <a href="tela05.html" class='link-menu-atual'>1.05 - Como educar para a carreira?</a>
                                 <a href="tela06.html">1.06 - Experiência de orientação para a carreira em uma Escola Técnica</a>
-                                <a href="tela06.html">1.07 - Desafios para as escolas brasileiras</a>
+                                <a href="tela07.html">1.07 - Desafios para as escolas brasileiras</a>
                             </div>                             
                         </div>
                     </div>
@@ -85,29 +87,66 @@
             <!-- Conteúdo -->
             <div class="content">
                 <p>Agora você já sabe o que define e quais foram as origens da Educação para a Carreira, deve estar se perguntando: como educar para carreira?</p>
-            </div>
-
-            <div class="content">
                 <p>Este processo pode acontecer de muitas maneiras, dependendo da criatividade e da iniciativa da equipe de trabalho, bem como dos meios disponíveis.</p>
-            </div>
-
-            <div class="content">
                 <p>O mais importante é que os objetivos estejam claros. Para isso, é preciso desenvolver as estratégias de implementação de Programas de Educação à Carreira, voltados ao contexto da escola.</p>
-            </div>
-
-            <div class="content">
                 <p>Num primeiro momento, a ideia de criar um Programa pode assustar. Mas nada mais é que  elaborar estratégias adequadas e um curriculum focalizado em conceitos do desenvolvimento de carreira.</p>
             </div>
 
             <div class="content">
-                <p>Existem três grandes tipos de estratégias:</p>               
-            </div> 
+                <p>Existem três grandes tipos de estratégias:</p>
+                <span class="separador">
+                    <p class="texto-separador">Clique nos botões sobre a imagem para descobrir:</p>
+                </span>
 
-            <!-- Imagem Única-->
-            <div class="image fit flush largura-65">
-                <img id="troca_imagem" onclick="trocar()" src=" ../../img/uni1/MOOC3_Uni1_tela5_imagem1.jpg" alt="Imagem 3">
-                <p style="margin-top: 4% !important;" class="legenda-img">Clique na imagem para interagir com ela</p>                
-            </div>            
+
+
+
+                <!-- Ponto Interesse -->
+                <div class="ponto-interesse border cd-product cd-container">
+                    <div class="cd-product-wrapper">
+                        <img width="100%" src="../../img/uni1/MOOC3_Uni1_tela5_infografico.jpg" alt="Infografico">
+                        <ul>
+                            <li class="cd-single-point mooc3-ponto1-uni1-tela5">
+                                <a class="cd-img-replace" href="#0">More</a>
+                                <div class="cd-more-info cd-top">
+                                    <h2>Infusivas:</h2>
+                                    <p>
+                                        disseminação transversal (em diferentes disciplinas e em todos os níveis escolares) de questões sobre os valores, conhecimentos e atitudes relevantes ao desenvolvimento vocacional e da carreira.
+                                    </p>
+                                    <a href="#0" class="cd-close-info cd-img-replace">Close</a>
+                                </div>
+                            </li> <!-- .cd-single-point -->
+
+                            <li class="cd-single-point mooc3-ponto2-uni1-tela5">
+                                <a class="cd-img-replace" href="#0">More</a>
+                                <div class="cd-more-info cd-top">
+                                    <h2>Aditivas:</h2>
+                                    <p>
+                                        implementação da educação para a carreira, integrada no horário escolar, tal como se de uma disciplina se tratasse, a ser ministrada por um orientador profissional, um educador para a carreira.
+                                    </p>
+                                    <a href="#0" class="cd-close-info cd-img-replace">Close</a>
+                                </div>
+                            </li> <!-- .cd-single-point -->
+
+                            <li class="cd-single-point mooc3-ponto3-uni1-tela5">
+                                <a class="cd-img-replace" href="#0">More</a>
+                                <div class="cd-more-info cd-top">
+                                    <h2>Mistas:</h2>
+                                    <p>
+                                        integração da educação para a carreira nas disciplinas de ciências sociais e humanas.
+                                    </p>
+                                    <a href="#0" class="cd-close-info cd-img-replace">Close</a>
+                                </div>
+                            </li> <!-- .cd-single-point -->
+
+                        </ul>
+                    </div> <!-- .cd-product-wrapper -->
+                </div> <!-- .cd-product -->
+                <!--				<script src="../../js/jquery-2.1.1.js"></script>-->
+                <script src="../../js/main.js"></script> <!-- Resource jQuery -->
+
+                <p class="legenda">Figura 03 - Fonte: Imagem produzida pela equipe gráfica do projeto</p>
+            </div>
 
             <!--Caixa Para Refletir-->
             <section class="box-info text-white">
@@ -126,14 +165,14 @@
                 <div class="icone-audio">
                     <a class='icone-play' id="botao-play-podcast" onclick="playShowPod()"><img src="../../img/uni3/icone-audio.png"/></a>
                     <a class="icone-pause" id="botao-pause-podcast" onclick="pauseShowPod()" style="display:none;"><img src="../../img/uni3/icone-audio2.gif" /></a>
-                    <audio id='playerPodcast' class='controles-podcast' controls='controls'>                   
+                    <audio id='playerPodcast' class='controles-podcast' controls='controls'>
                          <source src="../../img/uni3/audio_2.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
                     </audio>
                     <div class="downloads">
                         <a target="_blank" href="../../downloads/Un3-podcast.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
                     </div>
                 </div>
-            </div>           
+            </div>
                 
 
             <!-- Conteúdo Footer -->
@@ -166,17 +205,17 @@
                         <p></p>
                         <img src="../../img/padrao/logo_mentoria.png" alt="IFSC">
                     </div>
-                    <div class="2u 12u$(small)">
+                    <div class="3u 12u$(small)">
                         <p>Realização:</p>
                         <img src="../../img/padrao/logo_mec.png" alt="IFSC">
+                        <p class="small"><b>Secretaria de Educação Profissional e Tecnológica</b></p>
                     </div>
-                    <div class="4u 12u$(small)">
+                    <div class="3u 12u$(small)">
                         <p>Produção:</p>
                         <img src="../../img/padrao/ifsc.png" alt="IFSC">
                         <img src="../../img/padrao/ifes.png" alt="IFES">
                     </div>
-                </div>
-                <!--Rodapé-->
+                </div><!--Rodapé-->
 
             </div>
 
@@ -265,22 +304,25 @@
     };
 
 </script>
-<script type="text/javascript">
-   var ImagemAtual = 0; 
-   var VetorImgens = [
-   " ../../img/uni1/MOOC3_Uni1_tela5_imagem1a.jpg",
-   " ../../img/uni1/MOOC3_Uni1_tela5_imagem1b.jpg",
-   " ../../img/uni1/MOOC3_Uni1_tela5_imagem1c.jpg" //não tem vírgula
-];
+<script>
+    var audioPod = document.getElementById('playerPodcast');
+    var playPod = document.getElementById('botao-play-podcast');
+    var pausePod = document.getElementById('botao-pause-podcast');
 
-function trocar(){
-   if(ImagemAtual == VetorImgens.length) //reseta quando o contatador for igual ao tamanho da array e volta a 1° img
-  {
-    ImagemAtual=0;
-  }
-  document.getElementById("troca_imagem").src=VetorImgens[ImagemAtual]; //altera a img do elemento "troca_imagem" de acordo com o indice
-    ImagemAtual++; // incrementa a nossa referencia
-}
+    var playShowPod = function() {
+        audioPod.play();
+        playPod.style.display = "none";
+        pausePod.style.display = "block";
+    };
+
+    // Pause audio & mostra link de play
+    var pauseShowPod = function() {
+        audioPod.pause();
+        playPod.style.display = "block";
+        pausePod.style.display = "none";
+    };
+
 </script>
+
 </body>
 </html>
