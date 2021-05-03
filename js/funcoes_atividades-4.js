@@ -72,7 +72,7 @@ var quant_respostas=0;
                 }
             }
             revisao_teste=1;
-            API.obterDadosGenericos("uni1_revisao");
+            API.obterDadosGenericos(revisao_unidade);
             console.log("verificando revisão. revisao_teste="+revisao_teste);
         }else{
             //aqui está verificando se a página de revisão foi acessada
@@ -85,8 +85,4 @@ var quant_respostas=0;
     console.log(texto_mensagem_tentativa);
     mensagem_tentativas.innerHTML=texto_mensagem_tentativa;
 
-    function verifica_revisao(){
-       if(revisao_vista==1){
-           document.querySelector("#botao-atividade-uni1").style.display="none";
-       } 
-    }
+    
