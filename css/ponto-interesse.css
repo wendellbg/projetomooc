@@ -686,6 +686,74 @@ Main components
   right: 36%;
 }
 
+.cd-single-point.ponto1-mooc3-uni3-tela3{
+  top: 25%;
+  right: 46%;
+}
+
+.cd-single-point.ponto2-mooc3-uni3-tela3{
+  top: 95%;
+  right: 56%;
+}
+
+.cd-single-point.ponto3-mooc3-uni3-tela3{
+  top: 95%;
+  right: 36%;
+}
+
+  /* Mooc3 Uni1 tela 4*/
+.cd-single-point.mooc3-ponto1-uni1-tela4{
+  top: 42%;
+  left: 20%;
+}
+
+.cd-single-point.mooc3-ponto2-uni1-tela4{
+  top: 42%;
+  left: 38%;
+}
+
+.cd-single-point.mooc3-ponto3-uni1-tela4{
+  top: 42%;
+  right: 40%;
+}
+
+.cd-single-point.mooc3-ponto4-uni1-tela4{
+  top: 42%;
+  right: 23%;
+}
+
+/* Mooc3 Uni1 tela 5*/
+.cd-single-point.mooc3-ponto1-uni1-tela5{
+  top: 45%;
+  left: 30%;
+}
+
+.cd-single-point.mooc3-ponto2-uni1-tela5{
+  top: 45%;
+  left: 47%;
+}
+
+.cd-single-point.mooc3-ponto3-uni1-tela5{
+  top: 45%;
+  right: 32%;
+}
+
+/* Mooc3 Uni1 tela 7*/
+.cd-single-point.mooc3-ponto1-uni1-tela7{
+  top: 20%;
+  left: 10%;
+}
+
+.cd-single-point.mooc3-ponto2-uni1-tela7{
+  top: 45%;
+  left: 10%;
+}
+
+.cd-single-point.mooc3-ponto3-uni1-tela7{
+  top: 70%;
+  left: 10%;
+}
+
 
 
 .cd-single-point.titulo-bola{
