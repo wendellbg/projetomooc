@@ -334,7 +334,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
-<script src="../../js/funcoes_atividades-8.js"></script>
+<script src="../../js/funcoes-atividades.js"></script>
 
 <script>
     console.clear(screen);
@@ -344,7 +344,8 @@
     var id_slide = "mod1/uni1/atividade01.html";//modificar
     var id_atividade = "uni1_ativ1";//modificar
     var revisao_unidade = "uni1_revisao";//modificar
-    
+    var texto_mensagem_fim="<br>Você pode prosseguir para a próxima atividade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PRÓXIMA UNIDADE &#10095;</a><br>";
+
     function verifica_revisao(){
         if(revisao_vista==1){
             document.querySelector("#botao-atividade-uni1").style.display="none";

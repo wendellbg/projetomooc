@@ -11,7 +11,6 @@ var texto_mensagem_padrao_0="Responda às atividades e, ao final, clique em \"En
 var texto_mensagem_padrao="Lembre-se, você tem até 3 tentativas de envio e ficará registrada a nota mais alta.";
 var texto_mensagem_tentativa="";
 var texto_mensagem_nota="";
-var texto_mensagem_fim="<br>Você pode prosseguir para a próxima atividade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PRÓXIMA UNIDADE &#10095;</a><br>";
 var texto_mensagem_revisao_0="<br>Após acessar o GABARITO, você NÃO poderá enviar novas respostas.<br><br><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
 var texto_mensagem_revisao_1="<br>Você já verificou o gabarito, então não pode mais responder esta atividade.<br><br><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
 
