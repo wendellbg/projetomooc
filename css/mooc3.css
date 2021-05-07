@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .caixa-texto-topo {
-	background-image: url(../img/padrao/tela01_box1_red.png);
+	background-image: url(../img/padrao/tela01_box1_orange.png);
 }
 
 .caixa-texto-topo p{
@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .caixa-texto-rodape {
-	background-image: url(../img/padrao/tela01_box2_red.png);
+	background-image: url(../img/padrao/tela01_box2_orange.png);
 }
 .caixa-texto-rodape p {
 	color: #fff;
@@ -220,7 +220,7 @@ h3.texto-central b{
 }
 
 .video .downloads .bt-download-media {
-	background: #931B2C;
+	background: #A84813;
 	color: rgba(255, 255, 255, 0.6);
 }
 
@@ -303,4 +303,8 @@ h3.texto-central b{
 
 .mooc3 .bt-link-externo:hover{
 	background-color: #020E36;
+}
+
+.mooc3 .border-dark-blue .subtitulo{
+	background-color: #FF841D;
 }
