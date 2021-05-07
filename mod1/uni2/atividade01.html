@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
     <link rel="stylesheet" href="../../css/efeito.css?ver=1.2"/>
-    <link rel="stylesheet" href="../../css/atividades.css?ver=1.1" />
+    <link rel="stylesheet" href="../../css/atividades-2.css?ver=1.1" />
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
@@ -84,6 +84,8 @@
             <div class="content">
                 <div class="atividade" id='atividade-uni2'>
 					<div id='mensagem-alerta'>
+					</div>
+                    <div id='mensagem-tentativas' class="atividades">                        
 					</div>
                     <form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni2" method="POST">
                             <div class="questao">
@@ -687,7 +689,8 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
-<script src="../../js/funcoes_atividades.js"></script>
+<script src="../../js/funcoes_atividades-4.js"></script>
+
 <script>
     console.clear(screen);
 
@@ -695,10 +698,14 @@
     var id_unidade = "mod1_uni2";//modificar
     var id_slide = "uni2/atividade01.html";//modificar
     var id_atividade = "uni2_ativ1";//modificar
-    var nota_atividade = 0;    
-    var nota_atividade_nova=0;
-	var erros = 0;
+    var revisao_unidade = "uni2_revisao";//modificar
 
+    function verifica_revisao(){
+        if(revisao_vista==1){
+            document.querySelector("#botao-atividade-uni2").style.display="none";
+        } 
+    }
+    
     var vetor_r2_2=[];
     var resposta_r2_3="", resposta_r2_4;
     var campos_ch = [document.querySelector("#r2_3_1_texto"), document.querySelector("#r2_3_2_texto"), document.querySelector("#r2_3_3_texto"), document.querySelector("#r2_3_4_texto")];
@@ -706,17 +713,24 @@
     var total = parseInt(document.querySelector("#total-horas").textContent);
     var horas_restantes = 800;
 
+    //Etapa 1: carregamento da página
+    window.addEventListener('load', function(){
+        console.log("carregando a página");
+        API.obterDadosGenericos("quant_"+id_atividade);        
+	});
+    
     /*************** Verificando se todas as respostas foram enviadas. *****/
-    var botao = document.getElementById("botao-atividade-uni2");//modificar
-	var mensagem = document.getElementById("mensagem-alerta");    
+    var botao = document.getElementById("botao-atividade-uni2");//modificar	   
 
+    //Etapa 3: Enviando formulário
 	function salvarDados(){
-		//console.log("Função aqui");
-		//verificando_quais_dados = 2;
-		erros = 0;
+		nota_atividade_nova=0;
+        nota_atividade=0;
+        quant_respostas=0; 
+        revisao_teste=0;       
+        erros=0;
         
         //aqui vai pegar os valores de cada exercício.
-
         //esses são os de drag and drop
 		r2_1_1 = document.querySelector("#r2_1_1 span.palavra-resposta"),        
         r2_1_2 = document.querySelector("#r2_1_2 span.palavra-resposta"),
@@ -824,7 +838,8 @@
 			return false;
 		}else{
 			//console.log("\nChecando respostas: "+id_atividade);
-			//verificando qual tentativa é esta.            
+			//verificando qual tentativa é esta.
+            envio=1;          
             verificando_tentativas("quant_"+id_atividade);     
 			if(erros>0){
 				return false;
@@ -836,94 +851,110 @@
 	//Depois que verifica as tentativas de resposta, verifica as respostas salvas;
 	window .addEventListener( "evObtemDadosRespostaAtividade" , resultadoObtemRespostaAtividade, false );
     function resultadoObtemRespostaAtividade(evento){
-
-        console.log("\nObtendo as respostas: ");
+        //console.log("\nObtendo as respostas: ");
         console.log("Status do evento: "+evento.detail['status']);
         //verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
         if(evento.detail["status"]=="200"){
             nota_atividade = evento.detail.data.nota;
             //console.log("Voltando para a função principal. Quant respostas: "+quant_respostas+" e max: "+max_quant_tentativas);            
-            if(quant_respostas>max_quant_tentativas){
-                //"Já atingiu o máximo de tentativas
-                mensagem.className = "mensagem-ok";
-                mensagem.style.display = "block";
-                mensagem.innerHTML="Você já enviou estas respostas 3 vezes!<br />Sua maior nota é: "+nota_atividade+"<br /><p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";                
-                window.scrollTo(0, 0);
+            texto_mensagem_nota="<br>Sua nota mais alta é "+nota_atividade;            
+            var texto_mensagem_total="";
+            texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+texto_mensagem_revisao_0;         
+            verifica_revisao();
+            if(revisao_vista==1){
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+texto_mensagem_revisao_1;         
+            }else if(quant_respostas>=max_quant_tentativas){
+                console.log("\n\nMax de mensagens aqui");
+                //Já atingiu o máximo de tentativas
+                if(envio==1){
+                    console.log("\n\nEnvio=1");
+                    mensagem.className = "mensagem-alerta";
+    			    mensagem.innerHTML = "Você já fez suas "+max_quant_tentativas+" tentativas.";
+	    		    mensagem.style.display = "inline-block";                                     
+                }
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PROSSEGUIR &#10095;</a><p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                                
+                
                 erros++;
+            }else if(nota_atividade==10){
+                console.log("\nNota 10 aqui");
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a nota máxima!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
+            }else if(nota_atividade>=6){
+                console.log("\nAtingiu a média aqui");
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a !<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                
             }
-            if(erros==0){
-                //se ainda não tiver enviado as respostas, registra as re respostas com as funções da API:
-                console.log("Registrando respostas:");
-                console.log(evento.detail);
-                
-                API.registrarRespostaAtividade({
-                    "identificador": "uni2_ativ1",//modificar
-                    "questoes": [
-                        {
-                            //Onde houver os exercícios de drag and drop precisa pegar o innerHTML
-                            "identificador": "r2_1",                    
-                            "gabaritos": [
-                                { "chave": "r2_1_1", "valor": r2_1_1.innerHTML},
-                                { "chave": "r2_1_2", "valor": r2_1_2.innerHTML},
-                                { "chave": "r2_1_3", "valor": r2_1_3.innerHTML}							
-                            ]
-                        },{                    
-                            "identificador": "r2_2",                    
-                            "gabaritos": [
-                                { "chave": "r2_2_1", "valor": vetor_r2_2[1]},
-                                { "chave": "r2_2_2", "valor": vetor_r2_2[2]},
-                                { "chave": "r2_2_3", "valor": vetor_r2_2[3]},
-                                { "chave": "r2_2_4", "valor": vetor_r2_2[4]},
-                                { "chave": "r2_2_5", "valor": vetor_r2_2[5]},
-                                { "chave": "r2_2_6", "valor": vetor_r2_2[6]},
-                                { "chave": "r2_2_7", "valor": vetor_r2_2[7]},
-                                { "chave": "r2_2_8", "valor": vetor_r2_2[8]},
-                                { "chave": "r2_2_9", "valor": vetor_r2_2[9]},
-                                { "chave": "r2_2_10", "valor": vetor_r2_2[10]},
-                                { "chave": "r2_2_11", "valor": vetor_r2_2[11]},
-                                { "chave": "r2_2_12", "valor": vetor_r2_2[12]},
-                                { "chave": "r2_2_13", "valor": vetor_r2_2[13]},
-                                { "chave": "r2_2_14", "valor": vetor_r2_2[14]},
-                                { "chave": "r2_2_15", "valor": vetor_r2_2[15]},
-                                { "chave": "r2_2_16", "valor": vetor_r2_2[16]},
-                                { "chave": "r2_2_17", "valor": vetor_r2_2[17]},
-                                { "chave": "r2_2_18", "valor": vetor_r2_2[18]},
-                                { "chave": "r2_2_19", "valor": vetor_r2_2[19]},
-                                { "chave": "r2_2_20", "valor": vetor_r2_2[20]}							
-                            ]
-                        }
-                    ]
-                });
-                
-                
-                API.registrarRespostaAtividade({
-                    "identificador": "uni2_ativ3",
-                    "questoes": [
-                        {                        
-                            "identificador": "r2_3",                    
-                            "texto": resposta_r2_3
-                        }
-                    ]
-                });
-                
-                API.registrarRespostaAtividade({
-                    "identificador": "uni2_ativ4",
-                    "questoes": [
-                        {                        
-                            "identificador": "r2_4",                    
-                            "texto": resposta_r2_4
-                        }
-                    ]
-                });
-
-                //Testes para exibir as respostas enviadas:            
-                // console.log("Resposta 2_1: "+r2_1_1.innerHTML);
-                // console.log("Resposta 2_1: "+r2_1_2.innerHTML);
-                // console.log("Resposta 2_1: "+r2_1_3.innerHTML);
-                // console.log("Resposta Texto da 2_3: "+resposta_r2_3);
-                // console.log("Resposta Texto da 2_4: "+resposta_r2_4);
-            }
-        }	
+            else{
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você deve atingir a média ou fazer as três tentativas para poder ver o gabarito."+texto_mensagem_fim;
+            }            
+            mensagem_tentativas.innerHTML=texto_mensagem_total;            
+            window.scrollTo(0, 0);
+        }
+        if(erros==0){
+            //se ainda não tiver enviado as respostas, ou se for dentro do máximio de tentativas,
+            // registra as re respostas com as funções da API: 
+            console.log("Registrando respostas:");
+            console.log(evento.detail);
+            
+            API.registrarRespostaAtividade({
+                "identificador": "uni2_ativ1",//modificar
+                "questoes": [
+                    {
+                        //Onde houver os exercícios de drag and drop precisa pegar o innerHTML
+                        "identificador": "r2_1",                    
+                        "gabaritos": [
+                            { "chave": "r2_1_1", "valor": r2_1_1.innerHTML},
+                            { "chave": "r2_1_2", "valor": r2_1_2.innerHTML},
+                            { "chave": "r2_1_3", "valor": r2_1_3.innerHTML}							
+                        ]
+                    },{                    
+                        "identificador": "r2_2",                    
+                        "gabaritos": [
+                            { "chave": "r2_2_1", "valor": vetor_r2_2[1]},
+                            { "chave": "r2_2_2", "valor": vetor_r2_2[2]},
+                            { "chave": "r2_2_3", "valor": vetor_r2_2[3]},
+                            { "chave": "r2_2_4", "valor": vetor_r2_2[4]},
+                            { "chave": "r2_2_5", "valor": vetor_r2_2[5]},
+                            { "chave": "r2_2_6", "valor": vetor_r2_2[6]},
+                            { "chave": "r2_2_7", "valor": vetor_r2_2[7]},
+                            { "chave": "r2_2_8", "valor": vetor_r2_2[8]},
+                            { "chave": "r2_2_9", "valor": vetor_r2_2[9]},
+                            { "chave": "r2_2_10", "valor": vetor_r2_2[10]},
+                            { "chave": "r2_2_11", "valor": vetor_r2_2[11]},
+                            { "chave": "r2_2_12", "valor": vetor_r2_2[12]},
+                            { "chave": "r2_2_13", "valor": vetor_r2_2[13]},
+                            { "chave": "r2_2_14", "valor": vetor_r2_2[14]},
+                            { "chave": "r2_2_15", "valor": vetor_r2_2[15]},
+                            { "chave": "r2_2_16", "valor": vetor_r2_2[16]},
+                            { "chave": "r2_2_17", "valor": vetor_r2_2[17]},
+                            { "chave": "r2_2_18", "valor": vetor_r2_2[18]},
+                            { "chave": "r2_2_19", "valor": vetor_r2_2[19]},
+                            { "chave": "r2_2_20", "valor": vetor_r2_2[20]}							
+                        ]
+                    }
+                ]
+            });
+            
+            
+            API.registrarRespostaAtividade({
+                "identificador": "uni2_ativ3",
+                "questoes": [
+                    {                        
+                        "identificador": "r2_3",                    
+                        "texto": resposta_r2_3
+                    }
+                ]
+            });
+            
+            API.registrarRespostaAtividade({
+                "identificador": "uni2_ativ4",
+                "questoes": [
+                    {                        
+                        "identificador": "r2_4",                    
+                        "texto": resposta_r2_4
+                    }
+                ]
+            });
+            
+        }        	
 	};
 
     //função de controle, pra exibir no console o resultado do envio das respostas (registraRespostaAtividade)
@@ -935,7 +966,6 @@
             //se não houver erro, exibe mensagem de OK
             mensagem.className = "mensagem-ok";
 			mensagem.style.display ="block";
-            
             if(evento.detail.data.identificador=="uni2_ativ1"){
                 nota_atividade_nova = evento.detail.data.notaAtividade;  
                 //console.log("A nota nas 2 primeiras atividades foi: "+nota_atividade);
@@ -947,14 +977,31 @@
                 }
             }
 			//esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
-            mensagem.innerHTML="Dados Enviados com sucesso!<br />Esta é sua "+(quant_respostas+1)+"ª tentativa de "+max_quant_tentativas+" possíveis.<br />Sua nota foi: "+nota_atividade_nova+"<br />Sua nota mais alta nesta atividade é: "+nota_atividade+"<p></p><a class='link-proxima-unidade' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
-            console.log("Ocorreu tudo certo. Tem que aparecer o link");
+            mensagem.innerHTML="Dados Enviados com sucesso!<br />";
+            texto_mensagem_nota="<br />Sua nota foi: "+nota_atividade_nova+"<br />Sua nota mais alta nesta atividade é: "+nota_atividade;
+            let texto_mensagem_total="";
+            verifica_revisao();
+            if(revisao_vista==1){
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_revisao_1;
+            }else if(quant_respostas>=max_quant_tentativas){
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
+            }else if(nota_atividade==10){
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a nota máxima!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
+            }else if(nota_atividade>=6){
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_revisao_0+texto_mensagem_fim;
+            }
+            else{
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você deve atingir a média ou fazer as três tentativas para poder ver o gabarito."+texto_mensagem_fim;
+            }
+
+            mensagem_tentativas.innerHTML=texto_mensagem_total;            
+            //"Ocorreu tudo certo. Tem que aparecer o link
 			window.scrollTo(0, 0);
         }else{
             //caso algum não esteja preenchido, exibe mensagem de erro
 			mensagem.className = "mensagem-alerta";
 			mensagem.textContent = "Ocorreu algum erro! Tente Novamente...";
-			mensagem.style.display = "block";
+			mensagem.style.display = "inline-block";
 			window.scrollTo(0, 0);
         }
     }
@@ -1060,6 +1107,8 @@
         texto_legenda.style.opacity=0;
         texto_legenda.style.display="none";
     }
+
+    
 </script>
 
 </body>
