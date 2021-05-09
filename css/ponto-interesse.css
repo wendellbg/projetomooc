@@ -592,17 +592,17 @@ Main components
 }
 
 .cd-single-point.ponto2-uni4-tela11{
-  top: 20%;
-  right: 5%;
-}
-
-.cd-single-point.ponto3-uni4-tela11{
   top: 30%;
   right: 5%;
 }
 
+.cd-single-point.ponto3-uni4-tela11{
+  top: 50%;
+  right: 5%;
+}
+
 .cd-single-point.ponto4-uni4-tela11{
-  top: 40%;
+  top: 70%;
   right: 5%;
 }
 
