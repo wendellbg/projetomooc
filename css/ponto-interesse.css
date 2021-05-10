@@ -256,6 +256,7 @@ Main components
 }
 .cd-single-point .cd-more-info p {
   color: #758eb1;
+  text-align: left;
 }
 @media only screen and (min-width: 600px) {
   .cd-single-point .cd-more-info {
@@ -592,17 +593,17 @@ Main components
 }
 
 .cd-single-point.ponto2-uni4-tela11{
-  top: 20%;
-  right: 5%;
-}
-
-.cd-single-point.ponto3-uni4-tela11{
   top: 30%;
   right: 5%;
 }
 
+.cd-single-point.ponto3-uni4-tela11{
+  top: 50%;
+  right: 5%;
+}
+
 .cd-single-point.ponto4-uni4-tela11{
-  top: 40%;
+  top: 70%;
   right: 5%;
 }
 
