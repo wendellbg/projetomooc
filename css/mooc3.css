@@ -232,8 +232,10 @@ h3.texto-central b{
 }
 
 .mooc3 .video {
-	background-image: url(../img/padrao/mooc3/bg_video_01.jpg);
-	background-color: #FF841D;
+	/*background-image: url(../img/padrao/mooc3/bg_video_01.jpg);*/
+	/*background-color: #FF841D;*/
+	background-image: url(../img/padrao/bg_video_dark.jpg);
+	background-color: #020e36;
 }
 
 .mooc3 .video.fundo-claro{
