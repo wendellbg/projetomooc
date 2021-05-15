@@ -256,6 +256,7 @@ Main components
 }
 .cd-single-point .cd-more-info p {
   color: #758eb1;
+  text-align: left;
 }
 @media only screen and (min-width: 600px) {
   .cd-single-point .cd-more-info {
@@ -592,17 +593,17 @@ Main components
 }
 
 .cd-single-point.ponto2-uni4-tela11{
-  top: 20%;
-  right: 5%;
-}
-
-.cd-single-point.ponto3-uni4-tela11{
   top: 30%;
   right: 5%;
 }
 
+.cd-single-point.ponto3-uni4-tela11{
+  top: 50%;
+  right: 5%;
+}
+
 .cd-single-point.ponto4-uni4-tela11{
-  top: 40%;
+  top: 70%;
   right: 5%;
 }
 
@@ -686,19 +687,71 @@ Main components
   right: 36%;
 }
 
+/* Mooc3 Uni2 tela 2*/
+.cd-single-point.ponto1-mooc3-uni2-tela2{
+  top: 18%;
+  right: 50%;
+}
+
+.cd-single-point.ponto2-mooc3-uni2-tela2{
+  top: 18%;
+  right: 60%;
+}
+
+.cd-single-point.ponto3-mooc3-uni2-tela2{
+  top: 18%;
+  right: 40%;
+}
+
+.cd-single-point.ponto4-mooc3-uni2-tela2{
+  top: 18%;
+  right: 70%;
+}
+
+.cd-single-point.ponto5-mooc3-uni2-tela2{
+  top: 18%;
+  right: 30%;
+}
+
+.cd-single-point.ponto6-mooc3-uni2-tela2{
+  top: 18%;
+  right: 80%;
+}
+
+.cd-single-point.ponto7-mooc3-uni2-tela2{
+  top: 18%;
+  right: 20%;
+}
+
+.cd-single-point.ponto8-mooc3-uni2-tela2{
+  top: 18%;
+  right: 90%;
+}
+
+.cd-single-point.ponto9-mooc3-uni2-tela2{
+  top: 18%;
+  right: 09%;
+}
+
+.cd-single-point.ponto10-mooc3-uni2-tela2{
+  top: 18%;
+  right: 99%;
+}
+
+/* Mooc3 Uni3 tela 3*/
 .cd-single-point.ponto1-mooc3-uni3-tela3{
-  top: 25%;
-  right: 46%;
+  top: 18%;
+  right: 49%;
 }
 
 .cd-single-point.ponto2-mooc3-uni3-tela3{
-  top: 95%;
-  right: 56%;
+  top: 55%;
+  right: 64%;
 }
 
 .cd-single-point.ponto3-mooc3-uni3-tela3{
-  top: 95%;
-  right: 36%;
+  top: 55%;
+  right: 34%;
 }
 
   /* Mooc3 Uni1 tela 4*/
