@@ -102,20 +102,30 @@
             <div class="content">
                 <p>Muito bacana essa atividade não é mesmo?!</p>
                 <p>Gostaram da atividade? Esse é um exercício que nos ajuda a mapear alguns interesses, entender como algumas das nossas atividades cotidianas vão adquirindo maior relevância em termos do quanto nos satisfazem e do quanto estamos motivados a desempenhá-las.</p>
+
             </div>
 
-            <!-- Imagem Única-->
-            <div class="image fit flush largura-70">
-                <img id="troca_imagem" onclick="trocar()" src=" ../../img/uni3/MOOC3_Uni3_Tela02_Imagem01.jpg" alt="Imagem 1">
-                <p style="margin-top: 4% !important;" class="legenda-img">Figura 01: Sem legenda - Fonte: Imagem editada pela equipe gráfica do projeto.</p>                
-            </div> 
-            
+            <div style="background-color: #ddd; padding: 4rem;">
+                <div class="row">
+                    <div class="3u 12u$(small)">
+                        <p>Na coluna da esquerda, estão os nossos interesses, as coisas que nos dão prazer em realizar ou pensar realizar, aquilo que desperta a nossa curiosidade e a nossa motivação.</p>
+                    </div>
+                    <div class="6u 12u$(small)">
+                        <img width="100%" src=" ../../img/uni3/MOOC3_Uni3_Tela02_Imagem01.jpg" alt="Imagem 1">
+                        <p class="legenda">Figura 01 - Fonte: Imagem editada pela equipe gráfica do projeto.</p>
+                    </div>
+                    <div class="3u 12u$(small)">
+                        <p>Na coluna da direita estão atividades com as quais nos defrontamos (ou com as quais tivemos pouco ou nenhum contato) mas que não nos são prazerosas ou motivadoras, e que normalmente desempenhamos por obrigação ou falta de alternativa.</p>
+                    </div>
+                </div>
+
+            </div>
 
             <div class="content">
                 <p>Agora orientamos que você ouça o podcast a seguir, que trata sobre a formação dos interesses profissionais. Além de orientar como se pode auxiliar os jovens a reconhecer interesses e ampliar a formação de interesses, especialmente despertando os alunos para áreas menos conhecidas, como por exemplo as atividades técnicas.</p>
             </div>
 
-            <div class="content no-top">
+            <div class="content">
                 <div class="icone-audio">
                     <a class='icone-play' id="botao-play-podcast" onclick="playShowPod()"><img src="../../img/uni3/icone-audio.png"/></a>
                     <a class="icone-pause" id="botao-pause-podcast" onclick="pauseShowPod()" style="display:none;"><img src="../../img/uni3/icone-audio2.gif" /></a>
@@ -140,7 +150,7 @@
                     </div>
                     <div><button class="bt-avanca" type="button"><a href="tela03.html">PROSSEGUIR ></a></button></div>
                     <div class='botoes-navegacao'>
-						<a href="tela01.html"><button class="bt-navegacao" type="button"><</button>
+                        <a href="tela01.html"><button class="bt-navegacao" type="button"><</button></a>
 
 						<a href="tela01.html"><input type="radio" name="radio"><label for="radio"></label></a>
 						<a href="tela02.html"><input type="radio" checked name="radio"><label for="radio"></label></a>
@@ -258,6 +268,26 @@
     function resultadoRegistrarDadosGenericos (evento){
         console.log("Verificando porcentagem registrada");
         console.log(evento.detail);
+    };
+
+</script>
+
+<script>
+    var audioPod = document.getElementById('playerPodcast');
+    var playPod = document.getElementById('botao-play-podcast');
+    var pausePod = document.getElementById('botao-pause-podcast');
+
+    var playShowPod = function() {
+        audioPod.play();
+        playPod.style.display = "none";
+        pausePod.style.display = "block";
+    };
+
+    // Pause audio & mostra link de play
+    var pauseShowPod = function() {
+        audioPod.pause();
+        playPod.style.display = "block";
+        pausePod.style.display = "none";
     };
 
 </script>

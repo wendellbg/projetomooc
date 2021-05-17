@@ -93,8 +93,8 @@
                     <div class="3u 12u$(small)">&nbsp;</div>
                     <div class="6u 12u$(small)">
                         <div class="icone-audio">
-                            <a class='icone-play' onclick="playShowPod1()"><img src="../../img/uni3/MOOC3_Uni3_Tela05_Imagem01.jpg" alt="Imagem narrada"/></a>
-                            <p class="legenda">Figura 01 - Fonte: Sem legenda</p>
+                            <a class='icone-play' onclick="playShowPod1()"><img src="../../img/uni3/MOOC3_Uni3_Tela05_Imagem01.jpg" alt="Aluna pintando"/></a>
+                            <p class="legenda">Figura 05 - Fonte: Freepick</p>
                             <audio id='playerPodcast1' class='controles-podcast' controls='controls'>
                                 <source src="../../img/uni3/audio_mooc3_uni3_tela05.mp3" type="audio/mp3" />Seu navegador não suporta HTML5 -->
                             </audio>
@@ -119,7 +119,7 @@
                     </div>
                     <div><button class="bt-avanca" type="button"><a href="tela06.html">PROSSEGUIR ></a></button></div>
                     <div class='botoes-navegacao'>
-						<a href="tela04.html"><button class="bt-navegacao" type="button"><</button>
+                        <a href="tela04.html"><button class="bt-navegacao" type="button"><</button></a>
 
 						<a href="tela01.html"><input type="radio" name="radio"><label for="radio"></label></a>
 						<a href="tela02.html"><input type="radio" name="radio"><label for="radio"></label></a>
@@ -237,6 +237,23 @@
     function resultadoRegistrarDadosGenericos (evento){
         console.log("Verificando porcentagem registrada");
         console.log(evento.detail);
+    };
+
+</script>
+
+<script>
+    //Funções para o controle do áudio/Podcast
+
+    var audioPod1 = document.getElementById('playerPodcast1');
+
+    var playShowPod1 = function() {
+        if (audioPod1.paused == true){
+            audioPod1.play();
+            audioPod2.pause();
+            audioPod3.pause();
+        }else{
+            audioPod1.pause();
+        }
     };
 
 </script>
