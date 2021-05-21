@@ -1,7 +1,7 @@
 @import url(font-awesome.min.css);
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css");
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
-@import url(padrao.css?ver=1.4);
+@import url(padrao.css?ver=1.5);
 @import url(fontes.css?ver=1.2);
 @import url(menu-top-down.css?ver=1.2);
 @import url(bt-sumario.css);
@@ -64,21 +64,21 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 585px) {
 	.caixa-texto-topo,
 	.caixa-texto-rodape{
-		background-color: #2A5CAA;
+		background-color: #FF841D;
 	}
 
 	.caixa-texto-topo:before, .caixa-texto-rodape:before{
-		background-color: #2A5CAA;
-		border: 3px solid #2A5CAA;
+		background-color: #FF841D;
+		border: 3px solid #FF841D;
 	}
 
 	.caixa-texto-rodape{
-		background-color: #2A5CAA;
+		background-color: #FF841D;
 	}
 
 	.caixa-texto-centro{
-		background-image: url(../img/padrao/mooc3/bg_slide_01.jpg);
-		background-color: #FF841D;
+		/*background-image: url(../img/padrao/mooc3/bg_slide_01.jpg);*/
+		background-color: #020E36;
 	}
 }
 
@@ -226,22 +226,21 @@ h3.texto-central b{
 
 /* Mudanças expecificas */
 .mooc3 .slideshow-container{
-	background-image: url(../img/padrao/mooc3/bg_slide_01.jpg);
-	background-color: #FF841D;
+	background-image: url(../img/padrao/mooc3/bg_slide_dark.png);
 	background-position: center;
 }
 
 .mooc3 .video {
 	/*background-image: url(../img/padrao/mooc3/bg_video_01.jpg);*/
 	/*background-color: #FF841D;*/
-	background-image: url(../img/padrao/bg_video_dark.jpg);
-	background-color: #020e36;
+	background-image: url(../img/padrao/mooc3/bg_video_dark.png);
+	background-position: center;
+	background-size: cover;
 }
 
 .mooc3 .video.fundo-claro{
 	background-image: url(../img/padrao/mooc3/bg_video_02.png);
 	background-size: contain;
-	background-color: transparent;
 }
 
 .mooc3 .hamburguer label{
@@ -308,5 +307,12 @@ h3.texto-central b{
 }
 
 .mooc3 .border-dark-blue .subtitulo{
+	background-color: #FF841D;
+}
+
+
+.mooc3 .audio-gif .icone-play:hover,
+.mooc3 .audio-gif .icone-play img:hover,
+.mooc3 .audio-gif .icone-pause img:hover{
 	background-color: #FF841D;
 }
