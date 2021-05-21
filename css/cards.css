@@ -121,6 +121,10 @@
 	padding-top: 100px;
 }
 
+.back .card .card-top.big-text{
+	padding-top: 50px;
+}
+
 .back .card .card-bottom{
 	background-image: none;
 }
