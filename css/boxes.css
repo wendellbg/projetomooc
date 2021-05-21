@@ -351,6 +351,11 @@ h3.texto-central b{
 	margin-bottom: 5px;
 }
 
+.video .row {
+	margin-top: 35px;
+	margin-bottom: 35px;
+}
+
 .video .row .titulo-video span {
 	font-size: 1.0em;
 	line-height: 1.2em;
@@ -682,7 +687,7 @@ h3.texto-central b{
 .bt-download-media,
 .bt-link-externo{
 	border: none;
-	padding: 5px 20px;
+	padding: 5px 18px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
@@ -696,7 +701,7 @@ h3.texto-central b{
 
 .downloads .aviso{
 	border: none;
-	padding: 5px 20px;
+	padding: 5px 18px;
 	text-align: right;
 	text-decoration: none;
 	display: inline-block;
@@ -754,5 +759,37 @@ h3.texto-central b{
 	.container-mini-box{
 		display: unset;
 		margin-bottom: 5px;
+	}
+}
+
+
+/* Tabela Matriz */
+.table-matriz table{
+	margin-bottom: 10px;
+}
+
+.table-matriz table tr{
+	height: 260px;
+	border-top: 1px solid rgba(144, 144, 144, 0.25);
+}
+
+.table-matriz table tr:last-child {
+	height: 150px;
+}
+
+.table-matriz table td{
+	padding-top: 20px;
+}
+
+.table-matriz div h3{
+	text-align: center;
+}
+
+@media screen and (max-width: 560px) {
+	.table-matriz table tr{
+		height: unset;
+	}
+	.table-matriz table{
+		margin-bottom: 40px;
 	}
 }

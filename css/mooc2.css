@@ -64,21 +64,21 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 585px) {
 	.caixa-texto-topo,
 	.caixa-texto-rodape{
-		background-color: #2A5CAA;
+		background-color: #E6292E;
 	}
 
 	.caixa-texto-topo:before, .caixa-texto-rodape:before{
-		background-color: #2A5CAA;
-		border: 3px solid #2A5CAA;
+		background-color: #E6292E;
+		border: 3px solid #E6292E;
 	}
 
 	.caixa-texto-rodape{
-		background-color: #2A5CAA;
+		background-color: #E6292E;
 	}
 
 	.caixa-texto-centro{
-		background-image: url(../img/padrao/mooc2/bg_slide_01.jpg);
-		background-color: #E6292E;
+		/*background-image: url(../img/padrao/mooc2/bg_slide_01.jpg);*/
+		background-color: #020E36;
 	}
 }
 
@@ -226,14 +226,12 @@ h3.texto-central b{
 
 /* Mudanças expecificas */
 .mooc2 .slideshow-container{
-	background-image: url(../img/padrao/mooc2/bg_slide_01.jpg);
-	background-color: #E6292E;
+	background-image: url(../img/padrao/mooc2/bg_slide_dark.png);
 	background-position: center;
 }
 
 .mooc2 .video {
-	background-image: url(../img/padrao/mooc2/bg_video_01.jpg);
-	background-color: #E6292E;
+	background-image: url(../img/padrao/mooc2/bg_video_dark.png);
 }
 
 .mooc2 .video.fundo-claro{
@@ -303,4 +301,10 @@ h3.texto-central b{
 
 .mooc2 .bt-link-externo:hover{
 	background-color: #020E36;
+}
+
+.mooc2 .audio-gif .icone-play:hover,
+.mooc2 .audio-gif .icone-play img:hover,
+.mooc2 .audio-gif .icone-pause img:hover{
+	background-color: #E73435;
 }

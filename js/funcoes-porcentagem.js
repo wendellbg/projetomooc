@@ -3,7 +3,7 @@ var porcentagem = 0;
 //esse vetor tem as quantidades de telas de cada unidade;
 var quant_telas=[3,7,7,5,5,6];
 var nome_tela="";
-
+var envio=0;
 var verificando_quais_dados=1;
 
 window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
@@ -20,7 +20,12 @@ function resultadoRegistrarDadosGenericos (evento){
     //console.log("Registrando os dados desta tela.");
     console .log(evento.detail);
     //Depois da tela registrada, entra na função para verificar as outras telas da unidade
-    verifica_porcentagem(unidade,tela);
+    if(tela=="uni2tela2" && envio==1){
+        console.log("Enviando respostas");
+    }else{
+        verifica_porcentagem(unidade,tela);
+    }
+    
 }
 
 function verifica_porcentagem(unidade,tela){
@@ -69,11 +74,6 @@ function resultadoObtemDadosGenericos (evento){
             document.querySelector("#botao-atividades button").classList.remove("bt-desativado");                            
             document.querySelector("#botao-atividades button").classList.add("atividades");
             console.log("Ativar botão de atividades");
-        }
-
-        //se for a tela 2 da unidade 2, verifica se o quiz já foi enviado.
-        if(tela=="uni2tela2"){
-            verifica_quiz_enviado();
         }
 
         //"aqui registra a porcentagem no sistema
