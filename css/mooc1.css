@@ -246,14 +246,14 @@ h3.texto-central b{
 }
 
 .slideshow-container{
-	background-image: url(../img/padrao/bg_slide_01.jpg);
-	background-color: #2a5caa;
+	background-image: url(../img/padrao/bg_slide_dark.png);
+	/*background-color: #2a5caa;*/
 	background-position: center;
 }
 
 .video {
-	background-image: url(../img/padrao/bg_video_01.jpg);
-	background-color: #2a5caa;
+	background-image: url(../img/padrao/bg_video_dark.png);
+	/*background-color: #2a5caa;*/
 }
 
 
