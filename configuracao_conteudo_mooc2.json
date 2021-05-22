@@ -1,0 +1,174 @@
+[
+	{		
+		"identificador": "mod2_uni0",
+		"nome": "Boas-Vindas",
+		"descricao": "",
+		"permitePorcentagem": "true",
+		"topicos": [{
+			"identificador": "uni0_tela01",
+			"nome": "Boas-Vindas"
+		}],
+		"atividades": [		
+		]
+	},
+	{
+		"identificador": "mod2_uni1",
+		"nome": "O trabalho como produção da existência",
+		"descricao": "",
+		"permitePorcentagem": "true",
+		"topicos": [{
+			"identificador": "uni1_tela01",
+			"nome": "Apresentação"
+			},{
+				"identificador": "uni1_tela02",
+				"nome": "Nossa humanidade é técnica"
+			},{
+				"identificador": "uni1_tela03",
+				"nome": "Conceituando a técnica"
+			},{
+				"identificador": "uni1_tela04",
+				"nome": "A técnica no cotidiano"
+			},{
+				"identificador": "uni1_tela05",
+				"nome": "A técnica e a perspectiva cultural"
+			}
+		],
+		"atividades": [
+			
+		]	
+	},{		
+		"identificador": "mod2_uni2",
+		"nome": "O Trabalho Como Exercício Social da Técnica",
+		"descricao": "",
+		"permitePorcentagem": "true",
+		"topicos": [{
+			"identificador": "uni2_tela01",
+			"nome": "Apresentação"
+		},{			
+			"identificador": "uni2_tela02",
+			"nome": "A Técnica como Saber 1"
+		},{
+			"identificador": "uni2_tela03",
+			"nome": "A Técnica como Saber 2"
+		},{
+			"identificador": "uni2_tela04",
+			"nome": "Como aprendemos as técnicas?"
+		},{
+			"identificador": "uni2_tela05",
+			"nome": "O que é saber técnico 1"
+		},{
+			"identificador": "uni2_tela06",
+			"nome": "O que é saber técnico 1"
+		},{
+			"identificador": "uni2_tela07",
+			"nome": "O que é Tecnologia? 1"		
+		},{
+			"identificador": "uni2_tela08",
+			"nome": "O que é Tecnologia? 2"		
+		},{
+			"identificador": "uni2_tela09",
+			"nome": "Concluindo"		
+		}],
+		"atividades": [
+			
+		]
+	},{		
+		"identificador": "mod2_uni3",
+		"nome": "Dimensões do trabalho e da profissionalização",
+		"descricao": "",
+		"permitePorcentagem": "true",
+		"topicos": [{
+			"identificador": "uni3_tela01",
+			"nome": "Apresentação"
+		},{
+			"identificador": "uni3_tela02",
+			"nome": "O trabalho como obra 1"
+		},{
+			"identificador": "uni3_tela03",
+			"nome": "O trabalho como obra 2"
+		},{
+			"identificador": "uni3_tela04",
+			"nome": "Folheando as dimensões do trabalho: do cognitivo ao cultural"
+		},{
+			"identificador": "uni3_tela05",
+			"nome": "Cognitiva: Conceituar na ação"
+		},{
+			"identificador": "uni3_tela06",
+			"nome": "Dimensões ética, estética, pessoal e outras"
+		},{
+			"identificador": "uni3_tela07",
+			"nome": "Dimensão ética e pessoal"
+		},{
+			"identificador": "uni3_tela08",
+			"nome": "Dimensão identitária"
+		},{
+			"identificador": "uni3_tela09",
+			"nome": "Dimensão Cultural"
+		},{
+			"identificador": "uni3_tela10",
+			"nome": "Dimensão do Prazer"
+		},{
+			"identificador": "uni3_tela11",
+			"nome": "Concluindo"
+		}]
+	},{		
+		"identificador": "mod2_uni4",
+		"nome": "Processos de profissionalização",
+		"descricao": "",
+		"permitePorcentagem": "true",
+		"topicos": [{
+			"identificador": "uni4_tela01",
+			"nome": "Apresentação"
+		},{
+			"identificador": "uni4_tela02",
+			"nome": "Profissionalização"
+		},{
+			"identificador": "uni4_tela03",
+			"nome": "Conceituando a profissionalização"
+		},{
+			"identificador": "uni4_tela04",
+			"nome": "Profissionalização como formação"
+		},{
+			"identificador": "uni4_tela05",
+			"nome": "Organização do processo de profissionalização"
+		},{
+			"identificador": "uni4_tela06",
+			"nome": "Interprofissionalidade"
+		},{
+			"identificador": "uni4_tela07",
+			"nome": "Arco Ocupacional 1"
+		},{
+			"identificador": "uni4_tela08",
+			"nome": "Arco Ocupacional 2"
+		},{
+			"identificador": "uni4_tela09",
+			"nome": "Cooperação"
+		},{
+			"identificador": "uni4_tela10",
+			"nome": "Comunidade de Prática 2"
+		},{
+			"identificador": "uni4_tela11",
+			"nome": "Comunidade de Prática 2"
+		}]
+	},{		
+		"identificador": "mod2_uni5",
+		"nome": "Análise da atividade profissional (ou tecnografia)",
+		"descricao": "",
+		"permitePorcentagem": "true",
+		"topicos": [{
+			"identificador": "uni5_tela01",
+			"nome": "Apresentação"
+		},{
+			"identificador": "uni5_tela02",
+			"nome": "Tecnografia"
+		},{
+			"identificador": "uni5_tela03",
+			"nome": "Desenvolvimento da Tecnografia"
+		},{
+			"identificador": "uni5_tela04",
+			"nome": "Concluindo"
+		}],
+		"atividades": [			
+		]
+	}
+]
