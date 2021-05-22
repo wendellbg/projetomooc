@@ -1491,8 +1491,21 @@
           API.obterPorcentagemConclusaoUnidade(nome_unidade);        
         }else{
           console.log("Acabou de fazer as 5 unidades");
+          API.obterDadosGenericos("porcentagemUniE");
         }
       }
+
+    window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
+    function resultadoObtemDadosGenericos (evento){
+      console .log(evento.detail);
+      if(evento.detail["status"]==200){
+        console.log("Porcentagem de Encerramento tem 100%.");
+        progresso = document.getElementById("progresso-encerramento");
+        circulo = document.getElementById("circulo-encerramento");
+        progresso.innerHTML="100%";
+        circulo.className="c100 p100";        
+      }
+    }
 
   //Adicionando listener para o evento da porcentagem  
   window.addEventListener("evObtemPorcentagemConclusaoUnidade",resultadoObterPorcentagemConclusaoUnidade, false );
