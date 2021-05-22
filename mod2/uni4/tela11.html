@@ -45,7 +45,7 @@
 <header id="header">
     <div class="logo">
         <a href="../sumario.html">UNIDADE 4</a>
-        <h3>Concepções de trabalho e Profissionalização</h3>
+        <h3>Processos de profissionalização </h3>
     </div>
 </header>
 
@@ -187,7 +187,7 @@
 					<span class="bt-topo">
 						<a href="#"><i class="fas fa-angle-up"></i></a>
 					</span>
-                    <span><button class="bt-avanca" type="button"><a href="tela12.html">PROSSEGUIR ></a></button></span>
+                    <span><button class="bt-avanca" type="button"><a href="tela12.html">PROSSEGUIR &#10095;</a></button></span>
                     <span class='botoes-navegacao'>
                         <a href="tela10.html"><button class="bt-navegacao" type="button"><</button></a>
 
@@ -317,18 +317,22 @@
 </script>
 
 <script>
-    //Funções para o controle do áudio/Podcast
-
     var audioPod = document.getElementById('playerPodcast');
+    var playPod = document.getElementById('botao-play-podcast');
+    var pausePod = document.getElementById('botao-pause-podcast');
 
     var playShowPod = function() {
-        if (audioPod.paused == true){
-            audioPod.play();
-        }else{
-            audioPod.pause();
-        }
+        audioPod.play();
+        playPod.style.display = "none";
+        pausePod.style.display = "block";
     };
 
+    // Pause audio & mostra link de play
+    var pauseShowPod = function() {
+        audioPod.pause();
+        playPod.style.display = "block";
+        pausePod.style.display = "none";
+    };
 
 </script>
 
