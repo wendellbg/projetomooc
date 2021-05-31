@@ -1,7 +1,7 @@
    
 .bt-desativado, .bt-desativado:hover{
-	color: #000;
-	background-color: #bbb;
+	color: #cccccc;
+	background-color: #dddddd;
 	border-right: 2px solid;
 	border-bottom: 2px solid;	
 }
@@ -12,18 +12,18 @@
 .mensagem-flutuante{	
 	font-size: 1.2em;
 	position: absolute;
-	width: 90%;		
-	margin-top:-6em;
-	left: 5%;	
+	width: 80%;
+	margin-top:-5em;
+	left: 10%;
 	display: none; 
 	padding: 1em;
 	border-radius: 8px;	
 }
 
 .mensagem-flutuante.incompleta{
-    background-color:#bbb;
-	color: #000;
-	border: 2px solid #000;
+    background-color:#eee;
+	color: #111;
+	border: 2px solid #ddd;
 }
 
 .mensagem-flutuante.completa{
