@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2" />
     <link rel="stylesheet" href="../../css/efeito.css?ver=1.2"/>  
     <link rel="stylesheet" href="../../css/podcast.css?ver=1.1"/>
-    <link rel="stylesheet" href="../../css/slide.css?ver=1.1"/>    
+    <link rel="stylesheet" href="../../css/slide.css?ver=1.1"/>
+    <link rel="stylesheet" href="../../css/menu.css?ver=1.2"/>    
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
@@ -99,18 +100,44 @@
 
                     <h3>Vamos olhar um pouco mais de perto para cada estágio?</h3>
 
-                    <div style="width: 100%; height: 100%; border: 0px; padding: 1%; display: grid;">
-                        <div style="background-color: #006400; border: 1px solid #006400;"><p style="color: #f8f8ff; padding: 1%;">Crescimento</p></div>
-                        <div style="border: 1px solid grey; padding: 1%;"><p>O primeiro estágio é o de Crescimento, que vai da infância até +- os 12,13 anos. É aqui que começa o desenvolvimento do autoconceito, da percepção de si, das crenças de autoeficácia (de que já falamos no tópico anterior deste Mooc), em que as escolhas são assistemáticas, fantasiosas e buscam o despertar de interesses e habilidades. O indivíduo descobre as primeiras capacidades e constrói o autoconceito através da identificação com figuras significativas da família (pais, avós, irmãos) e escola (professores, colegas). Neste estágio, as tarefas de desenvolvimento são começar a se preocupar com o futuro, aumentar progressivamente o nível de autonomia comportamental, convencer a si mesmo da importância das realizações escolares e de trabalho e adquirir as primeiras habilidades e atitudes de trabalho.</p></div>
-                        <div style="background-color: #006400; border: 1px solid #006400;"><p style="color: #f8f8ff; padding: 1%;">Exploração</p></div>
-                        <div style="border: 1px solid grey; padding: 1%;"><p>O segundo estágio é o da Exploração, que vai dos 14 aos 24, 25 anos anos. É quando se intensificam a auto-análise, a representação de papéis e a exploração ocupacional. Estes são os estágios em que vocês encontram os alunos, e por isso as experiências de exploração são tão importantes.</p></div>
-                        <div style="background-color: #006400; border: 1px solid #006400;"><p style="color: #f8f8ff; padding: 1%;">Estabelecimento</p></div>
-                        <div style="border: 1px solid grey; padding: 1%;"><p>O Estabelecimento, que vai dos 25 aos 45 anos, é o período em que o indivíduo estabelece os esforços para permanecer numa área e progredir na mesma, quando encontrada; A escolha aqui é implementada, isto é, uma conversão das preferências especificadas em uma realidade ocupacional, através do comprometimento com o mundo do trabalho. Há uma estabilidade do autoconceito em termos vocacionais e uma concentração de esforços para permanecer e crescer na área escolhida. O sujeito neste estágio deve poder assimilar uma cultura profissional e organizacional e desempenhar suas tarefas adequadamente, encontrar um lugar satisfatório, consolidar a posição atingida e ampliar os ganhos alcançados, estabelecendo um padrão de carreira.</p></div>
-                        <div style="background-color: #006400; border: 1px solid #006400;"><p style="color: #f8f8ff; padding: 1%;">Manutenção</p></div>
-                        <div style="border: 1px solid grey; padding: 1%;"><p>A partir dos 45 anos, diz-se que o indivíduo está no estágio de Manutenção, que representa a consolidação de uma posição ou situação e a continuidade dos planos estabelecidos, a realização de tarefas da maturidade, com suas características de continuidade dos planos estabelecidos, onde há comportamentos de conservação do que foi alcançado e, mais recentemente, a capacidade de se manter atualizado e capaz de inovar, estabelecendo para si novos desafios.</p></div>
-                        <div style="background-color: #006400; border: 1px solid #006400;"><p style="color: #f8f8ff; padding: 1%;">Desengajamento</p></div>
-                        <div style="border: 1px solid grey; padding: 1%;"><p>A última etapa do desenvolvimento vocacional, se pensarmos em um maxi-ciclo é o Desengajamento, que ocorre a partir dos 66 anos (idade em que a maioria dos países estabelece o momento da aposentadoria), onde se pode vivenciar algum declínio de capacidades físicas e/ou mentais, mas que majoritariamente representa o momento em que o indivíduo planeja sua retirada do mundo do trabalho, com o gradual enfraquecimento e posterior afastamento das atividades profissionais, criando um novo modo de vida fora do trabalho.</p></div>
-                    </div>
+                    <div class="content">
+
+                        <div class="menu-opcoes">
+                            <a  id="hide1" href="#hide1" class="hide">Crescimento + </a>
+                            <a  id="show1" href="#show1" class="show">Crescimento -</a>
+                            <div class="details">
+                                <p>O primeiro estágio é o de Crescimento, que vai da infância até +- os 12,13 anos. É aqui que começa o desenvolvimento do autoconceito, da percepção de si, das crenças de autoeficácia (de que já falamos no tópico anterior deste Mooc), em que as escolhas são assistemáticas, fantasiosas e buscam o despertar de interesses e habilidades. O indivíduo descobre as primeiras capacidades e constrói o autoconceito através da identificação com figuras significativas da família (pais, avós, irmãos) e escola (professores, colegas). Neste estágio, as tarefas de desenvolvimento são começar a se preocupar com o futuro, aumentar progressivamente o nível de autonomia comportamental, convencer a si mesmo da importância das realizações escolares e de trabalho e adquirir as primeiras habilidades e atitudes de trabalho.</p>
+                            </div>
+                        </div>
+                        <div class="menu-opcoes">
+                            <a id="hide2" href="#hide2" class="hide">Exploração +</a>
+                            <a id="show2" href="#show2" class="show">Exploração -</a>
+                            <div class="details">
+                                <p>O segundo estágio é o da Exploração, que vai dos 14 aos 24, 25 anos anos. É quando se intensificam a auto-análise, a representação de papéis e a exploração ocupacional. Estes são os estágios em que vocês encontram os alunos, e por isso as experiências de exploração são tão importantes.</p>
+                            </div>
+                        </div>
+                        <div class="menu-opcoes">
+                            <a id="hide3" href="#hide3" class="hide">Estabelecimento +</a>
+                            <a id="show3" href="#show3" class="show">Estabelecimento -</a>
+                            <div class="details">
+                                <p>O Estabelecimento, que vai dos 25 aos 45 anos, é o período em que o indivíduo estabelece os esforços para permanecer numa área e progredir na mesma, quando encontrada; A escolha aqui é implementada, isto é, uma conversão das preferências especificadas em uma realidade ocupacional, através do comprometimento com o mundo do trabalho. Há uma estabilidade do autoconceito em termos vocacionais e uma concentração de esforços para permanecer e crescer na área escolhida. O sujeito neste estágio deve poder assimilar uma cultura profissional e organizacional e desempenhar suas tarefas adequadamente, encontrar um lugar satisfatório, consolidar a posição atingida e ampliar os ganhos alcançados, estabelecendo um padrão de carreira.</p>
+                            </div>
+                        </div>
+                        <div class="menu-opcoes">
+                            <a id="hide4" href="#hide4" class="hide">Manutenção +</a>
+                            <a id="show4" href="#show4" class="show">Manutenção -</a>
+                            <div class="details">
+                                <p>A partir dos 45 anos, diz-se que o indivíduo está no estágio de Manutenção, que representa a consolidação de uma posição ou situação e a continuidade dos planos estabelecidos, a realização de tarefas da maturidade, com suas características de continuidade dos planos estabelecidos, onde há comportamentos de conservação do que foi alcançado e, mais recentemente, a capacidade de se manter atualizado e capaz de inovar, estabelecendo para si novos desafios.</p>
+                            </div>
+                        </div>
+                         <div class="menu-opcoes">
+                            <a id="hide5" href="#hide5" class="hide">Desengajamento +</a>
+                            <a id="show5" href="#show5" class="show">Desengajamento -</a>
+                            <div class="details">
+                                <p>A última etapa do desenvolvimento vocacional, se pensarmos em um maxi-ciclo é o Desengajamento, que ocorre a partir dos 66 anos (idade em que a maioria dos países estabelece o momento da aposentadoria), onde se pode vivenciar algum declínio de capacidades físicas e/ou mentais, mas que majoritariamente representa o momento em que o indivíduo planeja sua retirada do mundo do trabalho, com o gradual enfraquecimento e posterior afastamento das atividades profissionais, criando um novo modo de vida fora do trabalho.</p>
+                            </div>
+                        </div>
+                    </div>                    
 
                 </div>            
 
@@ -123,35 +150,35 @@
                         <div class="mySlides fade">
                             <div class="numero-slide">1 / 5</div>
                             <div class='titulo-video'><span></span></div>
-                            <img src="../../img/uni5/imagem.jpg" alt="Imagem 1">
+                            <img src="../../img/uni5/MOOC3_Uni5_Tela07_Imagem1.jpg" alt="Imagem 1">
                             <div class="texto">Figura 1 - Fonte: Freepick</div>
                         </div>
 
                         <div class="mySlides fade">
                             <div class="numero-slide">2 / 5</div>
                             <div class='titulo-video'><span></span></div>
-                            <img src="../../img/uni5/imagem.jpg" alt="Imagem 2">
+                            <img src="../../img/uni5/MOOC3_Uni5_Tela07_Imagem2.jpg" alt="Imagem 2">
                             <div class="texto">Figura 2 - Fonte: Freepick</div>
                         </div>
 
                         <div class="mySlides fade">
                             <div class="numero-slide">3 / 5</div>
                             <div class='titulo-video'><span></span></div>
-                            <img src="../../img/uni5/imagem.jpg" alt="Imagem 3">
+                            <img src="../../img/uni5/MOOC3_Uni5_Tela07_Imagem3.jpg" alt="Imagem 3">
                             <div class="texto">Figura 3 - Fonte: Freepick</div>
                         </div>
 
                         <div class="mySlides fade">
                             <div class="numero-slide">4 / 5</div>
                             <div class='titulo-video'><span></span></div>
-                            <img src="../../img/uni5/imagem.jpg" alt="Imagem 4">
+                            <img src="../../img/uni5/MOOC3_Uni5_Tela07_Imagem4.jpg" alt="Imagem 4">
                             <div class="texto">Figura 4 - Fonte: Freepick</div>
                         </div>
 
                         <div class="mySlides fade">
                             <div class="numero-slide">5 / 5</div>
                             <div class='titulo-video'><span></span></div>
-                            <img src="../../img/uni5/imagem.jpg" alt="Imagem 5">
+                            <img src="../../img/uni5/MOOC3_Uni5_Tela07_Imagem5.jpg" alt="Imagem 5">
                             <div class="texto">Figura 5 - Fonte: Freepick</div>
                         </div>
 
