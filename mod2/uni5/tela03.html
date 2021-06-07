@@ -84,7 +84,23 @@
                 <p>Entre os benefícios de se realizar uma  tecnografia, vimos que além de permitir que educadores entendam melhor os saberes-fazeres dos trabalhadores, permite despertar o interesse dos estudantes por atividades profissionais específicas.</p>
                 <p>É importante que você faça o exercício a seguir em seu contexto de atuação e procure refletir em como a realização de uma análise de atividade profissional poderá contribuir para o seu papel de educador na orientação para a educação profissional de seus alunos.</p>
                 <p>Se quiser entender de forma mais detalhada  como deve ser realizada a tecnografia, ouça o podcast que preparamos para te ajudar.</p>
-            </div>   
+            </div>
+
+
+
+            <div class="content">
+                <div class="icone-audio">
+                    <a class='icone-play' id="botao-play-podcast" onclick="playShowPod()"><img src="../../img/uni3/icone-audio.png"/></a>
+                    <a class="icone-pause" id="botao-pause-podcast" onclick="pauseShowPod()" style="display:none;"><img src="../../img/uni3/icone-audio2.gif" /></a>
+                    <audio id='playerPodcast' class='controles-podcast' controls='controls'>
+                        <source src="../../img/uni5/MOOC2_Uni5_Podcast2.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+                    </audio>
+                    <div class="downloads">
+<!--                        <a target="_blank" href="../../downloads/mooc2/Un5-podcast2.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>-->
+                    </div>
+                </div>
+            </div>
+
             
             <!--Caixa Material Complementar-->
             <div class="titulo-externo-box blue"><p>Material Complementar</p></div>
@@ -220,6 +236,25 @@
     function resultadoRegistrarDadosGenericos (evento){
         console.log("Verificando porcentagem registrada");
         console.log(evento.detail);
+    };
+
+</script>
+<script>
+    var audioPod = document.getElementById('playerPodcast');
+    var playPod = document.getElementById('botao-play-podcast');
+    var pausePod = document.getElementById('botao-pause-podcast');
+
+    var playShowPod = function() {
+        audioPod.play();
+        playPod.style.display = "none";
+        pausePod.style.display = "block";
+    };
+
+    // Pause audio & mostra link de play
+    var pauseShowPod = function() {
+        audioPod.pause();
+        playPod.style.display = "block";
+        pausePod.style.display = "none";
     };
 
 </script>
