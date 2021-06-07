@@ -512,7 +512,7 @@ Main components
 /* Mooc3 Uni2 Tela 2 */
 .mooc3-uni2-tela2 .cd-single-point .cd-more-info{
   width: 400px;
-  height: 250px;
+  height: 300px;
 }
 
 
@@ -811,6 +811,12 @@ Main components
 .cd-single-point.mooc3-ponto3-uni1-tela7{
   top: 70%;
   left: 10%;
+}
+
+/* Mooc3 Uni2 tela 5*/
+.cd-single-point.mooc3-ponto1-uni2-tela5{
+  top: 30%;
+  left: 30%;
 }
 
 
