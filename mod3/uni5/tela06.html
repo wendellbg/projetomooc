@@ -108,12 +108,12 @@
                     <div>
                         <div class="icone-audio">
                             <a class='icone-play' onclick="playShowPod1()"><img src="../../img/uni5/MOOC3_Uni5_Tela06_Imagem1.jpg" alt="Imagem Estática"/></a>
-                            <p class="legenda">Figura 05 - Fonte: Freepick</p>
+                            <p class="legenda">Figura 02 - Fonte: Desenvolvido pela equipe do projeto</p>
                             <audio id='playerPodcast1' class='controles-podcast' controls='controls'>
-                                <source src="../../img/uni5/MOOC_3_5_6.mp3" type="audio/mp3" />Seu navegador não suporta HTML5 -->
+                                <source src="../../img/uni5/MOOC3_Uni5_Audio2.mp3" type="audio/mp3" />Seu navegador não suporta HTML5 -->
                             </audio>
                             <div class="downloads">
-                                <a target="_blank" href="../../downloads/Un3-podcast.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
+                                <a target="_blank" href="../../downloads/mooc3/Un5-audio2.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
                             </div>
                         </div>
                     </div>
@@ -250,5 +250,21 @@
     };
 
 </script>
+
+<script>
+    //Funções para o controle do áudio/Podcast
+
+    var audioPod1 = document.getElementById('playerPodcast1');
+
+    var playShowPod1 = function() {
+        if (audioPod1.paused == true){
+            audioPod1.play();
+        }else{
+            audioPod1.pause();
+        }
+    };
+
+</script>
+
 </body>
 </html>

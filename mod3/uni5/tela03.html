@@ -93,10 +93,10 @@
                     <a class='icone-play' id="botao-play-podcast" onclick="playShowPod()"><img src="../../img/uni3/icone-audio.png"/></a>
                     <a class="icone-pause" id="botao-pause-podcast" onclick="pauseShowPod()" style="display:none;"><img src="../../img/uni3/icone-audio2.gif" /></a>
                     <audio id='playerPodcast' class='controles-podcast' controls='controls'>
-                         <source src="../../img/uni5/audio.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+                         <source src="../../img/uni5/MOOC3_Uni5_Podcast1.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
                     </audio>
                     <div class="downloads">
-                        <a target="_blank" href="../../downloads/mooc3/Un1-podcast1.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
+                        <a target="_blank" href="../../downloads/mooc3/Un5-podcast1.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
                     </div>
                 </div>
             </div> 
@@ -232,6 +232,25 @@
     function resultadoRegistrarDadosGenericos (evento){
         console.log("Verificando porcentagem registrada");
         console.log(evento.detail);
+    };
+
+</script>
+<script>
+    var audioPod = document.getElementById('playerPodcast');
+    var playPod = document.getElementById('botao-play-podcast');
+    var pausePod = document.getElementById('botao-pause-podcast');
+
+    var playShowPod = function() {
+        audioPod.play();
+        playPod.style.display = "none";
+        pausePod.style.display = "block";
+    };
+
+    // Pause audio & mostra link de play
+    var pauseShowPod = function() {
+        audioPod.pause();
+        playPod.style.display = "block";
+        pausePod.style.display = "none";
     };
 
 </script>
