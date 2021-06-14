@@ -12,9 +12,9 @@
     <script src="../../js/bt-topo.js"></script>
 
     <!-- Funções de acesso à biblioteca do Avamec-->
-    <script src="../../js/funcoes-5.js"></script>
+    <script src="../../js/funcoes-porcentagem-mooc2.js"></script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -24,7 +24,7 @@
         gtag('config', 'G-SB34EK30YV');
     </script>
 
-    <!-- Google Tag Manager -->
+    <!-- Google Tag Manager 
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -180,77 +180,16 @@
     console.clear(screen);
 
     var API = new BridgeRestApi();
-    var id_unidade = "mod3_uni1";
-    var id_slide = "uni1/tela01.html";
-    var progresso = 14;
-    var progressoSalvo;
-    var porcentagem = "porcentagemUni1";
-
+    var id_unidade = "mod3_uni1";//alterar
+    var id_slide = "mod3/uni1/tela03.html";//alterar
+    var unidade=1;//alterar
+    var tela="uni1tela3";//alterar
+    var ultima_tela=0;
+    
     //Obtendo dados curso
     window.addEventListener('load', function(){
         API.obterDadosCurso();
-    })
-
-    window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
-    function resultadoObterDadosCurso(evento){
-        console.log(evento.detail);
-        //antes de registrar a porcentagem, verifica a porcentagem atual:
-        API.obterDadosGenericos(porcentagem);
-    }
-
-
-    //Quando obtém a porcentagem da unidade em questão, executa esta função
-    window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
-    function resultadoObtemDadosGenericos (evento){
-        console.log(evento.detail);
-
-        //testando se o status é 200, unidade já iniciada
-        if(evento.detail["status"]==200){
-            var i=0;
-            var cont = 0;
-            //O evento retorna um vetor. É preciso pesquisar em qual posição está a porcentagem da unidade atual
-            while(i==0){
-                if(evento.detail["data"][cont]["chave"]==porcentagem){
-                    console.log("achou na posição "+cont);
-                    console.log(evento.detail["data"][cont]["chave"]);
-                    i=1;
-                }else{
-                    console.log("não encontrou na posição "+cont);
-                    console.log(evento.detail["data"][cont]["chave"]);
-                    cont=cont+1;
-                    if(cont==10){
-                        i=1;
-                    }
-                }
-
-            }
-
-            //depois que encontrar a posição certa, verifica o progresso atual
-            progressoSalvo = evento.detail["data"][cont]["valor"];
-            console.log("Valor de Porcentagem atual: "+progressoSalvo);
-
-            if(progressoSalvo < progresso){
-                //registrando a porcentagem da Unidade em questão
-                API.registrarDadosGenericos(porcentagem,progresso);
-                console.log('Registrando nova porcentagem: '+progresso);
-            }else{
-                //Se o cursista estiver revendo a tela, o progresso Salvo será maior, então não altera nada.
-                console.log("Porcentagem não alterada.");
-            }
-
-        }else if(evento.detail["status"]==412){
-            //se for status 400, inicia a chave da porcentagem da unidade em questão
-            console.log("Inicializando a porcentagem da unidade");
-            API.registrarDadosGenericos(porcentagem,14);
-        }
-    };
-
-    window.addEventListener('evObtemRegistraDadosGenericos', resultadoRegistrarDadosGenericos, false);
-    function resultadoRegistrarDadosGenericos (evento){
-        console.log("Verificando porcentagem registrada");
-        console.log(evento.detail);
-    };
-
+    });
 </script>
 </body>
 </html>
