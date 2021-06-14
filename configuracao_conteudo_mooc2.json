@@ -34,7 +34,48 @@
 			}
 		],
 		"atividades": [
-			
+			{
+				"identificador": "uni1_ativ1",
+				"nomeAtividade": "Avaliação - Unidade 1",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r1_1",
+						"enunciado": "Sobre a relação entre técnica e trabalho, assinale as afirmativas a seguir como verdadeira ou falsa:",
+						"gabaritos": [
+							{ "chave": "r1_1_1", "valor": "v", "alternativa": "a) A técnica é o fundamento do trabalho." },
+							{ "chave": "r1_1_2", "valor": "v", "alternativa": "b) O ser humano intervém no mundo pela técnica." },
+							{ "chave": "r1_1_3", "valor": "f", "alternativa": "c) O trabalho só tem sentido econômico e/ou material." },
+							{ "chave": "r1_1_4", "valor": "v", "alternativa": "d) O trabalho é um dos traços que melhor identifica nossa humanidade." }
+						]
+					},
+					{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r1_2",
+						"enunciado": "Complete o texto arrastando e soltando as palavras:",
+						"gabaritos": [
+							{ "chave": "r1_2_1", "valor": "técnica", "alternativa": "Palavra 1" },
+							{ "chave": "r1_2_2", "valor": "intervenção", "alternativa": "Palavra 2" },
+							{ "chave": "r1_2_3", "valor": "produção", "alternativa": "Palavra 3" },
+							{ "chave": "r1_2_4", "valor": "existência", "alternativa": "Palavra 4" },
+							{ "chave": "r1_2_5", "valor": "sociedade", "alternativa": "Palavra 5" },
+							{ "chave": "r1_2_6", "valor": "trabalho", "alternativa": "Palavra 6" },
+							{ "chave": "r1_2_7", "valor": "fundamento", "alternativa": "Palavra 7" }
+						]
+					},
+					{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r1_3",
+						"enunciado": "Considerando a relação entre técnica e cultura, assinale a(s) alternativa(s) que demonstram o valor social da técnica:",
+						"gabaritos": [
+							{ "chave": "r1_3_1", "valor": "v", "alternativa": "a) A técnica é o elemento essencial do que chamamos de trabalho." },
+							{ "chave": "r1_3_2", "valor": "f", "alternativa": "b) A técnica não pode ser pensada como atividade reflexiva e transformadora, pois está relacionada apenas a trabalhos manuais." },
+							{ "chave": "r1_3_3", "valor": "f", "alternativa": "c) A “formação técnica” e a “formação humana” são elementos opostos." },
+							{ "chave": "r1_3_4", "valor": "v", "alternativa": "d) A técnica, como intervenção no mundo que acontece socialmente, constitui o laço social e está no coração da cultura." }
+						]
+					}
+				]
+			}
 		]	
 	},{		
 		"identificador": "mod2_uni2",
