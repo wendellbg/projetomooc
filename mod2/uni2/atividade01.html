@@ -1,0 +1,548 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Mentoria</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../css/mooc2.css?ver=1.1"/>
+    <link rel="stylesheet" href="../../css/efeito.css?ver=1.2"/>
+    <link rel="stylesheet" href="../../css/atividades-mooc2.css" />
+
+    <!-- Botão de Voltar ao Topo -->
+    <script src="../../js/jquery-2.1.1.js"></script>
+    <script src="../../js/bt-topo.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-SB34EK30YV');
+    </script> -->
+
+    <!-- Google Tag Manager -->
+    <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MK4H2FJ');</script> -->
+    <!-- End Google Tag Manager -->
+    
+    <style>
+
+    </style>
+</head>
+<body class="mooc2">
+<!-- Google Tag Manager (noscript) -->
+<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MK4H2FJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Header -->
+<header id="header">
+	<div class="logo">
+		<a href="tela01.html">UNIDADE 2</a>
+		<h3>O Trabalho Como Exercício Social da Técnica</h3>
+	</div>
+</header>
+
+<!-- Main -->
+<section id="main">
+	<div class="inner">
+		<!-- One -->
+		<section id="one" class="wrapper style1">
+
+			<div class="botao-sumario">				
+					<a class="link-progresso" href="../sumario.html"><i class="fas fa-tasks"></i> PROGRESSO</a>
+			</div>
+			<header class="special">
+				<div class="entire-menu">
+					<div class="menu-tit">
+						<div class="menu-tit-col1">
+							<h2>Unidade 2 - Avaliação</h2>
+						</div>
+						<div class="menu-tit-col2">
+							<input type="checkbox" id="change-hamburguer" />
+							<a class="hamburguer" href="#">
+								<span></span>
+								<label for="change-hamburguer"></label>
+							</a>
+							<div class="menu">
+								<a href="../sumario.html" class='titulo-menu'>UNIDADE 2</a>
+                                <a href="tela01.html">2.01 - Apresentação</a>
+                                <a href="tela02.html">2.02 - A Técnica como Saber</a>
+                                <a href="tela03.html">2.03 - A Técnica como Saber</a>
+                                <a href="tela04.html">2.04 - Como aprendemos as técnicas?</a>
+                                <a href="tela05.html">2.05 - O que é saber técnico?</a>
+                                <a href="tela06.html">2.06 - O que é saber técnico?</a>
+                                <a href="tela07.html">2.07 - O que é Tecnologia? </a>
+                                <a href="tela08.html">2.08 - O que é Tecnologia?</a>
+                                <a href="tela09.html">2.09 - Para concluir.</a>
+                            </div>
+						</div>
+					</div>
+					
+				</div>
+			</header>
+
+            <!-- Conteúdo -->
+            <div class="content">
+                <div class="atividade" id='atividade-uni1'>
+					<div id='mensagem-alerta'>
+					</div>
+                    <div id='mensagem-tentativas' class="atividades">                        
+					</div>
+                    <form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni2" method="POST">
+                        <div class="questao">
+                            <div class="titulo-questao">Questão 1</div>
+                            <div class="enunciado-questao">
+                                <span>Trabalho, Técnica e Tecnologia são termos chave para entender a Educação Profissional.  No entanto, raramente são pensados como forma de saber e acabam reduzidos ao senso comum. Escolha uma profissão presente em seu cotidiano e descreva alguns dos saberes necessários para executá-la.</span>
+                            </div>
+                            <div class="area-respostas">
+                                <textarea name="r2_1_texto" class="resposta-texto" id='r2_1_texto'></textarea>
+                             </div>                                                                              
+                        </div> 
+                                
+
+                        <div class="questao">
+                            <div class="titulo-questao">Questão 2</div>
+                            <div class="enunciado-questao">
+                                <span>O conhecimento técnico tem características próprias, com semelhanças e diferenças em relação ao conhecimento das outras ciências. Analise os conceitos a seguir e arraste e solte aqueles que estão incorporados ao conhecimento técnico:</span>
+                            </div>
+                            <div class="area-respostas">                                
+
+                                <div class='linha-respostas'>
+                                    <p class="legenda-resposta">Opções de Resposta:</p>
+                                    <div class="area-opcoes caixa-drop_5_3" id='opcao1_2_1' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                        <span class="palavra-resposta" name='r5_2_texto_1' id='r1_2_texto_1' draggable="true" ondragstart="drag(event)">fundamento</span>
+                                    </div>
+                                    <div class="area-opcoes caixa-drop_5_3" id='opcao1_2_2' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                        <span class="palavra-resposta" name='r1_2_texto_2' id='r1_2_texto_2' draggable="true" ondragstart="drag(event)">sociedade</span>
+                                    </div>
+                                    <div class="area-opcoes caixa-drop_5_3" id='opcao1_2_3' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                        <span class="palavra-resposta" name='r1_2_texto_3' id='r1_2_texto_3' draggable="true" ondragstart="drag(event)">intervenção</span>
+                                    </div>
+                                    <div class="area-opcoes caixa-drop_5_3" id='opcao1_2_4' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                        <span class="palavra-resposta" name='r1_2_texto_4' id='r1_2_texto_4' draggable="true" ondragstart="drag(event)">produção</span>
+                                    </div>
+                                    <div class="area-opcoes caixa-drop_5_3" id='opcao1_2_5' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                        <span class="palavra-resposta" name='r1_2_texto_5' id='r1_2_texto_5' draggable="true" ondragstart="drag(event)">técnica</span>
+                                    </div>
+                                    <div class="area-opcoes caixa-drop_5_3" id='opcao1_2_6' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                        <span class="palavra-resposta" name='r1_2_texto_6' id='r1_2_texto_6' draggable="true" ondragstart="drag(event)">trabalho</span>
+                                    </div>
+                                    <div class="area-opcoes caixa-drop_5_3" id='opcao1_2_7' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                        <span class="palavra-resposta" name='r1_2_texto_7' id='r1_2_texto_7' draggable="true" ondragstart="drag(event)">existência</span>
+                                    </div>												
+                                </div>										
+                            </div>                                   
+                        </div> 
+
+                            
+                        <div class="questao">
+                            <div class="titulo-questao">Questão 3</div>
+                            <div class="enunciado-questao">
+                                <span>Relacione a seguir os sentidos possíveis para a técnica:</span>
+                            </div>
+                            <div class="area-respostas">
+                                <div class="linha-respostas">
+                                    <div class='texto-resposta'>                                        
+                                        <span class="texto-opcao">a) Um conjunto não redutível a conteúdos cognitivos em sentido clássico, isto é, um conteúdo verbalizado e formalizado. Podemos, então, ir além do mito de que "saber" é "saber falar sobre".</span>                                            
+                                    </div>                                    
+                                    <div class="caixa-box">                                            
+                                        <select name="r2_3_a" id="r2_3_a" class="resposta-select" onchange="valorSelecionado(this)">
+                                            <option  id="r2_3_a_0" name="r2_3_a_0" value="">---</option>
+                                            <option  id="r2_3_a_1" name="r2_3_a_1" value="Composição">Composição</option>
+                                            <option  id="r2_3_a_2" name="r2_3_a_2" value="Finalidade">Finalidade</option>>
+                                            <option  id="r2_3_a_3" name="r2_3_a_3" value="Processo">Processo</option>>
+                                            <option  id="r2_3_a_4" name="r2_3_a_4" value="Técnica e cultura">Técnica e cultura</option>
+                                            <option  id="r2_3_a_5" name="r2_3_a_5" value="Validação do conhecimento técnico">Validação do conhecimento técnico</option>
+                                        </select>
+                                    </div> 
+                                </div>
+
+                                <div class="linha-respostas">
+                                    <div class="texto-resposta">                                        
+                                        <span class="texto-opcao">b) Modos de ação, estruturas conceituais para cada situação de trabalho (ou classe de situação, como veremos mais adiante), lógicas próprias, ferramentas, sistemas, máquinas, valores, aspectos éticos, políticos, sociais, ambientais, econômicos.</b></span>                                                                                   
+                                    </div>
+                                    <div class="area-inputs caixa-box">                                            
+                                        <select name="r2_3_b"  id='r2_3_b' onchange="valorSelecionado(this)">
+                                            <option  id="r2_3_b_0" name="r2_3_b_0" value="">---</option>
+                                            <option  id="r2_3_b_1" name="r2_3_b_1" value="Composição">Composição</option>
+                                            <option  id="r2_3_b_2" name="r2_3_b_2" value="Finalidade">Finalidade</option>>
+                                            <option  id="r2_3_b_3" name="r2_3_b_3" value="Processo">Processo</option>>
+                                            <option  id="r2_3_b_4" name="r2_3_b_4" value="Técnica e cultura">Técnica e cultura</option>
+                                            <option  id="r2_3_b_5" name="r2_3_b_5" value="Validação do conhecimento técnico">Validação do conhecimento técnico</option>
+                                        </select>
+                                    </div>                                        
+                                </div>
+
+                                <div class="linha-respostas">
+                                    <div class="texto-resposta">                                        
+                                        <span class="texto-opcao">c) Busca uma efetiva intervenção no mundo para a produção da existência individual e coletiva;</span>                                                                                   
+                                    </div>
+                                    <div class="area-inputs caixa-box">                                            
+                                        <select name="r2_3_c" id='r2_3_c' onchange="valorSelecionado(this)">
+                                            <option  id="r2_3_c_0" name="r2_3_c_0" value="">---</option>
+                                            <option  id="r2_3_c_1" name="r2_3_c_1" value="Composição">Composição</option>
+                                            <option  id="r2_3_c_2" name="r2_3_c_2" value="Finalidade">Finalidade</option>>
+                                            <option  id="r2_3_c_3" name="r2_3_c_3" value="Processo">Processo</option>>
+                                            <option  id="r2_3_c_4" name="r2_3_c_4" value="Técnica e cultura">Técnica e cultura</option>
+                                            <option  id="r2_3_c_5" name="r2_3_c_5" value="Validação do conhecimento técnico">Validação do conhecimento técnico</option>
+                                        </select>
+                                    </div>                                         
+                                </div>
+
+                                <div class="linha-respostas">
+                                    <div class="texto-resposta">                                        
+                                        <span class="texto-opcao">d) Valida-se tanto material quanto socialmente pelos efeitos produzidos, sua eficácia. Isso difere da epistemologia clássica da ciência, em que predomina a validação do conhecimento pela demonstração lógica, teórica e discursiva. Cuidado! Aqui, ser eficaz não é a mesma coisa que ser "útil", e sim pode ser entendido pelo "ato que produz o efeito esperado" (Sigaut, 2006).</span>                                                                                   
+                                    </div>
+                                    <div class="area-inputs caixa-box">                                            
+                                        <select name="r2_3_d" id='r2_3_d'  onchange="valorSelecionado(this)">
+                                            <option  id="r2_3_d_0" name="r2_3_d_0" value="">---</option>
+                                            <option  id="r2_3_d_1" name="r2_3_d_1" value="Composição">Composição</option>
+                                            <option  id="r2_3_d_2" name="r2_3_d_2" value="Finalidade">Finalidade</option>>
+                                            <option  id="r2_3_d_3" name="r2_3_d_3" value="Processo">Processo</option>>
+                                            <option  id="r2_3_d_4" name="r2_3_d_4" value="Técnica e cultura">Técnica e cultura</option>
+                                            <option  id="r2_3_d_5" name="r2_3_d_5" value="Validação do conhecimento técnico">Validação do conhecimento técnico</option>
+                                        </select>
+                                    </div>                                           
+                                </div>
+
+                                <div class="linha-respostas">
+                                    <div class="texto-resposta">                                        
+                                        <span class="texto-opcao">e) A técnica está, assim, no coração do laço social (Sigaut, 2004), e não mais pode ser pensada como algo externo ao ser humano e à cultura. A cultura não é o lado subjetivo, de uma moeda com outro lado somente objetivo, geralmente com conotação ou valor abjeto (a repulsa ao trabalho, à técnica)</span>                                                                                   
+                                    </div>
+                                    <div class="area-inputs caixa-box">                                            
+                                        <select name="r2_3_e"  id='r2_3_e' onchange="valorSelecionado(this)">
+                                            <option  id="r2_3_e_0" name="r2_3_e_0" value="">---</option>
+                                            <option  id="r2_3_e_1" name="r2_3_e_1" value="Composição">Composição</option>
+                                            <option  id="r2_3_e_2" name="r2_3_e_2" value="Finalidade">Finalidade</option>>
+                                            <option  id="r2_3_e_3" name="r2_3_e_3" value="Processo">Processo</option>>
+                                            <option  id="r2_3_e_4" name="r2_3_e_4" value="Técnica e cultura">Técnica e cultura</option>
+                                            <option  id="r2_3_e_5" name="r2_3_e_5" value="Validação do conhecimento técnico">Validação do conhecimento técnico</option>
+                                        </select>
+                                    </div>                                          
+                                </div>
+                            </div>
+                        </div>
+                            
+                        <div class="botao-atividade">
+                            <button type="button" id="botao-atividade-uni1" onclick="salvarDados()" ><i class="fas fa-check"></i> ENVIAR RESPOSTAS</button>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+
+            <!-- Conteúdo -->
+            <div class="content footer"> 
+                <div class='navegacao'>
+                    <div class="bt-topo">
+                        <a href="#"><i class="fas fa-angle-up"></i></a>
+                    </div>
+                    <!-- <div>
+                        <button class="bt-avanca" type="button"><a href="../uni2/tela01.html">IR PARA UNIDADE 2 ></a></button>
+                    </div>                    -->
+
+                </div>               
+                <!--Rodapé-->
+                <hr/>
+                <div class="row rodape">
+                    <div class="6u 12u$(small)">
+                        <p></p>
+                        <img src="../../img/padrao/logo_mentoria.png" alt="IFSC">
+                    </div>
+                    <div class="3u 12u$(small)">
+                        <p>Realização:</p>
+                        <img src="../../img/padrao/logo_mec.png" alt="IFSC">
+						<p class="small"><b>Secretaria de Educação Profissional e Tecnológica</b></p>
+                    </div>
+                    <div class="3u 12u$(small)">
+                        <p>Produção:</p>
+                        <img src="../../img/padrao/ifsc.png" alt="IFSC">
+                        <img src="../../img/padrao/ifes.png" alt="IFES">
+                    </div>
+                </div><!--Rodapé-->
+
+            </div>
+        </section>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer id="footer">
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
+<script src="../../js/funcoes-atividades.js"></script>
+
+<script>
+    console.clear(screen);
+
+    var API = new BridgeRestApi();
+    var id_unidade = "mod2_uni1";//modificar
+    var id_slide = "mod2/uni1/atividade01.html";//modificar
+    var id_atividade = "uni1_ativ1";//modificar
+    var revisao_unidade = "uni1_revisao";//modificar
+    var texto_mensagem_fim="<br>Você pode prosseguir para a próxima atividade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PRÓXIMA UNIDADE &#10095;</a><br>";
+
+    function verifica_revisao(){
+        if(revisao_vista==1){
+            document.querySelector("#botao-atividade-uni1").style.display="none";
+        } 
+    }
+
+    //Etapa 1: carregamento da página
+    window.addEventListener('load', function(){
+        console.log("carregando a página");
+        API.obterDadosGenericos("quant_"+id_atividade);        
+	});
+
+    /*************** Verificando se todas as respostas foram enviadas. *****/
+    var botao = document.getElementById("botao-atividade-uni1");//modificar
+	
+    //Etapa 3: Enviando formulário
+	function salvarDados(){
+        nota_atividade_nova=0;
+        nota_atividade=0;
+        quant_respostas=0; 
+        revisao_teste=0;       
+        erros=0;
+
+        //aqui vai pegar os valores de cada exercício.
+        //esses são os checkbox
+		r1_1_1 = document.form_atividade_uni1.r1_1_1.checked,
+        r1_1_2 = document.form_atividade_uni1.r1_1_2.checked,
+        r1_1_3 = document.form_atividade_uni1.r1_1_3.checked,
+        r1_1_4 = document.form_atividade_uni1.r1_1_4.checked,
+		
+        r1_2_1 = document.querySelector("#r1_2_1 span.palavra-resposta"),
+        r1_2_2 = document.querySelector("#r1_2_2 span.palavra-resposta"),
+        r1_2_3 = document.querySelector("#r1_2_3 span.palavra-resposta"),
+        r1_2_4 = document.querySelector("#r1_2_4 span.palavra-resposta"),
+        r1_2_5 = document.querySelector("#r1_2_5 span.palavra-resposta"),
+        r1_2_6 = document.querySelector("#r1_2_6 span.palavra-resposta"),
+        r1_2_7 = document.querySelector("#r1_2_7 span.palavra-resposta"),
+		
+        //aqui os checkbox
+        r1_3_1 = document.form_atividade_uni1.r1_3_1.checked,
+        r1_3_2 = document.form_atividade_uni1.r1_3_2.checked,
+        r1_3_3 = document.form_atividade_uni1.r1_3_3.checked,
+        r1_3_4 = document.form_atividade_uni1.r1_3_4.checked
+		       
+        //testando se todos os exercícios (menos os checkbox) estão preenchidos.
+		if(r1_2_1==null){
+			erros++;
+		}else if(r1_2_2==null){
+			erros++;
+        }else if(r1_2_3==null){
+			erros++;
+        }else if(r1_2_4==null){
+			erros++;
+        }else if(r1_2_5==null){
+			erros++;
+		}else if(r1_2_6==null){
+			erros++;
+		}else if(r1_2_7==null){
+			erros++;
+		}
+
+		if(erros>0){
+            //caso algum não esteja preenchido, exibe mensagem de erro
+			mensagem.className = "mensagem-alerta";
+			mensagem.textContent = "Por favor preencha todos os campos";
+			mensagem.style.display = "inline-block";
+			window.scrollTo(0, 0);
+			return false;
+		}else{
+			//console.log("\nChecando respostas"+id_atividade);			            
+			//verificando qual tentativa é esta.
+            envio=1;
+            verificando_tentativas("quant_"+id_atividade);            
+			if(erros>0){
+				return false;
+			}			
+		}
+	};
+
+	//Depois que verifica as tentativas de resposta, verifica as respostas salvas;
+	window .addEventListener( "evObtemDadosRespostaAtividade" , resultadoObtemRespostaAtividade, false );
+    function resultadoObtemRespostaAtividade(evento){
+        //console.log("\nObtendo as respostas: ");
+        console.log("Status do evento: "+evento.detail['status']);          
+        //verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
+        if(evento.detail["status"]=="200"){           
+            nota_atividade = evento.detail.data.nota;
+            //console.log("Voltando para a função principal. Quant respostas: "+quant_respostas+" e max: "+max_quant_tentativas);            
+            texto_mensagem_nota="<br>Sua nota mais alta é "+nota_atividade;            
+            var texto_mensagem_total="";
+            texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+texto_mensagem_revisao_0;         
+            verifica_revisao();
+            if(revisao_vista==1){
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+texto_mensagem_revisao_1;         
+            }else if(quant_respostas>=max_quant_tentativas){
+                console.log("\n\nMax de mensagens aqui");
+                //Já atingiu o máximo de tentativas
+                if(envio==1){
+                    console.log("\n\nEnvio=1");
+                    mensagem.className = "mensagem-alerta";
+    			    mensagem.innerHTML = "Você já fez suas "+max_quant_tentativas+" tentativas.";
+	    		    mensagem.style.display = "inline-block";                                     
+                }
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PROSSEGUIR &#10095;</a><p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                                
+                
+                erros++;
+            }else if(nota_atividade==10){
+                console.log("\nNota 10 aqui");
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a nota máxima!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
+            }else if(nota_atividade>=6){
+                console.log("\nAtingiu a média aqui");
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a !<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                
+            }
+            else{
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você deve atingir a média ou fazer as três tentativas para poder ver o gabarito."+texto_mensagem_fim;
+            }            
+            mensagem_tentativas.innerHTML=texto_mensagem_total;            
+            window.scrollTo(0, 0);
+        }
+        if(erros==0){       
+            //se ainda não tiver enviado as respostas, ou se for dentro do máximio de tentativas,
+            // registra as re respostas com as funções da API:
+            console.log("Registrando respostas:");
+            console.log(evento.detail);
+            API.registrarRespostaAtividade({
+                "identificador": "uni1_ativ1",//modificar
+                "questoes": [
+                    {
+                        //Onde houver os exercícios de drag and drop precisa pegar o innerHTML
+                        "identificador": "r1_1",                    
+                        "gabaritos": [
+                            { "chave": "r1_1_1", "valor": (r1_1_1==true ? "v" : "f")},
+                            { "chave": "r1_1_2", "valor": (r1_1_2==true ? "v" : "f")},
+                            { "chave": "r1_1_3", "valor": (r1_1_3==true ? "v" : "f")},
+                            { "chave": "r1_1_4", "valor": (r1_1_4==true ? "v" : "f")}                            						
+                        ]
+                    },{                    
+                        "identificador": "r1_2",                    
+                        "gabaritos": [
+                            { "chave": "r1_2_1", "valor": r1_2_1.innerHTML},
+                            { "chave": "r1_2_2", "valor": r1_2_2.innerHTML},
+                            { "chave": "r1_2_3", "valor": r1_2_3.innerHTML},
+                            { "chave": "r1_2_4", "valor": r1_2_4.innerHTML},	
+                            { "chave": "r1_2_5", "valor": r1_2_5.innerHTML},
+                            { "chave": "r1_2_6", "valor": r1_2_6.innerHTML},
+                            { "chave": "r1_2_7", "valor": r1_2_7.innerHTML}
+                        ]
+                    },{
+                        //Onde houver os checkbox, testar se é true para registrar v ou f
+                        "identificador": "r1_3",                    
+                        "gabaritos": [
+                            { "chave": "r1_3_1", "valor": (r1_3_1==true ? "v" : "f")},
+                            { "chave": "r1_3_2", "valor": (r1_3_2==true ? "v" : "f")},
+                            { "chave": "r1_3_3", "valor": (r1_3_3==true ? "v" : "f")},
+                            { "chave": "r1_3_4", "valor": (r1_3_4==true ? "v" : "f")}							
+                        ]
+                    }
+                ]
+            })           
+        }        	
+	};
+
+    //função de controle, pra exibir no console o resultado do envio das respostas (registraRespostaAtividade)
+	window .addEventListener( "evRegistraRespostaAtividade" ,resultadoRegistrarRespostaAtividade, false );
+    function resultadoRegistrarRespostaAtividade (evento){
+        console .log(evento.detail);
+        nota_atividade_nova= evento.detail.data.notaAtividade;
+        if(erros==0){
+            //se não houver erro, exibe mensagem de OK
+            //console.log("Aqui envia uma nova tentativa, são "+quant_respostas+" salvas");
+			mensagem.className = "mensagem-ok";
+			mensagem.style.display ="inline-block";			
+            if(nota_atividade_nova>nota_atividade){
+                nota_atividade=nota_atividade_nova;
+            }
+            //esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
+            mensagem.innerHTML="Dados Enviados com sucesso!<br />";
+            texto_mensagem_nota="<br />Sua nota foi: "+nota_atividade_nova+"<br />Sua nota mais alta nesta atividade é: "+nota_atividade;
+            let texto_mensagem_total="";
+            verifica_revisao();
+            if(revisao_vista==1){
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_revisao_1;
+            }else if(quant_respostas>=max_quant_tentativas){
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
+            }else if(nota_atividade==10){
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a nota máxima!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
+            }else if(nota_atividade>=6){
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_revisao_0+texto_mensagem_fim;
+            }
+            else{
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você deve atingir a média ou fazer as três tentativas para poder ver o gabarito."+texto_mensagem_fim;
+            }            
+            
+            mensagem_tentativas.innerHTML=texto_mensagem_total;            
+            //"Ocorreu tudo certo. Tem que aparecer o link
+			window.scrollTo(0, 0);
+        }else{
+            //caso algum não esteja preenchido, exibe mensagem de erro
+			mensagem.className = "mensagem-alerta";
+			mensagem.innerHTML = "Ocorreu algum erro! Tente Novamente...";
+			mensagem.style.display = "inline-block";
+			window.scrollTo(0, 0);
+        }
+    }
+
+    //// Eventos do Drag and Drop /////
+    var dragSrcEl = null;
+
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev){
+        /**ev.dataTransfer.setData("text",ev.target.id); **/
+        ev.dataTransfer.setData ("src", ev.target.id);
+                    
+    }
+
+    function drop(ev){
+        
+        ev.preventDefault();
+        // var data=ev.dataTransfer.getData("text");
+        // ev.target.appendChild(document.getElementById(data));
+
+        var src = document.getElementById(ev.dataTransfer.getData ("src"));
+        var srcParent = src.parentNode;
+        var tgt = ev.currentTarget.firstElementChild;
+        
+        ev.currentTarget.replaceChild (src, tgt);
+        srcParent.appendChild (tgt);
+    }
+
+    function valorSelecionado(sel) {
+        var val = sel.selectedIndex;
+        var id = sel.id;   
+        if(val==0){
+            sel.classList.remove("select-respondido");
+        }else{       
+            sel.classList.add("select-respondido");
+        }
+        var selects = document.getElementsByTagName('select');
+        for(var i = 0; i < selects.length; ++i) {
+            var s = selects[i];            
+            if(s.id != id && s.selectedIndex!=0){                
+                if(s.selectedIndex==val){                     
+                    s.selectedIndex=0;                    
+                    s.classList.remove("select-respondido");
+                }                
+            }
+        } 
+    }
+
+</script>
+
+</body>
+</html>

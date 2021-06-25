@@ -275,7 +275,7 @@ html{
     
 }
 
-.area-inputs, .area-opcoes{
+.area-inputs, .area-opcoes, .caixa-box{
     display: inline-block;
     vertical-align: top;
     border-radius: 8px;      
@@ -371,6 +371,45 @@ html{
     height: 70px;
     width: 200px;
 }
+
+
+/**
+Caixas de Select - Uni2 questão 3
+**/
+
+.caixa-box{    
+    border: none;
+}
+
+.caixa-box select{        
+    width: 180px;
+    padding: 2px;
+    border-radius: 10px;
+    font-size: 0.8em;    
+}
+
+.caixa-box select option{
+    text-align: center;    
+}
+
+.caixa-box select.select-respondido{
+    background-color: #E73435;
+    color: #fff;
+}
+.caixa-box select.select-respondido option, .caixa-box select option{
+    background-color: #E73435;
+    color: #fff;
+}
+
+.caixa-box select.select-respondido option:not(:checked), .caixa-box select option:not(:checked){
+    background-color: #fff;
+    color: #E73435;
+}
+
+.caixa-box select option:hover{
+    background-color: white;
+}
+
 
 .legenda-resposta{
     color:#E73435;
@@ -692,7 +731,7 @@ input[type="checkbox"]:checked + label {
         margin-right: 0;
     }
 
-    .area-inputs, .area-opcoes{
+    .area-inputs, .area-opcoes, .caixa-box{
         display: block;
         margin-left: 20px;
     }
