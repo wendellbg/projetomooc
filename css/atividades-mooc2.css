@@ -372,6 +372,10 @@ html{
     width: 200px;
 }
 
+.caixa-drop-grande{    
+    padding: 10px;  
+    width: 70%;       
+}
 
 /**
 Caixas de Select - Uni2 questão 3
@@ -408,6 +412,35 @@ Caixas de Select - Uni2 questão 3
 
 .caixa-box select option:hover{
     background-color: white;
+}
+
+/*** Select múltiplo - u2q2 **/
+
+.select-multiplo{
+    width: 80%;
+    padding: 2px;
+    text-align: center;    
+    border-radius: 10px;
+    margin: auto;    
+    overflow: hidden;
+}
+
+.select-multiplo option{
+    padding: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 4px;
+    color:#020e36;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+
+.select-multiplo option:hover{
+    border-color: #020e36;
+}
+
+.select-multiplo option:checked{
+    background: #E73435 linear-gradient(0deg, #E73435 0%, #E73435 100%);    
 }
 
 
@@ -596,7 +629,7 @@ input[type="checkbox"]:checked + label {
     margin: auto;
     height: 200px;
     padding: 0.5em;
-    color: #2a5caa;
+    color: #020e36;
     font-size: 1em;
     border-radius:8px;    
 }

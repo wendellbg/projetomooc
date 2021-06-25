@@ -42,7 +42,7 @@
 <!-- Header -->
 <header id="header">
 	<div class="logo">
-		<a href="tela01.html">UNIDADE 2</a>
+		<a href="tela01.html">UNIDADE 3</a>
 		<h3>O Trabalho Como Exercício Social da Técnica</h3>
 	</div>
 </header>
@@ -94,15 +94,112 @@
                     <div id='mensagem-tentativas' class="atividades">                        
 					</div>
                     <form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni2" method="POST">
+                        
                         <div class="questao">
-                            <div class="titulo-questao">Questão 1</div>
+                            <div class="titulo-questao">Questão 2</div>
                             <div class="enunciado-questao">
-                                <span>Trabalho, Técnica e Tecnologia são termos chave para entender a Educação Profissional.  No entanto, raramente são pensados como forma de saber e acabam reduzidos ao senso comum. Escolha uma profissão presente em seu cotidiano e descreva alguns dos saberes necessários para executá-la.</span>
+                                <span>Em relação às dimensões do trabalho, relacione cada dimensão ao seu conceito.</span>
                             </div>
                             <div class="area-respostas">
-                                <textarea name="r2_1_texto" class="resposta-texto" id='r2_1_texto'></textarea>
-                             </div>                                                                              
-                        </div> 
+                                <div class="linha-respostas">
+                                    <div class='texto-resposta'>                                        
+                                        <span class="texto-opcao">a) Em sua ação individual e em interação com outros, o trabalhador desenvolve esquemas para dar conta de compreender e organizar a atividade em determinadas situações de trabalho. Tais situações podem apresentar semelhanças em sua estrutura ou grandes diferenças e por isso se fala aqui na existência, para cada atividade profissional, de diferentes “classes de situações”
+                                        </span>                                            
+                                    </div>                                    
+                                    <div class="caixa-box">                                            
+                                        <select name="r2_3_a" id="r2_3_a" class="resposta-select" onchange="valorSelecionado(this)">
+                                            <option  id="r3_2_a_0" name="r3_2_a_0" value="">---</option>
+                                            <option  id="r3_2_a_1" name="r3_2_a_1" value="Composição">Dimensão Cognitiva</option>
+                                            <option  id="r3_2_a_2" name="r3_2_a_2" value="Finalidade">Dimensão Cultural</option>>
+                                            <option  id="r3_2_a_3" name="r3_2_a_3" value="Processo">Dimensão do Prazer</option>>
+                                            <option  id="r3_2_a_4" name="r3_2_a_4" value="Técnica e cultura">Dimensão Ética</option>
+                                            <option  id="r3_2_a_5" name="r3_2_a_5" value="Validação do conhecimento técnico">Dimensão Identitária</option>
+                                            <option  id="r3_2_a_6" name="r3_2_a_5" value="Validação do conhecimento técnico">Dimensão Pessoal</option>
+                                        </select>
+                                    </div> 
+                                </div>
+
+                                <div class="linha-respostas">
+                                    <div class="texto-resposta">                                        
+                                        <span class="texto-opcao">b) Reconhecimento de que a entrada no mundo do trabalho é também a participação da cultura técnica e profissional, da qual o sujeito faz parte.</b></span>                                                                                   
+                                    </div>
+                                    <div class="area-inputs caixa-box">                                            
+                                        <select name="r2_3_b"  id='r2_3_b' onchange="valorSelecionado(this)">
+                                            <option  id="r2_3_b_0" name="r2_3_b_0" value="">---</option>
+                                            <option  id="r2_3_b_1" name="r2_3_b_1" value="Composição">Composição</option>
+                                            <option  id="r2_3_b_2" name="r2_3_b_2" value="Finalidade">Finalidade</option>>
+                                            <option  id="r2_3_b_3" name="r2_3_b_3" value="Processo">Processo</option>>
+                                            <option  id="r2_3_b_4" name="r2_3_b_4" value="Técnica e cultura">Técnica e cultura</option>
+                                            <option  id="r2_3_b_5" name="r2_3_b_5" value="Validação do conhecimento técnico">Validação do conhecimento técnico</option>
+                                        </select>
+                                    </div>                                        
+                                </div>
+
+                                <div class="linha-respostas">
+                                    <div class="texto-resposta">                                        
+                                        <span class="texto-opcao">c) Se desdobra nos valores que a ação do trabalhador envolve, que vão desde aqueles de uma ética profissional típica de determinada categoria, passando por práticas educacionais até valores sociais mais gerais.</span>                                                                                   
+                                    </div>
+                                    <div class="area-inputs caixa-box">                                            
+                                        <select name="r2_3_c" id='r2_3_c' onchange="valorSelecionado(this)">
+                                            <option  id="r2_3_c_0" name="r2_3_c_0" value="">---</option>
+                                            <option  id="r2_3_c_1" name="r2_3_c_1" value="Composição">Composição</option>
+                                            <option  id="r2_3_c_2" name="r2_3_c_2" value="Finalidade">Finalidade</option>>
+                                            <option  id="r2_3_c_3" name="r2_3_c_3" value="Processo">Processo</option>>
+                                            <option  id="r2_3_c_4" name="r2_3_c_4" value="Técnica e cultura">Técnica e cultura</option>
+                                            <option  id="r2_3_c_5" name="r2_3_c_5" value="Validação do conhecimento técnico">Validação do conhecimento técnico</option>
+                                        </select>
+                                    </div>                                         
+                                </div>
+
+                                <div class="linha-respostas">
+                                    <div class="texto-resposta">                                        
+                                        <span class="texto-opcao">d) Singularidade com que cada profissional atua e pode ser apreciada em qualquer atividade, apreciada esteticamente ou não.</span>                                                                                   
+                                    </div>
+                                    <div class="area-inputs caixa-box">                                            
+                                        <select name="r2_3_d" id='r2_3_d'  onchange="valorSelecionado(this)">
+                                            <option  id="r2_3_d_0" name="r2_3_d_0" value="">---</option>
+                                            <option  id="r2_3_d_1" name="r2_3_d_1" value="Composição">Composição</option>
+                                            <option  id="r2_3_d_2" name="r2_3_d_2" value="Finalidade">Finalidade</option>>
+                                            <option  id="r2_3_d_3" name="r2_3_d_3" value="Processo">Processo</option>>
+                                            <option  id="r2_3_d_4" name="r2_3_d_4" value="Técnica e cultura">Técnica e cultura</option>
+                                            <option  id="r2_3_d_5" name="r2_3_d_5" value="Validação do conhecimento técnico">Validação do conhecimento técnico</option>
+                                        </select>
+                                    </div>                                           
+                                </div>
+
+                                <div class="linha-respostas">
+                                    <div class="texto-resposta">                                        
+                                        <span class="texto-opcao">e) Vislumbrar uma possível superação da divisão entre formação humana e formação técnica, formação intelectual e formação prática, por ajudar a evitar o desligamento do ato técnico das suas implicações sociais, éticas, econômicas, ambientais.</span>                                                                                   
+                                    </div>
+                                    <div class="area-inputs caixa-box">                                            
+                                        <select name="r2_3_e"  id='r2_3_e' onchange="valorSelecionado(this)">
+                                            <option  id="r2_3_e_0" name="r2_3_e_0" value="">---</option>
+                                            <option  id="r2_3_e_1" name="r2_3_e_1" value="Composição">Composição</option>
+                                            <option  id="r2_3_e_2" name="r2_3_e_2" value="Finalidade">Finalidade</option>>
+                                            <option  id="r2_3_e_3" name="r2_3_e_3" value="Processo">Processo</option>>
+                                            <option  id="r2_3_e_4" name="r2_3_e_4" value="Técnica e cultura">Técnica e cultura</option>
+                                            <option  id="r2_3_e_5" name="r2_3_e_5" value="Validação do conhecimento técnico">Validação do conhecimento técnico</option>
+                                        </select>
+                                    </div>                                          
+                                </div>
+
+                                <div class="linha-respostas">
+                                    <div class="texto-resposta">                                        
+                                        <span class="texto-opcao">f) Muitos trabalhadores que fazem seu trabalho bem feito pelo prazer e orgulho no resultado de seu trabalho, sentem realização pessoal em suas tarefas, cujo reforço é o elogio ou agradecimento que recebem, muito mais que o retorno financeiro.</span>                                                                                   
+                                    </div>
+                                    <div class="area-inputs caixa-box">                                            
+                                        <select name="r2_3_e"  id='r2_3_e' onchange="valorSelecionado(this)">
+                                            <option  id="r2_3_e_0" name="r2_3_e_0" value="">---</option>
+                                            <option  id="r2_3_e_1" name="r2_3_e_1" value="Composição">Composição</option>
+                                            <option  id="r2_3_e_2" name="r2_3_e_2" value="Finalidade">Finalidade</option>>
+                                            <option  id="r2_3_e_3" name="r2_3_e_3" value="Processo">Processo</option>>
+                                            <option  id="r2_3_e_4" name="r2_3_e_4" value="Técnica e cultura">Técnica e cultura</option>
+                                            <option  id="r2_3_e_5" name="r2_3_e_5" value="Validação do conhecimento técnico">Validação do conhecimento técnico</option>
+                                        </select>
+                                    </div>                                          
+                                </div>
+                            </div>
+                        </div>
                                 
 
                         <div class="questao">
@@ -125,95 +222,6 @@
                                 </div>								
                             </div>                                   
                         </div> 
-
-                            
-                        <div class="questao">
-                            <div class="titulo-questao">Questão 3</div>
-                            <div class="enunciado-questao">
-                                <span>Relacione a seguir os sentidos possíveis para a técnica:</span>
-                            </div>
-                            <div class="area-respostas">
-                                <div class="linha-respostas">
-                                    <div class='texto-resposta'>                                        
-                                        <span class="texto-opcao">a) Um conjunto não redutível a conteúdos cognitivos em sentido clássico, isto é, um conteúdo verbalizado e formalizado. Podemos, então, ir além do mito de que "saber" é "saber falar sobre".</span>                                            
-                                    </div>                                    
-                                    <div class="caixa-box">                                            
-                                        <select name="r2_3_a" id="r2_3_a" class="resposta-select" onchange="valorSelecionado(this)">
-                                            <option  id="r2_3_a_0" name="r2_3_a_0" value="">---</option>
-                                            <option  id="r2_3_a_1" name="r2_3_a_1" value="Composição">Composição</option>
-                                            <option  id="r2_3_a_2" name="r2_3_a_2" value="Finalidade">Finalidade</option>>
-                                            <option  id="r2_3_a_3" name="r2_3_a_3" value="Processo">Processo</option>>
-                                            <option  id="r2_3_a_4" name="r2_3_a_4" value="Técnica e cultura">Técnica e cultura</option>
-                                            <option  id="r2_3_a_5" name="r2_3_a_5" value="Validação do conhecimento técnico">Validação do conhecimento técnico</option>
-                                        </select>
-                                    </div> 
-                                </div>
-
-                                <div class="linha-respostas">
-                                    <div class="texto-resposta">                                        
-                                        <span class="texto-opcao">b) Modos de ação, estruturas conceituais para cada situação de trabalho (ou classe de situação, como veremos mais adiante), lógicas próprias, ferramentas, sistemas, máquinas, valores, aspectos éticos, políticos, sociais, ambientais, econômicos.</b></span>                                                                                   
-                                    </div>
-                                    <div class="area-inputs caixa-box">                                            
-                                        <select name="r2_3_b"  id='r2_3_b' onchange="valorSelecionado(this)">
-                                            <option  id="r2_3_b_0" name="r2_3_b_0" value="">---</option>
-                                            <option  id="r2_3_b_1" name="r2_3_b_1" value="Composição">Composição</option>
-                                            <option  id="r2_3_b_2" name="r2_3_b_2" value="Finalidade">Finalidade</option>>
-                                            <option  id="r2_3_b_3" name="r2_3_b_3" value="Processo">Processo</option>>
-                                            <option  id="r2_3_b_4" name="r2_3_b_4" value="Técnica e cultura">Técnica e cultura</option>
-                                            <option  id="r2_3_b_5" name="r2_3_b_5" value="Validação do conhecimento técnico">Validação do conhecimento técnico</option>
-                                        </select>
-                                    </div>                                        
-                                </div>
-
-                                <div class="linha-respostas">
-                                    <div class="texto-resposta">                                        
-                                        <span class="texto-opcao">c) Busca uma efetiva intervenção no mundo para a produção da existência individual e coletiva;</span>                                                                                   
-                                    </div>
-                                    <div class="area-inputs caixa-box">                                            
-                                        <select name="r2_3_c" id='r2_3_c' onchange="valorSelecionado(this)">
-                                            <option  id="r2_3_c_0" name="r2_3_c_0" value="">---</option>
-                                            <option  id="r2_3_c_1" name="r2_3_c_1" value="Composição">Composição</option>
-                                            <option  id="r2_3_c_2" name="r2_3_c_2" value="Finalidade">Finalidade</option>>
-                                            <option  id="r2_3_c_3" name="r2_3_c_3" value="Processo">Processo</option>>
-                                            <option  id="r2_3_c_4" name="r2_3_c_4" value="Técnica e cultura">Técnica e cultura</option>
-                                            <option  id="r2_3_c_5" name="r2_3_c_5" value="Validação do conhecimento técnico">Validação do conhecimento técnico</option>
-                                        </select>
-                                    </div>                                         
-                                </div>
-
-                                <div class="linha-respostas">
-                                    <div class="texto-resposta">                                        
-                                        <span class="texto-opcao">d) Valida-se tanto material quanto socialmente pelos efeitos produzidos, sua eficácia. Isso difere da epistemologia clássica da ciência, em que predomina a validação do conhecimento pela demonstração lógica, teórica e discursiva. Cuidado! Aqui, ser eficaz não é a mesma coisa que ser "útil", e sim pode ser entendido pelo "ato que produz o efeito esperado" (Sigaut, 2006).</span>                                                                                   
-                                    </div>
-                                    <div class="area-inputs caixa-box">                                            
-                                        <select name="r2_3_d" id='r2_3_d'  onchange="valorSelecionado(this)">
-                                            <option  id="r2_3_d_0" name="r2_3_d_0" value="">---</option>
-                                            <option  id="r2_3_d_1" name="r2_3_d_1" value="Composição">Composição</option>
-                                            <option  id="r2_3_d_2" name="r2_3_d_2" value="Finalidade">Finalidade</option>>
-                                            <option  id="r2_3_d_3" name="r2_3_d_3" value="Processo">Processo</option>>
-                                            <option  id="r2_3_d_4" name="r2_3_d_4" value="Técnica e cultura">Técnica e cultura</option>
-                                            <option  id="r2_3_d_5" name="r2_3_d_5" value="Validação do conhecimento técnico">Validação do conhecimento técnico</option>
-                                        </select>
-                                    </div>                                           
-                                </div>
-
-                                <div class="linha-respostas">
-                                    <div class="texto-resposta">                                        
-                                        <span class="texto-opcao">e) A técnica está, assim, no coração do laço social (Sigaut, 2004), e não mais pode ser pensada como algo externo ao ser humano e à cultura. A cultura não é o lado subjetivo, de uma moeda com outro lado somente objetivo, geralmente com conotação ou valor abjeto (a repulsa ao trabalho, à técnica)</span>                                                                                   
-                                    </div>
-                                    <div class="area-inputs caixa-box">                                            
-                                        <select name="r2_3_e"  id='r2_3_e' onchange="valorSelecionado(this)">
-                                            <option  id="r2_3_e_0" name="r2_3_e_0" value="">---</option>
-                                            <option  id="r2_3_e_1" name="r2_3_e_1" value="Composição">Composição</option>
-                                            <option  id="r2_3_e_2" name="r2_3_e_2" value="Finalidade">Finalidade</option>>
-                                            <option  id="r2_3_e_3" name="r2_3_e_3" value="Processo">Processo</option>>
-                                            <option  id="r2_3_e_4" name="r2_3_e_4" value="Técnica e cultura">Técnica e cultura</option>
-                                            <option  id="r2_3_e_5" name="r2_3_e_5" value="Validação do conhecimento técnico">Validação do conhecimento técnico</option>
-                                        </select>
-                                    </div>                                          
-                                </div>
-                            </div>
-                        </div>
                             
                         <div class="botao-atividade">
                             <button type="button" id="botao-atividade-uni1" onclick="salvarDados()" ><i class="fas fa-check"></i> ENVIAR RESPOSTAS</button>
