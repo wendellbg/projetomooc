@@ -279,8 +279,8 @@ html{
     display: inline-block;
     vertical-align: top;
     border-radius: 8px;      
-    width: 140px;    
-    margin: 10px 2px 5px 5px;
+    width: 35%;    
+    margin: 5px 0;
     padding: 1px;
     border: 2px dashed #fff ;    
 }
@@ -386,7 +386,7 @@ Caixas de Select - Uni2 questão 3
 }
 
 .caixa-box select{        
-    width: 180px;
+    width: 100%;
     padding: 2px;
     border-radius: 10px;
     font-size: 0.8em;    
