@@ -239,7 +239,7 @@ html{
 
 .texto-resposta{    
     position: relative;
-    width: 60%;
+    width: 50%;
     font-size: 0.8em;    
     margin-left: 0;
     margin-right: 2%;
@@ -280,7 +280,7 @@ html{
     vertical-align: top;
     border-radius: 8px;      
     width: 35%;    
-    margin: 5px 0;
+    margin: 5px;
     padding: 1px;
     border: 2px dashed #fff ;    
 }
