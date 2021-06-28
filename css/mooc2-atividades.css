@@ -1,0 +1,127 @@
+/* Atividades */
+.questao{
+	background-color: #020e36;
+	color: #fff;
+}
+
+.titulo-questao {
+	background-color: #E73435;
+	color: #020e36;
+}
+
+.titulo-questao::before{
+	border-color: transparent #E73435 transparent transparent;
+}
+
+.enunciado-questao a.link-texto{
+	color: #E73435;
+}
+
+.enunciado-questao a.link-texto:hover{
+	color: #020e36;
+	background-color: #fff;
+}
+
+.enunciado-questao p.link a:hover{
+	background-color: #E73435;
+}
+
+.linha-branca{
+	border: 2px solid #020e36;
+}
+
+.input-categorias input{
+	color: #020e36;
+}
+
+.resposta-marcada{
+	background-color: #E73435;
+	color: #020e36;
+}
+
+.area-inputs span.palavra-resposta{
+	background-color: #E73435;
+}
+
+.caixa-drop_2_3b .input-texto{
+	background-color: #E73435;
+	border: 2px solid #020e36;
+}
+
+.caixa-drop_2_3b .input-texto:focus{
+	border: 2px solid #E73435;
+}
+
+.caixa-box select.select-respondido{
+	background-color: #E73435;
+	color: #fff;
+}
+.caixa-box select.select-respondido option, .caixa-box select option{
+	background-color: #E73435;
+	color: #fff;
+}
+
+.caixa-box select.select-respondido option:not(:checked), .caixa-box select option:not(:checked){
+	background-color: #fff;
+	color: #E73435;
+}
+
+.legenda-resposta{
+	color:#E73435;
+}
+
+.palavra-resposta{
+	background-color: white;
+	color: #020e36;
+}
+
+.texto-legenda{
+	background-color: #fff;
+	border: 2px solid #020e36;
+	color: #020e36;
+}
+
+.area-radios input[type=radio]:checked + label::after {
+	background-color: #020e36;
+}
+.area-radios input[type=radio]:checked + label::before{
+	border: solid 2px #020e36;
+}
+
+.area-radios input[type=radio]:checked + label{
+	background-color: #E73435;
+	color: #020e36;
+}
+
+input[type="checkbox"] + label {
+	border: 2px solid #020e36;
+}
+
+input[type="checkbox"]:checked + label::after {
+	border-right: solid 3px #2a5caa;
+	border-bottom: solid 3px #2a5caa;
+}
+
+input[type="checkbox"]:checked + label {
+	background-color: #E73435;
+	color: #020e36;
+}
+
+.resposta-correta span{
+	color:#E73435;
+}
+
+.atividades{
+	color: #020e36;
+	background-color: #E73435;
+}
+
+.botao-mensagem{
+	border-color: #020e36;
+	background-color:#E73435;
+	color:#020e36;
+}
+.botao-mensagem:hover{
+	background-color: #020e36;
+	color:#E73435;
+}
