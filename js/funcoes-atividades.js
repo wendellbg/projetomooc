@@ -7,7 +7,7 @@ var revisao_vista=0;
 
 var mensagem = document.getElementById("mensagem-alerta"); 
 var mensagem_tentativas = document.getElementById("mensagem-tentativas");  
-var texto_mensagem_padrao_0="Responda às atividades e, ao final, clique em \"Enviar Respostas\".<br>Você tem até 3 tentavias de envio e ficará registrada a nota mais alta.";
+var texto_mensagem_padrao_0="Responda às atividades e, ao final, clique em \"Enviar Respostas\".<br>Você tem até 3 tentativas de envio e ficará registrada a nota mais alta.";
 var texto_mensagem_padrao="Lembre-se, você tem até 3 tentativas de envio e ficará registrada a nota mais alta.";
 var texto_mensagem_tentativa="";
 var texto_mensagem_nota="";
