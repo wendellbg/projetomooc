@@ -3,19 +3,19 @@ html{
 }
 
 .questao{
-    background-color: #020e36;
+    /*background-color: #020e36;*/
     border-radius: 8px;
     padding-top: 1em;
     padding-left: 1em;
     padding-bottom: 1em;
     margin: 1em 0 2em 0;
-    color: #fff;
+    /*color: #fff;*/
     font-size: 1.5em;
 }
 
 .titulo-questao{
-    background-color: #E73435;
-    color: #020e36;
+    /*background-color: #E73435;*/
+    /*color: #020e36;*/
     font-family: "Musket", sans-serif;
     position: relative;
     display: block;
@@ -35,7 +35,7 @@ html{
     width: 50px;
     border-style: solid;
     border-width: 25px 40px 25px 0;
-    border-color: transparent #E73435 transparent transparent;  
+    /*border-color: transparent #E73435 transparent transparent;  */
     display: inline-block;
     vertical-align: middle;
     margin-left: -50px;    
@@ -78,13 +78,13 @@ html{
 
 .enunciado-questao a.link-texto{
     padding: 2px 5px;   
-    color: #E73435;
+    /*color: #E73435;*/
     text-decoration: underline;
 }
 
 .enunciado-questao a.link-texto:hover{
-    color: #020e36;
-    background-color: #fff;
+    /*color: #020e36;*/
+    /*background-color: #fff;*/
     border-radius: 4px;    
 }
 
@@ -99,7 +99,7 @@ html{
 }
 
 .enunciado-questao p.link a:hover{
-    background-color: #E73435;
+    /*background-color: #E73435;*/
 }
 
 .area-respostas{    
@@ -114,7 +114,7 @@ html{
 
 .linha-branca{
     width: 95%;
-    border: 2px solid #020e36;
+    /*border: 2px solid #020e36;*/
     border-radius: 5px;
     margin-bottom: 15px;
     padding-top: 0;
@@ -191,12 +191,12 @@ html{
 .input-categorias input{
     margin-left: -4px;
     transform: scale(1.5);
-    color: #020e36;
+    /*color: #020e36;*/
 }
 
 .resposta-marcada{
-    background-color: #E73435;
-    color: #020e36;
+    /*background-color: #E73435;*/
+    /*color: #020e36;*/
     font-weight: bold;
 }
 
@@ -239,7 +239,7 @@ html{
 
 .texto-resposta{    
     position: relative;
-    width: 50%;
+    width: 60%;
     font-size: 0.8em;    
     margin-left: 0;
     margin-right: 2%;
@@ -261,7 +261,7 @@ html{
 }
 
 .area-inputs span.palavra-resposta{
-    background-color: #E73435;
+    /*background-color: #E73435;*/
     font-weight: bold;    
 }
 
@@ -279,8 +279,8 @@ html{
     display: inline-block;
     vertical-align: top;
     border-radius: 8px;      
-    width: 35%;    
-    margin: 5px;
+    width: 140px;    
+    margin: 10px 2px 5px 5px;
     padding: 1px;
     border: 2px dashed #fff ;    
 }
@@ -323,14 +323,14 @@ html{
     width: 100%;
     min-height: 45px;   
     font-size: 0.8em;
-    background-color: #E73435;
-    border: 2px solid #020e36;
+    /*background-color: #E73435;*/
+    /*border: 2px solid #020e36;*/
     outline: none;
 }
 
 .caixa-drop_2_3b .input-texto:focus{
     outline: none;
-    border: 2px solid #E73435;    
+    /*border: 2px solid #E73435;    */
 }
 
 .caixa-drop_2_3b .input-texto:placeholder-shown{
@@ -372,10 +372,6 @@ html{
     width: 200px;
 }
 
-.caixa-drop-grande{    
-    padding: 10px;  
-    width: 70%;       
-}
 
 /**
 Caixas de Select - Uni2 questão 3
@@ -386,7 +382,7 @@ Caixas de Select - Uni2 questão 3
 }
 
 .caixa-box select{        
-    width: 100%;
+    width: 180px;
     padding: 2px;
     border-radius: 10px;
     font-size: 0.8em;    
@@ -397,55 +393,26 @@ Caixas de Select - Uni2 questão 3
 }
 
 .caixa-box select.select-respondido{
-    background-color: #E73435;
-    color: #fff;
+    /*background-color: #E73435;*/
+    /*color: #fff;*/
 }
 .caixa-box select.select-respondido option, .caixa-box select option{
-    background-color: #E73435;
-    color: #fff;
+    /*background-color: #E73435;*/
+    /*color: #fff;*/
 }
 
 .caixa-box select.select-respondido option:not(:checked), .caixa-box select option:not(:checked){
-    background-color: #fff;
-    color: #E73435;
+    /*background-color: #fff;*/
+    /*color: #E73435;*/
 }
 
 .caixa-box select option:hover{
     background-color: white;
 }
 
-/*** Select múltiplo - u2q2 **/
-
-.select-multiplo{
-    width: 80%;
-    padding: 2px;
-    text-align: center;    
-    border-radius: 10px;
-    margin: auto;    
-    overflow: hidden;
-}
-
-.select-multiplo option{
-    padding: 5px;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin: 4px;
-    color:#020e36;
-    border-radius: 10px;
-    border: 2px solid #fff;
-}
-
-.select-multiplo option:hover{
-    border-color: #020e36;
-}
-
-.select-multiplo option:checked{
-    background: #E73435 linear-gradient(0deg, #E73435 0%, #E73435 100%);    
-}
-
 
 .legenda-resposta{
-    color:#E73435;
+    /*color:#E73435;*/
     margin-bottom: 0;
     margin-top: 1em;
 }
@@ -454,8 +421,8 @@ Caixas de Select - Uni2 questão 3
     width: 100%;    
     height: 100%;
     display: inline-block;
-    background-color: white;
-    color: #020e36;
+    /*background-color: white;*/
+    /*color: #020e36;*/
     border-radius: 8px;        
     text-align: center;
     vertical-align: middle;
@@ -472,9 +439,9 @@ Caixas de Select - Uni2 questão 3
     border-radius: 8px;
     padding: 5px;    
     position: fixed;
-    background-color: #fff;
-    border: 2px solid #020e36;
-    color: #020e36;
+    /*background-color: #fff;*/
+    /*border: 2px solid #020e36;*/
+    /*color: #020e36;*/
     bottom: 5%;
     left: 15%;    
     margin-right: 25%;    
@@ -528,7 +495,7 @@ Caixas de Select - Uni2 questão 3
 
 .area-radios input[type=radio]:checked + label::after {
     content: '';
-    background-color: #020e36;
+    /*background-color: #020e36;*/
     width: 17px;
     height: 17px;
     border-radius: 50%;
@@ -544,13 +511,13 @@ Caixas de Select - Uni2 questão 3
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    border: solid 2px #020e36;
+    /*border: solid 2px #020e36;*/
     vertical-align: middle;
 }
 
 .area-radios input[type=radio]:checked + label{
-    background-color: #E73435;
-    color: #020e36;
+    /*background-color: #E73435;*/
+    /*color: #020e36;*/
     font-weight: bold;
 }
 
@@ -567,7 +534,7 @@ input[type="checkbox"] + label {
   padding-right: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
-  border: 2px solid #020e36;
+  /*border: 2px solid #020e36;*/
   border-radius: 10px;
   vertical-align: top;
   display: inline-block;
@@ -598,14 +565,14 @@ input[type="checkbox"] + label::before {
     top: 0;
     width: 10px;
     height: 20px;
-    border-right: solid 3px #2a5caa;
-    border-bottom: solid 3px #2a5caa;
+    /*border-right: solid 3px #2a5caa;*/
+    /*border-bottom: solid 3px #2a5caa;*/
     transform: rotate(45deg);
 }
 
 input[type="checkbox"]:checked + label {
-    background-color: #E73435;
-    color: #020e36;
+    /*background-color: #E73435;*/
+    /*color: #020e36;*/
     font-weight: bold;
 }
 
@@ -629,7 +596,7 @@ input[type="checkbox"]:checked + label {
     margin: auto;
     height: 200px;
     padding: 0.5em;
-    color: #020e36;
+    color: #2a5caa;
     font-size: 1em;
     border-radius:8px;    
 }
@@ -718,12 +685,12 @@ input[type="checkbox"]:checked + label {
 }
 
 .resposta-correta span{
-    color:#E73435;    
+    /*color:#E73435;    */
 }
 
 .atividades{	
-    color: #020e36;
-    background-color: #E73435;    	    
+    /*color: #020e36;*/
+    /*background-color: #E73435;    	    */
     border: 2px solid;
     border-radius: 8px;
     padding: 20px;
@@ -736,17 +703,17 @@ input[type="checkbox"]:checked + label {
 }
 
 .botao-mensagem{
-    border-color: #020e36;
-    background-color:#E73435;
-    color:#020e36;
+    /*border-color: #020e36;*/
+    /*background-color:#E73435;*/
+    /*color:#020e36;*/
     border: 2px solid;
     border-radius: 8px;
     padding:10px;
     margin: 10px;
 }
 .botao-mensagem:hover{
-    background-color: #020e36;
-    color:#E73435;
+    /*background-color: #020e36;*/
+    /*color:#E73435;*/
 }
 
 @media screen and (max-width: 1000px) {
