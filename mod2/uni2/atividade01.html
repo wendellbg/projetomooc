@@ -88,7 +88,7 @@
 
             <!-- Conteúdo -->
             <div class="content">
-                <div class="atividade" id='atividade-uni1'>
+                <div class="atividade" id='atividade-uni2'>
 					<div id='mensagem-alerta'>
 					</div>
                     <div id='mensagem-tentativas' class="atividades">                        
@@ -216,7 +216,7 @@
                         </div>
                             
                         <div class="botao-atividade">
-                            <button type="button" id="botao-atividade-uni1" onclick="salvarDados()" ><i class="fas fa-check"></i> ENVIAR RESPOSTAS</button>
+                            <button type="button" id="botao-atividade-uni2" onclick="salvarDados()" ><i class="fas fa-check"></i> ENVIAR RESPOSTAS</button>
                         </div>
                     </form>
                     
@@ -271,7 +271,7 @@
     console.clear(screen);
 
     var API = new BridgeRestApi();
-    var id_unidade = "mod2_uni1";//modificar
+    var id_unidade = "mod2_uni2";//modificar
     var id_slide = "mod2/uni2/atividade01.html";//modificar
     var id_atividade = "uni2_ativ1";//modificar
     var revisao_unidade = "uni2_revisao";//modificar
@@ -311,7 +311,7 @@
         }
         
         //esse é o select
-		r2_2 = document.querySelector("#r2_2").val();
+		r2_2 = document.querySelector("#r2_2").value;
         console.log(r2_2);
 
         //aqui os checkbox
@@ -399,7 +399,7 @@
             console.log("Registrando respostas:");
             console.log(evento.detail);
             API.registrarRespostaAtividade({
-                "identificador": "uni1_ativ1",//modificar
+                "identificador": "uni2_ativ1",//modificar
                 "questoes": [
                     {
                         //Onde houver os exercícios de drag and drop precisa pegar o innerHTML

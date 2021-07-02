@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2" />
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2" />
     <link rel="stylesheet" href="../../css/podcast.css?ver=1.1"/>
+    <link rel="stylesheet" href="../../css/telas_finais.css?ver=1.1"/>
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
@@ -92,7 +93,11 @@
 					<div class="bt-topo">
 						<a href="#"><i class="fas fa-angle-up"></i></a>
 					</div>
-                    <div><button class="bt-avanca" type="button"><a href="tela04.html">PROSSEGUIR &#10095;</a></button></div>
+                    <div id="botao-atividades">
+						<div class='mensagem-flutuante incompleta'>Complete os 100% na unidade para reponder as atividades</div>
+						<div class='mensagem-flutuante completa'>Você acessou todas as telas da unidade. Então, faça as Atividades!</div>									
+                        <button class="bt-avanca bt-desativado" type="button"><a href="atividade01.html"><i class="fas fa-pencil-alt"></i> ATIVIDADES &#10095;&#10095;</a></button>
+                    </div>   
                     <div class='botoes-navegacao'>
                         <a href="tela03.html"><button class="bt-navegacao" type="button"><</button></a>
 
@@ -144,12 +149,35 @@
     var id_slide = "mod2/uni5/tela04.html";//alterar
     var unidade=5;//alterar
     var tela="uni5tela4";//alterar
-    var ultima_tela=0;
+    var ultima_tela=1;
     
     //Obtendo dados curso
     window.addEventListener('load', function(){
         API.obterDadosCurso();
     });
-</script>
+
+    //Obtendo dados curso
+	window.addEventListener('load', function(){
+    	API.obterDadosCurso();
+	});
+
+	var botao = document.querySelector("#botao-atividades .bt-avanca");  
+    
+    botao.addEventListener("mouseover",function(){
+        if(botao.classList.contains('bt-desativado')){
+            let mensagem = document.querySelector(".mensagem-flutuante.incompleta").style.display="block";
+        }else{
+            let mensagem = document.querySelector(".mensagem-flutuante.completa").style.display="block";
+        }                    
+    });
+
+    botao.addEventListener('mouseout',function(){
+        if(botao.classList.contains('bt-desativado')){
+            let mensagem = document.querySelector(".mensagem-flutuante.incompleta").style.display="none";
+        }else{
+            let mensagem = document.querySelector(".mensagem-flutuante.completa").style.display="none";
+        }    
+    });
+</script> 
 </body>
 </html>
