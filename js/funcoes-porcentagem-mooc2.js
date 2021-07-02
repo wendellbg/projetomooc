@@ -1,7 +1,7 @@
 var quant_telas_vistas=0;	
 var porcentagem = 0;
 //esse vetor tem as quantidades de telas de cada unidade;
-var quant_telas=[2,5,9,11,11,4];
+var quant_telas=[2,5,9,11,12,4];
 var nome_tela="";
 var envio=0;
 var verificando_quais_dados=1;
@@ -28,7 +28,7 @@ function verifica_porcentagem(unidade,tela){
     //Este for pesquisará quantas telas foram vistas dentro da unidade atual    
     for(let i=1;i<=quant_telas[unidade];i++){        
         nome_tela="uni"+unidade+"tela"+i;        
-        //console.log("\nETAPA 2\nVerificando a tela "+i+" da unidade "+unidade+", variável="+nome_tela);					
+        console.log("\nETAPA 2\nVerificando a tela "+i+" da unidade "+unidade+", variável="+nome_tela);					
         API.obterDadosGenericos(nome_tela);            			
     }    	   	    	
 }
