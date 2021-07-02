@@ -111,7 +111,48 @@
 			"nome": "Concluindo"		
 		}],
 		"atividades": [
-			
+			{
+				"identificador": "uni2_ativ1",
+				"nomeAtividade": "Avaliação - Unidade 1 (Questão 1)",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "MODERADA",
+						"identificador": "r2_1",
+						"tipoEnvio": "TEXTO",
+						"enunciado": "Trabalho, Técnica e Tecnologia são termos chave para entender a Educação Profissional. No entanto, raramente são pensados como forma de saber e acabam reduzidos ao senso comum. Escolha uma profissão presente em seu cotidiano e descreva alguns dos saberes necessários para executá-la."
+					}
+				]
+			},{
+				"identificador": "uni2_ativ2",
+				"nomeAtividade": "Avaliação - Unidade 1 (Questões 2 e 3)",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r2_2",
+						"enunciado": "O conhecimento técnico tem características próprias, com semelhanças e diferenças em relação ao conhecimento das outras ciências. Analise os conceitos a seguir e marque aqueles que estão incorporados ao conhecimento técnico:",
+						"gabaritos": [
+							{ "chave": "r2_2_1", "valor": "v", "alternativa": "Existência" },
+							{ "chave": "r2_2_2", "valor": "v", "alternativa": "Fundamento" },
+							{ "chave": "r2_2_3", "valor": "f", "alternativa": "Intervenção" },
+							{ "chave": "r2_2_4", "valor": "v", "alternativa": "Produção" },
+							{ "chave": "r2_2_5", "valor": "v", "alternativa": "Sociedade" },
+							{ "chave": "r2_2_6", "valor": "v", "alternativa": "Técnica" },
+							{ "chave": "r2_2_7", "valor": "v", "alternativa": "Trabalho" }
+						]
+					},{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r2_3",
+						"enunciado": "Relacione a seguir os sentidos possíveis para a técnica:",
+						"gabaritos":[
+							{"chave": "r2_3_a", "valor": "Processo", "alternativa": "a) Um conjunto não redutível a conteúdos cognitivos em sentido clássico, isto é, um conteúdo verbalizado e formalizado. Podemos, então, ir além do mito de que 'saber' é 'saber falar sobre'."},
+							{"chave": "r2_3_b", "valor": "Composição", "alternativa": "b) Modos de ação, estruturas conceituais para cada situação de trabalho (ou classe de situação, como veremos mais adiante), lógicas próprias, ferramentas, sistemas, máquinas, valores, aspectos éticos, políticos, sociais, ambientais, econômicos."},
+							{"chave": "r2_3_c", "valor": "Finalidade", "alternativa": "c) Busca uma efetiva intervenção no mundo para a produção da existência individual e coletiva."},
+							{"chave": "r2_3_d", "valor": "Validação do conhecimento técnico", "alternativa": "d) Valida-se tanto material quanto socialmente pelos efeitos produzidos, sua eficácia. Isso difere da epistemologia clássica da ciência, em que predomina a validação do conhecimento pela demonstração lógica, teórica e discursiva. Cuidado! Aqui, ser eficaz não é a mesma coisa que ser 'útil', e sim pode ser entendido pelo 'ato que produz o efeito esperado' (Sigaut, 2006)."},
+							{"chave": "r2_3_e", "valor": "Técnica e Cultura", "alternativa": "e) A técnica está, assim, no coração do laço social (Sigaut, 2004), e não mais pode ser pensada como algo externo ao ser humano e à cultura. A cultura não é o lado subjetivo, de uma moeda com outro lado somente objetivo, geralmente com conotação ou valor abjeto (a repulsa ao trabalho, à técnica)."}
+						]
+					}
+				]
+			}
 		]
 	},{		
 		"identificador": "mod2_uni3",

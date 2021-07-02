@@ -247,6 +247,16 @@ html{
     text-align: justify;   
 }
 
+.texto-resposta-maior{    
+    position: relative;
+    width: 65%;
+    font-size: 0.8em;    
+    margin-left: 0;
+    margin-right: 2%;
+    display: inline-block;
+    text-align: justify;   
+}
+
 .texto-opcao b{
     color: #fff;
     font-weight: bold;
@@ -284,8 +294,23 @@ html{
     padding: 1px;
     border: 2px dashed #fff ;    
 }
+
+.area-opcoes-menor, .area-inputs-menor, .caixa-box-menor{
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 8px;      
+    width: 25%;    
+    margin: 5px;
+    padding: 1px;
+    border: 2px dashed #fff ;   
+}
+
 .caixa-drop_1_1{
     height: 50px;    
+}
+
+.caixa-drop-alta{
+    height: 80px;
 }
 
 .caixa-drop_1_2{
@@ -598,8 +623,8 @@ input[type="checkbox"] + label::before {
     top: 0;
     width: 10px;
     height: 20px;
-    border-right: solid 3px #2a5caa;
-    border-bottom: solid 3px #2a5caa;
+    border-right: solid 3px #fec13b;
+    border-bottom: solid 3px #fec13b;
     transform: rotate(45deg);
 }
 
@@ -759,14 +784,15 @@ input[type="checkbox"]:checked + label {
 }
 
 @media screen and (max-width: 680px) {
-	.texto-resposta{
+	.texto-resposta, .texto-resposta-maior{
         width: 90%;
         margin-right: 0;
     }
 
-    .area-inputs, .area-opcoes, .caixa-box{
+    .area-inputs, .area-opcoes, .caixa-box, .area-inputs-menor, .area-opcoes-menor, .caixa-box-menor{
         display: block;
         margin-left: 20px;
+        width: 50%;
     }
 
     .caixa-drop_5_2, .caixa-drop_5_3{
