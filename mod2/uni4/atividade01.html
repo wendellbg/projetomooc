@@ -90,7 +90,7 @@
 
             <!-- Conteúdo -->
             <div class="content">
-                <div class="atividade" id='atividade-uni1'>
+                <div class="atividade" id='atividade-uni4'>
 					<div id='mensagem-alerta'>
 					</div>
                     <div id='mensagem-tentativas' class="atividades">                        
@@ -260,7 +260,7 @@
                         </div>
                             
                         <div class="botao-atividade">
-                            <button type="button" id="botao-atividade-uni1" onclick="salvarDados()" ><i class="fas fa-check"></i> ENVIAR RESPOSTAS</button>
+                            <button type="button" id="botao-atividade-uni4" onclick="salvarDados()" ><i class="fas fa-check"></i> ENVIAR RESPOSTAS</button>
                         </div>
                     </form>
                     
@@ -315,10 +315,10 @@
     console.clear(screen);
 
     var API = new BridgeRestApi();
-    var id_unidade = "mod2_uni1";//modificar
-    var id_slide = "mod2/uni1/atividade01.html";//modificar
-    var id_atividade = "uni1_ativ1";//modificar
-    var revisao_unidade = "uni1_revisao";//modificar
+    var id_unidade = "mod2_uni4";//modificar
+    var id_slide = "mod2/uni4/atividade01.html";//modificar
+    var id_atividade = "uni4_ativ1";//modificar
+    var revisao_unidade = "uni4_revisao";//modificar
     var texto_mensagem_fim="<br>Você pode prosseguir para a próxima atividade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PRÓXIMA UNIDADE &#10095;</a><br>";
 
     function verifica_revisao(){
@@ -334,7 +334,7 @@
 	});
 
     /*************** Verificando se todas as respostas foram enviadas. *****/
-    var botao = document.getElementById("botao-atividade-uni1");//modificar
+    var botao = document.getElementById("botao-atividade-uni4");//modificar
 	
     //Etapa 3: Enviando formulário
 	function salvarDados(){
@@ -344,29 +344,31 @@
         revisao_teste=0;       
         erros=0;
 
+        console.clear();
+
         //aqui vai pegar os valores de cada exercício.
-        //esses são os checkbox
-		r1_1_1 = document.form_atividade_uni1.r1_1_1.checked,
-        r1_1_2 = document.form_atividade_uni1.r1_1_2.checked,
-        r1_1_3 = document.form_atividade_uni1.r1_1_4.checked,
-        r1_1_4 = document.form_atividade_uni1.r1_1_4.checked,
+        // Exercício 1 -  Drag and drop
+        r4_1_1 = document.querySelector("#r4_1_1 span.palavra-resposta"),
+        r4_1_2 = document.querySelector("#r4_1_2 span.palavra-resposta"),
+        r4_1_3 = document.querySelector("#r4_1_3 span.palavra-resposta"),
+        r4_1_4 = document.querySelector("#r4_1_4 span.palavra-resposta"),
+        r4_1_5 = document.querySelector("#r4_1_5 span.palavra-resposta"),
+        r4_1_6 = document.querySelector("#r4_1_6 span.palavra-resposta"),
+        r4_1_7 = document.querySelector("#r4_1_7 span.palavra-resposta"),
 		
-        r1_2_1 = document.querySelector("#r1_2_1 span.palavra-resposta"),
-        r1_2_2 = document.querySelector("#r1_2_2 span.palavra-resposta"),
-        r1_2_3 = document.querySelector("#r1_2_3 span.palavra-resposta"),
-        r1_2_4 = document.querySelector("#r1_2_4 span.palavra-resposta"),
-        r1_2_5 = document.querySelector("#r1_2_5 span.palavra-resposta"),
-        r1_2_6 = document.querySelector("#r1_2_6 span.palavra-resposta"),
-        r1_2_7 = document.querySelector("#r1_2_7 span.palavra-resposta"),
-		
-        //aqui os checkbox
-        r1_3_1 = document.form_atividade_uni1.r1_3_1.checked,
-        r1_3_2 = document.form_atividade_uni1.r1_3_2.checked,
-        r1_3_3 = document.form_atividade_uni1.r1_3_4.checked,
-        r1_3_4 = document.form_atividade_uni1.r1_3_4.checked
+        //Exercício 2 - Drag and drop
+        r4_2_1 = document.querySelector("#r4_2_1 span.palavra-resposta"),
+        r4_2_2 = document.querySelector("#r4_2_2 span.palavra-resposta"),
+        r4_2_3 = document.querySelector("#r4_2_3 span.palavra-resposta"),
+
+        //Exercício 3 - V ou F
+        r4_3_1 = document.form_atividade_uni4.r4_3_1.checked,
+        r4_3_2 = document.form_atividade_uni4.r4_3_2.checked,
+        r4_3_3 = document.form_atividade_uni4.r4_3_4.checked,
+        r4_3_4 = document.form_atividade_uni4.r4_3_4.checked
 		       
         //testando se todos os exercícios (menos os checkbox) estão preenchidos.
-		if(r1_2_1==null){
+		if(r4_1_1==null){
 			erros++;
 		}else if(r1_2_2==null){
 			erros++;

@@ -313,15 +313,15 @@
     console.clear(screen);
 
     var API = new BridgeRestApi();
-    var id_unidade = "mod2_uni1";//modificar
-    var id_slide = "mod2/uni1/atividade01.html";//modificar
-    var id_atividade = "uni1_ativ1";//modificar
-    var revisao_unidade = "uni1_revisao";//modificar
+    var id_unidade = "mod2_uni3";//modificar
+    var id_slide = "mod2/uni3/atividade01.html";//modificar
+    var id_atividade = "uni3_ativ1";//modificar
+    var revisao_unidade = "uni3_revisao";//modificar
     var texto_mensagem_fim="<br>Você pode prosseguir para a próxima atividade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PRÓXIMA UNIDADE &#10095;</a><br>";
 
     function verifica_revisao(){
         if(revisao_vista==1){
-            document.querySelector("#botao-atividade-uni1").style.display="none";
+            document.querySelector("#botao-atividade-uni3").style.display="none";
         } 
     }
 
@@ -332,7 +332,7 @@
 	});
 
     /*************** Verificando se todas as respostas foram enviadas. *****/
-    var botao = document.getElementById("botao-atividade-uni1");//modificar
+    var botao = document.getElementById("botao-atividade-uni3");//modificar
 	
     //Etapa 3: Enviando formulário
 	function salvarDados(){
@@ -342,43 +342,45 @@
         revisao_teste=0;       
         erros=0;
 
+        console.clear();
         //aqui vai pegar os valores de cada exercício.
         //esses são os checkbox
-		r1_1_1 = document.form_atividade_uni1.r1_1_1.checked,
-        r1_1_2 = document.form_atividade_uni1.r1_1_2.checked,
-        r1_1_3 = document.form_atividade_uni1.r1_1_3.checked,
-        r1_1_4 = document.form_atividade_uni1.r1_1_4.checked,
+		r3_1_1 = document.form_atividade_uni3.r3_1_1.checked,
+        r3_1_2 = document.form_atividade_uni3.r3_1_2.checked,
+        r3_1_3 = document.form_atividade_uni3.r3_1_3.checked,
+        r3_1_4 = document.form_atividade_uni3.r3_1_4.checked,
 		
-        r1_2_1 = document.querySelector("#r1_2_1 span.palavra-resposta"),
-        r1_2_2 = document.querySelector("#r1_2_2 span.palavra-resposta"),
-        r1_2_3 = document.querySelector("#r1_2_3 span.palavra-resposta"),
-        r1_2_4 = document.querySelector("#r1_2_4 span.palavra-resposta"),
-        r1_2_5 = document.querySelector("#r1_2_5 span.palavra-resposta"),
-        r1_2_6 = document.querySelector("#r1_2_6 span.palavra-resposta"),
-        r1_2_7 = document.querySelector("#r1_2_7 span.palavra-resposta"),
+        //este é o campo de texto:
+        r3_2_texto = document.form_atividade_uni3.r3_2_texto.value;
+        if(r3_2_texto==""){
+            erros++;            
+        }else{
+            console.log("Texto questão 2 preenchido: "+r3_2_texto);            
+        }
 		
-        //aqui os checkbox
-        r1_3_1 = document.form_atividade_uni1.r1_3_1.checked,
-        r1_3_2 = document.form_atividade_uni1.r1_3_2.checked,
-        r1_3_3 = document.form_atividade_uni1.r1_3_3.checked,
-        r1_3_4 = document.form_atividade_uni1.r1_3_4.checked
-		       
+        //aqui os Select
+        var resp3_3_a = document.form_atividade_uni3.r3_3_a.value,
+        resp3_3_b = document.form_atividade_uni3.r3_3_b.value,
+        resp3_3_c = document.form_atividade_uni3.r3_3_c.value,
+        resp3_3_d = document.form_atividade_uni3.r3_3_d.value,
+        resp3_3_e = document.form_atividade_uni3.r3_3_e.value,
+        resp3_3_f = document.form_atividade_uni3.r3_3_f.value;
+        
+        console.log("r3: "+resp3_3_a+", "+resp3_3_b+", "+resp3_3_c+", "+resp3_3_d+", "+resp3_3_e+", "+resp3_3_f);
         //testando se todos os exercícios (menos os checkbox) estão preenchidos.
-		if(r1_2_1==null){
+		if(resp3_3_a==""){
 			erros++;
-		}else if(r1_2_2==null){
-			erros++;
-        }else if(r1_2_3==null){
-			erros++;
-        }else if(r1_2_4==null){
-			erros++;
-        }else if(r1_2_5==null){
-			erros++;
-		}else if(r1_2_6==null){
-			erros++;
-		}else if(r1_2_7==null){
-			erros++;
-		}
+		}else if(resp3_3_b==""){
+            erros++;
+        }else if(resp3_3_c==""){
+            erros++;
+        }else if(resp3_3_d==""){
+            erros++;        
+        }else if(resp3_3_e==""){
+            erros++;
+        }else if(resp3_3_f==""){
+            erros++;
+        }
 
 		if(erros>0){
             //caso algum não esteja preenchido, exibe mensagem de erro
@@ -444,40 +446,40 @@
             console.log("Registrando respostas:");
             console.log(evento.detail);
             API.registrarRespostaAtividade({
-                "identificador": "uni1_ativ1",//modificar
+                "identificador": "uni3_ativ1",//modificar
                 "questoes": [
                     {
                         //Onde houver os exercícios de drag and drop precisa pegar o innerHTML
-                        "identificador": "r1_1",                    
+                        "identificador": "r3_1",                    
                         "gabaritos": [
-                            { "chave": "r1_1_1", "valor": (r1_1_1==true ? "v" : "f")},
-                            { "chave": "r1_1_2", "valor": (r1_1_2==true ? "v" : "f")},
-                            { "chave": "r1_1_3", "valor": (r1_1_3==true ? "v" : "f")},
-                            { "chave": "r1_1_4", "valor": (r1_1_4==true ? "v" : "f")}                            						
+                            { "chave": "r3_1_1", "valor": (r3_1_1==true ? "v" : "f")},
+                            { "chave": "r3_1_2", "valor": (r3_1_2==true ? "v" : "f")},
+                            { "chave": "r3_1_3", "valor": (r3_1_3==true ? "v" : "f")},
+                            { "chave": "r3_1_4", "valor": (r3_1_4==true ? "v" : "f")}                            						
                         ]
                     },{                    
-                        "identificador": "r1_2",                    
+                        "identificador": "r3_3",                    
                         "gabaritos": [
-                            { "chave": "r1_2_1", "valor": r1_2_1.innerHTML},
-                            { "chave": "r1_2_2", "valor": r1_2_2.innerHTML},
-                            { "chave": "r1_2_3", "valor": r1_2_3.innerHTML},
-                            { "chave": "r1_2_4", "valor": r1_2_4.innerHTML},	
-                            { "chave": "r1_2_5", "valor": r1_2_5.innerHTML},
-                            { "chave": "r1_2_6", "valor": r1_2_6.innerHTML},
-                            { "chave": "r1_2_7", "valor": r1_2_7.innerHTML}
-                        ]
-                    },{
-                        //Onde houver os checkbox, testar se é true para registrar v ou f
-                        "identificador": "r1_3",                    
-                        "gabaritos": [
-                            { "chave": "r1_3_1", "valor": (r1_3_1==true ? "v" : "f")},
-                            { "chave": "r1_3_2", "valor": (r1_3_2==true ? "v" : "f")},
-                            { "chave": "r1_3_3", "valor": (r1_3_3==true ? "v" : "f")},
-                            { "chave": "r1_3_4", "valor": (r1_3_4==true ? "v" : "f")}							
+                            { "chave": "r3_3_a", "valor": resp3_3_a},
+                            { "chave": "r3_3_b", "valor": resp3_3_b},
+                            { "chave": "r3_3_c", "valor": resp3_3_c},
+                            { "chave": "r3_3_d", "valor": resp3_3_d},
+                            { "chave": "r3_3_e", "valor": resp3_3_e},                           					                                                    
+                            { "chave": "r3_3_e", "valor": resp3_3_f}
                         ]
                     }
                 ]
-            })           
+            });
+            
+            API.registrarRespostaAtividade({
+                "identificador": "uni3_ativ2",
+                "questoes": [
+                    {                        
+                        "identificador": "r3_2",                    
+                        "texto": r3_2_texto
+                    }
+                ]
+            });
         }        	
 	};
 
