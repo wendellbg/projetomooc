@@ -262,7 +262,7 @@ Main components
   .cd-single-point .cd-more-info {
     position: absolute;
     width: 260px;
-    height: 180px;
+    height: 200px;
     padding: 1em;
     overflow-y: visible;
     line-height: 1.4;
@@ -868,6 +868,37 @@ Main components
 .cd-single-point.mooc3-ponto8-uni5-tela6{
   bottom: 14%;
   right: 26%;
+}
+
+/* Mooc4 Uni2 tela 6*/
+.cd-single-point.mooc4-ponto1-uni2-tela6{
+  top: -150%;
+  left: 10%;
+}
+
+.cd-single-point.mooc4-ponto2-uni2-tela6{
+  top: 40%;
+  left: 85%;
+}
+
+.cd-single-point.mooc4-ponto3-uni2-tela6{
+  top: 300%;
+  left: 10%;
+}
+
+.cd-single-point.mooc4-ponto4-uni2-tela6{
+  top: 500%;
+  left: 85%;
+}
+
+.cd-single-point.mooc4-ponto5-uni2-tela6{
+  top: 700%;
+  left: 10%;
+}
+
+.cd-single-point.mooc4-ponto6-uni2-tela6{
+  top: 900%;
+  left: 85%;
 }
 
 
