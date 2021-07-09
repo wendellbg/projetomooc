@@ -62,7 +62,8 @@ var quant_respostas=0;
                 console.log("Carregando a página, envio="+envio);
                 if(envio==0){
                     quant_respostas=0;
-                    mensagem_tentativas.innerHTML=texto_mensagem_padrao_0;                
+                    mensagem_tentativas.innerHTML=texto_mensagem_padrao_0;   
+                    window.scrollTo(0,0);
                     console.log("mensagem zerada");
                 }else{
                     quant_respostas=parseInt(1);
