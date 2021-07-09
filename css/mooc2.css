@@ -308,3 +308,19 @@ h3.texto-central b{
 .mooc2 .audio-gif .icone-pause img:hover{
 	background-color: #E73435;
 }
+
+.botao-referencias a button {
+	border: 2px solid #E6292E;
+	background-color: #E6292E;
+	color: #fff;	
+    border-radius: 10px;
+    margin:0;
+    padding: 10px 15px;
+}
+
+.botao-referencias a button:hover{
+	background-color: #020E36;
+	border-color: #020e36;
+	color: #E6292E;
+	transition: 0.3s;
+  }
