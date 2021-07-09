@@ -113,7 +113,7 @@
 		"atividades": [
 			{
 				"identificador": "uni2_ativ1",
-				"nomeAtividade": "Avaliação - Unidade 1 (Questão 1)",				
+				"nomeAtividade": "Avaliação - Unidade 2 - Questão Discursiva",				
 				"questoes": [
 					{
 						"tipoQuestaoString": "MODERADA",
@@ -124,7 +124,7 @@
 				]
 			},{
 				"identificador": "uni2_ativ2",
-				"nomeAtividade": "Avaliação - Unidade 1 (Questões 2 e 3)",				
+				"nomeAtividade": "Avaliação - Unidade 2 - Questões Objetivas",				
 				"questoes": [
 					{
 						"tipoQuestaoString": "PROPORCIONAL",
@@ -192,7 +192,47 @@
 		},{
 			"identificador": "uni3_tela11",
 			"nome": "Concluindo"
-		}]
+		}],
+		"atividades": [
+			{
+				"identificador": "uni3_ativ1",
+				"nomeAtividade": "Avaliação - Unidade 3 - Questões Objetivas",				
+				"questoes": [{
+					"tipoQuestaoString": "PROPORCIONAL",
+					"identificador": "r3_1",
+					"enunciado": "O trabalho como obra pode ser compreendido como atividades, empreendidas por pessoas, com objetivos específicos, contextos particulares, mas em conexão com diversas dimensões laborais e sociais. Assinale a(s) alternativa(s) que correspondem ao conceito abordado.",
+					"gabaritos":[
+						{"chave": "r3_1_1", "valor": "f", "alternativa": "a) A obra é uma atividade essencialmente individual com características do trabalhador."},
+						{"chave": "r3_1_2", "valor": "v", "alternativa": "b) A obra coloca o aprendiz em contato com as dimensões cognitivas, éticas, estéticas e culturais do trabalho."},
+						{"chave": "r3_1_3", "valor": "f", "alternativa": "c) A obra do trabalho recebe os traços de quem planeja e não de quem executa."},
+						{"chave": "r3_1_4", "valor": "v", "alternativa": "d) A obra permite uma identificação do sujeito e um autorreconhecimento."}						
+					]
+				},{
+					"tipoQuestaoString": "PROPORCIONAL",
+					"identificador": "r3_3",
+					"enunciado": "Relacione a seguir os sentidos possíveis para a técnica:",
+					"gabaritos":[
+						{"chave": "r3_3_a", "valor": "Dimensão Cognitiva", "alternativa": "a) Em sua ação individual e em interação com outros, o trabalhador desenvolve esquemas para dar conta de compreender e organizar a atividade em determinadas situações de trabalho. Tais situações podem apresentar semelhanças em sua estrutura ou grandes diferenças e por isso se fala aqui na existência, para cada atividade profissional, de diferentes “classes de situações”"},
+						{"chave": "r3_3_b", "valor": "Dimensão Identitária", "alternativa": "b) Reconhecimento de que a entrada no mundo do trabalho é também a participação da cultura técnica e profissional, da qual o sujeito faz parte."},
+						{"chave": "r3_3_c", "valor": "Dimensão Ética", "alternativa": "c) Se desdobra nos valores que a ação do trabalhador envolve, que vão desde aqueles de uma ética profissional típica de determinada categoria, passando por práticas educacionais até valores sociais mais gerais."},
+						{"chave": "r3_3_d", "valor": "Dimensão Pessoal", "alternativa": "d) Singularidade com que cada profissional atua e pode ser apreciada em qualquer atividade, apreciada esteticamente ou não."},
+						{"chave": "r3_3_e", "valor": "Dimensão Cultural", "alternativa": "e) Vislumbrar uma possível superação da divisão entre formação humana e formação técnica, formação intelectual e formação prática, por ajudar a evitar o desligamento do ato técnico das suas implicações sociais, éticas, econômicas, ambientais."},
+						{"chave": "r3_3_f", "valor": "Dimensão do Prazer", "alternativa": "f) Muitos trabalhadores que fazem seu trabalho bem feito pelo prazer e orgulho no resultado de seu trabalho, sentem realização pessoal em suas tarefas, cujo reforço é o elogio ou agradecimento que recebem, muito mais que o retorno financeiro."}
+					]
+				}]
+			},{
+				"identificador": "uni3_ativ2",
+				"nomeAtividade": "Avaliação - Unidade 3 - Questão discursiva",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "MODERADA",
+						"identificador": "r3_2",
+						"tipoEnvio": "TEXTO",
+						"enunciado": "Considerando a importância da participação do estudante em obras do trabalho para sua formação profissional, indique pelo menos duas estratégias educativas que permitam esta participação:"
+					}
+				]
+			}
+		]
 	},{		
 		"identificador": "mod2_uni4",
 		"nome": "Processos de profissionalização",
@@ -231,26 +271,64 @@
 		},{
 			"identificador": "uni4_tela11",
 			"nome": "Comunidade de Prática 2"
-		}]
+		}],
+		"atividades": [
+			{
+				"identificador": "uni4_ativ1",
+				"nomeAtividade": "Avaliação - Unidade 4 - Questões Objetivas",				
+				"questoes": [{					
+					"tipoQuestaoString": "PROPORCIONAL",
+					"identificador": "r4_1",
+					"enunciado": "Sobre a profissionalização, complete o texto arrastando e soltando as palavras:",
+					"gabaritos": [
+						{ "chave": "r4_1_1", "valor": "autonomia", "alternativa": "Palavra 1" },
+						{ "chave": "r4_1_2", "valor": "atividades profissionais", "alternativa": "Palavra 2" },					
+						{ "chave": "r4_1_3", "valor": "grupos sociais", "alternativa": "Palavra 3" },
+						{ "chave": "r4_1_4", "valor": "instâncias oficiais", "alternativa": "Palavra 4" },
+						{ "chave": "r4_1_5", "valor": "construções de competências", "alternativa": "Palavra 5" },
+						{ "chave": "r4_1_6", "valor": "fazeres-saberes", "alternativa": "Palavra 6" },
+						{ "chave": "r4_1_7", "valor": "reconhecido", "alternativa": "Palavra 7" }
+					]
+				},{
+					"tipoQuestaoString": "PROPORCIONAL",
+					"identificador": "r4_2",
+					"enunciado": "Considerando as dimensões simultâneas no processo de profissionalização, arraste e solte cada dimensão à sua definição:",
+					"gabaritos": [
+						{ "chave": "r4_2_1", "valor": "Intenção de movimento", "alternativa": "a) Trata-se da busca, por parte da instituição formadora, de “movimentar” os sujeitos \"nos sistemas de trabalho por meio de propostas de dispositivos de formação específicos\"." },
+						{ "chave": "r4_2_2", "valor": "Processos de ação", "alternativa": "b) Refere-se ao modo como um sujeito age em uma situação, levando os atores envolvidos a conferir profissionalidade ao aprendiz, dependendo da forma como é percebida pelo ambiente e estes atores." },
+						{ "chave": "r4_2_3", "valor": "Transição identitária", "alternativa": "c) Uma série de trocas de diferentes naturezas que afetam o indivíduo e o ambiente: trocas de gestos, palavras, saberes, valores, etc. Esta transação é que pode e deve levar à profissionalização." }
+					]
+				},{
+					"tipoQuestaoString": "PROPORCIONAL",
+					"identificador": "r4_3",
+					"enunciado": "",
+					"gabaritos":[
+						{"chave": "r4_3_1", "valor": "v", "alternativa": "a) Aprender é, no fundo, construir e transformar identidades. A aprendizagem tem a ver com o que você está se tornando. Aprender uma profissão é transformar profundamente a sua identidade, é um tornar-se."},
+						{"chave": "r4_3_2", "valor": "v", "alternativa": "b) Uma Comunidade de Prática (CoP) é um \"grupo de pessoas que compartilham preocupações, um conjunto de problemas ou uma paixão sobre um assunto e que aprofundam seus conhecimentos e expertises nessa área ao interagirem de maneira contínua\"."},
+						{"chave": "r4_3_3", "valor": "f", "alternativa": "c) Uma Comunidade de Prática (CoP) só pode ser formada por meio de atividades presenciais, pois é necessário intensas trocas entre trabalhadores engajados mutuamente."},
+						{"chave": "r4_3_4", "valor": "f", "alternativa": "d) A Comunidade de Prática (CoP) pressupõe uma comunidade sem conflitos, em que não existam relações de poder estabelecidas e ausência de divergências nos grupos."}						
+					]
+				}]						
+			}
+		]
 	},{		
 		"identificador": "mod2_uni5",
 		"nome": "Análise da atividade profissional (ou tecnografia)",
 		"descricao": "",
 		"permitePorcentagem": "true",
 		"topicos": [{
-			"identificador": "uni5_tela01",
-			"nome": "Apresentação"
-		},{
-			"identificador": "uni5_tela02",
-			"nome": "Tecnografia"
-		},{
-			"identificador": "uni5_tela03",
-			"nome": "Desenvolvimento da Tecnografia"
-		},{
-			"identificador": "uni5_tela04",
-			"nome": "Concluindo"
-		}],
-		"atividades": [			
+				"identificador": "uni5_tela01",
+				"nome": "Apresentação"
+			},{
+				"identificador": "uni5_tela02",
+				"nome": "Tecnografia"
+			},{
+				"identificador": "uni5_tela03",
+				"nome": "Desenvolvimento da Tecnografia"
+			},{
+				"identificador": "uni5_tela04",
+				"nome": "Concluindo"
+			}
 		]
 	}
 ]

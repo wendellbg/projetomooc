@@ -93,12 +93,11 @@ function resultadoObtemDadosGenericos (evento){
             console.log(evento.detail["data"]);
             mensagem.innerHTML = "Você já enviou estas respostas<br /><br /><a class='link-proxima-unidade' href='tela03.html'>PROSSEGUIR &#10095;</a>";
             mensagem.className = "mensagem-ok";
-            mensagem.style.display = "block";            
-            //window.scrollTo(0, 0);
+            mensagem.style.display = "block";                        
             document.querySelector("#botao-quiz-uni2").style.display="none";            
             document.querySelector("#botao-prosseguir").style.display="block";
             erros++;
-            
+            window.scrollTo(0, 0);            
             verificando_quais_dados=1;
 		    API.obterDadosCurso();  
             //se a unidade não foi iniciada, registra os dados Genéricos com as respostas:
