@@ -205,6 +205,29 @@
 	window.addEventListener('load', function(){
     	API.obterDadosCurso();
 	});
+
+    //Obtendo dados curso
+	window.addEventListener('load', function(){
+    	API.obterDadosCurso();
+	});
+
+	var botao = document.querySelector("#botao-atividades .bt-avanca");  
+    
+    botao.addEventListener("mouseover",function(){
+        if(botao.classList.contains('bt-desativado')){
+            let mensagem = document.querySelector(".mensagem-flutuante.incompleta").style.display="block";
+        }else{
+            let mensagem = document.querySelector(".mensagem-flutuante.completa").style.display="block";
+        }                    
+    });
+
+    botao.addEventListener('mouseout',function(){
+        if(botao.classList.contains('bt-desativado')){
+            let mensagem = document.querySelector(".mensagem-flutuante.incompleta").style.display="none";
+        }else{
+            let mensagem = document.querySelector(".mensagem-flutuante.completa").style.display="none";
+        }    
+    });
 </script>
 
 <script>
