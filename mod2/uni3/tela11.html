@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../../css/mooc2.css?ver=1.1"/>
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2"/>    
-    <link rel="stylesheet" href="../../css/podcast.css?ver=1.1"/>
+    <link rel="stylesheet" href="../../css/podcast.css?ver=1.1"/>    
+    <link rel="stylesheet" href="../../css/telas_finais.css?ver=1.1"/>
+
     <!-- Botão de Voltar ao Topo -->
         <script src="../../js/jquery-2.1.1.js"></script>
         <script src="../../js/bt-topo.js"></script>
@@ -97,11 +99,17 @@
                 <!-- Conteúdo Footer -->
                 <div class="content footer">
                     <div class='navegacao'>
-                       <div class="bt-topo">
+                        <div class="bt-topo">
                           <a href="#"><i class="fas fa-angle-up"></i></a>
-                      </div>
-                      <div><button class="bt-avanca" type="button"><a href="../uni4/tela01.html">PROSSEGUIR &#10095;</a></button></div>
-                      <div class='botoes-navegacao'>
+                        </div>
+                        <div id="botao-atividades">
+                            <div class='mensagem-flutuante incompleta'>Complete os 100% na unidade para reponder as atividades</div>
+                            <div class='mensagem-flutuante completa'>Você acessou todas as telas da unidade. Então, faça as Atividades!</div>
+                            <button class="bt-avanca bt-desativado" type="button" ><a href="atividade01.html" ><i class="fas fa-pencil-alt"></i> ATIVIDADES &#10095;&#10095;</a></button>
+                        </div>
+
+                        <div><button class="bt-avanca" type="button"><a href="../uni4/tela01.html">PROSSEGUIR &#10095;</a></button></div>
+                        <div class='botoes-navegacao'>
                           <a href="tela10.html"><button class="bt-navegacao" type="button"><</button></a>
 
                               <a href="tela01.html"><input type="radio" name="radio"><label for="radio"></label></a>
@@ -119,10 +127,10 @@
                             <button class="bt-navegacao desativado" type="button">></button>
                           </div>
                           <div class="legenda">11 de 11</div>
-                      </div>
+                        </div>
 
-                      <!--Rodapé-->
-                      <hr/>
+                        <!--Rodapé-->
+                        <hr/>
                     <div class="row rodape">
                         <div class="6u 12u$(small)">
                             <p></p>
@@ -152,18 +160,41 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
 <script>
-    console.clear(screen);
+   console.clear(screen);
 
     var API = new BridgeRestApi();
     var id_unidade = "mod2_uni3";//alterar
     var id_slide = "mod2/uni3/tela11.html";//alterar
     var unidade=3;//alterar
     var tela="uni3tela11";//alterar
-    var ultima_tela=0;
-    
+    var ultima_tela=1;
+
     //Obtendo dados curso
     window.addEventListener('load', function(){
         API.obterDadosCurso();
+    });
+
+    //Obtendo dados curso
+    window.addEventListener('load', function(){
+        API.obterDadosCurso();
+    });
+
+    var botao = document.querySelector("#botao-atividades .bt-avanca");  
+
+    botao.addEventListener("mouseover",function(){
+        if(botao.classList.contains('bt-desativado')){
+            let mensagem = document.querySelector(".mensagem-flutuante.incompleta").style.display="block";
+        }else{
+            let mensagem = document.querySelector(".mensagem-flutuante.completa").style.display="block";
+        }                    
+    });
+
+    botao.addEventListener('mouseout',function(){
+        if(botao.classList.contains('bt-desativado')){
+            let mensagem = document.querySelector(".mensagem-flutuante.incompleta").style.display="none";
+        }else{
+            let mensagem = document.querySelector(".mensagem-flutuante.completa").style.display="none";
+        }    
     });
 </script> 
 <script>

@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2" />    
     <link rel="stylesheet" href="../../css/efeito.css?ver=1.2"/>
     <link rel="stylesheet" href="../../css/menu.css?ver=1.2"/>          
-    <link rel="stylesheet" href="../../css/carrosel.css"/>  
+    <link rel="stylesheet" href="../../css/carrosel.css"/>
+    <link rel="stylesheet" href="../../css/slide.css?ver=1.1"/>
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
@@ -124,49 +125,93 @@
                 <p>Nessa perspectiva, pessoas adaptáveis são aquelas que:</p>
             </div>
 
-            <div class="container">
-              <div class="mySlides">
-                <div class="numbertext">1 / 4</div>
-                <img src="../../img/uni6/MOOC3_Uni6_Tela04_Imagem01.jpg" style="width:100%">
-              </div>
 
-              <div class="mySlides">
-                <div class="numbertext">2 / 4</div>
-                <img src="../../img/uni6/MOOC3_Uni6_Tela04_Imagem02.jpg" style="width:100%">
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">3 / 4</div>
-                <img src="../../img/uni6/MOOC3_Uni06_Tela04_Imagem03.jpg" style="width:100%">
-              </div>                
-              
-              <div class="mySlides">
-                <div class="numbertext">4 / 4</div>
-                <img src="../../img/uni6/MOOC3_Uni06_Tela04_Imagem04.jpg" style="width:100%">
-              </div>                
-                
-              <a class="prev" onclick="plusSlides(-1)">❮</a>
-              <a class="next" onclick="plusSlides(1)">❯</a>
-
-              <div class="caption-container">
-                <p id="caption"></p>
-              </div>
-
-              <div class="row">
-                <div class="column">
-                  <img class="demo cursor" src="../../img/uni6/MOOC3_Uni6_Tela04_Imagem01.jpg" style="width:100%" onclick="currentSlide(1)" alt="Imagem 1">
+            <!-- Container do slideshow-->
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numero-slide">1 / 4</div>
+                    <div class='titulo-video'><span></span></div>
+                    <img src="../../img/uni6/MOOC3_Uni6_Tela04_Imagem01.jpg" style="width:100%">
+                    <div class="texto">Figura 03 - Fonte: Freepick</div>
                 </div>
-                <div class="column">
-                  <img class="demo cursor" src="../../img/uni6/MOOC3_Uni6_Tela04_Imagem02.jpg" style="width:100%" onclick="currentSlide(2)" alt="Imagem 2">
+
+                <div class="mySlides fade">
+                    <div class="numero-slide">2 / 4</div>
+                    <div class='titulo-video'><span></span></div>
+                    <img src="../../img/uni6/MOOC3_Uni6_Tela04_Imagem02.jpg" style="width:100%">
+                    <div class="texto">Figura 04 - Fonte: Freepick</div>
                 </div>
-                <div class="column">
-                  <img class="demo cursor" src="../../img/uni6/MOOC3_Uni06_Tela04_Imagem03.jpg" style="width:100%" onclick="currentSlide(3)" alt="Imagem 3">
-                </div>                
-                <div class="column">
-                  <img class="demo cursor" src="../../img/uni6/MOOC3_Uni06_Tela04_Imagem04.jpg" style="width:100%" onclick="currentSlide(4)" alt="Imagem 4">
-                </div>                
-              </div>
+
+                <div class="mySlides fade">
+                    <div class="numero-slide">3 / 4</div>
+                    <div class='titulo-video'><span></span></div>
+                    <img src="../../img/uni6/MOOC3_Uni06_Tela04_Imagem03.jpg" style="width:100%">
+                    <div class="texto">Figura 05 - Fonte: Freepick</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numero-slide">4 / 4</div>
+                    <div class='titulo-video'><span></span></div>
+                    <img src="../../img/uni6/MOOC3_Uni06_Tela04_Imagem04.jpg" style="width:100%">
+                    <div class="texto">Figura 05 - Fonte: Freepick</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <br>
+                <div style="text-align: center">
+                    <span class="ponto" onclick="currentSlide(1)"></span>
+                    <span class="ponto" onclick="currentSlide(2)"></span>
+                    <span class="ponto" onclick="currentSlide(3)"></span>
+                    <span class="ponto" onclick="currentSlide(4)"></span>
+                </div>
             </div>
+
+
+<!--            <div class="container">-->
+<!--              <div class="mySlides">-->
+<!--                <div class="numbertext">1 / 4</div>-->
+<!--                <img src="../../img/uni6/MOOC3_Uni6_Tela04_Imagem01.jpg" style="width:100%">-->
+<!--              </div>-->
+
+<!--              <div class="mySlides">-->
+<!--                <div class="numbertext">2 / 4</div>-->
+<!--                <img src="../../img/uni6/MOOC3_Uni6_Tela04_Imagem02.jpg" style="width:100%">-->
+<!--              </div>-->
+
+<!--              <div class="mySlides">-->
+<!--                <div class="numbertext">3 / 4</div>-->
+<!--                <img src="../../img/uni6/MOOC3_Uni06_Tela04_Imagem03.jpg" style="width:100%">-->
+<!--              </div>                -->
+<!--              -->
+<!--              <div class="mySlides">-->
+<!--                <div class="numbertext">4 / 4</div>-->
+<!--                <img src="../../img/uni6/MOOC3_Uni06_Tela04_Imagem04.jpg" style="width:100%">-->
+<!--              </div>                -->
+<!--                -->
+<!--              <a class="prev" onclick="plusSlides(-1)">❮</a>-->
+<!--              <a class="next" onclick="plusSlides(1)">❯</a>-->
+
+<!--              <div class="caption-container">-->
+<!--                <p id="caption"></p>-->
+<!--              </div>-->
+
+<!--              <div class="row">-->
+<!--                <div class="column">-->
+<!--                  <img class="demo cursor" src="../../img/uni6/MOOC3_Uni6_Tela04_Imagem01.jpg" style="width:100%" onclick="currentSlide(1)" alt="Imagem 1">-->
+<!--                </div>-->
+<!--                <div class="column">-->
+<!--                  <img class="demo cursor" src="../../img/uni6/MOOC3_Uni6_Tela04_Imagem02.jpg" style="width:100%" onclick="currentSlide(2)" alt="Imagem 2">-->
+<!--                </div>-->
+<!--                <div class="column">-->
+<!--                  <img class="demo cursor" src="../../img/uni6/MOOC3_Uni06_Tela04_Imagem03.jpg" style="width:100%" onclick="currentSlide(3)" alt="Imagem 3">-->
+<!--                </div>                -->
+<!--                <div class="column">-->
+<!--                  <img class="demo cursor" src="../../img/uni6/MOOC3_Uni06_Tela04_Imagem04.jpg" style="width:100%" onclick="currentSlide(4)" alt="Imagem 4">-->
+<!--                </div>                -->
+<!--              </div>-->
+<!--            </div>-->
 
             <div class="content">
                 <p>Em contextos de intervenção, os processos de orientação e desenvolvimento de carreira têm como um dos focos principais o desenvolvimento e potencialização dos recursos de adaptabilidade de carreira, a fim de que as pessoas em todas as faixas etárias estejam mais preparadas para  lidar com o imprevisto, e a incerteza, cada vez mais frequentes em nosso cotidiano, especialmente na era Covid em que vivemos.</p>
@@ -178,8 +223,11 @@
                 <div class="bg-yellow"></div>
                 <div class="border-blue">
                     <p>Para saber mais, consulte:</p>
-                    <p>Ambiel, Rodolfo A. M.. (2014). Adaptabilidade de carreira: uma abordagem histórica de conceitos, modelos e teorias. Revista Brasileira de Orientação Profissional, 15(1), 15-24. Recuperado em 23 de maio de 2021, de http://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1679-33902014000100004&lng=pt&tlng=pt.</p>
-                    <p>Audibert, Alyane, & Teixeira, Marco Antônio Pereira. (2015). Escala de adaptabilidade de carreira: evidências de validade em universitários brasileiros. Revista Brasileira de Orientação Profissional, 16(1), 83-93. Recuperado em 23 de maio de 2021, de http://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1679-33902015000100009&lng=pt&tlng=pt".</p>
+                    <p>Ambiel, Rodolfo A. M.. (2014). Adaptabilidade de carreira: uma abordagem histórica de conceitos, modelos e teorias. Revista Brasileira de Orientação Profissional, 15(1), 15-24.</p>
+                    <a target="_blank" href="http://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1679-33902014000100004&lng=pt&tlng=pt"><button class="bt-link-externo" type="button"><i class="fas fa-external-link-alt"></i> Acessar</button></a>
+                    <p></p>
+                    <p>Audibert, Alyane, & Teixeira, Marco Antônio Pereira. (2015). Escala de adaptabilidade de carreira: evidências de validade em universitários brasileiros. Revista Brasileira de Orientação Profissional, 16(1), 83-93.</p>
+                    <a target="_blank" href="http://pepsic.bvsalud.org/scielo.php?script=sci_arttext&pid=S1679-33902015000100009&lng=pt&tlng=pt"><button class="bt-link-externo" type="button"><i class="fas fa-external-link-alt"></i> Acessar</button></a>
                     <div align="right"> <img class="right" src="../../img/padrao/icon_fique_por_dentro.gif" /></div>
                 </div>
             </section>
@@ -194,7 +242,7 @@
                     </div>
                     <div><button class="bt-avanca" type="button"><a href="tela05.html">PROSSEGUIR &#10095;</a></button></div>
                     <div class='botoes-navegacao'>
-						<a href="tela03.html"><button class="bt-navegacao" type="button"><</button>
+                        <a href="tela03.html"><button class="bt-navegacao" type="button"><</button></a>
 
 						<a href="tela01.html"><input type="radio" name="radio"><label for="radio"></label></a>
 						<a href="tela02.html"><input type="radio" name="radio"><label for="radio"></label></a>

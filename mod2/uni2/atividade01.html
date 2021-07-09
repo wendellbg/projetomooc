@@ -88,7 +88,7 @@
 
             <!-- Conteúdo -->
             <div class="content">
-                <div class="atividade" id='atividade-uni1'>
+                <div class="atividade" id='atividade-uni2'>
 					<div id='mensagem-alerta'>
 					</div>
                     <div id='mensagem-tentativas' class="atividades">                        
@@ -113,7 +113,7 @@
                             <div class="area-respostas">                                	
                                 <div class="linha-respostas">
                                     <p class="legenda-resposta">Conhecimento Técnico</p>                                    
-                                        <select name="select-opcoes" class="select-multiplo" size="8" multiple>
+                                        <select name="r2_2" id="r2_2" class="select-multiplo" size="8" multiple>
                                             <option value="existência">Existência</option>                                            
                                             <option value="fundamento">Fundamento</option>
                                             <option value="intervenção">Intervenção</option>                                            
@@ -216,7 +216,7 @@
                         </div>
                             
                         <div class="botao-atividade">
-                            <button type="button" id="botao-atividade-uni1" onclick="salvarDados()" ><i class="fas fa-check"></i> ENVIAR RESPOSTAS</button>
+                            <button type="button" id="botao-atividade-uni2" onclick="salvarDados()" ><i class="fas fa-check"></i> ENVIAR RESPOSTAS</button>
                         </div>
                     </form>
                     
@@ -271,15 +271,15 @@
     console.clear(screen);
 
     var API = new BridgeRestApi();
-    var id_unidade = "mod2_uni1";//modificar
-    var id_slide = "mod2/uni1/atividade01.html";//modificar
-    var id_atividade = "uni1_ativ1";//modificar
-    var revisao_unidade = "uni1_revisao";//modificar
-    var texto_mensagem_fim="<br>Você pode prosseguir para a próxima atividade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PRÓXIMA UNIDADE &#10095;</a><br>";
+    var id_unidade = "mod2_uni2";//modificar
+    var id_slide = "mod2/uni2/atividade01.html";//modificar
+    var id_atividade = "uni2_ativ1";//modificar
+    var revisao_unidade = "uni2_revisao";//modificar
+    var texto_mensagem_fim="<br>Você pode prosseguir para a próxima atividade.<br><br><a class='botao-mensagem' href='../uni3/index.html'>PRÓXIMA UNIDADE &#10095;</a><br>";
 
     function verifica_revisao(){
         if(revisao_vista==1){
-            document.querySelector("#botao-atividade-uni1").style.display="none";
+            document.querySelector("#botao-atividade-uni2").style.display="none";
         } 
     }
 
@@ -290,7 +290,7 @@
 	});
 
     /*************** Verificando se todas as respostas foram enviadas. *****/
-    var botao = document.getElementById("botao-atividade-uni1");//modificar
+    var botao = document.getElementById("botao-atividade-uni2");//modificar
 	
     //Etapa 3: Enviando formulário
 	function salvarDados(){
@@ -301,40 +301,37 @@
         erros=0;
 
         //aqui vai pegar os valores de cada exercício.
-        //esses são os checkbox
-		r1_1_1 = document.form_atividade_uni1.r1_1_1.checked,
-        r1_1_2 = document.form_atividade_uni1.r1_1_2.checked,
-        r1_1_3 = document.form_atividade_uni1.r1_1_3.checked,
-        r1_1_4 = document.form_atividade_uni1.r1_1_4.checked,
-		
-        r1_2_1 = document.querySelector("#r1_2_1 span.palavra-resposta"),
-        r1_2_2 = document.querySelector("#r1_2_2 span.palavra-resposta"),
-        r1_2_3 = document.querySelector("#r1_2_3 span.palavra-resposta"),
-        r1_2_4 = document.querySelector("#r1_2_4 span.palavra-resposta"),
-        r1_2_5 = document.querySelector("#r1_2_5 span.palavra-resposta"),
-        r1_2_6 = document.querySelector("#r1_2_6 span.palavra-resposta"),
-        r1_2_7 = document.querySelector("#r1_2_7 span.palavra-resposta"),
-		
+        
+        //este é o campo de texto:
+        resposta_r2_1 = document.form_atividade_uni2.r2_1_texto.value;
+        if(resposta_r2_1==""){
+            erros++;            
+        }else{
+            console.log("Texto questão 1 preenchido: "+resposta_r2_1);            
+        }
+        
+        //esse é o select
+		r2_2 = document.querySelector("#r2_2").value;
+        console.log(r2_2);
+
         //aqui os checkbox
-        r1_3_1 = document.form_atividade_uni1.r1_3_1.checked,
-        r1_3_2 = document.form_atividade_uni1.r1_3_2.checked,
-        r1_3_3 = document.form_atividade_uni1.r1_3_3.checked,
-        r1_3_4 = document.form_atividade_uni1.r1_3_4.checked
-		       
+        r2_3_a = document.form_atividade_uni2.r2_3_a.options[r2_3_a.selectedIndex].value,
+        r2_3_b = document.form_atividade_uni2.r2_3_b.options[r2_3_b.selectedIndex].value,
+        r2_3_c = document.form_atividade_uni2.r2_3_c.options[r2_3_c.selectedIndex].value,
+        r2_3_d = document.form_atividade_uni2.r2_3_d.options[r2_3_d.selectedIndex].value,
+        r2_3_e = document.form_atividade_uni2.r2_3_e.options[r2_3_e.selectedIndex].value
+		
+        console.log("r3: "+r2_3_a+", "+r2_3_b+", "+r2_3_c+", "+r2_3_d+", "+r2_3_e);
         //testando se todos os exercícios (menos os checkbox) estão preenchidos.
-		if(r1_2_1==null){
+		if(r2_3_a==null){
 			erros++;
-		}else if(r1_2_2==null){
+		}else if(r2_3_b==null){
 			erros++;
-        }else if(r1_2_3==null){
+        }else if(r2_3_c==null){
 			erros++;
-        }else if(r1_2_4==null){
+        }else if(r2_3_d==null){
 			erros++;
-        }else if(r1_2_5==null){
-			erros++;
-		}else if(r1_2_6==null){
-			erros++;
-		}else if(r1_2_7==null){
+        }else if(r2_3_e==null){
 			erros++;
 		}
 
@@ -402,7 +399,7 @@
             console.log("Registrando respostas:");
             console.log(evento.detail);
             API.registrarRespostaAtividade({
-                "identificador": "uni1_ativ1",//modificar
+                "identificador": "uni2_ativ1",//modificar
                 "questoes": [
                     {
                         //Onde houver os exercícios de drag and drop precisa pegar o innerHTML
