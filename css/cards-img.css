@@ -102,25 +102,29 @@
 }
 
 .cards-img .yellow .front:after {
-    background: linear-gradient(40deg, rgba(254, 193, 59, 0.5), rgba(2, 14, 54, 0.1));
+    background: linear-gradient(40deg, rgba(254, 193, 59, 0.4), rgba(2, 14, 54, 0.1));
 }
 
 
 .cards-img .red .front:after {
-    background: linear-gradient(40deg, rgba(255, 83, 85, 0.5), rgba(2, 14, 54, 0.1));
+    background: linear-gradient(40deg, rgba(255, 83, 85, 0.4), rgba(2, 14, 54, 0.1));
 }
 
 .cards-img .green .front:after {
-    background: linear-gradient(40deg, rgba(45, 181, 185, 0.5), rgba(2, 14, 54, 0.1));
+    background: linear-gradient(40deg, rgba(45, 181, 185, 0.4), rgba(2, 14, 54, 0.1));
 }
 
 
 .cards-img .orange .front:after {
-    background: linear-gradient(40deg, rgba(255, 132, 29, 0.5), rgba(2, 14, 54, 0.1));
+    background: linear-gradient(40deg, rgba(255, 132, 29, 0.4), rgba(2, 14, 54, 0.1));
 }
 
 .cards-img .blue .front:after {
-    background: linear-gradient(40deg, rgba(42, 92, 170, 0.5), rgba(2, 14, 54, 0.1));
+    background: linear-gradient(40deg, rgba(42, 92, 170, 0.4), rgba(2, 14, 54, 0.1));
+}
+
+.cards-img .front:hover:after {
+    background: linear-gradient(40deg, rgba(42, 92, 170, 0.0), rgba(2, 14, 54, 0.0))
 }
 
 .front .inner {
