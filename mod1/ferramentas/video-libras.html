@@ -39,11 +39,25 @@
 
 		#video-libras .video-player {
 			position: relative;
-			padding-top: 75%;
+			padding-top: 113%; /* 80% */
 			height: 0;
 		}
 
-		.buttons {
+		#video-libras .buttons{
+			display: none;
+		}
+
+		@media screen and (max-width: 736px){
+			#video-libras .video-player {
+				padding-top: 113%;
+			}
+			#video-libras .buttons{
+				display: none;
+			}
+		}
+
+
+		#video-libras .buttons {
 			width: 100%;
 			text-align: center;
 			/*background: #BCD0E8;*/
@@ -168,13 +182,13 @@
 				<div class="row">
 					<div id="video-externo" class="12u">
 						<div class='video-player'>
-							<iframe id="video" width="720" height="405" src="https://www.youtube.com/embed/CjFImu2Jwqg?enablejsapi=1&html5=1&&controls=0&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe id="video" width="720" height="405" src="https://www.youtube.com/embed/CjFImu2Jwqg?enablejsapi=1&html5=1&controls=0&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div>
 					</div>
 
 					<div id="video-libras" class="3u">
 						<div class='video-player'>
-							<iframe id="video2" width="720" height="405" src="https://www.youtube.com/embed/EUGUFURCeFs?enablejsapi=1&html5=1&mute=1&controls=0&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe id="video2" width="720" height="405" src="https://www.youtube.com/embed/EUGUFURCeFs?enablejsapi=1&html5=1&mute=1&controls=0&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div>
 
 						<div class="buttons">
