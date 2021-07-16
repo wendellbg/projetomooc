@@ -28,6 +28,8 @@ Modules - reusable parts of our design
   white-space: nowrap;
 }
 
+
+
 /* -------------------------------- 
 
 Main components 
@@ -70,6 +72,7 @@ Main components
 .cd-single-point > a::after, .cd-single-point > a:before {
   /* rotating plus icon */
   content: '';
+  /*content: url("../img/padrao/icon_hand.png") ;*/
   position: absolute;
   left: 50%;
   top: 50%;
@@ -909,4 +912,29 @@ Main components
 .border.cd-container {
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
   width: 100%;
+}
+
+
+/* icones */
+
+.cd-img-replace.icon {
+  text-indent: unset;
+}
+
+.cd-single-point > a.icon::after, .cd-single-point > a.icon:before{
+  background-color: transparent;;
+}
+
+.icon i{
+  margin-top: 12px;
+  color: #fff;
+  font-size: 22px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 560px) {
+  .icon i {
+    margin-top: 9px;
+    font-size: 15px;
+  }
 }

@@ -12,9 +12,9 @@
 .mensagem-flutuante{	
 	font-size: 1.2em;
 	position: absolute;
-	width: 80%;
+	width: 70%;
 	margin-top:-5em;
-	left: 10%;
+	left: 15%;
 	display: none; 
 	padding: 1em;
 	border-radius: 8px;	
