@@ -5,7 +5,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="../../css/mooc1.css?ver=1.2" />
-	<link rel="stylesheet" href="../../css/cards.css?ver=1.1"/>
+	<link rel="stylesheet" href="../../css/cards-img.css?ver=1.1" />
 
 	<!-- Botão de Voltar ao Topo -->
 	<script src="../../js/jquery-2.1.1.js"></script>
@@ -111,56 +111,69 @@
 				<span class="separador">
 					<p class="texto-separador">Clique nas cartas abaixo para descobrir:</p>
 				</span>
-			</div>
 
-			<!-- Conteúdo -->
-			<div class="content">
+				<div class="row cards">
+					<div class="2u 12u$(small)">
+					</div>
 
-				<div class="row">
-					<div class="6u 12u$(small)">
-						<div class='card-animado'>
-							<input type="checkbox" id="switch-1" />
-							<label class="flip-container-1" for="switch-1">
-								<div class="flipper">
-									<div class="front">
-										<div class="card yellow">
-											<div class="card-top">Há uma escola técnica na sua cidade?</div>
-											<div class="card-bottom">01</div>
-										</div>
-									</div>
-									<div class="back">
-										<div class="card yellow">
-											<div class="card-top">A maioria das cidades brasileiras ainda não possui escolas técnicas ou uma instituição de Educação Profissional</div>
-											<div class="card-bottom"></div>
-										</div>
+					<div class="4u 12u$(small)">
+						<div class="card yellow">
+							<input type="checkbox" id="card1" class="more" aria-hidden="true">
+							<div class="content">
+								<div class="front">
+									<div class="inner">
+										<h2>Há uma escola técnica na sua cidade?</h2>
+
+										<label for="card1" class="button" aria-hidden="true">
+											Clique para virar
+										</label>
 									</div>
 								</div>
-							</label>
+								<div class="back">
+									<div class="inner">
+										<div class="description">
+											<p>A maioria das cidades brasileiras ainda não possui escolas técnicas ou uma instituição de Educação Profissional</p>
+										</div>
+										<label for="card1" class="button return" aria-hidden="true">
+											<i class="fas fa-arrow-left"></i>
+										</label>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="6u 12u$(small)">
-						<div class='card-animado'>
-							<input type="checkbox" id="switch-2" />
-							<label class="flip-container-2" for="switch-2">
-								<div class="flipper">
-									<div class="front">
-										<div class="card red">
-											<div class="card-top">Dos 7,5 milhões de alunos do Ensino Médio, qual o percentual está matriculado em curso Técnico?</div>
-											<div class="card-bottom">02</div>
-										</div>
-									</div>
-									<div class="back">
-										<div class="card red">
-											<div class="card-top">Em torno de 10% dos alunos do EM estão no ensino técnico. Você faz ideia da proporção em outros países?</div>
-											<div class="card-bottom"></div>
-										</div>
+
+					<div class="4u 12u$(small)">
+						<div class="card red">
+							<input type="checkbox" id="card2" class="more" aria-hidden="true">
+							<div class="content">
+								<div class="front">
+									<div class="inner">
+										<h2>Dos 7,5 milhões de alunos do Ensino Médio, qual o percentual está matriculado em curso Técnico?</h2>
+
+										<label for="card2" class="button" aria-hidden="true">
+											Clique para virar
+										</label>
 									</div>
 								</div>
-							</label>
+								<div class="back">
+									<div class="inner">
+										<div class="description">
+											<p>Em torno de 10% dos alunos do EM estão no ensino técnico. Você faz ideia da proporção em outros países?</p>
+										</div>
+										<label for="card2" class="button return" aria-hidden="true">
+											<i class="fas fa-arrow-left"></i>
+										</label>
+									</div>
+								</div>
+							</div>
 						</div>
+					</div>
+					<div class="2u 12u$(small)">
 					</div>
 
 				</div>
+
 			</div>
 
 			<!-- Conteúdo -->

@@ -131,13 +131,16 @@
 						"identificador": "r2_2",
 						"enunciado": "O conhecimento técnico tem características próprias, com semelhanças e diferenças em relação ao conhecimento das outras ciências. Analise os conceitos a seguir e marque aqueles que estão incorporados ao conhecimento técnico:",
 						"gabaritos": [
-							{ "chave": "r2_2_1", "valor": "v", "alternativa": "Existência" },
-							{ "chave": "r2_2_2", "valor": "v", "alternativa": "Fundamento" },
-							{ "chave": "r2_2_3", "valor": "f", "alternativa": "Intervenção" },
-							{ "chave": "r2_2_4", "valor": "v", "alternativa": "Produção" },
-							{ "chave": "r2_2_5", "valor": "v", "alternativa": "Sociedade" },
-							{ "chave": "r2_2_6", "valor": "v", "alternativa": "Técnica" },
-							{ "chave": "r2_2_7", "valor": "v", "alternativa": "Trabalho" }
+							{ "chave": "r2_2_1", "valor": "v", "alternativa": "Atividade" },
+							{ "chave": "r2_2_2", "valor": "f", "alternativa": "Declaratório" },
+							{ "chave": "r2_2_3", "valor": "f", "alternativa": "Explicativo" },
+							{ "chave": "r2_2_4", "valor": "f", "alternativa": "Ilustração" },
+							{ "chave": "r2_2_5", "valor": "v", "alternativa": "Métodos" },
+							{ "chave": "r2_2_6", "valor": "v", "alternativa": "Saberes Profissionais" },
+							{ "chave": "r2_2_7", "valor": "v", "alternativa": "Saberes Técnicos" },
+							{ "chave": "r2_2_2", "valor": "f", "alternativa": "Teórico" },
+							{ "chave": "r2_2_2", "valor": "v", "alternativa": "Valores" },
+							{ "chave": "r2_2_2", "valor": "f", "alternativa": "Verbal" }
 						]
 					},{
 						"tipoQuestaoString": "PROPORCIONAL",

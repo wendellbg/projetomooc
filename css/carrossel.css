@@ -19,7 +19,7 @@
     margin: auto;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 60px 20% 60px 20%;
+    padding: 80px 4rem 60px 4rem;
     /*margin-right: -4rem;*/
     /*margin-left: -4rem;*/
     margin-bottom: 40px;
@@ -41,7 +41,8 @@
         min-width: 520px;
     }
     .carrossel .options .option:nth-child(5) {
-        display: none;
+        /*display: none;*/
+        min-width: 30px;
     }
 }
 @media screen and (max-width: 638px) {
@@ -49,7 +50,8 @@
         min-width: 440px;
     }
     .carrossel .options .option:nth-child(4) {
-        display: none;
+        /*display: none;*/
+        min-width: 30px;
     }
 }
 @media screen and (max-width: 558px) {
@@ -57,7 +59,8 @@
         min-width: 360px;
     }
     .carrossel .options .option:nth-child(3) {
-        display: none;
+        /*display: none;*/
+        min-width: 30px;
     }
 }
 @media screen and (max-width: 478px) {
@@ -65,9 +68,31 @@
         min-width: 280px;
     }
     .carrossel .options .option:nth-child(2) {
-        display: none;
+        /*display: none;*/
+        min-width: 30px;
     }
 }
+
+@media screen and (max-width: 558px) {
+    .carrossel .options {
+        min-width: 60px;
+        width: auto;
+    }
+
+    .carrossel .options .option.active .label{
+        /*display: inline;*/
+    }
+
+    .carrossel .options .option .label{
+        display: none;
+    }
+
+    .carrossel .options .option {
+        /*display: none;*/
+        min-width: 15px !important;
+    }
+}
+
 .carrossel .options .option {
     position: relative;
     overflow: hidden;
@@ -79,37 +104,47 @@
     cursor: pointer;
     transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
+
 .carrossel .options .option:nth-child(1) {
-    --defaultBackground:#2a5caa;
+    --defaultBackground: #2a5caa;
 }
+
 .carrossel .options .option:nth-child(2) {
-    --defaultBackground:#2a5caa;
+    --defaultBackground: #2a5caa;
 }
+
 .carrossel .options .option:nth-child(3) {
-    --defaultBackground:#2a5caa;
+    --defaultBackground: #2a5caa;
 }
+
 .carrossel .options .option:nth-child(4) {
-    --defaultBackground:#2a5caa;
+    --defaultBackground: #2a5caa;
 }
+
 .carrossel .options .option:nth-child(5) {
-    --defaultBackground:#2a5caa;
+    --defaultBackground: #2a5caa;
 }
+
 .carrossel .options .option:nth-child(6) {
-    --defaultBackground:#2a5caa;
+    --defaultBackground: #2a5caa;
 }
+
 .carrossel .options .option.active {
     flex-grow: 10000;
     transform: scale(1);
     max-width: 600px;
     margin: 0px;
     border-radius: 8px;
-    background-size: auto 100%;
+    background-size: cover;
+    /*background-size: auto 100%;*/
     /*&:active {
        transform:scale(0.9);
     }*/
 }
+
 .carrossel .options .option.active .shadow {
-    box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
+    /*box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;*/
+    box-shadow: inset 0 -150px 150px -150px black, inset 0 -150px 150px -120px black;
 }
 .carrossel .options .option.active .label {
     bottom: 20px;
@@ -140,7 +175,7 @@
     bottom: 0px;
     left: 0px;
     right: 0px;
-    height: 120px;
+    height: 100px;
     transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
 .carrossel .options .option .label {
@@ -168,7 +203,7 @@
     justify-content: center;
     margin-left: 10px;
     color: white;
-    white-space: pre;
+    /*white-space: pre;*/
 }
 .carrossel .options .option .label .info > div {
     position: relative;
@@ -176,8 +211,41 @@
 }
 .carrossel .options .option .label .info .main {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
 }
 .carrossel .options .option .label .info .sub {
     transition-delay: 0.1s;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+}
+
+
+@media screen and (max-width: 718px) {
+
+    .carrossel .options .option .label .info .main {
+        font-size: 0.9rem;
+        line-height: 1rem;
+    }
+    .carrossel .options .option .label .info .sub {
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+
+    .carrossel .options .option .label{
+        display: none;
+    }
+
+    .carrossel .options .option.active .label {
+        display: flex;
+    }
+
+    .carrossel .options .option.active .label .icon {
+        display: none;
+    }
+
+    .carrossel.dark {
+        padding: 50px 2rem 60px 2rem;
+    }
+
 }
