@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../css/mooc3.css?ver=1.1"/>
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2" />    
     <link rel="stylesheet" href="../../css/efeito.css?ver=1.2"/>
-    <link rel="stylesheet" href="../../css/cards.css"/>      
+    <link rel="stylesheet" href="../../css/cards-img.css"/>
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
@@ -98,103 +98,129 @@
             <div class="content">
                 <p>Teoricamente, é entendida como um construto multidimensional que envolve o <b>desenvolvimento de estratégias com as quais o indivíduo lida com as situações do mundo do trabalho.</b></p>
                 <p>A adaptabilidade corresponde a um processo ativo, dinâmico e estruturado em quatro dimensões fundamentais para um adequado desenvolvimento de carreira:</p>
-            
 
-                <div class="row">
+                <span class="separador">
+						<p class="texto-separador">Clique nos cartões e reflita sobre as questões a seguir</p>
+                </span>
+                <div class="row cards-img">
                     <div class="6u 12u$(small)">
-                        <div class='card-animado card-img'>
-                            <input type="checkbox" id="switch-1" />
-                            <label class="flip-container-1" for="switch-1">
-                                <div class="flipper">
-                                    <div class="front">                                                         
-                                        <div class="card yellow">
-                                            <img src="../../img/uni6/MOOC3_Uni6_Tela03_Card01.jpg" alt="Seta no chão">
-                                            <p class="legenda">Figura 01<br>Fonte: </p>
-                                        </div>
+                        <div class="card yellow">
+                            <input type="checkbox" id="card1" class="more">
+                            <div class="content">
+                                <div class="front" style="background-image: url('../../img/uni6/MOOC3_Uni6_Tela03_Card01.jpg')">
+                                    <div class="inner">
+                                        <!--<h2>Titulo</h2>-->
+                                        <label for="card1" class="button" aria-hidden="true">
+                                            Clique para virar
+                                        </label>
                                     </div>
-                                    <div class="back">
-                                        <div class="card yellow">
-                                            <div class="card-top">
+                                </div>
+                                <div class="back">
+                                    <div class="inner">
+                                        <div class="description">
+                                            <p>
                                                 Preocupação (concern)
-                                            </div>
+                                            </p>
                                         </div>
+                                        <div class="location">Figura 01<br>Fonte da imagem: Unsplash</div>
+                                        <label for="card1" class="button return" aria-hidden="true">
+                                            <i class="fas fa-arrow-left"></i>
+                                        </label>
                                     </div>
                                 </div>
-                            </label>
-                        </div>                           
+                            </div>
+                        </div>
                     </div>
+
                     <div class="6u 12u$(small)">
-                        <div class='card-animado card-img'>
-                            <input type="checkbox" id="switch-2" />
-                            <label class="flip-container-2" for="switch-2">
-                                <div class="flipper">
-                                    <div class="front">
-                                        <div class="card red">
-                                            <img src="../../img/uni6/MOOC3_Uni6_Tela03_Card02.jpg" alt="Imagem 2">
-                                            <p class="legenda">Figura 02<br>Fonte: </p>
-                                        </div>
-                                    </div>
-                                    <div class="back">
-                                        <div class="card red">
-                                            <div class="card-top">
-                                                Controle (control)
-                                            </div>
-                                        </div>
+                        <div class="card red">
+                            <input type="checkbox" id="card2" class="more">
+                            <div class="content">
+                                <div class="front" style="background-image: url('../../img/uni6/MOOC3_Uni6_Tela03_Card02.jpg')">
+                                    <div class="inner">
+                                        <!--<h2>Titulo</h2>-->
+                                        <label for="card2" class="button" aria-hidden="true">
+                                            Clique para virar
+                                        </label>
                                     </div>
                                 </div>
-                            </label>
-                        </div>                           
-                    </div>                                            
+                                <div class="back">
+                                    <div class="inner">
+                                        <div class="description">
+                                            <p>
+                                                Controle (control)
+                                            </p>
+                                        </div>
+                                        <div class="location">Figura 02<br>Fonte da imagem: Freepick</div>
+                                        <label for="card2" class="button return" aria-hidden="true">
+                                            <i class="fas fa-arrow-left"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="6u 12u$(small)">
+                        <div class="card green">
+                            <input type="checkbox" id="card6" class="more">
+                            <div class="content">
+                                <div class="front" style="background-image: url('../../img/uni6/MOOC3_Uni6_Tela03_Card03.jpg')">
+                                    <div class="inner">
+                                        <!--<h2>Titulo</h2>-->
+                                        <label for="card6" class="button" aria-hidden="true">
+                                            Clique para virar
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="inner">
+                                        <div class="description">
+                                            <p>
+                                                Curiosidade (curiosity)
+                                            </p>
+                                        </div>
+                                        <div class="location">Figura 03<br>Fonte da imagem: Freepick</div>
+                                        <label for="card6" class="button return" aria-hidden="true">
+                                            <i class="fas fa-arrow-left"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="6u 12u$(small)">
+                        <div class="card blue">
+                            <input type="checkbox" id="card4" class="more">
+                            <div class="content">
+                                <div class="front" style="background-image: url('../../img/uni6/MOOC3_Uni6_Tela03_Card04.jpg')">
+                                    <div class="inner">
+                                        <!--<h2>Titulo</h2>-->
+                                        <label for="card4" class="button" aria-hidden="true">
+                                            Clique para virar
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="inner">
+                                        <div class="description">
+                                            <p>
+                                                Confiança (confidence)
+                                            </p>
+                                        </div>
+                                        <div class="location">Figura 04<br>Fonte da imagem: Freepick</div>
+                                        <label for="card4" class="button return" aria-hidden="true">
+                                            <i class="fas fa-arrow-left"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="6u 12u$(small)">
-                        <div class='card-animado card-img'>
-                            <input type="checkbox" id="switch-3" />
-                            <label class="flip-container-3" for="switch-3">
-                                <div class="flipper">
-                                    <div class="front">                                                         
-                                        <div class="card orange">
-                                            <img src="../../img/uni6/MOOC3_Uni6_Tela03_Card03.jpg" alt="Imagem 3">
-                                            <p class="legenda">Figura 03<br>Fonte: </p>
-                                        </div>
-                                    </div>
-                                    <div class="back">
-                                        <div class="card orange">
-                                            <div class="card-top">
-                                                Curiosidade (curiosity)
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </label>
-                        </div>                           
-                    </div>
-                    <div class="6u 12u$(small)">
-                        <div class='card-animado card-img'>
-                            <input type="checkbox" id="switch-4" />
-                            <label class="flip-container-4" for="switch-4">
-                                <div class="flipper">
-                                    <div class="front">
-                                        <div class="card blue">
-                                            <img src="../../img/uni6/MOOC3_Uni6_Tela03_Card04.jpg" alt="Imagem 4">
-                                            <p class="legenda">Figura 04<br>Fonte: </p>
-                                        </div>
-                                    </div>
-                                    <div class="back">
-                                        <div class="card blue">
-                                            <div class="card-top">
-                                                Confiança (confidence)
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </label>
-                        </div>                           
-                    </div>                                            
-                </div>               
             </div>
-            <br>            
 
             <!-- Conteúdo Footer -->
             <div class="content footer">
