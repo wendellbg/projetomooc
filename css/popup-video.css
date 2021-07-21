@@ -7,14 +7,17 @@ body {
     display: none!important;
 }
 .button {
-    padding: 20px 40px;
-    border-color: #f3f3f3;
-    font-size: 17px;
-    font-size: 1.7rem;
-    font-family: "museo-sans", Arial, Verdana;
-    font-weight: 500;
-    margin-top: 40px;
+    border: none;
+    padding: 5px 18px;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
+    font-size: 12px;
+    font-family: "Catamaran", sans-serif;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: 0px;
+    border-radius: 4px;
 }
 .button {
     border: 2px solid #fff;
