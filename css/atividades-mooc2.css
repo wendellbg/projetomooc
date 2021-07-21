@@ -414,11 +414,13 @@ Caixas de Select - Uni2 questão 3
     width: 100%;
     padding: 2px;
     border-radius: 10px;
-    font-size: 0.8em;    
+    font-size: 0.8em;
+    cursor: pointer;
 }
 
 .caixa-box select option{
-    text-align: center;    
+    text-align: center;
+    cursor: pointer;    
 }
 
 .caixa-box select.select-respondido{
@@ -437,6 +439,7 @@ Caixas de Select - Uni2 questão 3
 
 .caixa-box select option:hover{
     background-color: white;
+    cursor: pointer;
 }
 
 /*** Select múltiplo - u2q2 **/
@@ -458,6 +461,7 @@ Caixas de Select - Uni2 questão 3
     color:#020e36;
     border-radius: 10px;
     border: 2px solid #fff;
+    cursor: pointer;
 }
 
 .select-multiplo option:hover{
