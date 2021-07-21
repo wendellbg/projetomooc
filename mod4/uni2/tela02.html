@@ -84,21 +84,17 @@
 
             <!-- Conteúdo -->
             <div class="content no-top">
-                <p>Inicialmente, claro, é preciso ter interesse pelo tema das escolhas profissionais, estar sensível às dificuldades dos jovens em tomar decisões de carreira e ter a disponibilidade para auxiliar os estudantes no seu processo de desenvolvimento vocacional.</p>                             
-                <div class="caixa">                    
-                    <div class="balaovermelho">
-                        <p>Eu tenho tudo isso, acho esse tema muito fascinante e gostaria de ser um mentor de carreira para os meus alunos, mas será que tenho as características e conhecimentos necessários?</p>
-                    </div>
-                </div>
-                <br>
-                <div class="caixa">                    
-                    <div class="balaovermelho">
-                        <p>Quais seriam estas características e conhecimentos?</p>
-                    </div>
-                </div>
-                <br> 
-                <p>Antes de respondermos a estas perguntas, é importante esclarecer alguns pontos:</p>
+                <p>Inicialmente, claro, é preciso ter interesse pelo tema das escolhas profissionais, estar sensível às dificuldades dos jovens em tomar decisões de carreira e ter a disponibilidade para auxiliar os estudantes no seu processo de desenvolvimento vocacional.</p>
 
+            </div>                                 
+
+            <!-- Imagem Única-->
+            <div class="image fit flush largura-70">
+                <img id="agni" onclick="trocar()" alt="Moça segurando cadernos" class="img-gods expand" src="../../img/uni2/MOOC-4_Unidade-2_Tela-02_Imagem-01.a.png" title="Clique aqui para ver os conceitos">                  
+                <p style="padding: 12%;" class="legenda-img">Figura 01 - Fonte: Falta fonte desta imagem</p>
+            </div>                
+
+            <div class="content no-top">
                 <!-- Container do slideshow-->
                 <div class="slideshow-container">
                     <div class="mySlides fade">
@@ -292,6 +288,24 @@
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " active";
     }
+</script>
+<script>
+   var currentImgIndex=1;
+   var ImgSrcArray = [ //caminho das suas imgs aqui
+   '../../img/uni2/MOOC-4_Unidade-2_Tela-02_Imagem-01.a.png',
+   '../../img/uni2/MOOC-4_Unidade-2_Tela-02_Imagem-01.b.png',
+   ];
+
+   function trocar(){
+
+     if(currentImgIndex == ImgSrcArray.length) //reseta quando o contatador for igual ao tamanho da array e volta a 1° img
+     {
+       currentImgIndex=0;
+     }
+     document.getElementById("agni").src=ImgSrcArray[currentImgIndex]; //altera a img do elemento "agni" de acordo com o indice
+       currentImgIndex++; // incrementa a nossa referencia
+
+   }
 </script>
 </body>
 </html>
