@@ -1,0 +1,682 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Mentoria</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../css/mooc3.css?ver=1.1"/>  
+    <link rel="stylesheet" href="../../css/efeito.css?ver=1.2"/>
+    <link rel="stylesheet" href="../../css/atividades-mooc3.css" />
+
+    <!-- Botão de Voltar ao Topo -->
+    <script src="../../js/jquery-2.1.1.js"></script>
+    <script src="../../js/bt-topo.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script> -->
+    <!-- <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-SB34EK30YV');
+    </script> -->
+
+    <!-- Google Tag Manager -->
+    <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MK4H2FJ');</script> 
+    -->
+    <!-- End Google Tag Manager -->     
+    <style>
+
+    </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MK4H2FJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Header -->
+<header id="header">
+	<div class="logo">
+		<a href="tela01.html">UNIDADE 1</a>
+		<h3>É possível educar para a carreira?</h3>
+	</div>
+</header>
+
+<!-- Main -->
+<section id="main">
+	<div class="inner">
+		<!-- One -->
+		<section id="one" class="wrapper style1">
+
+			<div class="botao-sumario">				
+					<a class="link-progresso" href="../sumario.html"><i class="fas fa-tasks"></i> PROGRESSO</a>
+			</div>
+			<header class="special">
+				<div class="entire-menu">
+					<div class="menu-tit">
+						<div class="menu-tit-col1">
+							<h2>Unidade 1 - Avaliação</h2>
+						</div>
+						<div class="menu-tit-col2">
+							<input type="checkbox" id="change-hamburguer" />
+							<a class="hamburguer" href="#">
+								<span></span>
+								<label for="change-hamburguer"></label>
+							</a>
+							<div class="menu">
+                                <a href="../sumario.html" class='titulo-menu'>UNIDADE 1</a>
+                                <a href="tela01.html">1.01 - Apresentação</a>
+                                <a href="tela02.html">1.02 - Escolha da Carreira 1</a>
+                                <a href="tela03.html">1.03 - Escolha da Carreira 2</a>
+                                <a href="tela04.html">1.04 - Educação para a carreira</a>
+                                <a href="tela05.html">1.05 - Como educar para a carreira?</a>
+                                <a href="tela06.html">1.06 - Experiência de orientação para a carreira em uma Escola Técnica</a>
+                                <a href="tela07.html">1.07 - Desafios para as escolas brasileiras</a>
+                            </div>
+						</div>
+					</div>
+					
+				</div>
+			</header>
+
+            <!-- Conteúdo -->
+            <div class="content">
+                <div class="atividade" id='atividade-uni1'>
+					<div id='mensagem-alerta'>
+					</div>
+                    <div id='mensagem-tentativas' class="atividades">                        
+					</div>
+                    <form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni1" method="POST">
+                            <div class="questao">
+                                <div class="titulo-questao">Questão 1</div>														
+                                <div class="enunciado-questao">O que é educação para a carreira?</div>                                
+                                <div class="area-respostas">
+                                    <div class='opcao-resposta'>
+                                        <input type="radio" name="resposta_1" id="resposta_1_1" value="Formação Geral" required>
+                                        <label for="resposta_1_1" class="texto-opcao">Orientar os pais e alunos sobre as opções de carreira mais socialmente valorizadas.</label>
+                                    </div>
+                                    <div class="opcao-resposta">
+                                        <input type="radio" name="resposta_1" id="resposta_1_2" value="Técnico">
+                                        <label for="resposta_1_2" class="texto-opcao">Preparar os alunos para a tomada de decisões e escolhas.</label>
+                                    </div>
+                                    <div class="opcao-resposta">
+                                        <input type="radio" name="resposta_1" id="resposta_1_3" value="Normal">
+                                        <label for="resposta_1_3" class="texto-opcao">Fazer testes vocacionais com os alunos.</label>
+                                    </div>
+                                    <div class="opcao-resposta">
+                                        <input type="radio" name="resposta_1" id="resposta_1_4" value="EJA">
+                                        <label for="resposta_1_4" class="texto-opcao">Ofertar 3 ou 4 profissões para que o aluno siga.</label>
+                                    </div>                                    
+                                </div>
+                            </div> 
+
+                            <div class="questao">
+                                <div class="titulo-questao">Questão 2</div>
+                                <div class="enunciado-questao">
+                                    <span>Relacione os conceitos com os pilares da educação para a carreira:</span>
+                                </div>
+                                <div class="area-respostas">
+                                    <div class="linha-respostas">
+                                        <div class='texto-resposta-maior'>                                        
+                                            <span class="texto-opcao">a) Lugar privilegiado para se refletir sobre a preparação para o trabalho.</span>
+                                        </div>
+                                        <span class="legenda-input">a)</span>
+                                        <div class="area-inputs caixa-drop_1_2" id='r1_2_1' name='r1_2_1' ondrop="drop(event)" ondragover="allowDrop(event)">                                            
+                                            <p></p>
+                                        </div>                                                                                                                    
+                                    </div>
+
+                                    <div class="linha-respostas">
+                                        <div class="texto-resposta-maior">                                        
+                                            <span class="texto-opcao">b) Parceria entre escola e a sociedade mais ampla (família, empregadores, governo).</span>
+                                        </div>
+                                        <span class="legenda-input">b)</span>
+                                        <div class="area-inputs caixa-drop_1_2" id='r1_2_2' name='r1_2_2' ondrop="drop(event)" ondragover="allowDrop(event)">                                            
+                                            <p></p>
+                                        </div>                                                                            
+                                       
+                                    </div>
+
+                                    <div class="linha-respostas">
+                                        <div class="texto-resposta-maior">                                        
+                                            <span class="texto-opcao">c) Realização de atividades que são socialmente benéficas para si e para os demais.</span>                                           
+                                        </div>
+                                        <span class="legenda-input">c)</span>
+                                        <div class="area-inputs caixa-drop_1_2" id='r1_2_3' name='r1_2_3' ondrop="drop(event)" ondragover="allowDrop(event)">                                            
+                                            <p></p>
+                                        </div> 
+                                    </div>
+
+                                    <div class="linha-respostas">
+                                        <div class="texto-resposta-maior">                                        
+                                            <span class="texto-opcao">d) Entender a Educação para a Carreira como parte do currículo escolar..</span>                                           
+                                        </div>
+                                        <span class="legenda-input">d)</span>
+                                        <div class="area-inputs caixa-drop_1_2" id='r1_2_4' name='r1_2_4' ondrop="drop(event)" ondragover="allowDrop(event)">                                            
+                                            <p></p>
+                                        </div> 
+                                    </div>
+
+                                    <div class="linha-respostas">
+                                        <p class="legenda-resposta">Opções de Resposta:</p>
+                                        <div class="area-opcoes caixa-drop_1_2" id='opcao1_2_1' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                            <span class="palavra-resposta" name='r2_1_texto' id='r2_1' draggable="true" ondragstart="drag(event)">Comunidade</span>
+                                        </div>
+                                        <div class="area-opcoes caixa-drop_1_2" id='opcao1_2_2' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                            <span class="palavra-resposta" name='r2_2_texto' id='r2_2' draggable="true" ondragstart="drag(event)">Currículo</span>
+                                        </div>                                        
+                                        <div class="area-opcoes caixa-drop_1_2" id='opcao1_2_3' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                            <span class="palavra-resposta" name='r2_3_texto' id='r2_3' draggable="true" ondragstart="drag(event)">Escola</span>
+                                        </div>
+                                        <div class="area-opcoes caixa-drop_1_2" id='opcao1_2_4' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                            <span class="palavra-resposta" name='r2_4_texto' id='r2_4' draggable="true" ondragstart="drag(event)">Trabalho</span>
+                                        </div>
+                                    </div>
+                                </div>                                 
+                            </div> 
+
+                        <div class="questao">
+                            <div class="titulo-questao">Questão 3</div>
+                            <div class="enunciado-questao">
+                                <span>Para que ocorra a educação para a carreira é preciso desenvolver as <b>estratégias de implementação de Programas de Educação à Carreira</b>, voltados ao contexto da <b>escola</b>. Arraste e solte cada conceito correspondente à sua definição:</span>
+                            </div>
+                            <div class="area-respostas">
+                                <div class="linha-respostas">
+                                    <div class='texto-resposta-maior'>                                        
+                                        <span class="texto-opcao">a) Disseminação transversal (em diferentes disciplinas e em todos os níveis escolares) de questões sobre os valores, conhecimentos e atitudes relevantes ao desenvolvimento vocacional e da carreira.</span>
+                                    </div>
+                                    <span class="legenda-input">a)</span>
+                                    <div class="area-inputs caixa-drop_1_2" id='r1_3_1' name='r1_3_1' ondrop="drop(event)" ondragover="allowDrop(event)">                                            
+                                        <p></p>
+                                    </div>                                                                                                                    
+                                </div>
+
+                                <div class="linha-respostas">
+                                    <div class="texto-resposta-maior">                                        
+                                        <span class="texto-opcao">b) Implementação da educação para a carreira, integrada no horário escolar, tal como se de uma disciplina se tratasse, a ser ministrada por um orientador profissional, um educador para a carreira.</span>
+                                    </div>
+                                    <span class="legenda-input">b)</span>
+                                    <div class="area-inputs caixa-drop_1_2" id='r1_3_2' name='r1_3_2' ondrop="drop(event)" ondragover="allowDrop(event)">                                            
+                                        <p></p>
+                                    </div>                                                                            
+                                   
+                                </div>
+
+                                <div class="linha-respostas">
+                                    <div class="texto-resposta-maior">                                        
+                                        <span class="texto-opcao">c) Integração da educação para a carreira nas disciplinas de ciências sociais e humanas.</span>                                           
+                                    </div>
+                                    <span class="legenda-input">c)</span>
+                                    <div class="area-inputs caixa-drop_1_2" id='r1_3_3' name='r1_3_3' ondrop="drop(event)" ondragover="allowDrop(event)">                                            
+                                        <p></p>
+                                    </div> 
+                                </div>
+                                <div class='linha-respostas'>
+                                    <p class="legenda-resposta">Opções de Resposta:</p>
+                                    <div class="area-opcoes caixa-drop_1_2" id='opcao1_3_1' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                        <span class="palavra-resposta" name='r1_3_texto_1' id='r1_3_texto_1' draggable="true" ondragstart="drag(event)">Aditivas</span>
+                                    </div>
+                                    <div class="area-opcoes caixa-drop_1_2" id='opcao1_3_2' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                        <span class="palavra-resposta" name='r1_3_texto_2' id='r1_3_texto_2' draggable="true" ondragstart="drag(event)">Infusivas</span>
+                                    </div>
+                                    <div class="area-opcoes caixa-drop_1_2" id='opcao1_3_3' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                        <span class="palavra-resposta" name='r1_3_texto_3' id='r1_3_texto_3' draggable="true" ondragstart="drag(event)">Mistas</span>
+                                    </div>
+                                    											
+                                </div>										
+                            </div>                                   
+                        </div> 
+
+                        <div class="questao">
+                            <div class="titulo-questao">Questão 3 NOVA</div>
+                            <div class="enunciado-questao">
+                                <span>Para que ocorra a educação para a carreira é preciso desenvolver as <b>estratégias de implementação de Programas de Educação à Carreira</b>, voltados ao contexto da <b>escola</b>. Arraste e solte cada conceito correspondente à sua definição:</span>
+                            </div>
+                            <div class="area-respostas">
+                                <div class="linha-respostas">
+                                    <div class='texto-resposta-maior'>                                        
+                                        <span class="texto-opcao">a) Disseminação transversal (em diferentes disciplinas e em todos os níveis escolares) de questões sobre os valores, conhecimentos e atitudes relevantes ao desenvolvimento vocacional e da carreira.</span>
+                                    </div>
+                                    <div class="caixa-box">                                            
+                                        <select name="r1_3_a" id="r2_3_a" class="resposta-select" onchange="valorSelecionado(this)">
+                                            <option  id="r1_3_a_0" name="r1_3_a_0" value="">---</option>
+                                            <option  id="r1_3_a_1" name="r1_3_a_1" value="Aditivas">Aditivas</option>
+                                            <option  id="r1_3_a_2" name="r1_3_a_2" value="Infusivas">Infusivas</option>>
+                                            <option  id="r1_3_a_3" name="r1_3_a_3" value="Mistas">Mistas</option>>                                            
+                                        </select>
+                                    </div>                                                                                                                    
+                                </div>
+
+                                <div class="linha-respostas">
+                                    <div class="texto-resposta-maior">                                        
+                                        <span class="texto-opcao">b) Implementação da educação para a carreira, integrada no horário escolar, tal como se de uma disciplina se tratasse, a ser ministrada por um orientador profissional, um educador para a carreira.</span>
+                                    </div>
+                                    <div class="caixa-box">                                            
+                                        <select name="r1_3_b" id="r2_3_b" class="resposta-select" onchange="valorSelecionado(this)">
+                                            <option  id="r1_3_b_0" name="r1_3_b_0" value="">---</option>
+                                            <option  id="r1_3_b_1" name="r1_3_b_1" value="Aditivas">Aditivas</option>
+                                            <option  id="r1_3_b_2" name="r1_3_b_2" value="Infusivas">Infusivas</option>>
+                                            <option  id="r1_3_b_3" name="r1_3_b_3" value="Mistas">Mistas</option>>                                            
+                                        </select>
+                                    </div>                                                                                 
+                                   
+                                </div>
+
+                                <div class="linha-respostas">
+                                    <div class="texto-resposta-maior">                                        
+                                        <span class="texto-opcao">c) Integração da educação para a carreira nas disciplinas de ciências sociais e humanas.</span>                                           
+                                    </div>
+                                    <div class="caixa-box">                                            
+                                        <select name="r1_3_c" id="r2_3_c" class="resposta-select" onchange="valorSelecionado(this)">
+                                            <option  id="r1_3_c_0" name="r1_3_c_0" value="">---</option>
+                                            <option  id="r1_3_c_1" name="r1_3_c_1" value="Aditivas">Aditivas</option>
+                                            <option  id="r1_3_c_2" name="r1_3_c_2" value="Infusivas">Infusivas</option>>
+                                            <option  id="r1_3_c_3" name="r1_3_c_3" value="Mistas">Mistas</option>>                                            
+                                        </select>
+                                    </div>      
+                                </div>                                									
+                            </div>                                   
+                        </div> 
+                            
+                        <div class="botao-atividade">
+                            <button type="button" id="botao-atividade-uni1" onclick="salvarDados()" ><i class="fas fa-check"></i> ENVIAR RESPOSTAS</button>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+
+            <!-- Conteúdo -->
+            <div class="content footer"> 
+                <div class='navegacao'>
+                    <div class="bt-topo">
+                        <a href="#"><i class="fas fa-angle-up"></i></a>
+                    </div>
+                    <!-- <div>
+                        <button class="bt-avanca" type="button"><a href="../uni2/tela01.html">IR PARA UNIDADE 2 ></a></button>
+                    </div>                    -->
+
+                </div>               
+                <!--Rodapé-->
+                <hr/>
+                <div class="row rodape">
+                    <div class="6u 12u$(small)">
+                        <p></p>
+                        <img src="../../img/padrao/logo_mentoria.png" alt="IFSC">
+                    </div>
+                    <div class="3u 12u$(small)">
+                        <p>Realização:</p>
+                        <img src="../../img/padrao/logo_mec.png" alt="IFSC">
+						<p class="small"><b>Secretaria de Educação Profissional e Tecnológica</b></p>
+                    </div>
+                    <div class="3u 12u$(small)">
+                        <p>Produção:</p>
+                        <img src="../../img/padrao/ifsc.png" alt="IFSC">
+                        <img src="../../img/padrao/ifes.png" alt="IFES">
+                    </div>
+                </div><!--Rodapé-->
+
+            </div>
+        </section>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer id="footer">
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
+<script src="../../js/funcoes-atividades.js"></script>
+<script src="../../js/DragDropTouch.js"></script>
+
+<script>
+    console.clear(screen);
+
+    var API = new BridgeRestApi();
+    var id_unidade = "mod3_uni1";//modificar
+    var id_slide = "mod3/uni1/atividade01.html";//modificar
+    var id_atividade = "uni1_ativ1";//modificar
+    var revisao_unidade = "uni1_revisao";//modificar
+    var texto_mensagem_fim="<br>Você pode prosseguir para a próxima atividade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PRÓXIMA UNIDADE &#10095;</a><br>";
+
+    function verifica_revisao(){
+        if(revisao_vista==1){
+            document.querySelector("#botao-atividade-uni1").style.display="none";
+        } 
+    }
+
+    //Etapa 1: carregamento da página
+    window.addEventListener('load', function(){
+        console.log("carregando a página");
+        API.obterDadosGenericos("quant_"+id_atividade);        
+	});
+
+    /*************** Verificando se todas as respostas foram enviadas. *****/
+    var botao = document.getElementById("botao-atividade-uni1");//modificar
+	
+    //Etapa 3: Enviando formulário
+	function salvarDados(){
+        nota_atividade_nova=0;
+        nota_atividade=0;
+        quant_respostas=0; 
+        revisao_teste=0;       
+        erros=0;
+
+        //aqui vai pegar os valores de cada exercício.
+        //esses são os de drag and drop
+		r1_1_1 = document.querySelector("#r1_1_1 span.palavra-resposta"),        
+        r1_1_2 = document.querySelector("#r1_1_2 span.palavra-resposta"),
+		
+        r1_2_1 = document.querySelector("#r1_2_1 span.palavra-resposta"),
+        r1_2_2 = document.querySelector("#r1_2_2 span.palavra-resposta"),
+        r1_2_3 = document.querySelector("#r1_2_3 span.palavra-resposta"),
+		
+        //aqui os checkbox
+        r1_3_1 = document.form_atividade_uni1.r1_3_1.checked,
+        r1_3_2 = document.form_atividade_uni1.r1_3_2.checked,
+        r1_3_3 = document.form_atividade_uni1.r1_3_3.checked,
+        r1_3_4 = document.form_atividade_uni1.r1_3_4.checked,
+		
+        //aqui os rádios de v ou f
+        r1_4_1 = document.form_atividade_uni1.r1_4_1.value,
+        r1_4_2 = document.form_atividade_uni1.r1_4_2.value,
+        r1_4_3 = document.form_atividade_uni1.r1_4_3.value,
+		r1_4_4 = document.form_atividade_uni1.r1_4_4.value;
+        
+        //testando se todos os exercícios (menos os checkbox) estão preenchidos.
+		if(r1_1_1==null){
+			erros++;
+		}else if(r1_1_2==null){
+			erros++;
+        }else if(r1_2_1==null){
+			erros++;
+        }else if(r1_2_2==null){
+			erros++;
+        }else if(r1_2_3==null){
+			erros++;
+		}else if(r1_4_1==""){
+			erros++;
+		}else if(r1_4_2==""){
+			erros++;
+		}else if(r1_4_3==""){
+			erros++;
+        }else if(r1_4_4==""){
+			erros++;
+		}
+
+		if(erros>0){
+            //caso algum não esteja preenchido, exibe mensagem de erro
+			mensagem.className = "mensagem-alerta";
+			mensagem.textContent = "Por favor preencha todos os campos";
+			mensagem.style.display = "inline-block";
+			window.scrollTo(0, 0);
+			return false;
+		}else{
+			//console.log("\nChecando respostas"+id_atividade);			            
+			//verificando qual tentativa é esta.
+            envio=1;
+            verificando_tentativas("quant_"+id_atividade);            
+			if(erros>0){
+				return false;
+			}			
+		}
+	};
+
+	//Depois que verifica as tentativas de resposta, verifica as respostas salvas;
+	window .addEventListener( "evObtemDadosRespostaAtividade" , resultadoObtemRespostaAtividade, false );
+    function resultadoObtemRespostaAtividade(evento){
+        //console.log("\nObtendo as respostas: ");
+        console.log("Status do evento: "+evento.detail['status']);          
+        //verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
+        if(evento.detail["status"]=="200"){           
+            nota_atividade = evento.detail.data.nota;
+            //console.log("Voltando para a função principal. Quant respostas: "+quant_respostas+" e max: "+max_quant_tentativas);            
+            texto_mensagem_nota="<br>Sua nota mais alta é "+nota_atividade;            
+            var texto_mensagem_total="";
+            texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+texto_mensagem_revisao_0;         
+            verifica_revisao();
+            if(revisao_vista==1){
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+texto_mensagem_revisao_1;         
+            }else if(quant_respostas>=max_quant_tentativas){
+                console.log("\n\nMax de mensagens aqui");
+                //Já atingiu o máximo de tentativas
+                if(envio==1){
+                    console.log("\n\nEnvio=1");
+                    mensagem.className = "mensagem-alerta";
+    			    mensagem.innerHTML = "Você já fez suas "+max_quant_tentativas+" tentativas.";
+	    		    mensagem.style.display = "inline-block";                                     
+                }
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PROSSEGUIR &#10095;</a><p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                                
+                
+                erros++;
+            }else if(nota_atividade==10){
+                console.log("\nNota 10 aqui");
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a nota máxima!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
+            }else if(nota_atividade>=6){
+                console.log("\nAtingiu a média aqui");
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a !<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                
+            }
+            else{
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você deve atingir a média ou fazer as três tentativas para poder ver o gabarito."+texto_mensagem_fim;
+            }            
+            mensagem_tentativas.innerHTML=texto_mensagem_total;            
+            window.scrollTo(0, 0);
+        }
+        if(erros==0){       
+            //se ainda não tiver enviado as respostas, ou se for dentro do máximio de tentativas,
+            // registra as re respostas com as funções da API:
+            console.log("Registrando respostas:");
+            console.log(evento.detail);
+            API.registrarRespostaAtividade({
+                "identificador": "uni1_ativ1",//modificar
+                "questoes": [
+                    {
+                        //Onde houver os exercícios de drag and drop precisa pegar o innerHTML
+                        "identificador": "r1_1",                    
+                        "gabaritos": [
+                            { "chave": "r1_1_1", "valor": r1_1_1.innerHTML},
+                            { "chave": "r1_1_2", "valor": r1_1_2.innerHTML}							
+                        ]
+                    },{                    
+                        "identificador": "r1_2",                    
+                        "gabaritos": [
+                            { "chave": "r1_2_1", "valor": r1_2_1.innerHTML},
+                            { "chave": "r1_2_2", "valor": r1_2_2.innerHTML},
+                            { "chave": "r1_2_3", "valor": r1_2_3.innerHTML}							
+                        ]
+                    },{
+                        //Onde houver os checkbox, testar se é true para registrar v ou f
+                        "identificador": "r1_3",                    
+                        "gabaritos": [
+                            { "chave": "r1_3_1", "valor": (r1_3_1==true ? "v" : "f")},
+                            { "chave": "r1_3_2", "valor": (r1_3_2==true ? "v" : "f")},
+                            { "chave": "r1_3_3", "valor": (r1_3_3==true ? "v" : "f")},
+                            { "chave": "r1_3_4", "valor": (r1_3_4==true ? "v" : "f")}							
+                        ]
+                    },{
+                        //Onde houver os checkbox, testar se é true para registrar v ou f
+                        "identificador": "r1_4",                    
+                        "gabaritos": [
+                            { "chave": "r1_4_1", "valor": r1_4_1},
+                            { "chave": "r1_4_2", "valor": r1_4_2},
+                            { "chave": "r1_4_3", "valor": r1_4_3},
+                            { "chave": "r1_4_4", "valor": r1_4_4}							
+                        ]
+                    }
+                ]
+            })           
+        }        	
+	};
+
+    //função de controle, pra exibir no console o resultado do envio das respostas (registraRespostaAtividade)
+	window .addEventListener( "evRegistraRespostaAtividade" ,resultadoRegistrarRespostaAtividade, false );
+    function resultadoRegistrarRespostaAtividade (evento){
+        console .log(evento.detail);
+        nota_atividade_nova= evento.detail.data.notaAtividade;
+        if(erros==0){
+            //se não houver erro, exibe mensagem de OK
+            //console.log("Aqui envia uma nova tentativa, são "+quant_respostas+" salvas");
+			mensagem.className = "mensagem-ok";
+			mensagem.style.display ="inline-block";			
+            if(nota_atividade_nova>nota_atividade){
+                nota_atividade=nota_atividade_nova;
+            }
+            //esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
+            mensagem.innerHTML="Dados Enviados com sucesso!<br />";
+            texto_mensagem_nota="<br />Sua nota foi: "+nota_atividade_nova+"<br />Sua nota mais alta nesta atividade é: "+nota_atividade;
+            let texto_mensagem_total="";
+            verifica_revisao();
+            if(revisao_vista==1){
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_revisao_1;
+            }else if(quant_respostas>=max_quant_tentativas){
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
+            }else if(nota_atividade==10){
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a nota máxima!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
+            }else if(nota_atividade>=6){
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_revisao_0+texto_mensagem_fim;
+            }
+            else{
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você deve atingir a média ou fazer as três tentativas para poder ver o gabarito."+texto_mensagem_fim;
+            }            
+            
+            mensagem_tentativas.innerHTML=texto_mensagem_total;            
+            //"Ocorreu tudo certo. Tem que aparecer o link
+			window.scrollTo(0, 0);
+        }else{
+            //caso algum não esteja preenchido, exibe mensagem de erro
+			mensagem.className = "mensagem-alerta";
+			mensagem.innerHTML = "Ocorreu algum erro! Tente Novamente...";
+			mensagem.style.display = "inline-block";
+			window.scrollTo(0, 0);
+        }
+    }
+
+    //// Eventos do Drag and Drop /////
+    var dragSrcEl = null;
+
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev){
+        /**ev.dataTransfer.setData("text",ev.target.id); **/
+        ev.dataTransfer.setData ("src", ev.target.id);                    
+    }
+
+    function drop(ev){
+        
+        ev.preventDefault();
+        // var data=ev.dataTransfer.getData("text");
+        // ev.target.appendChild(document.getElementById(data));
+
+        var src = document.getElementById(ev.dataTransfer.getData ("src"));
+        var srcParent = src.parentNode;
+        var tgt = ev.currentTarget.firstElementChild;
+        
+        ev.currentTarget.replaceChild (src, tgt);
+        srcParent.appendChild (tgt);
+    }
+
+    function valorSelecionado(sel) {
+        var val = sel.selectedIndex;
+        var id = sel.id;   
+        if(val==0){
+            sel.classList.remove("select-respondido");
+        }else{       
+            sel.classList.add("select-respondido");
+        }
+        var selects = document.getElementsByTagName('select');
+        for(var i = 0; i < selects.length; ++i) {
+            var s = selects[i];            
+            if(s.id != id && s.selectedIndex!=0){                
+                if(s.selectedIndex==val){                     
+                    s.selectedIndex=0;                    
+                    s.classList.remove("select-respondido");
+                }                
+            }
+        } 
+    }
+
+    
+
+//////////////////Daqui para baixo entrará no arquivo funcoes_atividades.js
+
+// var quant_tentativas=0;
+// var max_quant_tentativas=3;
+// var quant_respostas=0;
+
+//     function verificando_tentativas(tentativas_unidade){
+//         console.log("\n\nVerificando tentativas aqui.\nenvio="+envio+"\nteste="+revisao_teste+" \nvista="+revisao_vista);        
+//         API.obterDadosGenericos(tentativas_unidade);
+//     }
+
+//     window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
+//     function resultadoObtemDadosGenericos (evento){
+//         console.log(evento.detail);
+
+//         //verificar se está verificando a revisão ou os envios de resposta
+//         if(revisao_teste==0){
+//             //verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
+//             if(evento.detail["status"]=="200"){
+//                 console.log(evento.detail["data"]);            
+//                 //se a unidade já foi enviada, verifica a quantidade, para saber se atingiu o máximo            
+//                 let quant_salva = evento.detail["data"][0]["valor"];            
+//                 //console.log("tentativas salvas: "+quant_salva);
+//                 envio==1 ? quant_respostas=quant_salva+1 : quant_respostas=quant_salva;
+//                 if(envio==0){                                
+//                     let vez = quant_salva==1 ? "vez" : "vezes";
+//                     //texto_mensagem_tentativa=texto_mensagem_tentativa;
+//                     texto_mensagem_tentativa="<br>Você já respondeu "+quant_salva+" "+vez+".";
+//                     mensagem_tentativas.innerHTML=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_fim;
+//                     console.log("\nJá verificou envio, quant-salva="+quant_salva);
+//                 }else{
+//                     if(quant_salva<max_quant_tentativas){
+//                         quant_respostas=parseInt(quant_salva)+1;                
+//                     }else{                        
+//                         quant_respostas=parseInt(3);         
+//                     }                
+//                 }          
+//                 API.registrarDadosGenericos("quant_"+id_atividade,quant_respostas);        
+//                 API.obterRespostaAtividade(id_atividade);
+            
+//             //Etapa 2: Carregando a página sem respostas enviadas
+//             }else{                                  
+//                 //se não encontrou a chave da unidade, é porque esta é a primeira vez que ele envia as respostas.
+//                 console.log("Carregando a página, envio="+envio);
+//                 if(envio==0){
+//                     quant_respostas=0;
+//                     mensagem_tentativas.innerHTML=texto_mensagem_padrao_0;                
+//                     console.log("mensagem zerada");
+//                 }else{
+//                     quant_respostas=parseInt(1);
+//                     //console.log("quant respostas="+quant_respostas);
+//                     texto_mensagem_tentativa="<br>Esta é sua primeira tentativa.";
+//                     API.registrarDadosGenericos("quant_"+id_atividade,quant_respostas);        
+//                     API.obterRespostaAtividade(id_atividade);
+//                 }
+//             }
+//             revisao_teste=1;
+//             API.obterDadosGenericos("uni1_revisao");
+//             console.log("verificando revisão. revisao_teste="+revisao_teste);
+//         }else{
+//             //aqui está verificando se a página de revisão foi acessada
+//             if(evento.detail["status"]=="200"){
+//                 console.log(evento.detail["data"]);            
+//                 revisao_vista=1;
+//             }            
+//         }
+//     } 
+//     console.log(texto_mensagem_tentativa);
+//     mensagem_tentativas.innerHTML=texto_mensagem_tentativa;
+
+</script>
+
+</body>
+</html>
