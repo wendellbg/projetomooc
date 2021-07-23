@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2" />
     <link rel="stylesheet" href="../../css/efeito.css?ver=1.2"/>  
     <link rel="stylesheet" href="../../css/podcast.css?ver=1.1"/>
-    <link rel="stylesheet" href="../../css/slide.css?ver=1.1"/>    
+    <link rel="stylesheet" href="../../css/slide.css?ver=1.1"/>
+    <link rel="stylesheet" href="../../css/telas_finais.css?ver=1.1"/>
+
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
@@ -71,14 +73,14 @@
                                 </a>
                                 <div class="menu">
                                     <a href="../sumario.html" class='titulo-menu'>UNIDADE 5</a>
-                                    <a href="tela01.html" class='link-menu-atual'>5.01 - Apresentação</a>
+                                    <a href="tela01.html">5.01 - Apresentação</a>
                                     <a href="tela02.html">5.02 - Passadologia</a>
                                     <a href="tela03.html">5.03 - Exploração Vocacional</a>
                                     <a href="tela04.html">5.04 - Teoria evolutiva de carreira</a>
                                     <a href="tela05.html">5.05 - Aplicando a Teoria evolutiva de carreira</a>
                                     <a href="tela06.html">5.06 - Estágio de carreira</a>
                                     <a href="tela07.html">5.07 - Processos de aconselhamento/orientação de carreira</a>
-                                    <a href="tela08.html">5.08 - Concluindo</a>
+                                    <a href="tela08.html" class='link-menu-atual'>5.08 - Concluindo</a>
                                 </div>
                             </div>
                         </div>
@@ -93,7 +95,7 @@
                 <!--Caixa Material Complementar-->
                 <div class="titulo-externo-box blue"><p>Material Complementar</p></div>
                 <section class="box-info text-white">
-                    <div class="bg-red"></div>
+                    <div class="bg-orange"></div>
                     <div class="border-blue">
                         <img src="../../img/padrao/icon_complementar.gif" />
                         <p>Acesse o material para aprofundar os conceitos de exploração vocacional.</p>
@@ -106,6 +108,11 @@
                     <div class='navegacao'>
                         <div class="bt-topo">
                             <a href="#"><i class="fas fa-angle-up"></i></a>
+                        </div>
+                        <div id="botao-atividades">
+                            <div class='mensagem-flutuante incompleta'>Complete os 100% na unidade para reponder as atividades</div>
+                            <div class='mensagem-flutuante completa'>Você acessou todas as telas da unidade. Então, faça as Atividades!</div>
+                            <button class="bt-avanca bt-desativado" type="button" ><a href="atividade01.html" ><i class="fas fa-pencil-alt"></i> ATIVIDADES &#10095;&#10095;</a></button>
                         </div>
                         <div><button class="bt-avanca" type="button"><a href="../uni6/tela01.html">PROSSEGUIR &#10095;</a></button></div>
                         <div class='botoes-navegacao'>
@@ -160,10 +167,10 @@
 
     var API = new BridgeRestApi();
     var id_unidade = "mod3_uni5";//alterar
-    var id_slide = "mod3/uni4/tela08.html";//alterar
+    var id_slide = "mod3/uni5/tela08.html";//alterar
     var unidade=5;//alterar
     var tela="uni5tela8";//alterar
-    var ultima_tela=0;
+    var ultima_tela=1;
     
     //Obtendo dados curso
     window.addEventListener('load', function(){
