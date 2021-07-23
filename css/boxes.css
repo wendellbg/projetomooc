@@ -445,7 +445,8 @@ h3.texto-central b{
 
 .box-info .bg-red,
 .box-info .bg-blue,
-.box-info .bg-yellow{
+.box-info .bg-yellow,
+.box-info .bg-orange{
 	border-radius: 8px;
 	padding: 20px;
 	margin-left: 15%;
@@ -464,6 +465,10 @@ h3.texto-central b{
 
 .box-info .bg-yellow{
 	background-color: #FEC13B;
+}
+
+.box-info .bg-orange{
+	background-color: #ff841d;
 }
 
 @media screen and (max-width: 585px) {
@@ -495,7 +500,8 @@ h3.texto-central b{
 
 	.box-info .bg-red,
 	.box-info .bg-blue,
-	.box-info .bg-yellow{
+	.box-info .bg-yellow,
+	.box-info .bg-orange{
 		width: 100% !important;
 		margin-left: 5% !important;
 	}

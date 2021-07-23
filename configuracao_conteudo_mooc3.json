@@ -12,8 +12,8 @@
 		]
 	},
 	{
-		"identificador": "mod2_uni1",
-		"nome": "O trabalho como produção da existência",
+		"identificador": "mod3_uni1",
+		"nome": "É possível educar para a carreira?",
 		"descricao": "",
 		"permitePorcentagem": "true",
 		"topicos": [{
@@ -21,16 +21,22 @@
 			"nome": "Apresentação"
 			},{
 				"identificador": "uni1_tela02",
-				"nome": "Nossa humanidade é técnica"
+				"nome": "Escolha da Carreira 1"
 			},{
 				"identificador": "uni1_tela03",
-				"nome": "Conceituando a técnica"
+				"nome": "Escolha da Carreira 2"
 			},{
 				"identificador": "uni1_tela04",
-				"nome": "A técnica no cotidiano"
+				"nome": "Educação para a carreira"
 			},{
 				"identificador": "uni1_tela05",
-				"nome": "A técnica e a perspectiva cultural"
+				"nome": "Como educar para a carreira?"
+			},{
+				"identificador": "uni1_tela06",
+				"nome": "Experiência de orientação para a carreira em uma Escola Técnica"
+			},{
+				"identificador": "uni1_tela07",
+				"nome": "Desafios para as escolas brasileiras"
 			}
 		],
 		"atividades": [
@@ -39,46 +45,42 @@
 				"nomeAtividade": "Avaliação - Unidade 1",				
 				"questoes": [
 					{
-						"tipoQuestaoString": "PROPORCIONAL",
+						"tipoQuestaoString": "INTEGRAL",
 						"identificador": "r1_1",
-						"enunciado": "Sobre a relação entre técnica e trabalho, assinale as afirmativas a seguir como verdadeira ou falsa:",
+						"enunciado": "O que é educação para a carreira?",
 						"gabaritos": [
-							{ "chave": "r1_1_1", "valor": "v", "alternativa": "a) A técnica é o fundamento do trabalho." },
-							{ "chave": "r1_1_2", "valor": "v", "alternativa": "b) O ser humano intervém no mundo pela técnica." },
-							{ "chave": "r1_1_3", "valor": "f", "alternativa": "c) O trabalho só tem sentido econômico e/ou material." },
-							{ "chave": "r1_1_4", "valor": "v", "alternativa": "d) O trabalho é um dos traços que melhor identifica nossa humanidade." }
+							{ "chave": "r1_1_1", "valor": "f", "alternativa": "a) Orientar os pais e alunos sobre as opções de carreira mais socialmente valorizadas." },
+							{ "chave": "r1_1_2", "valor": "f", "alternativa": "b) Preparar os alunos para a tomada de decisões e escolhas." },
+							{ "chave": "r1_1_3", "valor": "v", "alternativa": "c) Fazer testes vocacionais com os alunos." },
+							{ "chave": "r1_1_4", "valor": "f", "alternativa": "d) Ofertar 3 ou 4 profissões para que o aluno siga." }
 						]
 					},
 					{
 						"tipoQuestaoString": "PROPORCIONAL",
 						"identificador": "r1_2",
-						"enunciado": "Complete o texto arrastando e soltando as palavras:",
+						"enunciado": "Relacione os conceitos com os pilares da educação para a carreira:",
 						"gabaritos": [
-							{ "chave": "r1_2_1", "valor": "técnica", "alternativa": "Palavra 1" },
-							{ "chave": "r1_2_2", "valor": "intervenção", "alternativa": "Palavra 2" },
-							{ "chave": "r1_2_3", "valor": "produção", "alternativa": "Palavra 3" },
-							{ "chave": "r1_2_4", "valor": "existência", "alternativa": "Palavra 4" },
-							{ "chave": "r1_2_5", "valor": "sociedade", "alternativa": "Palavra 5" },
-							{ "chave": "r1_2_6", "valor": "trabalho", "alternativa": "Palavra 6" },
-							{ "chave": "r1_2_7", "valor": "fundamento", "alternativa": "Palavra 7" }
+							{ "chave": "r1_2_1", "valor": "Escola", "alternativa": "a) Lugar privilegiado para se refletir sobre a preparação para o trabalho." },
+							{ "chave": "r1_2_2", "valor": "Comunidade", "alternativa": "b) Parceria entre escola e a sociedade mais ampla (família, empregadores, governo)." },
+							{ "chave": "r1_2_3", "valor": "Trabalho", "alternativa": "c) Realização de atividades que são socialmente benéficas para si e para os demais." },
+							{ "chave": "r1_2_4", "valor": "Currículo", "alternativa": "d) Entender a Educação para a Carreira como parte do currículo escolar." }							
 						]
 					},
 					{
 						"tipoQuestaoString": "PROPORCIONAL",
 						"identificador": "r1_3",
-						"enunciado": "Considerando a relação entre técnica e cultura, assinale a(s) alternativa(s) que demonstram o valor social da técnica:",
+						"enunciado": "Para que ocorra a educação para a carreira é preciso desenvolver as estratégias de implementação de Programas de Educação à Carreira, voltados ao contexto da escola. Arraste e solte cada conceito correspondente à sua definição:",
 						"gabaritos": [
-							{ "chave": "r1_3_1", "valor": "v", "alternativa": "a) A técnica é o elemento essencial do que chamamos de trabalho." },
-							{ "chave": "r1_3_2", "valor": "f", "alternativa": "b) A técnica não pode ser pensada como atividade reflexiva e transformadora, pois está relacionada apenas a trabalhos manuais." },
-							{ "chave": "r1_3_3", "valor": "f", "alternativa": "c) A “formação técnica” e a “formação humana” são elementos opostos." },
-							{ "chave": "r1_3_4", "valor": "v", "alternativa": "d) A técnica, como intervenção no mundo que acontece socialmente, constitui o laço social e está no coração da cultura." }
+							{ "chave": "r1_3_1", "valor": "Infusivas", "alternativa": "a) Disseminação transversal (em diferentes disciplinas e em todos os níveis escolares) de questões sobre os valores, conhecimentos e atitudes relevantes ao desenvolvimento vocacional e da carreira." },
+							{ "chave": "r1_3_2", "valor": "Aditivas", "alternativa": "b) Implementação da educação para a carreira, integrada no horário escolar, tal como se de uma disciplina se tratasse, a ser ministrada por um orientador profissional, um educador para a carreira." },
+							{ "chave": "r1_3_3", "valor": "Mistas", "alternativa": "c) Integração da educação para a carreira nas disciplinas de ciências sociais e humanas." }							
 						]
 					}
 				]
 			}
 		]	
 	},{		
-		"identificador": "mod2_uni2",
+		"identificador": "mod3_uni2",
 		"nome": "O Trabalho Como Exercício Social da Técnica",
 		"descricao": "",
 		"permitePorcentagem": "true",
@@ -158,7 +160,7 @@
 			}
 		]
 	},{		
-		"identificador": "mod2_uni3",
+		"identificador": "mod3_uni3",
 		"nome": "Dimensões do trabalho e da profissionalização",
 		"descricao": "",
 		"permitePorcentagem": "true",
@@ -237,7 +239,7 @@
 			}
 		]
 	},{		
-		"identificador": "mod2_uni4",
+		"identificador": "mod3_uni4",
 		"nome": "Processos de profissionalização",
 		"descricao": "",
 		"permitePorcentagem": "true",
@@ -315,7 +317,7 @@
 			}
 		]
 	},{		
-		"identificador": "mod2_uni5",
+		"identificador": "mod3_uni5",
 		"nome": "Análise da atividade profissional (ou tecnografia)",
 		"descricao": "",
 		"permitePorcentagem": "true",
