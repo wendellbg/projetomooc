@@ -5,9 +5,7 @@ html{
 .questao{
     background-color: #010f36;
     border-radius: 8px;
-    padding-top: 1em;
-    padding-left: 1em;
-    padding-bottom: 1em;
+    padding: 1em;
     margin: 1em 0 2em 0;
     color: #fff;
     font-size: 1.5em;
@@ -51,7 +49,7 @@ html{
     /* padding-bottom:1em;     */
     font-weight: bold;
     text-align: justify;
-    margin-right: 2%;    
+    /*margin-right: 2%;    */
 }
 
 .enunciado-questao p, .texto-resposta p{
@@ -113,7 +111,7 @@ html{
 }
 
 .linha-branca{
-    width: 95%;
+    width: 100%;
     border: 2px solid #010f36;
     border-radius: 5px;
     margin-bottom: 15px;
@@ -159,7 +157,7 @@ html{
 
 .linha-inputs{
     padding-left: 140px;
-    width: 95%;
+    width: 100%;
     height: 20px;
     margin-top: -40px;    
 
@@ -252,7 +250,7 @@ html{
     font-weight: bold;
 }
 .linha-grande {
-    width: 95%;
+    width: 100%;
     margin-right: 0;
 }
 
@@ -303,7 +301,7 @@ html{
 }
 
 .caixa-drop_2_3{
-    width: 47.5%;
+    width: 49%;
     margin-left: 0;    
     margin-right: 0;
     border-radius: 0;
@@ -311,7 +309,7 @@ html{
 }
 
 .caixa-drop_2_3b{
-    width: 47.5%;
+    width: 50%;
     margin-left: 0;    
     margin-right: 0;
     border-radius: 0;
@@ -553,7 +551,7 @@ input[type="checkbox"]:checked + label {
 }
 
 .resposta-texto{
-    width: 95%;
+    width: 100%;
     margin: auto;
     height: 200px;
     padding: 0.5em;
@@ -688,7 +686,7 @@ input[type="checkbox"]:checked + label {
 
 @media screen and (max-width: 680px) {
 	.texto-resposta{
-        width: 90%;
+        width: 100%;
         margin-right: 0;
     }
 
@@ -713,7 +711,7 @@ input[type="checkbox"]:checked + label {
     }
 
     .caixa-drop_2_2{
-        width: 90%;
+        width: 100%;
         margin-left: 0;
     }
 
@@ -729,7 +727,7 @@ input[type="checkbox"]:checked + label {
         margin-bottom: 1em;
     }
     .caixa-drop_2_3{
-        width: 90%;
+        width: 100%;
         margin-left: 0;
         margin-bottom: 0;
         margin-top: 1em;
@@ -737,9 +735,13 @@ input[type="checkbox"]:checked + label {
 
     .caixa-drop_2_3b{
         margin-top: 0;
-        width: 90%;
+        width: 100%;
         margin-left: 0;
         font-size: 0.9em;
+    }
+
+    .area-inputs, .area-opcoes {
+        width: 95%;
     }
 }
 

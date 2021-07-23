@@ -5,9 +5,7 @@ html{
 .questao{
     background-color: #020e36;
     border-radius: 8px;
-    padding-top: 1em;
-    padding-left: 1em;
-    padding-bottom: 1em;
+    padding: 1em;
     margin: 1em 0 2em 0;
     color: #fff;
     font-size: 1.5em;
@@ -51,7 +49,7 @@ html{
     /* padding-bottom:1em;     */
     font-weight: bold;
     text-align: justify;
-    margin-right: 2%;    
+    /*margin-right: 2%;    */
 }
 
 .enunciado-questao p, .texto-resposta p{
@@ -239,7 +237,7 @@ html{
 
 .texto-resposta{    
     position: relative;
-    width: 50%;
+    width: 60%;
     font-size: 0.8em;    
     margin-left: 0;
     margin-right: 2%;
@@ -262,7 +260,7 @@ html{
     font-weight: bold;
 }
 .linha-grande {
-    width: 95%;
+    width: 100%;
     margin-right: 0;
 }
 
@@ -328,7 +326,7 @@ html{
 }
 
 .caixa-drop_2_3{
-    width: 47.5%;
+    width: 49%;
     margin-left: 0;    
     margin-right: 0;
     border-radius: 0;
@@ -336,7 +334,7 @@ html{
 }
 
 .caixa-drop_2_3b{
-    width: 47.5%;
+    width: 50%;
     margin-left: 0;    
     margin-right: 0;
     border-radius: 0;
@@ -445,7 +443,7 @@ Caixas de Select - Uni2 questão 3
 /*** Select múltiplo - u2q2 **/
 
 .select-multiplo{
-    width: 80%;
+    width: 100%;
     padding: 2px;
     text-align: center;    
     border-radius: 10px;
@@ -654,7 +652,7 @@ input[type="checkbox"]:checked + label {
 }
 
 .resposta-texto{
-    width: 95%;
+    width: 100%;
     margin: auto;
     height: 200px;
     padding: 0.5em;
@@ -789,7 +787,7 @@ input[type="checkbox"]:checked + label {
 
 @media screen and (max-width: 680px) {
 	.texto-resposta, .texto-resposta-maior{
-        width: 90%;
+        width: 100%;
         margin-right: 0;
     }
 
@@ -815,7 +813,7 @@ input[type="checkbox"]:checked + label {
     }
 
     .caixa-drop_2_2{
-        width: 90%;
+        width: 100%;
         margin-left: 0;
     }
 
@@ -831,7 +829,7 @@ input[type="checkbox"]:checked + label {
         margin-bottom: 1em;
     }
     .caixa-drop_2_3{
-        width: 90%;
+        width: 100%;
         margin-left: 0;
         margin-bottom: 0;
         margin-top: 1em;
@@ -839,9 +837,13 @@ input[type="checkbox"]:checked + label {
 
     .caixa-drop_2_3b{
         margin-top: 0;
-        width: 90%;
+        width: 100%;
         margin-left: 0;
         font-size: 0.9em;
+    }
+
+    .area-inputs, .area-opcoes {
+        width: 90%;
     }
 }
 
