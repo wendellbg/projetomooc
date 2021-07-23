@@ -5,9 +5,7 @@ html{
 .questao{
     background-color: #010f36;
     border-radius: 8px;
-    padding-top: 1em;
-    padding-left: 1em;
-    padding-bottom: 1em;
+    padding: 1em;
     margin: 1em 0 2em 0;
     color: #fff;
     font-size: 1.5em;
