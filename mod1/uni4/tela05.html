@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="../../css/slide.css?ver=1.2"/>
 	<link rel="stylesheet" href="../../css/menu-colorido.css?ver=1.1"/>
 	<link rel="stylesheet" href="../../css/telas_finais.css"/>
+	<link rel="stylesheet" href="../../css/video-libras.css?ver=1.0" />
 
 	<!-- Botão de Voltar ao Topo -->
 	<script src="../../js/jquery-2.1.1.js"></script>
@@ -170,45 +171,182 @@
 				</span>
 			</div>
 
+			<!-- Video Libras -->
+
 			<!-- Container do slideshow-->
-			<div class="slideshow-container">
+			<div class="slideshow-container video libras">
 				<div class="mySlides fade">
 					<div class="numero-slide">1 / 5</div>
 					<div class='titulo-video'><span>Curso Técnico em Panificação</span></div>
-					<div class='video-player'>
-						<iframe width="720" height="405" src="https://www.youtube.com/embed/nKWcBbBXt9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="row">
+						<div class="video-externo 12u">
+							<div class='video-player'>
+								<iframe id="video1a" width="720" height="405" src="https://www.youtube.com/embed/nKWcBbBXt9M?enablejsapi=1&html5=1&controls=0&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+						</div>
+
+						<div class="video-libras 3u">
+							<div class='video-player'>
+								<iframe id="video1b" width="720" height="405" src="https://www.youtube.com/embed/iBpZ3N6JT5A?enablejsapi=1&html5=1&mute=1&controls=0&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+					<div class="row links">
+						<div class="8u">
+							<div class="downloads">
+						<span class="aviso" ><b>IFSC</b><br>
+							Profissões em Curso | Curso Técnico em Panificação. Youtube, Junho de 2019.
+						</span>
+							</div>
+						</div>
+						<div class="4u">
+							<div class="downloads">
+							<span class="aviso" >Acessiblidade:<br>
+								<button onclick="exibirLibras(1)" class="video-exibir bt-download-media" type="button"><i class="fas fa-sign-language"></i> Tradutor de libras</button>
+								<button onclick="exibirLibras(0)" class="video-cancelar bt-download-media" type="button"><i class="fas fa-sign-language"></i> Esconder tradutor</button>
+							</span>
+							</div>
+						</div>
 					</div>
 				</div>
 
 				<div class="mySlides fade">
 					<div class="numero-slide">2 / 5</div>
 					<div class='titulo-video'><span>Curso Técnico em Jogos Digitais</span></div>
-					<div class='video-player'>
-						<iframe width="720" height="405" src="https://www.youtube.com/embed/7L-hRlSJTAI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="row">
+						<div class="video-externo 12u">
+							<div class='video-player'>
+								<iframe id="video2a" width="720" height="405" src="https://www.youtube.com/embed/xNHENJuH5Jo?enablejsapi=1&html5=1&controls=0&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+						</div>
+
+						<div class="video-libras 3u">
+							<div class='video-player'>
+								<iframe id="video2b" width="720" height="405" src="https://www.youtube.com/embed/iBpZ3N6JT5A?enablejsapi=1&html5=1&mute=1&controls=0&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+					<div class="row links">
+						<div class="8u">
+							<div class="downloads">
+						<span class="aviso" ><b>Senac MS</b><br>
+							Curso Técnico de Programação de Jogos Digitais - SENAC MS. Youtube, Junho de 2016.
+						</span>
+							</div>
+						</div>
+						<div class="4u">
+							<div class="downloads">
+							<span class="aviso" >Acessiblidade:<br>
+								<button onclick="exibirLibras(1)" class="video-exibir bt-download-media" type="button"><i class="fas fa-sign-language"></i> Tradutor de libras</button>
+								<button onclick="exibirLibras(0)" class="video-cancelar bt-download-media" type="button"><i class="fas fa-sign-language"></i> Esconder tradutor</button>
+							</span>
+							</div>
+						</div>
 					</div>
 				</div>
 
 				<div class="mySlides fade">
 					<div class="numero-slide">3 / 5</div>
 					<div class='titulo-video'><span>Curso Técnico em Eventos</span></div>
-					<div class='video-player'>
-						<iframe width="720" height="405" src="https://www.youtube.com/embed/6LKIp2kLpyQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="row">
+						<div class="video-externo 12u">
+							<div class='video-player'>
+								<iframe id="video3a" width="720" height="405" src="https://www.youtube.com/embed/6LKIp2kLpyQ?enablejsapi=1&html5=1&controls=0&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+						</div>
+
+						<div class="video-libras 3u">
+							<div class='video-player'>
+								<iframe id="video3b" width="720" height="405" src="https://www.youtube.com/embed/iBpZ3N6JT5A?enablejsapi=1&html5=1&mute=1&controls=0&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+					<div class="row links">
+						<div class="8u">
+							<div class="downloads">
+						<span class="aviso" ><b>Técnico em Eventos ETEC FP</b><br>
+							Curso Técnico em Eventos - Etec Fernando Prestes. Youtube, Outubro de 2020.
+						</span>
+							</div>
+						</div>
+						<div class="4u">
+							<div class="downloads">
+							<span class="aviso" >Acessiblidade:<br>
+								<button onclick="exibirLibras(1)" class="video-exibir bt-download-media" type="button"><i class="fas fa-sign-language"></i> Tradutor de libras</button>
+								<button onclick="exibirLibras(0)" class="video-cancelar bt-download-media" type="button"><i class="fas fa-sign-language"></i> Esconder tradutor</button>
+							</span>
+							</div>
+						</div>
 					</div>
 				</div>
 
 				<div class="mySlides fade">
 					<div class="numero-slide">4 / 5</div>
 					<div class='titulo-video'><span>Curso Técnico em Edificações</span></div>
-					<div class='video-player'>
-						<iframe width="720" height="405" src="https://www.youtube.com/embed/CjFImu2Jwqg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="row">
+						<div class="video-externo 12u ">
+							<div class='video-player'>
+								<iframe id="video4a" width="720" height="405" src="https://www.youtube.com/embed/CjFImu2Jwqg?enablejsapi=1&html5=1&controls=0&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+						</div>
+
+						<div class="video-libras 3u">
+							<div class='video-player'>
+								<iframe id="video4b" width="720" height="405" src="https://www.youtube.com/embed/iBpZ3N6JT5A?enablejsapi=1&html5=1&mute=1&controls=0&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+					<div class="row links">
+						<div class="8u">
+							<div class="downloads">
+						<span class="aviso" ><b>SENAI Nacional.</b><br>
+							Construtores do Futuro - Técnico em Edificações. Youtube, Dezembro de 2015.
+						</span>
+							</div>
+						</div>
+						<div class="4u">
+							<div class="downloads">
+							<span class="aviso" >Acessiblidade:<br>
+								<button onclick="exibirLibras(1)" class="video-exibir bt-download-media" type="button"><i class="fas fa-sign-language"></i> Tradutor de libras</button>
+								<button onclick="exibirLibras(0)" class="video-cancelar bt-download-media" type="button"><i class="fas fa-sign-language"></i> Esconder tradutor</button>
+							</span>
+							</div>
+						</div>
 					</div>
 				</div>
 
 				<div class="mySlides fade">
 					<div class="numero-slide">5 / 5</div>
 					<div class='titulo-video'><span>Curso Técnico em Mecatrônica</span></div>
-					<div class='video-player'>
-						<iframe width="720" height="405" src="https://www.youtube.com/embed/_HJbFoErli4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="row">
+						<div class="video-externo 12u">
+							<div class='video-player'>
+								<iframe id="video5a" width="720" height="405" src="https://www.youtube.com/embed/_HJbFoErli4?enablejsapi=1&html5=1&controls=0&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+						</div>
+
+						<div class="video-libras 3u">
+							<div class='video-player'>
+								<iframe id="video5b" width="720" height="405" src="https://www.youtube.com/embed/iBpZ3N6JT5A?enablejsapi=1&html5=1&mute=1&controls=0&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+					<div class="row links">
+						<div class="8u">
+							<div class="downloads">
+						<span class="aviso" ><b>Instituto Monitor</b><br>
+							Técnico em Mecatrônica. Youtube, Outubro de 2018.
+						</span>
+							</div>
+						</div>
+						<div class="4u">
+							<div class="downloads">
+							<span class="aviso" >Acessiblidade:<br>
+								<button onclick="exibirLibras(1)" class="video-exibir bt-download-media" type="button"><i class="fas fa-sign-language"></i> Tradutor de libras</button>
+								<button onclick="exibirLibras(0)" class="video-cancelar bt-download-media" type="button"><i class="fas fa-sign-language"></i> Esconder tradutor</button>
+							</span>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -285,7 +423,74 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
-				
+
+
+
+<!-- Video Libras -->
+<script src="../../js/multiplos-videos-libras.js"></script>
+
+<script>
+
+	function exibirLibras(valor){
+		if(!valor){ // significa que valor = 0
+
+			var x = document.getElementsByClassName("video-libras");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'none';
+			}
+
+			var x = document.getElementsByClassName("video-externo");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].classList.remove("9u");
+				x[i].classList.add("12u");
+			}
+
+
+			var x = document.getElementsByClassName("video-cancelar");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'none';
+			}
+
+			var x = document.getElementsByClassName("video-exibir");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'block';
+			}
+
+		}else{ // ou não é 0
+
+			var x = document.getElementsByClassName("video-libras");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'block';
+			}
+
+			var x = document.getElementsByClassName("video-externo");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].classList.remove("12u");
+				x[i].classList.add("9u");
+			}
+
+			var x = document.getElementsByClassName("video-cancelar");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'block';
+			}
+
+			var x = document.getElementsByClassName("video-exibir");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'none';
+			}
+		}
+	}
+
+</script>
+
 		<!-- Funções de acesso à biblioteca do Avamec-->
 		<script src="../../js/funcoes-porcentagem.js"></script>
 		<script>

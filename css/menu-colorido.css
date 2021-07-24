@@ -101,12 +101,12 @@
 /* DIVS COLORIDAS - TELA 07 */
 
 .divs-coloridas .cor1a, .divs-coloridas .i1:hover .cor1b{
-    background-color: #2b5cab;
+    background-color: #e73535;
     color: #fff;    
     transition: background-color .5s;
 }
 .divs-coloridas .cor1b, .divs-coloridas .i1:hover .cor1a{
-    background-color: #4e9eff;
+    background-color: #f47177;
     color: #000;
 }
 
@@ -121,22 +121,22 @@
 }
 
 .divs-coloridas .cor3a, .divs-coloridas .i3:hover .cor3b{
-    background-color: #e73535;
+    background-color: #2b5cab;
     color: #fff;    
     transition: background-color .5s;
 }
 .divs-coloridas .cor3b, .divs-coloridas .i3:hover .cor3a{
-    background-color: #f47177;    
+    background-color: #4e9eff;
     color: #000;
 }
 
 .divs-coloridas .cor4a, .divs-coloridas .i4:hover .cor4b{
-    background-color: #020e36;
+    background-color: #1b6868;
     color: #fff;    
     transition: background-color .5s;
 }
 .divs-coloridas .cor4b, .divs-coloridas .i4:hover .cor4a{
-    background-color: #0142fc;
+    background-color: #2db5b9;
     color: #000;
     /*background-color: #2a5caa;*/
     /*color: #ffffff;*/
@@ -183,54 +183,64 @@
 }
 
 .divs-coloridas .item{
-    margin-bottom: 4em;
-    margin-top: -3em;
-    position: relative;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    display: flex;
+    /*position: relative;*/
 }
 
  .divs-coloridas .titulo{
     border-radius: 8px;
-    font-size: 1.8em;
-    line-height: 1em;
-    padding-left: 15px;
-    padding-top: 15px;
-    padding-right: 400px;
-    padding-bottom: 60px;
-    margin-right: 45px; 
+    font-size: 30px;
+    line-height: 34px;
+    width: 100%;
+    padding: 20px;
+    max-height: 150px;
+    padding-right: 65%;
+    margin-bottom: 20px;
 }
 
-.divs-coloridas .titulo span{
-    padding-right: 40%;
-}
- .divs-coloridas .i7 .titulo{
-    padding-bottom: 4em;
+/*.divs-coloridas .titulo span{*/
+/*    padding-right: 65%;*/
+/*}*/
+
+.divs-coloridas .item:first-child{
+    margin-top: -3em;
 }
 
-.divs-coloridas .i7{
+.divs-coloridas .item:last-child{
     margin-bottom: -3em;
 }
 
 .divs-coloridas .descricao{
     font-family: "Affogato-Regular";
-    font-size: 1.4em;
+    font-size: 20px;
+    line-height: 28px;
     border-radius: 8px;
-    line-height: 1em;    
-    width: 65%;        
-    position: absolute;      
-    padding: 20px; 
-    right: 0;
-    top: 0;
+    width: 70%;
+    margin-left: -60%;
+    /*position: absolute;      */
+    padding: 20px;
+    margin-top: 20px;
+    /*right: 0;*/
+    /*top: 0;*/
 }
 
 @media screen and (max-width: 660px) {
+
+    .divs-coloridas .item{
+        display: block;
+    }
 	.divs-coloridas .descricao{
         width: 90%;
         margin-left: 10%;
-        position: relative;
+        margin-top: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;;
     }   
     .divs-coloridas .titulo{
-        padding-right: 0;
-        padding-bottom: 5%;
+        margin-bottom: 0;
+        padding: 20px;
     }
     .divs-coloridas .i7 .titulo{
         padding-bottom: 1em;
@@ -240,9 +250,6 @@
         border-bottom-right-radius: 0;
     }
 
-    .divs-coloridas .descricao{
-        border-top-left-radius: 0;
-    }
 }
 
 
