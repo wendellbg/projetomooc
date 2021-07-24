@@ -34,7 +34,6 @@ function onYouTubePlayerAPIReady() {
 
     }
 
-
 }
 
 function onPlayerReady(event) {
