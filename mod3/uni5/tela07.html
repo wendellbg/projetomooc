@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2" />
     <link rel="stylesheet" href="../../css/efeito.css?ver=1.2"/>  
     <link rel="stylesheet" href="../../css/podcast.css?ver=1.1"/>
-    <link rel="stylesheet" href="../../css/slide.css?ver=1.1"/>
+    <link rel="stylesheet" href="../../css/carrossel.css?ver=1.1" />
     <link rel="stylesheet" href="../../css/menu-colorido.css?ver=1.1"/>
 
     <!-- Botão de Voltar ao Topo -->
@@ -156,56 +156,60 @@
                     <p>Na família e na escola passamos pelos dois primeiros estágios do desenvolvimento vocacional, que são fundamentais para o desenvolvimento das competências chave que auxiliarão o sujeito ao longo da sua vida de trabalho:</p>
                 </div>
 
-                    <!-- Container do slideshow-->
-                    <div class="slideshow-container">
-                        <div class="mySlides fade">
-                            <div class="numero-slide">1 / 5</div>
-                            <div class='titulo-video'><span></span></div>
-                            <img src="../../img/uni5/MOOC3_Uni5_Tela07_Imagem1.jpg" alt="Imagem 1">
-                            <div class="texto">Figura 03 - Fonte: Freepick</div>
+                <!-- Container do Carrossel-->
+                <div class="carrossel dark">
+                    <div class="options">
+                        <div class="option active" style="--optionBackground:url(../img/uni5/MOOC3_Uni5_Tela07_Imagem1.jpg);">
+                            <div class="shadow"></div>
+                            <div class="label">
+                                <div class="info">
+                                    <div class="main"></div>
+                                    <div class="sub">Figura 03 - Fonte: Freepick</div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="mySlides fade">
-                            <div class="numero-slide">2 / 5</div>
-                            <div class='titulo-video'><span></span></div>
-                            <img src="../../img/uni5/MOOC3_Uni5_Tela07_Imagem2.jpg" alt="Imagem 2">
-                            <div class="texto">Figura 04 - Fonte: Freepick</div>
+                        <div class="option" style="--optionBackground:url(../img/uni5/MOOC3_Uni5_Tela07_Imagem2.jpg);">
+                            <div class="shadow"></div>
+                            <div class="label">
+                                <div class="info">
+                                    <div class="main"></div>
+                                    <div class="sub">Figura 04 - Fonte: Freepick</div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="mySlides fade">
-                            <div class="numero-slide">3 / 5</div>
-                            <div class='titulo-video'><span></span></div>
-                            <img src="../../img/uni5/MOOC3_Uni5_Tela07_Imagem3.jpg" alt="Imagem 3">
-                            <div class="texto">Figura 05 - Fonte: Freepick</div>
+                        <div class="option" style="--optionBackground:url(../img/uni5/MOOC3_Uni5_Tela07_Imagem3.jpg);">
+                            <div class="shadow"></div>
+                            <div class="label">
+                                <div class="info">
+                                    <div class="main"></div>
+                                    <div class="sub">Figura 05 - Fonte: Freepick</div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="mySlides fade">
-                            <div class="numero-slide">4 / 5</div>
-                            <div class='titulo-video'><span></span></div>
-                            <img src="../../img/uni5/MOOC3_Uni5_Tela07_Imagem4.jpg" alt="Imagem 4">
-                            <div class="texto">Figura 06 - Fonte: Freepick</div>
+                        <div class="option" style="--optionBackground:url(../img/uni5/MOOC3_Uni5_Tela07_Imagem4.jpg);">
+                            <div class="shadow"></div>
+                            <div class="label">
+                                <div class="info">
+                                    <div class="main"></div>
+                                    <div class="sub">Figura 06 - Fonte: Freepick</div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="mySlides fade">
-                            <div class="numero-slide">5 / 5</div>
-                            <div class='titulo-video'><span></span></div>
-                            <img src="../../img/uni5/MOOC3_Uni5_Tela07_Imagem5.jpg" alt="Imagem 5">
-                            <div class="texto">Figura 07 - Fonte: Freepick</div>
-                        </div>
-
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                        <br>
-                        <div style="text-align: center">
-                            <span class="ponto" onclick="currentSlide(1)"></span>
-                            <span class="ponto" onclick="currentSlide(2)"></span>
-                            <span class="ponto" onclick="currentSlide(3)"></span>
-                            <span class="ponto" onclick="currentSlide(4)"></span>
-                            <span class="ponto" onclick="currentSlide(5)"></span>
+                        <div class="option" style="--optionBackground:url(../img/uni5/MOOC3_Uni5_Tela07_Imagem5.jpg);">
+                            <div class="shadow"></div>
+                            <div class="label">
+                                <div class="info">
+                                    <div class="main"></div>
+                                    <div class="sub">Figura 07 - Fonte: Freepick</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
+                </div>
 
                 <div class="content">
                     <p>Sem estas competências, o percurso vai ser muito mais atribulado e cheio de dúvidas e inseguranças. Pais e professores podem trabalhar juntos para potencializar o desenvolvimento vocacional de filhos e alunos.</p>
@@ -274,6 +278,15 @@
 <!-- Footer -->
 <footer id="footer">
 </footer>
+
+<!-- Carrossel -->
+<script>
+    $(".option").click(function(){
+        $(".option").removeClass("active");
+        $(this).addClass("active");
+
+    });
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
 <script>

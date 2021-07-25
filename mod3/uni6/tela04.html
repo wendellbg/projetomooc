@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2" />    
     <link rel="stylesheet" href="../../css/efeito.css?ver=1.2"/>
     <link rel="stylesheet" href="../../css/menu-colorido.css?ver=1.2"/>
-    <link rel="stylesheet" href="../../css/carrosel.css"/>
-    <link rel="stylesheet" href="../../css/slide.css?ver=1.1"/>
+    <link rel="stylesheet" href="../../css/carrossel.css?ver=1.1" />
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
@@ -127,93 +126,50 @@
                 <p>Nessa perspectiva, pessoas adaptáveis são aquelas que:</p>
             </div>
 
+            <!-- Container do Carrossel-->
+            <div class="carrossel dark">
+                <div class="options">
+                    <div class="option active" style="--optionBackground:url(../img/uni6/MOOC3_Uni6_Tela04_Imagem01.jpeg);">
+                        <div class="shadow"></div>
+                        <div class="label">
+                            <div class="info">
+                                <div class="main">Se preocupam com o futuro profissional</div>
+                                <div class="sub">Figura 03 - Fonte: Freepick</div>
+                            </div>
+                        </div>
+                    </div>
 
-            <!-- Container do slideshow-->
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <div class="numero-slide">1 / 4</div>
-                    <div class='titulo-video'><span></span></div>
-                    <img src="../../img/uni6/MOOC3_Uni6_Tela04_Imagem01.jpg" style="width:100%">
-                    <div class="texto">Figura 03 - Fonte: Freepick</div>
-                </div>
+                    <div class="option" style="--optionBackground:url(../img/uni6/MOOC3_Uni6_Tela04_Imagem02.jpeg);">
+                        <div class="shadow"></div>
+                        <div class="label">
+                            <div class="info">
+                                <div class="main">Possuem um sentido de controle sobre ele</div>
+                                <div class="sub">Figura 04 - Fonte: Freepick</div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="mySlides fade">
-                    <div class="numero-slide">2 / 4</div>
-                    <div class='titulo-video'><span></span></div>
-                    <img src="../../img/uni6/MOOC3_Uni6_Tela04_Imagem02.jpg" style="width:100%">
-                    <div class="texto">Figura 04 - Fonte: Freepick</div>
-                </div>
+                    <div class="option" style="--optionBackground:url(../img/uni6/MOOC3_Uni6_Tela04_Imagem03.jpeg);">
+                        <div class="shadow"></div>
+                        <div class="label">
+                            <div class="info">
+                                <div class="main">Exploram possíveis identidades profissionais e possibilidades de trabalho</div>
+                                <div class="sub">Figura 05 - Fonte: Freepick</div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="mySlides fade">
-                    <div class="numero-slide">3 / 4</div>
-                    <div class='titulo-video'><span></span></div>
-                    <img src="../../img/uni6/MOOC3_Uni06_Tela04_Imagem03.jpg" style="width:100%">
-                    <div class="texto">Figura 05 - Fonte: Freepick</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numero-slide">4 / 4</div>
-                    <div class='titulo-video'><span></span></div>
-                    <img src="../../img/uni6/MOOC3_Uni06_Tela04_Imagem04.jpg" style="width:100%">
-                    <div class="texto">Figura 05 - Fonte: Freepick</div>
-                </div>
-
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                <br>
-                <div style="text-align: center">
-                    <span class="ponto" onclick="currentSlide(1)"></span>
-                    <span class="ponto" onclick="currentSlide(2)"></span>
-                    <span class="ponto" onclick="currentSlide(3)"></span>
-                    <span class="ponto" onclick="currentSlide(4)"></span>
+                    <div class="option" style="--optionBackground:url(../img/uni6/MOOC3_Uni6_Tela04_Imagem04.jpeg);">
+                        <div class="shadow"></div>
+                        <div class="label">
+                            <div class="info">
+                                <div class="main">E reforçam a sua confiança na execução dos seus objetivos profissionais.</div>
+                                <div class="sub">Figura 06 - Fonte: Freepick</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-
-<!--            <div class="container">-->
-<!--              <div class="mySlides">-->
-<!--                <div class="numbertext">1 / 4</div>-->
-<!--                <img src="../../img/uni6/MOOC3_Uni6_Tela04_Imagem01.jpg" style="width:100%">-->
-<!--              </div>-->
-
-<!--              <div class="mySlides">-->
-<!--                <div class="numbertext">2 / 4</div>-->
-<!--                <img src="../../img/uni6/MOOC3_Uni6_Tela04_Imagem02.jpg" style="width:100%">-->
-<!--              </div>-->
-
-<!--              <div class="mySlides">-->
-<!--                <div class="numbertext">3 / 4</div>-->
-<!--                <img src="../../img/uni6/MOOC3_Uni06_Tela04_Imagem03.jpg" style="width:100%">-->
-<!--              </div>                -->
-<!--              -->
-<!--              <div class="mySlides">-->
-<!--                <div class="numbertext">4 / 4</div>-->
-<!--                <img src="../../img/uni6/MOOC3_Uni06_Tela04_Imagem04.jpg" style="width:100%">-->
-<!--              </div>                -->
-<!--                -->
-<!--              <a class="prev" onclick="plusSlides(-1)">❮</a>-->
-<!--              <a class="next" onclick="plusSlides(1)">❯</a>-->
-
-<!--              <div class="caption-container">-->
-<!--                <p id="caption"></p>-->
-<!--              </div>-->
-
-<!--              <div class="row">-->
-<!--                <div class="column">-->
-<!--                  <img class="demo cursor" src="../../img/uni6/MOOC3_Uni6_Tela04_Imagem01.jpg" style="width:100%" onclick="currentSlide(1)" alt="Imagem 1">-->
-<!--                </div>-->
-<!--                <div class="column">-->
-<!--                  <img class="demo cursor" src="../../img/uni6/MOOC3_Uni6_Tela04_Imagem02.jpg" style="width:100%" onclick="currentSlide(2)" alt="Imagem 2">-->
-<!--                </div>-->
-<!--                <div class="column">-->
-<!--                  <img class="demo cursor" src="../../img/uni6/MOOC3_Uni06_Tela04_Imagem03.jpg" style="width:100%" onclick="currentSlide(3)" alt="Imagem 3">-->
-<!--                </div>                -->
-<!--                <div class="column">-->
-<!--                  <img class="demo cursor" src="../../img/uni6/MOOC3_Uni06_Tela04_Imagem04.jpg" style="width:100%" onclick="currentSlide(4)" alt="Imagem 4">-->
-<!--                </div>                -->
-<!--              </div>-->
-<!--            </div>-->
 
             <div class="content">
                 <p>Em contextos de intervenção, os processos de orientação e desenvolvimento de carreira têm como um dos focos principais o desenvolvimento e potencialização dos recursos de adaptabilidade de carreira, a fim de que as pessoas em todas as faixas etárias estejam mais preparadas para  lidar com o imprevisto, e a incerteza, cada vez mais frequentes em nosso cotidiano, especialmente na era Covid em que vivemos.</p>
@@ -290,6 +246,15 @@
 <!-- Footer -->
 <footer id="footer">
 </footer>
+
+<!-- Carrossel -->
+<script>
+    $(".option").click(function(){
+        $(".option").removeClass("active");
+        $(this).addClass("active");
+
+    });
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
 <script>

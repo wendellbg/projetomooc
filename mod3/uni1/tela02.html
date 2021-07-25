@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../css/mooc3.css?ver=1.1"/>
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2" />
     <link rel="stylesheet" href="../../css/slide.css?ver=1.1"/>
+    <link rel="stylesheet" href="../../css/carrossel.css?ver=1.1" />
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
@@ -88,45 +89,51 @@
                 <p>Talvez você já tenha ponderado sobre o papel do professor nesse processo, ou, quem sabe, ter compartilhado das seguintes inquietações.</p>
             </div>
 
-            <!-- Container do slideshow-->
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <div class="numero-slide">1 / 4</div>
-                    <div class='titulo-video'><span>Quando é que a carreira começa?</span></div>
-                    <img src="../../img/uni1/MOOC3_Uni1_tela2_imagem1a.jpg" alt="Crianças brincando de profissão">
-                    <div class="texto">Figura 01 - Fonte: (Freepick) e editada pela produção do projeto</div>
-                </div>
 
-                <div class="mySlides fade">
-                    <div class="numero-slide">2 / 4</div>
-                    <div class='titulo-video'><span>Quando é que começa a preparação para a Carreira?</span></div>
-                    <img src="../../img/uni1/MOOC3_Uni1_tela2_imagem1b.jpg" alt="Aluno aprendendo nova técnica">
-                    <div class="texto">Figura 02 - Fonte: (Freepik)</div>
-                </div>
+            <!-- Container do Carrossel-->
+            <div class="carrossel dark">
+<!--                <div class='titulo-video'><span>Quando é que a carreira começa?</span></div>-->
+                <div class="options">
+                    <div class="option active" style="--optionBackground:url(../img/uni1/MOOC3_Uni1_tela2_imagem1a.jpg);">
+                        <div class="shadow"></div>
+                        <div class="label">
+                            <div class="info">
+                                <div class="main">Quando é que a carreira começa?</div>
+                                <div class="sub">Figura 01 - Fonte: (Freepick) e editada pela produção do projeto</div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="mySlides fade">
-                    <div class="numero-slide">3 / 4</div>
-                    <div class='titulo-video'><span>Como é que se aprende a tomar decisões? </span></div>
-                    <img src="../../img/uni1/MOOC3_Uni1_tela2_imagem1c.jpg" alt="Aluna estudando">
-                    <div class="texto">Figura 03 - Fonte: (Freepick)</div>
-                </div>
+                    <div class="option" style="--optionBackground:url(../img/uni1/MOOC3_Uni1_tela2_imagem1b.jpg);">
+                        <div class="shadow"></div>
+                        <div class="label">
+                            <div class="info">
+                                <div class="main">Quando é que começa a preparação para a Carreira?</div>
+                                <div class="sub">Figura 02 - Fonte: Freepick</div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="mySlides fade">
-                    <div class="numero-slide">4 / 4</div>
-                    <div class='titulo-video'><span>Como se desenvolve a autonomia?</span></div>
-                    <img src="../../img/uni1/MOOC3_Uni1_tela2_imagem1d.jpg" alt="Aluno interagindo na aula">
-                    <div class="texto">Figura 04 - Fonte: (Unplash)</div>
-                </div>
+                    <div class="option" style="--optionBackground:url(../img/uni1/MOOC3_Uni1_tela2_imagem1c.jpg);">
+                        <div class="shadow"></div>
+                        <div class="label">
+                            <div class="info">
+                                <div class="main">Como é que se aprende a tomar decisões?</div>
+                                <div class="sub">Figura 03 - Fonte: Freepick</div>
+                            </div>
+                        </div>
+                    </div>
 
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <div class="option" style="--optionBackground:url(../img/uni1/MOOC3_Uni1_tela2_imagem1d.jpg);">
+                        <div class="shadow"></div>
+                        <div class="label">
+                            <div class="info">
+                                <div class="main">Como se desenvolve a autonomia?</div>
+                                <div class="sub">Figura 04 - Fonte: Unplash</div>
+                            </div>
+                        </div>
+                    </div>
 
-                <br>
-                <div style="text-align: center">
-                    <span class="ponto" onclick="currentSlide(1)"></span>
-                    <span class="ponto" onclick="currentSlide(2)"></span>
-                    <span class="ponto" onclick="currentSlide(3)"></span>
-                    <span class="ponto" onclick="currentSlide(4)"></span>
                 </div>
             </div>
 
@@ -187,6 +194,15 @@
 <!-- Footer -->
 <footer id="footer">
 </footer>
+
+<!-- Carrossel -->
+<script>
+    $(".option").click(function(){
+        $(".option").removeClass("active");
+        $(this).addClass("active");
+
+    });
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
 <script>
