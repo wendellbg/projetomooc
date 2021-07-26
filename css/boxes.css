@@ -421,6 +421,7 @@ h3.texto-central b{
 }
 
 .box-info .border-blue,
+.box-info .border-blue2,
 .box-info .border-dark-blue,
 .box-info .border-yellow{
 	border: 6px solid;
@@ -433,6 +434,10 @@ h3.texto-central b{
 
 .box-info .border-blue{
 	border-color: #2A5CAA;
+}
+
+.box-info .border-blue2{
+	border-color: #151730;
 }
 
 .box-info .border-dark-blue{
@@ -491,6 +496,7 @@ h3.texto-central b{
 	}
 
 	.box-info .border-blue,
+	.box-info .border-blue2,
 	.box-info .border-dark-blue,
 	.box-info .border-yellow{
 		width: 100% !important;
@@ -499,7 +505,7 @@ h3.texto-central b{
 	}
 
 	.box-info .bg-red,
-	.box-info .bg-blue,
+	.box-info .bg-blue,	
 	.box-info .bg-yellow,
 	.box-info .bg-orange{
 		width: 100% !important;
@@ -519,6 +525,15 @@ h3.texto-central b{
 
 .image.border-dark-blue{
 	border: 3px solid #020E36;
+	border-radius: 8px;
+	padding: 10px;
+	width: 90% !important;
+	margin: 0 auto !important;
+	margin-top: 60px !important;
+}
+
+.image.border-blue2{
+	border: 3px solid #151730;
 	border-radius: 8px;
 	padding: 10px;
 	width: 90% !important;
@@ -565,6 +580,10 @@ h3.texto-central b{
 
 .border-blue .subtitulo p{
 	color: #2a5caa;
+}
+
+.border-blue2 .subtitulo p{
+	color: #151730;
 }
 
 .border-dark-blue .subtitulo p{
@@ -631,12 +650,16 @@ h3.texto-central b{
 	background-image: url(../img/padrao/tela01_box1.png);
 }
 
-.titulo-externo-box.blue p{
+.titulo-externo-box.blue p,.titulo-externo-box.blue2 p{
 	color: #ffffff;
 }
 
 .titulo-externo-box.blue {
 	background-image: url(../img/padrao/tela01_box1_blue.png);
+}
+
+.titulo-externo-box.blue2 {
+	background-image: url(../img/padrao/tela01_box1_blue2.png);
 }
 
 
@@ -658,6 +681,10 @@ h3.texto-central b{
 
 	.titulo-externo-box.blue {
 		background-color: #2a5caa;
+	}
+
+	.titulo-externo-box.blue2{
+		background-color: #151730;
 	}
 
 	.titulo-externo-box.yellow {
