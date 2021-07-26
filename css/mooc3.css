@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 
 	.caixa-texto-centro{
 		/*background-image: url(../img/padrao/mooc3/bg_slide_01.jpg);*/
-		background-color: #020E36;
+		background-color: #151730;
 	}
 }
 
@@ -299,11 +299,11 @@ h3.texto-central b{
 }
 
 .mooc3 .bt-link-externo{
-	background-color: #2a5caa;
+	background-color: #151730;
 }
 
 .mooc3 .bt-link-externo:hover{
-	background-color: #020E36;
+	background-color: #2a5caa;
 }
 
 .mooc3 .border-dark-blue .subtitulo{

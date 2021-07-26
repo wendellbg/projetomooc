@@ -324,6 +324,46 @@
 				"identificador": "uni5_tela08",
 				"nome": "Concluindo"
 			}
+		],
+		"atividades": [
+			{
+				"identificador": "uni5_ativ1",
+				"nomeAtividade": "Avaliação - Unidade 5",				
+				"questoes": [{					
+					"tipoQuestaoString": "PROPORCIONAL",
+					"identificador": "r5_1",
+					"enunciado": "Complete o texto sobre a exploração vocacional arrastando e soltando as palavras:",
+					"gabaritos": [
+						{ "chave": "r5_1_1", "valor": "informações", "alternativa": "Palavra 1" },
+						{ "chave": "r5_1_2", "valor": "hipóteses", "alternativa": "Palavra 2" },					
+						{ "chave": "r5_1_7", "valor": "escolher", "alternativa": "Palavra 3" },
+						{ "chave": "r5_1_3", "valor": "ocupação", "alternativa": "Palavra 4" },
+						{ "chave": "r5_1_4", "valor": "atividade exploratória", "alternativa": "Palavra 5" },
+						{ "chave": "r5_1_5", "valor": "escolha profissional", "alternativa": "Palavra 6" },
+						{ "chave": "r5_1_6", "valor": "mundo de trabalho", "alternativa": "Palavra 7" }											
+					]
+				},{
+					"tipoQuestaoString": "PROPORCIONAL",
+					"identificador": "r5_2",
+					"enunciado": "Considerando a Teoria cognitiva-evolutiva de carreira, relacione os elementos que compõem a teoria e suas definições:",
+					"gabaritos": [
+						{ "chave": "r4_2_1", "valor": "Autoconceito", "alternativa": "a) Ideia que o indivíduo tem de si mesmo." },
+						{ "chave": "r4_2_2", "valor": "Papéis de Vida", "alternativa": "b) Posições que o indivíduo ocupa no contexto familiar e social ao longo da vida e que definem algumas exigências, responsabilidades e preocupações, como estudante, dono de casa, pai/mae, etc..." },
+						{ "chave": "r4_2_3", "valor": "Identidade Pessoal", "alternativa": "c) Conjunto de interesses, habilidades e características de personalidade." }
+					]
+				},{
+					"tipoQuestaoString": "INTEGRAL",
+					"identificador": "r5_3",
+					"enunciado": "Em relação aos estágios da vida vocacional, arraste e solte cada conceito à a melhor definição de cada etapa:",
+					"gabaritos":[
+						{"chave": "r5_3_1", "valor": "Crescimento", "alternativa": "a) Começa o desenvolvimento do autoconceito, da percepção de si, das crenças de autoeficácia, em que as escolhas são assistemáticas, fantasiosas e buscam o despertar de interesses e habilidades. O indivíduo descobre as primeiras capacidades e constrói o autoconceito através da identificação com figuras significativas da família (pais, avós, irmãos) e escola (professores, colegas)."},
+						{"chave": "r5_3_2", "valor": "Exploração", "alternativa": "b) É quando se intensificam a auto-análise, a representação de papéis e a exploração ocupacional. Estes são os estágios em que vocês encontram os alunos, e por isso as experiências de exploração são tão importantes."},
+						{"chave": "r5_3_3", "valor": "Estabelecimento", "alternativa": "c) É o período em que o indivíduo estabelece os esforços para permanecer numa área e progredir na mesma, quando encontrada; A escolha aqui é implementada, isto é, uma conversão das preferências especificadas em uma realidade ocupacional, através do comprometimento com o mundo do trabalho."},
+						{"chave": "r5_3_4", "valor": "Manutenção", "alternativa": "d) Representa a consolidação de uma posição ou situação e a continuidade dos planos estabelecidos, a realização de tarefas da maturidade, com suas características de continuidade dos planos estabelecidos, onde há comportamentos de conservação do que foi alcançado."},
+						{"chave": "r5_3_5", "valor": "Desengajamento", "alternativa": "e) Se pode vivenciar algum declínio de capacidades físicas e/ou mentais, mas que majoritariamente representa o momento em que o indivíduo planeja sua retirada do mundo do trabalho, com o gradual enfraquecimento e posterior afastamento das atividades profissionais, criando um novo modo de vida fora do trabalho."}						
+					]
+				}]						
+			}
 		]
 	},{		
 		"identificador": "mod3_uni6",
