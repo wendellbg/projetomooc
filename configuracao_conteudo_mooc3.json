@@ -336,23 +336,23 @@
 					"gabaritos": [
 						{ "chave": "r5_1_1", "valor": "informações", "alternativa": "Palavra 1" },
 						{ "chave": "r5_1_2", "valor": "hipóteses", "alternativa": "Palavra 2" },					
-						{ "chave": "r5_1_7", "valor": "escolher", "alternativa": "Palavra 3" },
-						{ "chave": "r5_1_3", "valor": "ocupação", "alternativa": "Palavra 4" },
-						{ "chave": "r5_1_4", "valor": "atividade exploratória", "alternativa": "Palavra 5" },
-						{ "chave": "r5_1_5", "valor": "escolha profissional", "alternativa": "Palavra 6" },
-						{ "chave": "r5_1_6", "valor": "mundo de trabalho", "alternativa": "Palavra 7" }											
+						{ "chave": "r5_1_3", "valor": "escolher", "alternativa": "Palavra 3" },
+						{ "chave": "r5_1_4", "valor": "ocupação", "alternativa": "Palavra 4" },
+						{ "chave": "r5_1_5", "valor": "atividade exploratória", "alternativa": "Palavra 5" },
+						{ "chave": "r5_1_6", "valor": "escolha profissional", "alternativa": "Palavra 6" },
+						{ "chave": "r5_1_7", "valor": "mundo de trabalho", "alternativa": "Palavra 7" }											
 					]
 				},{
 					"tipoQuestaoString": "PROPORCIONAL",
 					"identificador": "r5_2",
 					"enunciado": "Considerando a Teoria cognitiva-evolutiva de carreira, relacione os elementos que compõem a teoria e suas definições:",
 					"gabaritos": [
-						{ "chave": "r4_2_1", "valor": "Autoconceito", "alternativa": "a) Ideia que o indivíduo tem de si mesmo." },
-						{ "chave": "r4_2_2", "valor": "Papéis de Vida", "alternativa": "b) Posições que o indivíduo ocupa no contexto familiar e social ao longo da vida e que definem algumas exigências, responsabilidades e preocupações, como estudante, dono de casa, pai/mae, etc..." },
-						{ "chave": "r4_2_3", "valor": "Identidade Pessoal", "alternativa": "c) Conjunto de interesses, habilidades e características de personalidade." }
+						{ "chave": "r5_2_1", "valor": "Autoconceito", "alternativa": "a) Ideia que o indivíduo tem de si mesmo." },
+						{ "chave": "r5_2_2", "valor": "Papéis de Vida", "alternativa": "b) Posições que o indivíduo ocupa no contexto familiar e social ao longo da vida e que definem algumas exigências, responsabilidades e preocupações, como estudante, dono de casa, pai/mae, etc..." },
+						{ "chave": "r5_2_3", "valor": "Identidade Pessoal", "alternativa": "c) Conjunto de interesses, habilidades e características de personalidade." }
 					]
 				},{
-					"tipoQuestaoString": "INTEGRAL",
+					"tipoQuestaoString": "PROPORCIONAL",
 					"identificador": "r5_3",
 					"enunciado": "Em relação aos estágios da vida vocacional, arraste e solte cada conceito à a melhor definição de cada etapa:",
 					"gabaritos":[
@@ -388,6 +388,49 @@
 			},{
 				"identificador": "uni6_tela06",
 				"nome": "Concluindo"
+			}
+		],
+		"atividades": [
+			{
+				"identificador": "uni6_ativ1",
+				"nomeAtividade": "Avaliação - Unidade 6",				
+				"questoes": [{					
+					"tipoQuestaoString": "INTEGRAL",
+					"identificador": "r6_1",
+					"enunciado": "Sobre a formação da adaptabilidade da carreira, assinale o item incorreto:",
+					"gabaritos": [
+						{ "chave": "r6_1_1", "valor": "f", "alternativa": "a) Significações de memórias passadas." },
+						{ "chave": "r6_1_2", "valor": "f", "alternativa": "b) Experiências atuais." },					
+						{ "chave": "r6_1_3", "valor": "v", "alternativa": "c) Trocas com os colegas." },
+						{ "chave": "r6_1_4", "valor": "f", "alternativa": "d) Aspirações futuras de carreira." }																
+					]
+				},{
+					"tipoQuestaoString": "PROPORCIONAL",
+					"identificador": "r6_2",
+					"enunciado": "Selecione, no espaço abaixo, as dimensões fundamentais para o desenvolvimento na carreira:",
+					"gabaritos": [
+						{ "chave": "r6_2_1", "valor": "v", "alternativa": "Confiança" },
+						{ "chave": "r6_2_2", "valor": "v", "alternativa": "Controle" },
+						{ "chave": "r6_2_3", "valor": "f", "alternativa": "Criatividade" },
+						{ "chave": "r6_2_4", "valor": "v", "alternativa": "Curiosidade" },
+						{ "chave": "r6_2_5", "valor": "f", "alternativa": "Inteligência emocional" },
+						{ "chave": "r6_2_6", "valor": "v", "alternativa": "Preocupação" },
+						{ "chave": "r6_2_7", "valor": "f", "alternativa": "Responsabilidade" },
+						{ "chave": "r6_2_8", "valor": "f", "alternativa": "Visão estratégica" }
+					]
+				},{
+					"tipoQuestaoString": "INTEGRAL",
+					"identificador": "r6_3",
+					"enunciado": "Complete o texto sobre a adaptabilidade da carreira arrastando e soltando as palavras:",
+					"gabaritos":[
+						{"chave": "r6_3_1", "valor": "intervenção", "alternativa": "Palavra 1"},
+						{"chave": "r6_3_2", "valor": "orientação e desenvolvimento", "alternativa": "Palavra 2"},
+						{"chave": "r6_3_3", "valor": "recursos de adaptabilidade", "alternativa": "Palavra 3"},
+						{"chave": "r6_3_4", "valor": "imprevisto", "alternativa": "Palavra 4"},
+						{"chave": "r6_3_5", "valor": "incerteza", "alternativa": "Palavra 5"},
+						{"chave": "r6_3_6", "valor": "cotidiano", "alternativa": "Palavra 6"}				
+					]
+				}]						
 			}
 		]
 	}
