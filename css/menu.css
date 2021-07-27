@@ -77,7 +77,6 @@
   color: #020E36;
 }
 
-
 .menu-opcoes.darkblue-red {
   background: #020E36;
   border-right: 3px solid #E6292E;
@@ -95,5 +94,26 @@
 
 .menu-opcoes.darkblue-red a:hover {
   color: #E6292E;
+}
+
+
+/** Mooc 3**/
+.menu-opcoes.orange {
+  background: #151730;
+  border-right: 3px solid #FF841D;
+  border-bottom: 3px solid #FF841D;
+}
+
+.menu-opcoes.orange .show {
+  color: white;
+}
+
+.menu-opcoes.orange .details {
+  border-top: 3px solid #FF841D;
+  background: #151730;
+}
+
+.menu-opcoes.orange a:hover {
+  color: #FF841D;
 }
 

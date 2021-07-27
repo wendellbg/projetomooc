@@ -111,6 +111,15 @@ ul {
     color: #020E36;
 }
 
+.lista-topicos.orange li span{
+    color: #151730;
+    background-color: #ff841d;
+}
+
+.lista-topicos.orange li{
+    color: #151730;
+}
+
 @media screen and (max-width:560px){
     .lista-topicos{
         margin-left: -2rem;

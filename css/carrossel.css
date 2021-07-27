@@ -13,6 +13,8 @@
 /*	left: 20px;*/
 /*	color: #000;*/
 /*}*/
+
+
 .carrossel.dark {
     background-image: url(../img/padrao/bg_slide_dark.png);
     position: relative;
@@ -24,6 +26,23 @@
     /*margin-left: -4rem;*/
     margin-bottom: 40px;
 }
+
+.mooc2 .carrossel.dark {
+    background-image: url(../img/padrao/mooc2/bg_slide_dark.png);
+}
+
+.mooc3 .carrossel.dark {
+    background-image: url(../img/padrao/mooc3/bg_slide_dark.png);
+}
+
+.mooc4 .carrossel.dark {
+    background-image: url(../img/padrao/mooc4/bg_slide_dark.png);
+}
+
+.mooc4 .carrossel.dark {
+    background-image: url(../img/padrao/mooc5/bg_slide_dark.png);
+}
+
 
 .carrossel .options {
     margin: 0 auto;
