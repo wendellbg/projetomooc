@@ -265,7 +265,7 @@
 				"questoes": [{					
 					"tipoQuestaoString": "PROPORCIONAL",
 					"identificador": "r4_1",
-					"enunciado": "Sobre os estereótipos, assinale as afirmativas a seguir como verdadeiras ou falsas",
+					"enunciado": "Sobre os estereótipos, marque as afirmativas a seguir que são verdadeiras:",
 					"gabaritos": [
 						{ "chave": "r4_1_1", "valor": "f", "alternativa": "a) Os estereótipos são a maneira como as pessoas preferem ser vistas pelas outras, e são sempre positivos." },
 						{ "chave": "r4_1_2", "valor": "v", "alternativa": "b) Os estereótipos são fruto de uma grande construção social que, com o passar do tempo, vai sendo desenvolvida e estabelece padrões e formas de enxergar o outro e seu modo de agir." },					
@@ -286,10 +286,10 @@
 					"identificador": "r4_3",
 					"enunciado": "Sobre a influência da família na construção de estereótipos e escolhas profissionais, assinale a alternativa a seguir que NÃO se aplica:",
 					"gabaritos":[
-						{"chave": "r4_3_1", "valor": "f", "alternativa": "a) É na família que adquirimos valores, somos expostos a modelos de trabalho, somos encorajados ou desencorajados a fazer, conhecer, experimentar coisas, e recebemos informação sobre o mundo."},
-						{"chave": "r4_3_2", "valor": "f", "alternativa": "b) Os pais, avós, irmãos e demais pessoas próximas são as primeiras e mais respeitadas fontes de informação sobre o mundo profissional e são também os modelos de vida e carreira mais influentes que temos durante muito tempo."},
-						{"chave": "r4_3_3", "valor": "v", "alternativa": "c) A família não restringe as possibilidades de aprendizagem ou de experiências, isso somente é realizado na escola."},
-						{"chave": "r4_3_4", "valor": "f", "alternativa": "d) A família constrói crenças e valores."}						
+						{"chave": "r4_3_1", "valor": "v", "alternativa": "a) É na família que adquirimos valores, somos expostos a modelos de trabalho, somos encorajados ou desencorajados a fazer, conhecer, experimentar coisas, e recebemos informação sobre o mundo."},
+						{"chave": "r4_3_2", "valor": "v", "alternativa": "b) Os pais, avós, irmãos e demais pessoas próximas são as primeiras e mais respeitadas fontes de informação sobre o mundo profissional e são também os modelos de vida e carreira mais influentes que temos durante muito tempo."},
+						{"chave": "r4_3_3", "valor": "f", "alternativa": "c) A família não restringe as possibilidades de aprendizagem ou de experiências, isso somente é realizado na escola."},
+						{"chave": "r4_3_4", "valor": "v", "alternativa": "d) A família constrói crenças e valores."}						
 					]
 				}]						
 			}
@@ -399,10 +399,10 @@
 					"identificador": "r6_1",
 					"enunciado": "Sobre a formação da adaptabilidade da carreira, assinale o item incorreto:",
 					"gabaritos": [
-						{ "chave": "r6_1_1", "valor": "f", "alternativa": "a) Significações de memórias passadas." },
-						{ "chave": "r6_1_2", "valor": "f", "alternativa": "b) Experiências atuais." },					
-						{ "chave": "r6_1_3", "valor": "v", "alternativa": "c) Trocas com os colegas." },
-						{ "chave": "r6_1_4", "valor": "f", "alternativa": "d) Aspirações futuras de carreira." }																
+						{ "chave": "r6_1_1", "valor": "v", "alternativa": "a) Significações de memórias passadas." },
+						{ "chave": "r6_1_2", "valor": "v", "alternativa": "b) Experiências atuais." },					
+						{ "chave": "r6_1_3", "valor": "f", "alternativa": "c) Trocas com os colegas." },
+						{ "chave": "r6_1_4", "valor": "v", "alternativa": "d) Aspirações futuras de carreira." }																
 					]
 				},{
 					"tipoQuestaoString": "PROPORCIONAL",
