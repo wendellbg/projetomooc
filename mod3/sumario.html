@@ -1490,7 +1490,7 @@
 
       function verifica_unidades(num_controle){
         if(num_controle<=5){
-          nome_unidade="mod2_uni"+num_controle;
+          nome_unidade="mod3_uni"+num_controle;
           console.log("nome_unidade="+nome_unidade);
           API.obterPorcentagemConclusaoUnidade(nome_unidade);        
         }else{
@@ -1524,7 +1524,7 @@
       var porcentagem = evento.detail["data"];                
       console.log(evento.detail["data"]+"\ntestando: "+nome_unidade+"\nporcentagem="+porcentagem);            
       switch (nome_unidade){
-        case "mod2_uni0":
+        case "mod3_uni0":
           console.log("Unidade 0 tem "+(porcentagem)+"% concluída");
           progresso = document.getElementById("progresso-uni0");
           circulo = document.getElementById("circulo-uni0");
@@ -1552,7 +1552,7 @@
           }  
           break;
           
-        case "mod2_uni1":
+        case "mod3_uni1":
           console.log("Unidade 1 tem "+(porcentagem)+"% concluída");
           progresso = document.getElementById("progresso-uni1");
           circulo = document.getElementById("circulo-uni1");
@@ -1561,7 +1561,7 @@
           porcentagem_geral+=porcentagem;          
           break;
 
-        case "mod2_uni2":
+        case "mod3_uni2":
           console.log("Unidade 2 tem "+(porcentagem)+"% concluída");
           progresso = document.getElementById("progresso-uni2");
           circulo = document.getElementById("circulo-uni2");
@@ -1570,7 +1570,7 @@
           porcentagem_geral+=porcentagem;          
           break;
 
-        case "mod2_uni3":
+        case "mod3_uni3":
           console.log("Unidade 3 tem "+(porcentagem)+"% concluída");
           progresso = document.getElementById("progresso-uni3");
           circulo = document.getElementById("circulo-uni3");
@@ -1579,7 +1579,7 @@
           porcentagem_geral+=porcentagem;         
           break;
 
-        case "mod2_uni4":
+        case "mod3_uni4":
           console.log("Unidade 4 tem "+(porcentagem)+"% concluída");
           progresso = document.getElementById("progresso-uni4");
           circulo = document.getElementById("circulo-uni4");
@@ -1588,7 +1588,7 @@
           porcentagem_geral+=porcentagem;         
           break;
 
-        case "mod2_uni5":
+        case "mod3_uni5":
           console.log("Unidade 5 tem "+(porcentagem)+"% concluída");
           progresso = document.getElementById("progresso-uni5");
           circulo = document.getElementById("circulo-uni5");
@@ -1597,7 +1597,7 @@
           porcentagem_geral+=porcentagem;          
           break;
 
-        case "mod2_uni6":
+        case "mod3_uni6":
           console.log("Unidade 6 tem "+(porcentagem)+"% concluída");
           progresso = document.getElementById("progresso-uni6");
           circulo = document.getElementById("circulo-uni6");
