@@ -12,8 +12,8 @@
 		]
 	},
 	{
-		"identificador": "mod2_uni1",
-		"nome": "O trabalho como produção da existência",
+		"identificador": "mod3_uni1",
+		"nome": "É possível educar para a carreira?",
 		"descricao": "",
 		"permitePorcentagem": "true",
 		"topicos": [{
@@ -21,16 +21,22 @@
 			"nome": "Apresentação"
 			},{
 				"identificador": "uni1_tela02",
-				"nome": "Nossa humanidade é técnica"
+				"nome": "Escolha da Carreira 1"
 			},{
 				"identificador": "uni1_tela03",
-				"nome": "Conceituando a técnica"
+				"nome": "Escolha da Carreira 2"
 			},{
 				"identificador": "uni1_tela04",
-				"nome": "A técnica no cotidiano"
+				"nome": "Educação para a carreira"
 			},{
 				"identificador": "uni1_tela05",
-				"nome": "A técnica e a perspectiva cultural"
+				"nome": "Como educar para a carreira?"
+			},{
+				"identificador": "uni1_tela06",
+				"nome": "Experiência de orientação para a carreira em uma Escola Técnica"
+			},{
+				"identificador": "uni1_tela07",
+				"nome": "Desafios para as escolas brasileiras"
 			}
 		],
 		"atividades": [
@@ -39,47 +45,43 @@
 				"nomeAtividade": "Avaliação - Unidade 1",				
 				"questoes": [
 					{
-						"tipoQuestaoString": "PROPORCIONAL",
+						"tipoQuestaoString": "INTEGRAL",
 						"identificador": "r1_1",
-						"enunciado": "Sobre a relação entre técnica e trabalho, assinale as afirmativas a seguir como verdadeira ou falsa:",
+						"enunciado": "O que é educação para a carreira?",
 						"gabaritos": [
-							{ "chave": "r1_1_1", "valor": "v", "alternativa": "a) A técnica é o fundamento do trabalho." },
-							{ "chave": "r1_1_2", "valor": "v", "alternativa": "b) O ser humano intervém no mundo pela técnica." },
-							{ "chave": "r1_1_3", "valor": "f", "alternativa": "c) O trabalho só tem sentido econômico e/ou material." },
-							{ "chave": "r1_1_4", "valor": "v", "alternativa": "d) O trabalho é um dos traços que melhor identifica nossa humanidade." }
+							{ "chave": "r1_1_1", "valor": "f", "alternativa": "a) Orientar os pais e alunos sobre as opções de carreira mais socialmente valorizadas." },
+							{ "chave": "r1_1_2", "valor": "f", "alternativa": "b) Preparar os alunos para a tomada de decisões e escolhas." },
+							{ "chave": "r1_1_3", "valor": "v", "alternativa": "c) Fazer testes vocacionais com os alunos." },
+							{ "chave": "r1_1_4", "valor": "f", "alternativa": "d) Ofertar 3 ou 4 profissões para que o aluno siga." }
 						]
 					},
 					{
 						"tipoQuestaoString": "PROPORCIONAL",
 						"identificador": "r1_2",
-						"enunciado": "Complete o texto arrastando e soltando as palavras:",
+						"enunciado": "Relacione os conceitos com os pilares da educação para a carreira:",
 						"gabaritos": [
-							{ "chave": "r1_2_1", "valor": "técnica", "alternativa": "Palavra 1" },
-							{ "chave": "r1_2_2", "valor": "intervenção", "alternativa": "Palavra 2" },
-							{ "chave": "r1_2_3", "valor": "produção", "alternativa": "Palavra 3" },
-							{ "chave": "r1_2_4", "valor": "existência", "alternativa": "Palavra 4" },
-							{ "chave": "r1_2_5", "valor": "sociedade", "alternativa": "Palavra 5" },
-							{ "chave": "r1_2_6", "valor": "trabalho", "alternativa": "Palavra 6" },
-							{ "chave": "r1_2_7", "valor": "fundamento", "alternativa": "Palavra 7" }
+							{ "chave": "r1_2_1", "valor": "Escola", "alternativa": "a) Lugar privilegiado para se refletir sobre a preparação para o trabalho." },
+							{ "chave": "r1_2_2", "valor": "Comunidade", "alternativa": "b) Parceria entre escola e a sociedade mais ampla (família, empregadores, governo)." },
+							{ "chave": "r1_2_3", "valor": "Trabalho", "alternativa": "c) Realização de atividades que são socialmente benéficas para si e para os demais." },
+							{ "chave": "r1_2_4", "valor": "Currículo", "alternativa": "d) Entender a Educação para a Carreira como parte do currículo escolar." }							
 						]
 					},
 					{
 						"tipoQuestaoString": "PROPORCIONAL",
 						"identificador": "r1_3",
-						"enunciado": "Considerando a relação entre técnica e cultura, assinale a(s) alternativa(s) que demonstram o valor social da técnica:",
+						"enunciado": "Para que ocorra a educação para a carreira é preciso desenvolver as estratégias de implementação de Programas de Educação à Carreira, voltados ao contexto da escola. Arraste e solte cada conceito correspondente à sua definição:",
 						"gabaritos": [
-							{ "chave": "r1_3_1", "valor": "v", "alternativa": "a) A técnica é o elemento essencial do que chamamos de trabalho." },
-							{ "chave": "r1_3_2", "valor": "f", "alternativa": "b) A técnica não pode ser pensada como atividade reflexiva e transformadora, pois está relacionada apenas a trabalhos manuais." },
-							{ "chave": "r1_3_3", "valor": "f", "alternativa": "c) A “formação técnica” e a “formação humana” são elementos opostos." },
-							{ "chave": "r1_3_4", "valor": "v", "alternativa": "d) A técnica, como intervenção no mundo que acontece socialmente, constitui o laço social e está no coração da cultura." }
+							{ "chave": "r1_3_1", "valor": "Infusivas", "alternativa": "a) Disseminação transversal (em diferentes disciplinas e em todos os níveis escolares) de questões sobre os valores, conhecimentos e atitudes relevantes ao desenvolvimento vocacional e da carreira." },
+							{ "chave": "r1_3_2", "valor": "Aditivas", "alternativa": "b) Implementação da educação para a carreira, integrada no horário escolar, tal como se de uma disciplina se tratasse, a ser ministrada por um orientador profissional, um educador para a carreira." },
+							{ "chave": "r1_3_3", "valor": "Mistas", "alternativa": "c) Integração da educação para a carreira nas disciplinas de ciências sociais e humanas." }							
 						]
 					}
 				]
 			}
 		]	
 	},{		
-		"identificador": "mod2_uni2",
-		"nome": "O Trabalho Como Exercício Social da Técnica",
+		"identificador": "mod3_uni2",
+		"nome": "Competências socioemocionais para a educação à carreira?",
 		"descricao": "",
 		"permitePorcentagem": "true",
 		"topicos": [{
@@ -87,79 +89,81 @@
 			"nome": "Apresentação"
 		},{			
 			"identificador": "uni2_tela02",
-			"nome": "A Técnica como Saber 1"
+			"nome": "Competências socioemocionais"
 		},{
 			"identificador": "uni2_tela03",
-			"nome": "A Técnica como Saber 2"
+			"nome": "Desenvolvendo competências socioemocionais"
 		},{
 			"identificador": "uni2_tela04",
-			"nome": "Como aprendemos as técnicas?"
+			"nome": "Identificando as competências socioemocionais 1"
 		},{
 			"identificador": "uni2_tela05",
-			"nome": "O que é saber técnico 1"
+			"nome": "Identificando as competências socioemocionais 2"
 		},{
 			"identificador": "uni2_tela06",
-			"nome": "O que é saber técnico 1"
+			"nome": "Vamos treinar?"
 		},{
 			"identificador": "uni2_tela07",
-			"nome": "O que é Tecnologia? 1"		
-		},{
-			"identificador": "uni2_tela08",
-			"nome": "O que é Tecnologia? 2"		
-		},{
-			"identificador": "uni2_tela09",
 			"nome": "Concluindo"		
 		}],
 		"atividades": [
 			{
 				"identificador": "uni2_ativ1",
-				"nomeAtividade": "Avaliação - Unidade 2 - Questão Discursiva",				
-				"questoes": [
-					{
-						"tipoQuestaoString": "MODERADA",
-						"identificador": "r2_1",
-						"tipoEnvio": "TEXTO",
-						"enunciado": "Trabalho, Técnica e Tecnologia são termos chave para entender a Educação Profissional. No entanto, raramente são pensados como forma de saber e acabam reduzidos ao senso comum. Escolha uma profissão presente em seu cotidiano e descreva alguns dos saberes necessários para executá-la."
-					}
-				]
-			},{
-				"identificador": "uni2_ativ2",
 				"nomeAtividade": "Avaliação - Unidade 2 - Questões Objetivas",				
 				"questoes": [
 					{
 						"tipoQuestaoString": "PROPORCIONAL",
-						"identificador": "r2_2",
-						"enunciado": "O conhecimento técnico tem características próprias, com semelhanças e diferenças em relação ao conhecimento das outras ciências. Analise os conceitos a seguir e marque aqueles que estão incorporados ao conhecimento técnico:",
+						"identificador": "r2_1",
+						"enunciado": "A Base Nacional Comum Curricular (BNCC) estabeleceu 10 competências gerais que contribuem para o desenvolvimento pleno do estudante. Selecione as competências que integram aspectos cognitivos e socioemocionais de acordo com o a BNCC:",
 						"gabaritos": [
-							{ "chave": "r2_2_1", "valor": "v", "alternativa": "Atividade" },
-							{ "chave": "r2_2_2", "valor": "f", "alternativa": "Declaratório" },
-							{ "chave": "r2_2_3", "valor": "f", "alternativa": "Explicativo" },
-							{ "chave": "r2_2_4", "valor": "f", "alternativa": "Ilustração" },
-							{ "chave": "r2_2_5", "valor": "v", "alternativa": "Métodos" },
-							{ "chave": "r2_2_6", "valor": "v", "alternativa": "Saberes Profissionais" },
-							{ "chave": "r2_2_7", "valor": "v", "alternativa": "Saberes Técnicos" },
-							{ "chave": "r2_2_2", "valor": "f", "alternativa": "Teórico" },
-							{ "chave": "r2_2_2", "valor": "v", "alternativa": "Valores" },
-							{ "chave": "r2_2_2", "valor": "f", "alternativa": "Verbal" }
+							{ "chave": "r2_1_1", "valor": "v", "alternativa": "Conhecimento" },
+							{ "chave": "r2_1_2", "valor": "f", "alternativa": "Experiência" },
+							{ "chave": "r2_1_3", "valor": "v", "alternativa": "Pensamento científico, crítico e criativo" },
+							{ "chave": "r2_1_4", "valor": "f", "alternativa": "Raciocínio lógico-matemático" },
+							{ "chave": "r2_1_5", "valor": "v", "alternativa": "Repertório cultural" },
+							{ "chave": "r2_1_6", "valor": "v", "alternativa": "Comunicação" },
+							{ "chave": "r2_1_7", "valor": "f", "alternativa": "Trabalho colaborativo" },
+							{ "chave": "r2_1_9", "valor": "v", "alternativa": "Cultura digital" },
+							{ "chave": "r2_1_10", "valor": "v", "alternativa": "Trabalho e projeto de vida" },
+							{ "chave": "r2_1_11", "valor": "f", "alternativa": "Resiliência" },
+							{ "chave": "r2_1_12", "valor": "v", "alternativa": "Argumentação" },
+							{ "chave": "r2_1_13", "valor": "f", "alternativa": "Saber ouvir" },
+							{ "chave": "r2_1_14", "valor": "v", "alternativa": "Autoconhecimento e autocuidado" },
+							{ "chave": "r2_1_15", "valor": "v", "alternativa": "Empatia e cooperação" },
+							{ "chave": "r2_1_16", "valor": "f", "alternativa": "Liderança" },
+							{ "chave": "r2_1_17", "valor": "v", "alternativa": "Responsabilidade e cidadania" },
+							{ "chave": "r2_1_18", "valor": "f", "alternativa": "Autonomia financeira" }
 						]
 					},{
 						"tipoQuestaoString": "PROPORCIONAL",
 						"identificador": "r2_3",
-						"enunciado": "Relacione a seguir os sentidos possíveis para a técnica:",
+						"enunciado": "Complete o texto arrastando e soltando as palavras:",
 						"gabaritos":[
-							{"chave": "r2_3_a", "valor": "Processo", "alternativa": "a) Um conjunto não redutível a conteúdos cognitivos em sentido clássico, isto é, um conteúdo verbalizado e formalizado. Podemos, então, ir além do mito de que 'saber' é 'saber falar sobre'."},
-							{"chave": "r2_3_b", "valor": "Composição", "alternativa": "b) Modos de ação, estruturas conceituais para cada situação de trabalho (ou classe de situação, como veremos mais adiante), lógicas próprias, ferramentas, sistemas, máquinas, valores, aspectos éticos, políticos, sociais, ambientais, econômicos."},
-							{"chave": "r2_3_c", "valor": "Finalidade", "alternativa": "c) Busca uma efetiva intervenção no mundo para a produção da existência individual e coletiva."},
-							{"chave": "r2_3_d", "valor": "Validação do conhecimento técnico", "alternativa": "d) Valida-se tanto material quanto socialmente pelos efeitos produzidos, sua eficácia. Isso difere da epistemologia clássica da ciência, em que predomina a validação do conhecimento pela demonstração lógica, teórica e discursiva. Cuidado! Aqui, ser eficaz não é a mesma coisa que ser 'útil', e sim pode ser entendido pelo 'ato que produz o efeito esperado' (Sigaut, 2006)."},
-							{"chave": "r2_3_e", "valor": "Técnica e Cultura", "alternativa": "e) A técnica está, assim, no coração do laço social (Sigaut, 2004), e não mais pode ser pensada como algo externo ao ser humano e à cultura. A cultura não é o lado subjetivo, de uma moeda com outro lado somente objetivo, geralmente com conotação ou valor abjeto (a repulsa ao trabalho, à técnica)."}
+							{"chave": "r2_3_1", "valor": "educadores", "alternativa": "Palavra 1"},
+							{"chave": "r2_3_2", "valor": "responsáveis", "alternativa": "Palavra 2"},
+							{"chave": "r2_3_3", "valor": "criatividade", "alternativa": "Palavra 3"},
+							{"chave": "r2_3_4", "valor": "desenvolvimento", "alternativa": "Palavra 4"},
+							{"chave": "r2_3_5", "valor": "habilidades acadêmicas", "alternativa": "Palavra 5"},
+							{"chave": "r2_3_6", "valor": "competências socioemocionais", "alternativa": "Palavra 6"}
 						]
+					}
+				]
+			},{
+				"identificador": "uni2_ativ2",
+				"nomeAtividade": "Avaliação - Unidade 2 - Questão Discursiva",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "MODERADA",
+						"identificador": "r2_2",
+						"tipoEnvio": "TEXTO",
+						"enunciado": "Explique quais estratégias para o desenvolvimento das competências socioemocionais podem ser potencializadas no ambiente escolar. Dê exemplos."
 					}
 				]
 			}
 		]
 	},{		
-		"identificador": "mod2_uni3",
-		"nome": "Dimensões do trabalho e da profissionalização",
+		"identificador": "mod3_uni3",
+		"nome": "Os interesses profissionais: Por que gostamos do que gostamos?",
 		"descricao": "",
 		"permitePorcentagem": "true",
 		"topicos": [{
@@ -167,33 +171,21 @@
 			"nome": "Apresentação"
 		},{
 			"identificador": "uni3_tela02",
-			"nome": "O trabalho como obra 1"
+			"nome": "Faço e Gosto"
 		},{
 			"identificador": "uni3_tela03",
-			"nome": "O trabalho como obra 2"
+			"nome": "A formação dos interesses e a autoeficácia"
 		},{
 			"identificador": "uni3_tela04",
-			"nome": "Folheando as dimensões do trabalho: do cognitivo ao cultural"
+			"nome": "Expectativas de resultado"
 		},{
 			"identificador": "uni3_tela05",
-			"nome": "Cognitiva: Conceituar na ação"
+			"nome": "Processos de autoeficácia"
 		},{
 			"identificador": "uni3_tela06",
-			"nome": "Dimensões ética, estética, pessoal e outras"
+			"nome": "Influência do docente"
 		},{
 			"identificador": "uni3_tela07",
-			"nome": "Dimensão ética e pessoal"
-		},{
-			"identificador": "uni3_tela08",
-			"nome": "Dimensão identitária"
-		},{
-			"identificador": "uni3_tela09",
-			"nome": "Dimensão Cultural"
-		},{
-			"identificador": "uni3_tela10",
-			"nome": "Dimensão do Prazer"
-		},{
-			"identificador": "uni3_tela11",
 			"nome": "Concluindo"
 		}],
 		"atividades": [
@@ -203,24 +195,24 @@
 				"questoes": [{
 					"tipoQuestaoString": "PROPORCIONAL",
 					"identificador": "r3_1",
-					"enunciado": "O trabalho como obra pode ser compreendido como atividades, empreendidas por pessoas, com objetivos específicos, contextos particulares, mas em conexão com diversas dimensões laborais e sociais. Assinale a(s) alternativa(s) que correspondem ao conceito abordado.",
+					"enunciado": "O trabalho Sobre o desenvolvimento dos interesses profissionais, assinale as afirmativas a seguir como verdadeiras ou falsas:",
 					"gabaritos":[
-						{"chave": "r3_1_1", "valor": "f", "alternativa": "a) A obra é uma atividade essencialmente individual com características do trabalhador."},
-						{"chave": "r3_1_2", "valor": "v", "alternativa": "b) A obra coloca o aprendiz em contato com as dimensões cognitivas, éticas, estéticas e culturais do trabalho."},
-						{"chave": "r3_1_3", "valor": "f", "alternativa": "c) A obra do trabalho recebe os traços de quem planeja e não de quem executa."},
-						{"chave": "r3_1_4", "valor": "v", "alternativa": "d) A obra permite uma identificação do sujeito e um autorreconhecimento."}						
+						{"chave": "r3_1_1", "valor": "v", "alternativa": "a) A teoria Socio-Cognitiva tem um modelo teórico que se assenta em 3 blocos centrais: os interesses; as expectativas de resultados; as crenças de autoeficácia."},
+						{"chave": "r3_1_2", "valor": "f", "alternativa": "b) As expectativas de resultados são as avaliações dos currículos escolares."},
+						{"chave": "r3_1_3", "valor": "v", "alternativa": "c) As metas são os objetivos pessoais que cada pessoa quer alcançar."},
+						{"chave": "r3_1_4", "valor": "v", "alternativa": "d) As crenças de autoeficácia são a percepção de que somos capazes de desempenhar determinadas tarefas, funções, atividades."}						
 					]
 				},{
 					"tipoQuestaoString": "PROPORCIONAL",
-					"identificador": "r3_3",
-					"enunciado": "Relacione a seguir os sentidos possíveis para a técnica:",
+					"identificador": "r3_2",
+					"enunciado": "Complete o texto sobre as expectativas de resultado arrastando e soltando as palavras:",
 					"gabaritos":[
-						{"chave": "r3_3_a", "valor": "Dimensão Cognitiva", "alternativa": "a) Em sua ação individual e em interação com outros, o trabalhador desenvolve esquemas para dar conta de compreender e organizar a atividade em determinadas situações de trabalho. Tais situações podem apresentar semelhanças em sua estrutura ou grandes diferenças e por isso se fala aqui na existência, para cada atividade profissional, de diferentes “classes de situações”"},
-						{"chave": "r3_3_b", "valor": "Dimensão Identitária", "alternativa": "b) Reconhecimento de que a entrada no mundo do trabalho é também a participação da cultura técnica e profissional, da qual o sujeito faz parte."},
-						{"chave": "r3_3_c", "valor": "Dimensão Ética", "alternativa": "c) Se desdobra nos valores que a ação do trabalhador envolve, que vão desde aqueles de uma ética profissional típica de determinada categoria, passando por práticas educacionais até valores sociais mais gerais."},
-						{"chave": "r3_3_d", "valor": "Dimensão Pessoal", "alternativa": "d) Singularidade com que cada profissional atua e pode ser apreciada em qualquer atividade, apreciada esteticamente ou não."},
-						{"chave": "r3_3_e", "valor": "Dimensão Cultural", "alternativa": "e) Vislumbrar uma possível superação da divisão entre formação humana e formação técnica, formação intelectual e formação prática, por ajudar a evitar o desligamento do ato técnico das suas implicações sociais, éticas, econômicas, ambientais."},
-						{"chave": "r3_3_f", "valor": "Dimensão do Prazer", "alternativa": "f) Muitos trabalhadores que fazem seu trabalho bem feito pelo prazer e orgulho no resultado de seu trabalho, sentem realização pessoal em suas tarefas, cujo reforço é o elogio ou agradecimento que recebem, muito mais que o retorno financeiro."}
+						{"chave": "r3_2_1", "valor": "resultados positivos", "alternativa": "Palavra 1"},
+						{"chave": "r3_2_2", "valor": "metas", "alternativa": "Palavra 2"},
+						{"chave": "r3_2_3", "valor": "atividade", "alternativa": "Palavra 3"},
+						{"chave": "r3_2_4", "valor": "probabilidade", "alternativa": "Palavra 4"},
+						{"chave": "r3_2_5", "valor": "intrínsecas", "alternativa": "Palavra 5"},
+						{"chave": "r3_2_6", "valor": "extrínsecas", "alternativa": "Palavra 6"}
 					]
 				}]
 			},{
@@ -229,16 +221,16 @@
 				"questoes": [
 					{
 						"tipoQuestaoString": "MODERADA",
-						"identificador": "r3_2",
+						"identificador": "r3_3",
 						"tipoEnvio": "TEXTO",
-						"enunciado": "Considerando a importância da participação do estudante em obras do trabalho para sua formação profissional, indique pelo menos duas estratégias educativas que permitam esta participação:"
+						"enunciado": "Explique como o docente pode influenciar no sentido de despertar o interesse pelas atividades inerentes aos percursos técnicos:"
 					}
 				]
 			}
 		]
 	},{		
-		"identificador": "mod2_uni4",
-		"nome": "Processos de profissionalização",
+		"identificador": "mod3_uni4",
+		"nome": "Qual a importância do gênero, classe e família nas nossas escolhas?",
 		"descricao": "",
 		"permitePorcentagem": "true",
 		"topicos": [{
@@ -246,77 +238,65 @@
 			"nome": "Apresentação"
 		},{
 			"identificador": "uni4_tela02",
-			"nome": "Profissionalização"
+			"nome": "Estereótipos"
 		},{
 			"identificador": "uni4_tela03",
-			"nome": "Conceituando a profissionalização"
+			"nome": "Estereótipo"
 		},{
 			"identificador": "uni4_tela04",
-			"nome": "Profissionalização como formação"
+			"nome": "Teoria da Circunscrição e Compromisso"
 		},{
 			"identificador": "uni4_tela05",
-			"nome": "Organização do processo de profissionalização"
+			"nome": "Estereótipo e escolhas profissionais"
 		},{
 			"identificador": "uni4_tela06",
-			"nome": "Interprofissionalidade"
+			"nome": "Trabalhando estereótipos na escola"
 		},{
 			"identificador": "uni4_tela07",
-			"nome": "Arco Ocupacional 1"
+			"nome": "Família e estereótipos"
 		},{
 			"identificador": "uni4_tela08",
-			"nome": "Arco Ocupacional 2"
-		},{
-			"identificador": "uni4_tela09",
-			"nome": "Cooperação"
-		},{
-			"identificador": "uni4_tela10",
-			"nome": "Comunidade de Prática 2"
-		},{
-			"identificador": "uni4_tela11",
-			"nome": "Comunidade de Prática 2"
+			"nome": "Concluindo"
 		}],
 		"atividades": [
 			{
 				"identificador": "uni4_ativ1",
-				"nomeAtividade": "Avaliação - Unidade 4 - Questões Objetivas",				
+				"nomeAtividade": "Avaliação - Unidade 4",				
 				"questoes": [{					
 					"tipoQuestaoString": "PROPORCIONAL",
 					"identificador": "r4_1",
-					"enunciado": "Sobre a profissionalização, complete o texto arrastando e soltando as palavras:",
+					"enunciado": "Sobre os estereótipos, assinale as afirmativas a seguir como verdadeiras ou falsas",
 					"gabaritos": [
-						{ "chave": "r4_1_1", "valor": "autonomia", "alternativa": "Palavra 1" },
-						{ "chave": "r4_1_2", "valor": "atividades profissionais", "alternativa": "Palavra 2" },					
-						{ "chave": "r4_1_3", "valor": "grupos sociais", "alternativa": "Palavra 3" },
-						{ "chave": "r4_1_4", "valor": "instâncias oficiais", "alternativa": "Palavra 4" },
-						{ "chave": "r4_1_5", "valor": "construções de competências", "alternativa": "Palavra 5" },
-						{ "chave": "r4_1_6", "valor": "fazeres-saberes", "alternativa": "Palavra 6" },
-						{ "chave": "r4_1_7", "valor": "reconhecido", "alternativa": "Palavra 7" }
+						{ "chave": "r4_1_1", "valor": "f", "alternativa": "a) Os estereótipos são a maneira como as pessoas preferem ser vistas pelas outras, e são sempre positivos." },
+						{ "chave": "r4_1_2", "valor": "v", "alternativa": "b) Os estereótipos são fruto de uma grande construção social que, com o passar do tempo, vai sendo desenvolvida e estabelece padrões e formas de enxergar o outro e seu modo de agir." },					
+						{ "chave": "r4_1_3", "valor": "f", "alternativa": "c) Apenas os indivíduos que não tiveram acesso ao ensino médio são afetados por esses estereótipos, em maior ou menor grau." },
+						{ "chave": "r4_1_4", "valor": "v", "alternativa": "d) Fatores como acesso à educação, recursos financeiros e contexto familiar contribuem para a possibilidade de flexibilizarmos as generalizações, confrontarmos os estereótipos e, assim, alargarmos as possibilidades que consideramos viáveis e adequadas para as nossas escolhas." }						
 					]
 				},{
 					"tipoQuestaoString": "PROPORCIONAL",
 					"identificador": "r4_2",
-					"enunciado": "Considerando as dimensões simultâneas no processo de profissionalização, arraste e solte cada dimensão à sua definição:",
+					"enunciado": "No processo de socialização, a perceção das profissões de acordo com as variáveis sociais definem o mapa cognitivo de onde decorrem as escolhas. Arraste e solte cada conceito do mapa correspondente à sua definição:",
 					"gabaritos": [
-						{ "chave": "r4_2_1", "valor": "Intenção de movimento", "alternativa": "a) Trata-se da busca, por parte da instituição formadora, de “movimentar” os sujeitos \"nos sistemas de trabalho por meio de propostas de dispositivos de formação específicos\"." },
-						{ "chave": "r4_2_2", "valor": "Processos de ação", "alternativa": "b) Refere-se ao modo como um sujeito age em uma situação, levando os atores envolvidos a conferir profissionalidade ao aprendiz, dependendo da forma como é percebida pelo ambiente e estes atores." },
-						{ "chave": "r4_2_3", "valor": "Transição identitária", "alternativa": "c) Uma série de trocas de diferentes naturezas que afetam o indivíduo e o ambiente: trocas de gestos, palavras, saberes, valores, etc. Esta transação é que pode e deve levar à profissionalização." }
+						{ "chave": "r4_2_1", "valor": "Autoconceito", "alternativa": "a) A imagem que a pessoa forma sobre si mesma (conciliando atributos psicológicos ao seu papel social) e que orienta a sua conduta, na medida em que projeta as expectativas pessoais no futuro." },
+						{ "chave": "r4_2_2", "valor": "Espaço social", "alternativa": "b) Representa o conjunto de alternativas que restam, após a circunscrição, e que além de aceitáveis para o próprio sujeito, são também aceitáveis aos olhos dos outros (família, amigos, sociedade, entre outros)." },
+						{ "chave": "r4_2_3", "valor": "Aspiração profissional", "alternativa": "c) Emerge a partir do leque de alternativas construído pelo indivíduo." }
 					]
 				},{
-					"tipoQuestaoString": "PROPORCIONAL",
+					"tipoQuestaoString": "INTEGRAL",
 					"identificador": "r4_3",
-					"enunciado": "",
+					"enunciado": "Sobre a influência da família na construção de estereótipos e escolhas profissionais, assinale a alternativa a seguir que NÃO se aplica:",
 					"gabaritos":[
-						{"chave": "r4_3_1", "valor": "v", "alternativa": "a) Aprender é, no fundo, construir e transformar identidades. A aprendizagem tem a ver com o que você está se tornando. Aprender uma profissão é transformar profundamente a sua identidade, é um tornar-se."},
-						{"chave": "r4_3_2", "valor": "v", "alternativa": "b) Uma Comunidade de Prática (CoP) é um \"grupo de pessoas que compartilham preocupações, um conjunto de problemas ou uma paixão sobre um assunto e que aprofundam seus conhecimentos e expertises nessa área ao interagirem de maneira contínua\"."},
-						{"chave": "r4_3_3", "valor": "f", "alternativa": "c) Uma Comunidade de Prática (CoP) só pode ser formada por meio de atividades presenciais, pois é necessário intensas trocas entre trabalhadores engajados mutuamente."},
-						{"chave": "r4_3_4", "valor": "f", "alternativa": "d) A Comunidade de Prática (CoP) pressupõe uma comunidade sem conflitos, em que não existam relações de poder estabelecidas e ausência de divergências nos grupos."}						
+						{"chave": "r4_3_1", "valor": "f", "alternativa": "a) É na família que adquirimos valores, somos expostos a modelos de trabalho, somos encorajados ou desencorajados a fazer, conhecer, experimentar coisas, e recebemos informação sobre o mundo."},
+						{"chave": "r4_3_2", "valor": "f", "alternativa": "b) Os pais, avós, irmãos e demais pessoas próximas são as primeiras e mais respeitadas fontes de informação sobre o mundo profissional e são também os modelos de vida e carreira mais influentes que temos durante muito tempo."},
+						{"chave": "r4_3_3", "valor": "v", "alternativa": "c) A família não restringe as possibilidades de aprendizagem ou de experiências, isso somente é realizado na escola."},
+						{"chave": "r4_3_4", "valor": "f", "alternativa": "d) A família constrói crenças e valores."}						
 					]
 				}]						
 			}
 		]
 	},{		
-		"identificador": "mod2_uni5",
-		"nome": "Análise da atividade profissional (ou tecnografia)",
+		"identificador": "mod3_uni5",
+		"nome": "Exploração vocacional: a importância de conhecer a si mesmo e ao mundo",
 		"descricao": "",
 		"permitePorcentagem": "true",
 		"topicos": [{
@@ -324,13 +304,133 @@
 				"nome": "Apresentação"
 			},{
 				"identificador": "uni5_tela02",
-				"nome": "Tecnografia"
+				"nome": "Passadologia"
 			},{
 				"identificador": "uni5_tela03",
-				"nome": "Desenvolvimento da Tecnografia"
+				"nome": "Exploração Vocacional"
 			},{
 				"identificador": "uni5_tela04",
+				"nome": "Teoria evolutiva de carreira"
+			},{
+				"identificador": "uni5_tela05",
+				"nome": "Aplicando a Teoria evolutiva de carreira"
+			},{
+				"identificador": "uni5_tela06",
+				"nome": "Estágio de carreira"
+			},{
+				"identificador": "uni5_tela07",
+				"nome": "Processos de aconselhamento/orientação de carreira"
+			},{
+				"identificador": "uni5_tela08",
 				"nome": "Concluindo"
+			}
+		],
+		"atividades": [
+			{
+				"identificador": "uni5_ativ1",
+				"nomeAtividade": "Avaliação - Unidade 5",				
+				"questoes": [{					
+					"tipoQuestaoString": "PROPORCIONAL",
+					"identificador": "r5_1",
+					"enunciado": "Complete o texto sobre a exploração vocacional arrastando e soltando as palavras:",
+					"gabaritos": [
+						{ "chave": "r5_1_1", "valor": "informações", "alternativa": "Palavra 1" },
+						{ "chave": "r5_1_2", "valor": "hipóteses", "alternativa": "Palavra 2" },					
+						{ "chave": "r5_1_3", "valor": "escolher", "alternativa": "Palavra 3" },
+						{ "chave": "r5_1_4", "valor": "ocupação", "alternativa": "Palavra 4" },
+						{ "chave": "r5_1_5", "valor": "atividade exploratória", "alternativa": "Palavra 5" },
+						{ "chave": "r5_1_6", "valor": "escolha profissional", "alternativa": "Palavra 6" },
+						{ "chave": "r5_1_7", "valor": "mundo de trabalho", "alternativa": "Palavra 7" }											
+					]
+				},{
+					"tipoQuestaoString": "PROPORCIONAL",
+					"identificador": "r5_2",
+					"enunciado": "Considerando a Teoria cognitiva-evolutiva de carreira, relacione os elementos que compõem a teoria e suas definições:",
+					"gabaritos": [
+						{ "chave": "r5_2_1", "valor": "Autoconceito", "alternativa": "a) Ideia que o indivíduo tem de si mesmo." },
+						{ "chave": "r5_2_2", "valor": "Papéis de Vida", "alternativa": "b) Posições que o indivíduo ocupa no contexto familiar e social ao longo da vida e que definem algumas exigências, responsabilidades e preocupações, como estudante, dono de casa, pai/mae, etc..." },
+						{ "chave": "r5_2_3", "valor": "Identidade Pessoal", "alternativa": "c) Conjunto de interesses, habilidades e características de personalidade." }
+					]
+				},{
+					"tipoQuestaoString": "PROPORCIONAL",
+					"identificador": "r5_3",
+					"enunciado": "Em relação aos estágios da vida vocacional, arraste e solte cada conceito à a melhor definição de cada etapa:",
+					"gabaritos":[
+						{"chave": "r5_3_1", "valor": "Crescimento", "alternativa": "a) Começa o desenvolvimento do autoconceito, da percepção de si, das crenças de autoeficácia, em que as escolhas são assistemáticas, fantasiosas e buscam o despertar de interesses e habilidades. O indivíduo descobre as primeiras capacidades e constrói o autoconceito através da identificação com figuras significativas da família (pais, avós, irmãos) e escola (professores, colegas)."},
+						{"chave": "r5_3_2", "valor": "Exploração", "alternativa": "b) É quando se intensificam a auto-análise, a representação de papéis e a exploração ocupacional. Estes são os estágios em que vocês encontram os alunos, e por isso as experiências de exploração são tão importantes."},
+						{"chave": "r5_3_3", "valor": "Estabelecimento", "alternativa": "c) É o período em que o indivíduo estabelece os esforços para permanecer numa área e progredir na mesma, quando encontrada; A escolha aqui é implementada, isto é, uma conversão das preferências especificadas em uma realidade ocupacional, através do comprometimento com o mundo do trabalho."},
+						{"chave": "r5_3_4", "valor": "Manutenção", "alternativa": "d) Representa a consolidação de uma posição ou situação e a continuidade dos planos estabelecidos, a realização de tarefas da maturidade, com suas características de continuidade dos planos estabelecidos, onde há comportamentos de conservação do que foi alcançado."},
+						{"chave": "r5_3_5", "valor": "Desengajamento", "alternativa": "e) Se pode vivenciar algum declínio de capacidades físicas e/ou mentais, mas que majoritariamente representa o momento em que o indivíduo planeja sua retirada do mundo do trabalho, com o gradual enfraquecimento e posterior afastamento das atividades profissionais, criando um novo modo de vida fora do trabalho."}						
+					]
+				}]						
+			}
+		]
+	},{		
+		"identificador": "mod3_uni6",
+		"nome": "Adaptabilidade de Carreira",
+		"descricao": "",
+		"permitePorcentagem": "true",
+		"topicos": [{
+				"identificador": "uni6_tela01",
+				"nome": "Apresentação"
+			},{
+				"identificador": "uni6_tela02",
+				"nome": "Adaptabilidade de Carreira"
+			},{
+				"identificador": "uni6_tela03",
+				"nome": "Conceituando"
+			},{
+				"identificador": "uni6_tela04",
+				"nome": "Dimensões para a Adaptabilidade na Carreira"
+			},{
+				"identificador": "uni6_tela05",
+				"nome": "Adaptabilidade de Carreira e Pandemia"
+			},{
+				"identificador": "uni6_tela06",
+				"nome": "Concluindo"
+			}
+		],
+		"atividades": [
+			{
+				"identificador": "uni6_ativ1",
+				"nomeAtividade": "Avaliação - Unidade 6",				
+				"questoes": [{					
+					"tipoQuestaoString": "INTEGRAL",
+					"identificador": "r6_1",
+					"enunciado": "Sobre a formação da adaptabilidade da carreira, assinale o item incorreto:",
+					"gabaritos": [
+						{ "chave": "r6_1_1", "valor": "f", "alternativa": "a) Significações de memórias passadas." },
+						{ "chave": "r6_1_2", "valor": "f", "alternativa": "b) Experiências atuais." },					
+						{ "chave": "r6_1_3", "valor": "v", "alternativa": "c) Trocas com os colegas." },
+						{ "chave": "r6_1_4", "valor": "f", "alternativa": "d) Aspirações futuras de carreira." }																
+					]
+				},{
+					"tipoQuestaoString": "PROPORCIONAL",
+					"identificador": "r6_2",
+					"enunciado": "Selecione, no espaço abaixo, as dimensões fundamentais para o desenvolvimento na carreira:",
+					"gabaritos": [
+						{ "chave": "r6_2_1", "valor": "v", "alternativa": "Confiança" },
+						{ "chave": "r6_2_2", "valor": "v", "alternativa": "Controle" },
+						{ "chave": "r6_2_3", "valor": "f", "alternativa": "Criatividade" },
+						{ "chave": "r6_2_4", "valor": "v", "alternativa": "Curiosidade" },
+						{ "chave": "r6_2_5", "valor": "f", "alternativa": "Inteligência emocional" },
+						{ "chave": "r6_2_6", "valor": "v", "alternativa": "Preocupação" },
+						{ "chave": "r6_2_7", "valor": "f", "alternativa": "Responsabilidade" },
+						{ "chave": "r6_2_8", "valor": "f", "alternativa": "Visão estratégica" }
+					]
+				},{
+					"tipoQuestaoString": "INTEGRAL",
+					"identificador": "r6_3",
+					"enunciado": "Complete o texto sobre a adaptabilidade da carreira arrastando e soltando as palavras:",
+					"gabaritos":[
+						{"chave": "r6_3_1", "valor": "intervenção", "alternativa": "Palavra 1"},
+						{"chave": "r6_3_2", "valor": "orientação e desenvolvimento", "alternativa": "Palavra 2"},
+						{"chave": "r6_3_3", "valor": "recursos de adaptabilidade", "alternativa": "Palavra 3"},
+						{"chave": "r6_3_4", "valor": "imprevisto", "alternativa": "Palavra 4"},
+						{"chave": "r6_3_5", "valor": "incerteza", "alternativa": "Palavra 5"},
+						{"chave": "r6_3_6", "valor": "cotidiano", "alternativa": "Palavra 6"}				
+					]
+				}]						
 			}
 		]
 	}

@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2" />
     <link rel="stylesheet" href="../../css/efeito.css"/>   
     <link rel="stylesheet" href="../../css/cards.css?ver=1.1"/>
-    <link rel="stylesheet" href="../../css/efeito.css"/>    
+    <link rel="stylesheet" href="../../css/efeito.css"/> 
+    <link rel="stylesheet" href="../../css/telas_finais-mooc3.css"/>   
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
@@ -71,14 +72,14 @@
                             </a>
                             <div class="menu">
                                 <a href="../sumario.html" class='titulo-menu'>UNIDADE 4</a>
-                                <a href="tela01.html" class='link-menu-atual'>4.01 - Apresentação</a>
+                                <a href="tela01.html">4.01 - Apresentação</a>
                                 <a href="tela02.html">4.02 - Estereótipos</a>
                                 <a href="tela03.html">4.03 - Estereótipo</a>
                                 <a href="tela04.html">4.04 - Teoria da Circunscrição e Compromisso</a>
                                 <a href="tela05.html">4.05 - Estereótipo e escolhas profissionais</a>
                                 <a href="tela06.html">4.06 - Trabalhando estereótipos na escola</a>
                                 <a href="tela07.html">4.07 - Família e estereótipos</a>
-                                <a href="tela08.html">4.08 - Concluindo</a>
+                                <a href="tela08.html" class='link-menu-atual'>4.08 - Concluindo</a>
                             </div>
                         </div>
                     </div>
@@ -96,6 +97,11 @@
                 <div class='navegacao'>
                     <div class="bt-topo">
                         <a href="#"><i class="fas fa-angle-up"></i></a>
+                    </div>
+                    <div id="botao-atividades">
+                        <div class='mensagem-flutuante incompleta'>Complete os 100% na unidade para reponder as atividades</div>
+                        <div class='mensagem-flutuante completa'>Você acessou todas as telas da unidade. Então, faça as Atividades!</div>
+                        <button class="bt-avanca bt-desativado" type="button" ><a href="atividade01.html" ><i class="fas fa-pencil-alt"></i> ATIVIDADES &#10095;&#10095;</a></button>
                     </div>
                     <div><button class="bt-avanca" type="button"><a href="../uni5/tela01.html">PROSSEGUIR &#10095;</a></button></div>
                     <div class='botoes-navegacao'>
@@ -153,7 +159,7 @@
     var id_slide = "mod3/uni4/tela08.html";//alterar
     var unidade=4;//alterar
     var tela="uni4tela8";//alterar
-    var ultima_tela=0;
+    var ultima_tela=1;
     
     //Obtendo dados curso
     window.addEventListener('load', function(){

@@ -107,6 +107,10 @@
   background:#ccc;
 }
 
+.mooc3 .menu a.link-menu-atual{
+  background:#ddd;
+}
+
 .menu a.titulo-menu{
   text-align: center;
   width: 100%;
