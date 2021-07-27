@@ -69,7 +69,7 @@
 								<label for="change-hamburguer"></label>
 							</a>
 							<div class="menu">
-                                <a href="../sumario.html" class='titulo-menu'>UNIDADE 3</a>
+                                <a href="../sumario.html" class='titulo-menu link-menu-atual'>UNIDADE 3</a>
                                 <a href="tela01.html">3.01 - Apresentação</a>
                                 <a href="tela02.html">3.02 - Faço e Gosto</a>
                                 <a href="tela03.html">3.03 - A formação dos interesses e a autoeficácia</a>
@@ -88,8 +88,6 @@
                 <div class="atividade" id='atividade-uni3'>
 					<div id='mensagem-alerta'>
 					</div>
-                    <div id='mensagem-tentativas' class="atividades">                        
-					</div>
                     <form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni3" method="POST">
                         <div class="questao">
                             <div class="titulo-questao">Questão 1</div>
@@ -99,29 +97,29 @@
                             <div class="area-respostas">
                                 <div class="linha-respostas">
                                     <div class='texto-resposta  linha-grande'>                                           
-                                        <input type="checkbox" id='r1_1_1' name='r1_1_1' value="r1_1_1">
-                                        <label for='r1_1_1' class="texto-opcao">a) A teoria Socio-Cognitiva tem um modelo teórico que se assenta em 3 blocos centrais: os interesses; as expectativas de resultados; as crenças de autoeficácia.</label>
+                                        <input type="checkbox" id='r3_1_1' name='r3_1_1' value="r3_1_1">
+                                        <label for='r3_1_1' class="texto-opcao">a) A teoria Socio-Cognitiva tem um modelo teórico que se assenta em 3 blocos centrais: os interesses; as expectativas de resultados; as crenças de autoeficácia.</label>
                                     </div>                                       
                                 </div>
 
                                 <div class="linha-respostas">
                                     <div class='texto-resposta  linha-grande'> 
-                                        <input type="checkbox" id='r1_1_2' name='r1_1_2' value="r1_1_2">
-                                        <label for='r1_1_2' class="texto-opcao">b) As expectativas de resultados são as avaliações dos currículos escolares.</label>
+                                        <input type="checkbox" id='r3_1_2' name='r3_1_2' value="r3_1_2">
+                                        <label for='r3_1_2' class="texto-opcao">b) As expectativas de resultados são as avaliações dos currículos escolares.</label>
                                     </div>                                       
                                 </div>
 
                                 <div class="linha-respostas">
                                     <div class='texto-resposta  linha-grande'>   
-                                        <input type="checkbox" id='r1_1_3' name='r1_1_3' value="r1_1_3">                                                                             
-                                        <label for="r1_1_3" class="texto-opcao">c) As metas são os objetivos pessoais que cada pessoa quer alcançar.</label>
+                                        <input type="checkbox" id='r3_1_3' name='r3_1_3' value="r3_1_3">                                                                             
+                                        <label for="r3_1_3" class="texto-opcao">c) As metas são os objetivos pessoais que cada pessoa quer alcançar.</label>
                                     </div>                                       
                                 </div>
 
                                 <div class="linha-respostas">
                                     <div class='texto-resposta  linha-grande'>   
-                                        <input type="checkbox" id='r1_1_4' name='r1_1_4' value="r1_1_4">                                        
-                                        <label for='r1_1_4' class="texto-opcao">d) As crenças de autoeficácia são a percepção de que somos capazes de desempenhar determinadas tarefas, funções, atividades.</label>
+                                        <input type="checkbox" id='r3_1_4' name='r3_1_4' value="r3_1_4">                                        
+                                        <label for='r3_1_4' class="texto-opcao">d) As crenças de autoeficácia são a percepção de que somos capazes de desempenhar determinadas tarefas, funções, atividades.</label>
                                     </div>                                                                               
                                 </div>
                                 <p>&nbsp;</p>
@@ -285,49 +283,50 @@
 	
     //Etapa 3: Enviando formulário
 	function salvarDados(){
-        nota_atividade_nova=0;
-        nota_atividade=0;
-        quant_respostas=0; 
-        revisao_teste=0;       
-        erros=0;
+        let nota_atividade_nova=0,
+        nota_atividade=0,
+        quant_respostas=0,
+        revisao_teste=0,       
+        erros=0,
 
         //aqui vai pegar os valores de cada exercício.
-        //esses são os checkbox
-		r1_1_1 = document.form_atividade_uni1.r1_1_1.checked,
-        r1_1_2 = document.form_atividade_uni1.r1_1_2.checked,
-        r1_1_3 = document.form_atividade_uni1.r1_1_3.checked,
-        r1_1_4 = document.form_atividade_uni1.r1_1_4.checked,
+        //Questão 1 - checkbox
+		r3_1_1 = document.form_atividade_uni3.r3_1_1.checked,
+        r3_1_2 = document.form_atividade_uni3.r3_1_2.checked,
+        r3_1_3 = document.form_atividade_uni3.r3_1_3.checked,
+        r3_1_4 = document.form_atividade_uni3.r3_1_4.checked,
 		
-        r1_2_1 = document.querySelector("#r1_2_1 span.palavra-resposta"),
-        r1_2_2 = document.querySelector("#r1_2_2 span.palavra-resposta"),
-        r1_2_3 = document.querySelector("#r1_2_3 span.palavra-resposta"),
-        r1_2_4 = document.querySelector("#r1_2_4 span.palavra-resposta"),
-        r1_2_5 = document.querySelector("#r1_2_5 span.palavra-resposta"),
-        r1_2_6 = document.querySelector("#r1_2_6 span.palavra-resposta"),
-        r1_2_7 = document.querySelector("#r1_2_7 span.palavra-resposta"),
+        //Questão 2 - Drag and Drop
+        r3_2_1 = document.querySelector("#r3_2_1 span.palavra-resposta"),
+        r3_2_2 = document.querySelector("#r3_2_2 span.palavra-resposta"),
+        r3_2_3 = document.querySelector("#r3_2_3 span.palavra-resposta"),
+        r3_2_4 = document.querySelector("#r3_2_4 span.palavra-resposta"),
+        r3_2_5 = document.querySelector("#r3_2_5 span.palavra-resposta"),
+        r3_2_6 = document.querySelector("#r3_2_6 span.palavra-resposta"),
 		
-        //aqui os checkbox
-        r1_3_1 = document.form_atividade_uni1.r1_3_1.checked,
-        r1_3_2 = document.form_atividade_uni1.r1_3_2.checked,
-        r1_3_3 = document.form_atividade_uni1.r1_3_3.checked,
-        r1_3_4 = document.form_atividade_uni1.r1_3_4.checked
+        //Questão 3 - discursiva        
+        r3_3 = document.form_atividade_uni3.r3_3_texto.value;
 		       
         //testando se todos os exercícios (menos os checkbox) estão preenchidos.
-		if(r1_2_1==null){
+		if(r3_2_1==null){
 			erros++;
-		}else if(r1_2_2==null){
+		}else if(r3_2_2==null){
 			erros++;
-        }else if(r1_2_3==null){
+        }else if(r3_2_3==null){
 			erros++;
-        }else if(r1_2_4==null){
+        }else if(r3_2_4==null){
 			erros++;
-        }else if(r1_2_5==null){
+        }else if(r3_2_5==null){
 			erros++;
-		}else if(r1_2_6==null){
+		}else if(r3_2_6==null){
 			erros++;
-		}else if(r1_2_7==null){
+		}else if(r3_3==""){
 			erros++;
 		}
+
+        console.log("Resposta 1: "+r3_1_1+", "+r3_1_2+", "+r3_1_3+", "+r3_1_4);
+        console.log("Resposta 2: "+r3_2_1+", "+r3_2_2+", "+r3_2_3+", "+r3_2_4+", "+r3_2_5+", "+r3_2_6);
+        console.log("Resposta 3: "+r3_3);
 
 		if(erros>0){
             //caso algum não esteja preenchido, exibe mensagem de erro
@@ -371,7 +370,7 @@
     			    mensagem.innerHTML = "Você já fez suas "+max_quant_tentativas+" tentativas.";
 	    		    mensagem.style.display = "inline-block";                                     
                 }
-                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PROSSEGUIR &#10095;</a><p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                                
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni4/index.html'>PROSSEGUIR &#10095;</a><p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                                
                 
                 erros++;
             }else if(nota_atividade==10){
@@ -392,39 +391,38 @@
             // registra as re respostas com as funções da API:
             console.log("Registrando respostas:");
             console.log(evento.detail);
+            
+            //Questões Objetivas
             API.registrarRespostaAtividade({
-                "identificador": "uni1_ativ1",//modificar
+                "identificador": "uni3_ativ1",//modificar
                 "questoes": [
                     {
                         //Onde houver os exercícios de drag and drop precisa pegar o innerHTML
-                        "identificador": "r1_1",                    
+                        "identificador": "r3_1",                    
                         "gabaritos": [
-                            { "chave": "r1_1_1", "valor": (r1_1_1==true ? "v" : "f")},
-                            { "chave": "r1_1_2", "valor": (r1_1_2==true ? "v" : "f")},
-                            { "chave": "r1_1_3", "valor": (r1_1_3==true ? "v" : "f")},
-                            { "chave": "r1_1_4", "valor": (r1_1_4==true ? "v" : "f")}                            						
+                            { "chave": "r3_1_1", "valor": (r3_1_1==true ? "v" : "f")},
+                            { "chave": "r3_1_2", "valor": (r3_1_2==true ? "v" : "f")},
+                            { "chave": "r3_1_3", "valor": (r3_1_3==true ? "v" : "f")},
+                            { "chave": "r3_1_4", "valor": (r3_1_4==true ? "v" : "f")}                            						
                         ]
                     },{                    
-                        "identificador": "r1_2",                    
+                        "identificador": "r3_2",                    
                         "gabaritos": [
-                            { "chave": "r1_2_1", "valor": r1_2_1.innerHTML},
-                            { "chave": "r1_2_2", "valor": r1_2_2.innerHTML},
-                            { "chave": "r1_2_3", "valor": r1_2_3.innerHTML},
-                            { "chave": "r1_2_4", "valor": r1_2_4.innerHTML},	
-                            { "chave": "r1_2_5", "valor": r1_2_5.innerHTML},
-                            { "chave": "r1_2_6", "valor": r1_2_6.innerHTML},
-                            { "chave": "r1_2_7", "valor": r1_2_7.innerHTML}
+                            { "chave": "r3_2_1", "valor": r3_2_1.innerHTML},
+                            { "chave": "r3_2_2", "valor": r3_2_2.innerHTML},
+                            { "chave": "r3_2_3", "valor": r3_2_3.innerHTML},
+                            { "chave": "r3_2_4", "valor": r3_2_4.innerHTML},	
+                            { "chave": "r3_2_5", "valor": r3_2_5.innerHTML},
+                            { "chave": "r3_2_6", "valor": r3_2_6.innerHTML}
                         ]
-                    },{
-                        //Onde houver os checkbox, testar se é true para registrar v ou f
-                        "identificador": "r1_3",                    
-                        "gabaritos": [
-                            { "chave": "r1_3_1", "valor": (r1_3_1==true ? "v" : "f")},
-                            { "chave": "r1_3_2", "valor": (r1_3_2==true ? "v" : "f")},
-                            { "chave": "r1_3_3", "valor": (r1_3_3==true ? "v" : "f")},
-                            { "chave": "r1_3_4", "valor": (r1_3_4==true ? "v" : "f")}							
+                    };
+                    //Questão discursiva
+                    API.registrarRespostaAtividade({
+                        "identificador": "uni3_ativ2",
+                        "questoes": [
+                            { "identificador": "r3_3", "texto": r3_3}
                         ]
-                    }
+                    });    
                 ]
             })           
         }        	
@@ -451,7 +449,7 @@
             if(revisao_vista==1){
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_revisao_1;
             }else if(quant_respostas>=max_quant_tentativas){
-                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni4/index.html'>PROSSEGUIR &#10095;</a>";
             }else if(nota_atividade==10){
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a nota máxima!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
             }else if(nota_atividade>=6){
