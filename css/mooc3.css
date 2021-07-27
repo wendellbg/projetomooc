@@ -168,7 +168,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .bt-avanca.atividades {
 	color: #FF841D;
-	background-color: #fec13b;
+	background-color: #151730;
 	border-right: 2px solid;
 	border-bottom: 2px solid;
 }
@@ -178,12 +178,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bt-avanca.atividades:hover a {
-	color: #fec13b;
+	color: #151730;
 }
 
 .bt-avanca.atividades:hover {
-	background-color: #CC5E0D;
-	border-color: #fff;
+	background-color: #ff841d;
+	border-color: #151730;
+	color: #151730;
 }
 
 
