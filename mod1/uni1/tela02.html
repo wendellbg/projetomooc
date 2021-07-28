@@ -6,6 +6,74 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="../../css/mooc1.css?ver=1.2" />
 	<link rel="stylesheet" href="../../css/cards-img.css?ver=1.1" />
+	<link rel="stylesheet" href="../../css/boxes.css?ver=1.5" />
+	
+	<style>
+
+	.icone-botao {
+		position: fixed;
+		bottom: 2%;
+		right: 10%;
+		padding: 1%;
+		z-index: 10000000;
+	}
+
+	/* fundo do pop-up (background) */
+	.modal {
+	      display: none; 
+	      position: fixed; 
+	      z-index: 2; /* Define que o pop-up deverá ficar sobre outros elementos */
+	      left: 0;
+	      top: 0;
+	      width: 100%; 
+	      height: 100%; 
+	      overflow: auto; /* Habilita o scroll */            
+	      background-color: transparent; 
+	}
+
+	/* Modal Content */
+	.modal-content {
+	      position: absolute;
+	      /*background-color: #fefefe;*/
+	      margin: auto;
+	      padding: 0;
+	      width: 20%;
+	      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	      -webkit-animation-name: animatetop;
+	      -webkit-animation-duration: 0.4s;
+	      animation-name: animatetop;
+	      animation-duration: 0.6s
+	}
+
+	/* Animações */
+	@-webkit-keyframes animatetop {
+	from {top:-300px; opacity:0} 
+	to {top:0; opacity:1}
+	}
+
+	@keyframes animatetop {
+	from {top:-300px; opacity:0}
+	to {top:0; opacity:1}
+	}
+
+	/* Botão Fechar */
+	.close {
+	color: white;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+	}
+	.modal-body {padding: 2px 16px;}
+	
+
+	</style>
 
 	<!-- Botão de Voltar ao Topo -->
 	<script src="../../js/jquery-2.1.1.js"></script>
@@ -100,7 +168,7 @@
 
 			<!-- Imagem Única-->
 			<div class="image fit flush largura-60">
-				<img src=" ../../img/uni1/tela02_02a.png" alt="Pessoa apertando a mão de um técnico em edificações">
+				<img src="../../img/uni1/tela02_02a.png" alt="Pessoa apertando a mão de um técnico em edificações">
 				<p class="legenda-img">Figura 02 - Fonte: (Noticias.r7/Freepick) e editada pela produção do projeto</p>
 			</div>
 
@@ -174,6 +242,13 @@
 
 				</div>
 
+				<!-- Pop-up -->
+				<div id="myModal" class="modal">      
+				  <!-- Conteúdo do Pop-up -->
+				  <div class="modal-content">
+				    <span class="close">&times;</span>
+				    <iframe id="video2" width="300" height="400" src="https://www.youtube.com/embed/iBpZ3N6JT5A?enablejsapi=1&html5=1&mute=1&controls=0&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>				    
+				</div>				
 			</div>
 
 			<!-- Conteúdo -->
@@ -182,10 +257,15 @@
 					<div class="bt-topo">
 						<a href="#"><i class="fas fa-angle-up"></i></a>
 					</div>
-					
+
+					<div class="icone-botao">
+						<button id="video-exibir" type="button" style="border-color:transparent;"><img src="../../img/padrao/libras.png"></button>
+					</div>								
+										
 					<div>
 						<button class="bt-avanca" type="button"><a href="tela03.html">PROSSEGUIR &#10095;</a></button>
 					</div>
+
 					<div class='botoes-navegacao'>
 						<a href="tela01.html"><button class="bt-navegacao" type="button"><</button></a>
 
@@ -234,6 +314,29 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
+
+<script>
+      var vid = document.getElementById("myVideo"); 
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("video-exibir");
+      var span = document.getElementsByClassName("close")[0];
+      btn.onclick = function() {
+        modal.style.display = "block";
+        vid.play(); 
+      }
+      span.onclick = function() {
+        modal.style.display = "none";
+        vid.pause();
+      }            
+      window.onclick = function(event) {
+        if (event.target == modal) 
+        {                
+          modal.style.display = "none";
+          vid.pause();
+        }
+      }
+</script>
+
 <script>
 	console.clear(screen);
 
