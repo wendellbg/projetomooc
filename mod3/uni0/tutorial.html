@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Mentoria</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
+    <link rel="stylesheet" href="../../css/introjs.min.css" />
+    <link rel="stylesheet" href="../../css/boxes.css?ver=1.4"/>
+
+    <style>
+        .introjs-tooltip {
+            min-width: 600px;
+            max-width: 800px;
+            top: 10% !important;
+            margin-top: -250px !important;
+        }
+
+        .introjs-tooltip img {
+            border-radius: 4px;
+        }
+
+        @media screen and (max-width: 720px) {
+            .introjs-tooltip {
+                min-width: 300px;
+                max-width: 400px;
+                top: auto !important;
+                margin-top: -200px !important;
+            }
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+<!-- Header -->
+<header id="header">
+    <div class="logo">
+        <a href="#">Tutorial</a>
+    </div>
+</header>
+
+<!-- Main -->
+<section id="main">
+    <div class="inner">
+        <!-- One -->
+        <section id="one" class="wrapper style1">
+
+            <div class="botao-sumario">
+                <a class="link-progresso" href="../sumario.html"><i class="fas fa-tasks"></i> PROGRESSO</a>
+            </div>
+            <header class="special">
+                <div class="div-intro">
+                    <a class="class_name" href="javascript:void(0);" onclick="javascript:introguide.start();"><button class="bt-link-externo" type="button"><i class="fas fa-question-circle"></i> Dicas sobre este ambiente</button></a>
+                </div>
+            </header>
+
+            <div class="content">
+                <br><br><br>
+            </div>
+            <div class="content">
+                <br><br><br>
+            </div>
+            <div class="content">
+                <br><br><br>
+            </div>
+            <div class="content">
+                <br><br><br>
+            </div>
+
+            <!-- Conteúdo Footer -->
+            <div class="content footer">
+
+
+
+
+            </div>
+
+        </section>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
+
+<script src="../../js/intro.min.js"></script>
+<script>
+
+    var introguide = introJs().setOptions({
+        steps: [{
+            title: 'Olá 👋',
+            intro: 'Esta é a tela inicial do nosso ambiente virtual!<br>Preparamos algumas dicas sobre como ele funciona.'
+        },
+            {
+                title: 'Informações',
+                intro: '<img width="100%" src=" ../../img/padrao/tutorial01.jpg" >Aqui você tem mais informações sobre este curso.'
+            },
+            {
+                title: 'Unidades',
+                intro: '<img width="100%" src=" ../../img/padrao/tutorial02.jpg" >Estas são as Unidades do curso. Comece por Boas-vindas'
+            },
+            {
+                title: 'Continuar',
+                intro: '<img width="100%" src=" ../../img/padrao/tutorial03.jpg" >Aqui, você acessa a última unidade visualizada.'
+            },
+            {
+                title: 'Voltar',
+                intro: '<img width="100%" src=" ../../img/padrao/tutorial04.jpg" >Se estiver numa unidade e quiser voltar para esta tela inicial, clique aqui.'
+            },
+            {
+                title: 'Sumário',
+                intro: '<img width="100%" src=" ../../img/padrao/tutorial05.jpg" >Aqui você acessa cada uma das unidades do curso.'
+            }]
+    });
+
+    // var introguide = introJs();
+    // and check for it when deciding whether to start.
+
+    window.addEventListener('load', function () {
+        var doneTour = localStorage.getItem('IntroAvamec') === 'Concluido';
+        if (doneTour) {
+            return;
+        }
+        else {
+            introguide.start()
+
+            introguide.oncomplete(function () {
+                localStorage.setItem('IntroAvamec', 'Concluido');
+            });
+
+            introguide.onexit(function () {
+                localStorage.setItem('IntroAvamec', 'Concluido');
+            });
+        }
+    });
+
+
+</script>
+
+</body>
+</html>
