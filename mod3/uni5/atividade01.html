@@ -69,7 +69,7 @@
 								<label for="change-hamburguer"></label>
 							</a>
 							<div class="menu">
-                                <a href="../sumario.html" class='titulo-menu'>UNIDADE 5</a>
+                                <a href="../sumario.html" class='titulo-menu link-menu-atual'>UNIDADE 5</a>
                                 <a href="tela01.html">5.01 - Apresentação</a>
                                 <a href="tela02.html">5.02 - Passadologia</a>
                                 <a href="tela03.html">5.03 - Exploração Vocacional</a>
@@ -89,8 +89,6 @@
                 <div class="atividade" id='atividade-uni5'>
 					<div id='mensagem-alerta'>
 					</div>
-                    <div id='mensagem-tentativas' class="atividades">                        
-					</div>
                     <form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni5" method="POST">
                         
                         <div class="questao">
@@ -103,33 +101,33 @@
                                     <div class='texto-resposta linha-grande'>                                        
                                         <p></p>
                                         <span class="texto-opcao">O objetivo da exploração é suprir determinadas    
-                                            <div class="area-inputs caixa-drop_5_2" id='r1_2_1' name='r1_2_1' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                            <div class="area-inputs caixa-drop_5_2" id='r5_1_1' name='r5_1_1' ondrop="drop(event)" ondragover="allowDrop(event)">
                                                 <p></p>                                         
                                             </div>                                                                            
                                             sobre o próprio sujeito ou sobre o meio e verificar ou encontrar subsídios para 
-                                            <div class="area-inputs caixa-drop_5_2" id='r1_2_2' name='r1_2_2' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                            <div class="area-inputs caixa-drop_5_2" id='r5_1_2' name='r5_1_2' ondrop="drop(event)" ondragover="allowDrop(event)">
                                                 <p></p>                                         
                                             </div>                                                                            
                                             que auxiliem o indivíduo a 
-                                            <div class="area-inputs caixa-drop_5_2" id='r1_2_3' name='r1_2_3' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                            <div class="area-inputs caixa-drop_5_2" id='r5_1_3' name='r5_1_3' ondrop="drop(event)" ondragover="allowDrop(event)">
                                                 <p></p>                                         
                                             </div>
                                             , preparar, assumir, ajustar-se ou progredir em uma  
-                                            <div class="area-inputs caixa-drop_5_2" id='r1_2_5' name='r1_2_5' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                            <div class="area-inputs caixa-drop_5_2" id='r5_1_5' name='r5_1_5' ondrop="drop(event)" ondragover="allowDrop(event)">
                                                 <p></p>                                         
                                             </div>.                                    
                                         </span>
                                         <p></p>
                                         <span class="texto-opcao">A 
-                                            <div class="area-inputs caixa-drop_5_2" id='r1_2_5' name='r1_2_5' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                            <div class="area-inputs caixa-drop_5_2" id='r5_1_5' name='r5_1_5' ondrop="drop(event)" ondragover="allowDrop(event)">
                                                 <p></p>                                         
                                             </div>
                                             teria por objetivo desenvolver preferências antes da efetivação de uma 
-                                            <div class="area-inputs caixa-drop_5_2" id='r1_2_6' name='r1_2_6' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                            <div class="area-inputs caixa-drop_5_2" id='r5_1_6' name='r5_1_6' ondrop="drop(event)" ondragover="allowDrop(event)">
                                                 <p></p>                                         
                                             </div>
                                             e da entrada no 
-                                            <div class="area-inputs caixa-drop_5_2" id='r1_2_7' name='r1_2_7' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                            <div class="area-inputs caixa-drop_5_2" id='r5_1_7' name='r5_1_7' ondrop="drop(event)" ondragover="allowDrop(event)">
                                                 <p></p>                                         
                                             </div>, sendo voltada tanto para o interior quanto para o exterior do indivíduo.
                                         </span>
@@ -348,7 +346,7 @@
     console.clear(screen);
 
     var API = new BridgeRestApi();
-    var id_unidade = "mod3_uni3";//modificar
+    var id_unidade = "mod3_uni5";//modificar
     var id_slide = "mod3/uni5/atividade01.html";//modificar
     var id_atividade = "uni5_ativ1";//modificar
     var revisao_unidade = "uni5_revisao";//modificar
@@ -378,40 +376,58 @@
         erros=0;
 
         //aqui vai pegar os valores de cada exercício.
-        //esses são os checkbox
-		r1_1_1 = document.form_atividade_uni1.r1_1_1.checked,
-        r1_1_2 = document.form_atividade_uni1.r1_1_2.checked,
-        r1_1_3 = document.form_atividade_uni1.r1_1_3.checked,
-        r1_1_4 = document.form_atividade_uni1.r1_1_4.checked,
+        
+        //Questão 1 - Drag and drop
+		r5_1_1 = document.querySelector("#r5_1_1 span.palavra-resposta"),
+        r5_1_2 = document.querySelector("#r5_1_2 span.palavra-resposta"),
+        r5_1_3 = document.querySelector("#r5_1_3 span.palavra-resposta"),
+        r5_1_4 = document.querySelector("#r5_1_4 span.palavra-resposta"),
+        r5_1_5 = document.querySelector("#r5_1_5 span.palavra-resposta"),
+        r5_1_6 = document.querySelector("#r5_1_6 span.palavra-resposta"),
+        r5_1_7 = document.querySelector("#r5_1_7 span.palavra-resposta"),
+
+        //Questão 2 - Select
+        r5_2_a = document.form_atividade_uni5.r5_2_a.value,
+        r5_2_b = document.form_atividade_uni5.r5_2_b.value,
+        r5_2_c = document.form_atividade_uni5.r5_2_c.value;
 		
-        r1_2_1 = document.querySelector("#r1_2_1 span.palavra-resposta"),
-        r1_2_2 = document.querySelector("#r1_2_2 span.palavra-resposta"),
-        r1_2_3 = document.querySelector("#r1_2_3 span.palavra-resposta"),
-        r1_2_4 = document.querySelector("#r1_2_4 span.palavra-resposta"),
-        r1_2_5 = document.querySelector("#r1_2_5 span.palavra-resposta"),
-        r1_2_6 = document.querySelector("#r1_2_6 span.palavra-resposta"),
-        r1_2_7 = document.querySelector("#r1_2_7 span.palavra-resposta"),
-		
-        //aqui os checkbox
-        r1_3_1 = document.form_atividade_uni1.r1_3_1.checked,
-        r1_3_2 = document.form_atividade_uni1.r1_3_2.checked,
-        r1_3_3 = document.form_atividade_uni1.r1_3_3.checked,
-        r1_3_4 = document.form_atividade_uni1.r1_3_4.checked
+        //Questão 3 - Drag and drop
+        r5_3_1 = document.querySelector("#r5_3_1 span.palavra-resposta"),
+        r5_3_2 = document.querySelector("#r5_3_2 span.palavra-resposta"),
+        r5_3_3 = document.querySelector("#r5_3_3 span.palavra-resposta"),
+        r5_3_4 = document.querySelector("#r5_3_4 span.palavra-resposta"),
+        r5_3_5 = document.querySelector("#r5_3_5 span.palavra-resposta"),
 		       
         //testando se todos os exercícios (menos os checkbox) estão preenchidos.
-		if(r1_2_1==null){
+		if(r5_1_1==null){
 			erros++;
-		}else if(r1_2_2==null){
+		}else if(r5_1_2==null){
 			erros++;
-        }else if(r1_2_3==null){
+        }else if(r5_1_3==null){
 			erros++;
-        }else if(r1_2_4==null){
+        }else if(r5_1_4==null){
 			erros++;
-        }else if(r1_2_5==null){
+        }else if(r5_1_5==null){
 			erros++;
-		}else if(r1_2_6==null){
+		}else if(r5_1_6==null){
 			erros++;
-		}else if(r1_2_7==null){
+		}else if(r5_1_7==null){
+			erros++;
+		}else if(r5_2_a==""){
+            erros++;
+        }else if(r5_2_b==""){
+            erros++;
+        }else if(r5_2_c==""){
+            erros++;
+        }else if(r5_3_1==null){
+			erros++;
+		}else if(r5_3_2==null){
+			erros++;
+        }else if(r5_3_3==null){
+			erros++;
+        }else if(r5_3_4==null){
+			erros++;
+        }else if(r5_3_5==null){
 			erros++;
 		}
 
@@ -457,7 +473,7 @@
     			    mensagem.innerHTML = "Você já fez suas "+max_quant_tentativas+" tentativas.";
 	    		    mensagem.style.display = "inline-block";                                     
                 }
-                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PROSSEGUIR &#10095;</a><p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                                
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni6/index.html'>PROSSEGUIR &#10095;</a><p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                                
                 
                 erros++;
             }else if(nota_atividade==10){
@@ -479,36 +495,37 @@
             console.log("Registrando respostas:");
             console.log(evento.detail);
             API.registrarRespostaAtividade({
-                "identificador": "uni1_ativ1",//modificar
+                "identificador": "uni5_ativ1",//modificar
                 "questoes": [
                     {
                         //Onde houver os exercícios de drag and drop precisa pegar o innerHTML
-                        "identificador": "r1_1",                    
+                        "identificador": "r5_1",                    
                         "gabaritos": [
-                            { "chave": "r1_1_1", "valor": (r1_1_1==true ? "v" : "f")},
-                            { "chave": "r1_1_2", "valor": (r1_1_2==true ? "v" : "f")},
-                            { "chave": "r1_1_3", "valor": (r1_1_3==true ? "v" : "f")},
-                            { "chave": "r1_1_4", "valor": (r1_1_4==true ? "v" : "f")}                            						
-                        ]
-                    },{                    
-                        "identificador": "r1_2",                    
-                        "gabaritos": [
-                            { "chave": "r1_2_1", "valor": r1_2_1.innerHTML},
-                            { "chave": "r1_2_2", "valor": r1_2_2.innerHTML},
-                            { "chave": "r1_2_3", "valor": r1_2_3.innerHTML},
-                            { "chave": "r1_2_4", "valor": r1_2_4.innerHTML},	
-                            { "chave": "r1_2_5", "valor": r1_2_5.innerHTML},
-                            { "chave": "r1_2_6", "valor": r1_2_6.innerHTML},
-                            { "chave": "r1_2_7", "valor": r1_2_7.innerHTML}
+                            { "chave": "r5_1_1", "valor": r5_1_1.innerHTML},
+                            { "chave": "r5_1_2", "valor": r5_1_2.innerHTML},
+                            { "chave": "r5_1_3", "valor": r5_1_3.innerHTML},
+                            { "chave": "r5_1_4", "valor": r5_1_4.innerHTML},
+                            { "chave": "r5_1_5", "valor": r5_1_5.innerHTML},
+                            { "chave": "r5_1_6", "valor": r5_1_6.innerHTML},
+                            { "chave": "r5_1_7", "valor": r5_1_7.innerHTML}                            						
                         ]
                     },{
-                        //Onde houver os checkbox, testar se é true para registrar v ou f
-                        "identificador": "r1_3",                    
+                        "identificador": "r5_2",
+                        "gabaritos":[
+                            { "chave": "r5_2_1", "valor": (r5_2_a)},
+                            { "chave": "r5_2_2", "valor": (r5_2_b)},
+                            { "chave": "r5_2_3", "valor": (r5_2_c)}
+                        ]
+                    }
+                    
+                    {                    
+                        "identificador": "r5_3",                    
                         "gabaritos": [
-                            { "chave": "r1_3_1", "valor": (r1_3_1==true ? "v" : "f")},
-                            { "chave": "r1_3_2", "valor": (r1_3_2==true ? "v" : "f")},
-                            { "chave": "r1_3_3", "valor": (r1_3_3==true ? "v" : "f")},
-                            { "chave": "r1_3_4", "valor": (r1_3_4==true ? "v" : "f")}							
+                            { "chave": "r5_3_1", "valor": r5_3_1.innerHTML},
+                            { "chave": "r5_3_2", "valor": r5_3_2.innerHTML},
+                            { "chave": "r5_3_3", "valor": r5_3_3.innerHTML},
+                            { "chave": "r5_3_4", "valor": r5_3_4.innerHTML},	
+                            { "chave": "r5_3_5", "valor": r5_3_5.innerHTML}                            
                         ]
                     }
                 ]
@@ -537,7 +554,7 @@
             if(revisao_vista==1){
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_revisao_1;
             }else if(quant_respostas>=max_quant_tentativas){
-                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni6/index.html'>PROSSEGUIR &#10095;</a>";
             }else if(nota_atividade==10){
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a nota máxima!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
             }else if(nota_atividade>=6){
@@ -569,7 +586,6 @@
     function drag(ev){
         /**ev.dataTransfer.setData("text",ev.target.id); **/
         ev.dataTransfer.setData ("src", ev.target.id);
-                    
     }
 
     function drop(ev){
