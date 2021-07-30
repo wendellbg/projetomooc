@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="../../css/boxes.css?ver=1.4"/>
 	<link rel="stylesheet" href="../../css/podcast.css?ver=1.1"/>
 	<link rel="stylesheet" href="../../css/ponto-interesse.css?ver=1.6"/>
+	<link rel="stylesheet" href="../../css/video-libras.css?ver=1.0" />
 
 	<!-- Botão de Voltar ao Topo -->
 	<script src="../../js/jquery-2.1.1.js"></script>
@@ -166,15 +167,27 @@
 
 				<p>Ao longo de todo esse curso, nossa principal missão de educadores é provocar os jovens às suas escolhas e oferecer mecanismos e informações para que possam viabilizá-las. O  podcast a seguir aborda um diálogo do Prof. Wollinger com dois estudantes que estão em dúvidas sobre a escolha de cursos profissionais, perceba, ao longo da conversa, como as estratégias que discutimos aqui podem ser aplicadas na mentoria com os alunos.</p>
 
-				<div class="icone-audio">
-					<a class='icone-play' id="botao-play-podcast" onclick="playShowPod()"><img src="../../img/uni3/icone-audio.png" /></a>
-					<a class="icone-pause" id="botao-pause-podcast" onclick="pauseShowPod()" style="display:none;"><img src="../../img/uni3/icone-audio2.gif" /></a>
-					<audio id='playerPodcast' class='controles-podcast' controls='controls'>
-						<source src="../../img/uni5/PODCAST_UNIDADE_5.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
-					</audio>
-					<div class="downloads">
-						<a target="_blank" href="../../downloads/Un5-podcast.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
+				<div class="row">
+					<div class="video-externo 12u 12u$(small)">
+						<div class="icone-audio">
+							<a class='icone-play' id="botao-play-podcast" onclick="playShowPod()"><img src="../../img/uni3/icone-audio.png" /></a>
+							<a class="icone-pause" id="botao-pause-podcast" onclick="pauseShowPod()" style="display:none;"><img src="../../img/uni3/icone-audio2.gif" /></a>
+							<audio id='playerPodcast' class='controles-podcast' controls='controls'>
+								<source src="../../img/uni5/PODCAST_UNIDADE_5.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+							</audio>
+							<div class="downloads">
+								<button onclick="exibirLibras(1)" class="video-exibir bt-download-media" type="button"><i class="fas fa-sign-language"></i> Tradutor de libras</button>
+								<button onclick="exibirLibras(0)" class="video-cancelar bt-download-media" type="button"><i class="fas fa-sign-language"></i> Esconder tradutor</button>
+								<a target="_blank" href="../../downloads/Un5-podcast.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
+							</div>
+						</div>
 					</div>
+					<div class="video-libras 3u 12u$(small)">
+						<div class="video-player icone-audio">
+							<iframe id="video2" width="720" height="405" src="https://www.youtube.com/embed/trUmyXidHME?enablejsapi=1&html5=1&mute=1&controls=1&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+
 				</div>
 
 			</div>
@@ -238,64 +251,104 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
 		
-		<!-- Funções de acesso à biblioteca do Avamec-->
-		<script src="../../js/funcoes-porcentagem.js"></script>
-		<script>
-			console.clear(screen);
+<!-- Funções de acesso à biblioteca do Avamec-->
+<script src="../../js/funcoes-porcentagem.js"></script>
+<script>
+	console.clear(screen);
 
-			var API = new BridgeRestApi();
-			var id_unidade = "mod1_uni5";
-			var id_slide = "mod1/uni5/tela04.html";//alterar
-			var unidade=5;//alterar
-			var tela="uni5tela4";//alterar
-			var ultima_tela=0;
-			
-			//Obtendo dados curso
-			window.addEventListener('load', function(){
-				API.obterDadosCurso();
-			});
-		</script>
+	var API = new BridgeRestApi();
+	var id_unidade = "mod1_uni5";
+	var id_slide = "mod1/uni5/tela04.html";//alterar
+	var unidade=5;//alterar
+	var tela="uni5tela4";//alterar
+	var ultima_tela=0;
+
+	//Obtendo dados curso
+	window.addEventListener('load', function(){
+		API.obterDadosCurso();
+	});
+</script>
 
 
-		<script>
-			var audioPod = document.getElementById('playerPodcast');
-			var playPod = document.getElementById('botao-play-podcast');
-			var pausePod = document.getElementById('botao-pause-podcast');
+<script>
+	var audioPod = document.getElementById('playerPodcast');
+	var playPod = document.getElementById('botao-play-podcast');
+	var pausePod = document.getElementById('botao-pause-podcast');
 
-			var playShowPod = function() {
-				audioPod.play();
-				playPod.style.display = "none";
-				pausePod.style.display = "block";
-			};
+	var playShowPod = function() {
+		audioPod.play();
+		playPod.style.display = "none";
+		pausePod.style.display = "block";
+	};
 
-			// Pause audio & mostra link de play
-			var pauseShowPod = function() {
-				audioPod.pause();
-				playPod.style.display = "block";
-				pausePod.style.display = "none";
-			};
+	// Pause audio & mostra link de play
+	var pauseShowPod = function() {
+		audioPod.pause();
+		playPod.style.display = "block";
+		pausePod.style.display = "none";
+	};
 
-		</script>
-		
-		<script type="text/javascript">
-			var IndiceImagemAtual=1;
-			var VetorImagens = [
-				"../../img/uni5/Infografico1.jpg",
-				"../../img/uni5/Infografico2.jpg",
-				"../../img/uni5/Infografico3.jpg",
-				"../../img/uni5/Infografico4.jpg",
-				"../../img/uni5/Infografico5.jpg",
-				"../../img/uni5/Infografico6.jpg"
-			];
-			function trocar() {
-				if(IndiceImagemAtual == VetorImagens.length) //reseta quando o contador for igual ao tamanho da array e volta a 1° img
-				{
-					IndiceImagemAtual=0;
-				}
-				document.getElementById("infografo").src=VetorImagens[IndiceImagemAtual]; //altera a img do elemento "agni" de acordo com o indice
-				IndiceImagemAtual++; // incrementa a nossa referencia
+</script>
 
+<script>
+	function exibirLibras(valor){
+		if(!valor){ // significa que valor = 0
+
+			var x = document.getElementsByClassName("video-libras");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'none';
 			}
-		</script>
+
+			var x = document.getElementsByClassName("video-externo");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].classList.remove("9u");
+				x[i].classList.add("12u");
+			}
+
+
+			var x = document.getElementsByClassName("video-cancelar");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'none';
+			}
+
+			var x = document.getElementsByClassName("video-exibir");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'initial';
+			}
+
+		}else{ // ou não é 0
+
+			var x = document.getElementsByClassName("video-libras");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'block';
+			}
+
+			var x = document.getElementsByClassName("video-externo");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].classList.remove("12u");
+				x[i].classList.add("9u");
+			}
+
+			var x = document.getElementsByClassName("video-cancelar");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'initial';
+			}
+
+			var x = document.getElementsByClassName("video-exibir");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'none';
+			}
+		}
+	}
+
+</script>
 </body>
 </html>
