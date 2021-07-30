@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
 	<link rel="stylesheet" href="../../css/boxes.css?ver=1.4"/>
 	<link rel="stylesheet" href="../../css/podcast.css?ver=1.1"/>
+	<link rel="stylesheet" href="../../css/video-libras.css?ver=1.0" />
 
 	<!-- Botão de Voltar ao Topo -->
 	<script src="../../js/jquery-2.1.1.js"></script>
@@ -92,17 +93,32 @@
 			<div class="content">
 				<p>Com o novo Ensino Médio, <b>abrem-se novas possibilidades formativas e uma diversidade de caminhos laborais que o estudante pode escolher.</b></p>
 				<p>As inquietações sobre os itinerários formativos são compartilhadas entre os gestores, professores e alunos. Para que você compreenda os elementos que constituem os itinerários, ouça o podcast clicando no botão abaixo.</p>
+			</div>
 
-				<div class="icone-audio">
-					<a class='icone-play' id="botao-play-podcast" onclick="playShowPod()"><img src="../../img/uni3/icone-audio.png"/></a>
-					<a class="icone-pause" id="botao-pause-podcast" onclick="pauseShowPod()" style="display:none;"><img src="../../img/uni3/icone-audio2.gif" /></a>
-					<audio id='playerPodcast' class='controles-podcast' controls='controls'>
-						<!-- <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/993788803&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe> -->
-						<!-- <source src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/993788803&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true" type="audio/mp3" />Seu navegador não suporta HTML5-->
-						 <source src="../../img/uni3/PODCAST_UNIDADE_3.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
-					</audio>
-					<div class="downloads">
-						<a target="_blank" href="../../downloads/Un3-podcast.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
+			<div class="content">
+				<div class="row">
+					<div class="video-externo 12u 12u$(small)">
+
+						<div class="icone-audio">
+							<a class='icone-play' id="botao-play-podcast" onclick="playShowPod()"><img src="../../img/uni3/icone-audio.png"/></a>
+							<a class="icone-pause" id="botao-pause-podcast" onclick="pauseShowPod()" style="display:none;"><img src="../../img/uni3/icone-audio2.gif" /></a>
+							<audio id='playerPodcast' class='controles-podcast' controls='controls'>
+								<!-- <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/993788803&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe> -->
+								<!-- <source src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/993788803&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true" type="audio/mp3" />Seu navegador não suporta HTML5-->
+								 <source src="../../img/uni3/PODCAST_UNIDADE_3.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+							</audio>
+							<div class="downloads">
+								<button onclick="exibirLibras(1)" class="video-exibir bt-download-media" type="button"><i class="fas fa-sign-language"></i> Tradutor de libras</button>
+								<button onclick="exibirLibras(0)" class="video-cancelar bt-download-media" type="button"><i class="fas fa-sign-language"></i> Esconder tradutor</button>
+								<a target="_blank" href="../../downloads/Un3-podcast.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
+							</div>
+
+						</div>
+					</div>
+					<div class="video-libras 3u 12u$(small)">
+						<div class="video-player icone-audio">
+							<iframe id="video1" width="720" height="405" src="https://www.youtube.com/embed/fO_swUoNGfA?enablejsapi=1&html5=1&mute=1&controls=1&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -164,6 +180,69 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
 
+
+<script>
+
+	function exibirLibras(valor){
+		if(!valor){ // significa que valor = 0
+
+			var x = document.getElementsByClassName("video-libras");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'none';
+			}
+
+			var x = document.getElementsByClassName("video-externo");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].classList.remove("9u");
+				x[i].classList.add("12u");
+			}
+
+
+			var x = document.getElementsByClassName("video-cancelar");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'none';
+			}
+
+			var x = document.getElementsByClassName("video-exibir");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'initial';
+			}
+
+		}else{ // ou não é 0
+
+			var x = document.getElementsByClassName("video-libras");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'block';
+			}
+
+			var x = document.getElementsByClassName("video-externo");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].classList.remove("12u");
+				x[i].classList.add("9u");
+			}
+
+			var x = document.getElementsByClassName("video-cancelar");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'initial';
+			}
+
+			var x = document.getElementsByClassName("video-exibir");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'none';
+			}
+		}
+	}
+
+</script>
+
 <!-- Funções de acesso à biblioteca do Avamec-->
 <script src="../../js/funcoes-porcentagem.js"></script>
 <script>
@@ -187,6 +266,7 @@
 	var playPod = document.getElementById('botao-play-podcast');
 	var pausePod = document.getElementById('botao-pause-podcast');
 
+
 	var playShowPod = function() {
 		audioPod.play();
 		playPod.style.display = "none";
@@ -200,6 +280,9 @@
 		pausePod.style.display = "none";
 	};
 
+
 </script>
+
+
 </body>
 </html>
