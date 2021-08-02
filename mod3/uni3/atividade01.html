@@ -76,7 +76,7 @@
                                 <a href="tela04.html">3.04 - Expectativas de resultado</a>
                                 <a href="tela05.html">3.05 - Processos de autoeficácia</a>
                                 <a href="tela06.html">3.06 - Influência do docente</a>
-                                <a href="tela06.html">3.07 - Concluindo</a>
+                                <a href="tela07.html">3.07 - Concluindo</a>
                             </div>
 					</div>
 					
@@ -87,6 +87,8 @@
             <div class="content">
                 <div class="atividade" id='atividade-uni3'>
 					<div id='mensagem-alerta'>
+					</div>
+                    <div id='mensagem-tentativas' class="atividades">                        
 					</div>
                     <form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni3" method="POST">
                         <div class="questao">
@@ -138,30 +140,30 @@
                                     <div class='texto-resposta linha-grande'>                                        
                                         <p></p>
                                         <span class="texto-opcao">Se um indivíduo se engaja em uma atividade em que se sente bom e espera   
-                                            <div class="area-inputs caixa-drop_5_2" id='r1_2_1' name='r1_2_1' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                            <div class="area-inputs caixa-drop_5_2" id='r3_2_1' name='r3_2_1' ondrop="drop(event)" ondragover="allowDrop(event)">
                                                 <p></p>                                         
                                             </div>                                                                            
                                             , é mais provável que estabeleça 
-                                            <div class="area-inputs caixa-drop_5_2" id='r1_2_2' name='r1_2_2' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                            <div class="area-inputs caixa-drop_5_2" id='r3_2_2' name='r3_2_2' ondrop="drop(event)" ondragover="allowDrop(event)">
                                                 <p></p>                                         
                                             </div>                                                                            
                                             de nível mais alto para participar mais dessa 
-                                            <div class="area-inputs caixa-drop_5_2" id='r1_2_3' name='r1_2_3' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                            <div class="area-inputs caixa-drop_5_2" id='r3_2_3' name='r3_2_3' ondrop="drop(event)" ondragover="allowDrop(event)">
                                                 <p></p>                                         
                                             </div>
                                             .                                            
                                         </span>
                                         <p></p>
                                         <span class="texto-opcao">Esses objetivos, por sua vez, aumentam a 
-                                            <div class="area-inputs caixa-drop_5_2" id='r1_2_4' name='r1_2_4' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                            <div class="area-inputs caixa-drop_5_2" id='r3_2_4' name='r3_2_4' ondrop="drop(event)" ondragover="allowDrop(event)">
                                                 <p></p>                                         
                                             </div>
                                             de uma maior participação nessa atividade. À medida que o indivíduo participa mais, suas realizações aumentarão e ele receberá recompensas  
-                                            <div class="area-inputs caixa-drop_5_2" id='r1_2_5' name='r1_2_5' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                            <div class="area-inputs caixa-drop_5_2" id='r3_2_5' name='r3_2_5' ondrop="drop(event)" ondragover="allowDrop(event)">
                                                 <p></p>                                         
                                             </div>
                                             (satisfação, bem estar) e 
-                                            <div class="area-inputs caixa-drop_5_2" id='r1_2_6' name='r1_2_6' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                            <div class="area-inputs caixa-drop_5_2" id='r3_2_6' name='r3_2_6' ondrop="drop(event)" ondragover="allowDrop(event)">
                                                 <p></p>                                         
                                             </div> (elogios, notas altas, promoção).                                                
                                         </span>
@@ -283,7 +285,7 @@
 	
     //Etapa 3: Enviando formulário
 	function salvarDados(){
-        let nota_atividade_nova=0,
+        nota_atividade_nova=0,
         nota_atividade=0,
         quant_respostas=0,
         revisao_teste=0,       
@@ -415,16 +417,16 @@
                             { "chave": "r3_2_5", "valor": r3_2_5.innerHTML},
                             { "chave": "r3_2_6", "valor": r3_2_6.innerHTML}
                         ]
-                    };
-                    //Questão discursiva
-                    API.registrarRespostaAtividade({
-                        "identificador": "uni3_ativ2",
-                        "questoes": [
-                            { "identificador": "r3_3", "texto": r3_3}
-                        ]
-                    });    
+                    }
                 ]
-            })           
+            });
+            //Questão discursiva
+            API.registrarRespostaAtividade({
+                "identificador": "uni3_ativ2",
+                "questoes": [
+                    { "identificador": "r3_3", "texto": r3_3}
+                ]
+            });        
         }        	
 	};
 

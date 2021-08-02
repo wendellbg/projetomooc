@@ -89,6 +89,8 @@
                 <div class="atividade" id='atividade-uni1'>
 					<div id='mensagem-alerta'>
 					</div>
+                    <div id='mensagem-tentativas' class="atividades">                        
+					</div>
                     <form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni1" method="POST">
                             <div class="questao">
                                 <div class="titulo-questao">Questão 1</div>														
@@ -181,7 +183,7 @@
                         <div class="questao">
                             <div class="titulo-questao">Questão 3</div>
                             <div class="enunciado-questao">
-                                <span>Para que ocorra a educação para a carreira é preciso desenvolver as <b>estratégias de implementação de Programas de Educação à Carreira</b>, voltados ao contexto da <b>escola</b>. Arraste e solte cada conceito correspondente à sua definição:</span>
+                                <span>Para que ocorra a educação para a carreira é preciso desenvolver as <b>estratégias de implementação de Programas de Educação à Carreira</b>, voltados ao contexto da <b>escola</b>. Selecione cada conceito correspondente à sua definição:</span>
                             </div>
                             <div class="area-respostas">
                                 <div class="linha-respostas">
@@ -447,7 +449,7 @@
 	};
 
     //função de controle, pra exibir no console o resultado do envio das respostas (registraRespostaAtividade)
-	window .addEventListener( "evRegistraRespostaAtividade" ,resultadoRegistrarRespostaAtividade, false );
+	window.addEventListener( "evRegistraRespostaAtividade" ,resultadoRegistrarRespostaAtividade, false );
     function resultadoRegistrarRespostaAtividade (evento){
         console .log(evento.detail);
         nota_atividade_nova= evento.detail.data.notaAtividade;

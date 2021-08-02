@@ -4,7 +4,7 @@
     <title>Mentoria</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <<link rel="stylesheet" href="../../css/mooc3.css?ver=1.1"/> 
+    <link rel="stylesheet" href="../../css/mooc3.css?ver=1.1"/> 
     <link rel="stylesheet" href="../../css/efeito.css?ver=1.2"/>
     <link rel="stylesheet" href="../../css/atividades-mooc3.css" />
 
@@ -89,6 +89,8 @@
                 <div class="atividade" id='atividade-uni5'>
 					<div id='mensagem-alerta'>
 					</div>
+                    <div id='mensagem-tentativas' class="atividades">                        
+					</div>
                     <form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni5" method="POST">
                         
                         <div class="questao">
@@ -113,7 +115,7 @@
                                                 <p></p>                                         
                                             </div>
                                             , preparar, assumir, ajustar-se ou progredir em uma  
-                                            <div class="area-inputs caixa-drop_5_2" id='r5_1_5' name='r5_1_5' ondrop="drop(event)" ondragover="allowDrop(event)">
+                                            <div class="area-inputs caixa-drop_5_2" id='r5_1_4' name='r5_1_4' ondrop="drop(event)" ondragover="allowDrop(event)">
                                                 <p></p>                                         
                                             </div>.                                    
                                         </span>
@@ -152,7 +154,7 @@
                                         <span class="palavra-resposta" name='r5_1_texto_5' id='r5_1_texto_5' draggable="true" ondragstart="drag(event)">informações</span>
                                     </div>
                                     <div class="area-opcoes caixa-drop_5_3" id='opcao5_1_6' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                        <span class="palavra-resposta" name='r5_1_texto_6' id='r5_1_texto_6' draggable="true" ondragstart="drag(event)">mundo do trabalho</span>
+                                        <span class="palavra-resposta" name='r5_1_texto_6' id='r5_1_texto_6' draggable="true" ondragstart="drag(event)">mundo de trabalho</span>
                                     </div> 
                                     <div class="area-opcoes caixa-drop_5_3" id='opcao5_1_7' ondrop="drop(event)" ondragover="allowDrop(event)">
                                         <span class="palavra-resposta" name='r5_1_texto_7' id='r5_1_texto_7' draggable="true" ondragstart="drag(event)">ocupação</span>
@@ -396,7 +398,7 @@
         r5_3_2 = document.querySelector("#r5_3_2 span.palavra-resposta"),
         r5_3_3 = document.querySelector("#r5_3_3 span.palavra-resposta"),
         r5_3_4 = document.querySelector("#r5_3_4 span.palavra-resposta"),
-        r5_3_5 = document.querySelector("#r5_3_5 span.palavra-resposta"),
+        r5_3_5 = document.querySelector("#r5_3_5 span.palavra-resposta");
 		       
         //testando se todos os exercícios (menos os checkbox) estão preenchidos.
 		if(r5_1_1==null){
@@ -430,6 +432,11 @@
         }else if(r5_3_5==null){
 			erros++;
 		}
+
+        //Exibindo os valores para teste:
+        console.log("Resposta 1: "+r5_1_1.innerHTML+", "+r5_1_2.innerHTML+", "+r5_1_3.innerHTML+", "+r5_1_4.innerHTML+", "+r5_1_5.innerHTML+", "+r5_1_6.innerHTML+", "+r5_1_7.innerHTML);
+        console.log("REsposta 2: "+r5_2_a+", "+r5_2_b+", "+r5_2_c);
+        console.log("Resposta 3: "+r5_3_1.innerHTML+", "+r5_3_2.innerHTML+", "+r5_3_3.innerHTML+", "+r5_3_4.innerHTML+", "+r5_3_5.innerHTML);
 
 		if(erros>0){
             //caso algum não esteja preenchido, exibe mensagem de erro
@@ -516,9 +523,7 @@
                             { "chave": "r5_2_2", "valor": (r5_2_b)},
                             { "chave": "r5_2_3", "valor": (r5_2_c)}
                         ]
-                    }
-                    
-                    {                    
+                    },{                    
                         "identificador": "r5_3",                    
                         "gabaritos": [
                             { "chave": "r5_3_1", "valor": r5_3_1.innerHTML},
