@@ -792,8 +792,8 @@ input[type="checkbox"]:checked + label{
 
 .mensagem-alerta{
     display: none;
-    background-color: #151730;
-    color: #fff;
+    background-color: #ff841d;
+    color: #151730;
     border: 2px solid #151730;
     border-radius: 8px;
     padding: 20px;
@@ -805,9 +805,9 @@ input[type="checkbox"]:checked + label{
 
 .mensagem-ok{
     display: none;
-    background-color: #2a5caa;
-    color: #fff;
-    border: 4px solid #ff841d;
+    background-color: #ff841d;
+    color: #151730;
+    border: 4px solid #151730;
     border-radius: 0.5em;
     padding: 1em;
     width: 100%;
