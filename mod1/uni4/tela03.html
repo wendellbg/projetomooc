@@ -7,6 +7,7 @@
 	<link rel='stylesheet' href="../../css/mooc1.css?ver=1.2" />
 	<link rel="stylesheet" href="../../css/boxes.css?ver=1.4"/>
 	<link rel="stylesheet" href="../../css/podcast.css?ver=1.1"/>
+	<link rel="stylesheet" href="../../css/video-libras.css?ver=1.0" />
 
 	<!-- Botão de Voltar ao Topo -->
 	<script src="../../js/jquery-2.1.1.js"></script>
@@ -110,14 +111,25 @@
 
 			<div class="content">
 
-				<div class="icone-audio">
-					<a class='icone-play' id="botao-play-podcast1" onclick="playShowPod1()"><img src="../../img/uni3/icone-audio.png" /></a>
-					<a class="icone-pause" id="botao-pause-podcast1" onclick="pauseShowPod1()" style="display:none;"><img src="../../img/uni3/icone-audio2.gif" /></a>
-					<audio id='playerPodcast1' class='controles-podcast' controls='controls'>
-						<source src="../../img/uni4/AUDIO_1.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
-					</audio>
-					<div class="downloads">
-						<a target="_blank" href="../../downloads/Un4-img1.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
+				<div class="row">
+					<div class="video-externo 12u 12u$(small)">
+						<div class="icone-audio">
+							<a class='icone-play' id="botao-play-podcast1" onclick="playShowPod1()"><img src="../../img/uni3/icone-audio.png" /></a>
+							<a class="icone-pause" id="botao-pause-podcast1" onclick="pauseShowPod1()" style="display:none;"><img src="../../img/uni3/icone-audio2.gif" /></a>
+							<audio id='playerPodcast1' class='controles-podcast' controls='controls'>
+								<source src="../../img/uni4/AUDIO_1.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+							</audio>
+							<div class="downloads">
+								<button onclick="exibirLibras(1)" class="video-exibir bt-download-media" type="button"><i class="fas fa-sign-language"></i> Tradutor de libras</button>
+								<button onclick="exibirLibras(0)" class="video-cancelar bt-download-media" type="button"><i class="fas fa-sign-language"></i> Esconder tradutor</button>
+								<a target="_blank" href="../../downloads/Un4-img1.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
+							</div>
+						</div>
+					</div>
+					<div class="video-libras 3u 12u$(small)">
+						<div class="video-player icone-audio">
+							<iframe id="video1" width="720" height="405" src="https://www.youtube.com/embed/lZxEW6zHcZU?enablejsapi=1&html5=1&mute=1&controls=1&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -129,14 +141,26 @@
 			</div>
 
 			<div class="content">
-				<div class="icone-audio">
-					<a class='icone-play' id="botao-play-podcast2" onclick="playShowPod2()"><img src="../../img/uni3/icone-audio.png" /></a>
-					<a class="icone-pause" id="botao-pause-podcast2" onclick="pauseShowPod2()" style="display:none;"><img src="../../img/uni3/icone-audio2.gif" /></a>
-					<audio id='playerPodcast2' class='controles-podcast' controls='controls'>
-						<source src="../../img/uni4/AUDIO_2.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
-					</audio>
-					<div class="downloads">
-						<a target="_blank" href="../../downloads/Un4-img2.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
+				<div class="row">
+					<div class="video-externo 12u 12u$(small)">
+
+						<div class="icone-audio">
+							<a class='icone-play' id="botao-play-podcast2" onclick="playShowPod2()"><img src="../../img/uni3/icone-audio.png" /></a>
+							<a class="icone-pause" id="botao-pause-podcast2" onclick="pauseShowPod2()" style="display:none;"><img src="../../img/uni3/icone-audio2.gif" /></a>
+							<audio id='playerPodcast2' class='controles-podcast' controls='controls'>
+								<source src="../../img/uni4/AUDIO_2.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+							</audio>
+							<div class="downloads">
+								<button onclick="exibirLibras(1)" class="video-exibir bt-download-media" type="button"><i class="fas fa-sign-language"></i> Tradutor de libras</button>
+								<button onclick="exibirLibras(0)" class="video-cancelar bt-download-media" type="button"><i class="fas fa-sign-language"></i> Esconder tradutor</button>
+								<a target="_blank" href="../../downloads/Un4-img2.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
+							</div>
+						</div>
+					</div>
+					<div class="video-libras 3u 12u$(small)">
+						<div class="video-player icone-audio">
+							<iframe id="video2" width="720" height="405" src="https://www.youtube.com/embed/pytkHF0apNs?enablejsapi=1&html5=1&mute=1&controls=1&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -203,33 +227,92 @@
 	</div>
 </section>
 
-
-
 <!-- Footer -->
 <footer id="footer">
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
 				
-		<!-- Funções de acesso à biblioteca do Avamec-->
-		<script src="../../js/funcoes-porcentagem.js"></script>
-		<script>
-			console.clear(screen);
+<!-- Funções de acesso à biblioteca do Avamec-->
+<script src="../../js/funcoes-porcentagem.js"></script>
+<script>
+	console.clear(screen);
 
-			var API = new BridgeRestApi();
-			var id_unidade = "mod1_uni4";
-			var id_slide = "mod1/uni4/tela03.html";//alterar
-			var unidade=4;//alterar
-			var tela="uni4tela3";//alterar
-			var ultima_tela=0;
-			
-			//Obtendo dados curso
-			window.addEventListener('load', function(){
-				API.obterDadosCurso();
-			});
-		</script>
+	var API = new BridgeRestApi();
+	var id_unidade = "mod1_uni4";
+	var id_slide = "mod1/uni4/tela03.html";//alterar
+	var unidade=4;//alterar
+	var tela="uni4tela3";//alterar
+	var ultima_tela=0;
 
-	<script>
+	//Obtendo dados curso
+	window.addEventListener('load', function(){
+		API.obterDadosCurso();
+	});
+</script>
+
+<script>
+	function exibirLibras(valor){
+		if(!valor){ // significa que valor = 0
+
+			var x = document.getElementsByClassName("video-libras");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'none';
+			}
+
+			var x = document.getElementsByClassName("video-externo");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].classList.remove("9u");
+				x[i].classList.add("12u");
+			}
+
+
+			var x = document.getElementsByClassName("video-cancelar");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'none';
+			}
+
+			var x = document.getElementsByClassName("video-exibir");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'initial';
+			}
+
+		}else{ // ou não é 0
+
+			var x = document.getElementsByClassName("video-libras");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'block';
+			}
+
+			var x = document.getElementsByClassName("video-externo");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].classList.remove("12u");
+				x[i].classList.add("9u");
+			}
+
+			var x = document.getElementsByClassName("video-cancelar");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'initial';
+			}
+
+			var x = document.getElementsByClassName("video-exibir");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'none';
+			}
+		}
+	}
+
+</script>
+
+<script>
 	//Funções para o controle do áudio/Podcast
 
 	var audioPod1 = document.getElementById('playerPodcast1');

@@ -90,7 +90,9 @@
                 <div class="atividade" id='atividade-uni4'>
 					<div id='mensagem-alerta'>
 					</div>
-                    <form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni1" method="POST">
+                    <div id='mensagem-tentativas' class="atividades">                        
+					</div>
+                    <form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni4" method="POST">
                             <div class="questao">
                                 <div class="titulo-questao">Questão 1</div>														
                                 <div class="enunciado-questao">Sobre os estereótipos, marque as afirmativas a seguir que são verdadeiras:</div>                                
@@ -260,10 +262,10 @@
     console.clear(screen);
 
     var API = new BridgeRestApi();
-    var id_unidade = "mod3_uni1";//modificar
-    var id_slide = "mod3/uni1/atividade01.html";//modificar
-    var id_atividade = "uni1_ativ1";//modificar
-    var revisao_unidade = "uni1_revisao";//modificar
+    var id_unidade = "mod4_uni1";//modificar
+    var id_slide = "mod4/uni1/atividade01.html";//modificar
+    var id_atividade = "uni4_ativ1";//modificar
+    var revisao_unidade = "uni4_revisao";//modificar
     var texto_mensagem_fim="<br>Você pode prosseguir para a próxima atividade.<br><br><a class='botao-mensagem' href='../uni5/index.html'>PRÓXIMA UNIDADE &#10095;</a><br>";
 
     function verifica_revisao(){
