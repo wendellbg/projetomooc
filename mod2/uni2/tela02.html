@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../../css/mooc2.css?ver=1.1"/>
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2" />
-    <link rel="stylesheet" href="../../css/slide.css?ver=1.1"/>
+    <link rel="stylesheet" href="../../css/carrossel.css?ver=1.1" />
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
@@ -109,7 +109,7 @@
             <div class="video fundo-claro">
                 <div class='titulo-video'><span>A Técnica como Saber</span></div>
                 <div class='video-player'>
-                    <iframe width="720" height="405" src="https://www.youtube.com/embed/kihpOD14q3Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="720" height="405" src="https://www.youtube.com/embed/kwUbNIY1N1s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="downloads">
                     <a target="_blank" href="../../downloads/mooc2/Un2-video1.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do vídeo</button></a>
@@ -117,49 +117,51 @@
                 </div>
             </div>
 
+            <!-- Container do Carrossel-->
+            <div class="carrossel dark">
+                <div class="options">
+                    <div class="option active" style="--optionBackground:url(../img/uni2/MOOC2_UNID2_Tela02_Imagem01.jpg);">
+                        <div class="shadow"></div>
+                        <div class="label">
+                            <div class="info">
+                                <div class="main"></div>
+                                <div class="sub">Figura 01 - Fonte: Freepick/Freepick</div>
+                            </div>
+                        </div>
+                    </div>
 
-            <!-- Container do slideshow-->
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <div class="numero-slide">1 / 4</div>
-                    <div class='titulo-video'><span>O saber e seus sentidos passam pelo corpo todo</span></div>
-                    <img src="../../img/uni2/MOOC2_UNID2_Tela02_Imagem01.jpg" alt="pessoa construindo parede">
-                    <div class="texto">Figura 01<br>Fonte: Freepick/Freepick</div>
-                </div>
+                    <div class="option" style="--optionBackground:url(../img/uni2/MOOC2_UNID2_Tela02_Imagem02.jpg);">
+                        <div class="shadow"></div>
+                        <div class="label">
+                            <div class="info">
+                                <div class="main"></div>
+                                <div class="sub">Figura 02 - Fonte: Pixabay</div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="mySlides fade">
-                    <div class="numero-slide">2 / 4</div>
-                    <div class='titulo-video'><span>O saber incorporado dos trabalhadores nem sempre é expresso ou reconhecido</span></div>
-                    <img class="imagem-cent" src="../../img/uni2/MOOC2_UNID2_Tela02_Imagem02.jpg" alt="artesão fazendo cesta">
-                    <div class="texto">Figura 02<br>Fonte: Pixabay</div>
-                </div>
+                    <div class="option" style="--optionBackground:url(../img/uni2/MOOC2_UNID2_Tela02_Imagem03.jpg);">
+                        <div class="shadow"></div>
+                        <div class="label">
+                            <div class="info">
+                                <div class="main"></div>
+                                <div class="sub">Figura 03 - Fonte: Freepick</div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="mySlides fade">
-                    <div class="numero-slide">3 / 4</div>
-                    <div class='titulo-video'><span>Saber não é necessariamente saber falar sobre</span></div>
-                    <img src="../../img/uni2/MOOC2_UNID2_Tela02_Imagem03.jpg" alt="homem ordenhando vaca">
-                    <div class="texto">Figura 03<br>Fonte: Freepick</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numero-slide">4 / 4</div>
-                    <div class='titulo-video'><span>"Teoria" e "prática" são um par conceitual insuficiente para explicar os fazeres-saberes do trabalho</span></div>
-                    <img src="../../img/uni2/MOOC2_UNID2_Tela02_Imagem04.jpg" alt="pescadores">
-                    <div class="texto">Figura 04<br>Fonte: Pixabay</div>
-                </div>
-
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                <br>
-                <div style="text-align: center">
-                    <span class="ponto" onclick="currentSlide(1)"></span>
-                    <span class="ponto" onclick="currentSlide(2)"></span>
-                    <span class="ponto" onclick="currentSlide(3)"></span>
-                    <span class="ponto" onclick="currentSlide(4)"></span>
+                    <div class="option" style="--optionBackground:url(../img/uni2/MOOC2_UNID2_Tela02_Imagem04.jpg);">
+                        <div class="shadow"></div>
+                        <div class="label">
+                            <div class="info">
+                                <div class="main"></div>
+                                <div class="sub">Figura 04 - Fonte: Pixabay</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
+
 
             <div class="content no-top">
                 <p>Para entender melhor a sabedoria da ação, também precisamos suspeitar da insuficiência explicativa dos pares saber/fazer, teoria/prática, intelectual/manual, conhecimento/ação (BARATO, 2016). Esses pares simplesmente não são adequados ou suficientes para explicar nem para agir quando se trata do trabalho e da formação para o trabalho, mesmo que, faltando palavras, venhamos a recorrer a eles.</p>
@@ -218,6 +220,15 @@
 <!-- Footer -->
 <footer id="footer">
 </footer>
+
+<!-- Carrossel -->
+<script>
+    $(".option").click(function(){
+        $(".option").removeClass("active");
+        $(this).addClass("active");
+
+    });
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
 <script>

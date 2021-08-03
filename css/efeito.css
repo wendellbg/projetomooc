@@ -120,6 +120,15 @@ ul {
     color: #151730;
 }
 
+.lista-topicos.green li span{
+    color: #151730;
+    background-color: #2db5b9;
+}
+
+.lista-topicos.green li{
+    color: #151730;
+}
+
 @media screen and (max-width:560px){
     .lista-topicos{
         margin-left: -2rem;

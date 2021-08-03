@@ -89,16 +89,47 @@
 
 
             <div class="content">
-                <div class="icone-audio">
-                    <a class='icone-play' id="botao-play-podcast" onclick="playShowPod()"><img src="../../img/uni3/icone-audio.png"/></a>
-                    <a class="icone-pause" id="botao-pause-podcast" onclick="pauseShowPod()" style="display:none;"><img src="../../img/uni3/icone-audio2.gif" /></a>
-                    <audio id='playerPodcast' class='controles-podcast' controls='controls'>
-                        <source src="../../img/uni5/MOOC2_Uni5_Podcast2.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
-                    </audio>
-                    <div class="downloads">
-<!--                        <a target="_blank" href="../../downloads/mooc2/Un5-podcast2.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>-->
+
+                <div class="row audio-gif">
+                    <div class="4u 12u$(small)">
+                        <div class="icone-audio">
+                            <h3>Escolha da situação de trabalho e instrumentos para tecnogradia</h3>
+                            <a class='icone-play' id="botao-play-podcast1" onclick="playShowPod1()"><img src="../../img/uni3/icone-audio.png"/></a>
+                            <audio id='playerPodcast1' class='controles-podcast' controls='controls'>
+                                <source src="../../img/uni5/MOOC2_Uni5_Podcast2a.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+                            </audio>
+                            <div class="downloads">
+                                <a target="_blank" href="../../downloads/mooc2/Un5-podcast2.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
+                            </div>
+                        </div>
                     </div>
+                    <div class="4u 12u$(small)">
+                        <div class="icone-audio">
+                            <h3>Prática de observação e registro</h3>
+                            <a class='icone-play' id="botao-play-podcast2" onclick="playShowPod2()"><img src="../../img/uni3/icone-audio.png"/></a>
+                            <audio id='playerPodcast2' class='controles-podcast' controls='controls'>
+                                <source src="../../img/uni5/MOOC2_Uni5_Podcast2b.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+                            </audio>
+                            <div class="downloads">
+                                <a target="_blank" href="../../downloads/mooc2/Un5-podcast1.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="4u 12u$(small)">
+                        <div class="icone-audio">
+                            <h3>Reflexões sobre o fazer da tecnografia</h3>
+                            <a class='icone-play' id="botao-play-podcast3" onclick="playShowPod3()"><img src="../../img/uni3/icone-audio.png"/></a>
+                            <audio id='playerPodcast3' class='controles-podcast' controls='controls'>
+                                <source src="../../img/uni5/MOOC2_Uni5_Podcast2c.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+                            </audio>
+                            <div class="downloads">
+                                <a target="_blank" href="../../downloads/mooc2/Un5-podcast1.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+
             </div>
 
             
@@ -178,24 +209,51 @@
         API.obterDadosCurso();
     });
 </script>
+
 <script>
-    var audioPod = document.getElementById('playerPodcast');
-    var playPod = document.getElementById('botao-play-podcast');
-    var pausePod = document.getElementById('botao-pause-podcast');
+    //Funções para o controle do áudio/Podcast
 
-    var playShowPod = function() {
-        audioPod.play();
-        playPod.style.display = "none";
-        pausePod.style.display = "block";
+    var audioPod1 = document.getElementById('playerPodcast1');
+    var audioPod2 = document.getElementById('playerPodcast2');
+    var audioPod3 = document.getElementById('playerPodcast3');
+
+    var playShowPod1 = function() {
+        if (audioPod1.paused == true){
+            audioPod1.play();
+            audioPod2.pause();
+            audioPod3.pause();
+        }else{
+            audioPod1.pause();
+            audioPod2.pause();
+            audioPod3.pause();
+
+        }
     };
 
-    // Pause audio & mostra link de play
-    var pauseShowPod = function() {
-        audioPod.pause();
-        playPod.style.display = "block";
-        pausePod.style.display = "none";
+    var playShowPod2 = function() {
+        if (audioPod2.paused == true){
+            audioPod2.play();
+            audioPod1.pause();
+            audioPod3.pause();
+        }else{
+            audioPod1.pause();
+            audioPod2.pause();
+            audioPod3.pause();
+        }
     };
 
+    var playShowPod3 = function() {
+        if (audioPod3.paused == true){
+            audioPod3.play();
+            audioPod2.pause();
+            audioPod1.pause();
+        }else{
+            audioPod1.pause();
+            audioPod2.pause();
+            audioPod3.pause();
+        }
+    };
 </script>
+
 </body>
 </html>
