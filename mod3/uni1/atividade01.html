@@ -10,7 +10,7 @@
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
-    <script src="../../js/bt-topo.js"></script>
+    <!-- <script src="../../js/bt-topo.js"></script> -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script> -->
@@ -503,12 +503,10 @@
         ev.dataTransfer.setData ("src", ev.target.id);                    
     }
 
-    function drop(ev){
-        
+    function drop(ev){        
         ev.preventDefault();
         // var data=ev.dataTransfer.getData("text");
         // ev.target.appendChild(document.getElementById(data));
-
         var src = document.getElementById(ev.dataTransfer.getData ("src"));
         var srcParent = src.parentNode;
         var tgt = ev.currentTarget.firstElementChild;

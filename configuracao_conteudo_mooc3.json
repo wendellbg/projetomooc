@@ -69,7 +69,7 @@
 					{
 						"tipoQuestaoString": "PROPORCIONAL",
 						"identificador": "r1_3",
-						"enunciado": "Para que ocorra a educação para a carreira é preciso desenvolver as estratégias de implementação de Programas de Educação à Carreira, voltados ao contexto da escola. Arraste e solte cada conceito correspondente à sua definição:",
+						"enunciado": "Para que ocorra a educação para a carreira é preciso desenvolver as estratégias de implementação de Programas de Educação à Carreira, voltados ao contexto da escola. Selecione cada conceito correspondente à sua definição:",
 						"gabaritos": [
 							{ "chave": "r1_3_1", "valor": "Infusivas", "alternativa": "a) Disseminação transversal (em diferentes disciplinas e em todos os níveis escolares) de questões sobre os valores, conhecimentos e atitudes relevantes ao desenvolvimento vocacional e da carreira." },
 							{ "chave": "r1_3_2", "valor": "Aditivas", "alternativa": "b) Implementação da educação para a carreira, integrada no horário escolar, tal como se de uma disciplina se tratasse, a ser ministrada por um orientador profissional, um educador para a carreira." },
@@ -195,7 +195,7 @@
 				"questoes": [{
 					"tipoQuestaoString": "PROPORCIONAL",
 					"identificador": "r3_1",
-					"enunciado": "O trabalho Sobre o desenvolvimento dos interesses profissionais, assinale as afirmativas a seguir como verdadeiras ou falsas:",
+					"enunciado": "O trabalho Sobre o desenvolvimento dos interesses profissionais, marque as afirmativas a seguir que são verdadeiras:",
 					"gabaritos":[
 						{"chave": "r3_1_1", "valor": "v", "alternativa": "a) A teoria Socio-Cognitiva tem um modelo teórico que se assenta em 3 blocos centrais: os interesses; as expectativas de resultados; as crenças de autoeficácia."},
 						{"chave": "r3_1_2", "valor": "f", "alternativa": "b) As expectativas de resultados são as avaliações dos currículos escolares."},
