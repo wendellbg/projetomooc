@@ -10,7 +10,9 @@
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
-    <!-- <script src="../../js/bt-topo.js"></script> -->
+    <script src="../../js/bt-topo.js"></script>
+    <script src="../../js/Sortable.js.download"></script>
+    <script src="../../js/Swap.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script> -->
@@ -126,9 +128,7 @@
                                             <span class="texto-opcao">a) Lugar privilegiado para se refletir sobre a preparação para o trabalho.</span>
                                         </div>
                                         <span class="legenda-input">a)</span>
-                                        <div class="area-inputs caixa-drop_1_2" id='r1_2_1' name='r1_2_1' ondrop="drop(event)" ondragover="allowDrop(event)">                                            
-                                            <p></p>
-                                        </div>                                                                                                                    
+                                        <div class="area-inputs caixa-drop_1_2 list-group " id='r1_2_1' name='r1_2_1'><div class="list-group-item vazio"></div></div>                                                                                                                    
                                     </div>
 
                                     <div class="linha-respostas">
@@ -136,9 +136,7 @@
                                             <span class="texto-opcao">b) Parceria entre escola e a sociedade mais ampla (família, empregadores, governo).</span>
                                         </div>
                                         <span class="legenda-input">b)</span>
-                                        <div class="area-inputs caixa-drop_1_2" id='r1_2_2' name='r1_2_2' ondrop="drop(event)" ondragover="allowDrop(event)">                                            
-                                            <p></p>
-                                        </div>                                                                            
+                                        <div class="area-inputs caixa-drop_1_2 list-group " id='r1_2_2' name='r1_2_2'><div class="list-group-item vazio"></div></div>                                                                            
                                        
                                     </div>
 
@@ -147,9 +145,7 @@
                                             <span class="texto-opcao">c) Realização de atividades que são socialmente benéficas para si e para os demais.</span>                                           
                                         </div>
                                         <span class="legenda-input">c)</span>
-                                        <div class="area-inputs caixa-drop_1_2" id='r1_2_3' name='r1_2_3' ondrop="drop(event)" ondragover="allowDrop(event)">                                            
-                                            <p></p>
-                                        </div> 
+                                        <div class="area-inputs caixa-drop_1_2 list-group " id='r1_2_3' name='r1_2_3'><div class="list-group-item vazio"></div></div> 
                                     </div>
 
                                     <div class="linha-respostas">
@@ -157,24 +153,24 @@
                                             <span class="texto-opcao">d) Entender a Educação para a Carreira como parte do currículo escolar.</span>                                           
                                         </div>
                                         <span class="legenda-input">d)</span>
-                                        <div class="area-inputs caixa-drop_1_2" id='r1_2_4' name='r1_2_4' ondrop="drop(event)" ondragover="allowDrop(event)">                                            
-                                            <p></p>
-                                        </div> 
+                                        <div class="area-inputs caixa-drop_1_2 list-group " id='r1_2_4' name='r1_2_4'><div class="list-group-item vazio"></div></div> 
                                     </div>
 
                                     <div class="linha-respostas">
                                         <p class="legenda-resposta">Opções de Resposta:</p>
-                                        <div class="area-opcoes caixa-drop_1_2" id='opcao1_2_1' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                            <span class="palavra-resposta" name='r2_1_texto' id='r2_1' draggable="true" ondragstart="drag(event)">Comunidade</span>
-                                        </div>
-                                        <div class="area-opcoes caixa-drop_1_2" id='opcao1_2_2' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                            <span class="palavra-resposta" name='r2_2_texto' id='r2_2' draggable="true" ondragstart="drag(event)">Currículo</span>
-                                        </div>                                        
-                                        <div class="area-opcoes caixa-drop_1_2" id='opcao1_2_3' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                            <span class="palavra-resposta" name='r2_3_texto' id='r2_3' draggable="true" ondragstart="drag(event)">Escola</span>
-                                        </div>
-                                        <div class="area-opcoes caixa-drop_1_2" id='opcao1_2_4' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                            <span class="palavra-resposta" name='r2_4_texto' id='r2_4' draggable="true" ondragstart="drag(event)">Trabalho</span>
+                                        <div id="listaRespostas" class="list-group grupo-respostas"> 
+                                            <div id="opcao1_2_1" class="list-group-item cheio" draggable="true">
+                                                    <span class="palavra-resposta" name='r2_1_texto' id='r2_1' >Comunidade</span>
+                                            </div>                    
+                                            <div id='opcao1_2_2' class="list-group-item cheio" draggable="true">
+                                                    <span class="palavra-resposta" name='r2_2_texto' id='r2_2'>Currículo</span>                        
+                                            </div>                                        
+                                            <div id='opcao1_2_3'class="list-group-item cheio" draggable="true">
+                                                    <span class="palavra-resposta" name='r2_3_texto' id='r2_3' >Escola</span>                        
+                                            </div>
+                                            <div id='opcao1_2_4' class="list-group-item cheio" draggable="true">
+                                                    <span class="palavra-resposta" name='r2_4_texto' id='r2_4'>Trabalho</span>                        
+                                            </div>
                                         </div>
                                     </div>
                                 </div>                                 
@@ -282,7 +278,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
 <script src="../../js/funcoes-atividades.js"></script>
-<script src="../../js/DragDropTouch.js"></script>
 
 <script>
     console.clear(screen);
@@ -491,30 +486,39 @@
         }
     }
 
-    //// Eventos do Drag and Drop /////
-    var dragSrcEl = null;
+    new Sortable(listaRespostas,{
+          animation: 150,
+          swap: true,
+          group: 'respostas',
+          swapClass: "palavra-drag"
+        });
 
-    function allowDrop(ev) {
-        ev.preventDefault();
-    }
+        new Sortable (r1_2_1,{
+            animation:150,
+            swap: true,
+            group: 'respostas',
+            swapClass: "palavra-drag"
+        });
+        new Sortable (r1_2_2,{
+            animation:150,
+            swap: true,
+            group: 'respostas',
+            swapClass: "palavra-drag"
+        });
+        new Sortable (r1_2_3,{
+            animation:150,
+            swap: true,
+            group: 'respostas',
+            swapClass: "palavra-drag"
+        });
+        new Sortable (r1_2_4,{
+            animation:150,
+            swap: true,
+            group: 'respostas',
+            swapClass: "palavra-drag"
+        });
 
-    function drag(ev){
-        /**ev.dataTransfer.setData("text",ev.target.id); **/
-        ev.dataTransfer.setData ("src", ev.target.id);                    
-    }
-
-    function drop(ev){        
-        ev.preventDefault();
-        // var data=ev.dataTransfer.getData("text");
-        // ev.target.appendChild(document.getElementById(data));
-        var src = document.getElementById(ev.dataTransfer.getData ("src"));
-        var srcParent = src.parentNode;
-        var tgt = ev.currentTarget.firstElementChild;
-        
-        ev.currentTarget.replaceChild (src, tgt);
-        srcParent.appendChild (tgt);
-    }
-
+   
     function valorSelecionado(sel) {
         var val = sel.selectedIndex;
         var id = sel.id;   
