@@ -876,21 +876,35 @@ Main components
 /* Mooc4 Uni2 tela 6*/
 .cd-single-point.mooc4-ponto1-uni2-tela6{
   top: 15%;
+<<<<<<< HEAD
   left: 0%;
+=======
+  left: 27%;
+>>>>>>> gh-pages
 }
 
 .cd-single-point.mooc4-ponto2-uni2-tela6{
   top: 20%;
+<<<<<<< HEAD
   left: 90%;
 }
 
 .cd-single-point.mooc4-ponto3-uni2-tela6{
   top: 45%;
   left: 0%;
+=======
+  right: 20%;
+}
+
+.cd-single-point.mooc4-ponto3-uni2-tela6{
+  top: 44%;
+  left: 29%;
+>>>>>>> gh-pages
 }
 
 .cd-single-point.mooc4-ponto4-uni2-tela6{
   top: 50%;
+<<<<<<< HEAD
   left: 90%;
 }
 
@@ -902,6 +916,19 @@ Main components
 .cd-single-point.mooc4-ponto6-uni2-tela6{
   top: 80%;
   left: 90%;
+=======
+  right: 18%;
+}
+
+.cd-single-point.mooc4-ponto5-uni2-tela6{
+  top: 70%;
+  left: 28%;
+}
+
+.cd-single-point.mooc4-ponto6-uni2-tela6{
+  top: 77%;
+  right: 19%;
+>>>>>>> gh-pages
 }
 
 

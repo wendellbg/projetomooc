@@ -826,3 +826,10 @@ h3.texto-central b{
 		margin-bottom: 40px;
 	}
 }
+
+.playerAudioAD {
+	display: none;
+	border-radius: 0px;
+	background-color: #F1F3F4;
+	margin-top: -30px;
+}

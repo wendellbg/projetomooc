@@ -480,20 +480,50 @@ Caixas de Select - Uni2 questão 3
     margin-top: 1em;
 }
 
-.palavra-resposta{
-    width: 100%;    
+.palavra-drag{    
+    background-color: #ff841d;
+    border-radius: 8px;
+} 
+
+.grupo-respostas{
+    border: 3px dashed #fff;
+    border-radius: 10px;
+    padding: 10px;
+    width: 95%;            
+    display: flex;    
+    justify-content: center;
+}
+
+
+ .grupo-respostas .list-group-item.cheio, .area-inputs span.palavra-resposta{    
     height: 100%;
     display: inline-block;
     background-color: white;
     color: #151730;
     border-radius: 8px;        
     text-align: center;
+    justify-content: center;
+    align-self: center;
     vertical-align: middle;
-    margin: auto;   
-    right: 0; 
+    padding: 10px;
+    margin: 10px;       
     font-size: 0.8em;
-    cursor: move;    
+    cursor: move;        
 }
+
+.area-inputs span.palavra-resposta{
+    background-color: #ff841d;
+    width: 100%;    
+    margin:0;
+}
+
+.area-inputs .vazio{
+    /* background-color: transparent; */
+    min-width: 100px;
+    min-height: 60px;
+}
+
+ 
 
 .texto-legenda{
     /* display: none;  */
