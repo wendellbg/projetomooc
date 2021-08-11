@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
     <link rel="stylesheet" href="../../css/efeito.css?ver=1.2"/>
-    <link rel="stylesheet" href="../../css/atividades-2.css?ver=1.1" />
+    <link rel="stylesheet" href="../../css/atividades-padrao.css" />
+    <link rel="stylesheet" href="../../css/cores-mooc1.css" />
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
     <script src="../../js/bt-topo.js"></script>
+    <script src="../../js/Sortable.js.download"></script>
+    <script src="../../js/Swap.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
@@ -99,32 +102,30 @@
                                 </div>
                                 <div class="area-respostas">
                                     <div class="linha-respostas">
-                                        <div class='texto-resposta'>                                        
+                                        <div class='texto-resposta-maior'>                                        
                                             <span class="texto-opcao">a) É o fundamento do trabalho e um dos mais importantes traços que identificam nossa humanidade.</span>
                                         </div>
                                         <span class="legenda-input">a)</span>
-                                        <div class="area-inputs caixa-drop_1_1" id='r1_1_1' name='r1_1_1' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                            <p></p>                                         
-                                        </div>                                                                            
+                                        <div class="area-inputs caixa-drop_1 list-group " id='r1_1_1' name='r1_1_1'><div class="list-group-item vazio"></div></div>                                                                            
                                     </div>
 
                                     <div class="linha-respostas">
-                                        <div class="texto-resposta">                                        
+                                        <div class="texto-resposta-maior">                                        
                                             <span class="texto-opcao">b) Exercício social da técnica com todas as dimensões associadas ao ato técnico: éticas, estéticas, ambientais, econômicas, identitárias, culturais.</span>                                       
                                         </div>
                                         <span class="legenda-input">b)</span>
-                                        <div class="area-inputs caixa-drop_1_1" id='r1_1_2' name='r1_1_2' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                            <p></p>
-                                        </div>                                           
+                                        <div class="area-inputs caixa-drop_1 list-group " id='r1_1_2' name='r1_1_2'><div class="list-group-item vazio"></div></div>                                          
                                     </div>
 
                                     <div class="linha-respostas">
                                         <p class="legenda-resposta">Opções de Resposta:</p>
-                                        <div class="area-opcoes caixa-drop_1_1" id='opcao1_1_1' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                            <span class="palavra-resposta" name='r1_1_texto' id='r1_1' draggable="true" ondragstart="drag(event)">Técnica</span>
-                                        </div>
-                                        <div class="area-opcoes caixa-drop_1_1" id='opcao1_1_2' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                            <span class="palavra-resposta"  name='r1_2_texto' id='r1_2' draggable="true" ondragstart="drag(event)">Trabalho</span>
+                                        <div id="listaRespostas_r1" class="list-group grupo-respostas"> 
+                                            <div id="opcao1_1_1" class="list-group-item cheio" draggable="true">
+                                                    <span class="palavra-resposta" name='r1_1_texto' id='r1_1' >Técnica</span>
+                                            </div>                    
+                                            <div id='opcao1_1_2' class="list-group-item cheio" draggable="true">
+                                                <span class="palavra-resposta" name='r1_2_texto' id='r1_2'>Trabalho</span>                        
+                                            </div>                                                                                    
                                         </div>
 
                                     </div>
@@ -139,46 +140,42 @@
                                 </div>
                                 <div class="area-respostas">
                                     <div class="linha-respostas">
-                                        <div class='texto-resposta'>                                        
+                                        <div class='texto-resposta-maior'>                                        
                                             <span class="texto-opcao">a) Consolidada pela cultura, devem possibilitar a cada pessoa construir sua existência.</span>
                                         </div>
                                         <span class="legenda-input">a)</span>
-                                        <div class="area-inputs caixa-drop_1_2" id='r1_2_1' name='r1_2_1' ondrop="drop(event)" ondragover="allowDrop(event)">                                            
-                                            <p></p>
-                                        </div>                                                                                                                    
+                                        <div class="area-inputs caixa-drop_2 list-group " id='r1_2_1' name='r1_2_1'><div class="list-group-item vazio"></div></div>                                                                                                                   
                                     </div>
 
                                     <div class="linha-respostas">
-                                        <div class="texto-resposta">                                        
+                                        <div class="texto-resposta-maior">                                        
                                             <span class="texto-opcao">b) Construção da capacidade de intervir conscientemente no mundo para produzir a existência.</span>
                                         </div>
                                         <span class="legenda-input">b)</span>
-                                        <div class="area-inputs caixa-drop_1_2" id='r1_2_2' name='r1_2_2' ondrop="drop(event)" ondragover="allowDrop(event)">                                            
-                                            <p></p>
-                                        </div>                                                                            
+                                        <div class="area-inputs caixa-drop_2 list-group " id='r1_2_2' name='r1_2_2'><div class="list-group-item vazio"></div></div>                                                                            
                                        
                                     </div>
 
                                     <div class="linha-respostas">
-                                        <div class="texto-resposta">                                        
+                                        <div class="texto-resposta-maior">                                        
                                             <span class="texto-opcao">c) Composto de vários elementos: autonomia, emancipação, participação, inserção social, etc.</span>                                           
                                         </div>
                                         <span class="legenda-input">c)</span>
-                                        <div class="area-inputs caixa-drop_1_2" id='r1_2_3' name='r1_2_3' ondrop="drop(event)" ondragover="allowDrop(event)">                                            
-                                            <p></p>
-                                        </div> 
+                                        <div class="area-inputs caixa-drop_2 list-group " id='r1_2_3' name='r1_2_3'><div class="list-group-item vazio"></div></div> 
                                     </div>
 
                                     <div class="linha-respostas">
                                         <p class="legenda-resposta">Opções de Resposta:</p>
-                                        <div class="area-opcoes caixa-drop_1_2" id='opcao1_2_1' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                            <span class="palavra-resposta" name='r2_1_texto' id='r2_1' draggable="true" ondragstart="drag(event)">Construção da Existência</span>
-                                        </div>
-                                        <div class="area-opcoes caixa-drop_1_2" id='opcao1_2_2' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                            <span class="palavra-resposta" name='r2_2_texto' id='r2_2' draggable="true" ondragstart="drag(event)">Partilha de Saberes</span>
-                                        </div>                                        
-                                        <div class="area-opcoes caixa-drop_1_2" id='opcao1_2_3' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                            <span class="palavra-resposta" name='r2_3_texto' id='r2_3' draggable="true" ondragstart="drag(event)">Intervenção consciente</span>
+                                        <div id="listaRespostas_r2" class="list-group grupo-respostas">
+                                            <div id='opcao1_1_2' class="list-group-item cheio" draggable="true">
+                                                <span class="palavra-resposta" name='r1_2_texto' id='r1_2'>Construção da Existência</span>                        
+                                            </div>
+                                            <div id='opcao1_1_2' class="list-group-item cheio" draggable="true">
+                                                <span class="palavra-resposta" name='r1_2_texto' id='r1_2'>Partilha de Saberes</span>                        
+                                            </div>
+                                            <div id='opcao1_1_2' class="list-group-item cheio" draggable="true">
+                                                <span class="palavra-resposta" name='r1_2_texto' id='r1_2'>Intervenção consciente</span>                        
+                                            </div>                                        
                                         </div>
                                     </div>
                                 </div>                                 
@@ -559,103 +556,56 @@
         }
     }
 
-    //// Eventos do Drag and Drop /////
-    var dragSrcEl = null;
+    //Caixas Drop da Questão 1
+    new Sortable(listaRespostas_r1,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-1',
+        swapClass: "palavra-drag"
+    });
+    new Sortable(r1_1_1,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-1',
+        swapClass: "palavra-drag"
+    });
+    new Sortable(r1_1_2,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-1',
+        swapClass: "palavra-drag"
+    });
 
-    function allowDrop(ev) {
-        ev.preventDefault();
-    }
-
-    function drag(ev){
-        /**ev.dataTransfer.setData("text",ev.target.id); **/
-        ev.dataTransfer.setData ("src", ev.target.id);                    
-    }
-
-    function drop(ev){
-        
-        ev.preventDefault();
-        // var data=ev.dataTransfer.getData("text");
-        // ev.target.appendChild(document.getElementById(data));
-
-        var src = document.getElementById(ev.dataTransfer.getData ("src"));
-        var srcParent = src.parentNode;
-        var tgt = ev.currentTarget.firstElementChild;
-        
-        ev.currentTarget.replaceChild (src, tgt);
-        srcParent.appendChild (tgt);
-    }
+    //Caixas drop da Questão 2
+    new Sortable(listaRespostas_r2,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-2',
+        swapClass: "palavra-drag"
+    });
+    new Sortable(r1_2_1,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-2',
+        swapClass: "palavra-drag"
+    });
+    new Sortable(r1_2_2,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-2',
+        swapClass: "palavra-drag"
+    });
+    new Sortable(r1_2_3,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-2',
+        swapClass: "palavra-drag"
+    });
 
     
 
-//////////////////Daqui para baixo entrará no arquivo funcoes_atividades.js
+    
 
-// var quant_tentativas=0;
-// var max_quant_tentativas=3;
-// var quant_respostas=0;
-
-//     function verificando_tentativas(tentativas_unidade){
-//         console.log("\n\nVerificando tentativas aqui.\nenvio="+envio+"\nteste="+revisao_teste+" \nvista="+revisao_vista);        
-//         API.obterDadosGenericos(tentativas_unidade);
-//     }
-
-//     window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
-//     function resultadoObtemDadosGenericos (evento){
-//         console.log(evento.detail);
-
-//         //verificar se está verificando a revisão ou os envios de resposta
-//         if(revisao_teste==0){
-//             //verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
-//             if(evento.detail["status"]=="200"){
-//                 console.log(evento.detail["data"]);            
-//                 //se a unidade já foi enviada, verifica a quantidade, para saber se atingiu o máximo            
-//                 let quant_salva = evento.detail["data"][0]["valor"];            
-//                 //console.log("tentativas salvas: "+quant_salva);
-//                 envio==1 ? quant_respostas=quant_salva+1 : quant_respostas=quant_salva;
-//                 if(envio==0){                                
-//                     let vez = quant_salva==1 ? "vez" : "vezes";
-//                     //texto_mensagem_tentativa=texto_mensagem_tentativa;
-//                     texto_mensagem_tentativa="<br>Você já respondeu "+quant_salva+" "+vez+".";
-//                     mensagem_tentativas.innerHTML=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_fim;
-//                     console.log("\nJá verificou envio, quant-salva="+quant_salva);
-//                 }else{
-//                     if(quant_salva<max_quant_tentativas){
-//                         quant_respostas=parseInt(quant_salva)+1;                
-//                     }else{                        
-//                         quant_respostas=parseInt(3);         
-//                     }                
-//                 }          
-//                 API.registrarDadosGenericos("quant_"+id_atividade,quant_respostas);        
-//                 API.obterRespostaAtividade(id_atividade);
-            
-//             //Etapa 2: Carregando a página sem respostas enviadas
-//             }else{                                  
-//                 //se não encontrou a chave da unidade, é porque esta é a primeira vez que ele envia as respostas.
-//                 console.log("Carregando a página, envio="+envio);
-//                 if(envio==0){
-//                     quant_respostas=0;
-//                     mensagem_tentativas.innerHTML=texto_mensagem_padrao_0;                
-//                     console.log("mensagem zerada");
-//                 }else{
-//                     quant_respostas=parseInt(1);
-//                     //console.log("quant respostas="+quant_respostas);
-//                     texto_mensagem_tentativa="<br>Esta é sua primeira tentativa.";
-//                     API.registrarDadosGenericos("quant_"+id_atividade,quant_respostas);        
-//                     API.obterRespostaAtividade(id_atividade);
-//                 }
-//             }
-//             revisao_teste=1;
-//             API.obterDadosGenericos("uni1_revisao");
-//             console.log("verificando revisão. revisao_teste="+revisao_teste);
-//         }else{
-//             //aqui está verificando se a página de revisão foi acessada
-//             if(evento.detail["status"]=="200"){
-//                 console.log(evento.detail["data"]);            
-//                 revisao_vista=1;
-//             }            
-//         }
-//     } 
-//     console.log(texto_mensagem_tentativa);
-//     mensagem_tentativas.innerHTML=texto_mensagem_tentativa;
 
 </script>
 
