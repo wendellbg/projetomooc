@@ -172,7 +172,7 @@
 		"atividades": [
 			{
 				"identificador": "uni2_ativ1",
-				"nomeAtividade": "Avaliação - Unidade 2 (Atividades 1 e 2)",				
+				"nomeAtividade": "Avaliação - Unidade 2 - Questões Objetivas",				
 				"questoes": [
 					{
 						"tipoQuestaoString": "PROPORCIONAL",
@@ -186,34 +186,24 @@
 					},{
 						"tipoQuestaoString": "PROPORCIONAL",
 						"identificador": "r2_2",
-						"enunciado": "Agrupe as formações conforme os itinerários formativos possíveis",
+						"enunciado": "Selecione para as formações os itinerários formativos possíveis",
 						"gabaritos": [
-							{ "chave": "r2_2_1", "valor": "Ciências Humanas e Sociais Aplicadas.", "alternativa": "Administração" },
-							{ "chave": "r2_2_2", "valor": "Formação Técnica e Profissional.", "alternativa": "Ambiente" },
-							{ "chave": "r2_2_3", "valor": "Matemática e suas tecnologias.", "alternativa": "Análise de Investimentos" },
-							{ "chave": "r2_2_4", "valor": "Linguagem e suas tecnologias.", "alternativa": "Arte" },
-							{ "chave": "r2_2_5", "valor": "Ciências da Natureza e suas tecnologias.", "alternativa": "Biologia" },
-							{ "chave": "r2_2_6", "valor": "Matemática e suas tecnologias.", "alternativa": "Computação" },
-							{ "chave": "r2_2_7", "valor": "Formação Técnica e Profissional.", "alternativa": "Controle e Processos Industriais" },
-							{ "chave": "r2_2_8", "valor": "Ciências Humanas e Sociais Aplicadas.", "alternativa": "Demografia" },
-							{ "chave": "r2_2_9", "valor": "Ciências Humanas e Sociais Aplicadas.", "alternativa": "Economia" },
-							{ "chave": "r2_2_10", "valor": "Linguagem e suas tecnologias.", "alternativa": "Educação Física" },
-							{ "chave": "r2_2_11", "valor": "Matemática e suas tecnologias.", "alternativa": "Estatística" },
-							{ "chave": "r2_2_12", "valor": "Ciências da Natureza e suas tecnologias.", "alternativa": "Física" },
-							{ "chave": "r2_2_13", "valor": "Ciências Humanas e Sociais Aplicadas.", "alternativa": "Geografia" },
-							{ "chave": "r2_2_14", "valor": "Matemática e suas tecnologias.", "alternativa": "Informática" },
-							{ "chave": "r2_2_15", "valor": "Linguagem e suas tecnologias.", "alternativa": "Língua Inglesa" },
-							{ "chave": "r2_2_16", "valor": "Linguagem e suas tecnologias.", "alternativa": "Língua Portuguesa" },
-							{ "chave": "r2_2_17", "valor": "Matemática e suas tecnologias.", "alternativa": "Pesquisa Operacional" },
-							{ "chave": "r2_2_18", "valor": "Formação Técnica e Profissional.", "alternativa": "Produção Alimentícia" },
-							{ "chave": "r2_2_19", "valor": "Ciências da Natureza e suas tecnologias.", "alternativa": "Química" },
-							{ "chave": "r2_2_20", "valor": "Formação Técnica e Profissional.", "alternativa": "Saúde" }
+							{ "chave": "r2_2_1", "valor": "Ciências Humanas e Sociais Aplicadas", "alternativa": "Administração" },																	
+							{ "chave": "r2_2_2", "valor": "Matemática e suas tecnologias", "alternativa": "Análise de Investimentos" },																	
+							{ "chave": "r2_2_3", "valor": "Ciências da Natureza e suas tecnologias", "alternativa": "Biologia" },																	
+							{ "chave": "r2_2_4", "valor": "Formação Técnica e Profissional", "alternativa": "Controle e Processos Industriais" },																	
+							{ "chave": "r2_2_5", "valor": "Linguagem e suas tecnologias", "alternativa": "Educação Física" },																	
+							{ "chave": "r2_2_6", "valor": "Ciências da Natureza e suas tecnologias", "alternativa": "Física" },
+							{ "chave": "r2_2_7", "valor": "Ciências Humanas e Sociais Aplicadas", "alternativa": "Geografia" },
+							{ "chave": "r2_2_8", "valor": "Matemática e suas tecnologias", "alternativa": "Informática" },																	
+							{ "chave": "r2_2_9", "valor": "Linguagem e suas tecnologias", "alternativa": "Língua Portuguesa" },																	
+							{ "chave": "r2_2_10", "valor": "Formação Técnica e Profissional", "alternativa": "Saúde" }
 						]
 					}
 				]
 			},{					
 				"identificador": "uni2_ativ3",
-				"nomeAtividade": "Avaliação - Unidade 2 (Atividade 3)",				
+				"nomeAtividade": "Avaliação - Unidade 2 - Questão Discursiva",				
 				"questoes": [
 					{
 						"tipoQuestaoString": "MODERADA",

@@ -255,6 +255,16 @@ html{
     text-align: justify;   
 }
 
+.texto-resposta-menor{    
+    position: relative;
+    width: 30%;
+    font-size: 0.8em;    
+    margin-left: 0;
+    margin-right: 2%;
+    display: inline-block;
+    text-align: left;   
+}
+
 .texto-opcao b{
     color: #fff;
     font-weight: bold;
@@ -304,12 +314,24 @@ html{
     border: 2px dashed #fff ;   
 }
 
+.caixa-grande{
+    width: 60%;
+}
+
 .caixa-drop_1{
     height: 50px;    
 }
 
 .caixa-drop_2{
-    height: 80px;
+    height: 80px;    
+}
+
+.caixa-drop_3{
+    height: 90px;
+}
+
+.caixa-drop_2_3{
+    height: 50px;
 }
 
 .caixa-drop-alta{
@@ -406,7 +428,7 @@ html{
 }
 
 /**
-Caixas de Select - Uni2 questão 3
+Caixas de Select
 **/
 
 .caixa-box{    
@@ -418,22 +440,23 @@ Caixas de Select - Uni2 questão 3
     padding: 2px;
     border-radius: 10px;
     font-size: 0.8em; 
-    cursor: pointer;   
+    cursor: pointer;      
+    align-content: center;
 }
 
 .caixa-box select option{
-    text-align: center;   
+    padding: auto;
     cursor: pointer; 
 }
 
-.caixa-box select.select-respondido{
+.caixa-box select.select-respondido, .caixa-box.caixa-grande select::selection{
     background-color: var(--cor-principal);
     color: var(--cor-secundaria);
     font-weight: bold;
 }
 .caixa-box select.select-respondido option, .caixa-box select option{
-    background-color: var(--cor-principal);
-    color: #fff;
+    background-color: var(--cor-principal) !important;
+    color: var(--cor-secundaria) !important;    
     cursor: pointer;
 }
 
@@ -525,11 +548,14 @@ Caixas de Select - Uni2 questão 3
     width: 100%;
     height: 100%;   
     margin:0;
-    padding: 5px;
+    padding: auto;
+
+    line-height: 1em;
+    vertical-align: middle;
+    
 }
 
-.area-inputs .vazio{
-    /* background-color: transparent; */
+.area-inputs .vazio{    
     width: 100%;
     height: 100%;
     min-width: 100px;
@@ -944,7 +970,7 @@ input[type="checkbox"]:checked + label{
 }
 
 @media screen and (max-width: 680px) {
-	.texto-resposta, .texto-resposta-maior{
+	.texto-resposta, .texto-resposta-maior, .texto-resposta-menor{
         width: 90%;
         margin-right: 0;
     }
@@ -952,7 +978,7 @@ input[type="checkbox"]:checked + label{
     .area-inputs, .area-opcoes, .caixa-box, .area-inputs-menor, .area-opcoes-menor, .caixa-box-menor{
         display: block;
         margin-left: 20px;
-        width: 70%;
+        width: 90%;
     }
 
     .caixa-drop_5_2, .caixa-drop_5_3{
@@ -987,7 +1013,7 @@ input[type="checkbox"]:checked + label{
         margin-bottom: 1em;
     }
     .caixa-drop_2_3{
-        width: 90%;
+        width: 90%;        
         margin-left: 0;
         margin-bottom: 0;
         margin-top: 1em;

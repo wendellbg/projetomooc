@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
     <link rel="stylesheet" href="../../css/efeito.css?ver=1.2"/>
-    <link rel="stylesheet" href="../../css/atividades-2.css?ver=1.1" />
+    <link rel="stylesheet" href="../../css/atividades-padrao.css" />
+    <link rel="stylesheet" href="../../css/cores-mooc1.css" />
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
     <script src="../../js/bt-topo.js"></script>
+    <script src="../../js/Sortable.js.download"></script>
+    <script src="../../js/Swap.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
@@ -95,443 +98,209 @@
                                 </div>
                                 <div class="area-respostas">
                                     <div class="linha-respostas">
-                                        <div class='texto-resposta'>                                        
+                                        <div class='texto-resposta-maior'>                                        
                                             <span class="texto-opcao">a) No início do ensino médio deverá escolher o itinerário formativo de acordo com suas capacidades, interesses futuros, afinidades ou potencialidades.</span>                                            
                                         </div>
                                         <span class="legenda-input">a)</span>
-                                        <div class="area-inputs caixa-drop_2_1" id='r2_1_1' name='r2_1_1' ondrop="drop(event)" ondragover="allowDrop(event)">                                            
-                                            <p></p>
-                                        </div>                                                                            
-                                        
-                                        
+                                        <div class="area-inputs caixa-drop_2 list-group " id='r2_1_1' name='r2_1_1'><div class="list-group-item vazio"></div></div>                                                                           
                                     </div>
 
                                     <div class="linha-respostas">
-                                        <div class="texto-resposta">                                        
+                                        <div class="texto-resposta-maior">                                        
                                             <span class="texto-opcao">b) É a Base Nacional Comum Curricular - BNCC, que tem <b>carga horária máxima de 1800 horas.</b></span>                                                                                   
                                         </div>
                                         <span class="legenda-input">b)</span>
-                                        <div class="area-inputs caixa-drop_2_1" id='r2_1_2' name='r2_1_2' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                            <p></p>
-                                        </div>   
-                                        
+                                        <div class="area-inputs caixa-drop_2 list-group " id='r2_1_2' name='r2_1_2'><div class="list-group-item vazio"></div></div>
                                     </div>
 
                                     <div class="linha-respostas">
-                                        <div class="texto-resposta">                                        
+                                        <div class="texto-resposta-maior">                                        
                                             <span class="texto-opcao">c) Possibilidade de inserção laboral do aluno, a partir de saberes sintonizados às demandas sociais e econômicas.</span>                                                                                   
                                         </div>
                                         <span class="legenda-input">c)</span>
-                                        <div class="area-inputs caixa-drop_2_1" id='r2_1_3' name='r2_1_3' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                            <p></p>
-                                        </div>                                           
+                                        <div class="area-inputs caixa-drop_2 list-group " id='r2_1_3' name='r2_1_3'><div class="list-group-item vazio"></div></div>                                          
                                     </div>
 
                                     <div class="linha-respostas">
                                         <p class="legenda-resposta">Opções de Resposta:</p>
-                                        <div class="area-opcoes caixa-drop_2_1" id='opcao2_1_1' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                            <span class="palavra-resposta" name='r2_1_texto_1' id='r2_1_texto_1' draggable="true" ondragstart="drag(event)">Itinerários formativos</span>
-                                        </div>
-                                        <div class="area-opcoes caixa-drop_2_1" id='opcao2_1_2' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                            <span class="palavra-resposta" name='r2_1_texto_2' id='r2_1_texto_2' draggable="true" ondragstart="drag(event)">Conjunto comum de saberes</span>
-                                        </div>
-                                        <div class="area-opcoes caixa-drop_2_1" id='opcao2_1_3' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                            <span class="palavra-resposta" name='r2_1_texto_3' id='r2_1_texto_3' draggable="true" ondragstart="drag(event)">Possibilidade de escolha</span>
+                                        <div id="listaRespostas_r1" class="list-group grupo-respostas"> 
+                                            <div id="opcao2_2_1" class="list-group-item cheio" draggable="true">
+                                                <span class="palavra-resposta" name='r2_1_texto' id='r2_1' >Itinerários formativos</span>
+                                            </div>
+                                            <div id="opcao2_2_2" class="list-group-item cheio" draggable="true">
+                                                <span class="palavra-resposta" name='r2_2_texto' id='r2_2' >Conjunto comum de saberes</span>
+                                            </div>
+                                            <div id="opcao2_2_3" class="list-group-item cheio" draggable="true">
+                                                <span class="palavra-resposta" name='r2_3_texto' id='r2_3' >Possibilidade de escolha</span>
+                                            </div>
                                         </div>
                                     </div>
 
                                 </div>                                 
                             </div> 
                                    
-
                             <div class="questao">
                                 <div class="titulo-questao">Questão 2</div>
                                 <div class="enunciado-questao">
-                                    <span>Agrupe as formações conforme os itinerários formativos possíveis</span>
+                                    <span>Selecione para as formações os itinerários formativos possíveis</span>
                                 </div>
                                 <div class="area-respostas">
+                                    <div class="linha-respostas">
+                                        <div class='texto-resposta-menor'>                                        
+                                            <span class="texto-opcao">Administração</span>
+                                        </div>
+                                        <div class="caixa-box caixa-grande">                                            
+                                            <select name="r2_2_a" id="r2_2_a" class="resposta-select" onchange="valorSelecionado(this)">
+                                                <option  id="r2_2_a_0" name="r2_2_a_0" value="">-------------------------------------------</option>
+                                                <option  id="r2_2_a_1" name="r2_2_a_1" value="Ciências da Natureza e suas tecnologias">Ciências da Natureza e suas tecnologias</option>
+                                                <option  id="r2_2_a_2" name="r2_2_a_2" value="Ciências Humanas e Sociais Aplicadas">Ciências Humanas e Sociais Aplicadas</option>
+                                                <option  id="r2_2_a_3" name="r2_2_a_3" value="Formação Técnica e Profissional">Formação Técnica e Profissional</option>                                            
+                                                <option  id="r2_2_a_4" name="r2_2_a_4" value="Linguagem e suas tecnologias">Linguagem e suas tecnologias</option>                                            
+                                                <option  id="r2_2_a_5" name="r2_2_a_5" value="Matemática e suas tecnologias">Matemática e suas tecnologias</option>   
+                                            </select>
+                                        </div>                                                                                                                    
+                                    </div>
+                                    <div class="linha-respostas">
+                                        <div class='texto-resposta-menor'>                                        
+                                            <span class="texto-opcao">Análise de Investimentos</span>
+                                        </div>
+                                        <div class="caixa-box caixa-grande">                                            
+                                            <select name="r2_2_b" id="r2_2_b" class="resposta-select" onchange="valorSelecionado(this)">
+                                                <option  id="r2_2_b_0" name="r2_2_b_0" value="">-------------------------------------------</option>
+                                                <option  id="r2_2_b_1" name="r2_2_b_1" value="Ciências da Natureza e suas tecnologias">Ciências da Natureza e suas tecnologias</option>
+                                                <option  id="r2_2_b_2" name="r2_2_b_2" value="Ciências Humanas e Sociais Aplicadas">Ciências Humanas e Sociais Aplicadas</option>
+                                                <option  id="r2_2_b_3" name="r2_2_b_3" value="Formação Técnica e Profissional">Formação Técnica e Profissional</option>                                            
+                                                <option  id="r2_2_b_4" name="r2_2_b_4" value="Linguagem e suas tecnologias">Linguagem e suas tecnologias</option>                                            
+                                                <option  id="r2_2_b_5" name="r2_2_b_5" value="Matemática e suas tecnologias">Matemática e suas tecnologias</option>   
+                                            </select>
+                                        </div>                                                                                                                    
+                                    </div>
+                                    <div class="linha-respostas">
+                                        <div class='texto-resposta-menor'>                                        
+                                            <span class="texto-opcao">Biologia</span>
+                                        </div>
+                                        <div class="caixa-box caixa-grande">                                            
+                                            <select name="r2_2_c" id="r2_2_c" class="resposta-select" onchange="valorSelecionado(this)">
+                                                <option  id="r2_2_c_0" name="r2_2_c_0" value="">-------------------------------------------</option>
+                                                <option  id="r2_2_c_1" name="r2_2_c_1" value="Ciências da Natureza e suas tecnologias">Ciências da Natureza e suas tecnologias</option>
+                                                <option  id="r2_2_c_2" name="r2_2_c_2" value="Ciências Humanas e Sociais Aplicadas">Ciências Humanas e Sociais Aplicadas</option>
+                                                <option  id="r2_2_c_3" name="r2_2_c_3" value="Formação Técnica e Profissional">Formação Técnica e Profissional</option>                                            
+                                                <option  id="r2_2_c_4" name="r2_2_c_4" value="Linguagem e suas tecnologias">Linguagem e suas tecnologias</option>                                            
+                                                <option  id="r2_2_c_5" name="r2_2_c_5" value="Matemática e suas tecnologias">Matemática e suas tecnologias</option>   
+                                            </select>
+                                        </div>                                                                                                                    
+                                    </div>
+                                    <div class="linha-respostas">
+                                        <div class='texto-resposta-menor'>                                        
+                                            <span class="texto-opcao">Controle e Processos Industriais</span>
+                                        </div>
+                                        <div class="caixa-box caixa-grande">                                            
+                                            <select name="r2_2_d" id="r2_2_d" class="resposta-select" onchange="valorSelecionado(this)">
+                                                <option  id="r2_2_d_0" name="r2_2_d_0" value="">-------------------------------------------</option>
+                                                <option  id="r2_2_d_1" name="r2_2_d_1" value="Ciências da Natureza e suas tecnologias">Ciências da Natureza e suas tecnologias</option>
+                                                <option  id="r2_2_d_2" name="r2_2_d_2" value="Ciências Humanas e Sociais Aplicadas">Ciências Humanas e Sociais Aplicadas</option>
+                                                <option  id="r2_2_d_3" name="r2_2_d_3" value="Formação Técnica e Profissional">Formação Técnica e Profissional</option>                                            
+                                                <option  id="r2_2_d_4" name="r2_2_d_4" value="Linguagem e suas tecnologias">Linguagem e suas tecnologias</option>                                            
+                                                <option  id="r2_2_d_5" name="r2_2_d_5" value="Matemática e suas tecnologias">Matemática e suas tecnologias</option>   
+                                            </select>
+                                        </div>                                                                                                                    
+                                    </div>
+                                    <div class="linha-respostas">
+                                        <div class='texto-resposta-menor'>                                        
+                                            <span class="texto-opcao">Educação Física</span>
+                                        </div>
+                                        <div class="caixa-box caixa-grande">                                            
+                                            <select name="r2_2_e" id="r2_2_e" class="resposta-select" onchange="valorSelecionado(this)">
+                                                <option  id="r2_2_e_0" name="r2_2_e_0" value="">-------------------------------------------</option>
+                                                <option  id="r2_2_e_1" name="r2_2_e_1" value="Ciências da Natureza e suas tecnologias">Ciências da Natureza e suas tecnologias</option>
+                                                <option  id="r2_2_e_2" name="r2_2_e_2" value="Ciências Humanas e Sociais Aplicadas">Ciências Humanas e Sociais Aplicadas</option>
+                                                <option  id="r2_2_e_3" name="r2_2_e_3" value="Formação Técnica e Profissional">Formação Técnica e Profissional</option>                                            
+                                                <option  id="r2_2_e_4" name="r2_2_e_4" value="Linguagem e suas tecnologias">Linguagem e suas tecnologias</option>                                            
+                                                <option  id="r2_2_e_5" name="r2_2_e_5" value="Matemática e suas tecnologias">Matemática e suas tecnologias</option>   
+                                            </select>
+                                        </div>                                                                                                                    
+                                    </div>
+                                    <div class="linha-respostas">
+                                        <div class='texto-resposta-menor'>                                        
+                                            <span class="texto-opcao">Física</span>
+                                        </div>
+                                        <div class="caixa-box caixa-grande">                                            
+                                            <select name="r2_2_f" id="r2_2_f" class="resposta-select" onchange="valorSelecionado(this)" onchange="valorSelecionado(this)">
+                                                <option  id="r2_2_f_0" name="r2_2_f_0" value="">-------------------------------------------</option>
+                                                <option  id="r2_2_f_1" name="r2_2_f_1" value="Ciências da Natureza e suas tecnologias">Ciências da Natureza e suas tecnologias</option>
+                                                <option  id="r2_2_f_2" name="r2_2_f_2" value="Ciências Humanas e Sociais Aplicadas">Ciências Humanas e Sociais Aplicadas</option>
+                                                <option  id="r2_2_f_3" name="r2_2_f_3" value="Formação Técnica e Profissional">Formação Técnica e Profissional</option>                                            
+                                                <option  id="r2_2_f_4" name="r2_2_f_4" value="Linguagem e suas tecnologias">Linguagem e suas tecnologias</option>                                            
+                                                <option  id="r2_2_f_5" name="r2_2_f_5" value="Matemática e suas tecnologias">Matemática e suas tecnologias</option>   
+                                            </select>
+                                        </div>                                                                                                                    
+                                    </div>
+                                    <div class="linha-respostas">
+                                        <div class='texto-resposta-menor'>                                        
+                                            <span class="texto-opcao">Geografia</span>
+                                        </div>
+                                        <div class="caixa-box caixa-grande">                                            
+                                            <select name="r2_2_g" id="r2_2_g" class="resposta-select" onchange="valorSelecionado(this)">
+                                                <option  id="r2_2_g_0" name="r2_2_g_0" value="">-------------------------------------------</option>
+                                                <option  id="r2_2_g_1" name="r2_2_g_1" value="Ciências da Natureza e suas tecnologias">Ciências da Natureza e suas tecnologias</option>
+                                                <option  id="r2_2_g_2" name="r2_2_g_2" value="Ciências Humanas e Sociais Aplicadas">Ciências Humanas e Sociais Aplicadas</option>
+                                                <option  id="r2_2_g_3" name="r2_2_g_3" value="Formação Técnica e Profissional">Formação Técnica e Profissional</option>                                            
+                                                <option  id="r2_2_g_4" name="r2_2_g_4" value="Linguagem e suas tecnologias">Linguagem e suas tecnologias</option>                                            
+                                                <option  id="r2_2_g_5" name="r2_2_g_5" value="Matemática e suas tecnologias">Matemática e suas tecnologias</option>   
+                                            </select>
+                                        </div>                                                                                                                    
+                                    </div>
+                                    <div class="linha-respostas">
+                                        <div class='texto-resposta-menor'>                                        
+                                            <span class="texto-opcao">Informática</span>
+                                        </div>
+                                        <div class="caixa-box caixa-grande">                                            
+                                            <select name="r2_2_h" id="r2_2_h" class="resposta-select" onchange="valorSelecionado(this)">
+                                                <option  id="r2_2_h_0" name="r2_2_h_0" value="">-------------------------------------------</option>
+                                                <option  id="r2_2_h_1" name="r2_2_h_1" value="Ciências da Natureza e suas tecnologias">Ciências da Natureza e suas tecnologias</option>
+                                                <option  id="r2_2_h_2" name="r2_2_h_2" value="Ciências Humanas e Sociais Aplicadas">Ciências Humanas e Sociais Aplicadas</option>
+                                                <option  id="r2_2_h_3" name="r2_2_h_3" value="Formação Técnica e Profissional">Formação Técnica e Profissional</option>                                            
+                                                <option  id="r2_2_h_4" name="r2_2_h_4" value="Linguagem e suas tecnologias">Linguagem e suas tecnologias</option>                                            
+                                                <option  id="r2_2_h_5" name="r2_2_h_5" value="Matemática e suas tecnologias">Matemática e suas tecnologias</option>   
+                                            </select>
+                                        </div>                                                                                                                    
+                                    </div>
+                                    <div class="linha-respostas">
+                                        <div class='texto-resposta-menor'>                                        
+                                            <span class="texto-opcao">Língua Portuguesa</span>
+                                        </div>
+                                        <div class="caixa-box caixa-grande">                                            
+                                            <select name="r2_2_i" id="r2_2_i" class="resposta-select" onchange="valorSelecionado(this)">
+                                                <option  id="r2_2_i_0" name="r2_2_i_0" value="">-------------------------------------------</option>
+                                                <option  id="r2_2_i_1" name="r2_2_i_1" value="Ciências da Natureza e suas tecnologias">Ciências da Natureza e suas tecnologias</option>
+                                                <option  id="r2_2_i_2" name="r2_2_i_2" value="Ciências Humanas e Sociais Aplicadas">Ciências Humanas e Sociais Aplicadas</option>
+                                                <option  id="r2_2_i_3" name="r2_2_i_3" value="Formação Técnica e Profissional">Formação Técnica e Profissional</option>                                            
+                                                <option  id="r2_2_i_4" name="r2_2_i_4" value="Linguagem e suas tecnologias">Linguagem e suas tecnologias</option>                                            
+                                                <option  id="r2_2_i_5" name="r2_2_i_5" value="Matemática e suas tecnologias">Matemática e suas tecnologias</option>   
+                                            </select>
+                                        </div>                                                                                                                    
+                                    </div>
+                                    <div class="linha-respostas">
+                                        <div class='texto-resposta-menor'>                                        
+                                            <span class="texto-opcao">Saúde</span>
+                                        </div>
+                                        <div class="caixa-box caixa-grande">                                            
+                                            <select name="r2_2_j" id="r2_2_j" class="resposta-select" onchange="valorSelecionado(this)">
+                                                <option  id="r2_2_j_0" name="r2_2_j_0" value="">-------------------------------------------</option>
+                                                <option  id="r2_2_j_1" name="r2_2_j_1" value="Ciências da Natureza e suas tecnologias">Ciências da Natureza e suas tecnologias</option>
+                                                <option  id="r2_2_j_2" name="r2_2_j_2" value="Ciências Humanas e Sociais Aplicadas">Ciências Humanas e Sociais Aplicadas</option>
+                                                <option  id="r2_2_j_3" name="r2_2_j_3" value="Formação Técnica e Profissional">Formação Técnica e Profissional</option>                                            
+                                                <option  id="r2_2_j_4" name="r2_2_j_4" value="Linguagem e suas tecnologias">Linguagem e suas tecnologias</option>                                            
+                                                <option  id="r2_2_j_5" name="r2_2_j_5" value="Matemática e suas tecnologias">Matemática e suas tecnologias</option>   
+                                            </select>
+                                        </div>                                                                                                                    
+                                    </div>
+    
+                                                   									
+                                </div>                                   
+                            </div> 
 
-                                    <div class="linha-resposta categorias">
-                                        <div class='texto-resposta'>                                        
-                                            <span class="texto-opcao cat1" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');">1) Linguagem e suas tecnologias.</span>
-                                            <span class="texto-opcao cat2" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');">2) Matemática e suas tecnologias.</span>
-                                            <span class="texto-opcao cat3" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');">3) Ciências Humanas e Sociais Aplicadas.</span>                                           
-                                            <span class="texto-opcao cat4" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');">4) Ciências da Natureza e suas tecnologias.</span>        
-                                            <span class="texto-opcao cat5" onmouseover="radio_hover('cat5');" onmouseout="radio_hoverOut('cat5');">5) Formação Técnica e Profissional.</span>                
-                                        </div>
-                                    </div>
-
-                                    <div class="linha-resposta referencias-categorias">
-                                        <div class="texto-resposta">
-                                            <div class="texto-opcao cat1"><span>1</span></div>
-                                            <div class="texto-opcao cat2"><span>2</span></div>
-                                            <div class="texto-opcao cat3"><span>3</span></div>
-                                            <div class="texto-opcao cat4"><span>4</span></div>
-                                            <div class="texto-opcao cat5"><span>5</span></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="linha-resposta area-categorias">    
-                                        <div class="texto-resposta">                                                                                       
-                                            <div class="area-cat">
-                                                <div class="texto-cat cat1">
-                                                </div>
-                                                <div class='area-legendas'>
-                                                    <span class="texto-legenda cat1">Linguagem e suas tecnologias.</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="area-cat">
-                                                <div class="texto-cat cat2">
-                                                </div>
-                                                <div class='area-legendas'>
-                                                   <span class="texto-legenda cat2">Matemática e suas tecnologias.</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="area-cat">
-                                                <div class="texto-cat cat3">
-                                                </div>
-                                                <div class='area-legendas'>
-                                                    <span class="texto-legenda cat3">Ciências Humanas e Sociais Aplicadas.</span>                                           
-                                                </div>                                           
-                                            </div>
-
-                                            <div class="area-cat">
-                                                <div class="texto-cat cat4">
-                                                </div>
-                                                <div class='area-legendas'>
-                                                    <span class="texto-legenda cat4">Ciências da Natureza e suas tecnologias.</span>        
-                                                </div>        
-                                            </div>
-
-                                            <div class="area-cat">
-                                                <div class="texto-cat cat5">
-                                                </div>
-                                                <div class='area-legendas'>
-                                                    <span class="texto-legenda cat5">Formação Técnica e Profissional.</span>    
-                                                </div>                
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    
-                                    <div class='linha-respostas linha-branca op1'>
-                                        <div class='texto-resposta'>
-                                            <span class='texto-opcao'>Administração</span>                                                                                     
-                                        </div>                                        
-                                        <div class="linha-respostas linha-inputs">
-                                            <div class="texto-resposta">                                                
-                                                <span class="input-categorias cat1"><input onchange="marcar_radio(this);" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');" class="op1" value='cat1' type="radio" id='r2_2_1_cat1' name="r2_2_1"></span>
-                                                <span class="input-categorias cat2"><input onchange="marcar_radio(this);" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');" class="op1" value='cat2' type="radio" id='r2_2_1_cat2' name="r2_2_1"></span>
-                                                <span class="input-categorias cat3"><input onchange="marcar_radio(this);" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');" class="op1" value='cat3' type="radio" id='r2_2_1_cat3' name="r2_2_1"></span>                                           
-                                                <span class="input-categorias cat4"><input onchange="marcar_radio(this);" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');" class="op1" value='cat4' type="radio" id='r2_2_1_cat4' name="r2_2_1"></span>                                                            
-                                                <span class="input-categorias cat5"><input onchange="marcar_radio(this);" onmouseover="radio_hover('cat5');" onmouseout="radio_hoverOut('cat5');" class="op1" value='cat5' type="radio" id='r2_2_1_cat5' name="r2_2_1"></span>                                                  
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                    <div class='linha-respostas linha-branca op2'>
-                                        <div class='texto-resposta'>
-                                            <span class='texto-opcao'>Ambiente</span>                                                                                          
-                                        </div>                                                                   
-                                        <div class="linha-respostas linha-inputs">
-                                            <div class="texto-resposta">
-                                                <span class="input-categorias cat1"><input onchange="marcar_radio(this);" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');" class="op2" value='cat1' type="radio" id='r2_2_2_cat1' name="r2_2_2"></span>
-                                                <span class="input-categorias cat2"><input onchange="marcar_radio(this);" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');" class="op2" value='cat2' type="radio" id='r2_2_2_cat2' name="r2_2_2"></span>
-                                                <span class="input-categorias cat3"><input onchange="marcar_radio(this);" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');" class="op2" value='cat3' type="radio" id='r2_2_2_cat3' name="r2_2_2"></span>
-                                                <span class="input-categorias cat4"><input onchange="marcar_radio(this);" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');" class="op2" value='cat4' type="radio" id='r2_2_2_cat4' name="r2_2_2"></span>
-                                                <span class="input-categorias cat5"><input onchange="marcar_radio(this);" onmouseover="radio_hover('cat5');" onmouseout="radio_hoverOut('cat5');" class="op2" value='cat5' type="radio" id='r2_2_2_cat5' name="r2_2_2"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                
-                                    <div class='linha-respostas linha-branca op3'>
-                                        <div class='texto-resposta'>
-                                            <span class='texto-opcao'>Análise de Investimentos</span> 
-                                        </div>   
-                                        <div class="linha-respostas linha-inputs">
-                                            <div class="texto-resposta">
-                                                <span class="input-categorias cat1"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');" class="op3" value='cat1'  id='r2_2_3_cat1' name="r2_2_3"></span>
-                                                <span class="input-categorias cat2"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');" class="op3" value='cat2'  id='r2_2_3_cat2' name="r2_2_3"></span>
-                                                <span class="input-categorias cat3"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');" class="op3" value='cat3'  id='r2_2_3_cat3' name="r2_2_3"></span>                                           
-                                                <span class="input-categorias cat4"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');" class="op3" value='cat4'  id='r2_2_3_cat4' name="r2_2_3"></span>        
-                                                <span class="input-categorias cat5"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat5');" onmouseout="radio_hoverOut('cat5');" class="op3" value='cat5'  id='r2_2_3_cat5' name="r2_2_3"></span>  
-                                            </div>
-                                        </div>
-                                    </div>
-                                
-                                    <div class='linha-respostas linha-branca op4'>
-                                        <div class='texto-resposta'>
-                                            <span class='texto-opcao'>Arte</span>                                               
-                                        </div>
-                                        <div class="linha-respostas linha-inputs">
-                                            <div class="texto-resposta">
-                                                <span class="input-categorias cat1"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');" class="op4" value='cat1'  id='r2_2_4_cat1' name="r2_2_4"></span>
-                                                <span class="input-categorias cat2"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');" class="op4" value='cat2'  id='r2_2_4_cat2' name="r2_2_4"></span>
-                                                <span class="input-categorias cat3"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');" class="op4" value='cat3'  id='r2_2_4_cat3' name="r2_2_4"></span>                                           
-                                                <span class="input-categorias cat4"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');" class="op4" value='cat4'  id='r2_2_4_cat4' name="r2_2_4"></span>        
-                                                <span class="input-categorias cat5"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat5');" onmouseout="radio_hoverOut('cat5');" class="op4" value='cat5'  id='r2_2_4_cat5' name="r2_2_4"></span>  
-                                            </div>
-                                        </div>
-                                    </div>                                                                       
-                                
-                                    <div class='linha-respostas linha-branca op5'>
-                                        <div class='texto-resposta'>
-                                            <span class='texto-opcao'>Biologia</span> 
-                                        </div>                                                                       
-                                        <div class="linha-respostas linha-inputs">
-                                            <div class="texto-resposta">
-                                                <span class="input-categorias cat1"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');" class="op5" value='cat1'  id='r2_2_5_cat1' name="r2_2_5"></span>
-                                                <span class="input-categorias cat2"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');" class="op5" value='cat2'  id='r2_2_5_cat2' name="r2_2_5"></span>
-                                                <span class="input-categorias cat3"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');" class="op5" value='cat3'  id='r2_2_5_cat3' name="r2_2_5"></span>                                           
-                                                <span class="input-categorias cat4"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');" class="op5" value='cat4'  id='r2_2_5_cat4' name="r2_2_5"></span>        
-                                                <span class="input-categorias cat5"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat5');" onmouseout="radio_hoverOut('cat5');" class="op5" value='cat5'  id='r2_2_5_cat5' name="r2_2_5"></span>  
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class='linha-respostas linha-branca op6'>
-                                        <div class='texto-resposta'>
-                                            <span class='texto-opcao'>Computação</span>
-                                        </div>                                    
-                                        <div class="linha-respostas linha-inputs">
-                                            <div class="texto-resposta">
-                                                <span class="input-categorias cat1"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');" class="op6" value='cat1'  id='r2_2_6_cat1' name="r2_2_6"></span>
-                                                <span class="input-categorias cat2"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');" class="op6" value='cat2'  id='r2_2_6_cat2' name="r2_2_6"></span>
-                                                <span class="input-categorias cat3"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');" class="op6" value='cat3'  id='r2_2_6_cat3' name="r2_2_6"></span>                                           
-                                                <span class="input-categorias cat4"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');" class="op6" value='cat4'  id='r2_2_6_cat4' name="r2_2_6"></span>        
-                                                <span class="input-categorias cat5"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat5');" onmouseout="radio_hoverOut('cat5');" class="op6" value='cat5'  id='r2_2_6_cat5' name="r2_2_6"></span>  
-                                            </div>
-                                        </div>
-                                    </div>
-                                
-                                    <div class='linha-respostas linha-branca op7'>
-                                        <div class='texto-resposta'>
-                                            <span class='texto-opcao'>Controle e Processos Industriais</span>                                             
-                                        </div>                                        
-                                    
-                                    <div class="linha-respostas linha-inputs">
-                                        <div class="texto-resposta">
-                                            <span class="input-categorias cat1"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');" class="op7" value='cat1'   id='r2_2_7_cat1' name="r2_2_7"></span>
-                                            <span class="input-categorias cat2"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');" class="op7" value='cat2'   id='r2_2_7_cat2' name="r2_2_7"></span>
-                                            <span class="input-categorias cat3"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');" class="op7" value='cat3'   id='r2_2_7_cat3' name="r2_2_7"></span>                                           
-                                            <span class="input-categorias cat4"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');" class="op7" value='cat4'   id='r2_2_7_cat4' name="r2_2_7"></span>        
-                                            <span class="input-categorias cat5"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat5');" onmouseout="radio_hoverOut('cat5');" class="op7" value='cat5'   id='r2_2_7_cat5' name="r2_2_7"></span>  
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                    <div class='linha-respostas linha-branca op8'>
-                                        <div class='texto-resposta'>
-                                            <span class='texto-opcao'>Demografia</span>   
-                                        </div>                                    
-                                        <div class="linha-respostas linha-inputs">
-                                            <div class="texto-resposta">
-                                                <span class="input-categorias cat1"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');" class="op8" value='cat1'   id='r2_2_8_cat1' name="r2_2_8"></span>
-                                                <span class="input-categorias cat2"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');" class="op8" value='cat2'   id='r2_2_8_cat2' name="r2_2_8"></span>
-                                                <span class="input-categorias cat3"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');" class="op8" value='cat3'   id='r2_2_8_cat3' name="r2_2_8"></span>                                           
-                                                <span class="input-categorias cat4"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');" class="op8" value='cat4'   id='r2_2_8_cat4' name="r2_2_8"></span>        
-                                                <span class="input-categorias cat5"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat5');" onmouseout="radio_hoverOut('cat5');" class="op8" value='cat5'   id='r2_2_8_cat5' name="r2_2_8"></span>  
-                                            </div>
-                                        </div>
-                                    </div>
-                                
-                                    <div class='linha-respostas linha-branca op9'>
-                                        <div class='texto-resposta'>
-                                            <span class='texto-opcao'>Economia</span>                                            
-                                        </div>
-                                
-                                    <div class="linha-respostas linha-inputs">
-                                        <div class="texto-resposta">
-                                            <span class="input-categorias cat1"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');" class="op9" value='cat1'   id='r2_2_9_cat1' name="r2_2_9"></span>
-                                            <span class="input-categorias cat2"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');" class="op9" value='cat2'   id='r2_2_9_cat2' name="r2_2_9"></span>
-                                            <span class="input-categorias cat3"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');" class="op9" value='cat3'   id='r2_2_9_cat3' name="r2_2_9"></span>                                           
-                                            <span class="input-categorias cat4"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');" class="op9" value='cat4'   id='r2_2_9_cat4' name="r2_2_9"></span>        
-                                            <span class="input-categorias cat5"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat5');" onmouseout="radio_hoverOut('cat5');" class="op9" value='cat5'   id='r2_2_9_cat5' name="r2_2_9"></span>  
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                    <div class='linha-respostas linha-branca op10'>
-                                        <div class='texto-resposta'>
-                                            <span class='texto-opcao'>Educação Física</span>
-                                        </div>
-                                
-                                    <div class="linha-respostas linha-inputs">
-                                        <div class="texto-resposta">
-                                            <span class="input-categorias cat1"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');" class="op10" value='cat1'   id='r2_2_10_cat1' name="r2_2_10"></span>
-                                            <span class="input-categorias cat2"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');" class="op10" value='cat2'   id='r2_2_10_cat2' name="r2_2_10"></span>
-                                            <span class="input-categorias cat3"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');" class="op10" value='cat3'   id='r2_2_10_cat3' name="r2_2_10"></span>                                           
-                                            <span class="input-categorias cat4"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');" class="op10" value='cat4'   id='r2_2_10_cat4' name="r2_2_10"></span>        
-                                            <span class="input-categorias cat5"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat5');" onmouseout="radio_hoverOut('cat5');" class="op10" value='cat5'   id='r2_2_10_cat5' name="r2_2_10"></span>  
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                    <div class='linha-respostas linha-branca op11'>
-                                        <div class='texto-resposta'>
-                                            <span class='texto-opcao'>Estatística</span>                                        
-                                        </div>
-                                
-                                    <div class="linha-respostas linha-inputs">
-                                        <div class="texto-resposta">
-                                            <span class="input-categorias cat1"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');" class="op11" value='cat1'   id='r2_2_11_cat1' name="r2_2_11"></span>
-                                            <span class="input-categorias cat2"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');" class="op11" value='cat2'   id='r2_2_11_cat2' name="r2_2_11"></span>
-                                            <span class="input-categorias cat3"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');" class="op11" value='cat3'   id='r2_2_11_cat3' name="r2_2_11"></span>                                           
-                                            <span class="input-categorias cat4"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');" class="op11" value='cat4'   id='r2_2_11_cat4' name="r2_2_11"></span>        
-                                            <span class="input-categorias cat5"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat5');" onmouseout="radio_hoverOut('cat5');" class="op11" value='cat5'   id='r2_2_11_cat5' name="r2_2_11"></span>  
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                    <div class='linha-respostas linha-branca op12'>
-                                        <div class='texto-resposta'>
-                                            <span class='texto-opcao'>Física</span>  
-                                        </div>
-                                    
-                                    <div class="linha-respostas linha-inputs">
-                                        <div class="texto-resposta">
-                                            <span class="input-categorias cat1"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');" class="op12" value='cat1'   id='r2_2_12_cat1' name="r2_2_12"></span>
-                                            <span class="input-categorias cat2"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');" class="op12" value='cat2'   id='r2_2_12_cat2' name="r2_2_12"></span>
-                                            <span class="input-categorias cat3"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');" class="op12" value='cat3'   id='r2_2_12_cat3' name="r2_2_12"></span>
-                                            <span class="input-categorias cat4"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');" class="op12" value='cat4'   id='r2_2_12_cat4' name="r2_2_12"></span>
-                                            <span class="input-categorias cat5"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat5');" onmouseout="radio_hoverOut('cat5');" class="op12" value='cat5'   id='r2_2_12_cat5' name="r2_2_12"></span>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                    <div class='linha-respostas linha-branca op13'>
-                                        <div class='texto-resposta'>
-                                            <span class='texto-opcao'>Geografia</span>
-                                        </div>
-                                    
-                                    <div class="linha-respostas linha-inputs">
-                                        <div class="texto-resposta">
-                                            <span class="input-categorias cat1"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');" class="op13" value='cat1'   id='r2_2_13_cat1' name="r2_2_13"></span>
-                                            <span class="input-categorias cat2"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');" class="op13" value='cat2'   id='r2_2_13_cat2' name="r2_2_13"></span>
-                                            <span class="input-categorias cat3"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');" class="op13" value='cat3'   id='r2_2_13_cat3' name="r2_2_13"></span>
-                                            <span class="input-categorias cat4"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');" class="op13" value='cat4'   id='r2_2_13_cat4' name="r2_2_13"></span>
-                                            <span class="input-categorias cat5"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat5');" onmouseout="radio_hoverOut('cat5');" class="op13" value='cat5'   id='r2_2_13_cat5' name="r2_2_13"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                    <div class='linha-respostas linha-branca op14'>
-                                        <div class='texto-resposta'>
-                                            <span class='texto-opcao'>Informática</span>
-                                        </div>
-                                    
-                                    <div class="linha-respostas linha-inputs">
-                                        <div class="texto-resposta">
-                                            <span class="input-categorias cat1"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');" class="op14" value='cat1'   id='r2_2_14_cat1' name="r2_2_14"></span>
-                                            <span class="input-categorias cat2"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');" class="op14" value='cat2'   id='r2_2_14_cat2' name="r2_2_14"></span>
-                                            <span class="input-categorias cat3"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');" class="op14" value='cat3'   id='r2_2_14_cat3' name="r2_2_14"></span>
-                                            <span class="input-categorias cat4"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');" class="op14" value='cat4'   id='r2_2_14_cat4' name="r2_2_14"></span>
-                                            <span class="input-categorias cat5"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat5');" onmouseout="radio_hoverOut('cat5');" class="op14" value='cat5'   id='r2_2_14_cat5' name="r2_2_14"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                    <div class='linha-respostas linha-branca op15'>
-                                        <div class='texto-resposta'>
-                                            <span class='texto-opcao'>Língua Inglesa</span>
-                                        </div>
-                                    
-                                    <div class="linha-respostas linha-inputs">
-                                        <div class="texto-resposta">
-                                            <span class="input-categorias cat1"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');" class="op15" value='cat1'   id='r2_2_15_cat1' name="r2_2_15"></span>
-                                            <span class="input-categorias cat2"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');" class="op15" value='cat2'   id='r2_2_15_cat2' name="r2_2_15"></span>
-                                            <span class="input-categorias cat3"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');" class="op15" value='cat3'   id='r2_2_15_cat3' name="r2_2_15"></span>
-                                            <span class="input-categorias cat4"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');" class="op15" value='cat4'   id='r2_2_15_cat4' name="r2_2_15"></span>
-                                            <span class="input-categorias cat5"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat5');" onmouseout="radio_hoverOut('cat5');" class="op15" value='cat5'   id='r2_2_15_cat5' name="r2_2_15"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                    <div class='linha-respostas linha-branca op16'>
-                                        <div class='texto-resposta'>
-                                            <span class='texto-opcao'>Língua Portuguesa</span>
-                                        </div>
-                                    
-                                    <div class="linha-respostas linha-inputs">
-                                        <div class="texto-resposta">
-                                            <span class="input-categorias cat1"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');" class="op16" value='cat1'   id='r2_2_16_cat1' name="r2_2_16"></span>
-                                            <span class="input-categorias cat2"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');" class="op16" value='cat2'   id='r2_2_16_cat2' name="r2_2_16"></span>
-                                            <span class="input-categorias cat3"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');" class="op16" value='cat3'   id='r2_2_16_cat3' name="r2_2_16"></span>
-                                            <span class="input-categorias cat4"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');" class="op16" value='cat4'   id='r2_2_16_cat4' name="r2_2_16"></span>
-                                            <span class="input-categorias cat5"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat5');" onmouseout="radio_hoverOut('cat5');" class="op16" value='cat5'   id='r2_2_16_cat5' name="r2_2_16"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                    <div class='linha-respostas linha-branca op17'>
-                                        <div class='texto-resposta'>
-                                            <span class='texto-opcao'>Pesquisa Operacional</span>
-                                        </div>
-                                    
-                                    <div class="linha-respostas linha-inputs">
-                                        <div class="texto-resposta">
-                                            <span class="input-categorias cat1"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');" class="op17" value='cat1'   id='r2_2_17_cat1' name="r2_2_17"></span>
-                                            <span class="input-categorias cat2"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');" class="op17" value='cat2'   id='r2_2_17_cat2' name="r2_2_17"></span>
-                                            <span class="input-categorias cat3"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');" class="op17" value='cat3'   id='r2_2_17_cat3' name="r2_2_17"></span>
-                                            <span class="input-categorias cat4"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');" class="op17" value='cat4'   id='r2_2_17_cat4' name="r2_2_17"></span>
-                                            <span class="input-categorias cat5"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat5');" onmouseout="radio_hoverOut('cat5');" class="op17" value='cat5'   id='r2_2_17_cat5' name="r2_2_17"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                    <div class='linha-respostas linha-branca op18'>
-                                        <div class='texto-resposta'>
-                                            <span class='texto-opcao'>Produção Alimentícia</span>                                                
-                                        </div>
-                                    
-                                    <div class="linha-respostas linha-inputs">
-                                        <div class="texto-resposta">
-                                            <span class="input-categorias cat1"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');" class="op18" value='cat1'   id='r2_2_18_cat1' name="r2_2_18"></span>
-                                            <span class="input-categorias cat2"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');" class="op18" value='cat2'   id='r2_2_18_cat2' name="r2_2_18"></span>
-                                            <span class="input-categorias cat3"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');" class="op18" value='cat3'   id='r2_2_18_cat3' name="r2_2_18"></span>
-                                            <span class="input-categorias cat4"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');" class="op18" value='cat4'   id='r2_2_18_cat4' name="r2_2_18"></span>
-                                            <span class="input-categorias cat5"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat5');" onmouseout="radio_hoverOut('cat5');" class="op18" value='cat5'   id='r2_2_18_cat5' name="r2_2_18"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                    <div class='linha-respostas linha-branca op19'>
-                                        <div class='texto-resposta'>
-                                            <span class='texto-opcao'>Química</span>  
-                                          </div>
-                                
-                                    <div class="linha-respostas linha-inputs">
-                                        <div class="texto-resposta">
-                                            <span class="input-categorias cat1"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');" class="op19" value='cat1'   id='r2_2_19_cat1' name="r2_2_19"></span>
-                                            <span class="input-categorias cat2"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');" class="op19" value='cat2'   id='r2_2_19_cat2' name="r2_2_19"></span>
-                                            <span class="input-categorias cat3"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');" class="op19" value='cat3'   id='r2_2_19_cat3' name="r2_2_19"></span>
-                                            <span class="input-categorias cat4"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');" class="op19" value='cat4'   id='r2_2_19_cat4' name="r2_2_19"></span>
-                                            <span class="input-categorias cat5"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat5');" onmouseout="radio_hoverOut('cat5');" class="op19" value='cat5'   id='r2_2_19_cat5' name="r2_2_19"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class='linha-resposta linha-branca op20'>
-                                    <div class='texto-resposta'>
-                                        <span class='texto-opcao'>Saúde</span>   
-                                    </div>                                    
-                                    <div class="linha-respostas linha-inputs">
-                                        <div class="texto-resposta">
-                                            <span class="input-categorias cat1"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat1');" onmouseout="radio_hoverOut('cat1');" class="op20" value='cat1'   id='r2_2_20_cat1' name="r2_2_20"></span>
-                                            <span class="input-categorias cat2"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat2');" onmouseout="radio_hoverOut('cat2');" class="op20" value='cat2'   id='r2_2_20_cat2' name="r2_2_20"></span>
-                                            <span class="input-categorias cat3"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat3');" onmouseout="radio_hoverOut('cat3');" class="op20" value='cat3'   id='r2_2_20_cat3' name="r2_2_20"></span>
-                                            <span class="input-categorias cat4"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat4');" onmouseout="radio_hoverOut('cat4');" class="op20" value='cat4'   id='r2_2_20_cat4' name="r2_2_20"></span>
-                                            <span class="input-categorias cat5"><input type="radio" onchange="marcar_radio(this);" onmouseover="radio_hover('cat5');" onmouseout="radio_hoverOut('cat5');" class="op20" value='cat5'   id='r2_2_20_cat5' name="r2_2_20"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>                                 
-                        </div> <!-- Fim da questão--> 
+                            
 
                             <div class="questao">
                                 <div class="titulo-questao">Questão 3</div>
@@ -562,18 +331,14 @@
                                     </div>                                       
 
                                     <div class='linha-resposta'>
-                                        <div class="area-inputs caixa-drop_2_3" id='r2_3_1' name='r2_3_1' ondrop="drop(event)" ondragover="allowDrop(event)">                                           
-                                            <p></p>
-                                        </div>                                                                                                                                                           
+                                        <div class="area-inputs caixa-drop_2_3 list-group " id='r2_3_1' name='r2_3_1'><div class="list-group-item vazio"></div></div>                                                                                                                                                          
                                         <div class="area-inputs caixa-drop_2_3b" id='r2_3_1b' name='r2_3_1b'>
                                             <input type="text" maxlength="3" placeholder="Carga horária" onchange='testavalor(this)' onkeypress='return event.charCode >= 48 && event.charCode <= 57' class='input-texto' id='r2_3_1_texto'>
                                         </div>        
                                     </div>
 
                                     <div class="linha-respostas">                                                                               
-                                        <div class="area-inputs caixa-drop_2_3" id='r2_3_2' name='r1_3_2' ondrop="drop(event)" ondragover="allowDrop(event)">                                           
-                                            <p></p>
-                                        </div>                                                                            
+                                        <div class="area-inputs caixa-drop_2_3 list-group " id='r2_3_2' name='r2_3_2'><div class="list-group-item vazio"></div></div>                                                                            
                                         <div class="area-inputs caixa-drop_2_3b" id='r2_3_2b' name='r2_3_2b'>                                           
                                             <input type="texto" maxlength="3" placeholder="Carga horária" onchange='testavalor(this)' onkeypress='return event.charCode >= 48 && event.charCode <= 57'  class='input-texto' id='r2_3_2_texto'>
                                         </div>                                                                            
@@ -581,18 +346,14 @@
                                     </div>                                     
 
                                     <div class="linha-respostas">                                                                       
-                                        <div class="area-inputs caixa-drop_2_3" id='r2_3_3' name='r2_3_3' ondrop="drop(event)" ondragover="allowDrop(event)">                                            
-                                            <p></p>
-                                        </div>                                                                            
+                                        <div class="area-inputs caixa-drop_2_3 list-group " id='r2_3_3' name='r2_3_3'><div class="list-group-item vazio"></div></div>                                                                           
                                         <div class="area-inputs caixa-drop_2_3b" id='r2_3_3b' name='r2_3_3b' >                                            
                                             <input type="texto" maxlength="3" placeholder="Carga horária" onchange='testavalor(this)' onkeypress='return event.charCode >= 48 && event.charCode <= 57'  class='input-texto' id='r2_3_3_texto'>
                                         </div> 
                                     </div>  
 
                                     <div class="linha-respostas">                                                                              
-                                        <div class="area-inputs caixa-drop_2_3" id='r2_3_4' name='r2_3_4' ondrop="drop(event)" ondragover="allowDrop(event)">                                            
-                                            <p></p>
-                                        </div>                                                                            
+                                        <div class="area-inputs caixa-drop_2_3 list-group " id='r2_3_4' name='r2_3_4'><div class="list-group-item vazio"></div></div>                                                                            
                                         <div class="area-inputs caixa-drop_2_3b" id='r2_3_4b' name='r2_3_4b' >                                            
                                             <input type="texto" maxlength="3" placeholder="Carga horária" onchange='testavalor(this)' onkeypress='return event.charCode >= 48 && event.charCode <= 57'  class='input-texto' id='r2_3_4_texto'>
                                         </div>  
@@ -608,24 +369,26 @@
 
                                     <div class='linha-resposta'>
                                         <p class="legenda-resposta">Opções de Resposta:</p>
-                                        <div class="area-opcoes caixa-drop_2_3" id='opcao2_3_1' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                            <span class="palavra-resposta" name='r2_3_texto_1' id='r2_3_texto_1' draggable="true" ondragstart="drag(event)">Projeto integrador</span>
-                                        </div>
-                                        <div class="area-opcoes caixa-drop_2_3" id='opcao2_3_2' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                            <span class="palavra-resposta" name='r2_3_texto_2' id='r2_3_texto_2' draggable="true" ondragstart="drag(event)">Projeto de Pesquisa</span>
-                                        </div>
-                                        <div class="area-opcoes caixa-drop_2_3" id='opcao2_3_3' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                            <span class="palavra-resposta" name='r2_3_texto_3' id='r2_3_texto_3' draggable="true" ondragstart="drag(event)">Estágio curricular</span>
-                                        </div>
-                                        <div class="area-opcoes caixa-drop_2_3" id='opcao2_3_4' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                            <span class="palavra-resposta" name='r2_3_texto_4' id='r2_3_texto_4' draggable="true" ondragstart="drag(event)">Atividade de extensão</span>
-                                        </div>
-                                        <div class="area-opcoes caixa-drop_2_3" id='opcao2_3_5' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                            <span class="palavra-resposta" name='r2_3_texto_5' id='r2_3_texto_5' draggable="true" ondragstart="drag(event)">Disciplinas</span>
+                                        <div id="listaRespostas_r3" class="list-group grupo-respostas"> 
+                                            <div id="opcao2_3_1" class="list-group-item cheio" draggable="true">
+                                                <span class="palavra-resposta" name='r2_3_1_texto' id='r2_3_1_texto' >Atividade de extensão</span>
+                                            </div>
+                                            <div id="opcao2_3_2" class="list-group-item cheio" draggable="true">
+                                                <span class="palavra-resposta" name='r2_3_2_texto' id='r2_3_2_texto' >Disciplinas</span>
+                                            </div>
+                                            <div id="opcao2_3_3" class="list-group-item cheio" draggable="true">
+                                                <span class="palavra-resposta" name='r2_3_3_texto' id='r2_3_3_texto' >Estágio curricular</span>
+                                            </div>
+                                            <div id="opcao2_3_4" class="list-group-item cheio" draggable="true">
+                                                <span class="palavra-resposta" name='r2_3_4_texto' id='r2_3_4_texto' >Projeto de pesquisa</span>
+                                            </div>
+                                            <div id="opcao2_3_5" class="list-group-item cheio" draggable="true">
+                                                <span class="palavra-resposta" name='r2_3_5_texto' id='r2_3_5_texto' >Projeto integrador</span>
+                                            </div>
                                         </div>
                                     </div>
                                     <p></p>
-                                    <p>* Esta carga horária é a atualmente praticada. Conforme a  lei nº 13.415/2017,  deverá ser ampliada progressivamente para um míniimo de mil horas anuais</p>
+                                    <span class="texto-resposta linha-grande">* Esta carga horária é a atualmente praticada. Conforme a  lei nº 13.415/2017,  deverá ser ampliada progressivamente para um míniimo de mil horas anuais.</span>
                                 </div>                                 
                             </div> 
 
@@ -1008,32 +771,7 @@
         }
     }
 
-    //// Eventos do Drag and Drop /////
-    var dragSrcEl = null;
-
-    function allowDrop(ev) {
-        ev.preventDefault();
-    }
-
-    function drag(ev){
-        /**ev.dataTransfer.setData("text",ev.target.id); **/
-        ev.dataTransfer.setData ("src", ev.target.id);
-               
-    }
-
-    function drop(ev){
     
-        ev.preventDefault();
-        // var data=ev.dataTransfer.getData("text");
-        // ev.target.appendChild(document.getElementById(data));
-
-        var src = document.getElementById(ev.dataTransfer.getData ("src"));
-        var srcParent = src.parentNode;
-        var tgt = ev.currentTarget.firstElementChild;
-        
-        ev.currentTarget.replaceChild (src, tgt);
-        srcParent.appendChild (tgt);
-    }
     
     ////// Função que testa o valor dos campos de carga horária /////
     function testavalor(object){          
@@ -1108,6 +846,76 @@
         let texto_legenda =document.querySelector(".texto-legenda."+cat);
         texto_legenda.style.opacity=0;
         texto_legenda.style.display="none";
+    }
+
+
+    //Caixas Drop da Questão 1
+    new Sortable(listaRespostas_r1,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-1',
+        swapClass: "palavra-drag"
+    });
+    new Sortable(r2_1_1,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-1',
+        swapClass: "palavra-drag"
+    });
+    new Sortable(r2_1_2,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-1',
+        swapClass: "palavra-drag"
+    });
+    new Sortable(r2_1_3,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-1',
+        swapClass: "palavra-drag"
+    });
+
+    //Questão 3
+    new Sortable(listaRespostas_r3,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-3',
+        swapClass: "palavra-drag"
+    });
+    new Sortable(r2_3_1,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-3',
+        swapClass: "palavra-drag"
+    });
+    new Sortable(r2_3_2,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-3',
+        swapClass: "palavra-drag"
+    });
+    new Sortable(r2_3_3,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-3',
+        swapClass: "palavra-drag"
+    });
+    new Sortable(r2_3_4,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-3',
+        swapClass: "palavra-drag"
+    });
+
+
+    function valorSelecionado(sel) {
+        var val = sel.selectedIndex;
+        var id = sel.id;   
+        if(val==0){
+            sel.classList.remove("select-respondido");
+        }else{       
+            sel.classList.add("select-respondido");
+        }        
     }
 
     

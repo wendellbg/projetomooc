@@ -121,7 +121,7 @@
                                         <p class="legenda-resposta">Opções de Resposta:</p>
                                         <div id="listaRespostas_r1" class="list-group grupo-respostas"> 
                                             <div id="opcao1_1_1" class="list-group-item cheio" draggable="true">
-                                                    <span class="palavra-resposta" name='r1_1_texto' id='r1_1' >Técnica</span>
+                                                <span class="palavra-resposta" name='r1_1_texto' id='r1_1' >Técnica</span>
                                             </div>                    
                                             <div id='opcao1_1_2' class="list-group-item cheio" draggable="true">
                                                 <span class="palavra-resposta" name='r1_2_texto' id='r1_2'>Trabalho</span>                        
@@ -388,6 +388,9 @@
         r1_4_3 = document.form_atividade_uni1.r1_4_3.value,
 		r1_4_4 = document.form_atividade_uni1.r1_4_4.value;
         
+        console.log("Respostas 1: "+r1_1_1.innerHTML+", "+r1_1_2.innerHTML);
+        console.log("respostas 2: "+r1_2_1.innerHTML+", "+r1_2_2.innerHTML+", "+r1_2_3.innerHTML);
+
         //testando se todos os exercícios (menos os checkbox) estão preenchidos.
 		if(r1_1_1==null){
 			erros++;
