@@ -5,11 +5,15 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
-		<link rel="stylesheet" href="../../css/atividades-2.css?ver=1.1" />
+		<link rel="stylesheet" href="../../css/atividades-padrao.css" />
+		<link rel="stylesheet" href="../../css/cores-mooc1.css" />
 
 		<!-- Botão de Voltar ao Topo -->
 		<script src="../../js/jquery-2.1.1.js"></script>
 		<script src="../../js/bt-topo.js"></script>
+		<script src="../../js/Sortable.js.download"></script>
+		<script src="../../js/Swap.js"></script>
+
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
@@ -97,33 +101,31 @@
 										</div>
 										<div class="area-respostas">
 											<div class="linha-respostas">
-												<div class='texto-resposta'>                                        
+												<div class='texto-resposta-maior'>                                        
 													<span class="texto-opcao">a) Ação: Ajudar o aluno a dominar ferramentas que o permita escolher uma área de interesse e possibilidades de formação.</span>
 												</div>
 												<span class="legenda-input">a)</span>
-												<div class="area-inputs caixa-drop_5_1" id='r5_1_1' name='r5_1_1' ondrop="drop(event)" ondragover="allowDrop(event)">
-													<p></p>                                         
-												</div>    
+												<div class="area-inputs caixa-drop_2 list-group " id='r5_1_1' name='r5_1_1'><div class="list-group-item vazio"></div></div>                                                                               
 											</div>
 		
 											<div class="linha-respostas">
-												<div class="texto-resposta">                                        
+												<div class="texto-resposta-maior">                                        
 													<span class="texto-opcao">b) Ação: Ajudar o aluno a encontrar informações necessárias para compreensão dos campos de atuação profissional e, assim, melhorar suas possibilidades de decisão.</span>                                       
 												</div>
 												<span class="legenda-input">b)</span>
-												<div class="area-inputs caixa-drop_5_1" id='r5_1_2' name='r5_1_2' ondrop="drop(event)" ondragover="allowDrop(event)">
-													<p></p>
-												</div>   											
+												<div class="area-inputs caixa-drop_2 list-group " id='r5_1_2' name='r5_1_2'><div class="list-group-item vazio"></div></div>
 											</div>
 
 											<div class="linha-respostas">
 												<p class="legenda-resposta">Opções de Resposta:</p>
-												<div class="area-opcoes caixa-drop_5_1" id='opcao5_1_1' ondrop="drop(event)" ondragover="allowDrop(event)">
-													<span class="palavra-resposta" name='r5_1_texto_1' id='r5_1_texto_1' draggable="true" ondragstart="drag(event)">Estratégia 'Pesquisa'</span>
-												</div>
-												<div class="area-opcoes caixa-drop_5_1" id='opcao5_1_2' ondrop="drop(event)" ondragover="allowDrop(event)">
-													<span class="palavra-resposta"  name='r5_1_texto_2' id='r5_1_texto_2' draggable="true" ondragstart="drag(event)">Estratégia 'Ferramentas'</span>
-												</div>											
+												<div id="listaRespostas_r1" class="list-group grupo-respostas"> 
+													<div id="opcao5_1_1" class="list-group-item cheio" draggable="true">
+														<span class="palavra-resposta" name='r5_1_texto_1' id='r5_1_texto_1' >Itinerários formativos</span>
+													</div>
+													<div id="opcao5_1_2" class="list-group-item cheio" draggable="true">
+														<span class="palavra-resposta" name='r5_1_texto_2' id='r5_1_texto_2' >Conjunto comum de saberes</span>
+													</div>
+												</div>									
 											</div>
 		
 										</div>                                 
@@ -139,45 +141,31 @@
 												<div class='texto-resposta linha-grande'>                                        
 													<p></p>
 													<span class="texto-opcao">Para nós, educadores, o principal papel é provocar nos estudantes a 
-														<div class="area-inputs caixa-drop_5_2" id='r5_2_1' name='r5_2_1' ondrop="drop(event)" ondragover="allowDrop(event)">
-															<p></p>                                         
-														</div>                                                                            
+														<div class="area-inputs caixa-drop_5_2 list-group " id='r5_2_1' name='r5_2_1'><div class="list-group-item vazio"></div></div>
 														e abrir todas as possibilidades. Uma ação expressiva é indicar ou apresentar 
-														<div class="area-inputs caixa-drop_5_2" id='r5_2_2' name='r5_2_2' ondrop="drop(event)" ondragover="allowDrop(event)">
-															<p></p>                                         
-														</div>                                                                            
+														<div class="area-inputs caixa-drop_5_2 list-group " id='r5_2_2' name='r5_2_2'><div class="list-group-item vazio"></div></div>                                                                           
 														de interesse do aluno, para que ele mesmo possa perguntar sobre aspectos do trabalho.
 													</span>
 													<p></p>
 													<span class="texto-opcao">
 														É importante que nossos docentes da educação básica sejam estimulados a 
-														<div class="area-inputs caixa-drop_5_2" id='r5_2_3' name='r5_2_3' ondrop="drop(event)" ondragover="allowDrop(event)">
-															<p></p>                                         
-														</div>
+														<div class="area-inputs caixa-drop_5_2 list-group " id='r5_2_3' name='r5_2_3'><div class="list-group-item vazio"></div></div>
 														tratados em suas disciplinas, com a 
-														<div class="area-inputs caixa-drop_5_2" id='r5_2_4' name='r5_2_4' ondrop="drop(event)" ondragover="allowDrop(event)">
-															<p></p>                                         
-														</div>
+														<div class="area-inputs caixa-drop_5_2 list-group " id='r5_2_4' name='r5_2_4'><div class="list-group-item vazio"></div></div>
 														ou com as 
-														<div class="area-inputs caixa-drop_5_2" id='r5_2_5' name='r5_2_5' ondrop="drop(event)" ondragover="allowDrop(event)">
-															<p></p>                                         
-														</div>
+														<div class="area-inputs caixa-drop_5_2 list-group " id='r5_2_5' name='r5_2_5'><div class="list-group-item vazio"></div></div>
 														daqueles saberes numa atividade laboral.
 													</span>
 													<p></p>                                         
 													<span class="texto-opcao">
 														Uma ação fundamental que toda escola deve implementar para os alunos das séries finais do fundamental e do ensino médio é trazer para a escola 
-														<div class="area-inputs caixa-drop_5_2" id='r5_2_6' name='r5_2_6' ondrop="drop(event)" ondragover="allowDrop(event)">
-															<p></p>                                         
-														</div>
+														<div class="area-inputs caixa-drop_5_2 list-group " id='r5_2_6' name='r5_2_6'><div class="list-group-item vazio"></div></div>
 														de ofertas de educação profissional da cidade ou da região.
 													</span>
 													<p></p>                                         
 													<span class="texto-opcao">
 														A atividade mais atrativa e despertadora de curiosidades sem fim é a 
-														<div class="area-inputs caixa-drop_5_2" id='r5_2_7' name='r5_2_7' ondrop="drop(event)" ondragover="allowDrop(event)">
-															<p></p>                                         
-														</div>
+														<div class="area-inputs caixa-drop_5_2 list-group " id='r5_2_7' name='r5_2_7'><div class="list-group-item vazio"></div></div>
 														! Conhecer professores, laboratórios e espaços de atividades, observar experimentos e demonstrações, suscitam muita curiosidade e interesse.
 													</span>
 
@@ -186,27 +174,29 @@
 
 											<div class='linha-respostas'>
 												<p class="legenda-resposta">Opções de Resposta:</p>
-												<div class="area-opcoes caixa-drop_5_3" id='opcao5_2_1' ondrop="drop(event)" ondragover="allowDrop(event)">
-													<span class="palavra-resposta" name='r5_2_texto_1' id='r5_2_texto_1' draggable="true" ondragstart="drag(event)">possibilidades de aplicação</span>
-												</div>
-												<div class="area-opcoes caixa-drop_5_3" id='opcao5_2_2' ondrop="drop(event)" ondragover="allowDrop(event)">
-													<span class="palavra-resposta" name='r5_2_texto_2' id='r5_2_texto_2' draggable="true" ondragstart="drag(event)">professores ou divulgadores</span>
-												</div>
-												<div class="area-opcoes caixa-drop_5_3" id='opcao5_2_3' ondrop="drop(event)" ondragover="allowDrop(event)">
-													<span class="palavra-resposta" name='r5_2_texto_3' id='r5_2_texto_3' draggable="true" ondragstart="drag(event)">contextualizar os saberes</span>
-												</div>
-												<div class="area-opcoes caixa-drop_5_3" id='opcao5_2_4' ondrop="drop(event)" ondragover="allowDrop(event)">
-													<span class="palavra-resposta" name='r5_2_texto_4' id='r5_2_texto_4' draggable="true" ondragstart="drag(event)">curiosidade</span>
-												</div>
-												<div class="area-opcoes caixa-drop_5_3" id='opcao5_2_5' ondrop="drop(event)" ondragover="allowDrop(event)">
-													<span class="palavra-resposta" name='r5_2_texto_5' id='r5_2_texto_5' draggable="true" ondragstart="drag(event)">visita a uma escola técnica</span>
-												</div>
-												<div class="area-opcoes caixa-drop_5_3" id='opcao5_2_6' ondrop="drop(event)" ondragover="allowDrop(event)">
-													<span class="palavra-resposta" name='r5_2_texto_6' id='r5_2_texto_6' draggable="true" ondragstart="drag(event)">profissionais da área</span>
-												</div>
-												<div class="area-opcoes caixa-drop_5_3" id='opcao5_2_7' ondrop="drop(event)" ondragover="allowDrop(event)">
-													<span class="palavra-resposta" name='r5_2_texto_7' id='r5_2_texto_7' draggable="true" ondragstart="drag(event)">realidade laboral</span>
-												</div>												
+												<div id="listaRespostas_r2" class="list-group grupo-respostas"> 
+													<div id="opcao5_2_1" class="list-group-item cheio" draggable="true">
+														<span class="palavra-resposta" name='r5_2_texto_1' id='r5_2_texto_1' >contextualizar os saberes</span>
+													</div>
+													<div id="opcao5_2_2" class="list-group-item cheio" draggable="true">
+														<span class="palavra-resposta" name='r5_2_texto_2' id='r5_2_texto_2' >curiosidade</span>
+													</div>
+													<div id="opcao5_2_3" class="list-group-item cheio" draggable="true">
+														<span class="palavra-resposta" name='r5_2_texto_3' id='r5_2_texto_3' >possibilidades de aplicação</span>
+													</div>
+													<div id="opcao5_2_4" class="list-group-item cheio" draggable="true">
+														<span class="palavra-resposta" name='r5_2_texto_4' id='r5_2_texto_4' >professores ou divulgadores</span>
+													</div>
+													<div id="opcao5_2_5" class="list-group-item cheio" draggable="true">
+														<span class="palavra-resposta" name='r5_2_texto_5' id='r5_2_texto_5' >profissionais da área</span>
+													</div>
+													<div id="opcao5_2_6" class="list-group-item cheio" draggable="true">
+														<span class="palavra-resposta" name='r5_2_texto_6' id='r5_2_texto_6' >realidade laboral</span>
+													</div>
+													<div id="opcao5_2_7" class="list-group-item cheio" draggable="true">
+														<span class="palavra-resposta" name='r5_2_texto_7' id='r5_2_texto_7' >visita a uma escola técnica</span>
+													</div>
+												</div>																						
 											</div>										
 										</div>    
 									</div> 
@@ -475,33 +465,76 @@
         }
     }
 
-    //// Eventos do Drag and Drop /////
-    var dragSrcEl = null;
+    //Caixas Drop da Questão 1
+    new Sortable(listaRespostas_r1,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-1',
+        swapClass: "palavra-drag"
+    });
+    new Sortable(r5_1_1,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-1',
+        swapClass: "palavra-drag"
+    });
+    new Sortable(r5_1_2,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-1',
+        swapClass: "palavra-drag"
+    });   
+	
+	//Caixas Drop da Questão 2
+    new Sortable(listaRespostas_r2,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-2',
+        swapClass: "palavra-drag"
+    });
+    new Sortable(r5_2_1,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-2',
+        swapClass: "palavra-drag"
+    });
+    new Sortable(r5_2_2,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-2',
+        swapClass: "palavra-drag"
+    });
+	new Sortable(r5_2_3,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-2',
+        swapClass: "palavra-drag"
+    });
+	new Sortable(r5_2_4,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-2',
+        swapClass: "palavra-drag"
+    });
+	new Sortable(r5_2_5,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-2',
+        swapClass: "palavra-drag"
+    });
+	new Sortable(r5_2_6,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-2',
+        swapClass: "palavra-drag"
+    });
+	new Sortable(r5_2_7,{
+        animation: 150,
+        swap: true,
+        group: 'respostas-questao-2',
+        swapClass: "palavra-drag"
+    });    
 
-    function allowDrop(ev) {
-        ev.preventDefault();
-    }
-
-    function drag(ev){
-        /**ev.dataTransfer.setData("text",ev.target.id); **/
-        ev.dataTransfer.setData ("src", ev.target.id);
-                    
-    }
-
-    function drop(ev){
-        
-        ev.preventDefault();
-        // var data=ev.dataTransfer.getData("text");
-        // ev.target.appendChild(document.getElementById(data));
-
-        var src = document.getElementById(ev.dataTransfer.getData ("src"));
-        var srcParent = src.parentNode;
-        var tgt = ev.currentTarget.firstElementChild;
-        
-        ev.currentTarget.replaceChild (src, tgt);
-        srcParent.appendChild (tgt);
-    }
-
-		</script>
-	</body>
+</script>
+</body>
 </html>

@@ -32,6 +32,10 @@
     font-size: 1.4em;
 }
 
+body{
+    font-family: "Affogato-Regular" !important;
+}
+
 body h2{
     font-family: "Musket-bold";
 }
