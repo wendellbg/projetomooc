@@ -66,10 +66,21 @@ html{
     text-shadow: 2px 2px 1px var(--cor-principal);
 }
 
+.enunciado-questao b.destaque-texto{
+    color: #fff;
+    text-shadow: 2px 2px 1px var(--cor-terciaria);
+}
+
 .enunciado-questao ul{
     list-style-position: inside;
     list-style: disc;
     margin-left: 20px;
+    font-size: 20px;    
+    margin-top: 20px;
+}
+
+.enunciado-questao ul li{
+    width: 95%;
 }
 .enunciado-questao p.link{
     text-align: center;
@@ -398,6 +409,30 @@ html{
 }
 .coluna-2{
     float: right;
+}
+
+/** Tabela **/
+.questao table{
+    border: 2px solid #fff;
+}
+
+.questao table td{    
+    border: 2px solid #fff;
+}
+
+.questao table td.coluna-q{
+    width: 40%;    
+}
+
+.questao table td p{
+    padding-left: 10px;
+    text-align: left;
+    line-height: 1.2em;
+}
+.questao table td p.tabela-exemplo{
+    font-size: 0.8em;
+    color: #ccc;
+    
 }
 
 .caixa-drop_2_3b .campo-inativo:placeholder-shown{
