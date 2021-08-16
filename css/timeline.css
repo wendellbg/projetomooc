@@ -67,13 +67,17 @@
         border-radius: 1em;
     }
 
-    .icone-audio img:hover, .icone-play img:hover{
+    .icone-audio img:hover{
         background-color: #ebebeb;
         border: 2px solid #fec13b;
         border-radius: 1em;
         width: 10vw;
         height:10vw;
         cursor: pointer;
+    }
+
+    .icone-pause, .icone-play{
+        border: none !important;
     }
 
     .legenda-icone{
