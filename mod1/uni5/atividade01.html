@@ -289,10 +289,6 @@
 		r5_2_5 = document.querySelector("#r5_2_5 span.palavra-resposta"),
 		r5_2_6 = document.querySelector("#r5_2_6 span.palavra-resposta"),
 		r5_2_7 = document.querySelector("#r5_2_7 span.palavra-resposta");
-		
-		//Linhas só pra testar as respostas
-		// console.log("\nQuestão 1: "+r1_1_1.innerHTML+", "+r1_1_2.innerHTML+"\nQuestão 2: "+r1_2_1.innerHTML+", "+r1_2_2.innerHTML+", "+r1_2_3.innerHTML);
-		// console.log("\nQuestão 3: "+r1_3_1+", "+r1_3_2+", "+r1_3_3+", "+r1_3_4+"\nQuestão 4: "+r1_4_1+", "+r1_4_2+", "+r1_4_3+", "+r1_4_4);
 
 		//testando se todos os exercícios (menos os checkbox) estão preenchidos.
 		if(r5_1_1==null){
@@ -331,6 +327,12 @@
 				return false;
 			}			
 		}
+
+				
+		//Linhas só pra testar as respostas
+		console.log("\nResposta 1: "+r5_1_1.innerHTML+", "+r5_1_2.innerHTML);
+		console.log("\nResposta 2: "+r5_2_1.innerHTML+", "+r5_2_2.innerHTML+", "+r5_2_3.innerHTML+", "+r5_2_4.innerHTML+", "+r5_2_5.innerHTML+", "+r5_2_6.innerHTML+", "+r5_2_7.innerHTML);
+
 	};
 
 
@@ -443,7 +445,7 @@
             if(revisao_vista==1){
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_revisao_1;
             }else if(quant_respostas>=max_quant_tentativas){
-                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../encerramento/index.html'>PROSSEGUIR &#10095;</a>";
             }else if(nota_atividade==10){
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a nota máxima!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
             }else if(nota_atividade>=6){

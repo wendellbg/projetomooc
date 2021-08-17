@@ -266,7 +266,19 @@
 		},{
 			"identificador": "uni4_tela05",
 			"nome": "Concluindo"
-		}]
+		}],
+		"atividades":{
+			"identificador": "uni4_ativ1",
+			"nomeAtividade": "Avaliação - Unidade 4",				
+			"questoes": [
+				{
+					"tipoQuestaoString": "MODERADA",					
+					"identificador": "r4_1",
+					"tipoEnvio": "TEXTO",
+					"enunciado": "Elaboração de uma proposta para o itinerário formativo \"Formação Técnica e Profissional\""
+				}
+			]				
+		}
 	},{		
 		"identificador": "mod1_uni5",
 		"nome": "Possibilidades de escolha de itinerário técnico e profissional para o aluno",

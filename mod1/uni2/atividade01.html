@@ -452,7 +452,6 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
-<script src="../../js/DragDropTouch.js"></script>
 <script src="../../js/funcoes-atividades.js"></script>
 
 <script>
@@ -469,9 +468,8 @@
         if(revisao_vista==1){
             document.querySelector("#botao-atividade-uni2").style.display="none";
         } 
-    }
-    
-    var vetor_r2_2=[];
+    };
+        
     var resposta_r2_3="", resposta_r2_4;
     var campos_ch = [document.querySelector("#r2_3_1_texto"), document.querySelector("#r2_3_2_texto"), document.querySelector("#r2_3_3_texto"), document.querySelector("#r2_3_4_texto")];
     //var campos_comp = [document.querySelector("#r2_3_1"), document.querySelector("#r2_3_2"), document.querySelector("#r2_3_3"), document.querySelector("#r2_3_4")];
@@ -509,49 +507,39 @@
 			erros++;
 		}        
 
-        //Para a questão 2, as respostas ficarão em um vetor
+        //Questão 2, select
+        r2_2_a = document.form_atividade_uni2.r2_2_a.value;
+        r2_2_b = document.form_atividade_uni2.r2_2_b.value;
+        r2_2_c = document.form_atividade_uni2.r2_2_c.value;
+        r2_2_d = document.form_atividade_uni2.r2_2_d.value;
+        r2_2_e = document.form_atividade_uni2.r2_2_e.value;
+        r2_2_f = document.form_atividade_uni2.r2_2_f.value;
+        r2_2_g = document.form_atividade_uni2.r2_2_g.value;
+        r2_2_h = document.form_atividade_uni2.r2_2_h.value;
+        r2_2_i = document.form_atividade_uni2.r2_2_i.value;
+        r2_2_j = document.form_atividade_uni2.r2_2_j.value;
         
-        for(let i=1;i<=20; i++){                      
-            let erros_radios=0;
-            let name_radio = "r2_2_"+i;
-            //a variável pega o radio pelo nome, recebendo um vetor
-            let r3_radio = document.getElementsByName(name_radio);           
-            //console.log("teste="+name_radio+" pos="+i+" elemento="+r3_radio);
-            //este for faz a varredura das 5 opções de cada alternativa
-            for(let j=0;j<5;j++){
-                //se achar algum marcado, já adiciona o valor da categoria para o vetor de respostas
-                if(r3_radio[j].checked){
-                    let nome_cat;
-                    switch (r3_radio[j].value){
-                        case("cat1"):
-                            nome_cat ="Linguagem e suas tecnologias.";
-                            break;
-                        case("cat2"):
-                            nome_cat ="Matemática e suas tecnologias.";
-                            break;
-                        case("cat3"):
-                            nome_cat ="Ciências Humanas e Sociais Aplicadas.";
-                            break;
-                        case("cat4"):
-                            nome_cat ="Ciências da Natureza e suas tecnologias.";
-                            break;
-                        case("cat5"):
-                            nome_cat ="Formação Técnica e Profissional.";
-                            break;
-                    }
-                    vetor_r2_2[i]=nome_cat;                    
-                    //console.log("opção "+i+" valor: "+vetor_r2_2[i]);
-                }else{                    
-                    //quando a opção não está marcado, soma o contador de erros interno
-                    erros_radios++;                
-                }
-            }
-            if(erros_radios==5){
-                //se o contador de erros interno for 5, significa que nenhuma opção foi marcada, então altera a variável de erros geral
-                //console.log("opção "+i+" não marcado");   
-                erros++;                 
-            }                       
-        };
+        if(r2_2_a==""){
+            erros++;
+        }else if(r2_2_b==""){
+            erros++;
+        }else if(r2_2_c==""){
+            erros++;
+        }else if(r2_2_d==""){
+            erros++;
+        }else if(r2_2_e==""){
+            erros++;
+        }else if(r2_2_f==""){
+            erros++;
+        }else if(r2_2_g==""){
+            erros++;
+        }else if(r2_2_h==""){
+            erros++;
+        }else if(r2_2_i==""){
+            erros++;
+        }else if(r2_2_j==""){
+            erros++;
+        }
 		
         //Para a atividade 3, vamos avaliar o total primeiro. Se der menos que 2400, já conta como erro
         resposta_r2_3="Itinerários: \n";
@@ -577,22 +565,25 @@
                         let valor_ch = document.querySelector("#"+nome_input_ch+"_texto").value;
                         resposta_r2_3 = resposta_r2_3+"\n"+texto_card+": "+valor_ch+" horas";                        
                     }
-                } else{
+                }else{
                     //console.log("Campo de ch vazio");
                 }                
             } 
             //r2_3_1 = document.querySelector("#r2_3_1 span.palavra-resposta");
         }        
-		//console.log("total de horas: "+total);
-        //console.log(resposta_r2_3);
-
+		//console.log("total de horas: "+total);        
+      
         //aqui o texto da atividade 4
         resposta_r2_4 = document.form_atividade_uni2.r2_4_texto.value;
-        if(r2_4_texto==""){
+        if(resposta_r2_4==""){
             erros++;            
-        }else{
-            //console.log("Texto da 4 preenchido: "+resposta_r2_4);            
         }
+
+        console.log("Resposta 1: "+r2_1_1+", "+r2_1_2+", "+r2_1_3);
+        console.log("Resposta 2: "+r2_2_a+", "+r2_2_b+", "+r2_2_c+", "+r2_2_d+", "+r2_2_e+", "+r2_2_f+", "+r2_2_g+", "+r2_2_h+", "+r2_2_i+", "+r2_2_j);
+        console.log("Resposta 3: "+resposta_r2_3);
+        console.log("Resposta 4: "+resposta_r2_4);
+
 
 		if(erros>0){
             //caso algum não esteja preenchido, exibe mensagem de erro
@@ -611,7 +602,6 @@
 			}			
 		}
 	}
-
 
 	//Depois que verifica as tentativas de resposta, verifica as respostas salvas;
 	window .addEventListener( "evObtemDadosRespostaAtividade" , resultadoObtemRespostaAtividade, false );
@@ -673,26 +663,16 @@
                     },{                    
                         "identificador": "r2_2",                    
                         "gabaritos": [
-                            { "chave": "r2_2_1", "valor": vetor_r2_2[1]},
-                            { "chave": "r2_2_2", "valor": vetor_r2_2[2]},
-                            { "chave": "r2_2_3", "valor": vetor_r2_2[3]},
-                            { "chave": "r2_2_4", "valor": vetor_r2_2[4]},
-                            { "chave": "r2_2_5", "valor": vetor_r2_2[5]},
-                            { "chave": "r2_2_6", "valor": vetor_r2_2[6]},
-                            { "chave": "r2_2_7", "valor": vetor_r2_2[7]},
-                            { "chave": "r2_2_8", "valor": vetor_r2_2[8]},
-                            { "chave": "r2_2_9", "valor": vetor_r2_2[9]},
-                            { "chave": "r2_2_10", "valor": vetor_r2_2[10]},
-                            { "chave": "r2_2_11", "valor": vetor_r2_2[11]},
-                            { "chave": "r2_2_12", "valor": vetor_r2_2[12]},
-                            { "chave": "r2_2_13", "valor": vetor_r2_2[13]},
-                            { "chave": "r2_2_14", "valor": vetor_r2_2[14]},
-                            { "chave": "r2_2_15", "valor": vetor_r2_2[15]},
-                            { "chave": "r2_2_16", "valor": vetor_r2_2[16]},
-                            { "chave": "r2_2_17", "valor": vetor_r2_2[17]},
-                            { "chave": "r2_2_18", "valor": vetor_r2_2[18]},
-                            { "chave": "r2_2_19", "valor": vetor_r2_2[19]},
-                            { "chave": "r2_2_20", "valor": vetor_r2_2[20]}							
+                            { "chave": "r2_2_1", "valor": r2_2_a},
+                            { "chave": "r2_2_2", "valor": r2_2_b},
+                            { "chave": "r2_2_3", "valor": r2_2_c},
+                            { "chave": "r2_2_4", "valor": r2_2_d},
+                            { "chave": "r2_2_5", "valor": r2_2_e},
+                            { "chave": "r2_2_6", "valor": r2_2_f},
+                            { "chave": "r2_2_7", "valor": r2_2_g},
+                            { "chave": "r2_2_8", "valor": r2_2_h},
+                            { "chave": "r2_2_9", "valor": r2_2_i},
+                            { "chave": "r2_2_10", "valor":r2_2_j}                            						
                         ]
                     }
                 ]
