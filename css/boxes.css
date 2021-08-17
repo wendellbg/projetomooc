@@ -448,6 +448,7 @@ h3.texto-central b{
 	border-color: #FEC13B;
 }
 
+.box-info .bg-green,
 .box-info .bg-red,
 .box-info .bg-blue,
 .box-info .bg-yellow,
@@ -458,6 +459,10 @@ h3.texto-central b{
 	margin-bottom: 5%;
 	width: 80%;
 
+}
+
+.box-info .bg-green{
+	background-color: #2db5b9;
 }
 
 .box-info .bg-blue{
@@ -505,7 +510,8 @@ h3.texto-central b{
 	}
 
 	.box-info .bg-red,
-	.box-info .bg-blue,	
+	.box-info .bg-blue,
+	.box-info .bg-green,
 	.box-info .bg-yellow,
 	.box-info .bg-orange{
 		width: 100% !important;
