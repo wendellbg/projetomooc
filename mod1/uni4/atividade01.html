@@ -44,10 +44,10 @@
 	</header>
 
 		<!-- Main -->
-			<section id="main">
-				<div class="inner">
+		<section id="main">
+			<div class="inner">
 				<!-- One -->
-					<section id="one" class="wrapper style1">
+				<section id="one" class="wrapper style1">
 						<div class="botao-sumario">				
 							<a class="link-progresso" href="../sumario.html"><i class="fas fa-tasks"></i> PROGRESSO</a>
 						</div>
@@ -77,95 +77,118 @@
   							</div>	
 						</header>
 						
-						<div class="content">							
-							<div class="questao">
-                                <div class="titulo-questao">Proposta</div>
-                                <div class="enunciado-questao">                                    
-									<span>Elaboração de uma proposta para o itinerário formativo "Formação Técnica e Profissional" - Parte 1</span>
-									<p>Na avaliação da unidade 3, vimos as principais atividades econômicas de sua região, inclusive possibilidades ainda não existentes. </p>
-									<p>A proposta desta atividade é que, com base nas leituras do material deste curso, você elabore um itinerário de formação técnica e profissional <b>que ainda não exista em sua região</b>, considerando:</p>										
-									<ul>
-										<li>O contexto econômico da sua região;</li>									
-										<li>Os cursos técnicos de nível médio já existentes na sua região;</li>
-										<li>As possibilidades formativas no Catálogo Nacional de Cursos Técnicos e no guia de Cursos FIC do Pronatec, bem como em programas de Aprendizagem no ambiente laboral;</li>
-									</ul>
-									<p>O itinerário pode ser composto, conforme estudamos aqui, por curso técnico, ou por qualificação profissional. Utilize modelo de itinerário disponível <a class='link-texto' href="../../downloads/MODELO_ATIVIDADE_UNIDADE_4.pdf" target="_blank">no documento que se encontra em anexo aqui</a>.</p>	
-									<!-- <p>Para postar no fórum acesse o Menu de Usuário
-										<span class="texto-alternativo-1"> pelo <u>painel cinza do lado direito da tela</u> </span>
-										<span class='texto-alternativo-2'> pelo ícone <img src="../../img/uni0/icone_Menu.png" style="margin-bottom: -20px;""> no topo da página</span>
-										e clique no ícone "Fórum" <img src="../../img/uni0/icone_Forum.png" style="margin-bottom: -20px;"></p>									
-									<p> Depois volte para a página onde parou pelo ícone "Início do Curso" <img src="../../img/uni0/icone_Inicio.png" style="margin-bottom: -20px;"></p>
-									<p>Para postar seu arquivo no fórum, <a class='link-texto' href="tutorial_forum.html" target="_blank">siga este tutorial</a></p> -->
-                                </div>
-                            </div> 
+						<!-- Conteúdo -->
+						<div class="content">
+							<div class="atividade" id='atividade-uni4'>
+								<div id='mensagem-alerta'>
+								</div>
+								<div id='mensagem-tentativas' class="atividades">                        
+								</div>
+								<form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni4" method="POST">
+														
+									<div class="questao">
+										<div class="titulo-questao">Proposta</div>
+										<div class="enunciado-questao">                                    
+											<span>Elaboração de uma proposta para o itinerário formativo "Formação Técnica e Profissional" - Parte 1</span>
+											<p>Na avaliação da unidade 3, vimos as principais atividades econômicas de sua região, inclusive possibilidades ainda não existentes. </p>
+											<p>A proposta desta atividade é que, com base nas leituras do material deste curso, você elabore um itinerário de formação técnica e profissional <b>que ainda não exista em sua região</b>, considerando:</p>										
+											<ul>
+												<li>O contexto econômico da sua região;</li>									
+												<li>Os cursos técnicos de nível médio já existentes na sua região;</li>
+												<li>As possibilidades formativas no Catálogo Nacional de Cursos Técnicos e no guia de Cursos FIC do Pronatec, bem como em programas de Aprendizagem no ambiente laboral;</li>
+											</ul>
+											<p>O itinerário pode ser composto, conforme estudamos aqui, por curso técnico, ou por qualificação profissional. Utilize modelo de itinerário disponível <a class='link-texto' href="../../downloads/MODELO_ATIVIDADE_UNIDADE_4.pdf" target="_blank">no documento que se encontra em anexo aqui</a>.</p>	
+											<!-- <p>Para postar no fórum acesse o Menu de Usuário
+												<span class="texto-alternativo-1"> pelo <u>painel cinza do lado direito da tela</u> </span>
+												<span class='texto-alternativo-2'> pelo ícone <img src="../../img/uni0/icone_Menu.png" style="margin-bottom: -20px;""> no topo da página</span>
+												e clique no ícone "Fórum" <img src="../../img/uni0/icone_Forum.png" style="margin-bottom: -20px;"></p>									
+											<p> Depois volte para a página onde parou pelo ícone "Início do Curso" <img src="../../img/uni0/icone_Inicio.png" style="margin-bottom: -20px;"></p>
+											<p>Para postar seu arquivo no fórum, <a class='link-texto' href="tutorial_forum.html" target="_blank">siga este tutorial</a></p> -->
+										</div>
+									</div> 
 
-							<div class="questao">
-								<div class="titulo-questao">Itinerário</div>
-								<div class="enunciado-questao">
-									<span></span>
-								</div>
-								<div class="area-respostas">
-                                    <div class="linha-respostas">
-                                        <div class='texto-resposta linha-grande'>                                        
-                                            <table>
-												<tr>
-													<td class="coluna-q">
-														<p>Nome do Itinerário:</p>
-													</td>
-													<td class="coluna-r">
-														<input type="text" maxlength="3" placeholder="Digite aqui" class='input-texto' id=''>
-													</td>
-												</tr>
-												<tr>
-													<td class="coluna-q">
-														<p>Nome da Formação:</p>
-													</td>
-													<td class="coluna-r"></td>
-												</tr>
-												<tr>
-													<td class="coluna-q">
-														<p>Carga horária da BNCC:</p>
-													</td>
-													<td class="coluna-r"></td>
-												</tr>
-												<tr>
-													<td class="coluna-q">
-														<p>Curso(s) que comporão o itinerário e sua carga horária:</p>
-														<p class="tabela-exemplo">(Curso Técnico em ..., XXX horas; 
-														ou Curso de Qualificação Profissional em ..., XXX horas + Curso de Qualificação Profissional em ..., XXX horas + etc.)</p>
-													</td>
-													<td class="coluna-r">
-														<textarea></textarea>
-													</td>
-												</tr>
-												<tr>
-													<td class="coluna-q">
-														<p>Oferta própria ou em parceria?</p>
-														<p class="tabela-exemplo">(Será ofertado pela própria escola ou por outra instituição?)</p>
-													</td>
-													<td class="coluna-r"></td>
-												</tr>
-												<tr>
-													<td class="coluna-q">
-														<p>Haverá carga horária para projetos e atividades diversas? Quais? Qual a carga horária destas? Indicar a carga horária.</p>
-														<p class="tabela-exemplo">(Projeto(s) Integrador(es), XXX horas;
-														Projeto de Extensão, XXX horas;
-														Estágio Curricular, XXX horas;
-														Outros...)</p>
-													</td>
-													<td class="coluna-r"></td>
-												</tr>
-												<tr>
-													<td class="coluna-q">
-														<p>Carga horária total:</p>
-													</td>
-													<td class="coluna-r"></td>
-												</tr>
-											</table>											
-                                            
-                                        </div>                                                                                
-                                    </div>
-								</div>
+									<div class="questao">
+										<div class="titulo-questao">Itinerário</div>
+										<div class="enunciado-questao">
+											<span></span>
+										</div>
+										<div class="area-respostas">
+											<div class="linha-respostas">
+												<div class='texto-resposta linha-grande'>                                        
+													<table>
+														<tr>
+															<td class="coluna-q">
+																<p>Nome do Itinerário:</p>
+															</td>
+															<td class="coluna-r">
+																<textarea id="r4_1_1" name="r4_1_1" onfocus="init(this);" placeholder="Digite aqui" rows="1" required pattern=".*\S.*"></textarea>														
+															</td>
+														</tr>
+														<tr>
+															<td class="coluna-q">
+																<p>Nome da Formação:</p>
+															</td>
+															<td class="coluna-r">
+																<textarea id="r4_1_2"name="r4_1_2" onfocus="init(this);" placeholder="Digite aqui" rows="1" required pattern=".*\S.*"></textarea>														
+															</td>
+														</tr>
+														<tr>
+															<td class="coluna-q">
+																<p>Carga horária da BNCC:</p>
+															</td>
+															<td class="coluna-r">
+																<textarea id="r4_1_3" name="r4_1_3" onfocus="init(this);" placeholder="Digite aqui" rows="1" required pattern=".*\S.*"></textarea>
+															</td>
+														</tr>
+														<tr>
+															<td class="coluna-q">
+																<p>Curso(s) que comporão o itinerário e sua carga horária:</p>
+																<p class="tabela-exemplo">(Curso Técnico em ..., XXX horas; 
+																ou Curso de Qualificação Profissional em ..., XXX horas + Curso de Qualificação Profissional em ..., XXX horas + etc.)</p>
+															</td>
+															<td class="coluna-r">
+																<textarea id="r4_1_4" name="r4_1_4" onfocus="init(this);" placeholder="Digite aqui" rows="1" required pattern=".*\S.*"></textarea>
+															</td>
+														</tr>
+														<tr>
+															<td class="coluna-q">
+																<p>Oferta própria ou em parceria?</p>
+																<p class="tabela-exemplo">(Será ofertado pela própria escola ou por outra instituição?)</p>
+															</td>
+															<td class="coluna-r">
+																<textarea id="r4_1_5" name="r4_1_5" onfocus="init(this);" placeholder="Digite aqui" rows="1" required pattern=".*\S.*"></textarea>
+															</td>
+														</tr>
+														<tr>
+															<td class="coluna-q">
+																<p>Haverá carga horária para projetos e atividades diversas? Quais? Qual a carga horária destas? Indicar a carga horária.</p>
+																<p class="tabela-exemplo">(Projeto(s) Integrador(es), XXX horas;
+																Projeto de Extensão, XXX horas;
+																Estágio Curricular, XXX horas;
+																Outros...)</p>
+															</td>
+															<td class="coluna-r">
+																<textarea id="r4_1_6" name="r4_1_6" onfocus="init(this);" placeholder="Digite aqui" rows="1" required pattern=".*\S.*"></textarea>
+															</td>
+														</tr>
+														<tr>
+															<td class="coluna-q">
+																<p>Carga horária total:</p>
+															</td>
+															<td class="coluna-r">
+																<textarea id="r4_1_7" name="r4_1_7" onfocus="init(this);" placeholder="Digite aqui" rows="1" required pattern=".*\S.*"></textarea>
+															</td>
+														</tr>
+													</table>											
+													
+												</div>                                                                                
+											</div>
+										</div>
+									</div>
+									<div class="botao-atividade">
+										<button type="button" id="botao-atividade-uni4" onclick="salvarDados()" ><i class="fas fa-check"></i> ENVIAR RESPOSTAS</button>
+									</div>							
+								</form>
 							</div>
 
 						</div>
@@ -174,13 +197,12 @@
 							<div class='navegacao'>
 								<div class="bt-topo">
 									<a href="#"><i class="fas fa-angle-up"></i></a>
-								</div>								
-								<div>
-									<button class="bt-avanca" type="button"><a href="../uni5/index.html">UNIDADE 5 &#10095;</a></button>
 								</div>
-									
-							</div>			
-							
+								<!-- <div>
+									<button class="bt-avanca" type="button"><a href="../uni2/tela01.html">IR PARA UNIDADE 2 ></a></button>
+								</div>                    -->
+			
+							</div>            
 							<!--Rodapé-->
 							<hr/>
 							<div class="row rodape">
@@ -209,82 +231,227 @@
 			<footer id="footer">              
 			</footer>
 
-		<script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>	
-		<script>
-			console.clear(screen);
-		
-			var API = new BridgeRestApi();		
-			var id_unidade = "mod1_uni4";
-			var id_slide = "uni4/tela06.html";
-			var progresso = 100;
-			var progressoSalvo;
-			var porcentagem = "porcentagemUni4";
+			<script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>			
+			<script src="../../js/funcoes-atividades.js"></script>
+			<script>
+				console.clear(screen);
 			
-			//Obtendo dados curso
-			window.addEventListener('load', function(){            
-				API.obterDadosCurso();
-			})
+				var API = new BridgeRestApi();
+				var id_unidade = "mod1_uni4";//modificar
+				var id_slide = "mod1/uni4/atividade01.html";//modificar
+				var id_atividade = "uni4_ativ1";//modificar
+				var revisao_unidade = "uni4_revisao";//modificar
+				var texto_mensagem_fim="<br>Você pode prosseguir para a próxima atividade.<br><br><a class='botao-mensagem' href='../uni5/index.html'>PRÓXIMA UNIDADE &#10095;</a><br>";
 			
-			window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
-			function resultadoObterDadosCurso(evento){            
-				console.log(evento.detail); 
-				//antes de registrar a porcentagem, verifica a porcentagem atual:
-				API.obterDadosGenericos(porcentagem);				                
-			}
-
-
-			//Quando obtém a porcentagem da unidade em questão, executa esta função
-			window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
-			function resultadoObtemDadosGenericos (evento){
-				console.log(evento.detail);
-
-				//testando se o status é 200, unidade já iniciada
-				if(evento.detail["status"]==200){
-					var i=0;
-					var cont = 0;
-					//O evento retorna um vetor. É preciso pesquisar em qual posição está a porcentagem da unidade atual
-					while(i==0){						
-						if(evento.detail["data"][cont]["chave"]==porcentagem){
-							console.log("achou na posição "+cont);
-							console.log(evento.detail["data"][cont]["chave"]);
-							i=1;
-						}else{							
-							console.log("não encontrou na posição "+cont);							
-							console.log(evento.detail["data"][cont]["chave"]);	
-							cont=cont+1;													
-							if(cont==10){
-								i=1;	
-							}
-						}
-						
+				function verifica_revisao(){
+					if(revisao_vista==1){
+						document.querySelector("#botao-atividade-uni4").style.display="none";
+					} 
+				}
+			
+				//Etapa 1: carregamento da página
+				window.addEventListener('load', function(){
+					console.log("carregando a página");
+					API.obterDadosGenericos("quant_"+id_atividade);        
+				});
+			
+				/*************** Verificando se todas as respostas foram enviadas. *****/
+				var botao = document.getElementById("botao-atividade-uni4");//modificar
+				
+				//Etapa 3: Enviando formulário
+				function salvarDados(){
+					nota_atividade_nova=0;
+					nota_atividade=0;
+					quant_respostas=0; 
+					revisao_teste=0;       
+					erros=0;
+			
+					//aqui vai pegar os valores de cada exercício.					
+					r4_1_1 = document.form_atividade_uni4.r4_1_1.value,        
+					r4_1_2 = document.form_atividade_uni4.r4_1_2.value,					
+					r4_1_3 = document.form_atividade_uni4.r4_1_3.value,
+					r4_1_4 = document.form_atividade_uni4.r4_1_4.value,
+					r4_1_5 = document.form_atividade_uni4.r4_1_5.value,
+					r4_1_6 = document.form_atividade_uni4.r4_1_6.value,
+					r4_1_7 = document.form_atividade_uni4.r4_1_7.value;
+					
+					//testando se todos os exercícios (menos os checkbox) estão preenchidos.
+					if(r4_1_1==""){
+						erros++;
+					}else if(r4_1_2==""){
+						erros++;
+					}else if(r4_1_3==""){
+						erros++;
+					}else if(r4_1_4==""){
+						erros++;
+					}else if(r4_1_5==""){
+						erros++;
+					}else if(r4_1_6==""){
+						erros++;
+					}else if(r4_1_7==""){
+						erros++;
 					}
+
+					//Testando a resposta completa:
+					resposta_completa = "\n\nNome do Itinerário:\n"+r4_1_1;
+					resposta_completa += "\n\nNome da Formação:\n"+r4_1_2;
+					resposta_completa += "\n\nCarga horária da BNCC:\n"+r4_1_3;
+					resposta_completa += "\n\nCurso(s) que comporão o itinerário e sua carga horária:\n"+r4_1_4;
+					resposta_completa += "\n\nOferta própria ou em parceria?\n"+r4_1_5;
+					resposta_completa += "\n\nHaverá carga horária para projetos e atividades diversas? Quais? Qual a carga horária destas? Indicar a carga horária.\n"+r4_1_6;
+					resposta_completa += "\n\nCarga horária total:\n"+r4_1_7;
 					
-					//depois que encontrar a posição certa, verifica o progresso atual
-					progressoSalvo = evento.detail["data"][cont]["valor"];
-					console.log("Valor de Porcentagem atual: "+progressoSalvo);
-					
-					if(progressoSalvo < progresso){
-						//registrando a porcentagem da Unidade em questão
-						API.registrarDadosGenericos(porcentagem,progresso);
-						console.log('Registrando nova porcentagem: '+progresso); 						
+					console.log("Resposta completa: "+resposta_completa);					
+			
+					if(erros>0){
+						//caso algum não esteja preenchido, exibe mensagem de erro
+						mensagem.className = "mensagem-alerta";
+						mensagem.textContent = "Por favor preencha todos os campos";
+						mensagem.style.display = "inline-block";
+						window.scrollTo(0, 0);
+						return false;
 					}else{
-						//Se o cursista estiver revendo a tela, o progresso Salvo será maior, então não altera nada.
-						console.log("Porcentagem não alterada.");
+						//console.log("\nChecando respostas"+id_atividade);			            
+						//verificando qual tentativa é esta.
+						envio=1;
+						verificando_tentativas("quant_"+id_atividade);            
+						if(erros>0){
+							return false;
+						}			
 					}
-					
-				}else if(evento.detail["status"]==412){
-					//se for status 400, inicia a chave da porcentagem da unidade em questão
-					console.log("Inicializando a porcentagem da unidade");
-					API.registrarDadosGenericos(porcentagem,17);
-				}				
-			};
+				};
+			
+				//Depois que verifica as tentativas de resposta, verifica as respostas salvas;
+				window .addEventListener( "evObtemDadosRespostaAtividade" , resultadoObtemRespostaAtividade, false );
+				function resultadoObtemRespostaAtividade(evento){
+					//console.log("\nObtendo as respostas: ");
+					console.log("Status do evento: "+evento.detail['status']);          
+					//verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
+					if(evento.detail["status"]=="200"){           
+						nota_atividade = evento.detail.data.nota;
+						//console.log("Voltando para a função principal. Quant respostas: "+quant_respostas+" e max: "+max_quant_tentativas);            
+						texto_mensagem_nota="<br>Sua nota mais alta é "+nota_atividade;            
+						var texto_mensagem_total="";
+						texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+texto_mensagem_revisao_0;         
+						verifica_revisao();
+						if(revisao_vista==1){
+							texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+texto_mensagem_revisao_1;         
+						}else if(quant_respostas>=max_quant_tentativas){
+							console.log("\n\nMax de mensagens aqui");
+							//Já atingiu o máximo de tentativas
+							if(envio==1){
+								console.log("\n\nEnvio=1");
+								mensagem.className = "mensagem-alerta";
+								mensagem.innerHTML = "Você já fez suas "+max_quant_tentativas+" tentativas.";
+								mensagem.style.display = "inline-block";                                     
+							}
+							texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni5/index.html'>PROSSEGUIR &#10095;</a><p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                                
+							
+							erros++;
+						}else if(nota_atividade==10){
+							console.log("\nNota 10 aqui");
+							texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a nota máxima!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
+						}else if(nota_atividade>=6){
+							console.log("\nAtingiu a média aqui");
+							texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a !<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                
+						}
+						else{
+							texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você deve atingir a média ou fazer as três tentativas para poder ver o gabarito."+texto_mensagem_fim;
+						}            
+						mensagem_tentativas.innerHTML=texto_mensagem_total;            
+						window.scrollTo(0, 0);
+					}
+					if(erros==0){       
+						//se ainda não tiver enviado as respostas, ou se for dentro do máximio de tentativas,
+						// registra as re respostas com as funções da API:
+						console.log("Registrando respostas:");
+						console.log(evento.detail);
+						API.registrarRespostaAtividade({
+							"identificador": "uni4_ativ1",
+                			"questoes": [{                        
+                        		"identificador": "r4_1",                    
+                        		"texto": resposta_completa
+                    		}]
+						});           
+					}        	
+				};
+			
+				//função de controle, pra exibir no console o resultado do envio das respostas (registraRespostaAtividade)
+				window .addEventListener( "evRegistraRespostaAtividade" ,resultadoRegistrarRespostaAtividade, false );
+				function resultadoRegistrarRespostaAtividade (evento){
+					console .log(evento.detail);
+					nota_atividade_nova= evento.detail.data.notaAtividade;
+					if(erros==0){
+						//se não houver erro, exibe mensagem de OK
+						//console.log("Aqui envia uma nova tentativa, são "+quant_respostas+" salvas");
+						mensagem.className = "mensagem-ok";
+						mensagem.style.display ="inline-block";			
+						if(nota_atividade_nova>nota_atividade){
+							nota_atividade=nota_atividade_nova;
+						}
+						//esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
+						mensagem.innerHTML="Dados Enviados com sucesso!<br />";
+						texto_mensagem_nota="<br />Sua nota foi: "+nota_atividade_nova+"<br />Sua nota mais alta nesta atividade é: "+nota_atividade;
+						let texto_mensagem_total="";
+						verifica_revisao();
+						if(revisao_vista==1){
+							texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_revisao_1;
+						}else if(quant_respostas>=max_quant_tentativas){
+							texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni5/index.html'>PROSSEGUIR &#10095;</a>";
+						}else if(nota_atividade==10){
+							texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a nota máxima!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
+						}else if(nota_atividade>=6){
+							texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_revisao_0+texto_mensagem_fim;
+						}
+						else{
+							texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você deve atingir a média ou fazer as três tentativas para poder ver o gabarito."+texto_mensagem_fim;
+						}            
+						
+						mensagem_tentativas.innerHTML=texto_mensagem_total;            
+						//"Ocorreu tudo certo. Tem que aparecer o link
+						window.scrollTo(0, 0);
+					}else{
+						//caso algum não esteja preenchido, exibe mensagem de erro
+						mensagem.className = "mensagem-alerta";
+						mensagem.innerHTML = "Ocorreu algum erro! Tente Novamente...";
+						mensagem.style.display = "inline-block";
+						window.scrollTo(0, 0);
+					}
+				}
 
-			window.addEventListener('evObtemRegistraDadosGenericos', resultadoRegistrarDadosGenericos, false);
-			function resultadoRegistrarDadosGenericos (evento){
-				console.log("Verificando porcentagem registrada");
-				console.log(evento.detail);
-			};
 
-		</script>
+				//Funções para aumentar os textarea automaticamente
+				var observe;
+				if (window.attachEvent) {
+					observe = function (element, event, handler) {
+						element.attachEvent('on'+event, handler);
+					};
+				}
+				else {
+					observe = function (element, event, handler) {
+						element.addEventListener(event, handler, false);
+					};
+				}
+				function init (elemento) {
+					var text = elemento;
+					function resize () {
+						text.style.height = 'auto';
+						text.style.height = text.scrollHeight+'px';
+					}
+					/* 0-timeout to get the already changed text */
+					function delayedResize () {
+						window.setTimeout(resize, 0);
+					}
+					observe(text, 'change',  resize);
+					observe(text, 'cut',     delayedResize);
+					observe(text, 'paste',   delayedResize);
+					observe(text, 'drop',    delayedResize);
+					observe(text, 'keydown', delayedResize);
+
+					text.focus();
+					text.select();
+					resize();
+				}
+			</script>
 	</body>
 </html>

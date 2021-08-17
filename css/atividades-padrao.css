@@ -418,6 +418,7 @@ html{
 
 .questao table td{    
     border: 2px solid #fff;
+    vertical-align: middle;
 }
 
 .questao table td.coluna-q{
@@ -433,6 +434,35 @@ html{
     font-size: 0.8em;
     color: #ccc;
     
+}
+
+.questao table td.coluna-r{
+    vertical-align: top;
+}
+
+.questao table td.coluna-r textarea{
+    resize: none;
+    width: 90%;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    overflow: hidden;
+    padding: 0.5em;
+    color: var(--cor-secundaria);
+    font-size: 1em;
+    border-radius:8px; 
+    border: 4px solid var(--cor-secundaria);    
+}
+
+.questao table td.coluna-r textarea:not(:placeholder-shown){
+    border: 4px solid var(--cor-principal);
+
+}
+
+.questao table td.coluna-r textarea:hover, .questao table td.coluna-r textarea:focus{
+    outline: none;
+    border: 4px solid var(--cor-principal);
 }
 
 .caixa-drop_2_3b .campo-inativo:placeholder-shown{
@@ -561,7 +591,8 @@ Caixas de Select
  .grupo-respostas .list-group-item.cheio, .area-inputs span.palavra-resposta{    
     height: 100%;
     display: inline-block;
-    background-color: white;
+    background-color: #fff;
+    border: 3px solid var(--cor-secundaria);
     color: var(--cor-secundaria);
     border-radius: 8px;        
     text-align: center;
@@ -572,6 +603,10 @@ Caixas de Select
     margin: 10px;       
     font-size: 0.8em;
     cursor: move;        
+}
+
+.grupo-respostas .list-group-item.cheio:hover, .area-inputs span.palavra-resposta:hover{
+    border: 3px solid var(--cor-principal);
 }
 
 .area-inputs .list-group-item.cheio{
@@ -878,11 +913,12 @@ input[type="checkbox"]:checked + label{
     color: var(--cor-secundaria);
     font-size: 1em;
     border-radius:8px;    
+    border: 4px solid var(--cor-secundaria);
 }
 
-.resposta-texto:focus{
+.resposta-texto:focus, .resposta-texto:hover{
     outline: none;
-    border: 2px solid var(--cor-principal);
+    border: 4px solid var(--cor-principal);
 }
 
 .botao-atividade button:hover{

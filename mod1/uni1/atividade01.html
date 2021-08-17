@@ -332,7 +332,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
 <script src="../../js/funcoes-atividades.js"></script>
-<script src="../../js/DragDropTouch.js"></script>
 
 <script>
     console.clear(screen);
@@ -377,10 +376,10 @@
         r1_2_3 = document.querySelector("#r1_2_3 span.palavra-resposta"),
 		
         //aqui os checkbox
-        r1_3_1 = document.form_atividade_uni1.r1_3_1.checked,
-        r1_3_2 = document.form_atividade_uni1.r1_3_2.checked,
-        r1_3_3 = document.form_atividade_uni1.r1_3_3.checked,
-        r1_3_4 = document.form_atividade_uni1.r1_3_4.checked,
+        r1_3_1 = (document.form_atividade_uni1.r1_3_1.checked==true ? "v" : "f"),
+        r1_3_2 = (document.form_atividade_uni1.r1_3_2.checked==true ? "v" : "f"),
+        r1_3_3 = (document.form_atividade_uni1.r1_3_3.checked==true ? "v" : "f"),
+        r1_3_4 = (document.form_atividade_uni1.r1_3_4.checked==true ? "v" : "f"),
 		
         //aqui os rádios de v ou f
         r1_4_1 = document.form_atividade_uni1.r1_4_1.value,
@@ -388,8 +387,7 @@
         r1_4_3 = document.form_atividade_uni1.r1_4_3.value,
 		r1_4_4 = document.form_atividade_uni1.r1_4_4.value;
         
-        console.log("Respostas 1: "+r1_1_1.innerHTML+", "+r1_1_2.innerHTML);
-        console.log("respostas 2: "+r1_2_1.innerHTML+", "+r1_2_2.innerHTML+", "+r1_2_3.innerHTML);
+       
 
         //testando se todos os exercícios (menos os checkbox) estão preenchidos.
 		if(r1_1_1==null){
@@ -428,6 +426,11 @@
 				return false;
 			}			
 		}
+
+        console.log("Resposta 1: "+r1_1_1.innerHTML+", "+r1_1_2.innerHTML);
+        console.log("resposta 2: "+r1_2_1.innerHTML+", "+r1_2_2.innerHTML+", "+r1_2_3.innerHTML);
+        console.log("Resposta 3: "+r1_3_1+", "+r1_3_2+", "+r1_3_3+", "+r1_3_4);
+        console.log("Resposta 4: "+r1_4_1+", "+r1_4_2+", "+r1_4_3+", "+r1_4_4);
 	};
 
 	//Depois que verifica as tentativas de resposta, verifica as respostas salvas;
@@ -496,10 +499,10 @@
                         //Onde houver os checkbox, testar se é true para registrar v ou f
                         "identificador": "r1_3",                    
                         "gabaritos": [
-                            { "chave": "r1_3_1", "valor": (r1_3_1==true ? "v" : "f")},
-                            { "chave": "r1_3_2", "valor": (r1_3_2==true ? "v" : "f")},
-                            { "chave": "r1_3_3", "valor": (r1_3_3==true ? "v" : "f")},
-                            { "chave": "r1_3_4", "valor": (r1_3_4==true ? "v" : "f")}							
+                            { "chave": "r1_3_1", "valor": (r1_3_1)},
+                            { "chave": "r1_3_2", "valor": (r1_3_2)},
+                            { "chave": "r1_3_3", "valor": (r1_3_3)},
+                            { "chave": "r1_3_4", "valor": (r1_3_4)}							
                         ]
                     },{
                         //Onde houver os checkbox, testar se é true para registrar v ou f
