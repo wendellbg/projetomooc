@@ -103,6 +103,7 @@
 					<iframe width="720" height="405" src="https://www.youtube.com/embed/f2BDV_YyMkw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 				<div class="downloads">
+					<button id="exibir-ad" onclick="exibirAD()" class="bt-download-media" type="button"><i class="fas fa-audio-description"></i> Áudio do vídeo com AD )))</button>
 					<a target="_blank" href="../../downloads/Un2-video.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do vídeo</button></a>
 					<a target="_blank" href="../../downloads/Un2-video.mp3"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o áudio do vídeo</button></a>
 				</div>
@@ -181,6 +182,24 @@
 	window.addEventListener('load', function(){
     	API.obterDadosCurso();
 	});
+</script>
+<script>
+
+	function exibirAD(){
+
+		var audioPod = document.getElementById('playerAudioAD1');
+
+		if (audioPod.paused == false) {
+			audioPod.pause();
+			document.getElementById('playerAudioAD1').style.display='none';
+		}else{
+			audioPod.play();
+			document.getElementById('playerAudioAD1').style.display='block';
+		}
+
+
+	}
+
 </script>
 </body>
 </html>
