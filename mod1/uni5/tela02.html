@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
 		<link rel="stylesheet" href="../../css/boxes.css?ver=1.4" />
 		<link rel="stylesheet" href="../../css/video-libras.css?ver=1.0" />
+		<link rel="stylesheet" href="../../css/w3.css" />
 
 		<!-- Botão de Voltar ao Topo -->
 		<script src="../../js/jquery-2.1.1.js"></script>
@@ -96,12 +97,18 @@
 											<div class='video-player'>
 												<iframe id="video1a" width="720" height="405" src="https://www.youtube.com/embed/pYspYUD3TKo?enablejsapi=1&html5=1&controls=0&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 											</div>
+											<audio id="playerAudioAD1" class="playerAudioAD" controls="controls" style="width: 100%;">
+												<source  src="../../downloads/Un4-video.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+											</audio>
 										</div>
 
 										<div class="video-libras 3u">
 											<div class='video-player'>
 												<iframe id="video1b" width="720" height="405" src="https://www.youtube.com/embed/V8t82oVe4ZM?enablejsapi=1&html5=1&mute=1&controls=0&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 											</div>
+											<audio id="playerAudioAD1" class="playerAudioAD" controls="controls" style="width: 100%;">
+												<source  src="../../downloads/Un4-video.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+											</audio>
 										</div>
 									</div>
 									<div class="row links">
@@ -120,12 +127,18 @@
 											<div class='video-player'>
 												<iframe id="video2a" width="720" height="405" src="https://www.youtube.com/embed/VfTcTxsrRbE?enablejsapi=1&html5=1&controls=0&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 											</div>
+											<audio id="playerAudioAD1" class="playerAudioAD" controls="controls" style="width: 100%;">
+												<source  src="../../downloads/Un4-video.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+											</audio>
 										</div>
 
 										<div class="video-libras 3u">
 											<div class='video-player'>
 												<iframe id="video2b" width="720" height="405" src="https://www.youtube.com/embed/BPONn43o2Yg?enablejsapi=1&html5=1&mute=1&controls=0&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 											</div>
+											<audio id="playerAudioAD1" class="playerAudioAD" controls="controls" style="width: 100%;">
+												<source  src="../../downloads/Un4-video.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+											</audio>
 										</div>
 									</div>
 									<div class="row links">
@@ -144,12 +157,18 @@
 											<div class='video-player'>
 												<iframe id="video3a" width="720" height="405" src="https://www.youtube.com/embed/UuRwoO7eivw?enablejsapi=1&html5=1&controls=0&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 											</div>
+											<audio id="playerAudioAD1" class="playerAudioAD" controls="controls" style="width: 100%;">
+												<source  src="../../downloads/Un4-video.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+											</audio>
 										</div>
 
 										<div class="video-libras 3u">
 											<div class='video-player'>
 												<iframe id="video3b" width="720" height="405" src="https://www.youtube.com/embed/09jWal5Dfkg?enablejsapi=1&html5=1&mute=1&controls=0&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 											</div>
+											<audio id="playerAudioAD1" class="playerAudioAD" controls="controls" style="width: 100%;">
+												<source  src="../../downloads/Un4-video.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+											</audio>
 										</div>
 									</div>
 									<div class="row links">
@@ -168,6 +187,9 @@
 											<div class='video-player'>
 												<iframe id="video4a" width="720" height="405" src="https://www.youtube.com/embed/IthyBu1pA_A?enablejsapi=1&html5=1&controls=0&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 											</div>
+											<audio id="playerAudioAD1" class="playerAudioAD" controls="controls" style="width: 100%;">
+												<source  src="../../downloads/Un4-video.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+											</audio>
 										</div>
 
 										<div class="video-libras 3u">
@@ -187,6 +209,7 @@
 							</div>
 							<div class="downloads rodape-video">
 								<span class="aviso" >Acessiblidade:<br>
+									<button id="exibir-ad" onclick="document.getElementById('playerAudioAD1').style.display='block'" class="bt-download-media" type="button"><i class="fas fa-audio-description"></i> Áudio do vídeo com AD )))</button>
 									<button onclick="exibirLibras(1)" class="video-exibir bt-download-media" type="button"><i class="fas fa-sign-language"></i> Tradutor de libras</button>
 									<button onclick="exibirLibras(0)" class="video-cancelar bt-download-media" type="button"><i class="fas fa-sign-language"></i> Esconder tradutor</button>
 								</span>
@@ -247,8 +270,21 @@
 			</section>
 
 		<!-- Footer -->
-			<footer id="footer">              
-			</footer>
+		<footer id="footer">              
+		</footer>
+
+		<div class="icone-botao-libras">
+		    <button onclick="document.getElementById('id01').style.display='block'" type="button" style="border:2px solid #fff !important; border-radius: 8px;"><img src="../../img/padrao/libras.png"></button>                        
+
+		    <div id="id01" class="w3-modal">
+		      <div class="w3-modal-content">
+		        <div class="w3-container">
+		          <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+		          <iframe id="ytplayer" type="text/html" width="300" height="500" src="https://www.youtube.com/embed/tqnv8bgyy3M?autoplay=1&origin=http://example.com" frameborder="0"/>
+		        </div>
+		      </div>
+		    </div>
+		</div>
 
 	<!-- Video Libras -->
 	<script src="../../js/multiplos-videos-libras.js"></script>
