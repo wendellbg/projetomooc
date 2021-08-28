@@ -839,3 +839,56 @@ h3.texto-central b{
 	background-color: #F1F3F4;
 	margin-top: -30px;
 }
+
+
+/* Video Background */
+.video.background{
+	position: relative;
+	margin: auto;
+	background: none;
+	padding: 0;
+	margin-bottom: 40px;
+}
+
+.background .video-player{
+	border: 0;
+}
+
+.background .titulo-video {
+	position: relative;
+	float: left;
+	padding-top: 26.25%;
+	padding-bottom: 26.0%;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: x-large;
+	/*background-color: rgb(0 0 0 / 60%);*/
+}
+
+.background .titulo-video span {
+	font-family: "Musket-Bold";
+	font-size: 1.4em;
+	line-height: 1.2em;
+	z-index: 2;
+	text-align: center;
+	width: 100%;
+	color: #fff;
+	text-shadow: 1px 1px 5px black;
+}
+
+.background .titulo-video p {
+	z-index: 2;
+	text-align: center;
+	width: 100%;
+	color: #fff;
+	text-shadow: 1px 1px 5px black;
+}
+
+.background .titulo-video .bg-dark {
+	background-color: #151730;
+	padding: 10px 15px;
+	font-size: large;
+	border-radius: 8px;
+
+}
+
