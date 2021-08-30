@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2" />
     <link rel="stylesheet" href="../../css/slide.css?ver=1.1"/>
     <link rel="stylesheet" href="../../css/listas.css?ver=1.1"/>
+    <link rel="stylesheet" href="../../css/w3.css"/>
 
+        
+    
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
-    <script src="../../js/bt-topo.js"></script>
+    <script src="../../js/bt-topo.js"></script>    
 
     <!-- Funções de acesso à biblioteca do Avamec-->
     <script src="../../js/funcoes-porcentagem-mooc2.js"></script>
@@ -250,6 +253,20 @@
 <footer id="footer">
 </footer>
 
+<div class="icone-botao-libras">
+    <button onclick="document.getElementById('id01').style.display='block'" type="button" style="border:2px solid #fff !important; border-radius: 8px;"><img src="../../img/padrao/libras.png"></button>                        
+
+    <div id="id01" class="w3-modal">
+      <div class="w3-modal-content">
+        <div class="w3-container">
+          <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+          <!--<iframe id="ytplayer" type="text/html" width="300" height="500" src="https://www.youtube.com/embed/bDeqh_cG2gM?autoplay=1&origin=http://example.com" frameborder="0"/>-->
+          <iframe width="300" height="500" src="https://www.youtube.com/embed/ZR1hUxfxouc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
 <script>
 	console.clear(screen);
@@ -268,12 +285,14 @@
 </script>
 
 <script>
+
     var slideIndex = 1;
+
     showSlides(slideIndex);
 
     function plusSlides(n) {
         showSlides(slideIndex += n);
-    }
+    }        
 
     function currentSlide(n) {
         showSlides(slideIndex = n);
