@@ -344,20 +344,18 @@
 		<script>
 			function exibirAD(){
 
-				document.getElementById('playerAudioAD1').style.display='block';
-				document.getElementById('playerAudioAD2').style.display='block';
-				document.getElementById('playerAudioAD3').style.display='block';
-				document.getElementById('playerAudioAD4').style.display='block';
+				if(document.getElementById('playerAudioAD1').style.display=='block'){
+					document.getElementById('playerAudioAD1').style.display='none';
+					document.getElementById('playerAudioAD2').style.display='none';
+					document.getElementById('playerAudioAD3').style.display='none';
+					document.getElementById('playerAudioAD4').style.display='none';
+				}else{
+					document.getElementById('playerAudioAD1').style.display='block';
+					document.getElementById('playerAudioAD2').style.display='block';
+					document.getElementById('playerAudioAD3').style.display='block';
+					document.getElementById('playerAudioAD4').style.display='block';
+				}
 
-				// var audioPod = document.getElementById('playerAudioAD1');
-				//
-				// if (audioPod.paused == false) {
-				// 	audioPod.pause();
-				// 	document.getElementById('playerAudioAD1').style.display='none';
-				// }else{
-				// 	audioPod.play();
-				// 	document.getElementById('playerAudioAD1').style.display='block';
-				// }
 			}
 
 		</script>
