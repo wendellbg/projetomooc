@@ -904,6 +904,29 @@ Main components
   right: 18%;
 }
 
+/* Mooc5 Uni1 tela 7*/
+.cd-single-point.mooc5-ponto1-uni1-tela7{
+  top: 150%;
+  left: 5%;
+}
+
+.cd-single-point.mooc5-ponto2-uni1-tela7{
+  top: 150%;
+  left: 25%;
+}
+
+.cd-single-point.mooc5-ponto3-uni1-tela7{
+  top: 150%;
+  left: 45%;
+}
+
+.cd-single-point.mooc5-ponto4-uni1-tela7{
+  top: 150%;
+  left: 75%;
+}
+
+
+
 
 .cd-single-point.titulo-bola{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
