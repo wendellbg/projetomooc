@@ -307,7 +307,7 @@
                             <div class="questao">
                                 <div class="titulo-questao">Questão 3</div>
                                 <div class="enunciado-questao">
-                                    <span>Um dos ganhos do Ensino Médio é o desenvolvimento da autonomia do estudante para compor seu itinerário formativo. Considerando Ensino Médio com a formação profissional em Estatística Aplicada, crie um itinerário formativo com diferentes componentes curriculares. Arraste e solte os componentes e defina sua carga horária levando em conta o limite de 2.400 horas*.
+                                    <span>Um dos ganhos do Ensino Médio é o desenvolvimento da autonomia do estudante para compor seu itinerário formativo. Considerando Ensino Médio com a formação profissional em Estatística Aplicada, crie um itinerário formativo com diferentes componentes curriculares. Selecione os componentes e defina sua carga horária levando em conta o limite de 2.400 horas*.
                                         <br>Escolha uma opção de componente na coluna da esquerda e insira a carga horária correspondente na caixa de texto na coluna da direita. As opções são: Atividade de Extensão, Disciplinas, Estágio Curricular, Projeto de Pesquisa, Projeto Integrador.
                                     </span>
 
@@ -336,7 +336,7 @@
 
                                     <div class='linha-resposta'>
                                         <div class="caixa-box caixa-meia-tela">                                            
-                                            <select name="r2_3_a" id="r2_3_a" class="resposta-select" onchange="valorSelecionado(this)">
+                                            <select name="r2_3_a" id="r2_3_a" class="resposta-select select-op" onchange="valorSelecionado(this)">
                                                 <option  id="r2_3_a_0" name="r2_3_a_0" value="">Selecione sua resposta</option>
                                                 <option  id="r2_3_a_1" name="r2_3_a_1" value="Atividade de extensão">Atividade de extensão</option>
                                                 <option  id="r2_3_a_2" name="r2_3_a_2" value="Disciplinas">Disciplinas</option>
@@ -345,15 +345,22 @@
                                                 <option  id="r2_3_a_5" name="r2_3_a_5" value="Projeto integrador">Projeto integrador</option>   
                                             </select>
                                         </div>  
-                                        <div class="area-inputs caixa-drop_2_3b" id='r2_3_1b' name='r2_3_1b'>
-                                            <input type="text" maxlength="3" placeholder="Carga horária" onchange='testavalor(this)' onkeypress='return event.charCode >= 48 && event.charCode <= 57' class='input-texto' id='r2_3_1_texto'>
+                                        <!-- <div class="area-inputs caixa-drop_2_3b" id='r2_3_1b' name='r2_3_1b'> -->
+                                            <!-- <input type="text" maxlength="3" placeholder="Carga horária" onchange='testavalor(this)' onkeypress='return event.charCode >= 48 && event.charCode <= 57' class='input-texto' id='r2_3_1_texto'> -->
+                                        <div class="caixa-box caixa-meia-tela">                                            
+                                            <select name="r2_3_ch_a" id="r2_3_ch_a" class="resposta-select" onchange="valorSelecionadoRepetido(this)">
+                                                <option  id="r2_3_ch_a_0" name="r2_3_ch_a_0" value="">Selecione a Carga Horária</option>
+                                                <option  id="r2_3_ch_a_1" name="r2_3_ch_a_1" value="100">100 horas</option>
+                                                <option  id="r2_3_ch_a_2" name="r2_3_ch_a_2" value="200">200 horas</option>
+                                                <option  id="r2_3_ch_a_3" name="r2_3_ch_a_3" value="400">400 horas</option>                                                                                            
+                                            </select>
                                         </div>        
                                     </div>
 
                                     <div class="linha-respostas">   
                                         <div class="caixa-box caixa-meia-tela">                                            
-                                            <select name="r2_3_b" id="r2_3_b" class="resposta-select" onchange="valorSelecionado(this)">
-                                                <option  id="r2_3_b_0" name="r2_3_b_0" value="">Selecione sua resposta</option>
+                                            <select name="r2_3_b" id="r2_3_b" class="resposta-select select-op" onchange="valorSelecionado(this)">
+                                                <option  id="r2_3_b_0" name="r2_3_b_0" value="">Selecione um componente</option>
                                                 <option  id="r2_3_b_1" name="r2_3_b_1" value="Atividade de extensão">Atividade de extensão</option>
                                                 <option  id="r2_3_b_2" name="r2_3_b_2" value="Disciplinas">Disciplinas</option>
                                                 <option  id="r2_3_b_3" name="r2_3_b_3" value="Estágio curricular">Estágio curricular</option>                                            
@@ -361,30 +368,47 @@
                                                 <option  id="r2_3_b_5" name="r2_3_b_5" value="Projeto integrador">Projeto integrador</option>   
                                             </select>
                                         </div>  
-                                        <div class="area-inputs caixa-drop_2_3b" id='r2_3_2b' name='r2_3_2b'>                                           
+                                        <!-- <div class="area-inputs caixa-drop_2_3b" id='r2_3_2b' name='r2_3_2b'>                                           
                                             <input type="texto" maxlength="3" placeholder="Carga horária" onchange='testavalor(this)' onkeypress='return event.charCode >= 48 && event.charCode <= 57'  class='input-texto' id='r2_3_2_texto'>
-                                        </div>                                                                            
+                                        </div> -->
+                                        <div class="caixa-box caixa-meia-tela">                                            
+                                            <select name="r2_3_ch_b" id="r2_3_ch_b" class="resposta-select" onchange="valorSelecionadoRepetido(this)">
+                                                <option  id="r2_3_ch_b_0" name="r2_3_ch_b_0" value="">Selecione a Carga Horária</option>
+                                                <option  id="r2_3_ch_b_1" name="r2_3_ch_b_1" value="100">100 horas</option>
+                                                <option  id="r2_3_ch_b_2" name="r2_3_ch_b_2" value="200">200 horas</option>
+                                                <option  id="r2_3_ch_b_3" name="r2_3_ch_b_3" value="400">400 horas</option>                                                                                            
+                                            </select>
+                                        </div>                                                                                
                                         
                                     </div>                                     
 
                                     <div class="linha-respostas">                                                                       
                                         <div class="caixa-box caixa-meia-tela">                                            
-                                            <select name="r2_3_c" id="r2_3_c" class="resposta-select" onchange="valorSelecionado(this)">
-                                                <option  id="r2_3_c_0" name="r2_3_c_0" value="">Selecione sua resposta</option>
+                                            <select name="r2_3_c" id="r2_3_c" class="resposta-select select-op" onchange="valorSelecionado(this)">
+                                                <option  id="r2_3_c_0" name="r2_3_c_0" value="">Selecione um componente</option>
                                                 <option  id="r2_3_c_1" name="r2_3_c_1" value="Atividade de extensão">Atividade de extensão</option>
                                                 <option  id="r2_3_c_2" name="r2_3_c_2" value="Disciplinas">Disciplinas</option>
                                                 <option  id="r2_3_c_3" name="r2_3_c_3" value="Estágio curricular">Estágio curricular</option>                                            
                                                 <option  id="r2_3_c_4" name="r2_3_c_4" value="Projeto de pesquisa">Projeto de pesquisa</option>                                            
                                                 <option  id="r2_3_c_5" name="r2_3_c_5" value="Projeto integrador">Projeto integrador</option>   
                                             </select>
-                                        </div>  <div class="area-inputs caixa-drop_2_3b" id='r2_3_3b' name='r2_3_3b' >                                            
+                                        </div>  
+                                        <!-- <div class="area-inputs caixa-drop_2_3b" id='r2_3_3b' name='r2_3_3b' >                                            
                                             <input type="texto" maxlength="3" placeholder="Carga horária" onchange='testavalor(this)' onkeypress='return event.charCode >= 48 && event.charCode <= 57'  class='input-texto' id='r2_3_3_texto'>
-                                        </div> 
+                                        </div>  -->
+                                        <div class="caixa-box caixa-meia-tela">                                            
+                                            <select name="r2_3_ch_c" id="r2_3_ch_c" class="resposta-select" onchange="valorSelecionadoRepetido(this)">
+                                                <option  id="r2_3_ch_c_0" name="r2_3_ch_c_0" value="">Selecione a Carga Horária</option>
+                                                <option  id="r2_3_ch_c_1" name="r2_3_ch_c_1" value="100">100 horas</option>
+                                                <option  id="r2_3_ch_c_2" name="r2_3_ch_c_2" value="200">200 horas</option>
+                                                <option  id="r2_3_ch_c_3" name="r2_3_ch_c_3" value="400">400 horas</option>                                                                                            
+                                            </select>
+                                        </div>    
                                     </div>  
 
                                     <div class="linha-respostas">                                                                              
                                         <div class="caixa-box caixa-meia-tela">                                            
-                                            <select name="r2_3_d" id="r2_3_d" class="resposta-select" onchange="valorSelecionado(this)">
+                                            <select name="r2_3_d" id="r2_3_d" class="resposta-select select-op" onchange="valorSelecionado(this)">
                                                 <option  id="r2_3_d_0" name="r2_3_d_0" value="">Selecione sua resposta</option>
                                                 <option  id="r2_3_d_1" name="r2_3_d_1" value="Atividade de extensão">Atividade de extensão</option>
                                                 <option  id="r2_3_d_2" name="r2_3_d_2" value="Disciplinas">Disciplinas</option>
@@ -393,8 +417,16 @@
                                                 <option  id="r2_3_d_5" name="r2_3_d_5" value="Projeto integrador">Projeto integrador</option>   
                                             </select>
                                         </div>  
-                                        <div class="area-inputs caixa-drop_2_3b" id='r2_3_4b' name='r2_3_4b' >                                            
+                                        <!-- <div class="area-inputs caixa-drop_2_3b" id='r2_3_4b' name='r2_3_4b' >                                            
                                             <input type="texto" maxlength="3" placeholder="Carga horária" onchange='testavalor(this)' onkeypress='return event.charCode >= 48 && event.charCode <= 57'  class='input-texto' id='r2_3_4_texto'>
+                                        </div>   -->
+                                        <div class="caixa-box caixa-meia-tela">                                            
+                                            <select name="r2_3_ch_d" id="r2_3_ch_d" class="resposta-select" onchange="valorSelecionadoRepetido(this)">
+                                                <option  id="r2_3_ch_d_0" name="r2_3_ch_d_0" value="">Selecione a Carga Horária</option>
+                                                <option  id="r2_3_ch_d_1" name="r2_3_ch_d_1" value="100">100 horas</option>
+                                                <option  id="r2_3_ch_d_2" name="r2_3_ch_d_2" value="200">200 horas</option>
+                                                <option  id="r2_3_ch_d_3" name="r2_3_ch_d_3" value="400">400 horas</option>                                                                                            
+                                            </select>
                                         </div>  
                                     </div>  
 
@@ -834,7 +866,8 @@
         }else{       
             sel.classList.add("select-respondido");
         }
-        var selects = document.getElementsByTagName('select');
+
+        var selects = document.getElementsByClassName("select-op");
         for(var i = 0; i < selects.length; ++i) {
             var s = selects[i];            
             if(s.id != id && s.selectedIndex!=0){                
@@ -845,8 +878,6 @@
             }
         } 
     }
-
-    
 </script>
 
 </body>

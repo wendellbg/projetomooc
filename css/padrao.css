@@ -181,7 +181,7 @@ a:hover {
 }
 
 strong, b {
-    font-weight: 600;
+    font-weight: 800 !important;
 }
 
 em, i {
