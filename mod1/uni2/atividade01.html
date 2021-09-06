@@ -11,9 +11,7 @@
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
-    <script src="../../js/bt-topo.js"></script>
-    <script src="../../js/Sortable.js.download"></script>
-    <script src="../../js/Swap.js"></script>
+    <script src="../../js/bt-topo.js"></script>    
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script> -->
@@ -348,11 +346,12 @@
                                         <!-- <div class="area-inputs caixa-drop_2_3b" id='r2_3_1b' name='r2_3_1b'> -->
                                             <!-- <input type="text" maxlength="3" placeholder="Carga horária" onchange='testavalor(this)' onkeypress='return event.charCode >= 48 && event.charCode <= 57' class='input-texto' id='r2_3_1_texto'> -->
                                         <div class="caixa-box caixa-meia-tela">                                            
-                                            <select name="r2_3_ch_a" id="r2_3_ch_a" class="resposta-select" onchange="valorSelecionadoRepetido(this)">
+                                            <select name="r2_3_ch_a" id="r2_3_ch_a" class="resposta-select" onchange="testavalor(this)">
                                                 <option  id="r2_3_ch_a_0" name="r2_3_ch_a_0" value="">Selecione a Carga Horária</option>
                                                 <option  id="r2_3_ch_a_1" name="r2_3_ch_a_1" value="100">100 horas</option>
                                                 <option  id="r2_3_ch_a_2" name="r2_3_ch_a_2" value="200">200 horas</option>
-                                                <option  id="r2_3_ch_a_3" name="r2_3_ch_a_3" value="400">400 horas</option>                                                                                            
+                                                <option  id="r2_3_ch_a_3" name="r2_3_ch_a_3" value="300">300 horas</option>
+                                                <option  id="r2_3_ch_a_4" name="r2_3_ch_a_4" value="400">400 horas</option>                                                                                           
                                             </select>
                                         </div>        
                                     </div>
@@ -372,11 +371,12 @@
                                             <input type="texto" maxlength="3" placeholder="Carga horária" onchange='testavalor(this)' onkeypress='return event.charCode >= 48 && event.charCode <= 57'  class='input-texto' id='r2_3_2_texto'>
                                         </div> -->
                                         <div class="caixa-box caixa-meia-tela">                                            
-                                            <select name="r2_3_ch_b" id="r2_3_ch_b" class="resposta-select" onchange="valorSelecionadoRepetido(this)">
+                                            <select name="r2_3_ch_b" id="r2_3_ch_b" class="resposta-select" onchange="testavalor(this)">
                                                 <option  id="r2_3_ch_b_0" name="r2_3_ch_b_0" value="">Selecione a Carga Horária</option>
                                                 <option  id="r2_3_ch_b_1" name="r2_3_ch_b_1" value="100">100 horas</option>
                                                 <option  id="r2_3_ch_b_2" name="r2_3_ch_b_2" value="200">200 horas</option>
-                                                <option  id="r2_3_ch_b_3" name="r2_3_ch_b_3" value="400">400 horas</option>                                                                                            
+                                                <option  id="r2_3_ch_b_3" name="r2_3_ch_b_3" value="300">300 horas</option>
+                                                <option  id="r2_3_ch_b_4" name="r2_3_ch_b_4" value="400">400 horas</option>                                                                                             
                                             </select>
                                         </div>                                                                                
                                         
@@ -397,11 +397,12 @@
                                             <input type="texto" maxlength="3" placeholder="Carga horária" onchange='testavalor(this)' onkeypress='return event.charCode >= 48 && event.charCode <= 57'  class='input-texto' id='r2_3_3_texto'>
                                         </div>  -->
                                         <div class="caixa-box caixa-meia-tela">                                            
-                                            <select name="r2_3_ch_c" id="r2_3_ch_c" class="resposta-select" onchange="valorSelecionadoRepetido(this)">
+                                            <select name="r2_3_ch_c" id="r2_3_ch_c" class="resposta-select" onchange="testavalor(this)">
                                                 <option  id="r2_3_ch_c_0" name="r2_3_ch_c_0" value="">Selecione a Carga Horária</option>
                                                 <option  id="r2_3_ch_c_1" name="r2_3_ch_c_1" value="100">100 horas</option>
                                                 <option  id="r2_3_ch_c_2" name="r2_3_ch_c_2" value="200">200 horas</option>
-                                                <option  id="r2_3_ch_c_3" name="r2_3_ch_c_3" value="400">400 horas</option>                                                                                            
+                                                <option  id="r2_3_ch_c_3" name="r2_3_ch_c_3" value="300">300 horas</option>
+                                                <option  id="r2_3_ch_c_4" name="r2_3_ch_c_4" value="400">400 horas</option>                                                                                           
                                             </select>
                                         </div>    
                                     </div>  
@@ -421,11 +422,12 @@
                                             <input type="texto" maxlength="3" placeholder="Carga horária" onchange='testavalor(this)' onkeypress='return event.charCode >= 48 && event.charCode <= 57'  class='input-texto' id='r2_3_4_texto'>
                                         </div>   -->
                                         <div class="caixa-box caixa-meia-tela">                                            
-                                            <select name="r2_3_ch_d" id="r2_3_ch_d" class="resposta-select" onchange="valorSelecionadoRepetido(this)">
+                                            <select name="r2_3_ch_d" id="r2_3_ch_d" class="resposta-select" onchange="testavalor(this)">
                                                 <option  id="r2_3_ch_d_0" name="r2_3_ch_d_0" value="">Selecione a Carga Horária</option>
                                                 <option  id="r2_3_ch_d_1" name="r2_3_ch_d_1" value="100">100 horas</option>
                                                 <option  id="r2_3_ch_d_2" name="r2_3_ch_d_2" value="200">200 horas</option>
-                                                <option  id="r2_3_ch_d_3" name="r2_3_ch_d_3" value="400">400 horas</option>                                                                                            
+                                                <option  id="r2_3_ch_d_3" name="r2_3_ch_d_3" value="300">300 horas</option>
+                                                <option  id="r2_3_ch_d_4" name="r2_3_ch_d_4" value="400">400 horas</option>                                                                                            
                                             </select>
                                         </div>  
                                     </div>  
@@ -521,7 +523,8 @@
     };
         
     var resposta_r2_3="", resposta_r2_4;
-    var campos_ch = [document.querySelector("#r2_3_1_texto"), document.querySelector("#r2_3_2_texto"), document.querySelector("#r2_3_3_texto"), document.querySelector("#r2_3_4_texto")];
+    var campos_ch = [document.querySelector("#r2_3_ch_a"), document.querySelector("#r2_3_ch_b"), document.querySelector("#r2_3_ch_c"), document.querySelector("#r2_3_ch_d")];
+    var campos_itinerario = [document.querySelector("#r2_3_a"),document.querySelector("#r2_3_b"),document.querySelector("#r2_3_c"),document.querySelector("#r2_3_d")];
     //var campos_comp = [document.querySelector("#r2_3_1"), document.querySelector("#r2_3_2"), document.querySelector("#r2_3_3"), document.querySelector("#r2_3_4")];
     var total = parseInt(document.querySelector("#total-horas").textContent);
     var horas_restantes = 800;
@@ -545,9 +548,9 @@
         
         //aqui vai pegar os valores de cada exercício.
         //esses são os de drag and drop
-		r2_1_1 = document.querySelector("#r2_1_1 span.palavra-resposta"),        
-        r2_1_2 = document.querySelector("#r2_1_2 span.palavra-resposta"),
-        r2_1_3 = document.querySelector("#r2_1_3 span.palavra-resposta");
+		r2_1_1 = document.form_atividade_uni2.r2_1_a.value;
+        r2_1_2 = document.form_atividade_uni2.r2_1_b.value;
+        r2_1_3 = document.form_atividade_uni2.r2_1_c.value;
 		
         if(r2_1_1==null){
 			erros++;
@@ -598,22 +601,20 @@
             erros++;
         }else{
             //caso tenha atingido o valor das 2400 horas, verifica se o correspondente está preenchido
-            for(i=1;i<=4;i++){
-                let nome_input_ch = "r2_3_"+i;                
-                let valor_input_ch = document.querySelector("#"+nome_input_ch+"_texto").value;
-                //console.log("campo="+nome_input_ch+" valor="+valor_input_ch);
+            for(i=0;i<4;i++){                
+                let nome_input_ch = campos_itinerario[i].value;                                
+                let valor_input_ch = campos_ch[i].value;
+                console.log("campo="+campos_ch[i]+" valor="+valor_input_ch);
                 //testa se a carga horária tem valor
                 if(valor_input_ch!=""){
-                    if(document.querySelector("#"+nome_input_ch+" span.palavra-resposta")==null){
+                    if(nome_input_ch==""){
                         //se o campo estiver preenchido mas não há card selecionado, dá erro                        
                         //console.log("campo com ch mas card vazio");
                         erros++;
                     }else{
                         //aqui está certo, com ch e card
-                        //pega o que foi preenchido e monta um texto.
-                        let texto_card = document.querySelector("#"+nome_input_ch+" span.palavra-resposta").innerHTML;
-                        let valor_ch = document.querySelector("#"+nome_input_ch+"_texto").value;
-                        resposta_r2_3 = resposta_r2_3+"\n"+texto_card+": "+valor_ch+" horas";                        
+                        //pega o que foi preenchido e monta um texto.                        
+                        resposta_r2_3 = resposta_r2_3+"\n"+campos_itinerario[i].value+": "+campos_ch[i].value+" horas";                        
                     }
                 }else{
                     //console.log("Campo de ch vazio");
@@ -630,7 +631,7 @@
         }
 
         console.log("Resposta 1: "+r2_1_1+", "+r2_1_2+", "+r2_1_3);
-        console.log("Resposta 2: "+r2_2_a+", "+r2_2_b+", "+r2_2_c+", "+r2_2_d+", "+r2_2_e+", "+r2_2_f+", "+r2_2_g+", "+r2_2_h+", "+r2_2_i+", "+r2_2_j);
+        console.log("Resposta 2: "+r2_2_a+"\n"+r2_2_b+"\n"+r2_2_c+"\n"+r2_2_d+"\n"+r2_2_e+"\n"+r2_2_f+"\n"+r2_2_g+"\n"+r2_2_h+"\n"+r2_2_i+"\n"+r2_2_j);
         console.log("Resposta 3: "+resposta_r2_3);
         console.log("Resposta 4: "+resposta_r2_4);
 
@@ -702,13 +703,12 @@
             API.registrarRespostaAtividade({
                 "identificador": "uni2_ativ1",//modificar
                 "questoes": [
-                    {
-                        //Onde houver os exercícios de drag and drop precisa pegar o innerHTML
+                    {                        
                         "identificador": "r2_1",                    
                         "gabaritos": [
-                            { "chave": "r2_1_1", "valor": r2_1_1.innerHTML},
-                            { "chave": "r2_1_2", "valor": r2_1_2.innerHTML},
-                            { "chave": "r2_1_3", "valor": r2_1_3.innerHTML}							
+                            { "chave": "r2_1_1", "valor": r2_1_1},
+                            { "chave": "r2_1_2", "valor": r2_1_2},
+                            { "chave": "r2_1_3", "valor": r2_1_3}							
                         ]
                     },{                    
                         "identificador": "r2_2",                    
@@ -809,43 +809,66 @@
         let valor_agora = (object.value==""? 0 : parseInt(object.value));
         let total_atual = parseInt(document.querySelector("#total-horas").textContent);        
 
-        //Varre o vetor com os input para fazer a soma dos valores
+        //Varre o vetor com os select para fazer a soma dos valores
         for(let i = 0;i<4;i++){
-                soma_temp += campos_ch[i].value == "" ? 0 : parseInt(campos_ch[i].value);                          
-        }        
-
+            soma_temp += campos_ch[i].value == "" ? 0 : parseInt(campos_ch[i].value);            
+        }                
         //se a soma der 2400, desabilita os campos em branco
         if(soma_temp>=2400){
             total_atual = soma_temp - object.value;            
-            object.value = (valor_agora == 0 || 2400-total_atual==0) ? "" : (2400-total_atual);
+            let valor_novo = 2400-total_atual;
+            switch (valor_novo){
+                case 100:
+                    object.selectedIndex=1;
+                    break;                
+                case 200:
+                    object.selectedIndex=2;
+                    break;
+                case 300:
+                    object.selectedIndex=3;
+                    break;
+                case 400:
+                    object.selectedIndex=4;
+                    break;
+            }
             total = 2400;
             horas_restantes = 0;           
 
             for(let i = 0; i<4; i++){
                 if(campos_ch[i].value ==""){
-                    campos_ch[i].classList.add("campo-inativo");
+                    campos_ch[i].classList.add("campo-inativo");                    
                     campos_ch[i].disabled = true;
+                    campos_itinerario[i].selectedIndex=0;
+                    campos_itinerario[i].classList.add("campo-inativo");
+                    campos_itinerario[i].disabled=true;
+                    campos_itinerario[i].classList.remove("select-respondido");
                 }
             }
 
         //se a conta der menos que 2400, reabilita os campos.
-        }else{            
-            //console.log("Aqui quando ainda não deu 2400");
+        }else{                        
             total = soma_temp;
             object.value = valor_agora == 0 ? "" : valor_agora;        
 
             for(let i = 0; i<4; i++){
-                if(campos_ch[i].value ==""){
+                if(campos_ch[i].selectedIndex ==0){
                     campos_ch[i].classList.remove("campo-inativo");
                     campos_ch[i].disabled = false;
+                    campos_itinerario[i].classList.remove("campo-inativo");
+                    campos_itinerario[i].disabled=false;                    
                 }
             }
             horas_restantes = 2400-total;
         }
+        if(object.selectedIndex!=0){
+            object.classList.add("select-respondido");
+        }else{
+            object.classList.remove("select-respondido");
+        }
+
         document.querySelector("#total-horas").textContent =  total;        
         document.querySelector("#horas-restantes").textContent = horas_restantes;        
     }
-
     
 
     function valorSelecionadoRepetido(sel) {
@@ -859,22 +882,21 @@
     }
 
     function valorSelecionado(sel) {
-        var val = sel.selectedIndex;
-        var id = sel.id;   
-        if(val==0){
+        let indice = sel.selectedIndex;
+        let valor = sel.value;
+        let id = sel.id; 
+        
+        if(indice==0){
             sel.classList.remove("select-respondido");
         }else{       
             sel.classList.add("select-respondido");
         }
-
-        var selects = document.getElementsByClassName("select-op");
+        var selects = document.getElementsByTagName('select');
         for(var i = 0; i < selects.length; ++i) {
-            var s = selects[i];            
-            if(s.id != id && s.selectedIndex!=0){                
-                if(s.selectedIndex==val){                     
-                    s.selectedIndex=0;                    
-                    s.classList.remove("select-respondido");
-                }                
+            var s = selects[i];                     
+            if(s.selectedIndex!=0 && s.value == valor && id != s.id){            
+                s.selectedIndex=0;                    
+                s.classList.remove("select-respondido");            
             }
         } 
     }
