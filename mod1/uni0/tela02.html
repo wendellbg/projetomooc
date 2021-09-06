@@ -112,10 +112,12 @@
 						<a href="tela02.html"><input type="radio" name="radio" checked><label for="radio"></label></a>
 
 						<button class="bt-navegacao desativado" type="button">></button>
-
-						<span class="legenda">2 de 2</span>
-
 					</div>
+					<span class="legenda">2 de 2</span>
+				</div>
+				<div class="botao-referencias">
+					<a href="../referencias/index.html" target="_blank"><button>REFERÊNCIAS  &#10095;</button></a></span>
+				</div>
 
 					<!--Rodapé-->
 					<hr/>
@@ -135,8 +137,7 @@
 							<img src="../../img/padrao/ifes.png" alt="IFES">
 						</div>
 					</div><!--Rodapé-->
-
-				</div>
+			</div>
 		</section>
 	</div>
 </section>
@@ -165,9 +166,10 @@
 
 	var API = new BridgeRestApi();
 	var id_unidade = "mod1_uni0";
-	var id_slide = "mod1/uni0/tela03.html";//alterar
+	var id_slide = "mod1/uni0/tela02.html";//alterar
 	var unidade=0;//alterar
 	var tela="uni0tela2";//alterar
+	var ultima_tela=0;  
 	
 	//Obtendo dados curso
 	window.addEventListener('load', function(){

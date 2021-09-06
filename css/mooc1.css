@@ -332,4 +332,10 @@ h3.texto-central b{
 	border-color: #fec13b;
 	color: #2a5caa;
 	transition: 0.3s;
-  }
+}
+
+.botao-referencias button:before{
+	font-family: 'Font Awesome 5 Free';
+    font-weight: 900;	
+	content: "\f022  ";
+}
