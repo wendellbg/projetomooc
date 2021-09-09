@@ -181,7 +181,7 @@ a:hover {
 }
 
 strong, b {
-    font-weight: 600;
+    font-weight: 800 !important;
 }
 
 em, i {
@@ -706,6 +706,10 @@ header p {
     font-size: 18px;
     font-family: "Musket";
     text-align: justify;
+}
+
+.caixa-texto-centro p b, .box-info p b{
+    color: inherit;
 }
 
 .caixa-texto-rodape {
