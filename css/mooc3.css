@@ -295,6 +295,14 @@ h3.texto-central b{
 	border: 2px solid #fec13b;
 }
 
+.icone-botao-libras {
+	position: fixed;
+	bottom: 2%;
+	left: 1%;
+	padding: 1%;
+	z-index: 10000000;
+}
+
 .mooc3 .audio-gif .icone-play:hover{
 	border: none;
 }
