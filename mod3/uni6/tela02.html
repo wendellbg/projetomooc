@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../../css/mooc3.css?ver=1.1"/>
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2" />
-    <link rel="stylesheet" href="../../css/podcast.css?ver=1.1"/>      
+    <link rel="stylesheet" href="../../css/podcast.css?ver=1.1"/>
+    <link rel="stylesheet" href="../../css/w3.css" />      
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
@@ -92,7 +93,11 @@
                 <div class='video-player'>
                     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mZ4wQas3oq4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
+                <audio id="playerAudioAD1" class="playerAudioAD" controls="controls" style="width: 100%;">
+                    <source  src="../../ad/mooc3/audio.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+                </audio>
                 <div class="downloads">
+                    <button id="exibir-ad" onclick="document.getElementById('playerAudioAD1').style.display='block'" class="bt-download-media" type="button"><i class="fas fa-audio-description"></i> Áudio do vídeo com AD )))</button>
                     <span class="aviso" ><b>PROJETO AMAR.</b><br>
                         Toquinho Aquarela "clipe Oficial" original. Youtube, Março de 2016.
                     </span>
@@ -173,6 +178,19 @@
 <!-- Footer -->
 <footer id="footer">
 </footer>
+
+<div class="icone-botao-libras">
+    <button onclick="document.getElementById('id01').style.display='block'" type="button" style="border:2px solid #fff !important; border-radius: 8px;"><img src="../../img/padrao/libras.png"></button>                        
+
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content">
+           <div class="w3-container">
+             <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+             <iframe id="ytplayer" type="text/html" width="300" height="500" src="https://www.youtube.com/embed/xde3HVQwxE0?autoplay=1&origin=http://example.com" frameborder="0"/></iframe>
+           </div>
+        </div>
+    </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
 <script>
