@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
     <link rel="stylesheet" href="../../css/efeito.css?ver=1.2"/>
-    <link rel="stylesheet" href="../../css/atividades.css?ver=1.1" />
+    <link rel="stylesheet" href="../../css/atividades-padrao.css" />
+    <link rel="stylesheet" href="../../css/cores-mooc1.css" />
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
-    <script src="../../js/bt-topo.js"></script>
+    <script src="../../js/bt-topo.js"></script>    
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
-    <script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script> -->
+    <!-- <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
@@ -85,6 +86,8 @@
                 <div class="atividade" id='atividade-uni2'>
 					<div id='mensagem-alerta'>
 					</div>
+                    <div id='mensagem-tentativas' class="atividades">                        
+					</div>
                     <form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni2" method="POST">
                             <div class="questao">
                                 <div class="titulo-questao">Questão 1</div>
@@ -94,119 +97,101 @@
                                 <div class="area-respostas">
                                     <div class="linha-respostas">
                                         <div class='texto-resposta linha-grande'>                                        
-                                            <span class="texto-opcao">a) No início do ensino médio deverá escolher o itinerário formativo de acordo com suas capacidades, interesses futuros, afinidades ou potencialidades.</span>                                            
+                                            <span class="texto-opcao">a) No início do Ensino Médio, deverá escolher o itinerário formativo de acordo com suas capacidades, interesses futuros, afinidades ou potencialidades.</span>
                                         </div>
-                                        <div class="resposta-correta">Resposta: <span>Possibilidade de escolha</span></div>
+                                        <div class="resposta-correta">Resposta: <span>Possibilidade de escolha</span></div> 
                                     </div>
 
                                     <div class="linha-respostas">
                                         <div class="texto-resposta linha-grande">                                        
                                             <span class="texto-opcao">b) É a Base Nacional Comum Curricular - BNCC, que tem <b>carga horária máxima de 1800 horas.</b></span>                                                                                   
-                                        </div>                                        
-                                        <div class="resposta-correta">Resposta: <span>Conjunto comum de saberes</span></div>
+                                        </div>
+                                        <div class="resposta-correta">Resposta: <span>Conjunto comum de saberes</span></div> 
                                     </div>
 
                                     <div class="linha-respostas">
                                         <div class="texto-resposta linha-grande">                                        
                                             <span class="texto-opcao">c) Possibilidade de inserção laboral do aluno, a partir de saberes sintonizados às demandas sociais e econômicas.</span>                                                                                   
                                         </div>
-                                        <div class="resposta-correta">Resposta: <span>Itinerários formativos</span></div>
+                                        <div class="resposta-correta">Resposta: <span>Itinerários formativos</span></div> 
                                     </div>
-
                                 </div>                                 
                             </div> 
                                    
-
                             <div class="questao">
                                 <div class="titulo-questao">Questão 2</div>
                                 <div class="enunciado-questao">
-                                    <span>Agrupe as formações conforme os itinerários formativos possíveis</span>
+                                    <span>Selecione, para as formações, os itinerários formativos possíveis</span>
                                 </div>
                                 <div class="area-respostas">
+                                    <div class="linha-respostas">
+                                        <div class='texto-resposta linha-grande'>                                        
+                                            <span class="texto-opcao">Administração</span>
+                                        </div>
+                                        <div class="resposta-correta"><span>Ciências Humanas e Sociais Aplicadas</span></div>                                                                                                                  
+                                    </div>
+                                    <div class="linha-respostas">
+                                        <div class='texto-resposta linha-grande'>                                        
+                                            <span class="texto-opcao">Análise de Investimentos</span>
+                                        </div>
+                                        <div class="resposta-correta"><span>Matemática e suas tecnologias</span></div>                                                                                                                
+                                    </div>
+                                    <div class="linha-respostas">
+                                        <div class='texto-resposta-menor'>                                        
+                                            <span class="texto-opcao">Biologia</span>
+                                        </div>
+                                        <div class="resposta-correta"><span>Ciências da Natureza e suas tecnologias</span></div>                                                                                                                     
+                                    </div>
+                                    <div class="linha-respostas">
+                                        <div class='texto-resposta-menor'>                                        
+                                            <span class="texto-opcao">Controle e Processos Industriais</span>
+                                        </div>
+                                        <div class="resposta-correta"> <span>Formação Técnica e Profissional</span></div>                                                                                                                
+                                    </div>
+                                    <div class="linha-respostas">
+                                        <div class='texto-resposta-menor'>                                        
+                                            <span class="texto-opcao">Educação Física</span>
+                                        </div>
+                                        <div class="resposta-correta"> <span>Linguagem e suas tecnologias</span></div>                                                                                                                  
+                                    </div>
+                                    <div class="linha-respostas">
+                                        <div class='texto-resposta-menor'>                                        
+                                            <span class="texto-opcao">Física</span>
+                                        </div>
+                                        <div class="resposta-correta"> <span>Ciências da Natureza e suas tecnologias</span></div>                                                                                                                  
+                                    </div>
+                                    <div class="linha-respostas">
+                                        <div class='texto-resposta-menor'>                                        
+                                            <span class="texto-opcao">Geografia</span>
+                                        </div>
+                                        <div class="resposta-correta"> <span>Ciências Humanas e Sociais Aplicadas</span></div>                                                                                                                    
+                                    </div>
+                                    <div class="linha-respostas">
+                                        <div class='texto-resposta-menor'>                                        
+                                            <span class="texto-opcao">Informática</span>
+                                        </div>
+                                        <div class="resposta-correta"><span>Matemática e suas tecnologias</span></div>                                                                                                                   
+                                    </div>
+                                    <div class="linha-respostas">
+                                        <div class='texto-resposta-menor'>                                        
+                                            <span class="texto-opcao">Língua Portuguesa</span>
+                                        </div>
+                                        <div class="resposta-correta"> <span>Linguagem e suas tecnologiasa</span></div>                                                                                                                   
+                                    </div>
+                                    <div class="linha-respostas">
+                                        <div class='texto-resposta-menor'>                                        
+                                            <span class="texto-opcao">Saúde</span>
+                                        </div>
+                                        <div class="resposta-correta"> <span>Formação Técnica e Profissional</span></div>                                                                                                                   
+                                    </div>
+    
+                                                   									
+                                </div>                                   
+                            </div> 
 
-                                    <div class="linha-respostas">                                        
-                                        <div class="resposta-correta">Administração: <span> Ciências Humanas e Sociais Aplicadas.</span></div>
-                                    </div>
-                                    
-                                    <div class='linha-respostas'>
-                                        <div class='resposta-correta'>Ambiente: <span>Formação Técnica e Profissional.</span></div>
-                                    </div>
-                                        
-                                    <div class="linha-respostas">                                        
-                                        <div class="resposta-correta">Análise de Investimentos: <span>Matemática e suas tecnologias.</span></div>
-                                    </div>
-
-                                    <div class="linha-respostas">                                        
-                                        <div class="resposta-correta">Arte: <span>Linguagem e suas tecnologias.</span></div>
-                                    </div>
-
-                                    <div class="linha-respostas">                                        
-                                        <div class="resposta-correta">Biologia: <span>Ciências da Natureza e suas tecnologias.</span></div>
-                                    </div>
-
-                                    <div class="linha-respostas">                                        
-                                        <div class="resposta-correta">Computação: <span>Matemática e suas tecnologias.</span></div>
-                                    </div>
-
-                                    <div class="linha-respostas">                                        
-                                        <div class="resposta-correta">Controle e Processos Industriais: <span>Formação Técnica e Profissional.</span></div>
-                                    </div>
-
-                                    <div class="linha-respostas">                                        
-                                        <div class="resposta-correta">Demografia <span>Ciências Humanas e Sociais Aplicadas.</span></div>
-                                    </div>
-
-                                    <div class="linha-respostas">                                        
-                                        <div class="resposta-correta">Economia <span>Ciências Humanas e Sociais Aplicadas.</span></div>
-                                    </div>
-
-                                    <div class="linha-respostas">                                        
-                                        <div class="resposta-correta">Educação Física: <span>Linguagem e suas tecnologias.</span></div>
-                                    </div>
-
-                                    <div class="linha-respostas">                                        
-                                        <div class="resposta-correta">Estatística: <span>Matemática e suas tecnologias.</span></div>
-                                    </div>
-
-                                    <div class="linha-respostas">                                        
-                                        <div class="resposta-correta">Física: <span>Ciências da Natureza e suas tecnologias.</span></div>
-                                    </div>
-
-                                    <div class="linha-respostas">                                        
-                                        <div class="resposta-correta">Geografia: <span>Ciências Humanas e Sociais Aplicadas.</span></div>
-                                    </div>
-
-                                    <div class="linha-respostas">                                        
-                                        <div class="resposta-correta">Informática: <span>Matemática e suas tecnologias.</span></div>
-                                    </div>
-
-                                    <div class="linha-respostas">                                        
-                                        <div class="resposta-correta">Língua Inglesa: <span>Linguagem e suas tecnologias.</span></div>
-                                    </div>
-
-                                    <div class="linha-respostas">                                        
-                                        <div class="resposta-correta">Língua Portuguesa: <span>Linguagem e suas tecnologias.</span></div>
-                                    </div>
-
-                                    <div class="linha-respostas">                                        
-                                        <div class="resposta-correta">Pesquisa Operacional: <span>Matemática e suas tecnologias.</span></div>
-                                    </div>
-
-                                    <div class="linha-respostas">                                        
-                                        <div class="resposta-correta">Produção Alimentícia: <span>Formação Técnica e Profissional.</span></div>
-                                    </div>
-
-                                    <div class="linha-respostas">                                        
-                                        <div class="resposta-correta">Química: <span>Ciências da Natureza e suas tecnologias.</span></div>
-                                    </div>
-
-                                    <div class="linha-respostas">                                        
-                                        <div class="resposta-correta">Saúde: <span>Formação Técnica e Profissional.</span></div>
-                                    </div>
-                                </div>
-                            </div>                                 
-                        </div> <!-- Fim da questão--> 
+                            
                     </form>
+                    
                 </div>
             </div>
 
@@ -255,8 +240,9 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
+<script src="../../js/funcoes-atividades.js"></script>
 
-<script>
+<script>   
     console.clear(screen);
 
     var API = new BridgeRestApi();
@@ -266,7 +252,6 @@
         console.log("carregando a página");
     	API.registrarDadosGenericos(revisao,1);
 	});
-
 </script>
 
 </body>
