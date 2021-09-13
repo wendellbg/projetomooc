@@ -111,6 +111,15 @@ ul {
     color: #020E36;
 }
 
+.lista-topicos.red2 li span{
+    color: #E6292E;
+    background-color: #020E36;
+}
+
+.lista-topicos.red2 li{
+    color: #E6292E;
+}
+
 .lista-topicos.orange li span{
     color: #151730;
     background-color: #ff841d;

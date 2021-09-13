@@ -304,11 +304,11 @@ h3.texto-central b{
 }
 
 .mooc2 .bt-link-externo{
-	background-color: #2a5caa;
+	background-color: #020E36;
 }
 
 .mooc2 .bt-link-externo:hover{
-	background-color: #020E36;
+	background-color: #503f74;
 }
 
 .mooc2 .audio-gif .icone-play:hover,
@@ -335,3 +335,9 @@ h3.texto-central b{
 	color: #E6292E;
 	transition: 0.3s;
   }
+
+  .botao-referencias button:before{
+	font-family: 'Font Awesome 5 Free';
+    font-weight: 900;	
+	content: "\f022  ";
+}

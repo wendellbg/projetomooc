@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../../css/mooc2.css?ver=1.1"/>
     <link rel="stylesheet" href="../../css/efeito.css?ver=1.2"/>
-    <link rel="stylesheet" href="../../css/atividades-mooc2.css" />
+    <link rel="stylesheet" href="../../css/atividades-padrao.css" />
+    <link rel="stylesheet" href="../../css/cores-mooc2.css" />
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
@@ -69,7 +70,7 @@
 								<label for="change-hamburguer"></label>
 							</a>
 							<div class="menu">
-								<a href="../sumario.html" class='titulo-menu'>UNIDADE 1</a>
+								<a href="../sumario.html" class='titulo-menu link-menu-atual'>UNIDADE 1</a>
                                 <a href="tela01.html">1.01 - Apresentação</a>
                                 <a href="tela02.html">1.02 - Educação profissional no mundo do trabalho</a>
                                 <a href="tela03.html">1.03 - Técnica e Trabalho</a>
@@ -92,35 +93,55 @@
                         <div class="questao">
                             <div class="titulo-questao">Questão 1</div>
                             <div class="enunciado-questao">
-                                <span>Sobre a relação entre técnica e trabalho, assinale as afirmativas a seguir como verdadeira ou falsa:</span>
+                                <span>Sobre a relação entre técnica e trabalho, assinale as afirmativas a seguir como verdadeiras ou falsas:</span>
                             </div>
                             <div class="area-respostas">
                                 <div class="linha-respostas">
-                                    <div class='texto-resposta  linha-grande'>                                           
-                                        <input type="checkbox" id='r1_1_1' name='r1_1_1' value="r1_1_1">
-                                        <label for='r1_1_1' class="texto-opcao">a) A técnica é o fundamento do trabalho.</label>
+                                    <div class="texto-resposta linha-grande">                                        
+                                        <span class="texto-opcao ">a) A técnica é o fundamento do trabalho.</label>
+                                    </div> 
+                                    <div class="area-radios">
+                                        <input type="radio" name="r1_1_1" id="r1_1_1_v" value="v" required>
+                                        <label for="r1_1_1_v" class="texto-opcao">V</label>
+                                        <input type="radio" name="r1_1_1" id="r1_1_1_f" value="f" required>
+                                        <label for="r1_1_1_f" class="texto-opcao">F</label>                                                
                                     </div>                                       
                                 </div>
 
                                 <div class="linha-respostas">
-                                    <div class='texto-resposta  linha-grande'> 
-                                        <input type="checkbox" id='r1_1_2' name='r1_1_2' value="r1_1_2">
-                                        <label for='r1_1_2' class="texto-opcao">b) O ser humano intervém no mundo pela técnica.</label>
-                                    </div>                                       
+                                    <div class="texto-resposta linha-grande">                                        
+                                        <span class="texto-opcao ">b) O ser humano intervém no mundo pela técnica.</label>
+                                    </div>  
+                                    <div class="area-radios">
+                                        <input type="radio" name="r1_1_2" id="r1_1_2_v" value="v" required>
+                                        <label for="r1_1_2_v" class="texto-opcao">V</label>
+                                        <input type="radio" name="r1_1_2" id="r1_1_2_f" value="f" required>
+                                        <label for="r1_1_2_f" class="texto-opcao">F</label>                                                
+                                    </div>                                      
                                 </div>
 
                                 <div class="linha-respostas">
-                                    <div class='texto-resposta  linha-grande'>   
-                                        <input type="checkbox" id='r1_1_3' name='r1_1_3' value="r1_1_3">                                                                             
-                                        <label for="r1_1_3" class="texto-opcao">c) O trabalho só tem sentido econômico e/ou material.</label>
-                                    </div>                                       
+                                    <div class="texto-resposta linha-grande">                                        
+                                        <span class="texto-opcao ">c) O trabalho só tem sentido econômico e/ou material.</label>
+                                    </div>  
+                                    <div class="area-radios">
+                                        <input type="radio" name="r1_1_3" id="r1_1_3_v" value="v" required>
+                                        <label for="r1_1_3_v" class="texto-opcao">V</label>
+                                        <input type="radio" name="r1_1_3" id="r1_1_3_f" value="f" required>
+                                        <label for="r1_1_3_f" class="texto-opcao">F</label>                                                
+                                    </div>                                      
                                 </div>
 
                                 <div class="linha-respostas">
-                                    <div class='texto-resposta  linha-grande'>   
-                                        <input type="checkbox" id='r1_1_4' name='r1_1_4' value="r1_1_4">                                        
-                                        <label for='r1_1_4' class="texto-opcao">d) O trabalho é um dos traços que melhor identifica nossa humanidade.</label>
-                                    </div>                                                                               
+                                    <div class="texto-resposta linha-grande">                                        
+                                        <span class="texto-opcao ">d) O trabalho é um dos traços que melhor identifica nossa humanidade.</label>
+                                    </div>  
+                                    <div class="area-radios">
+                                        <input type="radio" name="r1_1_4" id="r1_1_4_v" value="v" required>
+                                        <label for="r1_1_4_v" class="texto-opcao">V</label>
+                                        <input type="radio" name="r1_1_4" id="r1_1_4_f" value="f" required>
+                                        <label for="r1_1_4_f" class="texto-opcao">F</label>                                                
+                                    </div>                                                                              
                                 </div>
                                 <p>&nbsp;</p>
 
@@ -131,72 +152,111 @@
                         <div class="questao">
                             <div class="titulo-questao">Questão 2</div>
                             <div class="enunciado-questao">
-                                <span>Complete o texto arrastando e soltando as palavras:</span>
+                                <span>Complete o texto selecionando as palavras:</span>
                             </div>
                             <div class="area-respostas">
                                 <div class="linha-respostas">
                                     <div class='texto-resposta linha-grande'>                                        
                                         <p></p>
                                         <span class="texto-opcao">A  
-                                            <div class="area-inputs caixa-drop_5_2" id='r1_2_1' name='r1_2_1' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                                <p></p>                                         
-                                            </div>                                                                            
+                                            <div class="caixa-box caixa-texto">                                            
+                                                <select name="r1_2_a" id="r1_2_a" class="resposta-select" onchange="valorSelecionado(this)">
+                                                    <option  id="r1_2_a_0" name="r1_2_a_0" value="">Selecione sua resposta</option>
+                                                    <option  id="r1_2_a_1" name="r1_2_a_1" value="existência">existência</option>
+                                                    <option  id="r1_2_a_2" name="r1_2_a_2" value="fundamento">fundamento</option>														
+                                                    <option  id="r1_2_a_3" name="r1_2_a_3" value="intervenção">intervenção</option>				
+                                                    <option  id="r1_2_a_4" name="r1_2_a_4" value="produção">produção</option>				
+                                                    <option  id="r1_2_a_5" name="r1_2_a_5" value="sociedade">sociedade</option>				
+                                                    <option  id="r1_2_a_6" name="r1_2_a_6" value="técnica">técnica</option>				
+                                                    <option  id="r1_2_a_7" name="r1_2_a_7" value="trabalho">trabalho</option>				
+                                                </select>
+                                            </div>                                                                           
                                             qualifica o ato  humano de
-                                            <div class="area-inputs caixa-drop_5_2" id='r1_2_2' name='r1_2_2' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                                <p></p>                                         
+                                            <div class="caixa-box caixa-texto">                                            
+                                                <select name="r1_2_b" id="r1_2_b" class="resposta-select" onchange="valorSelecionado(this)">
+                                                    <option  id="r1_2_b_0" name="r1_2_b_0" value="">Selecione sua resposta</option>
+                                                    <option  id="r1_2_b_1" name="r1_2_b_1" value="existência">existência</option>
+                                                    <option  id="r1_2_b_2" name="r1_2_b_2" value="fundamento">fundamento</option>														
+                                                    <option  id="r1_2_b_3" name="r1_2_b_3" value="intervenção">intervenção</option>				
+                                                    <option  id="r1_2_b_4" name="r1_2_b_4" value="produção">produção</option>				
+                                                    <option  id="r1_2_b_5" name="r1_2_b_5" value="sociedade">sociedade</option>				
+                                                    <option  id="r1_2_b_6" name="r1_2_b_6" value="técnica">técnica</option>				
+                                                    <option  id="r1_2_b_7" name="r1_2_b_7" value="trabalho">trabalho</option>				
+                                                </select>
                                             </div>                                                                            
                                             no mundo para a
-                                            <div class="area-inputs caixa-drop_5_2" id='r1_2_3' name='r1_2_3' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                                <p></p>                                         
+                                            <div class="caixa-box caixa-texto">                                            
+                                                <select name="r1_2_c" id="r1_2_c" class="resposta-select" onchange="valorSelecionado(this)">
+                                                    <option  id="r1_2_c_0" name="r1_2_c_0" value="">Selecione sua resposta</option>
+                                                    <option  id="r1_2_c_1" name="r1_2_c_1" value="existência">existência</option>
+                                                    <option  id="r1_2_c_2" name="r1_2_c_2" value="fundamento">fundamento</option>														
+                                                    <option  id="r1_2_c_3" name="r1_2_c_3" value="intervenção">intervenção</option>				
+                                                    <option  id="r1_2_c_4" name="r1_2_c_4" value="produção">produção</option>				
+                                                    <option  id="r1_2_c_5" name="r1_2_c_5" value="sociedade">sociedade</option>				
+                                                    <option  id="r1_2_c_6" name="r1_2_c_6" value="técnica">técnica</option>				
+                                                    <option  id="r1_2_c_7" name="r1_2_c_7" value="trabalho">trabalho</option>				
+                                                </select>
                                             </div>
                                             da sua 
-                                            <div class="area-inputs caixa-drop_5_2" id='r1_2_4' name='r1_2_4' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                                <p></p>                                         
+                                            <div class="caixa-box caixa-texto">                                            
+                                                <select name="r1_2_d" id="r1_2_d" class="resposta-select" onchange="valorSelecionado(this)">
+                                                    <option  id="r1_2_d_0" name="r1_2_d_0" value="">Selecione sua resposta</option>
+                                                    <option  id="r1_2_d_1" name="r1_2_d_1" value="existência">existência</option>
+                                                    <option  id="r1_2_d_2" name="r1_2_d_2" value="fundamento">fundamento</option>														
+                                                    <option  id="r1_2_d_3" name="r1_2_d_3" value="intervenção">intervenção</option>				
+                                                    <option  id="r1_2_d_4" name="r1_2_d_4" value="produção">produção</option>				
+                                                    <option  id="r1_2_d_5" name="r1_2_d_5" value="sociedade">sociedade</option>				
+                                                    <option  id="r1_2_d_6" name="r1_2_d_6" value="técnica">técnica</option>				
+                                                    <option  id="r1_2_d_7" name="r1_2_d_7" value="trabalho">trabalho</option>				
+                                                </select>
                                             </div>
                                             e da
-                                            <div class="area-inputs caixa-drop_5_2" id='r1_2_5' name='r1_2_5' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                                <p></p>                                         
+                                            <div class="caixa-box caixa-texto">                                            
+                                                <select name="r1_2_e" id="r1_2_e" class="resposta-select" onchange="valorSelecionado(this)">
+                                                    <option  id="r1_2_e_0" name="r1_2_e_0" value="">Selecione sua resposta</option>
+                                                    <option  id="r1_2_e_1" name="r1_2_e_1" value="existência">existência</option>
+                                                    <option  id="r1_2_e_2" name="r1_2_e_2" value="fundamento">fundamento</option>														
+                                                    <option  id="r1_2_e_3" name="r1_2_e_3" value="intervenção">intervenção</option>				
+                                                    <option  id="r1_2_e_4" name="r1_2_e_4" value="produção">produção</option>				
+                                                    <option  id="r1_2_e_5" name="r1_2_e_5" value="sociedade">sociedade</option>				
+                                                    <option  id="r1_2_e_6" name="r1_2_e_6" value="técnica">técnica</option>				
+                                                    <option  id="r1_2_e_7" name="r1_2_e_7" value="trabalho">trabalho</option>				
+                                                </select>
                                             </div>
                                             .
                                         </span>
                                         <p></p>
                                         <span class="texto-opcao">O 
-                                            <div class="area-inputs caixa-drop_5_2" id='r1_2_6' name='r1_2_6' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                                <p></p>                                         
+                                            <div class="caixa-box caixa-texto">                                            
+                                                <select name="r1_2_f" id="r1_2_f" class="resposta-select" onchange="valorSelecionado(this)">
+                                                    <option  id="r1_2_f_0" name="r1_2_f_0" value="">Selecione sua resposta</option>
+                                                    <option  id="r1_2_f_1" name="r1_2_f_1" value="existência">existência</option>
+                                                    <option  id="r1_2_f_2" name="r1_2_f_2" value="fundamento">fundamento</option>														
+                                                    <option  id="r1_2_f_3" name="r1_2_f_3" value="intervenção">intervenção</option>				
+                                                    <option  id="r1_2_f_4" name="r1_2_f_4" value="produção">produção</option>				
+                                                    <option  id="r1_2_f_5" name="r1_2_f_5" value="sociedade">sociedade</option>				
+                                                    <option  id="r1_2_f_6" name="r1_2_f_6" value="técnica">técnica</option>				
+                                                    <option  id="r1_2_f_7" name="r1_2_f_7" value="trabalho">trabalho</option>				
+                                                </select>
                                             </div>
                                             , exercício coletivo da atividade técnica humana, é 
-                                            <div class="area-inputs caixa-drop_5_2" id='r1_2_7' name='r1_2_7' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                                <p></p>                                         
+                                            <div class="caixa-box caixa-texto">                                            
+                                                <select name="r1_2_g" id="r1_2_g" class="resposta-select" onchange="valorSelecionado(this)">
+                                                    <option  id="r1_2_g_0" name="r1_2_g_0" value="">Selecione sua resposta</option>
+                                                    <option  id="r1_2_g_1" name="r1_2_g_1" value="existência">existência</option>
+                                                    <option  id="r1_2_g_2" name="r1_2_g_2" value="fundamento">fundamento</option>														
+                                                    <option  id="r1_2_g_3" name="r1_2_g_3" value="intervenção">intervenção</option>				
+                                                    <option  id="r1_2_g_4" name="r1_2_g_4" value="produção">produção</option>				
+                                                    <option  id="r1_2_g_5" name="r1_2_g_5" value="sociedade">sociedade</option>				
+                                                    <option  id="r1_2_g_6" name="r1_2_g_6" value="técnica">técnica</option>				
+                                                    <option  id="r1_2_g_7" name="r1_2_g_7" value="trabalho">trabalho</option>				
+                                                </select>
                                             </div>
                                             da nossa vida.                                                
                                         </span>
                                     </div>
                                 </div>
-
-                                <div class='linha-respostas'>
-                                    <p class="legenda-resposta">Opções de Resposta:</p>
-                                    <div class="area-opcoes caixa-drop_5_3" id='opcao1_2_1' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                        <span class="palavra-resposta" name='r5_2_texto_1' id='r1_2_texto_1' draggable="true" ondragstart="drag(event)">fundamento</span>
-                                    </div>
-                                    <div class="area-opcoes caixa-drop_5_3" id='opcao1_2_2' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                        <span class="palavra-resposta" name='r1_2_texto_2' id='r1_2_texto_2' draggable="true" ondragstart="drag(event)">sociedade</span>
-                                    </div>
-                                    <div class="area-opcoes caixa-drop_5_3" id='opcao1_2_3' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                        <span class="palavra-resposta" name='r1_2_texto_3' id='r1_2_texto_3' draggable="true" ondragstart="drag(event)">intervenção</span>
-                                    </div>
-                                    <div class="area-opcoes caixa-drop_5_3" id='opcao1_2_4' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                        <span class="palavra-resposta" name='r1_2_texto_4' id='r1_2_texto_4' draggable="true" ondragstart="drag(event)">produção</span>
-                                    </div>
-                                    <div class="area-opcoes caixa-drop_5_3" id='opcao1_2_5' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                        <span class="palavra-resposta" name='r1_2_texto_5' id='r1_2_texto_5' draggable="true" ondragstart="drag(event)">técnica</span>
-                                    </div>
-                                    <div class="area-opcoes caixa-drop_5_3" id='opcao1_2_6' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                        <span class="palavra-resposta" name='r1_2_texto_6' id='r1_2_texto_6' draggable="true" ondragstart="drag(event)">trabalho</span>
-                                    </div>
-                                    <div class="area-opcoes caixa-drop_5_3" id='opcao1_2_7' ondrop="drop(event)" ondragover="allowDrop(event)">
-                                        <span class="palavra-resposta" name='r1_2_texto_7' id='r1_2_texto_7' draggable="true" ondragstart="drag(event)">existência</span>
-                                    </div>												
-                                </div>										
+									
                             </div>                                   
                         </div> 
 
@@ -506,32 +566,25 @@
         }
     }
 
-    //// Eventos do Drag and Drop /////
-    var dragSrcEl = null;
-
-    function allowDrop(ev) {
-        ev.preventDefault();
-    }
-
-    function drag(ev){
-        /**ev.dataTransfer.setData("text",ev.target.id); **/
-        ev.dataTransfer.setData ("src", ev.target.id);
-                    
-    }
-
-    function drop(ev){
+    function valorSelecionado(sel) {
+        let indice = sel.selectedIndex;
+        let valor = sel.value;
+        let id = sel.id; 
         
-        ev.preventDefault();
-        // var data=ev.dataTransfer.getData("text");
-        // ev.target.appendChild(document.getElementById(data));
-
-        var src = document.getElementById(ev.dataTransfer.getData ("src"));
-        var srcParent = src.parentNode;
-        var tgt = ev.currentTarget.firstElementChild;
-        
-        ev.currentTarget.replaceChild (src, tgt);
-        srcParent.appendChild (tgt);
-    }
+        if(indice==0){
+            sel.classList.remove("select-respondido");
+        }else{       
+            sel.classList.add("select-respondido");
+        }
+        var selects = document.getElementsByTagName('select');
+        for(var i = 0; i < selects.length; ++i) {
+            var s = selects[i];                     
+            if(s.selectedIndex!=0 && s.value == valor && id != s.id){            
+                s.selectedIndex=0;                    
+                s.classList.remove("select-respondido");            
+            }
+        } 
+    }  
 
 </script>
 
