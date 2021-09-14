@@ -25,7 +25,7 @@
     margin: 1em;
     perspective: 1500px;
 }
-.card .content {
+.card .content-card {
     position: relative;
     width: 100%;
     height: 100%;
@@ -36,7 +36,7 @@
 .card .more {
     display: none;
 }
-.card .more:checked ~ .content {
+.card .more:checked ~ .content-card {
     transform: rotateY(180deg);
 }
 
@@ -57,8 +57,8 @@
     transform-style: preserve-3d;
     border-radius: 6px;
 }
-.card .front .inner,
-.card .back .inner {
+.card .front .inner-card,
+.card .back .inner-card {
     height: 100%;
     display: grid;
     padding: 1.5em;
@@ -133,7 +133,7 @@
     background: linear-gradient(40deg, rgba(42, 92, 170, 0.0), rgba(2, 14, 54, 0.0))
 }
 
-.card .front .inner {
+.card .front .inner-card {
     grid-template-rows: 5fr 1fr 1fr 2fr 1fr;
     justify-items: center;
 }
@@ -167,7 +167,7 @@
     /*background-color: #fff;*/
     border: 2px solid #f0f0f0;
 }
-.card .back .inner {
+.card .back .inner-card {
     grid-template-rows: 1fr 2fr 1fr 2fr 14fr 1fr 1fr;
     grid-template-columns: repeat(4, auto);
     grid-column-gap: 0.8em;
@@ -384,4 +384,10 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background: #2a5caa;
+}
+
+/* para funcionar em outros navegadores */
+.card .front .inner-card{
+    z-index: 9;
+    position: relative;
 }
