@@ -522,14 +522,7 @@
         }else{       
             sel.classList.add("select-respondido");
         }
-        var selects = document.getElementsByTagName('select');
-        for(var i = 0; i < selects.length; ++i) {
-            var s = selects[i];                     
-            if(s.selectedIndex!=0 && s.value == valor && id != s.id){            
-                s.selectedIndex=0;                    
-                s.classList.remove("select-respondido");            
-            }
-        } 
+        
     }  
 
 </script>
