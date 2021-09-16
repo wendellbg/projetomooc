@@ -457,7 +457,6 @@ html{
 
 .questao table td.coluna-r textarea:not(:placeholder-shown){
     border: 4px solid var(--cor-principal);
-
 }
 
 .questao table td.coluna-r textarea:hover, .questao table td.coluna-r textarea:focus{
@@ -951,7 +950,7 @@ input[type="checkbox"]:checked + label{
     border: 4px solid var(--cor-secundaria);
 }
 
-.resposta-texto:focus, .resposta-texto:hover{
+.resposta-texto:focus, .resposta-texto:hover, .resposta-texto:not(:placeholder-shown){
     outline: none;
     border: 4px solid var(--cor-principal);
 }
