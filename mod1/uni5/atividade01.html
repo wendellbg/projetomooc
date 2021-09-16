@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="../../css/mooc1.css?ver=1.2"/>
 		<link rel="stylesheet" href="../../css/atividades-padrao.css" />
 		<link rel="stylesheet" href="../../css/cores-mooc1.css" />
+		<link rel="stylesheet" href="../../css/w3.css" />
 
 		<!-- Botão de Voltar ao Topo -->
 		<script src="../../js/jquery-2.1.1.js"></script>
@@ -193,7 +194,7 @@
 														</div> 
 														ou com as 
 														<div class="caixa-box caixa-texto">                                            
-															<select name="r5_2_" id="r5_2_a" class="resposta-select" onchange="valorSelecionado(this)">
+															<select name="r5_2_e" id="r5_2_e" class="resposta-select" onchange="valorSelecionado(this)">
 																<option  id="r5_2_e_0" name="r5_2_e_0" value="">Selecione sua resposta</option>
 																<option  id="r5_2_e_1" name="r5_2_e_1" value="contextualizar os saberes">contextualizar os saberes</option>
 																<option  id="r5_2_e_2" name="r5_2_e_2" value="curiosidade">curiosidade</option>														
@@ -285,6 +286,18 @@
 		<!-- Footer -->
 			<footer id="footer">              
 			</footer>
+			<div class="icone-botao-libras">
+				<button onclick="document.getElementById('id01').style.display='block'" type="button" style="border:2px solid #fff !important; border-radius: 8px;"><img src="../../img/padrao/libras.png"></button>
+
+				<div id="id01" class="w3-modal">
+					<div class="w3-modal-content">
+						<div class="w3-container">
+							<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+							<iframe id="ytplayer" type="text/html" width="300" height="500" src="https://www.youtube.com/embed/Ln9wCVeG8CM?autoplay=1&mute=1" frameborder="0"/></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>			
 		<script src="../../js/funcoes-atividades.js"></script>
@@ -336,32 +349,37 @@
 		r5_2_7 = document.form_atividade_uni5.r5_2_g.value;
 
 		//testando se todos os exercícios (menos os checkbox) estão preenchidos.
-		if(r5_1_1==null){
+		if(r5_1_1==""){
 			erros++;
-		}else if(r5_1_2==null){
+		}else if(r5_1_2==""){
 			erros++;
-		}else if(r5_2_1==null){
+		}else if(r5_2_1==""){
 			erros++;
-		}else if(r5_2_2==null){
+		}else if(r5_2_2==""){
 			erros++;
-		}else if(r5_2_3==null){
+		}else if(r5_2_3==""){
 			erros++;
-		}else if(r5_2_4==null){
+		}else if(r5_2_4==""){
 			erros++;
-		}else if(r5_2_5==null){
+		}else if(r5_2_5==""){
 			erros++;
-		}else if(r5_2_6==null){
+		}else if(r5_2_6==""){
 			erros++;
-		}else if(r5_2_7==null){
+		}else if(r5_2_7==""){
 			erros++;
 		}
+		
+		console.log("Resposta 1: "+r5_1_1+", "+r5_1_2);
+		console.log("Resposta 2: "+r5_2_1+", "+r5_2_2+", "+r5_2_3+", "+r5_2_4+", "+r5_2_5+", "+r5_2_6+", "+r5_2_7);
 
 		if(erros>0){
 			//caso algum não esteja preenchido, exibe mensagem de erro
 			mensagem.className = "mensagem-alerta";
 			mensagem.textContent = "Por favor preencha todos os campos";
 			mensagem.style.display = "inline-block";
-			window.scrollTo(0, 0);
+			jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
 			return false;
 		}else{
 			//console.log("\nChecando respostas"+id_atividade);			            
@@ -418,7 +436,9 @@
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você deve atingir a média ou fazer as três tentativas para poder ver o gabarito."+texto_mensagem_fim;
             }            
             mensagem_tentativas.innerHTML=texto_mensagem_total;            
-            window.scrollTo(0, 0);
+            jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
         }
 		if(erros==0 && envio==1){        
 			//se ainda não tiver enviado as respostas, ou se for dentro do máximio de tentativas,
@@ -502,13 +522,17 @@
             
             mensagem_tentativas.innerHTML=texto_mensagem_total;            
             //"Ocorreu tudo certo. Tem que aparecer o link
-			window.scrollTo(0, 0);
+			jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
         }else{
             //caso algum não esteja preenchido, exibe mensagem de erro
 			mensagem.className = "mensagem-alerta";
 			mensagem.innerHTML = "Ocorreu algum erro! Tente Novamente...";
 			mensagem.style.display = "inline-block";
-			window.scrollTo(0, 0);
+			jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
         }
     }
 
@@ -522,14 +546,7 @@
         }else{       
             sel.classList.add("select-respondido");
         }
-        var selects = document.getElementsByTagName('select');
-        for(var i = 0; i < selects.length; ++i) {
-            var s = selects[i];                     
-            if(s.selectedIndex!=0 && s.value == valor && id != s.id){            
-                s.selectedIndex=0;                    
-                s.classList.remove("select-respondido");            
-            }
-        } 
+        
     }  
 
 </script>
