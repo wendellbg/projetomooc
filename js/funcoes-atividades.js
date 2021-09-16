@@ -39,8 +39,12 @@ var quant_respostas=0;
                 //console.log("tentativas salvas: "+quant_salva);
                 //envio==1 ? quant_respostas=quant_salva+1 : quant_respostas=quant_salva;
                 if(envio==0){                                
-                    let vez = quant_salva==1 ? "vez" : "vezes";                    
-                    texto_mensagem_tentativa="<br>Você já respondeu "+quant_salva+" "+vez+".";
+                    if(quant_salva==0){
+                        texto_mensagem_tentativa = "<br>Você ainda não respondeu esta atividade.";
+                    }else{
+                        let vez = quant_salva==1 ? "vez" : "vezes";                    
+                        texto_mensagem_tentativa="<br>Você já respondeu "+quant_salva+" "+vez+".";
+                    }
                     mensagem_tentativas.innerHTML=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_fim;
                     console.log("\nJá verificou envio, quant-salva="+quant_salva);
                     quant_respostas = quant_salva;
@@ -61,10 +65,13 @@ var quant_respostas=0;
                 //se não encontrou a chave da unidade, é porque esta é a primeira vez que ele envia as respostas.
                 console.log("Carregando a página, envio="+envio);
                 if(envio==0){
-                    quant_respostas=0;
+                    quant_respostas=0;                     
                     mensagem_tentativas.innerHTML=texto_mensagem_padrao_0;   
-                    window.scrollTo(0,0);
+                    jQuery('body,html').animate({
+                        scrollTop: 0
+                    }, 800);
                     console.log("mensagem zerada");
+                    API.registrarDadosGenericos("quant_"+id_atividade,quant_respostas);
                 }else{
                     quant_respostas=parseInt(1);
                     //console.log("quant respostas="+quant_respostas);
