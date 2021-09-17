@@ -350,7 +350,9 @@
 			mensagem.className = "mensagem-alerta";
 			mensagem.textContent = "Por favor preencha todos os campos";
 			mensagem.style.display = "block";
-			window.scrollTo(0, 0);
+			jQuery('body,html').animate({
+    			scrollTop: 0
+        	}, 800);
 			return false;
 		}else{
 			console.log("\nChecando respostas "+id_atividade);
@@ -375,7 +377,10 @@
 			mensagem.className = "mensagem-ok";
 			mensagem.innerHTML = "Você já enviou as respostas, avance para a próxima Unidade!<p></p><a href='../uni1/index.html' class='link-proxima-unidade'>PROSSEGUIR &#10095;</a>";
 			mensagem.style.display = "block";
-			window.scrollTo(0, 0);
+			jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
+
 			setTimeout(function() {
     			window.location.href = "tela03.html";
 			}, 5000);
@@ -447,13 +452,17 @@
 					mensagem.className = "mensagem-ok";
 					mensagem.style.display ="block";			
 					//"Ocorreu tudo certo. Tem que aparecer o link
-					window.scrollTo(0, 0);
+					jQuery('body,html').animate({
+            			scrollTop: 0
+        			}, 800);
 				}else{
 					//caso algum não esteja preenchido, exibe mensagem de erro
 					mensagem.className = "mensagem-alerta";
 					mensagem.textContent = "Ocorreu algum erro! Tente Novamente...";
 					mensagem.style.display = "block";
-					window.scrollTo(0, 0);
+					jQuery('body,html').animate({
+            			scrollTop: 0
+        			}, 800);
 				}
 			}
 			
