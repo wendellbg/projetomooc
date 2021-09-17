@@ -425,7 +425,9 @@
 			mensagem.className = "mensagem-alerta";
 			mensagem.textContent = "Por favor preencha todos os campos";
 			mensagem.style.display = "inline-block";
-			window.scrollTo(0, 0);
+			jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
 			return false;
 		}else{
 			//console.log("\nChecando respostas"+id_atividade);			            
@@ -475,13 +477,15 @@
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a nota máxima!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
             }else if(nota_atividade>=6){
                 console.log("\nAtingiu a média aqui");
-                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a !<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a média!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                
             }
             else{
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você deve atingir a média ou fazer as três tentativas para poder ver o gabarito."+texto_mensagem_fim;
             }            
             mensagem_tentativas.innerHTML=texto_mensagem_total;            
-            window.scrollTo(0, 0);
+            jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
         }
         if(erros==0){       
             //se ainda não tiver enviado as respostas, ou se for dentro do máximio de tentativas,
@@ -561,13 +565,17 @@
             
             mensagem_tentativas.innerHTML=texto_mensagem_total;            
             //"Ocorreu tudo certo. Tem que aparecer o link
-			window.scrollTo(0, 0);
+			jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
         }else{
             //caso algum não esteja preenchido, exibe mensagem de erro
 			mensagem.className = "mensagem-alerta";
 			mensagem.innerHTML = "Ocorreu algum erro! Tente Novamente...";
 			mensagem.style.display = "inline-block";
-			window.scrollTo(0, 0);
+			jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
         }
     }
     function valorSelecionado(sel) {
