@@ -300,7 +300,7 @@
 			</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>			
-		<script src="../../js/funcoes-atividades.js"></script>
+		<script src="../../js/funcoes-atividades-teste2.js"></script>
 
 <script>
     console.clear(screen);
@@ -414,7 +414,7 @@
             verifica_revisao();
             if(revisao_vista==1){
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+texto_mensagem_revisao_1;         
-            }else if(quant_respostas>=max_quant_tentativas){
+            }else if(max_tentativas_atingido==1){
                 console.log("\n\nMax de mensagens aqui");
                 //Já atingiu o máximo de tentativas
                 if(envio==1){
