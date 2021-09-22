@@ -1053,16 +1053,19 @@ input[type="checkbox"]:checked + label{
 
 .botao-mensagem{
     border-color: var(--cor-secundaria);
-    background-color:var(--cor-principal);
-    color:var(--cor-secundaria);
+    background-color:var(--cor-secundaria);
+    color:var(--cor-principal);
     border: 2px solid;
     border-radius: 8px;
+    text-decoration: none;
+    font-weight: normal;
     padding:10px;
     margin: 10px;
 }
 .botao-mensagem:hover{
-    background-color: var(--cor-secundaria);
-    color:var(--cor-principal);
+    background-color: var(--cor-principal);
+    color:var(--cor-secundaria);
+    font-weight: bold;
 }
 
 /* Estilos das páginas de revisão */
