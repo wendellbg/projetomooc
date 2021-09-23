@@ -1,0 +1,322 @@
+@import url(font-awesome.min.css);
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+@import url(padrao.css?ver=1.5);
+@import url(fontes.css?ver=1.2);
+@import url(menu-top-down.css?ver=1.2);
+@import url(bt-sumario.css);
+body{
+	background-color: #eeeeee;
+	/*background-image: url(../img/uni1/bg_mooc1.png);*/
+	/*background-size: contain !important;*/
+}
+
+body:after {
+	background-image: url(../img/padrao/mooc5/bg_header.png);
+}
+
+a {
+	color: #020E36;
+}
+
+.bt-avanca a{
+	color: #fff;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #020E36;
+}
+
+
+#header .logo,
+#header .logo h4,
+#header .logo h3 {
+	color: #fff;
+	text-shadow: 0px 0px 5px black;
+	line-height: 25px;
+}
+
+/* Boas Vindas */
+.boas-vindas{
+	background-image: url(../img/padrao/tela01_box_text_darkblue.png);
+}
+
+.caixa-texto-topo {
+	background-image: url(../img/padrao/tela01_box1.png);
+}
+
+.caixa-texto-topo p{
+	color: #020E36;
+}
+
+.caixa-texto-centro p {
+	color: #fff;
+}
+
+.caixa-texto-rodape {
+	background-image: url(../img/padrao/tela01_box2.png);
+}
+.caixa-texto-rodape p {
+	color: #020E36;
+}
+
+@media screen and (max-width: 585px) {
+	.caixa-texto-topo,
+	.caixa-texto-rodape{
+		background-color: #fec13b;
+	}
+
+	.caixa-texto-topo:before, .caixa-texto-rodape:before{
+		background-color: #fec13b;
+		border: 3px solid #fec13b;
+	}
+
+	.caixa-texto-centro{
+		/*background-image: url(../img/padrao/mooc5/bg_slide_01.jpg);*/
+		background-color: #020E36;
+	}
+}
+
+/* Separador */
+.separador {
+	border-top: 2px solid #020E36;
+}
+
+.separador .texto-separador {
+	background-color: #020E36;
+	color: white;
+}
+
+
+.content .navegacao h3 {
+	color: #fff;
+	background-color: #020E36;
+}
+
+/* Footer */
+#footer{
+	background-image: url(../img/padrao/mooc5/bg_footer.png);
+}
+
+.footer .bt-topo{
+	background-color: #fec13b;
+}
+
+
+.footer .bt-topo:hover{
+	background-color: #020E36;
+}
+
+.footer .bt-topo a{
+	color: #fff;
+}
+
+/* Navegação */
+.bt-navegacao {
+	background-color: #020E36;
+	color: white;
+}
+
+.bt-navegacao.desativado{
+	background-color: #D7DDF4;
+	color: white;
+}
+
+.botoes-navegacao input[type="radio"] + label:before{
+	border: 1px solid #020E36;
+}
+
+.botoes-navegacao input[type="radio"]:checked + label:before{
+	background: #020E36;
+	color: #FFF;
+	border: 2px solid #020E36;
+}
+
+
+.navegacao .legenda{
+	color: #020E36;
+}
+
+.bt-avanca {
+	background-color: #020E36;
+	color: white;
+	/*color: #020E36;*/
+	/*background-color: #fff;*/
+}
+
+.bt-avanca a{
+	color: white;
+	text-decoration: none;
+	border-radius: 8px;
+}
+
+.bt-navegacao:hover,
+.bt-avanca a:hover{
+	background-color: #D8A235;
+	color: white;
+}
+
+.botoes-navegacao a:hover input[type="radio"] + label:before{
+	/*background-color: #BF851D;*/
+	background-color: #020E36;
+}
+
+.bt-avanca.atividades {
+	color: #020E36;
+	background-color: #fec13b;
+	border-right: 2px solid;
+	border-bottom: 2px solid;
+}
+
+.bt-avanca.atividades a {
+	color: #020E36;
+}
+
+.bt-avanca.atividades:hover a {
+	color: #fec13b;
+}
+
+.bt-avanca.atividades:hover {
+	background-color: #BF851D;
+	border-color: #fff;
+}
+
+
+h3.texto-central{
+	background-color: #2a5caa;
+	background-image: url(../img/padrao/bg_slide_01.jpg);
+}
+
+h3.texto-central b{
+	color: #2a5caa;
+}
+
+.fundo-claro .titulo-video,
+.fundo-claro .titulo-video span{
+	color: #020E36;
+	text-shadow: none;
+}
+
+.bt-download-media,
+.bt-link-externo{
+	background: #020E36;
+	color: rgba(255, 255, 255, 0.6);
+}
+.bt-download-media:hover,
+.bt-link-externo:hover{
+	transition: 0.3s;
+	background-color: #BF851D;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.video .downloads .bt-download-media:hover{
+	background-color: #fec13b;
+	color: rgba(2, 14, 54, 0.9);
+}
+
+.video .downloads .bt-download-media {
+	background: #BF851D;
+	color: rgba(2, 14, 54, 0.6);
+}
+
+/* Mudanças expecificas */
+.mooc5 .slideshow-container{
+	background-image: url(../img/padrao/mooc5/bg_slide_dark.png);
+	background-position: center;
+}
+
+.mooc5 .video {
+	/*background-image: url(../img/padrao/mooc5/bg_video_01.jpg);*/
+	/*background-color: #020E36;*/
+	background-image: url(../img/padrao/mooc5/bg_video_dark.png);
+	background-position: center;
+	background-size: cover;
+}
+
+.mooc5 .video.fundo-claro{
+	background-image: url(../img/padrao/mooc5/bg_video_02.png);
+	background-size: contain;
+}
+
+.mooc5 .hamburguer label{
+	border: 2px solid #020E36;
+}
+
+.mooc5 .hamburguer:after,
+.mooc5 .hamburguer:before,
+.mooc5 .hamburguer span{
+	background: #020E36;
+}
+
+.mooc5 .menu a.titulo-menu {
+	text-align: center;
+	width: 100%;
+	color: #020E36;
+	font-size: large;
+}
+
+.mooc5 .menu a.link-menu-atual {
+	color: #020E36;
+}
+
+.mooc5 .menu a:hover,
+.mooc5 .menu a.link-menu-atual:hover {
+	background-color: #020E36;
+	color: #fff;
+}
+
+.mooc5 #change-hamburguer:checked ~ .menu{
+	border: 2px solid #020E36;
+}
+
+.mooc5 .prev, .mooc5 .next {
+	color: #020E36;
+}
+
+.mooc5 #header > .logo a {
+	text-shadow: 0px 0px 5px black;
+}
+
+.mooc5 .icone-audio {
+	border: 2px solid #020E36;
+}
+
+.mooc5 .icone-pause {
+	border: 2px solid #020E36;
+}
+
+.mooc5 .icone-play:hover {
+	border: 2px solid #fec13b;
+}
+
+.icone-botao-libras {
+	position: fixed;
+	bottom: 2%;
+	left: 1%;
+	padding: 1%;
+	z-index: 10000000;
+}
+
+.mooc5 .audio-gif .icone-play:hover{
+	border: none;
+}
+
+.mooc5 .bt-link-externo{
+	background-color: #2a5caa;
+}
+
+.mooc5 .bt-link-externo:hover{
+	background-color: #020E36;
+}
+
+.mooc5 .border-dark-blue .subtitulo{
+	background-color: #020E36;
+}
+
+
+.mooc5 .audio-gif .icone-play:hover,
+.mooc5 .audio-gif .icone-play img:hover,
+.mooc5 .audio-gif .icone-pause img:hover{
+	background-color: #020E36;
+}
