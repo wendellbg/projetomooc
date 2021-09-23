@@ -102,6 +102,21 @@ ul {
     background-color: #fec13b;
 }
 
+.lista-topicos.yellow-dark li{
+    color: #020E36;
+}
+
+.lista-topicos.yellow-dark li b{
+    text-shadow: 0 0 #020E36;
+}
+
+
+
+.lista-topicos.yellow-dark li span{
+    color: #020E36;
+    background-color: #fec13b;
+}
+
 .lista-topicos.red li span{
     color: #020E36;
     background-color: #E6292E;
