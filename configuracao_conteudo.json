@@ -57,7 +57,7 @@
 						"identificador": "r0_4",
 						"enunciado": "Quais competências você gostaria de desenvolver neste curso?",
 						"gabaritos": [							
-							{ "chave": "r0_4_a", "valor": "a", "alternativa": "Conhecer as normas e procedimentos relativos ao novo Ensino Médio em direção à escolha de itinerários formativos." },
+							{ "chave": "r0_4_a", "valor": "a", "alternativa": "Conhecer as normas e procedimentos relativos ao Novo Ensino Médio em direção à escolha de itinerários formativos." },
 							{ "chave": "r0_4_b", "valor": "b", "alternativa": "Conhecer melhor o itinerário formativo de Formação Técnica e Profissional." },
 							{ "chave": "r0_4_c", "valor": "c", "alternativa": "Compreender melhor os processos de orientação (ou mentoria) educacional e profissional." },
 							{ "chave": "r0_4_d", "valor": "d", "alternativa": "Conhecer os tipos de ações que podem ser realizados para ajudar os estudantes a escolherem seus itinerários." },
@@ -147,7 +147,7 @@
 		]	
 	},{		
 		"identificador": "mod1_uni2",
-		"nome": "Educação Profissional no novo Ensino Médio",
+		"nome": "Educação Profissional no Novo Ensino Médio",
 		"descricao": "",
 		"permitePorcentagem": "true",
 		"topicos": [{
