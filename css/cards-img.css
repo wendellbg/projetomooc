@@ -225,10 +225,16 @@
     padding-top: 10px;
 }
 
+.card .back .description b {
+    color: #fff;
+    /*text-shadow: 0 0 #fff;*/
+}
+
 
 .card.yellow .back .description {
     border-top: #fec13b 4px solid;
 }
+
 
 .card.blue .back .description {
     border-top: #2a5caa 4px solid;
@@ -245,6 +251,28 @@
 .card.green .back .description {
     border-top: #2db5b9 4px solid;
 }
+
+/* Negrito */
+.card.yellow .back .description b {
+    color: #fec13b;
+}
+
+.card.blue .back .description b {
+    color: #2a5caa;
+}
+
+.card.red .back .description b {
+    color: #ff5355;
+}
+
+.card.orange .back .description b {
+    color: #ff841d;
+}
+
+.card.green .back .description b {
+    color: #2db5b9;
+}
+
 
 .card .back .location,
 .card .back .price {
