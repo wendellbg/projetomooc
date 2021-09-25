@@ -100,10 +100,10 @@
                             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TDcFsNM7juU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <audio id="playerAudioAD1" class="playerAudioAD" controls="controls" style="width: 100%;">
-                            <source  src="../../ad/mooc3/audio.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+                            <source  src="../../ad/mooc3/uni1/depoimento-01_COM_AD.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
                         </audio>
                         <div class="downloads">
-                            <button id="exibir-ad" onclick="document.getElementById('playerAudioAD1').style.display='block'" class="bt-download-media" type="button"><i class="fas fa-audio-description"></i> Áudio do vídeo com AD )))</button>
+                            <button id="exibir-ad" onclick="exibirAD1()" class="bt-download-media" type="button"><i class="fas fa-audio-description"></i> Áudio do vídeo com AD )))</button>
                             <a target="_blank" href="../../downloads/mooc3/Un1-depoimento1.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do vídeo</button></a>
 <!--                            <a target="_blank" href="#"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o áudio do vídeo</button></a>-->
                         </div>
@@ -112,11 +112,11 @@
                         <div class='video-player'>
                             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/R0W5f4931oU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
-                        <audio id="playerAudioAD1" class="playerAudioAD" controls="controls" style="width: 100%;">
-                            <source  src="../../ad/mooc3/audio.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+                        <audio id="playerAudioAD2" class="playerAudioAD" controls="controls" style="width: 100%;">
+                            <source  src="../../ad/mooc3/uni1/depoimento-02_COM_AD.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
                         </audio>
                         <div class="downloads">
-                            <button id="exibir-ad" onclick="document.getElementById('playerAudioAD1').style.display='block'" class="bt-download-media" type="button"><i class="fas fa-audio-description"></i> Áudio do vídeo com AD )))</button>
+                            <button id="exibir-ad" onclick="exibirAD2()" class="bt-download-media" type="button"><i class="fas fa-audio-description"></i> Áudio do vídeo com AD )))</button>
                             <a target="_blank" href="../../downloads/mooc3/Un1-depoimento2.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do vídeo</button></a>
 <!--                            <a target="_blank" href="#"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o áudio do vídeo</button></a>-->
                         </div>
@@ -212,6 +212,42 @@
     window.addEventListener('load', function(){
         API.obterDadosCurso();
     });
+</script>
+<script>
+
+    function exibirAD1(){
+
+        var audioPod = document.getElementById('playerAudioAD1');
+
+        if (audioPod.paused == false) {
+            audioPod.pause();
+            document.getElementById('playerAudioAD1').style.display='none';
+        }else{
+            audioPod.play();
+            document.getElementById('playerAudioAD1').style.display='block';
+        }
+
+
+    }
+
+</script>
+<script>
+
+    function exibirAD2(){
+
+        var audioPod = document.getElementById('playerAudioAD2');
+
+        if (audioPod.paused == false) {
+            audioPod.pause();
+            document.getElementById('playerAudioAD2').style.display='none';
+        }else{
+            audioPod.play();
+            document.getElementById('playerAudioAD2').style.display='block';
+        }
+
+
+    }
+
 </script>
 </body>
 </html>
