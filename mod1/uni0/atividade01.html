@@ -375,7 +375,7 @@
 			//Se já tiver enviado (200) então exibe a mensagem e libera os 100% da unidade de boas-vindas         
 			botao.style.display="none";
 			mensagem.className = "mensagem-ok";
-			mensagem.innerHTML = "Você já enviou as respostas, avance para a próxima Unidade!<p></p><a href='../uni1/index.html' class='link-proxima-unidade'>PROSSEGUIR &#10095;</a>";
+			mensagem.innerHTML = "Você já enviou as respostas, avance para a próxima Unidade!<p></p><a href='../uni1/index.html' class='botao-mensagem'>PROSSEGUIR &#10095;</a>";
 			mensagem.style.display = "block";
 			jQuery('body,html').animate({
             	scrollTop: 0
@@ -448,7 +448,7 @@
 					// 	nota_atividade=nota_atividade_nova;
 					// }
 					//esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
-					mensagem.innerHTML="Dados Enviados com sucesso!<br /><br><a class='link-proxima-unidade' href='tela03.html'>PROSSEGUIR &#10095;</a>";					
+					mensagem.innerHTML="Dados Enviados com sucesso!<br /><br><a class='botao-mensagem' href='tela03.html'>PROSSEGUIR &#10095;</a>";					
 					mensagem.className = "mensagem-ok";
 					mensagem.style.display ="block";			
 					//"Ocorreu tudo certo. Tem que aparecer o link
