@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2"/>
     <link rel="stylesheet" href="../../css/efeito.css?ver=1.2"/>
     <link rel="stylesheet" href="../../css/w3.css" />
+    <link rel="stylesheet" href="../../css/slide.css?ver=1.2"/>
+    <link rel="stylesheet" href="../../css/video-libras.css?ver=1.0" />
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
@@ -93,19 +95,85 @@
                 <p>Neste enquadramento, você professor/mentor tem muito a contribuir!</p>
                 <p>Nesta unidade, conheceremos os tipos de intervenções existentes de desenvolvimento de carreira no contexto escolar, bem como exemplos de atividades para cada uma delas. Ainda, abordaremos aspectos importantes a serem considerados na condução dessas intervenções, bem como pontos favorecedores e dificultadores na implementação de intervenções de carreira na escola.</p>
                 <p>Para começar, acompanhe as vídeo-aulas a seguir:</p>
-
-                <div class="video">
-                    <div class='titulo-video'><span></span></div>
-                    <div class='video-player'>
-                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="downloads">
-                        <a target="_blank" href="../../downloads/mooc3/Un1-video1.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do vídeo</button></a>
-                    </div>
-                </div>  
-
             </div>
-            
+
+            <!-- Container do slideshow-->
+            <div class="slideshow-container video libras">
+                <div class="mySlides fade">
+                    <div class="numero-slide">1 / 3</div>
+                    <div class="row ">
+                        <div class="video-externo 12u">
+                            <div class='video-player'>
+                                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/p3C-Q0OPwv0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <audio id="playerAudioAD1" class="playerAudioAD" controls="controls" style="width: 100%;">
+                            <source  src="../../downloads/mooc4/" type="audio/mp3" />Seu navegador não suporta HTML5
+                        </audio>
+
+                    </div>
+                    <div class="row links">
+                        <div class="downloads 12u"><br/>
+                            <button onclick="exibirAD('playerAudioAD1')" class="bt-download-media" type="button"><i class="fas fa-audio-description"></i> Áudio do vídeo com AD )))</button>
+                            <a target="_blank" href="../../downloads/mooc4/"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do vídeo</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numero-slide">2 / 3</div>
+                    <div class="row ">
+                        <div class="video-externo 12u">
+                            <div class='video-player'>
+                                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Q4ufFQuqAFo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <audio id="playerAudioAD2" class="playerAudioAD" controls="controls" style="width: 100%;">
+                            <source  src="../../downloads/mooc4/" type="audio/mp3" />Seu navegador não suporta HTML5
+                        </audio>
+
+                    </div>
+                    <div class="row links">
+                        <div class="downloads 12u"><br/>
+                            <button onclick="exibirAD('playerAudioAD1')" class="bt-download-media" type="button"><i class="fas fa-audio-description"></i> Áudio do vídeo com AD )))</button>
+                            <a target="_blank" href="../../downloads/mooc4/"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do vídeo</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numero-slide">3 / 3</div>
+                    <div class="row ">
+                        <div class="video-externo 12u">
+                            <div class='video-player'>
+                                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/V9yluXEfx44" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <audio id="playerAudioAD3" class="playerAudioAD" controls="controls" style="width: 100%;">
+                            <source  src="../../downloads/mooc4/" type="audio/mp3" />Seu navegador não suporta HTML5
+                        </audio>
+
+                    </div>
+                    <div class="row links">
+                        <div class="downloads 12u"><br/>
+                            <button onclick="exibirAD('playerAudioAD1')" class="bt-download-media" type="button"><i class="fas fa-audio-description"></i> Áudio do vídeo com AD )))</button>
+                            <a target="_blank" href="../../downloads/mooc4/"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do vídeo</button></a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <br>
+                <div style="text-align: center">
+                    <span class="ponto" onclick="currentSlide(1)"></span>
+                    <span class="ponto" onclick="currentSlide(2)"></span>
+                    <span class="ponto" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
 
             <!-- Conteúdo Footer -->
             <div class="content footer">
@@ -168,6 +236,51 @@
         </div>
     </div>
 </div>
+
+<script>
+    function exibirAD(audio){
+        var audioPod = document.getElementById(audio);
+
+        if (audioPod.paused == false) {
+            audioPod.pause();
+            document.getElementById(audio).style.display='none';
+        }else{
+            audioPod.play();
+            document.getElementById(audio).style.display='block';
+        }
+
+    }
+
+</script>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
 <script>
