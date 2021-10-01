@@ -432,7 +432,9 @@
 			mensagem.className = "mensagem-alerta";
 			mensagem.textContent = "Por favor preencha todos os campos";
 			mensagem.style.display = "inline-block";
-			window.scrollTo(0,0);
+			jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
 			return false;
 		}else{
 			//console.log("\nChecando respostas"+id_atividade);			            
@@ -460,7 +462,7 @@
             verifica_revisao();
             if(revisao_vista==1){
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+texto_mensagem_revisao_1;         
-            }else if(quant_respostas>=max_quant_tentativas){
+            }else if(max_tentativas_atingido==1){
                 console.log("\n\nMax de mensagens aqui");
                 //Já atingiu o máximo de tentativas
                 if(envio==1){
@@ -483,7 +485,9 @@
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você deve atingir a média ou fazer as três tentativas para poder ver o gabarito."+texto_mensagem_fim;
             }            
             mensagem_tentativas.innerHTML=texto_mensagem_total;            
-            window.scrollTo(0, 0);
+            jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
         }
         if(erros==0){       
             //se ainda não tiver enviado as respostas, ou se for dentro do máximio de tentativas,
@@ -561,13 +565,17 @@
             
             mensagem_tentativas.innerHTML=texto_mensagem_total;            
             //"Ocorreu tudo certo. Tem que aparecer o link
-			window.scrollTo(0, 0);
+			jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
         }else{
             //caso algum não esteja preenchido, exibe mensagem de erro
 			mensagem.className = "mensagem-alerta";
 			mensagem.innerHTML = "Ocorreu algum erro! Tente Novamente...";
 			mensagem.style.display = "inline-block";
-			window.scrollTo(0, 0);
+			jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
         }
     }
 
@@ -580,16 +588,8 @@
             sel.classList.remove("select-respondido");
         }else{       
             sel.classList.add("select-respondido");
-        }
-        var selects = document.getElementsByTagName('select');
-        for(var i = 0; i < selects.length; ++i) {
-            var s = selects[i];                     
-            if(s.selectedIndex!=0 && s.value == valor && id != s.id){            
-                s.selectedIndex=0;                    
-                s.classList.remove("select-respondido");            
-            }
-        } 
-    }  
+        }        
+    }
 
 </script>
 
