@@ -124,7 +124,7 @@
                                             </div>                                                                            
                                             e a definição de uma série de
                                             <div class="caixa-box caixa-texto">                                            
-                                                <select name="r4_2_b" id="r4_1_b" class="resposta-select" onchange="valorSelecionado(this)">
+                                                <select name="r4_1_b" id="r4_1_b" class="resposta-select" onchange="valorSelecionado(this)">
                                                     <option  id="r4_1_b_0" name="r4_1_b_0" value="">Selecione sua resposta</option>
                                                     <option  id="r4_1_b_1" name="r4_1_b_1" value="atividades profissionais">atividades profissionais</option>
                                                     <option  id="r4_1_b_2" name="r4_1_b_2" value="autonomia">autonomia</option>														
@@ -389,49 +389,60 @@
         console.clear();
 
         //aqui vai pegar os valores de cada exercício.
-        // Exercício 1 -  Drag and drop
-        r4_1_1 = document.querySelector("#r4_1_1 span.palavra-resposta"),
-        r4_1_2 = document.querySelector("#r4_1_2 span.palavra-resposta"),
-        r4_1_3 = document.querySelector("#r4_1_3 span.palavra-resposta"),
-        r4_1_4 = document.querySelector("#r4_1_4 span.palavra-resposta"),
-        r4_1_5 = document.querySelector("#r4_1_5 span.palavra-resposta"),
-        r4_1_6 = document.querySelector("#r4_1_6 span.palavra-resposta"),
-        r4_1_7 = document.querySelector("#r4_1_7 span.palavra-resposta"),
+        // Exercício 1 - select
+        r4_1_1 = document.form_atividade_uni4.r4_1_a.value,
+        r4_1_2 = document.form_atividade_uni4.r4_1_b.value,
+        r4_1_3 = document.form_atividade_uni4.r4_1_c.value,
+        r4_1_4 = document.form_atividade_uni4.r4_1_d.value,
+        r4_1_5 = document.form_atividade_uni4.r4_1_e.value,
+        r4_1_6 = document.form_atividade_uni4.r4_1_f.value,
+        r4_1_7 = document.form_atividade_uni4.r4_1_g.value,
 		
-        //Exercício 2 - Drag and drop
-        r4_2_1 = document.querySelector("#r4_2_1 span.palavra-resposta"),
-        r4_2_2 = document.querySelector("#r4_2_2 span.palavra-resposta"),
-        r4_2_3 = document.querySelector("#r4_2_3 span.palavra-resposta"),
+        //Exercício 2 - select
+        r4_2_1 = document.form_atividade_uni4.r4_2_a.value,
+        r4_2_2 = document.form_atividade_uni4.r4_2_b.value,
+        r4_2_3 = document.form_atividade_uni4.r4_2_c.value,
 
         //Exercício 3 - V ou F
-        r4_3_1 = document.form_atividade_uni4.r4_3_1.checked,
-        r4_3_2 = document.form_atividade_uni4.r4_3_2.checked,
-        r4_3_3 = document.form_atividade_uni4.r4_3_4.checked,
-        r4_3_4 = document.form_atividade_uni4.r4_3_4.checked
+        r4_3_1 = document.form_atividade_uni4.r4_3_1.checked==true ? "v" : "f",
+        r4_3_2 = document.form_atividade_uni4.r4_3_2.checked==true ? "v" : "f",
+        r4_3_3 = document.form_atividade_uni4.r4_3_3.checked==true ? "v" : "f",
+        r4_3_4 = document.form_atividade_uni4.r4_3_4.checked==true ? "v" : "f";
 		       
         //testando se todos os exercícios (menos os checkbox) estão preenchidos.
-		if(r4_1_1==null){
+		if(r4_1_1==""){
 			erros++;
-		}else if(r1_2_2==null){
+		}else if(r4_1_2==""){
 			erros++;
-        }else if(r1_2_3==null){
+        }else if(r4_1_3==""){
 			erros++;
-        }else if(r1_2_4==null){
+        }else if(r4_1_4==""){
 			erros++;
-        }else if(r1_2_5==null){
+        }else if(r4_1_5==""){
 			erros++;
-		}else if(r1_2_6==null){
+		}else if(r4_1_6==""){
 			erros++;
-		}else if(r1_2_7==null){
+		}else if(r4_1_7==""){
 			erros++;
-		}
+		}else if(r4_2_1==""){
+            erros++;
+        }else if(r4_2_2==""){
+            erros++;
+        }else if(r4_2_3==""){
+            erros++;
+        }
 
+        console.log("Resposta 1: "+r4_1_1+", "+r4_1_2+", "+r4_1_3+", "+r4_1_4+", "+r4_1_5+", "+r4_1_6+", "+r4_1_7);
+        console.log("Resposta 2: "+r4_2_1+", "+r4_2_2+", "+r4_2_3);
+        console.log("Resposta 3: "+r4_3_1+", "+r4_3_2+", "+r4_3_3+", "+r4_3_4);
+        
 		if(erros>0){
             //caso algum não esteja preenchido, exibe mensagem de erro
 			mensagem.className = "mensagem-alerta";
 			mensagem.textContent = "Por favor preencha todos os campos";
 			mensagem.style.display = "inline-block";
-			jQuery('body,html').animate({
+			
+            jQuery('body,html').animate({
             	scrollTop: 0
         	}, 800);
 			return false;
@@ -442,6 +453,9 @@
             verificando_tentativas("quant_"+id_atividade);            
 			if(erros>0){
 				return false;
+                jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
 			}			
 		}
 	};
@@ -498,32 +512,31 @@
                 "questoes": [
                     {
                         //Onde houver os exercícios de drag and drop precisa pegar o innerHTML
-                        "identificador": "r1_1",                    
+                        "identificador": "r4_1",                    
                         "gabaritos": [
-                            { "chave": "r1_1_1", "valor": (r1_1_1==true ? "v" : "f")},
-                            { "chave": "r1_1_2", "valor": (r1_1_2==true ? "v" : "f")},
-                            { "chave": "r1_1_3", "valor": (r1_1_3==true ? "v" : "f")},
-                            { "chave": "r1_1_4", "valor": (r1_1_4==true ? "v" : "f")}                            						
+                            { "chave": "r4_1_1", "valor": (r4_1_1)},
+                            { "chave": "r4_1_2", "valor": (r4_1_2)},
+                            { "chave": "r4_1_3", "valor": (r4_1_3)},
+                            { "chave": "r4_1_4", "valor": (r4_1_4)},                            						
+                            { "chave": "r4_1_5", "valor": (r4_1_5)},
+                            { "chave": "r4_1_6", "valor": (r4_1_6)},
+                            { "chave": "r4_1_7", "valor": (r4_1_7)}
                         ]
                     },{                    
-                        "identificador": "r1_2",                    
+                        "identificador": "r4_2",                    
                         "gabaritos": [
-                            { "chave": "r1_2_1", "valor": r1_2_1.innerHTML},
-                            { "chave": "r1_2_2", "valor": r1_2_2.innerHTML},
-                            { "chave": "r1_2_3", "valor": r1_2_4.innerHTML},
-                            { "chave": "r1_2_4", "valor": r1_2_4.innerHTML},	
-                            { "chave": "r1_2_5", "valor": r1_2_5.innerHTML},
-                            { "chave": "r1_2_6", "valor": r1_2_6.innerHTML},
-                            { "chave": "r1_2_7", "valor": r1_2_7.innerHTML}
+                            { "chave": "r4_2_1", "valor": r4_2_1},
+                            { "chave": "r4_2_2", "valor": r4_2_2},
+                            { "chave": "r4_2_3", "valor": r4_2_3}
                         ]
                     },{
                         //Onde houver os checkbox, testar se é true para registrar v ou f
-                        "identificador": "r1_3",                    
+                        "identificador": "r4_3",                    
                         "gabaritos": [
-                            { "chave": "r1_3_1", "valor": (r1_3_1==true ? "v" : "f")},
-                            { "chave": "r1_3_2", "valor": (r1_3_2==true ? "v" : "f")},
-                            { "chave": "r1_3_3", "valor": (r1_3_3==true ? "v" : "f")},
-                            { "chave": "r1_3_4", "valor": (r1_3_4==true ? "v" : "f")}							
+                            { "chave": "r4_3_1", "valor": r4_3_1},
+                            { "chave": "r4_3_2", "valor": r4_3_2},
+                            { "chave": "r4_3_3", "valor": r4_3_3},
+                            { "chave": "r4_3_4", "valor": r4_3_4}							
                         ]
                     }
                 ]
