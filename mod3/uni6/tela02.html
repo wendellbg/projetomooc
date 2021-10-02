@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="../../css/mooc3.css?ver=1.1"/>
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2" />
     <link rel="stylesheet" href="../../css/podcast.css?ver=1.1"/>
-    <link rel="stylesheet" href="../../css/w3.css" />      
+    <link rel="stylesheet" href="../../css/w3.css" />
+    <link rel="stylesheet" href="../../css/video-libras.css?ver=1.0" />      
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
@@ -94,10 +95,11 @@
                     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mZ4wQas3oq4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <audio id="playerAudioAD1" class="playerAudioAD" controls="controls" style="width: 100%;">
-                    <source  src="../../ad/mooc3/audio.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+                    <source  src="../../ad/mooc3/uni6/toquinho-aquarela-clipe-oficialoriginal_COM_AD.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
                 </audio>
                 <div class="downloads">
-                    <button id="exibir-ad" onclick="document.getElementById('playerAudioAD1').style.display='block'" class="bt-download-media" type="button"><i class="fas fa-audio-description"></i> Áudio do vídeo com AD )))</button>
+                    <button id="exibir-ad" onclick="exibirAD()" class="bt-download-media" type="button"><i class="fas fa-audio-description"></i> Áudio do vídeo com AD )))</button>
+                    <a target="_blank" href="../../ad/mooc3/uni6/toquinho-aquarela-clipe-oficialoriginal_COM_AD.mp3"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o áudio do vídeo</button></a>
                     <span class="aviso" ><b>PROJETO AMAR.</b><br>
                         Toquinho Aquarela "clipe Oficial" original. Youtube, Março de 2016.
                     </span>
@@ -111,7 +113,7 @@
 
             <div class="content">
                 <div class="icone-audio">
-                    <a class='icone-play' id="botao-play-podcast" onclick="playShowPod()"><img src="../../img/uni3/icone-audio.png"/></a>
+                    <a class='icone-play' id="botao-play-podcast" onclick="playShowPod()"><img src="../../img/uni3/icone-audio.png" alt="Dentro de um retângulo um fone de ouvido que é o play do áudio." /></a>
                     <a class="icone-pause" id="botao-pause-podcast" onclick="pauseShowPod()" style="display:none;"><img src="../../img/uni3/icone-audio2.gif" /></a>
                     <audio id='playerPodcast' class='controles-podcast' controls='controls'>
                          <source src="../../img/uni6/podcast_3_6.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
@@ -208,5 +210,25 @@
         API.obterDadosCurso();
     });
 </script>
+
+<script>
+
+    function exibirAD(){
+
+        var audioPod = document.getElementById('playerAudioAD1');
+
+        if (audioPod.paused == false) {
+            audioPod.pause();
+            document.getElementById('playerAudioAD1').style.display='none';
+        }else{
+            audioPod.play();
+            document.getElementById('playerAudioAD1').style.display='block';
+        }
+
+
+    }
+
+</script>
+
 </body>
 </html>
