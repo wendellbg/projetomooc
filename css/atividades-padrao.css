@@ -992,7 +992,7 @@ input[type="checkbox"]:checked + label{
 
 .mensagem-ok a{
     background:#fff;
-    color: #2a5caa;
+    color: var(--cor-secundaria);
     padding: 0.5em;
     margin-top: 200px;
     border: 1px solid #fff;
@@ -1005,7 +1005,7 @@ input[type="checkbox"]:checked + label{
 }
 
 .mensagem-ok a:hover{
-    background-color: #2a5caa;
+    background-color: var(--cor-secundaria);
     color: #fff;
 }
 

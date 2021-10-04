@@ -151,15 +151,16 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
-<script src="../../js/funcoes-porcentagem.js"></script>
+<script src="../../js/funcoes-porcentagem-mooc2.js"></script>
 <script>
 	console.clear(screen);
 
 	var API = new BridgeRestApi();
-	var id_unidade = "mod1_uni0";
-	var id_slide = "mod1/uni0/tela03.html";//alterar
+	var id_unidade = "mod2_uni0";
+	var id_slide = "mod2/uni0/tela03.html";//alterar
 	var unidade=0;//alterar
 	var tela="uni0tela3";//alterar
+    var ultima_tela=1; 
 	
 	//Obtendo dados curso
 	window.addEventListener('load', function(){

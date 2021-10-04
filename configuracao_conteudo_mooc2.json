@@ -191,9 +191,9 @@
 							{ "chave": "r2_2_5", "valor": "v", "alternativa": "Métodos" },
 							{ "chave": "r2_2_6", "valor": "v", "alternativa": "Saberes Profissionais" },
 							{ "chave": "r2_2_7", "valor": "v", "alternativa": "Saberes Técnicos" },
-							{ "chave": "r2_2_2", "valor": "f", "alternativa": "Teórico" },
-							{ "chave": "r2_2_2", "valor": "v", "alternativa": "Valores" },
-							{ "chave": "r2_2_2", "valor": "f", "alternativa": "Verbal" }
+							{ "chave": "r2_2_8", "valor": "f", "alternativa": "Teórico" },
+							{ "chave": "r2_2_9", "valor": "v", "alternativa": "Valores" },
+							{ "chave": "r2_2_10", "valor": "f", "alternativa": "Verbal" }
 						]
 					},{
 						"tipoQuestaoString": "PROPORCIONAL",
