@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../../css/mooc3.css?ver=1.1"/> 
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2" />
-    <link rel="stylesheet" href="../../css/w3.css" />    
+    <link rel="stylesheet" href="../../css/w3.css" />
+    <link rel="stylesheet" href="../../css/video-libras.css?ver=1.0" />    
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
@@ -94,11 +95,12 @@
                     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EJhJpUrCFJU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <audio id="playerAudioAD1" class="playerAudioAD" controls="controls" style="width: 100%;">
-                    <source  src="../../ad/mooc3/audio.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+                    <source  src="../../ad/mooc3/uni4/estereotipos_COM_AD.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
                 </audio>
                 <div class="downloads">
-                    <button id="exibir-ad" onclick="document.getElementById('playerAudioAD1').style.display='block'" class="bt-download-media" type="button"><i class="fas fa-audio-description"></i> Áudio do vídeo com AD )))</button>
+                    <button id="exibir-ad" onclick="exibirAD()" class="bt-download-media" type="button"><i class="fas fa-audio-description"></i> Áudio do vídeo com AD )))</button>
                     <a target="_blank" href="../../downloads/mooc3/Un4-video1.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do vídeo</button></a>
+                    <a target="_blank" href="../../ad/mooc3/uni4/estereotipos_COM_AD.mp3"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o áudio do vídeo</button></a>
                 </div>
             </div> 
             
@@ -109,7 +111,7 @@
 
             <!-- Imagem Única-->
             <div class="image fit flush largura-60">
-                <img src=" ../../img/uni4/MOOC3_Uni4_Tela02_Imagem01.png" alt="Composição de imagens">
+                <img src=" ../../img/uni4/MOOC3_Uni4_Tela02_Imagem01.png" alt="Montagem de quatro imagens coloridas. À esquerda, em cima, uma mulher na direção de um carro. Em baixo, numa sala de aula, um professor de frente para os alunos. À direita, em cima, um enfermeiro afere a pressão de uma idosa. Em baixo, uma mulher faz acabamento de reboco numa parede.">
                 <p class="legenda">Figura 01 - Fonte: (Freepick) e editada pela produção do projeto.</p>
             </div>
 
@@ -198,5 +200,25 @@
         API.obterDadosCurso();
     });
 </script>
+
+<script>
+
+    function exibirAD(){
+
+        var audioPod = document.getElementById('playerAudioAD1');
+
+        if (audioPod.paused == false) {
+            audioPod.pause();
+            document.getElementById('playerAudioAD1').style.display='none';
+        }else{
+            audioPod.play();
+            document.getElementById('playerAudioAD1').style.display='block';
+        }
+
+
+    }
+
+</script>
+
 </body>
 </html>
