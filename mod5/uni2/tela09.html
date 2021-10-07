@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../../css/mooc5.css?ver=1.1"/>
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2"/>
-    <link rel="stylesheet" href="../../css/efeito.css?ver=1.2"/>
-       
+    <link rel="stylesheet" href="../../css/ponto-interesse.css?ver=1.7"/>   
+   
+           
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
@@ -60,7 +61,7 @@
                 <div class="entire-menu">
                     <div class="menu-tit">
                         <div class="menu-tit-col1">
-                            <h2>Apresentação</h2>
+                            <h2>Fechamento</h2>
                         </div>
                         <div class="menu-tit-col2">
                             <input type="checkbox" id="change-hamburguer" />
@@ -88,21 +89,17 @@
 
             <!-- Conteúdo -->
             <div class="content no-top">
-                <p></p>            
-            </div>
+                <p>Conhecer o público-participante e o contexto de intervenção é chave para o sucesso do projeto.</p>
+                <p>O exercício da <b>empatia gera insights e ideias inovadoras</b> para o projeto que dificilmente teríamos acomodados em nosso próprio ponto de vista.</p>
+                <p>A leitura de contexto permite reconhecer lacunas das ações que as escolas vêm realizando, problemas a serem resolvidos através da intervenção.</p>
+                <p>
+                    &#9679; Problemas?!<br>
+                    &#9679; Sim, obstáculos que atrapalham os estudantes no processo de escolha profissional.<br>
+                </p>
 
-            <div class="boas-vindas">
-                <div class="caixa-texto-topo"><p>Olá, caro/a educador/a</p></div>
-                <div class="caixa-texto-centro">
-                    <p>Nessa unidade, vamos abordar a etapa descoberta no Projeto de intervenção.</p>
-                    <p>Ao final da unidade você será capaz de:</p>
-                    <p>
-                        &#9679; Fazer a leitura do contexto de intervenção;<br>
-                        &#9679; Utilizar técnicas de Empatia e Pesquisa no design do projeto;<br>                        
-                    </p>                   
-                </div>
-                <div class="caixa-texto-rodape"><p>Vamos lá?!</p></div>
+                <p>Mas isso já é tema da próxima unidade do curso, quando você conseguirá definir o <b>objetivo</b> do seu projeto de intervenção. Antes de passarmos a ela, revise o que aprendeu, respondendo o questionário.</p>             
             </div>
+          
             
 
             <!-- Conteúdo Footer -->
@@ -113,9 +110,9 @@
                     </div>
                     <div><button class="bt-avanca" type="button"><a href="tela03.html">PROSSEGUIR &#10095;</a></button></div>
                     <div class='botoes-navegacao'>
-                        <button class="bt-navegacao desativado" type="button"><</button></a>
+                        <a href="tela08.html"><button class="bt-navegacao" type="button"><</button></a>
 
-                        <a href="tela01.html"><input type="radio" checked name="radio"><label for="radio"></label></a>
+                        <a href="tela01.html"><input type="radio" name="radio"><label for="radio"></label></a>
                         <a href="tela02.html"><input type="radio" name="radio"><label for="radio"></label></a>
                         <a href="tela03.html"><input type="radio" name="radio"><label for="radio"></label></a>
                         <a href="tela04.html"><input type="radio" name="radio"><label for="radio"></label></a>
@@ -123,12 +120,12 @@
                         <a href="tela06.html"><input type="radio" name="radio"><label for="radio"></label></a>
                         <a href="tela07.html"><input type="radio" name="radio"><label for="radio"></label></a>
                         <a href="tela08.html"><input type="radio" name="radio"><label for="radio"></label></a>
-                        <a href="tela09.html"><input type="radio" name="radio"><label for="radio"></label></a>
+                        <a href="tela09.html"><input type="radio" checked name="radio"><label for="radio"></label></a>
                         <a href="tela10.html"><input type="radio" name="radio"><label for="radio"></label></a>
 
-                        <a href="tela02.html"><button class="bt-navegacao" type="button">></button></a>
+                        <a href="tela10.html"><button class="bt-navegacao" type="button">></button></a>
                     </div>
-                    <span class="legenda">1 de 10</span>
+                    <span class="legenda">9 de 10</span>
                 </div>
 
                 <!--Rodapé-->
@@ -253,5 +250,15 @@
     };
 
 </script>
+
+<!-- Carrossel -->
+<script>
+    $(".option").click(function(){
+        $(".option").removeClass("active");
+        $(this).addClass("active");
+
+    });
+</script>
+
 </body>
 </html>
