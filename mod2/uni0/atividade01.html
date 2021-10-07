@@ -208,7 +208,7 @@
 								<div class="linha-respostas">
 									<div class='texto-resposta  linha-grande'>                                        
 										<input type="checkbox" name="r0_4_a" id="r0_4_a" value="a" >
-										<label for="r0_4_a" class="texto-opcao">a) Conhecer as normas e procedimentos relativos ao novo Ensino Médio em direção à escolha de itinerários formativos.</label>
+										<label for="r0_4_a" class="texto-opcao">a) Entender melhor os conceitos de trabalho, técnica, tecnologia e profissionalização.</label>
 									</div> 
 								</div>
 								<div class="linha-respostas">
@@ -310,7 +310,7 @@
 	var id_atividade = "uni0_ativ1";//modificar						
 	var texto_mensagem_fim="<br>Você pode prosseguir para a próxima atividade.<br><br><a class='botao-mensagem' href='../uni1/index.html'>PRÓXIMA UNIDADE &#10095;</a><br>";
 	var erros = 0;
-	var atividade_concluida =0;
+	var atividade_concluida = 0;
 
 	/*************** Verificando se todas as respostas foram enviadas. *****/
 	var botao = document.getElementById("botao-atividade-uni0");//modificar
@@ -350,7 +350,9 @@
 			mensagem.className = "mensagem-alerta";
 			mensagem.textContent = "Por favor preencha todos os campos";
 			mensagem.style.display = "block";
-			window.scrollTo(0, 0);
+			jQuery('body,html').animate({
+                        scrollTop: 0
+                    }, 800);
 			return false;
 		}else{
 			console.log("\nChecando respostas "+id_atividade);
@@ -447,13 +449,17 @@
 					mensagem.className = "mensagem-ok";
 					mensagem.style.display ="block";			
 					//"Ocorreu tudo certo. Tem que aparecer o link
-					window.scrollTo(0, 0);
+					jQuery('body,html').animate({
+                        scrollTop: 0
+                    }, 800);
 				}else{
 					//caso algum não esteja preenchido, exibe mensagem de erro
 					mensagem.className = "mensagem-alerta";
 					mensagem.textContent = "Ocorreu algum erro! Tente Novamente...";
 					mensagem.style.display = "block";
-					window.scrollTo(0, 0);
+					jQuery('body,html').animate({
+                        scrollTop: 0
+                    }, 800);
 				}
 			}
 			

@@ -1,7 +1,7 @@
 var quant_telas_vistas=0;	
 var porcentagem = 0;
 //esse vetor tem as quantidades de telas de cada unidade;
-var quant_telas=[2,5,9,11,12,4];
+var quant_telas=[3,5,9,11,12,4];
 var nome_tela="";
 var envio=0;
 var verificando_quais_dados=1;

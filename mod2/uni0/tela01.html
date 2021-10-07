@@ -11,6 +11,7 @@
 	<!-- Botão de Voltar ao Topo -->
 	<script src="../../js/jquery-2.1.1.js"></script>
 	<script src="../../js/bt-topo.js"></script>
+	<script src="../../js/funcoes-porcentagem-mooc2-teste2.js"></script>
 	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
@@ -149,7 +150,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
 
 <!-- Funções de acesso à biblioteca do Avamec-->
-<script src="../../js/funcoes-porcentagem-mooc2.js"></script>
 <script>
 	console.clear(screen);
 
@@ -163,7 +163,7 @@
 	window.addEventListener('load', function(){
     	API.obterDadosCurso();
 	});
-	// API.registrarUltimaPaginaAcessada(id_unidade,id_slide);
+	API.registrarUltimaPaginaAcessada(id_unidade,id_slide);
 	// API.obterUltimaPaginaAcessada();
 	// window .addEventListener( "evObtemUltimaPaginaAcessada" ,resultadoObtemUltimaPaginaAcessada, false );
 	// function resultadoObtemUltimaPaginaAcessada (evento){

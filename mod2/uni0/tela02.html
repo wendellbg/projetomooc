@@ -13,7 +13,7 @@
 	<script src="../../js/bt-topo.js"></script>
 
 	<!-- Funções de acesso à biblioteca do Avamec-->
-	<script src="../../js/funcoes-porcentagem-mooc2.js"></script>
+	<script src="../../js/funcoes-porcentagem-mooc2-teste2.js"></script>
 	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
@@ -147,7 +147,7 @@
       <div class="w3-modal-content">
         <div class="w3-container">
           <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-          <iframe id="ytplayer" type="text/html" width="300" height="500" src="https://www.youtube.com/embed/6pY7Z2wPYFs?autoplay=1&origin=http://example.com" frameborder="0"/>
+          <iframe id="ytplayer" type="text/html" width="300" height="500" src="https://www.youtube.com/embed/6pY7Z2wPYFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -162,6 +162,7 @@
 	var id_slide = "mod2/uni0/tela02.html";//alterar
 	var unidade=0;//alterar
 	var tela="uni0tela2";//alterar
+	var ultima_tela=0;
 	
 	//Obtendo dados curso
 	window.addEventListener('load', function(){

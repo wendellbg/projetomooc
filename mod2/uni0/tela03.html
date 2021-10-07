@@ -11,6 +11,7 @@
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
     <script src="../../js/bt-topo.js"></script>
+    <script src="../../js/funcoes-porcentagem-mooc2-teste2.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
@@ -144,22 +145,22 @@
       <div class="w3-modal-content">
         <div class="w3-container">
           <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-          <iframe id="ytplayer" type="text/html" width="300" height="500" src="https://www.youtube.com/embed/CogZmCw4LUo?autoplay=1&origin=http://example.com" frameborder="0"/>
+          <iframe id="ytplayer" type="text/html" width="300" height="500" src="https://www.youtube.com/embed/CogZmCw4LUo"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
-<script src="../../js/funcoes-porcentagem.js"></script>
 <script>
 	console.clear(screen);
 
 	var API = new BridgeRestApi();
-	var id_unidade = "mod1_uni0";
-	var id_slide = "mod1/uni0/tela03.html";//alterar
+	var id_unidade = "mod2_uni0";
+	var id_slide = "mod2/uni0/tela03.html";//alterar
 	var unidade=0;//alterar
 	var tela="uni0tela3";//alterar
+    var ultima_tela=1; 
 	
 	//Obtendo dados curso
 	window.addEventListener('load', function(){

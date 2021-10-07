@@ -390,49 +390,64 @@
         erros=0;
 
         //aqui vai pegar os valores de cada exercício.
-        //esses são os checkbox
-		r1_1_1 = document.form_atividade_uni1.r1_1_1.checked,
-        r1_1_2 = document.form_atividade_uni1.r1_1_2.checked,
-        r1_1_3 = document.form_atividade_uni1.r1_1_3.checked,
-        r1_1_4 = document.form_atividade_uni1.r1_1_4.checked,
+        //esses são os checkbox        
+		r1_1_1 = document.form_atividade_uni1.r1_1_1.value
+        r1_1_2 = document.form_atividade_uni1.r1_1_2.value,
+        r1_1_3 = document.form_atividade_uni1.r1_1_3.value,
+        r1_1_4 = document.form_atividade_uni1.r1_1_4.value,
 		
-        r1_2_1 = document.querySelector("#r1_2_1 span.palavra-resposta"),
-        r1_2_2 = document.querySelector("#r1_2_2 span.palavra-resposta"),
-        r1_2_3 = document.querySelector("#r1_2_3 span.palavra-resposta"),
-        r1_2_4 = document.querySelector("#r1_2_4 span.palavra-resposta"),
-        r1_2_5 = document.querySelector("#r1_2_5 span.palavra-resposta"),
-        r1_2_6 = document.querySelector("#r1_2_6 span.palavra-resposta"),
-        r1_2_7 = document.querySelector("#r1_2_7 span.palavra-resposta"),
+        r1_2_1 = document.form_atividade_uni1.r1_2_a.value,
+        r1_2_2 = document.form_atividade_uni1.r1_2_b.value,
+        r1_2_3 = document.form_atividade_uni1.r1_2_c.value,
+        r1_2_4 = document.form_atividade_uni1.r1_2_d.value,
+        r1_2_5 = document.form_atividade_uni1.r1_2_e.value,
+        r1_2_6 = document.form_atividade_uni1.r1_2_f.value,
+        r1_2_7 = document.form_atividade_uni1.r1_2_g.value,
 		
         //aqui os checkbox
-        r1_3_1 = document.form_atividade_uni1.r1_3_1.checked,
-        r1_3_2 = document.form_atividade_uni1.r1_3_2.checked,
-        r1_3_3 = document.form_atividade_uni1.r1_3_3.checked,
-        r1_3_4 = document.form_atividade_uni1.r1_3_4.checked
+        r1_3_1 = (document.form_atividade_uni1.r1_3_1.checked==true ? "v" : "f"),
+        r1_3_2 = (document.form_atividade_uni1.r1_3_2.checked==true ? "v" : "f"),
+        r1_3_3 = (document.form_atividade_uni1.r1_3_3.checked==true ? "v" : "f"),
+        r1_3_4 = (document.form_atividade_uni1.r1_3_4.checked==true ? "v" : "f");
+        
 		       
         //testando se todos os exercícios (menos os checkbox) estão preenchidos.
-		if(r1_2_1==null){
+		if (r1_1_1==null){
+            erros++;
+        }else if(r1_1_2==null){
+            erros++;
+        }else if(r1_1_3==null){
+            erros++;
+        }else if(r1_1_4==null){
+            erros++;
+        }else if(r1_2_1==""){
 			erros++;
-		}else if(r1_2_2==null){
+		}else if(r1_2_2==""){
 			erros++;
-        }else if(r1_2_3==null){
+        }else if(r1_2_3==""){
 			erros++;
-        }else if(r1_2_4==null){
+        }else if(r1_2_4==""){
 			erros++;
-        }else if(r1_2_5==null){
+        }else if(r1_2_5==""){
 			erros++;
-		}else if(r1_2_6==null){
+		}else if(r1_2_6==""){
 			erros++;
-		}else if(r1_2_7==null){
+		}else if(r1_2_7==""){
 			erros++;
 		}
+
+        console.log("Resposta 1: "+r1_1_1+", "+r1_1_2+", "+r1_1_3+", "+r1_1_4);
+        console.log("Resposta 2:", r1_2_1+", "+r1_2_2+", "+r1_2_3+", "+r1_2_4+", "+r1_2_5+", "+r1_2_6+", "+r1_2_7);
+        console.log("Resposta 3: "+r1_3_1+", "+r1_3_2+", "+r1_3_3+", "+r1_3_4);
 
 		if(erros>0){
             //caso algum não esteja preenchido, exibe mensagem de erro
 			mensagem.className = "mensagem-alerta";
 			mensagem.textContent = "Por favor preencha todos os campos";
 			mensagem.style.display = "inline-block";
-			window.scrollTo(0,0);
+			jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
 			return false;
 		}else{
 			//console.log("\nChecando respostas"+id_atividade);			            
@@ -460,7 +475,7 @@
             verifica_revisao();
             if(revisao_vista==1){
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+texto_mensagem_revisao_1;         
-            }else if(quant_respostas>=max_quant_tentativas){
+            }else if(max_tentativas_atingido==1){
                 console.log("\n\nMax de mensagens aqui");
                 //Já atingiu o máximo de tentativas
                 if(envio==1){
@@ -483,7 +498,9 @@
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você deve atingir a média ou fazer as três tentativas para poder ver o gabarito."+texto_mensagem_fim;
             }            
             mensagem_tentativas.innerHTML=texto_mensagem_total;            
-            window.scrollTo(0, 0);
+            jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
         }
         if(erros==0){       
             //se ainda não tiver enviado as respostas, ou se for dentro do máximio de tentativas,
@@ -497,30 +514,30 @@
                         //Onde houver os exercícios de drag and drop precisa pegar o innerHTML
                         "identificador": "r1_1",                    
                         "gabaritos": [
-                            { "chave": "r1_1_1", "valor": (r1_1_1==true ? "v" : "f")},
-                            { "chave": "r1_1_2", "valor": (r1_1_2==true ? "v" : "f")},
-                            { "chave": "r1_1_3", "valor": (r1_1_3==true ? "v" : "f")},
-                            { "chave": "r1_1_4", "valor": (r1_1_4==true ? "v" : "f")}                            						
+                            { "chave": "r1_1_1", "valor": (r1_1_1)},
+                            { "chave": "r1_1_2", "valor": (r1_1_2)},
+                            { "chave": "r1_1_3", "valor": (r1_1_3)},
+                            { "chave": "r1_1_4", "valor": (r1_1_4)}                            						
                         ]
                     },{                    
                         "identificador": "r1_2",                    
                         "gabaritos": [
-                            { "chave": "r1_2_1", "valor": r1_2_1.innerHTML},
-                            { "chave": "r1_2_2", "valor": r1_2_2.innerHTML},
-                            { "chave": "r1_2_3", "valor": r1_2_3.innerHTML},
-                            { "chave": "r1_2_4", "valor": r1_2_4.innerHTML},	
-                            { "chave": "r1_2_5", "valor": r1_2_5.innerHTML},
-                            { "chave": "r1_2_6", "valor": r1_2_6.innerHTML},
-                            { "chave": "r1_2_7", "valor": r1_2_7.innerHTML}
+                            { "chave": "r1_2_1", "valor": r1_2_1},
+                            { "chave": "r1_2_2", "valor": r1_2_2},
+                            { "chave": "r1_2_3", "valor": r1_2_3},
+                            { "chave": "r1_2_4", "valor": r1_2_4},	
+                            { "chave": "r1_2_5", "valor": r1_2_5},
+                            { "chave": "r1_2_6", "valor": r1_2_6},
+                            { "chave": "r1_2_7", "valor": r1_2_7}
                         ]
                     },{
                         //Onde houver os checkbox, testar se é true para registrar v ou f
                         "identificador": "r1_3",                    
                         "gabaritos": [
-                            { "chave": "r1_3_1", "valor": (r1_3_1==true ? "v" : "f")},
-                            { "chave": "r1_3_2", "valor": (r1_3_2==true ? "v" : "f")},
-                            { "chave": "r1_3_3", "valor": (r1_3_3==true ? "v" : "f")},
-                            { "chave": "r1_3_4", "valor": (r1_3_4==true ? "v" : "f")}							
+                            { "chave": "r1_3_1", "valor": (r1_3_1)},
+                            { "chave": "r1_3_2", "valor": (r1_3_2)},
+                            { "chave": "r1_3_3", "valor": (r1_3_3)},
+                            { "chave": "r1_3_4", "valor": (r1_3_4)}							
                         ]
                     }
                 ]
@@ -561,13 +578,17 @@
             
             mensagem_tentativas.innerHTML=texto_mensagem_total;            
             //"Ocorreu tudo certo. Tem que aparecer o link
-			window.scrollTo(0, 0);
+			jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
         }else{
             //caso algum não esteja preenchido, exibe mensagem de erro
 			mensagem.className = "mensagem-alerta";
 			mensagem.innerHTML = "Ocorreu algum erro! Tente Novamente...";
 			mensagem.style.display = "inline-block";
-			window.scrollTo(0, 0);
+			jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
         }
     }
 
@@ -580,16 +601,8 @@
             sel.classList.remove("select-respondido");
         }else{       
             sel.classList.add("select-respondido");
-        }
-        var selects = document.getElementsByTagName('select');
-        for(var i = 0; i < selects.length; ++i) {
-            var s = selects[i];                     
-            if(s.selectedIndex!=0 && s.value == valor && id != s.id){            
-                s.selectedIndex=0;                    
-                s.classList.remove("select-respondido");            
-            }
-        } 
-    }  
+        }        
+    }
 
 </script>
 
