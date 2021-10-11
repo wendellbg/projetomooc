@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../../css/mooc4.css?ver=1.1"/>
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2"/>
+    <link rel="stylesheet" href="../../css/telas_finais-mooc4.css" />
     <link rel="stylesheet" href="../../css/w3.css" />
       
 
@@ -96,6 +97,11 @@
                     <div class="bt-topo">
                         <a href="#"><i class="fas fa-angle-up"></i></a>
                     </div>
+                    <div id="botao-atividades">
+                        <div class='mensagem-flutuante incompleta'>Complete os 100% na unidade para reponder as atividades</div>
+                        <div class='mensagem-flutuante completa'>Você acessou todas as telas da unidade. Então, faça as Atividades!</div>
+                        <button class="bt-avanca bt-desativado" type="button" ><a href="atividade01.html" ><i class="fas fa-pencil-alt"></i> ATIVIDADES &#10095;&#10095;</a></button>
+                    </div>
                     <div><button class="bt-avanca" type="button"><a href="../uni3/tela01.html">PROSSEGUIR &#10095;</a></button></div>
                     <div class='botoes-navegacao'>
                         <a href="tela06.html"><button class="bt-navegacao" type="button"><</button></a>
@@ -160,24 +166,34 @@
     console.clear(screen);
 
     var API = new BridgeRestApi();
-    var id_unidade = "mod3_uni1";
-    var id_slide = "uni1/tela01.html";
-    var progresso = 14;
-    var progressoSalvo;
-    var porcentagem = "porcentagemUni1";
+    var id_unidade = "mod4_uni2";//alterar
+    var id_slide = "mod4/uni2/tela07.html";//alterar
+    var unidade=1;//alterar
+    var tela="uni1tela7";//alterar
+    var ultima_tela=1;
 
     //Obtendo dados curso
     window.addEventListener('load', function(){
         API.obterDadosCurso();
-    })
+    });
 
-    window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
-    function resultadoObterDadosCurso(evento){
-        console.log(evento.detail);
-        //antes de registrar a porcentagem, verifica a porcentagem atual:
-        API.obterDadosGenericos(porcentagem);
-    }
+    var botao = document.querySelector("#botao-atividades .bt-avanca");
 
+    botao.addEventListener("mouseover",function(){
+        if(botao.classList.contains('bt-desativado')){
+            let mensagem = document.querySelector(".mensagem-flutuante.incompleta").style.display="block";
+        }else{
+            let mensagem = document.querySelector(".mensagem-flutuante.completa").style.display="block";
+        }
+    });
+
+    botao.addEventListener('mouseout',function(){
+        if(botao.classList.contains('bt-desativado')){
+            let mensagem = document.querySelector(".mensagem-flutuante.incompleta").style.display="none";
+        }else{
+            let mensagem = document.querySelector(".mensagem-flutuante.completa").style.display="none";
+        }
+    });
 
     //Quando obtém a porcentagem da unidade em questão, executa esta função
     window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
