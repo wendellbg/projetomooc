@@ -341,7 +341,7 @@
 						{ "chave": "r4_1_2", "valor": "atividades profissionais", "alternativa": "Palavra 2" },					
 						{ "chave": "r4_1_3", "valor": "grupos sociais", "alternativa": "Palavra 3" },
 						{ "chave": "r4_1_4", "valor": "instâncias oficiais", "alternativa": "Palavra 4" },
-						{ "chave": "r4_1_5", "valor": "construções de competências", "alternativa": "Palavra 5" },
+						{ "chave": "r4_1_5", "valor": "construção de competências", "alternativa": "Palavra 5" },
 						{ "chave": "r4_1_6", "valor": "fazeres-saberes", "alternativa": "Palavra 6" },
 						{ "chave": "r4_1_7", "valor": "reconhecido", "alternativa": "Palavra 7" }
 					]
@@ -352,7 +352,7 @@
 					"gabaritos": [
 						{ "chave": "r4_2_1", "valor": "Intenção de movimento", "alternativa": "a) Trata-se da busca, por parte da instituição formadora, de “movimentar” os sujeitos \"nos sistemas de trabalho por meio de propostas de dispositivos de formação específicos\"." },
 						{ "chave": "r4_2_2", "valor": "Processos de ação", "alternativa": "b) Refere-se ao modo como um sujeito age em uma situação, levando os atores envolvidos a conferir profissionalidade ao aprendiz, dependendo da forma como é percebida pelo ambiente e estes atores." },
-						{ "chave": "r4_2_3", "valor": "Transição identitária", "alternativa": "c) Uma série de trocas de diferentes naturezas que afetam o indivíduo e o ambiente: trocas de gestos, palavras, saberes, valores, etc. Esta transação é que pode e deve levar à profissionalização." }
+						{ "chave": "r4_2_3", "valor": "Transação identitária", "alternativa": "c) Uma série de trocas de diferentes naturezas que afetam o indivíduo e o ambiente: trocas de gestos, palavras, saberes, valores, etc. Esta transação é que pode e deve levar à profissionalização." }
 					]
 				},{
 					"tipoQuestaoString": "PROPORCIONAL",

@@ -93,7 +93,9 @@
                     <div class="6u 12u$(small)">
                         <div class="icone-audio">                            
                             <h3>Preparando-se para a tecnografia</h3>
-                            <a class='icone-play' id="botao-play-podcast1" onclick="playShowPod1()"><img src="../../img/uni3/icone-audio.png"/></a><audio id='playerPodcast1' class='controles-podcast' controls='controls'>
+                            <a class='icone-play' id="botao-play-podcast1" onclick="playShowPod1()"><img src="../../img/uni3/icone-audio.png"/></a>
+                            <a class="icone-pause" id="botao-pause-podcast1" onclick="playShowPod1()" style="display:none;"><img src="../../img/uni3/icone-audio2.gif" /></a>
+                            <audio id='playerPodcast1' class='controles-podcast' controls='controls'>
                                 <source src="../../img/uni5/MOOC2_Uni5_Podcast1a.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
                             </audio>
                             <div class="video-libras no-border">
@@ -112,6 +114,7 @@
                         <div class="icone-audio">
                             <h3>Como realizar a tecnografia</h3>
                             <a class='icone-play' id="botao-play-podcast2" onclick="playShowPod2()"><img src="../../img/uni3/icone-audio.png"/></a>
+                            <a class="icone-pause" id="botao-pause-podcast2" onclick="playShowPod2()" style="display:none;"><img src="../../img/uni3/icone-audio2.gif" /></a>
                             <audio id='playerPodcast2' class='controles-podcast' controls='controls'>
                                 <source src="../../img/uni5/MOOC2_Uni5_Podcast1b.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
                             </audio>
@@ -242,13 +245,17 @@
     var playShowPod1 = function() {
         if (audioPod1.paused == true){
             audioPod1.play();
-            audioPod2.pause();
-            audioPod3.pause();
+            audioPod2.pause();            
+            document.getElementById('botao-play-podcast1').style.display="none";
+            document.getElementById('botao-pause-podcast1').style.display="block";  
+            
+            document.getElementById('botao-play-podcast2').style.display="block";
+            document.getElementById('botao-pause-podcast2').style.display="none"; 
         }else{
             audioPod1.pause();
-            audioPod2.pause();
-            audioPod3.pause();
-
+            audioPod2.pause();            
+            document.getElementById('botao-play-podcast1').style.display="block";
+            document.getElementById('botao-pause-podcast1').style.display="none";            
         }
     };
 
@@ -256,11 +263,16 @@
         if (audioPod2.paused == true){
             audioPod2.play();
             audioPod1.pause();
-            audioPod3.pause();
+            document.getElementById('botao-play-podcast2').style.display="none";
+            document.getElementById('botao-pause-podcast2').style.display="block";  
+
+            document.getElementById('botao-play-podcast1').style.display="block";
+            document.getElementById('botao-pause-podcast1').style.display="none";
         }else{
             audioPod1.pause();
             audioPod2.pause();
-            audioPod3.pause();
+            document.getElementById('botao-play-podcast2').style.display="block";
+            document.getElementById('botao-pause-podcast2').style.display="none"; 
         }
     };
 
