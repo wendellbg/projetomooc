@@ -6,7 +6,10 @@
 		"permitePorcentagem": "true",
 		"topicos": [{
 			"identificador": "uni0_tela01",
-			"nome": "Boas-Vindas"
+			"nome": "Mensagem de boas-vindas"
+		},{
+			"identificador": "uni0_tela02",
+			"nome": "Boas-Vindas"			
 		}],
 		"atividades": [{		
 			"identificador": "uni0_ativ1",
@@ -53,7 +56,7 @@
 						"identificador": "r0_4",
 						"enunciado": "Quais competências você gostaria de desenvolver neste curso?",
 						"gabaritos": [							
-							{ "chave": "r0_4_a", "valor": "a", "alternativa": "Conhecer as normas e procedimentos relativos ao Novo Ensino Médio em direção à escolha de itinerários formativos." },
+							{ "chave": "r0_4_a", "valor": "a", "alternativa": "Entender melhor os conceitos de trabalho, técnica, tecnologia e profissionalização." },
 							{ "chave": "r0_4_b", "valor": "b", "alternativa": "Conhecer melhor o itinerário formativo de Formação Técnica e Profissional." },
 							{ "chave": "r0_4_c", "valor": "c", "alternativa": "Compreender melhor os processos de orientação (ou mentoria) educacional e profissional." },
 							{ "chave": "r0_4_d", "valor": "d", "alternativa": "Conhecer os tipos de ações que podem ser realizados para ajudar os estudantes a escolherem seus itinerários." },
@@ -94,7 +97,7 @@
 					{
 						"tipoQuestaoString": "PROPORCIONAL",
 						"identificador": "r1_1",
-						"enunciado": "Sobre a relação entre técnica e trabalho, assinale as afirmativas a seguir como verdadeira ou falsa:",
+						"enunciado": "Sobre a relação entre técnica e trabalho, assinale as afirmativas a seguir como verdadeiras ou falsas:",
 						"gabaritos": [
 							{ "chave": "r1_1_1", "valor": "v", "alternativa": "a) A técnica é o fundamento do trabalho." },
 							{ "chave": "r1_1_2", "valor": "v", "alternativa": "b) O ser humano intervém no mundo pela técnica." },
@@ -105,7 +108,7 @@
 					{
 						"tipoQuestaoString": "PROPORCIONAL",
 						"identificador": "r1_2",
-						"enunciado": "Complete o texto arrastando e soltando as palavras:",
+						"enunciado": "Complete o texto selecionando as palavras:",
 						"gabaritos": [
 							{ "chave": "r1_2_1", "valor": "técnica", "alternativa": "Palavra 1" },
 							{ "chave": "r1_2_2", "valor": "intervenção", "alternativa": "Palavra 2" },
@@ -123,7 +126,7 @@
 						"gabaritos": [
 							{ "chave": "r1_3_1", "valor": "v", "alternativa": "a) A técnica é o elemento essencial do que chamamos de trabalho." },
 							{ "chave": "r1_3_2", "valor": "f", "alternativa": "b) A técnica não pode ser pensada como atividade reflexiva e transformadora, pois está relacionada apenas a trabalhos manuais." },
-							{ "chave": "r1_3_3", "valor": "f", "alternativa": "c) A “formação técnica” e a “formação humana” são elementos opostos." },
+							{ "chave": "r1_3_3", "valor": "f", "alternativa": "c) A \"formação técnica\" e a \"formação humana\" são elementos opostos." },
 							{ "chave": "r1_3_4", "valor": "v", "alternativa": "d) A técnica, como intervenção no mundo que acontece socialmente, constitui o laço social e está no coração da cultura." }
 						]
 					}
@@ -152,7 +155,7 @@
 			"nome": "O que é saber técnico 1"
 		},{
 			"identificador": "uni2_tela06",
-			"nome": "O que é saber técnico 1"
+			"nome": "O que é saber técnico 2"
 		},{
 			"identificador": "uni2_tela07",
 			"nome": "O que é Tecnologia? 1"		
@@ -172,7 +175,7 @@
 						"tipoQuestaoString": "MODERADA",
 						"identificador": "r2_1",
 						"tipoEnvio": "TEXTO",
-						"enunciado": "Trabalho, Técnica e Tecnologia são termos chave para entender a Educação Profissional. No entanto, raramente são pensados como forma de saber e acabam reduzidos ao senso comum. Escolha uma profissão presente em seu cotidiano e descreva alguns dos saberes necessários para executá-la."
+						"enunciado": "Trabalho, Técnica e Tecnologia são termos chave para entender a Educação Profissional. No entanto, raramente são pensados como forma de saber e acabam reduzidos ao senso comum. Escolha uma profissão presente em seu cotidiano e descreva alguns dos saberes necessários para executá-la:"
 					}
 				]
 			},{
@@ -200,11 +203,11 @@
 						"identificador": "r2_3",
 						"enunciado": "Relacione a seguir os sentidos possíveis para a técnica:",
 						"gabaritos":[
-							{"chave": "r2_3_a", "valor": "Processo", "alternativa": "a) Um conjunto não redutível a conteúdos cognitivos em sentido clássico, isto é, um conteúdo verbalizado e formalizado. Podemos, então, ir além do mito de que 'saber' é 'saber falar sobre'."},
+							{"chave": "r2_3_a", "valor": "Processo", "alternativa": "a) Um conjunto não redutível a conteúdos cognitivos em sentido clássico, isto é, um conteúdo verbalizado e formalizado. Podemos, então, ir além do mito de que \"saber\" é \"saber falar sobre\"."},
 							{"chave": "r2_3_b", "valor": "Composição", "alternativa": "b) Modos de ação, estruturas conceituais para cada situação de trabalho (ou classe de situação, como veremos mais adiante), lógicas próprias, ferramentas, sistemas, máquinas, valores, aspectos éticos, políticos, sociais, ambientais, econômicos."},
 							{"chave": "r2_3_c", "valor": "Finalidade", "alternativa": "c) Busca uma efetiva intervenção no mundo para a produção da existência individual e coletiva."},
-							{"chave": "r2_3_d", "valor": "Validação do conhecimento técnico", "alternativa": "d) Valida-se tanto material quanto socialmente pelos efeitos produzidos, sua eficácia. Isso difere da epistemologia clássica da ciência, em que predomina a validação do conhecimento pela demonstração lógica, teórica e discursiva. Cuidado! Aqui, ser eficaz não é a mesma coisa que ser 'útil', e sim pode ser entendido pelo 'ato que produz o efeito esperado' (Sigaut, 2006)."},
-							{"chave": "r2_3_e", "valor": "Técnica e Cultura", "alternativa": "e) A técnica está, assim, no coração do laço social (Sigaut, 2004), e não mais pode ser pensada como algo externo ao ser humano e à cultura. A cultura não é o lado subjetivo, de uma moeda com outro lado somente objetivo, geralmente com conotação ou valor abjeto (a repulsa ao trabalho, à técnica)."}
+							{"chave": "r2_3_d", "valor": "Validação do conhecimento técnico", "alternativa": "d) Valida-se tanto material quanto socialmente pelos efeitos produzidos, sua eficácia. Isso difere da epistemologia clássica da ciência, em que predomina a validação do conhecimento pela demonstração lógica, teórica e discursiva. Cuidado! Aqui, ser eficaz não é a mesma coisa que ser \"útil\", e sim pode ser entendido pelo \"ato que produz o efeito esperado\" (SIGAUT, 2006)."},
+							{"chave": "r2_3_e", "valor": "Técnica e cultura", "alternativa": "e) A técnica está, assim, no coração do laço social (SIGAUT, 2004), e não mais pode ser pensada como algo externo ao ser humano e à cultura. A cultura não é o lado subjetivo de uma moeda com outro lado somente objetivo, geralmente com conotação ou valor abjeto (a repulsa ao trabalho, à técnica)."}
 						]
 					}
 				]
@@ -256,7 +259,7 @@
 				"questoes": [{
 					"tipoQuestaoString": "PROPORCIONAL",
 					"identificador": "r3_1",
-					"enunciado": "O trabalho como obra pode ser compreendido como atividades, empreendidas por pessoas, com objetivos específicos, contextos particulares, mas em conexão com diversas dimensões laborais e sociais. Assinale a(s) alternativa(s) que correspondem ao conceito abordado.",
+					"enunciado": "O trabalho como obra pode ser compreendido como atividades empreendidas por pessoas, com objetivos específicos, contextos particulares, mas em conexão com diversas dimensões laborais e sociais. Assinale a(s) alternativa(s) que corresponde(m) ao conceito abordado:",
 					"gabaritos":[
 						{"chave": "r3_1_1", "valor": "f", "alternativa": "a) A obra é uma atividade essencialmente individual com características do trabalhador."},
 						{"chave": "r3_1_2", "valor": "v", "alternativa": "b) A obra coloca o aprendiz em contato com as dimensões cognitivas, éticas, estéticas e culturais do trabalho."},
@@ -266,14 +269,14 @@
 				},{
 					"tipoQuestaoString": "PROPORCIONAL",
 					"identificador": "r3_3",
-					"enunciado": "Relacione a seguir os sentidos possíveis para a técnica:",
+					"enunciado": "Em relação às dimensões do trabalho, relacione cada dimensão ao seu conceito:",
 					"gabaritos":[
-						{"chave": "r3_3_a", "valor": "Dimensão Cognitiva", "alternativa": "a) Em sua ação individual e em interação com outros, o trabalhador desenvolve esquemas para dar conta de compreender e organizar a atividade em determinadas situações de trabalho. Tais situações podem apresentar semelhanças em sua estrutura ou grandes diferenças e por isso se fala aqui na existência, para cada atividade profissional, de diferentes “classes de situações”"},
+						{"chave": "r3_3_a", "valor": "Dimensão Cognitiva", "alternativa": "a) Em sua ação individual e em interação com outros, o trabalhador desenvolve esquemas para dar conta de compreender e organizar a atividade em determinadas situações de trabalho. Tais situações podem apresentar semelhanças em sua estrutura ou grandes diferenças e por isso se fala aqui na existência, para cada atividade profissional, de diferentes \"classes de situações\"."},
 						{"chave": "r3_3_b", "valor": "Dimensão Identitária", "alternativa": "b) Reconhecimento de que a entrada no mundo do trabalho é também a participação da cultura técnica e profissional, da qual o sujeito faz parte."},
 						{"chave": "r3_3_c", "valor": "Dimensão Ética", "alternativa": "c) Se desdobra nos valores que a ação do trabalhador envolve, que vão desde aqueles de uma ética profissional típica de determinada categoria, passando por práticas educacionais até valores sociais mais gerais."},
-						{"chave": "r3_3_d", "valor": "Dimensão Pessoal", "alternativa": "d) Singularidade com que cada profissional atua e pode ser apreciada em qualquer atividade, apreciada esteticamente ou não."},
+						{"chave": "r3_3_d", "valor": "Dimensão Pessoal", "alternativa": "d) Singularidade com que cada profissional atua e pode ser apreciada, esteticamente ou não, em qualquer atividade."},
 						{"chave": "r3_3_e", "valor": "Dimensão Cultural", "alternativa": "e) Vislumbrar uma possível superação da divisão entre formação humana e formação técnica, formação intelectual e formação prática, por ajudar a evitar o desligamento do ato técnico das suas implicações sociais, éticas, econômicas, ambientais."},
-						{"chave": "r3_3_f", "valor": "Dimensão do Prazer", "alternativa": "f) Muitos trabalhadores que fazem seu trabalho bem feito pelo prazer e orgulho no resultado de seu trabalho, sentem realização pessoal em suas tarefas, cujo reforço é o elogio ou agradecimento que recebem, muito mais que o retorno financeiro."}
+						{"chave": "r3_3_f", "valor": "Dimensão do Prazer", "alternativa": "f) Muitos trabalhadores que fazem seu trabalho bem feito pelo prazer e orgulho do resultado de seu trabalho sentem realização pessoal em suas tarefas, cujo reforço é o elogio ou agradecimento que recebem, muito mais que o retorno financeiro."}
 					]
 				}]
 			},{
@@ -323,10 +326,13 @@
 			"nome": "Cooperação"
 		},{
 			"identificador": "uni4_tela10",
-			"nome": "Comunidade de Prática 2"
+			"nome": "Comunidade de Prática 1"
 		},{
 			"identificador": "uni4_tela11",
 			"nome": "Comunidade de Prática 2"
+		},{
+			"identificador": "uni4_tela12",
+			"nome": "Concluindo"
 		}],
 		"atividades": [
 			{
@@ -335,7 +341,7 @@
 				"questoes": [{					
 					"tipoQuestaoString": "PROPORCIONAL",
 					"identificador": "r4_1",
-					"enunciado": "Sobre a profissionalização, complete o texto arrastando e soltando as palavras:",
+					"enunciado": "Sobre a profissionalização, complete o texto selecionando as palavras corretas:",
 					"gabaritos": [
 						{ "chave": "r4_1_1", "valor": "autonomia", "alternativa": "Palavra 1" },
 						{ "chave": "r4_1_2", "valor": "atividades profissionais", "alternativa": "Palavra 2" },					
@@ -348,7 +354,7 @@
 				},{
 					"tipoQuestaoString": "PROPORCIONAL",
 					"identificador": "r4_2",
-					"enunciado": "Considerando as dimensões simultâneas no processo de profissionalização, arraste e solte cada dimensão à sua definição:",
+					"enunciado": "Considerando as dimensões simultâneas no processo de profissionalização, relacione cada dimensão à sua definição:",
 					"gabaritos": [
 						{ "chave": "r4_2_1", "valor": "Intenção de movimento", "alternativa": "a) Trata-se da busca, por parte da instituição formadora, de “movimentar” os sujeitos \"nos sistemas de trabalho por meio de propostas de dispositivos de formação específicos\"." },
 						{ "chave": "r4_2_2", "valor": "Processos de ação", "alternativa": "b) Refere-se ao modo como um sujeito age em uma situação, levando os atores envolvidos a conferir profissionalidade ao aprendiz, dependendo da forma como é percebida pelo ambiente e estes atores." },
@@ -357,11 +363,11 @@
 				},{
 					"tipoQuestaoString": "PROPORCIONAL",
 					"identificador": "r4_3",
-					"enunciado": "",
+					"enunciado": "Uma das mais interessantes abordagens de aprendizagem social para a Educação Profissional é a das Comunidades de Prática. Observe as afirmativas a seguir e marque a(s) verdadeira(s):",
 					"gabaritos":[
 						{"chave": "r4_3_1", "valor": "v", "alternativa": "a) Aprender é, no fundo, construir e transformar identidades. A aprendizagem tem a ver com o que você está se tornando. Aprender uma profissão é transformar profundamente a sua identidade, é um tornar-se."},
 						{"chave": "r4_3_2", "valor": "v", "alternativa": "b) Uma Comunidade de Prática (CoP) é um \"grupo de pessoas que compartilham preocupações, um conjunto de problemas ou uma paixão sobre um assunto e que aprofundam seus conhecimentos e expertises nessa área ao interagirem de maneira contínua\"."},
-						{"chave": "r4_3_3", "valor": "f", "alternativa": "c) Uma Comunidade de Prática (CoP) só pode ser formada por meio de atividades presenciais, pois é necessário intensas trocas entre trabalhadores engajados mutuamente."},
+						{"chave": "r4_3_3", "valor": "f", "alternativa": "c) Uma Comunidade de Prática (CoP) só pode ser formada por meio de atividades presenciais, pois são necessárias intensas trocas entre trabalhadores engajados mutuamente."},
 						{"chave": "r4_3_4", "valor": "f", "alternativa": "d) A Comunidade de Prática (CoP) pressupõe uma comunidade sem conflitos, em que não existam relações de poder estabelecidas e ausência de divergências nos grupos."}						
 					]
 				}]						
