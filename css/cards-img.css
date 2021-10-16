@@ -419,3 +419,13 @@
     z-index: 9;
     position: relative;
 }
+
+.card.big {
+    height: 450px;
+}
+
+.card.big .back .description p {
+    font-size: 17px;
+    line-height: 22px;
+}
+
