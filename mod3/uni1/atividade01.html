@@ -100,7 +100,9 @@
                     <form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni1" method="POST">
                             <div class="questao">
                                 <div class="titulo-questao">Questão 1</div>														
-                                <div class="enunciado-questao">O que é educação para a carreira?</div>                                
+                                <div class="enunciado-questao">
+                                    <span>O que é educação para a carreira?</span>
+                                </div>                      
                                 <div class="area-respostas">
                                     <div class='opcao-resposta'>
                                         <input type="radio" name="r1_1" id="r1_1_1" value="r1_1_1" required>
@@ -131,52 +133,63 @@
                                         <div class='texto-resposta-maior'>                                        
                                             <span class="texto-opcao">a) Lugar privilegiado para se refletir sobre a preparação para o trabalho.</span>
                                         </div>
-                                        <span class="legenda-input">a)</span>
-                                        <div class="area-inputs caixa-drop_1 list-group " id='r1_2_1' name='r1_2_1'><div class="list-group-item vazio"></div></div>                                                                                                                    
+                                        <div class="caixa-box">
+                                            <select name="r1_2_a" id="r1_2_a" class="resposta-select" onchange="valorSelecionado(this)">
+                                                <option  id="r1_2_a_0" name="r1_2_a_0" value="">Selecione sua resposta</option>
+                                                <option  id="r1_2_a_1" name="r1_2_a_1" value="Comunidade">Comunidade</option>
+                                                <option  id="r1_2_a_2" name="r1_2_a_2" value="Currículo">Currículo</option>
+                                                <option  id="r1_2_a_3" name="r1_2_a_3" value="Escola">Escola</option>
+                                                <option  id="r1_2_a_4" name="r1_2_a_4" value="Trabalho">Trabalho</option>
+                                            </select>
+                                        </div>
                                     </div>
+                                       
 
                                     <div class="linha-respostas">
                                         <div class="texto-resposta-maior">                                        
                                             <span class="texto-opcao">b) Parceria entre escola e a sociedade mais ampla (família, empregadores, governo).</span>
                                         </div>
-                                        <span class="legenda-input">b)</span>
-                                        <div class="area-inputs caixa-drop_1 list-group " id='r1_2_2' name='r1_2_2'><div class="list-group-item vazio"></div></div>                                                                            
-                                       
+                                        <div class="caixa-box">
+                                            <select name="r1_2_b" id="r1_2_b" class="resposta-select" onchange="valorSelecionado(this)">
+                                                <option  id="r1_2_b_0" name="r1_2_b_0" value="">Selecione sua resposta</option>
+                                                <option  id="r1_2_b_1" name="r1_2_b_1" value="Comunidade">Comunidade</option>
+                                                <option  id="r1_2_b_2" name="r1_2_b_2" value="Currículo">Currículo</option>
+                                                <option  id="r1_2_b_3" name="r1_2_b_3" value="Escola">Escola</option>
+                                                <option  id="r1_2_b_4" name="r1_2_b_4" value="Trabalho">Trabalho</option>
+                                            </select>
+                                        </div>
                                     </div>
 
                                     <div class="linha-respostas">
                                         <div class="texto-resposta-maior">                                        
                                             <span class="texto-opcao">c) Realização de atividades que são socialmente benéficas para si e para os demais.</span>                                           
                                         </div>
-                                        <span class="legenda-input">c)</span>
-                                        <div class="area-inputs caixa-drop_1 list-group " id='r1_2_3' name='r1_2_3'><div class="list-group-item vazio"></div></div> 
+                                        <div class="caixa-box">
+                                            <select name="r1_2_c" id="r1_2_c" class="resposta-select" onchange="valorSelecionado(this)">
+                                                <option  id="r1_2_c_0" name="r1_2_c_0" value="">Selecione sua resposta</option>
+                                                <option  id="r1_2_c_1" name="r1_2_c_1" value="Comunidade">Comunidade</option>
+                                                <option  id="r1_2_c_2" name="r1_2_c_2" value="Currículo">Currículo</option>
+                                                <option  id="r1_2_c_3" name="r1_2_c_3" value="Escola">Escola</option>
+                                                <option  id="r1_2_c_4" name="r1_2_c_4" value="Trabalho">Trabalho</option>
+                                            </select>
+                                        </div>
                                     </div>
 
                                     <div class="linha-respostas">
                                         <div class="texto-resposta-maior">                                        
                                             <span class="texto-opcao">d) Entender a Educação para a Carreira como parte do currículo escolar.</span>                                           
                                         </div>
-                                        <span class="legenda-input">d)</span>
-                                        <div class="area-inputs caixa-drop_1 list-group " id='r1_2_4' name='r1_2_4'><div class="list-group-item vazio"></div></div> 
-                                    </div>
-
-                                    <div class="linha-respostas">
-                                        <p class="legenda-resposta">Opções de Resposta:</p>
-                                        <div id="listaRespostas" class="list-group grupo-respostas"> 
-                                            <div id="opcao1_2_1" class="list-group-item cheio" draggable="true">
-                                                    <span class="palavra-resposta caixa-drop_1" name='r2_1_texto' id='r2_1' >Comunidade</span>
-                                            </div>                    
-                                            <div id='opcao1_2_2' class="list-group-item cheio" draggable="true">
-                                                    <span class="palavra-resposta" name='r2_2_texto' id='r2_2'>Currículo</span>                        
-                                            </div>                                        
-                                            <div id='opcao1_2_3'class="list-group-item cheio" draggable="true">
-                                                    <span class="palavra-resposta" name='r2_3_texto' id='r2_3' >Escola</span>                        
-                                            </div>
-                                            <div id='opcao1_2_4' class="list-group-item cheio" draggable="true">
-                                                    <span class="palavra-resposta" name='r2_4_texto' id='r2_4'>Trabalho</span>                        
-                                            </div>
+                                        <div class="caixa-box">
+                                            <select name="r1_2_d" id="r1_2_d" class="resposta-select" onchange="valorSelecionado(this)">
+                                                <option  id="r1_2_d_0" name="r1_2_d_0" value="">Selecione sua resposta</option>
+                                                <option  id="r1_2_d_1" name="r1_2_d_1" value="Comunidade">Comunidade</option>
+                                                <option  id="r1_2_d_2" name="r1_2_d_2" value="Currículo">Currículo</option>
+                                                <option  id="r1_2_d_3" name="r1_2_d_3" value="Escola">Escola</option>
+                                                <option  id="r1_2_d_4" name="r1_2_d_4" value="Trabalho">Trabalho</option>
+                                            </select>
                                         </div>
                                     </div>
+                                    
                                 </div>                                 
                             </div> 
 
@@ -192,10 +205,10 @@
                                     </div>
                                     <div class="caixa-box">                                            
                                         <select name="r1_3_a" id="r2_3_a" class="resposta-select" onchange="valorSelecionado(this)">
-                                            <option  id="r1_3_a_0" name="r1_3_a_0" value="">---</option>
+                                            <option  id="r1_3_a_0" name="r1_3_a_0" value="">Selecione sua resposta</option>
                                             <option  id="r1_3_a_1" name="r1_3_a_1" value="Aditivas">Aditivas</option>
-                                            <option  id="r1_3_a_2" name="r1_3_a_2" value="Infusivas">Infusivas</option>>
-                                            <option  id="r1_3_a_3" name="r1_3_a_3" value="Mistas">Mistas</option>>                                            
+                                            <option  id="r1_3_a_2" name="r1_3_a_2" value="Infusivas">Infusivas</option>
+                                            <option  id="r1_3_a_3" name="r1_3_a_3" value="Mistas">Mistas</option>                                       
                                         </select>
                                     </div>                                                                                                                    
                                 </div>
@@ -206,10 +219,10 @@
                                     </div>
                                     <div class="caixa-box">                                            
                                         <select name="r1_3_b" id="r2_3_b" class="resposta-select" onchange="valorSelecionado(this)">
-                                            <option  id="r1_3_b_0" name="r1_3_b_0" value="">---</option>
+                                            <option  id="r1_3_b_0" name="r1_3_b_0" value="">Selecione sua resposta</option>
                                             <option  id="r1_3_b_1" name="r1_3_b_1" value="Aditivas">Aditivas</option>
-                                            <option  id="r1_3_b_2" name="r1_3_b_2" value="Infusivas">Infusivas</option>>
-                                            <option  id="r1_3_b_3" name="r1_3_b_3" value="Mistas">Mistas</option>>                                            
+                                            <option  id="r1_3_b_2" name="r1_3_b_2" value="Infusivas">Infusivas</option>
+                                            <option  id="r1_3_b_3" name="r1_3_b_3" value="Mistas">Mistas</option>                                            
                                         </select>
                                     </div>                                                                                 
                                    
@@ -221,10 +234,10 @@
                                     </div>
                                     <div class="caixa-box">                                            
                                         <select name="r1_3_c" id="r2_3_c" class="resposta-select" onchange="valorSelecionado(this)">
-                                            <option  id="r1_3_c_0" name="r1_3_c_0" value="">---</option>
+                                            <option  id="r1_3_c_0" name="r1_3_c_0" value="">Selecione sua resposta</option>
                                             <option  id="r1_3_c_1" name="r1_3_c_1" value="Aditivas">Aditivas</option>
-                                            <option  id="r1_3_c_2" name="r1_3_c_2" value="Infusivas">Infusivas</option>>
-                                            <option  id="r1_3_c_3" name="r1_3_c_3" value="Mistas">Mistas</option>>                                            
+                                            <option  id="r1_3_c_2" name="r1_3_c_2" value="Infusivas">Infusivas</option>
+                                            <option  id="r1_3_c_3" name="r1_3_c_3" value="Mistas">Mistas</option>
                                         </select>
                                     </div>      
                                 </div>                                									
@@ -334,10 +347,10 @@
 		r1_1 = document.form_atividade_uni1.r1_1.value,                
 		
         // Atividade 2, drag and drop
-        r1_2_1 = document.querySelector("#r1_2_1 span.palavra-resposta"),
-        r1_2_2 = document.querySelector("#r1_2_2 span.palavra-resposta"),
-        r1_2_3 = document.querySelector("#r1_2_3 span.palavra-resposta"),
-        r1_2_4 = document.querySelector("#r1_2_4 span.palavra-resposta"),
+        r1_2_1 = document.form_atividade_uni1.r1_2_a.value,
+        r1_2_2 = document.form_atividade_uni1.r1_2_b.value,
+        r1_2_3 = document.form_atividade_uni1.r1_2_c.value,
+        r1_2_4 = document.form_atividade_uni1.r1_2_d.value,        
 		
         //Atividade 3, Select
         r1_3_a = document.form_atividade_uni1.r1_3_a.value,
@@ -347,13 +360,13 @@
         //testando se todos os exercícios  estão preenchidos.
 		if(r1_1==null){
 			erros++;
-		}else if(r1_2_1==null){
+		}else if(r1_2_a==""){
 			erros++;
-        }else if(r1_2_2==null){
+        }else if(r1_2_b==""){
 			erros++;
-        }else if(r1_2_3==null){
+        }else if(r1_2_c==""){
 			erros++;
-        }else if(r1_2_4==null){
+        }else if(r1_2_d==""){
 			erros++;
 		}else if(r1_3_a==""){
 			erros++;
@@ -363,12 +376,19 @@
 			erros++;
         }
 
+        console.log("Resposta 1: "+r1_1);
+        console.log("Resposta 2: "+r1_2_1+", "+r1_2_2+", "+r1_2_3+", "+r1_2_4);
+        console.log("Resposta 3: "+r1_3_a+", "+r1_3_b+", "+r1_3_c);
+        console.log("erro:::"+erros);
+
 		if(erros>0){
             //caso algum não esteja preenchido, exibe mensagem de erro
 			mensagem.className = "mensagem-alerta";
 			mensagem.textContent = "Por favor preencha todos os campos";
 			mensagem.style.display = "inline-block";
-			window.scrollTo(0, 0);
+			jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
 			return false;
 		}else{
 			//console.log("\nChecando respostas"+id_atividade);			            
@@ -419,7 +439,9 @@
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você deve atingir a média ou fazer as três tentativas para poder ver o gabarito."+texto_mensagem_fim;
             }            
             mensagem_tentativas.innerHTML=texto_mensagem_total;            
-            window.scrollTo(0, 0);
+            jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
         }
         if(erros==0){       
             //se ainda não tiver enviado as respostas, ou se for dentro do máximio de tentativas,
@@ -492,67 +514,31 @@
             
             mensagem_tentativas.innerHTML=texto_mensagem_total;            
             //"Ocorreu tudo certo. Tem que aparecer o link
-			window.scrollTo(0, 0);
+			jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
         }else{
             //caso algum não esteja preenchido, exibe mensagem de erro
 			mensagem.className = "mensagem-alerta";
 			mensagem.innerHTML = "Ocorreu algum erro! Tente Novamente...";
 			mensagem.style.display = "inline-block";
-			window.scrollTo(0, 0);
+			jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
         }
     }
 
-    new Sortable(listaRespostas,{
-          animation: 150,
-          swap: true,
-          group: 'respostas',
-          swapClass: "palavra-drag"
-        });
-
-        new Sortable (r1_2_1,{
-            animation:150,
-            swap: true,
-            group: 'respostas',
-            swapClass: "palavra-drag"
-        });
-        new Sortable (r1_2_2,{
-            animation:150,
-            swap: true,
-            group: 'respostas',
-            swapClass: "palavra-drag"
-        });
-        new Sortable (r1_2_3,{
-            animation:150,
-            swap: true,
-            group: 'respostas',
-            swapClass: "palavra-drag"
-        });
-        new Sortable (r1_2_4,{
-            animation:150,
-            swap: true,
-            group: 'respostas',
-            swapClass: "palavra-drag"
-        });
-
-   
+       
     function valorSelecionado(sel) {
-        var val = sel.selectedIndex;
-        var id = sel.id;   
-        if(val==0){
+        let indice = sel.selectedIndex;
+        let valor = sel.value;
+        let id = sel.id; 
+        
+        if(indice==0){
             sel.classList.remove("select-respondido");
         }else{       
             sel.classList.add("select-respondido");
-        }
-        var selects = document.getElementsByTagName('select');
-        for(var i = 0; i < selects.length; ++i) {
-            var s = selects[i];            
-            if(s.id != id && s.selectedIndex!=0){                
-                if(s.selectedIndex==val){                     
-                    s.selectedIndex=0;                    
-                    s.classList.remove("select-respondido");
-                }                
-            }
-        } 
+        }        
     }
 </script>
 
