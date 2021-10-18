@@ -406,6 +406,11 @@ h3.texto-central b{
 	margin-top: 0px;
 }
 
+.box-info.text-dark div,
+.box-info.text-dark div a{
+	color: #020E36;
+}
+
 .box-info.text-white div,
 .box-info.text-white div a{
 	color: #fff;
@@ -437,7 +442,7 @@ h3.texto-central b{
 }
 
 .box-info .border-blue2{
-	border-color: #151730;
+	border-color: #020E36;
 }
 
 .box-info .border-dark-blue{
@@ -452,13 +457,18 @@ h3.texto-central b{
 .box-info .bg-red,
 .box-info .bg-blue,
 .box-info .bg-yellow,
-.box-info .bg-orange{
+.box-info .bg-orange,
+.box-info .bg-dark{
 	border-radius: 8px;
 	padding: 20px;
 	margin-left: 15%;
 	margin-bottom: 5%;
 	width: 80%;
 
+}
+
+.box-info .bg-dark{
+	background-color: #020E36;
 }
 
 .box-info .bg-green{
@@ -510,6 +520,7 @@ h3.texto-central b{
 	}
 
 	.box-info .bg-red,
+	.box-info .bg-dark,
 	.box-info .bg-blue,
 	.box-info .bg-green,
 	.box-info .bg-yellow,
@@ -666,6 +677,10 @@ h3.texto-central b{
 
 .titulo-externo-box.blue2 {
 	background-image: url(../img/padrao/tela01_box1_blue2.png);
+}
+
+.titulo-externo-box.yellow.dark p{
+	color: #020E36;
 }
 
 
@@ -891,4 +906,21 @@ h3.texto-central b{
 	border-radius: 8px;
 
 }
+
+.mooc5 .destaque-texto {
+	background-color: #151730;
+	color: #fff;
+	border-radius: 8px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.mooc5 .destaque-texto p {
+	color: #fff;
+}
+
+.mooc5 .destaque-texto p b {
+	color: #fec13b;
+}
+
 
