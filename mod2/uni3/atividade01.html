@@ -453,6 +453,17 @@
             // registra as re respostas com as funções da API:
             console.log("Registrando respostas:");
             console.log(evento.detail);
+
+            API.registrarRespostaAtividade({
+                "identificador": "uni3_ativ2",
+                "questoes": [
+                    {                        
+                        "identificador": "r3_2",                    
+                        "texto": r3_2_texto
+                    }
+                ]
+            });
+            
             API.registrarRespostaAtividade({
                 "identificador": "uni3_ativ1",//modificar
                 "questoes": [
@@ -479,15 +490,7 @@
                 ]
             });
             
-            API.registrarRespostaAtividade({
-                "identificador": "uni3_ativ2",
-                "questoes": [
-                    {                        
-                        "identificador": "r3_2",                    
-                        "texto": r3_2_texto
-                    }
-                ]
-            });
+            
         }        	
 	};
 

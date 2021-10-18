@@ -301,7 +301,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
-<script src="../../js/funcoes-atividades-2.js"></script>
+<script src="../../js/funcoes-atividades.js"></script>
 
 <script>
     console.clear(screen);
@@ -322,7 +322,8 @@
     //Etapa 1: carregamento da página
     window.addEventListener('load', function(){
         console.log("carregando a página");
-        API.obterDadosGenericos("quant_"+id_atividade);        
+        API.obterDadosGenericos("quant_"+id_atividade);  
+        
 	});
 
     /*************** Verificando se todas as respostas foram enviadas. *****/
@@ -335,51 +336,52 @@
         quant_respostas=0; 
         revisao_teste=0;       
         erros=0;
+        max_quant_tentativas=20;
 
         console.clear();
         //aqui vai pegar os valores de cada exercício.
         
         //este é o campo de texto:
-        r2_1_texto = document.form_atividade_uni2.r2_1_texto.value;
-        if(r2_1_texto==""){
-            erros++;            
-        }
+        resposta_r2_1 = document.form_atividade_uni2.r2_1_texto.value;
         
-        //esses são os checkbox		
-        r2_2_1 = document.form_atividade_uni2.r2_2_1.checked==true ? "v" : "f",
-        r2_2_2 = document.form_atividade_uni2.r2_2_2.checked==true ? "v" : "f",
-        r2_2_3 = document.form_atividade_uni2.r2_2_3.checked==true ? "v" : "f",
-        r2_2_4 = document.form_atividade_uni2.r2_2_4.checked==true ? "v" : "f",
-        r2_2_5 = document.form_atividade_uni2.r2_2_5.checked==true ? "v" : "f",
-        r2_2_6 = document.form_atividade_uni2.r2_2_6.checked==true ? "v" : "f",
-        r2_2_7 = document.form_atividade_uni2.r2_2_7.checked==true ? "v" : "f",
-        r2_2_8 = document.form_atividade_uni2.r2_2_8.checked==true ? "v" : "f",
-        r2_2_9 = document.form_atividade_uni2.r2_2_9.checked==true ? "v" : "f",
-        r2_2_10 = document.form_atividade_uni2.r2_2_10.checked==true ? "v" : "f",
-		
+        if(resposta_r2_1==""){
+            erros++;            
+        }   
+        
+        //aqui são os checkbox
+        r2_2_1 = (document.form_atividade_uni2.r2_2_1.checked==true ? "v" : "f"),
+        r2_2_2 = (document.form_atividade_uni2.r2_2_2.checked==true ? "v" : "f"),
+        r2_2_3 = (document.form_atividade_uni2.r2_2_3.checked==true ? "v" : "f"),
+        r2_2_4 = (document.form_atividade_uni2.r2_2_4.checked==true ? "v" : "f"),
+        r2_2_5 = (document.form_atividade_uni2.r2_2_5.checked==true ? "v" : "f"),
+        r2_2_6 = (document.form_atividade_uni2.r2_2_6.checked==true ? "v" : "f"),
+        r2_2_7 = (document.form_atividade_uni2.r2_2_7.checked==true ? "v" : "f"),
+        r2_2_8 = (document.form_atividade_uni2.r2_2_8.checked==true ? "v" : "f"),
+        r2_2_9 = (document.form_atividade_uni2.r2_2_9.checked==true ? "v" : "f"),
+        r2_2_10 = (document.form_atividade_uni2.r2_2_10.checked==true ? "v" : "f"),
+        
         //aqui os Select
         resp2_3_a = document.form_atividade_uni2.r2_3_a.value,
         resp2_3_b = document.form_atividade_uni2.r2_3_b.value,
         resp2_3_c = document.form_atividade_uni2.r2_3_c.value,
         resp2_3_d = document.form_atividade_uni2.r2_3_d.value,
-        resp2_3_e = document.form_atividade_uni2.r2_3_e.value;        
-        
-        console.log("Resposta 1: "+r2_1_texto); 
-        console.log("Resposta 2: "+r2_2_1+", "+r2_2_2+", "+r2_2_3+", "+r2_2_4+", "+r2_2_5+", "+r2_2_6+", "+r2_2_7+", "+r2_2_8+", "+r2_2_9+", "+r2_2_10);        
+        resp2_3_e = document.form_atividade_uni2.r2_3_e.value;
+		
+        console.log("Resposta 1: "+resposta_r2_1);
+        console.log("Resposta 2:", r2_2_1+", "+r2_2_2+", "+r2_2_3+", "+r2_2_4+", "+r2_2_5+", "+r2_2_6+", "+r2_2_7+", "+r2_2_8+", "+r2_2_9+", "+r2_2_10)
         console.log("Resposta 3: "+resp2_3_a+", "+resp2_3_b+", "+resp2_3_c+", "+resp2_3_d+", "+resp2_3_e);
-        
         //testando se todos os exercícios (menos os checkbox) estão preenchidos.
 		if(resp2_3_a==""){
 			erros++;
 		}else if(resp2_3_b==""){
-            erros++;
+			erros++;
         }else if(resp2_3_c==""){
-            erros++;
+			erros++;
         }else if(resp2_3_d==""){
-            erros++;        
+			erros++;
         }else if(resp2_3_e==""){
-            erros++;
-        }
+			erros++;
+		}
 
 		if(erros>0){
             //caso algum não esteja preenchido, exibe mensagem de erro
@@ -404,7 +406,6 @@
 	//Depois que verifica as tentativas de resposta, verifica as respostas salvas;
 	window .addEventListener( "evObtemDadosRespostaAtividade" , resultadoObtemRespostaAtividade, false );
     function resultadoObtemRespostaAtividade(evento){
-        //max_quant_tentativas=20;
         //console.log("\nObtendo as respostas: ");
         console.log("Status do evento: "+evento.detail['status']);          
         //verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
@@ -448,35 +449,34 @@
             //se ainda não tiver enviado as respostas, ou se for dentro do máximio de tentativas,
             // registra as re respostas com as funções da API:
             console.log("Registrando respostas:");
-            console.log(evento.detail);
+            console.log(evento.detail);            
 
             API.registrarRespostaAtividade({
                 "identificador": "uni2_ativ1",
                 "questoes": [
                     {                        
                         "identificador": "r2_1",                    
-                        "texto": r2_1_texto
+                        "texto": resposta_r2_1
                     }
                 ]
-            });
-            
-            API.registrarRespostaAtividade({
+            }); 
+
+            API.registrarRespostaAtividade({                
                 "identificador": "uni2_ativ2",//modificar
                 "questoes": [
-                    {
-                        //Onde houver os exercícios de drag and drop precisa pegar o innerHTML
+                    {                        
                         "identificador": "r2_2",                    
                         "gabaritos": [
                             { "chave": "r2_2_1", "valor": r2_2_1},
-                            { "chave": "r2_2_2", "valor": r2_2_2},
+                            { "chave": "r1_2_2", "valor": r2_2_2},
                             { "chave": "r2_2_3", "valor": r2_2_3},
                             { "chave": "r2_2_4", "valor": r2_2_4},
-                            { "chave": "r2_2_5", "valor": r2_2_5},
-                            { "chave": "r2_2_6", "valor": r2_2_6},
+                            { "chave": "r2_2_5", "valor": r2_2_5},                           						
+                            { "chave": "r2_2_6", "valor": r2_2_6},                            						
                             { "chave": "r2_2_7", "valor": r2_2_7},
                             { "chave": "r2_2_8", "valor": r2_2_8},
                             { "chave": "r2_2_9", "valor": r2_2_9},
-                            { "chave": "r2_2_10", "valor": r2_2_10}
+                            { "chave": "r2_2_10", "valor": r2_2_10}                                                       						
                         ]
                     },{                    
                         "identificador": "r2_3",                    
@@ -485,13 +485,13 @@
                             { "chave": "r2_3_b", "valor": resp2_3_b},
                             { "chave": "r2_3_c", "valor": resp2_3_c},
                             { "chave": "r2_3_d", "valor": resp2_3_d},
-                            { "chave": "r2_3_e", "valor": resp2_3_e}                           					                                                                                
+                            { "chave": "r2_3_e", "valor": resp2_3_e},
                         ]
                     }
                 ]
             });
-            
-            
+
+                    
         }        	
 	};
 
@@ -536,7 +536,7 @@
 			mensagem.className = "mensagem-alerta";
 			mensagem.innerHTML = "Ocorreu algum erro! Tente Novamente...";
 			mensagem.style.display = "inline-block";
-			wjQuery('body,html').animate({
+			jQuery('body,html').animate({
             	scrollTop: 0
         	}, 800);
         }
@@ -553,6 +553,7 @@
             sel.classList.add("select-respondido");
         }        
     }
+
 </script>
 
 </body>
