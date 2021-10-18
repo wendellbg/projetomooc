@@ -303,11 +303,23 @@ h3.texto-central b{
 }
 
 .mooc5 .bt-link-externo{
-	background-color: #2a5caa;
+	background-color: #020E36;
 }
 
+.mooc5 .border-yellow .bt-link-externo{
+	background-color: #FEC13B;
+	color: #020E36;
+}
+
+
 .mooc5 .bt-link-externo:hover{
-	background-color: #020E36;
+	background-color: #BF851D;
+	color: #020E36;
+}
+
+.mooc5 .border-yellow .bt-link-externo:hover{
+	background-color: #BF851D;
+	color: #020E36;
 }
 
 .mooc5 .border-dark-blue .subtitulo{
