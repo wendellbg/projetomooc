@@ -97,9 +97,16 @@
                 <audio id="playerAudioAD1" class="playerAudioAD" controls="controls" style="width: 100%;">
                     <source  src="../../ad/mooc3/uni6/toquinho-aquarela-clipe-oficialoriginal_COM_AD.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
                 </audio>
+                <div class="video-libras no-border">
+                    <div class="video-player icone-audio">
+                        <iframe id="video2" width="720" height="405" src="https://www.youtube.com/embed/21ibNmGv1qA?enablejsapi=1&html5=1&mute=1&controls=1&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
                 <div class="downloads">
                     <button id="exibir-ad" onclick="exibirAD()" class="bt-download-media" type="button"><i class="fas fa-audio-description"></i> Áudio do vídeo com AD )))</button>
                     <a target="_blank" href="../../ad/mooc3/uni6/toquinho-aquarela-clipe-oficialoriginal_COM_AD.mp3"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o áudio do vídeo</button></a>
+                    <button onclick="exibirLibras(1)" class="video-exibir bt-download-media" type="button"><i class="fas fa-sign-language"></i> Tradutor de libras</button>
+                    <button onclick="exibirLibras(0)" class="video-cancelar bt-download-media" type="button"><i class="fas fa-sign-language"></i> Esconder tradutor</button><br><br>
                     <span class="aviso" ><b>PROJETO AMAR.</b><br>
                         Toquinho Aquarela "clipe Oficial" original. Youtube, Março de 2016.
                     </span>
