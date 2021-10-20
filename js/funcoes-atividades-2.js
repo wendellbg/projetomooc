@@ -19,6 +19,7 @@ var texto_mensagem_revisao_1="<br>Você já verificou o gabarito, então não po
 var quant_tentativas=0;
 var max_quant_tentativas=3;
 var quant_respostas=0;
+var max_tentativas_atingido=0;
 
     function verificando_tentativas(tentativas_unidade){
         console.log("\n\nVerificando tentativas aqui.\nenvio="+envio+"\nteste="+revisao_teste+" \nvista="+revisao_vista);        
@@ -50,15 +51,17 @@ var quant_respostas=0;
                     quant_respostas = quant_salva;
                 }else{
                     if(quant_salva<max_quant_tentativas){
-                        quant_respostas=parseInt(quant_salva)+1;                
+                        quant_respostas=parseInt(quant_salva)+1;  
+                        texto_mensagem_tentativa="<br>Esta é sua "+quant_respostas+"ª tentativa.";              
                     }else{                        
-                        quant_respostas=parseInt(3);         
-                    } 
-                    let vez = quant_respostas==1 ? "vez" : "vezes";                    
-                    texto_mensagem_tentativa="<br>Você já respondeu "+quant_respostas+" "+vez+".";                                                    
+                        quant_respostas=parseInt(3);
+                        max_tentativas_atingido=1;         
+                        texto_mensagem_tentativa="<br>Você já fez suas "+max_quant_tentativas+" tentativas.";
+                    }                                                   
+                    API.obterRespostaAtividade(id_atividade);
                 }          
-                API.registrarDadosGenericos("quant_"+id_atividade,quant_respostas);        
-                API.obterRespostaAtividade(id_atividade);
+                API.registrarDadosGenericos("quantidade_"+id_atividade,quant_respostas);        
+                
             
             //Etapa 2: Carregando a página sem respostas enviadas
             }else{                                  
@@ -71,15 +74,16 @@ var quant_respostas=0;
                         scrollTop: 0
                     }, 800);
                     console.log("mensagem zerada");
-                    API.registrarDadosGenericos("quant_"+id_atividade,quant_respostas);
+                    API.registrarDadosGenericos("quantidade_"+id_atividade,quant_respostas);
                 }else{
                     quant_respostas=parseInt(1);
                     //console.log("quant respostas="+quant_respostas);
                     texto_mensagem_tentativa="<br>Esta é sua primeira tentativa.";
-                    API.registrarDadosGenericos("quant_"+id_atividade,quant_respostas);        
+                    API.registrarDadosGenericos("quantidade_"+id_atividade,quant_respostas);        
                     API.obterRespostaAtividade(id_atividade);
                 }
             }
+
             revisao_teste=1;
             API.obterDadosGenericos(revisao_unidade);
             console.log("verificando revisão. revisao_teste="+revisao_teste);

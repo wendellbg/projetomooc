@@ -7,7 +7,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="stylesheet" href="../../css/mooc3.css?ver=1.2"/>            
             <link rel="stylesheet" href="../../css/atividades-padrao.css" />
-			<link rel="stylesheet" href="../../css/cores-mooc2.css" />
+			<link rel="stylesheet" href="../../css/cores-mooc3.css" />
 			<link rel="stylesheet" href="../../css/w3.css" />
         
             <!-- Botão de Voltar ao Topo -->
@@ -32,7 +32,7 @@
             })(window,document,'script','dataLayer','GTM-MK4H2FJ');</script> -->
             <!-- End Google Tag Manager -->
         </head>
-        <body class="mooc2">
+        <body class="mooc3">
         <!-- Google Tag Manager (noscript) -->
         <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MK4H2FJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
         <!-- End Google Tag Manager (noscript) -->
@@ -350,7 +350,9 @@
 			mensagem.className = "mensagem-alerta";
 			mensagem.textContent = "Por favor preencha todos os campos";
 			mensagem.style.display = "block";
-			window.scrollTo(0, 0);
+			jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
 			return false;
 		}else{
 			console.log("\nChecando respostas "+id_atividade);
@@ -375,7 +377,9 @@
 			mensagem.className = "mensagem-ok";
 			mensagem.innerHTML = "Você já enviou as respostas, avance para a próxima Unidade!<p></p><a href='../uni1/index.html' class='link-proxima-unidade'>PROSSEGUIR &#10095;</a>";
 			mensagem.style.display = "block";
-			window.scrollTo(0, 0);
+			jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
 			setTimeout(function() {
     			window.location.href = "tela03.html";
 			}, 5000);
@@ -447,13 +451,17 @@
 					mensagem.className = "mensagem-ok";
 					mensagem.style.display ="block";			
 					//"Ocorreu tudo certo. Tem que aparecer o link
-					window.scrollTo(0, 0);
+					jQuery('body,html').animate({
+            			scrollTop: 0
+        			}, 800);
 				}else{
 					//caso algum não esteja preenchido, exibe mensagem de erro
 					mensagem.className = "mensagem-alerta";
 					mensagem.textContent = "Ocorreu algum erro! Tente Novamente...";
 					mensagem.style.display = "block";
-					window.scrollTo(0, 0);
+					jQuery('body,html').animate({
+            			scrollTop: 0
+        			}, 800);
 				}
 			}
 			
