@@ -5,10 +5,67 @@
 		"descricao": "",
 		"permitePorcentagem": "true",
 		"topicos": [{
-			"identificador": "uni3_tela01",
-			"nome": "Boas-Vindas"
+			"identificador": "uni1_tela01",
+			"nome": "Mensagem de boas-Vindas"
+		},{
+			"identificador": "uni0_tela02",
+			"nome": "Boas-Vindas"			
 		}],
-		"atividades": [		
+		"atividades": [
+			{
+				"identificador": "uni0_ativ1",
+				"nomeAtividade": "Questionário Inicial",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "INTEGRAL",
+						"identificador": "r0_1",
+						"enunciado": "Você é...",
+						"gabaritos": [
+							{ "chave": "r0_1_a", "valor": "a", "alternativa": "Professor/gestor do Ensino Fundamental da rede pública." },
+							{ "chave": "r0_1_b", "valor": "b", "alternativa": "Professor/gestor do Ensino Fundamental da rede privada." },
+							{ "chave": "r0_1_c", "valor": "c", "alternativa": "Professor/gestor do Ensino Médio da rede pública." },
+							{ "chave": "r0_1_d", "valor": "d", "alternativa": "Professor/gestor do Ensino Médio da rede privada." },
+							{ "chave": "r0_1_e", "valor": "e", "alternativa": "Outro profissional da Educação." },
+							{ "chave": "r0_1_f", "valor": "f", "alternativa": "Responsável por aluno/a da Educação Básica." },
+							{ "chave": "r0_1_g", "valor": "g", "alternativa": "Aluno/a da Educação Básica." }							
+						]
+					},
+					{
+						"tipoQuestaoString": "INTEGRAL",
+						"identificador": "r0_2",
+						"enunciado": "Qual é sua principal motivação para a realização do curso?",
+						"gabaritos": [							
+							{ "chave": "r0_2_a", "valor": "a", "alternativa": "Aquisição de conhecimentos." },
+							{ "chave": "r0_2_b", "valor": "b", "alternativa": "Solicitação do gestor da escola." },
+							{ "chave": "r0_2_c", "valor": "c", "alternativa": "Necessidade para atuação profissional." },
+							{ "chave": "r0_2_d", "valor": "d", "alternativa": "Ascensão funcional." },
+							{ "chave": "r0_2_e", "valor": "e", "alternativa": "Outros." }							
+						]
+					},
+					{
+						"tipoQuestaoString": "INTEGRAL",
+						"identificador": "r0_3",	
+						"enunciado": "O que você pretende?",
+						"gabaritos": [							
+							{ "chave": "r0_3_a", "valor": "a", "alternativa": "Concluir o curso e receber o certificado." },
+							{ "chave": "r0_3_b", "valor": "b", "alternativa": "Começar a fazer o curso, talvez concluir." },							
+							{ "chave": "r0_3_c", "valor": "c", "alternativa": "Apenas dar uma olhada no curso, por curiosidade." }							
+						]
+					},
+					{
+						"tipoQuestaoString": "INTEGRAL",
+						"identificador": "r0_4",
+						"enunciado": "Quais competências você gostaria de desenvolver neste curso?",
+						"gabaritos": [							
+							{ "chave": "r0_4_a", "valor": "a", "alternativa": "Conhecer as normas e procedimentos relativos ao Novo Ensino Médio em direção à escolha de itinerários formativos." },
+							{ "chave": "r0_4_b", "valor": "b", "alternativa": "Conhecer melhor o itinerário formativo de Formação Técnica e Profissional." },
+							{ "chave": "r0_4_c", "valor": "c", "alternativa": "Compreender melhor os processos de orientação (ou mentoria) educacional e profissional." },
+							{ "chave": "r0_4_d", "valor": "d", "alternativa": "Conhecer os tipos de ação que podem ser realizados para ajudar os estudantes a escolherem seus itinerários." },
+							{ "chave": "r0_4_e", "valor": "e", "alternativa": "Sintonizar os conteúdos de suas componentes curriculares aos itinerários formativos e ao mundo do trabalho." }							
+						]
+					}
+				]
+			}	
 		]
 	},
 	{
@@ -47,7 +104,7 @@
 					{
 						"tipoQuestaoString": "INTEGRAL",
 						"identificador": "r1_1",
-						"enunciado": "O que é educação para a carreira?",
+						"enunciado": "O que é Educação para a Carreira?",
 						"gabaritos": [
 							{ "chave": "r1_1_1", "valor": "f", "alternativa": "a) Orientar os pais e alunos sobre as opções de carreira mais socialmente valorizadas." },
 							{ "chave": "r1_1_2", "valor": "f", "alternativa": "b) Preparar os alunos para a tomada de decisões e escolhas." },
@@ -69,11 +126,11 @@
 					{
 						"tipoQuestaoString": "PROPORCIONAL",
 						"identificador": "r1_3",
-						"enunciado": "Para que ocorra a educação para a carreira é preciso desenvolver as estratégias de implementação de Programas de Educação à Carreira, voltados ao contexto da escola. Selecione cada conceito correspondente à sua definição:",
+						"enunciado": "Para que ocorra a Educação para a Carreira é preciso desenvolver as estratégias de implementação de Programas de Educação para a Carreira, voltados ao contexto da escola. Selecione cada conceito correspondente à sua definição:",
 						"gabaritos": [
 							{ "chave": "r1_3_1", "valor": "Infusivas", "alternativa": "a) Disseminação transversal (em diferentes disciplinas e em todos os níveis escolares) de questões sobre os valores, conhecimentos e atitudes relevantes ao desenvolvimento vocacional e da carreira." },
-							{ "chave": "r1_3_2", "valor": "Aditivas", "alternativa": "b) Implementação da educação para a carreira, integrada no horário escolar, tal como se de uma disciplina se tratasse, a ser ministrada por um orientador profissional, um educador para a carreira." },
-							{ "chave": "r1_3_3", "valor": "Mistas", "alternativa": "c) Integração da educação para a carreira nas disciplinas de ciências sociais e humanas." }							
+							{ "chave": "r1_3_2", "valor": "Aditivas", "alternativa": "b) Implementação da Educação para a Carreira, integrada no horário escolar, tal como se de uma disciplina se tratasse, a ser ministrada por um orientador profissional, um educador para a carreira." },
+							{ "chave": "r1_3_3", "valor": "Mistas", "alternativa": "c) Integração da Educação para a Carreira nas disciplinas de ciências sociais e humanas." }							
 						]
 					}
 				]
@@ -81,7 +138,7 @@
 		]	
 	},{		
 		"identificador": "mod3_uni2",
-		"nome": "Competências socioemocionais para a educação à carreira?",
+		"nome": "Competências socioemocionais para a educação para a carreira?",
 		"descricao": "",
 		"permitePorcentagem": "true",
 		"topicos": [{
@@ -114,7 +171,7 @@
 					{
 						"tipoQuestaoString": "PROPORCIONAL",
 						"identificador": "r2_1",
-						"enunciado": "A Base Nacional Comum Curricular (BNCC) estabeleceu 10 competências gerais que contribuem para o desenvolvimento pleno do estudante. Selecione as competências que integram aspectos cognitivos e socioemocionais de acordo com o a BNCC:",
+						"enunciado": "A Base Nacional Comum Curricular (BNCC) estabeleceu 10 competências gerais que contribuem para o desenvolvimento pleno do estudante. Marque as competências que integram aspectos cognitivos e socioemocionais de acordo com o a BNCC:",
 						"gabaritos": [
 							{ "chave": "r2_1_1", "valor": "v", "alternativa": "Conhecimento" },
 							{ "chave": "r2_1_2", "valor": "f", "alternativa": "Experiência" },
@@ -137,7 +194,7 @@
 					},{
 						"tipoQuestaoString": "PROPORCIONAL",
 						"identificador": "r2_3",
-						"enunciado": "Complete o texto arrastando e soltando as palavras:",
+						"enunciado": "Complete o texto selecionando as palavras corretas:",
 						"gabaritos":[
 							{"chave": "r2_3_1", "valor": "educadores", "alternativa": "Palavra 1"},
 							{"chave": "r2_3_2", "valor": "responsáveis", "alternativa": "Palavra 2"},
@@ -195,9 +252,9 @@
 				"questoes": [{
 					"tipoQuestaoString": "PROPORCIONAL",
 					"identificador": "r3_1",
-					"enunciado": "O trabalho Sobre o desenvolvimento dos interesses profissionais, marque as afirmativas a seguir que são verdadeiras:",
+					"enunciado": "Sobre o desenvolvimento dos interesses profissionais, marque as afirmativas a seguir que são verdadeiras:",
 					"gabaritos":[
-						{"chave": "r3_1_1", "valor": "v", "alternativa": "a) A teoria Socio-Cognitiva tem um modelo teórico que se assenta em 3 blocos centrais: os interesses; as expectativas de resultados; as crenças de autoeficácia."},
+						{"chave": "r3_1_1", "valor": "v", "alternativa": "a) A Teoria Socio-Cognitiva tem um modelo teórico que se assenta 3 blocos centrais: os interesses; as expectativas de resultados; as crenças de autoeficácia."},
 						{"chave": "r3_1_2", "valor": "f", "alternativa": "b) As expectativas de resultados são as avaliações dos currículos escolares."},
 						{"chave": "r3_1_3", "valor": "v", "alternativa": "c) As metas são os objetivos pessoais que cada pessoa quer alcançar."},
 						{"chave": "r3_1_4", "valor": "v", "alternativa": "d) As crenças de autoeficácia são a percepção de que somos capazes de desempenhar determinadas tarefas, funções, atividades."}						
@@ -205,7 +262,7 @@
 				},{
 					"tipoQuestaoString": "PROPORCIONAL",
 					"identificador": "r3_2",
-					"enunciado": "Complete o texto sobre as expectativas de resultado arrastando e soltando as palavras:",
+					"enunciado": "Complete o texto sobre as expectativas de resultado selecionando as palavras:",
 					"gabaritos":[
 						{"chave": "r3_2_1", "valor": "resultados positivos", "alternativa": "Palavra 1"},
 						{"chave": "r3_2_2", "valor": "metas", "alternativa": "Palavra 2"},
@@ -217,7 +274,7 @@
 				}]
 			},{
 				"identificador": "uni3_ativ2",
-				"nomeAtividade": "Avaliação - Unidade 3 - Questão discursiva",				
+				"nomeAtividade": "Avaliação - Unidade 3 - Questão Discursiva",				
 				"questoes": [
 					{
 						"tipoQuestaoString": "MODERADA",
@@ -269,16 +326,16 @@
 					"gabaritos": [
 						{ "chave": "r4_1_1", "valor": "f", "alternativa": "a) Os estereótipos são a maneira como as pessoas preferem ser vistas pelas outras, e são sempre positivos." },
 						{ "chave": "r4_1_2", "valor": "v", "alternativa": "b) Os estereótipos são fruto de uma grande construção social que, com o passar do tempo, vai sendo desenvolvida e estabelece padrões e formas de enxergar o outro e seu modo de agir." },					
-						{ "chave": "r4_1_3", "valor": "f", "alternativa": "c) Apenas os indivíduos que não tiveram acesso ao ensino médio são afetados por esses estereótipos, em maior ou menor grau." },
+						{ "chave": "r4_1_3", "valor": "f", "alternativa": "c) Apenas os indivíduos que não tiveram acesso ao Ensino Médio são afetados por esses estereótipos, em maior ou menor grau." },
 						{ "chave": "r4_1_4", "valor": "v", "alternativa": "d) Fatores como acesso à educação, recursos financeiros e contexto familiar contribuem para a possibilidade de flexibilizarmos as generalizações, confrontarmos os estereótipos e, assim, alargarmos as possibilidades que consideramos viáveis e adequadas para as nossas escolhas." }						
 					]
 				},{
 					"tipoQuestaoString": "PROPORCIONAL",
 					"identificador": "r4_2",
-					"enunciado": "No processo de socialização, a perceção das profissões de acordo com as variáveis sociais definem o mapa cognitivo de onde decorrem as escolhas. Arraste e solte cada conceito do mapa correspondente à sua definição:",
+					"enunciado": "No processo de socialização, a perceção das profissões de acordo com as variáveis sociais definem o mapa cognitivo de onde decorrem as escolhas. Selecione cada conceito do mapa correspondente à sua definição:",
 					"gabaritos": [
 						{ "chave": "r4_2_1", "valor": "Autoconceito", "alternativa": "a) A imagem que a pessoa forma sobre si mesma (conciliando atributos psicológicos ao seu papel social) e que orienta a sua conduta, na medida em que projeta as expectativas pessoais no futuro." },
-						{ "chave": "r4_2_2", "valor": "Espaço social", "alternativa": "b) Representa o conjunto de alternativas que restam, após a circunscrição, e que além de aceitáveis para o próprio sujeito, são também aceitáveis aos olhos dos outros (família, amigos, sociedade, entre outros)." },
+						{ "chave": "r4_2_2", "valor": "Espaço social", "alternativa": "b) Representa o conjunto de alternativas que restam, após a circunscrição, e que, além de aceitáveis para o próprio sujeito, são também aceitáveis aos olhos dos outros (família, amigos, sociedade, entre outros)." },
 						{ "chave": "r4_2_3", "valor": "Aspiração profissional", "alternativa": "c) Emerge a partir do leque de alternativas construído pelo indivíduo." }
 					]
 				},{
@@ -332,7 +389,7 @@
 				"questoes": [{					
 					"tipoQuestaoString": "PROPORCIONAL",
 					"identificador": "r5_1",
-					"enunciado": "Complete o texto sobre a exploração vocacional arrastando e soltando as palavras:",
+					"enunciado": "Complete o texto sobre a exploração vocacional selecionando as palavras:",
 					"gabaritos": [
 						{ "chave": "r5_1_1", "valor": "informações", "alternativa": "Palavra 1" },
 						{ "chave": "r5_1_2", "valor": "hipóteses", "alternativa": "Palavra 2" },					
@@ -348,17 +405,17 @@
 					"enunciado": "Considerando a Teoria cognitiva-evolutiva de carreira, relacione os elementos que compõem a teoria e suas definições:",
 					"gabaritos": [
 						{ "chave": "r5_2_1", "valor": "Autoconceito", "alternativa": "a) Ideia que o indivíduo tem de si mesmo." },
-						{ "chave": "r5_2_2", "valor": "Papéis de Vida", "alternativa": "b) Posições que o indivíduo ocupa no contexto familiar e social ao longo da vida e que definem algumas exigências, responsabilidades e preocupações, como estudante, dono de casa, pai/mae, etc..." },
+						{ "chave": "r5_2_2", "valor": "Papéis de Vida", "alternativa": "b) Posições que o indivíduo ocupa no contexto familiar e social ao longo da vida e que definem algumas exigências, responsabilidades e preocupações, como estudante, dono de casa, pai/mãe, etc." },
 						{ "chave": "r5_2_3", "valor": "Identidade Pessoal", "alternativa": "c) Conjunto de interesses, habilidades e características de personalidade." }
 					]
 				},{
 					"tipoQuestaoString": "PROPORCIONAL",
 					"identificador": "r5_3",
-					"enunciado": "Em relação aos estágios da vida vocacional, arraste e solte cada conceito à a melhor definição de cada etapa:",
+					"enunciado": "Em relação aos estágios da vida vocacional, selecione cada conceito referente à melhor definição de cada etapa:",
 					"gabaritos":[
 						{"chave": "r5_3_1", "valor": "Crescimento", "alternativa": "a) Começa o desenvolvimento do autoconceito, da percepção de si, das crenças de autoeficácia, em que as escolhas são assistemáticas, fantasiosas e buscam o despertar de interesses e habilidades. O indivíduo descobre as primeiras capacidades e constrói o autoconceito através da identificação com figuras significativas da família (pais, avós, irmãos) e escola (professores, colegas)."},
-						{"chave": "r5_3_2", "valor": "Exploração", "alternativa": "b) É quando se intensificam a auto-análise, a representação de papéis e a exploração ocupacional. Estes são os estágios em que vocês encontram os alunos, e por isso as experiências de exploração são tão importantes."},
-						{"chave": "r5_3_3", "valor": "Estabelecimento", "alternativa": "c) É o período em que o indivíduo estabelece os esforços para permanecer numa área e progredir na mesma, quando encontrada; A escolha aqui é implementada, isto é, uma conversão das preferências especificadas em uma realidade ocupacional, através do comprometimento com o mundo do trabalho."},
+						{"chave": "r5_3_2", "valor": "Exploração", "alternativa": "b) É quando se intensificam a autoanálise, a representação de papéis e a exploração ocupacional. Estes são os estágios em que vocês encontram os alunos, e, por isso, as experiências de exploração são tão importantes."},
+						{"chave": "r5_3_3", "valor": "Estabelecimento", "alternativa": "c) É o período em que o indivíduo estabelece os esforços para permanecer numa área e progredir nela, quando encontrada; A escolha aqui é implementada, isto é, uma conversão das preferências especificadas em uma realidade ocupacional, através do comprometimento com o mundo do trabalho."},
 						{"chave": "r5_3_4", "valor": "Manutenção", "alternativa": "d) Representa a consolidação de uma posição ou situação e a continuidade dos planos estabelecidos, a realização de tarefas da maturidade, com suas características de continuidade dos planos estabelecidos, onde há comportamentos de conservação do que foi alcançado."},
 						{"chave": "r5_3_5", "valor": "Desengajamento", "alternativa": "e) Se pode vivenciar algum declínio de capacidades físicas e/ou mentais, mas que majoritariamente representa o momento em que o indivíduo planeja sua retirada do mundo do trabalho, com o gradual enfraquecimento e posterior afastamento das atividades profissionais, criando um novo modo de vida fora do trabalho."}						
 					]
@@ -407,7 +464,7 @@
 				},{
 					"tipoQuestaoString": "PROPORCIONAL",
 					"identificador": "r6_2",
-					"enunciado": "Selecione, no espaço abaixo, as dimensões fundamentais para o desenvolvimento na carreira:",
+					"enunciado": "Selecione, entre as opções abaixo, as dimensões fundamentais para o desenvolvimento na carreira:",
 					"gabaritos": [
 						{ "chave": "r6_2_1", "valor": "v", "alternativa": "Confiança" },
 						{ "chave": "r6_2_2", "valor": "v", "alternativa": "Controle" },
@@ -421,7 +478,7 @@
 				},{
 					"tipoQuestaoString": "INTEGRAL",
 					"identificador": "r6_3",
-					"enunciado": "Complete o texto sobre a adaptabilidade da carreira arrastando e soltando as palavras:",
+					"enunciado": "Complete o texto sobre a adaptabilidade da carreira selecionando corretamente as palavras:",
 					"gabaritos":[
 						{"chave": "r6_3_1", "valor": "intervenção", "alternativa": "Palavra 1"},
 						{"chave": "r6_3_2", "valor": "orientação e desenvolvimento", "alternativa": "Palavra 2"},
