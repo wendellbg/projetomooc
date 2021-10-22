@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../../css/mooc5.css?ver=1.1"/>
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2"/>
-    <link rel="stylesheet" href="../../css/ponto-interesse.css?ver=1.7"/>   
+    <link rel="stylesheet" href="../../css/ponto-interesse.css?ver=1.7"/>
+    <link rel="stylesheet" href="../../css/w3.css" />   
    
            
 
@@ -254,6 +255,19 @@
 <!-- Footer -->
 <footer id="footer">
 </footer>
+
+<div class="icone-botao-libras">
+    <button onclick="document.getElementById('id01').style.display='block'" type="button" style="border:2px solid #fff !important; border-radius: 8px;"><img src="../../img/padrao/libras.png"></button>                        
+
+    <div id="id01" class="w3-modal">
+      <div class="w3-modal-content">
+        <div class="w3-container">
+          <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+          <iframe id="ytplayer" type="text/html" width="300" height="500" src="https://www.youtube.com/embed/?autoplay=1&origin=http://example.com" frameborder="0"/></iframe>
+        </div>
+      </div>
+    </div>
+</div>
 
 <script>
     function exibirAD(){
