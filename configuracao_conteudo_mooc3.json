@@ -254,7 +254,7 @@
 					"identificador": "r3_1",
 					"enunciado": "Sobre o desenvolvimento dos interesses profissionais, marque as afirmativas a seguir que são verdadeiras:",
 					"gabaritos":[
-						{"chave": "r3_1_1", "valor": "v", "alternativa": "a) A Teoria Socio-Cognitiva tem um modelo teórico que se assenta 3 blocos centrais: os interesses; as expectativas de resultados; as crenças de autoeficácia."},
+						{"chave": "r3_1_1", "valor": "v", "alternativa": "a) A Teoria Socio-Cognitiva tem um modelo teórico que se assenta sobre 3 blocos centrais: os interesses; as expectativas de resultados; as crenças de autoeficácia."},
 						{"chave": "r3_1_2", "valor": "f", "alternativa": "b) As expectativas de resultados são as avaliações dos currículos escolares."},
 						{"chave": "r3_1_3", "valor": "v", "alternativa": "c) As metas são os objetivos pessoais que cada pessoa quer alcançar."},
 						{"chave": "r3_1_4", "valor": "v", "alternativa": "d) As crenças de autoeficácia são a percepção de que somos capazes de desempenhar determinadas tarefas, funções, atividades."}						
@@ -332,7 +332,7 @@
 				},{
 					"tipoQuestaoString": "PROPORCIONAL",
 					"identificador": "r4_2",
-					"enunciado": "No processo de socialização, a perceção das profissões de acordo com as variáveis sociais definem o mapa cognitivo de onde decorrem as escolhas. Selecione cada conceito do mapa correspondente à sua definição:",
+					"enunciado": "No processo de socialização, a perceção das profissões de acordo com as variáveis sociais define o mapa cognitivo de onde decorrem as escolhas. Selecione cada conceito do mapa correspondente à sua definição:",
 					"gabaritos": [
 						{ "chave": "r4_2_1", "valor": "Autoconceito", "alternativa": "a) A imagem que a pessoa forma sobre si mesma (conciliando atributos psicológicos ao seu papel social) e que orienta a sua conduta, na medida em que projeta as expectativas pessoais no futuro." },
 						{ "chave": "r4_2_2", "valor": "Espaço social", "alternativa": "b) Representa o conjunto de alternativas que restam, após a circunscrição, e que, além de aceitáveis para o próprio sujeito, são também aceitáveis aos olhos dos outros (família, amigos, sociedade, entre outros)." },
