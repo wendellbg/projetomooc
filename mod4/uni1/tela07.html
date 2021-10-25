@@ -96,9 +96,14 @@
                 <div class='video-player'>
                     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/aKdG3fwwg_k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-<!--                <div class="downloads">-->
-                <!--                    <a target="_blank" href="../../downloads/mooc4/"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do vídeo</button></a>-->
-                <!--                </div>-->
+                <audio id="playerAudioAD1" class="playerAudioAD" controls="controls" style="width: 100%;">
+                    <source  src="../../ad/mooc4/uni1/atividade-linha-da-vida_COM_AD.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+                </audio>
+                <div class="downloads">
+                    <button id="exibir-ad" onclick="exibirAD()" class="bt-download-media" type="button"><i class="fas fa-audio-description"></i> Áudio do vídeo com AD )))</button>
+                    <!--                    <a target="_blank" href="../../downloads/mooc4/Un0-video.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do vídeo</button></a>-->
+                    <a target="_blank" href="../../ad/mooc4/uni1/atividade-linha-da-vida_COM_AD.mp3"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o áudio do vídeo</button></a>
+                </div>
             </div>
 
 
@@ -169,6 +174,24 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
+<script>
+
+    function exibirAD(){
+
+        var audioPod = document.getElementById('playerAudioAD1');
+
+        if (audioPod.paused == false) {
+            audioPod.pause();
+            document.getElementById('playerAudioAD1').style.display='none';
+        }else{
+            audioPod.play();
+            document.getElementById('playerAudioAD1').style.display='block';
+        }
+
+
+    }
+
+</script>
 <script>
     console.clear(screen);
 
