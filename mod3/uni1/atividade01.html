@@ -416,7 +416,7 @@
             verifica_revisao();
             if(revisao_vista==1){
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+texto_mensagem_revisao_1;         
-            }else if(quant_respostas>=max_quant_tentativas){
+            }else if(max_tentativas_atingido==1){
                 console.log("\n\nMax de mensagens aqui");
                 //Já atingiu o máximo de tentativas
                 if(envio==1){
@@ -433,7 +433,7 @@
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a nota máxima!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
             }else if(nota_atividade>=6){
                 console.log("\nAtingiu a média aqui");
-                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a !<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a média!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                
             }
             else{
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você deve atingir a média ou fazer as três tentativas para poder ver o gabarito."+texto_mensagem_fim;
@@ -445,7 +445,7 @@
         }
         if(erros==0){       
             //se ainda não tiver enviado as respostas, ou se for dentro do máximio de tentativas,
-            // registra as re respostas com as funções da API:
+            // registra as respostas com as funções da API:
             console.log("Registrando respostas:");
             console.log(evento.detail);
             API.registrarRespostaAtividade({
@@ -481,8 +481,8 @@
         }        	
 	};
 
-    //função de controle, pra exibir no console o resultado do envio das respostas (registraRespostaAtividade)
-	window.addEventListener( "evRegistraRespostaAtividade" ,resultadoRegistrarRespostaAtividade, false );
+   //função de controle, pra exibir no console o resultado do envio das respostas (registraRespostaAtividade)
+	window .addEventListener( "evRegistraRespostaAtividade" ,resultadoRegistrarRespostaAtividade, false );
     function resultadoRegistrarRespostaAtividade (evento){
         console .log(evento.detail);
         nota_atividade_nova= evento.detail.data.notaAtividade;
@@ -507,8 +507,7 @@
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a nota máxima!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
             }else if(nota_atividade>=6){
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_revisao_0+texto_mensagem_fim;
-            }
-            else{
+            }else{
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você deve atingir a média ou fazer as três tentativas para poder ver o gabarito."+texto_mensagem_fim;
             }            
             
