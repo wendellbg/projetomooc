@@ -105,19 +105,19 @@
                                 </div>                      
                                 <div class="area-respostas">
                                     <div class='opcao-resposta'>
-                                        <input type="radio" name="r1_1" id="r1_1_1" value="r1_1_1" required>
+                                        <input type="radio" name="r1_1" id="r1_1_1" value="a" required>
                                         <label for="r1_1_1" class="texto-opcao">a) Orientar os pais e alunos sobre as opções de carreira mais socialmente valorizadas.</label>
                                     </div>
                                     <div class="opcao-resposta">
-                                        <input type="radio" name="r1_1" id="r1_1_2" value="r1_1_2">
+                                        <input type="radio" name="r1_1" id="r1_1_2" value="b">
                                         <label for="r1_1_2" class="texto-opcao">b) Preparar os alunos para a tomada de decisões e escolhas.</label>
                                     </div>
                                     <div class="opcao-resposta">
-                                        <input type="radio" name="r1_1" id="r1_1_3" value="r1_1_3">
+                                        <input type="radio" name="r1_1" id="r1_1_3" value="c">
                                         <label for="r1_1_3" class="texto-opcao">c) Fazer testes vocacionais com os alunos.</label>
                                     </div>
                                     <div class="opcao-resposta">
-                                        <input type="radio" name="r1_1" id="r1_1_4" value="r1_1_4">
+                                        <input type="radio" name="r1_1" id="r1_1_4" value="d">
                                         <label for="r1_1_4" class="texto-opcao">d) Ofertar 3 ou 4 profissões para que o aluno siga.</label>
                                     </div>                                    
                                 </div>
@@ -204,7 +204,7 @@
                                         <span class="texto-opcao">a) Disseminação transversal (em diferentes disciplinas e em todos os níveis escolares) de questões sobre os valores, conhecimentos e atitudes relevantes ao desenvolvimento vocacional e da carreira.</span>
                                     </div>
                                     <div class="caixa-box">                                            
-                                        <select name="r1_3_a" id="r2_3_a" class="resposta-select" onchange="valorSelecionado(this)">
+                                        <select name="r1_3_a" id="r1_3_a" class="resposta-select" onchange="valorSelecionado(this)">
                                             <option  id="r1_3_a_0" name="r1_3_a_0" value="">Selecione sua resposta</option>
                                             <option  id="r1_3_a_1" name="r1_3_a_1" value="Aditivas">Aditivas</option>
                                             <option  id="r1_3_a_2" name="r1_3_a_2" value="Infusivas">Infusivas</option>
@@ -218,7 +218,7 @@
                                         <span class="texto-opcao">b) Implementação da Educação para a Carreira, integrada no horário escolar, tal como se de uma disciplina se tratasse, a ser ministrada por um orientador profissional, um educador para a carreira.</span>
                                     </div>
                                     <div class="caixa-box">                                            
-                                        <select name="r1_3_b" id="r2_3_b" class="resposta-select" onchange="valorSelecionado(this)">
+                                        <select name="r1_3_b" id="r1_3_b" class="resposta-select" onchange="valorSelecionado(this)">
                                             <option  id="r1_3_b_0" name="r1_3_b_0" value="">Selecione sua resposta</option>
                                             <option  id="r1_3_b_1" name="r1_3_b_1" value="Aditivas">Aditivas</option>
                                             <option  id="r1_3_b_2" name="r1_3_b_2" value="Infusivas">Infusivas</option>
@@ -233,7 +233,7 @@
                                         <span class="texto-opcao">c) Integração da Educação para a Carreira nas disciplinas de ciências sociais e humanas.</span>                                           
                                     </div>
                                     <div class="caixa-box">                                            
-                                        <select name="r1_3_c" id="r2_3_c" class="resposta-select" onchange="valorSelecionado(this)">
+                                        <select name="r1_3_c" id="r1_3_c" class="resposta-select" onchange="valorSelecionado(this)">
                                             <option  id="r1_3_c_0" name="r1_3_c_0" value="">Selecione sua resposta</option>
                                             <option  id="r1_3_c_1" name="r1_3_c_1" value="Aditivas">Aditivas</option>
                                             <option  id="r1_3_c_2" name="r1_3_c_2" value="Infusivas">Infusivas</option>
@@ -455,18 +455,18 @@
                         //Onde houver os exercícios de drag and drop precisa pegar o innerHTML
                         "identificador": "r1_1",                    
                         "gabaritos": [
-                            { "chave": "r1_1_1", "valor": (r1_1=="r1_1_1" ? "v" : "f")},
-                            { "chave": "r1_1_2", "valor": (r1_1=="r1_1_2" ? "v" : "f")},
-                            { "chave": "r1_1_3", "valor": (r1_1=="r1_1_3" ? "v" : "f")},
-                            { "chave": "r1_1_4", "valor": (r1_1=="r1_1_4" ? "v" : "f")}			
+                            { "chave": "r1_1_1", "valor": (r1_1=="a" ? "v" : "f")},
+                            { "chave": "r1_1_2", "valor": (r1_1=="b" ? "v" : "f")},
+                            { "chave": "r1_1_3", "valor": (r1_1=="c" ? "v" : "f")},
+                            { "chave": "r1_1_4", "valor": (r1_1=="d" ? "v" : "f")}			
                         ]
                     },{                    
                         "identificador": "r1_2",                    
                         "gabaritos": [
-                            { "chave": "r1_2_1", "valor": r1_2_1.innerHTML},
-                            { "chave": "r1_2_2", "valor": r1_2_2.innerHTML},
-                            { "chave": "r1_2_3", "valor": r1_2_3.innerHTML},
-                            { "chave": "r1_2_4", "valor": r1_2_4.innerHTML}
+                            { "chave": "r1_2_1", "valor": r1_2_1},
+                            { "chave": "r1_2_2", "valor": r1_2_2},
+                            { "chave": "r1_2_3", "valor": r1_2_3},
+                            { "chave": "r1_2_4", "valor": r1_2_4}
                         ]
                     },{                        
                         "identificador": "r1_3",                    

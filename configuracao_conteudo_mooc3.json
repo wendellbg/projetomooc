@@ -107,8 +107,8 @@
 						"enunciado": "O que é Educação para a Carreira?",
 						"gabaritos": [
 							{ "chave": "r1_1_1", "valor": "f", "alternativa": "a) Orientar os pais e alunos sobre as opções de carreira mais socialmente valorizadas." },
-							{ "chave": "r1_1_2", "valor": "f", "alternativa": "b) Preparar os alunos para a tomada de decisões e escolhas." },
-							{ "chave": "r1_1_3", "valor": "v", "alternativa": "c) Fazer testes vocacionais com os alunos." },
+							{ "chave": "r1_1_2", "valor": "v", "alternativa": "b) Preparar os alunos para a tomada de decisões e escolhas." },
+							{ "chave": "r1_1_3", "valor": "f", "alternativa": "c) Fazer testes vocacionais com os alunos." },
 							{ "chave": "r1_1_4", "valor": "f", "alternativa": "d) Ofertar 3 ou 4 profissões para que o aluno siga." }
 						]
 					},

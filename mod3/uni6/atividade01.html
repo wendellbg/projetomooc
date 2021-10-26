@@ -407,7 +407,9 @@
 			mensagem.className = "mensagem-alerta";
 			mensagem.textContent = "Por favor preencha todos os campos";
 			mensagem.style.display = "inline-block";
-			window.scrollTo(0, 0);
+			jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
 			return false;
 		}else{
 			//console.log("\nChecando respostas"+id_atividade);			            
@@ -458,7 +460,9 @@
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você deve atingir a média ou fazer as três tentativas para poder ver o gabarito."+texto_mensagem_fim;
             }            
             mensagem_tentativas.innerHTML=texto_mensagem_total;            
-            window.scrollTo(0, 0);
+            jQuery('body,html').animate({
+            	scrollTop: 0
+        	}, 800);
         }
         if(erros==0){       
             //se ainda não tiver enviado as respostas, ou se for dentro do máximio de tentativas,
@@ -468,26 +472,25 @@
             API.registrarRespostaAtividade({
                 "identificador": "uni6_ativ1",//modificar
                 "questoes": [
-                    {
-                        //Onde houver os exercícios de drag and drop precisa pegar o innerHTML
+                    {                        
                         "identificador": "r6_1",                    
                         "gabaritos": [
-                            { "chave": "r6_1_1", "valor": (r6_1=="a" ? "v" : "f")},
-                            { "chave": "r6_1_2", "valor": (r6_1=="b" ? "v" : "f")},
-                            { "chave": "r6_1_3", "valor": (r6_1=="c" ? "v" : "f")},
-                            { "chave": "r6_1_4", "valor": (r6_1=="d" ? "v" : "f")}			
+                            { "chave": "r6_1_1", "valor": (r6_1=="a" ? "f" : "v")},
+                            { "chave": "r6_1_2", "valor": (r6_1=="b" ? "f" : "v")},
+                            { "chave": "r6_1_3", "valor": (r6_1=="c" ? "f" : "v")},
+                            { "chave": "r6_1_4", "valor": (r6_1=="d" ? "f" : "v")}			
                         ]
                     },{                    
                         "identificador": "r6_2",                    
                         "gabaritos": [
-                            { "chave": "r6_2_1", "valor": (r6_2_1)},
-                            { "chave": "r6_2_2", "valor": (r6_2_2)},
-                            { "chave": "r6_2_3", "valor": (r6_2_3)},
-                            { "chave": "r6_2_4", "valor": (r6_2_4)},
-                            { "chave": "r6_2_5", "valor": (r6_2_5)},
-                            { "chave": "r6_2_6", "valor": (r6_2_6)},
-                            { "chave": "r6_2_7", "valor": (r6_2_7)},
-                            { "chave": "r6_2_8", "valor": (r6_2_8)}
+                            { "chave": "r6_2_1", "valor": (r6_2_1==true ? "v" : "f")},
+                            { "chave": "r6_2_2", "valor": (r6_2_2==true ? "v" : "f")},
+                            { "chave": "r6_2_3", "valor": (r6_2_3==true ? "v" : "f")},
+                            { "chave": "r6_2_4", "valor": (r6_2_4==true ? "v" : "f")},
+                            { "chave": "r6_2_5", "valor": (r6_2_5==true ? "v" : "f")},
+                            { "chave": "r6_2_6", "valor": (r6_2_6==true ? "v" : "f")},
+                            { "chave": "r6_2_7", "valor": (r6_2_7==true ? "v" : "f")},
+                            { "chave": "r6_2_8", "valor": (r6_2_8==true ? "v" : "f")}
                         ]
                     },{
                         "identificador": "r6_3",                    
