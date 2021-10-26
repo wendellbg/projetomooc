@@ -1489,7 +1489,7 @@
       });
 
       function verifica_unidades(num_controle){
-        if(num_controle<=5){
+        if(num_controle<=6){
           nome_unidade="mod3_uni"+num_controle;
           console.log("nome_unidade="+nome_unidade);
           API.obterPorcentagemConclusaoUnidade(nome_unidade);        
@@ -1614,11 +1614,11 @@
     //aqui verifica se todas as unidades foram finalizadas. Se sim, exibe a unidade de encerramento.   
     //porcentagem_geral=900;
     console.log("\nPorc. Geral="+(porcentagem_geral/6));  
-    // if((porcentagem_geral/6)>=80){
-    //   let div_encerramento = document.querySelector("#div-encerramento span a");
-    //   div_encerramento.style.display="inline-block";
-    //   API.registrarDadosGenericos("porcentagemGeral",1);
-    // }
+    if((porcentagem_geral/6)>=80){
+       let div_encerramento = document.querySelector("#div-encerramento span a");
+       div_encerramento.style.display="inline-block";
+       API.registrarDadosGenericos("porcentagemGeral",1);
+    }
 
     controle_id_unidade++;
     console.log("Controle="+controle_id_unidade);
