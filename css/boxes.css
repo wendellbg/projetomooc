@@ -793,6 +793,13 @@ h3.texto-central b{
 	border-bottom: 4px solid #000;
 }
 
+.mini-box.yellow{
+	background-color: #fec13b;
+	color: #020e36;
+	border-right: 4px solid #000;
+	border-bottom: 4px solid #000;
+}
+
 .mini-box.red a{
 	font-weight: bolder;
 	color: #020e36;
