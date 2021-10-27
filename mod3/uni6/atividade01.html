@@ -332,7 +332,7 @@
     var id_slide = "mod3/uni6/atividade01.html";//modificar
     var id_atividade = "uni6_ativ1";//modificar
     var revisao_unidade = "uni6_revisao";//modificar
-    var texto_mensagem_fim="<br>Vá para a página inicial do curso.<br><br><a class='botao-mensagem' href='../../sumario.html'>PROGRESSO &#10095;</a><br>";
+    var texto_mensagem_fim="<br>Vá para a página inicial do curso.<br><br><a class='botao-mensagem' href='../sumario.html'>PROGRESSO &#10095;</a><br>";
 
     function verifica_revisao(){
         if(revisao_vista==1){
@@ -529,7 +529,7 @@
             if(revisao_vista==1){
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_revisao_1;
             }else if(quant_respostas>=max_quant_tentativas){
-                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../encerramento/index.html'>PROSSEGUIR &#10095;</a>";
             }else if(nota_atividade==10){
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a nota máxima!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
             }else if(nota_atividade>=6){
