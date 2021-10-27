@@ -925,7 +925,26 @@ Main components
   left: 6%;
 }
 
+/* Mooc5 Uni12 tela 7*/
+.cd-single-point.mooc5-ponto1-uni2-tela7{
+  bottom: 37%;
+  right: 25%;
+}
 
+.cd-single-point.mooc5-ponto2-uni2-tela7{
+  bottom: 23%;
+  left: 27%;
+}
+
+.cd-single-point.mooc5-ponto3-uni2-tela7{
+  top: 2%;
+  right: 23%;
+}
+
+.cd-single-point.mooc5-ponto4-uni2-tela7{
+  top: 25%;
+  left: 15%;
+}
 
 
 .cd-single-point.titulo-bola{
