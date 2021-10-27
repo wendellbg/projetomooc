@@ -328,7 +328,7 @@
 			erros++;
         }else if(r4_2_3==""){
 			erros++;
-		}else if(r4_3==null){
+		}else if(r4_3==""){
 			erros++;
 		}
 
@@ -426,10 +426,10 @@
                     },{                        
                         "identificador": "r4_3",                    
                         "gabaritos": [
-                            { "chave": "r4_3_1", "valor": (r4_3=="a" ? "v" : "f")},
-                            { "chave": "r4_3_2", "valor": (r4_3=="b" ? "v" : "f")},
-                            { "chave": "r4_3_3", "valor": (r4_3=="c" ? "v" : "f")},
-                            { "chave": "r4_3_4", "valor": (r4_3=="d" ? "v" : "f")}							
+                            { "chave": "r4_3_1", "valor": (r4_3=="a" ? "f" : "v")},
+                            { "chave": "r4_3_2", "valor": (r4_3=="b" ? "f" : "v")},
+                            { "chave": "r4_3_3", "valor": (r4_3=="c" ? "f" : "v")},
+                            { "chave": "r4_3_4", "valor": (r4_3=="d" ? "f" : "v")}							
                         ]                    
                     }
                 ]
@@ -458,13 +458,12 @@
             if(revisao_vista==1){
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_revisao_1;
             }else if(quant_respostas>=max_quant_tentativas){
-                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni5/index.html'>PROSSEGUIR &#10095;</a>";
+                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../uni2/index.html'>PROSSEGUIR &#10095;</a>";
             }else if(nota_atividade==10){
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a nota máxima!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
             }else if(nota_atividade>=6){
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_revisao_0+texto_mensagem_fim;
-            }
-            else{
+            }else{
                 texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você deve atingir a média ou fazer as três tentativas para poder ver o gabarito."+texto_mensagem_fim;
             }            
             
