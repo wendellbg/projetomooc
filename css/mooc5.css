@@ -184,12 +184,13 @@ h1, h2, h3, h4, h5, h6 {
 
 
 h3.texto-central{
-	background-color: #2a5caa;
-	background-image: url(../img/padrao/bg_slide_01.jpg);
+	background-color: #020E36;
+	background-image: url(../img/padrao/mooc5/bg_slide_dark.png);
+	background-position: center;
 }
 
 h3.texto-central b{
-	color: #2a5caa;
+	color: white;
 }
 
 .fundo-claro .titulo-video,
