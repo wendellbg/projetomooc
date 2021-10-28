@@ -1,0 +1,494 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Mentoria</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../css/mooc5.css?ver=1.1"/>
+    <link rel="stylesheet" href="../../css/menu.css?ver=1.2"/>    
+    <link rel="stylesheet" href="../../css/boxes.css?ver=1.2"/>    
+    <link rel="stylesheet" href="../../css/w3.css" />
+    
+    <style type="text/css">
+        .grid-notas {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            padding: 10px;
+        }
+
+        .quote-container {
+          margin-top: 50px;
+          position: relative;
+        }
+
+        .nota-amarela {
+          color: #333;
+          position: relative;
+          width: auto;
+          margin: 0 auto;
+          padding: 20px;
+          font-family: Satisfy;
+          font-size: 30px;
+          box-shadow: 0 10px 10px 2px rgba(0,0,0,0.3);
+          background: #eae672;
+          -webkit-transform: rotate(2deg);
+          -moz-transform: rotate(2deg);
+          -o-transform: rotate(2deg);
+          -ms-transform: rotate(2deg);
+          transform: rotate(2deg);
+        }
+
+        .nota-vermelha {
+          color: #333;
+          position: relative;
+          width: auto;
+          margin: 0 auto;
+          padding: 20px;
+          font-family: Satisfy;
+          font-size: 30px;
+          box-shadow: 0 10px 10px 2px rgba(0,0,0,0.3);
+          background: #ea8072;
+          -webkit-transform: rotate(2deg);
+          -moz-transform: rotate(2deg);
+          -o-transform: rotate(2deg);
+          -ms-transform: rotate(2deg);
+          transform: rotate(2deg);
+        }
+
+        .nota-verde {
+          color: #333;
+          position: relative;
+          width: auto;
+          margin: 0 auto;
+          padding: 20px;
+          font-family: Satisfy;
+          font-size: 30px;
+          box-shadow: 0 10px 10px 2px rgba(0,0,0,0.3);
+          background: #86ea72;
+          -webkit-transform: rotate(2deg);
+          -moz-transform: rotate(2deg);
+          -o-transform: rotate(2deg);
+          -ms-transform: rotate(2deg);
+          transform: rotate(2deg);
+        }
+
+        .nota-azul {
+          color: #333;
+          position: relative;
+          width: auto;
+          margin: 0 auto;
+          padding: 20px;
+          font-family: Satisfy;
+          font-size: 30px;
+          box-shadow: 0 10px 10px 2px rgba(0,0,0,0.3);
+          background: #72e6ea;
+          -webkit-transform: rotate(2deg);
+          -moz-transform: rotate(2deg);
+          -o-transform: rotate(2deg);
+          -ms-transform: rotate(2deg);
+          transform: rotate(2deg);
+        }
+
+        .nota-roxo {
+          color: #333;
+          position: relative;
+          width: auto;
+          margin: 0 auto;
+          padding: 20px;
+          font-family: Satisfy;
+          font-size: 30px;
+          box-shadow: 0 10px 10px 2px rgba(0,0,0,0.3);
+          background: #b672ea;
+          -webkit-transform: rotate(2deg);
+          -moz-transform: rotate(2deg);
+          -o-transform: rotate(2deg);
+          -ms-transform: rotate(2deg);
+          transform: rotate(2deg);
+        }
+
+        .nota .author {
+          display: block;
+          margin: 40px 0 0 0;
+          text-align: right;
+        } 
+
+        .pin {
+          background-color: #aaa;
+          display: block;
+          height: 32px;
+          width: 2px;
+          position: absolute;
+          left: 50%;
+          top: -16px;
+          z-index: 1;
+        }
+
+        .pin:after {
+          background-color: #A31;
+          background-image: radial-gradient(25% 25%, circle, hsla(0,0%,100%,.3), hsla(0,0%,0%,.3));
+          border-radius: 50%;
+          box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.1),
+                      inset 3px 3px 3px hsla(0,0%,100%,.2),
+                      inset -3px -3px 3px hsla(0,0%,0%,.2),
+                      23px 20px 3px hsla(0,0%,0%,.15);
+          content: '';
+          height: 12px;
+          left: -5px;
+          position: absolute;
+          top: -10px;
+          width: 12px;
+        }
+
+        .pin:before {
+          background-color: hsla(0,0%,0%,0.1);
+          box-shadow: 0 0 .25em hsla(0,0%,0%,.1);
+          content: '';
+          height: 24px;
+          width: 2px;
+          left: 0;
+          position: absolute;
+          top: 8px;
+          transform: rotate(57.5deg);
+          -moz-transform: rotate(57.5deg);
+          -webkit-transform: rotate(57.5deg);
+          -o-transform: rotate(57.5deg);
+          -ms-transform: rotate(57.5deg);
+          transform-origin: 50% 100%;
+          -moz-transform-origin: 50% 100%;
+          -webkit-transform-origin: 50% 100%;
+          -ms-transform-origin: 50% 100%;
+          -o-transform-origin: 50% 100%;
+        }
+   
+    </style>
+
+    <!-- Botão de Voltar ao Topo -->
+    <script src="../../js/jquery-2.1.1.js"></script>
+    <script src="../../js/bt-topo.js"></script>
+
+    <!-- Funções de acesso à biblioteca do Avamec-->
+    <script src="../../js/funcoes-5.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-SB34EK30YV');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MK4H2FJ');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body class="mooc5">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MK4H2FJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Header -->
+<header id="header">
+    <div class="logo">
+        <a href="../sumario.html">UNIDADE 4</a>
+        <h3>Ideação e planejamento da intervenção</h3>
+    </div>
+</header>
+
+<!-- Main -->
+<section id="main">
+    <div class="inner">
+        <!-- One -->
+        <section id="one" class="wrapper style1">
+            <div class="botao-sumario">
+                <a class="link-progresso" href="../sumario.html"><i class="fas fa-tasks"></i> PROGRESSO</a>
+            </div>
+
+            <header class="special">
+                <div class="entire-menu">
+                    <div class="menu-tit">
+                        <div class="menu-tit-col1">
+                            <h2>Seleção de atividades e recursos de orientação</h2>
+                        </div>
+                        <div class="menu-tit-col2">
+                            <input type="checkbox" id="change-hamburguer" />
+                            <a class="hamburguer" href="#">
+                                <span></span>
+                                <label for="change-hamburguer"></label>
+                            </a>
+                            <div class="menu">
+                                <a href="../sumario.html" class='titulo-menu'>UNIDADE 4</a>
+                                <a href="tela01.html" class='link-menu-atual'>4.01 - Apresentação</a>
+                                <a href="tela02.html">4.02 - Etapa de Ideação</a>
+                                <a href="tela03.html">4.03 - Ações de orientação profissional</a>
+                                <a href="tela04.html">4.04 - Design de projeto & Design de carreira</a>
+                                <a href="tela05.html">4.05 - Criando ações de orientação</a>
+                                <a href="tela06.html">4.06 - Seleção de atividades e recursos de orientação</a>
+                                <a href="tela07.html">4.07 - Articulando as ações no projeto</a>
+                                <a href="tela08.html">4.08 - Escrevendo o Projeto de intervenção</a>
+                                <a href="tela09.html">4.09 - Design do seu projeto (momento 3 de 4)</a>
+                                <a href="tela10.html">4.10 - Fechamento</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Conteúdo -->            
+            <div class="content no-top">
+                <p>Você é livre para criar as ações do seu projeto. Mas nossa liberdade é sempre limitada. Somos livres dentro de nossos próprios limites. Criamos a partir do que podemos imaginar com o repertório que trazemos. Então, é fundamental alimentar a imaginação, ampliar o repertório!</p>
+                <p>Para ajudar você nessa tarefa, realizamos uma <b>curadoria de ações de orientação profissional</b> que podem ser selecionadas e adaptadas para o seu projeto de intervenção. São modelos de atividades e recursos voltados a intervenções de Educação para a Carreira, baseadas no livro didático Les parcours de l’orientation (Paris, 2019) e adaptadas pelos docentes deste curso para o contexto do ensino brasileiro.</p>
+
+                <h3 style="text-align: center;">Curadoria de ações de orientação profissional</h3>
+
+                <div class="grid-notas">
+                    <div class="quote-container">
+                        <i class="pin"></i>
+                        <blockquote class="nota-amarela">
+                            Post-it amarelo
+                        </blockquote>                    
+                    </div>
+                    <div class="quote-container">
+                        <i class="pin"></i>
+                        <blockquote class="nota-vermelha">
+                            Post-it vermelho
+                        </blockquote>                    
+                    </div>
+                    <div class="quote-container">
+                        <i class="pin"></i>
+                        <blockquote class="nota-verde">
+                            Post-it verde
+                        </blockquote>                    
+                    </div>
+                    <div class="quote-container">
+                        <i class="pin"></i>
+                        <blockquote class="nota-azul">
+                            Post-it azul
+                        </blockquote>                    
+                    </div>
+                    <div class="quote-container">
+                        <i class="pin"></i>
+                        <blockquote class="nota-roxo">
+                            Post-it roxo
+                        </blockquote>                    
+                    </div>
+                    <div class="quote-container">
+                        <i class="pin"></i>
+                        <blockquote class="nota-amarela">
+                            Post-it amarelo
+                        </blockquote>                    
+                    </div>
+                    <div class="quote-container">
+                        <i class="pin"></i>
+                        <blockquote class="nota-vermelha">
+                            Post-it vermelho
+                        </blockquote>                    
+                    </div>
+                    <div class="quote-container">
+                        <i class="pin"></i>
+                        <blockquote class="nota-verde">
+                            Post-it verde
+                        </blockquote>                    
+                    </div>
+                    <div class="quote-container">
+                        <i class="pin"></i>
+                        <blockquote class="nota-azul">
+                            Post-it azul
+                        </blockquote>                    
+                    </div>
+                    <div class="quote-container">
+                        <i class="pin"></i>
+                        <blockquote class="nota-roxo">
+                            Post-it roxo
+                        </blockquote>                    
+                    </div>                    
+                </div>
+                <br>
+
+                <p>Além dos modelos indicados, há outros recursos e iniciativas criados por outras instituições e educadores que podem inspirar você no desenho do seu projeto de intervenção. Confira nossas recomendações:</p>
+
+                <div class="menu-opcoes">
+                    <a  id="hide1" href="#hide1" class="hide">Guia tô no rumo + </a>
+                    <a  id="show1" href="#show1" class="show">Guia tô no rumo -</a>
+                    <div class="details">
+                        <p>Guia voltado a educadores, com textos, materiais de apoio e 23 sequências didáticas. Inclui desde júri simulado até jogos, como o “Baralho de trajetórias profissionais” (p. 107). Foi criado a partir de pesquisa em instituições de Ensino Médio de São Paulo, com a colaboração de estudantes. Iniciativa da organização Ação Educativa <a href="https://acaoeducativa.org.br/wp-content/uploads/2016/10/Guia-To%CC%82-no-Rumo.pdf" target="_blank">[[ https://acaoeducativa.org.br/wp-content/uploads/2016/10/Guia-To%CC%82-no-Rumo.pdf ]]</a>.</p>
+                    </div>
+                </div>
+                <div class="menu-opcoes">
+                    <a id="hide2" href="#hide2" class="hide">EduLivre +</a>
+                    <a id="show2" href="#show2" class="show">Edulivre -</a>
+                    <div class="details">
+                        <p>Plataforma online voltada a jovens. Conecta trilhas de conhecimentos com oportunidades de desenvolvimento profissional (cursos técnicos, estágios, etc.), buscando ampliar as oportunidades para os jovens que buscam ingressar no mundo do trabalho. Iniciativa do SESI, com apoio da UNESCO. <a href="https://www.edulivre.org.br/quem-somos" target="_blank">[[ https://www.edulivre.org.br/quem-somos  ]]</a></p>
+                    </div>
+                </div>
+                <div class="menu-opcoes">
+                    <a id="hide3" href="#hide3" class="hide">Design the Future +</a>
+                    <a id="show3" href="#show3" class="show">Design the Future -</a>
+                    <div class="details">
+                        <p>Plataforma online para ajudar jovens na autodescoberta e escolha de carreira. Inclui desde vídeos com depoimento de profissionais até atividades de autoconhecimento. Iniciativa da Faculdade de Psicologia da Universidade de Lisboa. <a href="https://www.designthefuture.pt/" target="_blank">[[ https://www.designthefuture.pt/]]</a></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Conteúdo Footer -->
+            <div class="content footer">
+                <div class='navegacao'>
+                    <div class="bt-topo">
+                        <a href="#"><i class="fas fa-angle-up"></i></a>
+                    </div>
+                    <div><button class="bt-avanca" type="button"><a href="tela07.html">PROSSEGUIR &#10095;</a></button></div>
+                    <div class='botoes-navegacao'>
+                        <a href="tela05.html"><button class="bt-navegacao" type="button"><</button>
+
+                        <a href="tela01.html"><input type="radio" name="radio"><label for="radio"></label></a>
+                        <a href="tela02.html"><input type="radio" name="radio"><label for="radio"></label></a>
+                        <a href="tela03.html"><input type="radio" name="radio"><label for="radio"></label></a>
+                        <a href="tela04.html"><input type="radio" name="radio"><label for="radio"></label></a>
+                        <a href="tela05.html"><input type="radio" name="radio"><label for="radio"></label></a>
+                        <a href="tela06.html"><input type="radio" checked name="radio"><label for="radio"></label></a>
+                        <a href="tela07.html"><input type="radio" name="radio"><label for="radio"></label></a>
+                        <a href="tela08.html"><input type="radio" name="radio"><label for="radio"></label></a>
+                        <a href="tela09.html"><input type="radio" name="radio"><label for="radio"></label></a>
+                        <a href="tela10.html"><input type="radio" name="radio"><label for="radio"></label></a>
+
+                        <a href="tela07.html"><button class="bt-navegacao" type="button">></button></a>
+                    </div>
+                    <span class="legenda">6 de 10</span>
+                </div>
+
+                <!--Rodapé-->
+                <hr/>
+                <div class="row rodape">
+                    <div class="6u 12u$(small)">
+                        <p></p>
+                        <img src="../../img/padrao/logo_mentoria.png" alt="IFSC">
+                    </div>
+                    <div class="3u 12u$(small)">
+                        <p>Realização:</p>
+                        <img src="../../img/padrao/logo_mec.png" alt="IFSC">
+                        <p class="small"><b>Secretaria de Educação Profissional e Tecnológica</b></p>
+                    </div>
+                    <div class="3u 12u$(small)">
+                        <p>Produção:</p>
+                        <img src="../../img/padrao/ifsc.png" alt="IFSC">
+                        <img src="../../img/padrao/ifes.png" alt="IFES">
+                    </div>
+                </div><!--Rodapé-->
+
+            </div>
+
+        </section>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+</footer>
+
+<div class="icone-botao-libras">
+    <button onclick="document.getElementById('id01').style.display='block'" type="button" style="border:2px solid #fff !important; border-radius: 8px;"><img src="../../img/padrao/libras.png"></button>                        
+
+    <div id="id01" class="w3-modal">
+      <div class="w3-modal-content">
+        <div class="w3-container">
+          <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+          <iframe id="ytplayer" type="text/html" width="300" height="500" src="https://www.youtube.com/embed/?autoplay=1&origin=http://example.com" frameborder="0"/></iframe>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
+<script>
+    console.clear(screen);
+
+    var API = new BridgeRestApi();
+    var id_unidade = "mod3_uni1";
+    var id_slide = "uni1/tela01.html";
+    var progresso = 14;
+    var progressoSalvo;
+    var porcentagem = "porcentagemUni1";
+
+    //Obtendo dados curso
+    window.addEventListener('load', function(){
+        API.obterDadosCurso();
+    })
+
+    window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
+    function resultadoObterDadosCurso(evento){
+        console.log(evento.detail);
+        //antes de registrar a porcentagem, verifica a porcentagem atual:
+        API.obterDadosGenericos(porcentagem);
+    }
+
+
+    //Quando obtém a porcentagem da unidade em questão, executa esta função
+    window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
+    function resultadoObtemDadosGenericos (evento){
+        console.log(evento.detail);
+
+        //testando se o status é 200, unidade já iniciada
+        if(evento.detail["status"]==200){
+            var i=0;
+            var cont = 0;
+            //O evento retorna um vetor. É preciso pesquisar em qual posição está a porcentagem da unidade atual
+            while(i==0){
+                if(evento.detail["data"][cont]["chave"]==porcentagem){
+                    console.log("achou na posição "+cont);
+                    console.log(evento.detail["data"][cont]["chave"]);
+                    i=1;
+                }else{
+                    console.log("não encontrou na posição "+cont);
+                    console.log(evento.detail["data"][cont]["chave"]);
+                    cont=cont+1;
+                    if(cont==10){
+                        i=1;
+                    }
+                }
+
+            }
+
+            //depois que encontrar a posição certa, verifica o progresso atual
+            progressoSalvo = evento.detail["data"][cont]["valor"];
+            console.log("Valor de Porcentagem atual: "+progressoSalvo);
+
+            if(progressoSalvo < progresso){
+                //registrando a porcentagem da Unidade em questão
+                API.registrarDadosGenericos(porcentagem,progresso);
+                console.log('Registrando nova porcentagem: '+progresso);
+            }else{
+                //Se o cursista estiver revendo a tela, o progresso Salvo será maior, então não altera nada.
+                console.log("Porcentagem não alterada.");
+            }
+
+        }else if(evento.detail["status"]==412){
+            //se for status 400, inicia a chave da porcentagem da unidade em questão
+            console.log("Inicializando a porcentagem da unidade");
+            API.registrarDadosGenericos(porcentagem,14);
+        }
+    };
+
+    window.addEventListener('evObtemRegistraDadosGenericos', resultadoRegistrarDadosGenericos, false);
+    function resultadoRegistrarDadosGenericos (evento){
+        console.log("Verificando porcentagem registrada");
+        console.log(evento.detail);
+    };
+
+</script>
+<!-- Carrossel -->
+<script>
+    $(".option").click(function(){
+        $(".option").removeClass("active");
+        $(this).addClass("active");
+
+    });
+</script>
+</body>
+</html>
