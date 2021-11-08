@@ -1,0 +1,299 @@
+[
+	{		
+		"identificador": "mod4_uni0",
+		"nome": "Boas-Vindas",
+		"descricao": "",
+		"permitePorcentagem": "true",
+		"topicos": [{
+			"identificador": "uni0_tela01",
+			"nome": "Mensagem de boas-Vindas"
+		},{
+			"identificador": "uni0_tela02",
+			"nome": "Boas-Vindas"			
+		}],
+		"atividades": [
+			{
+				"identificador": "uni0_ativ1",
+				"nomeAtividade": "Questionário Inicial",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "INTEGRAL",
+						"identificador": "r0_1",
+						"enunciado": "Você é...",
+						"gabaritos": [
+							{ "chave": "r0_1_a", "valor": "a", "alternativa": "Professor/gestor do Ensino Fundamental da rede pública." },
+							{ "chave": "r0_1_b", "valor": "b", "alternativa": "Professor/gestor do Ensino Fundamental da rede privada." },
+							{ "chave": "r0_1_c", "valor": "c", "alternativa": "Professor/gestor do Ensino Médio da rede pública." },
+							{ "chave": "r0_1_d", "valor": "d", "alternativa": "Professor/gestor do Ensino Médio da rede privada." },
+							{ "chave": "r0_1_e", "valor": "e", "alternativa": "Outro profissional da Educação." },
+							{ "chave": "r0_1_f", "valor": "f", "alternativa": "Responsável por aluno/a da Educação Básica." },
+							{ "chave": "r0_1_g", "valor": "g", "alternativa": "Aluno/a da Educação Básica." }							
+						]
+					},
+					{
+						"tipoQuestaoString": "INTEGRAL",
+						"identificador": "r0_2",
+						"enunciado": "Qual é sua principal motivação para a realização do curso?",
+						"gabaritos": [							
+							{ "chave": "r0_2_a", "valor": "a", "alternativa": "Aquisição de conhecimentos." },
+							{ "chave": "r0_2_b", "valor": "b", "alternativa": "Solicitação do gestor da escola." },
+							{ "chave": "r0_2_c", "valor": "c", "alternativa": "Necessidade para atuação profissional." },
+							{ "chave": "r0_2_d", "valor": "d", "alternativa": "Ascensão funcional." },
+							{ "chave": "r0_2_e", "valor": "e", "alternativa": "Outros." }							
+						]
+					},
+					{
+						"tipoQuestaoString": "INTEGRAL",
+						"identificador": "r0_3",	
+						"enunciado": "O que você pretende?",
+						"gabaritos": [							
+							{ "chave": "r0_3_a", "valor": "a", "alternativa": "Concluir o curso e receber o certificado." },
+							{ "chave": "r0_3_b", "valor": "b", "alternativa": "Começar a fazer o curso, talvez concluir." },							
+							{ "chave": "r0_3_c", "valor": "c", "alternativa": "Apenas dar uma olhada no curso, por curiosidade." }							
+						]
+					},
+					{
+						"tipoQuestaoString": "INTEGRAL",
+						"identificador": "r0_4",
+						"enunciado": "Quais competências você gostaria de desenvolver neste curso?",
+						"gabaritos": [							
+							{ "chave": "r0_4_a", "valor": "a", "alternativa": "Conhecer as normas e procedimentos relativos ao Novo Ensino Médio em direção à escolha de itinerários formativos." },
+							{ "chave": "r0_4_b", "valor": "b", "alternativa": "Conhecer melhor o itinerário formativo de Formação Técnica e Profissional." },
+							{ "chave": "r0_4_c", "valor": "c", "alternativa": "Compreender melhor os processos de orientação (ou mentoria) educacional e profissional." },
+							{ "chave": "r0_4_d", "valor": "d", "alternativa": "Conhecer os tipos de ações que podem ser realizados para ajudar os estudantes a escolherem seus itinerários." },
+							{ "chave": "r0_4_e", "valor": "e", "alternativa": "Sintonizar os conteúdos de suas componentes curriculares aos itinerários formativos e ao mundo do trabalho." }							
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"nome": "Minha escolha: ser professor!",
+		"descricao": "",
+		"permitePorcentagem": "true",
+		"topicos": [{
+			"identificador": "uni1_tela01",
+			"nome": "Apresentação"
+			},{
+				"identificador": "uni1_tela02",
+				"nome": "Processos de escolha"
+			},{
+				"identificador": "uni1_tela03",
+				"nome": "Compreendendo o processo de escolha"
+			},{
+				"identificador": "uni1_tela04",
+				"nome": "Reconhecendo o seu processo"
+			},{
+				"identificador": "uni1_tela05",
+				"nome": "Trajetória de escolha da profissão docente"
+			},{
+				"identificador": "uni1_tela06",
+				"nome": "Minha história de carreira - MHC"
+			},{
+				"identificador": "uni1_tela07",
+				"nome": "Linha da Vida"
+			},{
+				"identificador": "uni1_tela08",
+				"nome": "Concluindo"
+			}
+		],
+		"atividades": [
+			{
+				"identificador": "uni1_ativ1",
+				"nomeAtividade": "Avaliação - Unidade 1",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r1_1",
+						"enunciado": "Selecione os conceitos a seguir de acordo com as definições correspondentes:",
+						"gabaritos": [
+							{ "chave": "r1_1_1", "valor": "Técnica", "alternativa": "a) É o fundamento do trabalho e um dos mais importantes traços que identificam nossa humanidade. " },
+							{ "chave": "r1_1_2", "valor": "Trabalho", "alternativa": "b) Exercício social da técnica com todas as dimensões associadas ao ato técnico: éticas, estéticas, ambientais, econômicas, identitárias, culturais." }							
+						]
+					},
+					{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r1_2",
+						"enunciado": "Insira os  elementos que compõem a formação do jovem:",
+						"gabaritos": [
+							{ "chave": "r1_2_1", "valor": "Partilha de Saberes", "alternativa": "a) Consolidada pela cultura, deve possibilitar a cada pessoa construir sua existência." },
+							{ "chave": "r1_2_2", "valor": "Intervenção consciente", "alternativa": "b) Construção da capacidade de intervir conscientemente no mundo para produzir a existência." },
+							{ "chave": "r1_2_3", "valor": "Construção da Existência", "alternativa": "c) Composto de vários elementos: autonomia, emancipação, participação, inserção social, etc." }
+						]
+					},
+					{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r1_3",
+						"enunciado": "São reconhecidos como desafios da Educação Profissional (assinale todas as alternativas corretas):",
+						"gabaritos": [
+							{ "chave": "r1_3_1", "valor": "f", "alternativa": "a) Reduzir as matrículas no ensino propedêutico." },
+							{ "chave": "r1_3_2", "valor": "v", "alternativa": "b) Ampliar o número de matrículas nos cursos técnicos e de qualificação." },
+							{ "chave": "r1_3_3", "valor": "v", "alternativa": "c) Oferecer cursos por todo o território nacional." },
+							{ "chave": "r1_3_4", "valor": "v", "alternativa": "d) Respeitar as demandas formativas locais na oferta de cursos." }
+						]
+					},
+					{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r1_4",
+						"enunciado": "Assinale as afirmativas a seguir como verdadeiras ou falsas:",
+						"gabaritos": [
+							{ "chave": "r1_4_1", "valor": "f", "alternativa": "a) A maioria dos egressos do Ensino Médio vai para a faculdade." },
+							{ "chave": "r1_4_2", "valor": "v", "alternativa": "b) Mesmo após concluir o Ensino Médio em qualquer itinerário, é possível retomar os estudos em um curso técnico subsequente." },
+							{ "chave": "r1_4_3", "valor": "v", "alternativa": "c) Cada vez que a Educação Profissional amplia sua oferta, mais pessoas têm oportunidade de ampliar sua capacidade laboral." },
+							{ "chave": "r1_4_4", "valor": "v", "alternativa": "d) A principal consequência da reconfiguração do Ensino Médio é permitir aos jovens a possibilidade de uma escolha para sua formação." }
+						]
+					}
+				]
+			}
+		]	
+	},{		
+		"identificador": "mod4_uni2",
+		"nome": "As competências do mentor de carreira",
+		"descricao": "",
+		"permitePorcentagem": "true",
+		"topicos": [{
+			"identificador": "uni2_tela01",
+			"nome": "Apresentação"
+		},{			
+			"identificador": "uni2_tela02",
+			"nome": "O que é preciso para ser um mentor de carreira para os meus alunos?"
+		},{
+			"identificador": "uni2_tela03",
+			"nome": "Competências do professor mentor"
+		},{
+			"identificador": "uni2_tela04",
+			"nome": "Redes de apoio para intervenção na carreira"
+		},{
+			"identificador": "uni2_tela05",
+			"nome": "Redes de apoio para intervenção na carreira"
+		},{
+			"identificador": "uni2_tela06",
+			"nome": "Por onde começar?"
+		},{
+			"identificador": "uni2_tela07",
+			"nome": "Concluindo"		
+		}],
+		"atividades": [
+			{
+				"identificador": "uni2_ativ1",
+				"nomeAtividade": "Avaliação - Unidade 2 - Questões Objetivas",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r2_1",
+						"enunciado": "Pensar uma escola que acolha as diversidades e que conceba os jovens como interlocutores sobre currículo, ensino e aprendizagem traz desdobramentos importantes para os alunos. Associe cada desdobramento ao seu respectivo impacto para os estudantes:",
+						"gabaritos": [
+							{ "chave": "r2_1_1", "valor": "Possibilidade de escolha", "alternativa": "a) No início do Ensino Médio, deverá escolher o itinerário formativo de acordo com suas capacidades, interesses futuros, afinidades ou potencialidades." },
+							{ "chave": "r2_1_2", "valor": "Conjunto comum de saberes", "alternativa": "b) É a Base Nacional Comum Curricular - BNCC, que tem carga horária máxima de 1800 horas." },
+							{ "chave": "r2_1_3", "valor": "Itinerários formativos", "alternativa": "c) Possibilidade de inserção laboral do aluno, a partir de saberes sintonizados às demandas sociais e econômicas." }	
+						]
+					},{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r2_2",
+						"enunciado": "Selecione, para as formações, os itinerários formativos possíveis:",
+						"gabaritos": [
+							{ "chave": "r2_2_1", "valor": "Ciências Humanas e Sociais Aplicadas", "alternativa": "Administração" },																	
+							{ "chave": "r2_2_2", "valor": "Matemática e suas tecnologias", "alternativa": "Análise de Investimentos" },																	
+							{ "chave": "r2_2_3", "valor": "Ciências da Natureza e suas tecnologias", "alternativa": "Biologia" },																	
+							{ "chave": "r2_2_4", "valor": "Formação Técnica e Profissional", "alternativa": "Controle e Processos Industriais" },																	
+							{ "chave": "r2_2_5", "valor": "Linguagem e suas tecnologias", "alternativa": "Educação Física" },																	
+							{ "chave": "r2_2_6", "valor": "Ciências da Natureza e suas tecnologias", "alternativa": "Física" },
+							{ "chave": "r2_2_7", "valor": "Ciências Humanas e Sociais Aplicadas", "alternativa": "Geografia" },
+							{ "chave": "r2_2_8", "valor": "Matemática e suas tecnologias", "alternativa": "Informática" },																	
+							{ "chave": "r2_2_9", "valor": "Linguagem e suas tecnologias", "alternativa": "Língua Portuguesa" },																	
+							{ "chave": "r2_2_10", "valor": "Formação Técnica e Profissional", "alternativa": "Saúde" }
+						]
+					}
+				]
+			},{					
+				"identificador": "uni2_ativ3",
+				"nomeAtividade": "Avaliação - Unidade 2 - Montagem de Itinerário Formativo",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "MODERADA",
+						"identificador": "r2_3",
+						"tipoEnvio": "TEXTO",
+						"enunciado": "Um dos ganhos do Ensino Médio é o desenvolvimento da autonomia do estudante para compor seu itinerário formativo. Considerando Ensino Médio com a formação profissional em Estatística Aplicada, crie um itinerário formativo com diferentes componentes curriculares. Selecione os componentes e defina sua carga horária levando em conta o limite de 2.400 horas*. Escolha uma opção de componente na coluna da esquerda e insira a carga horária correspondente na caixa de texto na coluna da direita. As opções são: Atividade de Extensão, Disciplinas, Estágio Curricular, Projeto de Pesquisa, Projeto Integrador."
+					}
+				]
+			},{
+				"identificador": "uni2_ativ4",
+				"nomeAtividade": "Avaliação - Unidade 2 - Questão Discursiva",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "MODERADA",					
+						"identificador": "r2_4",
+						"tipoEnvio": "TEXTO",
+						"enunciado": "Como o Novo Ensino Médio poderá ampliar as opções de atuação do aluno egresso no mundo do trabalho?"
+					}
+				]				
+			}
+		]
+	},{		
+		"identificador": "mod4_uni3",
+		"nome": "Intervenções de desenvolvimento de carreira na escola",
+		"descricao": "",
+		"permitePorcentagem": "true",
+		"topicos": [{
+			"identificador": "uni3_tela01",
+			"nome": "Apresentação"
+		},{
+			"identificador": "uni3_tela02",
+			"nome": "Processo de mentoria"
+		},{
+			"identificador": "uni3_tela03",
+			"nome": "Possibilidades de intervenções"
+		},{
+			"identificador": "uni3_tela04",
+			"nome": "Autoconhecimento e autogestão"
+		},{
+			"identificador": "uni3_tela05",
+			"nome": "Exploração educacional e ocupacional"
+		},{
+			"identificador": "uni3_tela06",
+			"nome": "Planejamento e promoção de competências"
+		},{
+			"identificador": "uni3_tela07",
+			"nome": "Condução das intervenções"
+		},{
+			"identificador": "uni3_tela08",
+			"nome": "Concluindo"
+		}]
+	},{		
+		"identificador": "mod4_uni4",
+		"nome": "Experiências de orientação educacional e profissional no contexto escolar",
+		"descricao": "",
+		"permitePorcentagem": "true",
+		"topicos": [{
+			"identificador": "uni4_tela01",
+			"nome": "Apresentação"
+		},{
+			"identificador": "uni4_tela02",
+			"nome": "Análise de intervenções em desenvolvimento de carreira"
+		},{
+			"identificador": "uni4_tela03",
+			"nome": "Benefícios de uma análise de intervenções"
+		},{
+			"identificador": "uni4_tela04",
+			"nome": "Análise de uma intervenção"
+		},{
+			"identificador": "uni4_tela05",
+			"nome": "Concluindo"
+		}],
+		"atividades": [
+			{
+				"identificador": "uni4_ativ1",
+				"nomeAtividade": "Avaliação - Unidade 4",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "MODERADA",					
+						"identificador": "r4_1",
+						"tipoEnvio": "TEXTO",
+						"enunciado": "Elaboração de uma proposta para o itinerário formativo \"Formação Técnica e Profissional\""
+					}
+				]				
+			}
+		]
+	}
+]

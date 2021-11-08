@@ -46,7 +46,7 @@ html{
     
 }
 
-.enunciado-questao{
+.enunciado-questao, .enunciado-questao p{
     text-decoration: none   ;
     /* padding-bottom:1em;     */
     font-weight: bold;
@@ -54,7 +54,7 @@ html{
     margin-right: 2%;    
 }
 
-.enunciado-questao p, .texto-resposta p{
+.texto-resposta p{
     width: 95%;
     margin-bottom: 10px;
     margin-top: 20px;    
