@@ -1587,7 +1587,7 @@
           porcentagem_geral+=porcentagem;         
           break;
 
-        case "mod3_uni5":
+          case "mod3_uni5":
           console.log("Unidade 5 tem "+(porcentagem)+"% concluída");
           progresso = document.getElementById("progresso-uni5");
           circulo = document.getElementById("circulo-uni5");
@@ -1613,11 +1613,11 @@
     //aqui verifica se todas as unidades foram finalizadas. Se sim, exibe a unidade de encerramento.   
     //porcentagem_geral=900;
     console.log("\nPorc. Geral="+(porcentagem_geral/6));  
-    // if((porcentagem_geral/6)>=80){
-    //   let div_encerramento = document.querySelector("#div-encerramento span a");
-    //   div_encerramento.style.display="inline-block";
-    //   API.registrarDadosGenericos("porcentagemGeral",1);
-    // }
+     if((porcentagem_geral/6)>=80){
+       let div_encerramento = document.querySelector("#div-encerramento span a");
+       div_encerramento.style.display="inline-block";
+       API.registrarDadosGenericos("porcentagemGeral",1);
+    }
 
     controle_id_unidade++;
     console.log("Controle="+controle_id_unidade);
