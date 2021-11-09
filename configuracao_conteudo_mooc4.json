@@ -104,44 +104,14 @@
 				"nomeAtividade": "Avaliação - Unidade 1",				
 				"questoes": [
 					{
-						"tipoQuestaoString": "PROPORCIONAL",
+						"tipoQuestaoString": "INTEGRAL",
 						"identificador": "r1_1",
-						"enunciado": "Selecione os conceitos a seguir de acordo com as definições correspondentes:",
+						"enunciado": "Para que o indivíduo compreenda o seu processo de escolha de carreira é necessário considerar alguns pontos. Assinale, dentre as opções a seguir, a que não corresponde ao processo de escolha:",
 						"gabaritos": [
-							{ "chave": "r1_1_1", "valor": "Técnica", "alternativa": "a) É o fundamento do trabalho e um dos mais importantes traços que identificam nossa humanidade. " },
-							{ "chave": "r1_1_2", "valor": "Trabalho", "alternativa": "b) Exercício social da técnica com todas as dimensões associadas ao ato técnico: éticas, estéticas, ambientais, econômicas, identitárias, culturais." }							
-						]
-					},
-					{
-						"tipoQuestaoString": "PROPORCIONAL",
-						"identificador": "r1_2",
-						"enunciado": "Insira os  elementos que compõem a formação do jovem:",
-						"gabaritos": [
-							{ "chave": "r1_2_1", "valor": "Partilha de Saberes", "alternativa": "a) Consolidada pela cultura, deve possibilitar a cada pessoa construir sua existência." },
-							{ "chave": "r1_2_2", "valor": "Intervenção consciente", "alternativa": "b) Construção da capacidade de intervir conscientemente no mundo para produzir a existência." },
-							{ "chave": "r1_2_3", "valor": "Construção da Existência", "alternativa": "c) Composto de vários elementos: autonomia, emancipação, participação, inserção social, etc." }
-						]
-					},
-					{
-						"tipoQuestaoString": "PROPORCIONAL",
-						"identificador": "r1_3",
-						"enunciado": "São reconhecidos como desafios da Educação Profissional (assinale todas as alternativas corretas):",
-						"gabaritos": [
-							{ "chave": "r1_3_1", "valor": "f", "alternativa": "a) Reduzir as matrículas no ensino propedêutico." },
-							{ "chave": "r1_3_2", "valor": "v", "alternativa": "b) Ampliar o número de matrículas nos cursos técnicos e de qualificação." },
-							{ "chave": "r1_3_3", "valor": "v", "alternativa": "c) Oferecer cursos por todo o território nacional." },
-							{ "chave": "r1_3_4", "valor": "v", "alternativa": "d) Respeitar as demandas formativas locais na oferta de cursos." }
-						]
-					},
-					{
-						"tipoQuestaoString": "PROPORCIONAL",
-						"identificador": "r1_4",
-						"enunciado": "Assinale as afirmativas a seguir como verdadeiras ou falsas:",
-						"gabaritos": [
-							{ "chave": "r1_4_1", "valor": "f", "alternativa": "a) A maioria dos egressos do Ensino Médio vai para a faculdade." },
-							{ "chave": "r1_4_2", "valor": "v", "alternativa": "b) Mesmo após concluir o Ensino Médio em qualquer itinerário, é possível retomar os estudos em um curso técnico subsequente." },
-							{ "chave": "r1_4_3", "valor": "v", "alternativa": "c) Cada vez que a Educação Profissional amplia sua oferta, mais pessoas têm oportunidade de ampliar sua capacidade laboral." },
-							{ "chave": "r1_4_4", "valor": "v", "alternativa": "d) A principal consequência da reconfiguração do Ensino Médio é permitir aos jovens a possibilidade de uma escolha para sua formação." }
+							{ "chave": "r1_1_1", "valor": "f", "alternativa": "a) Ampliar o meu autoconhecimento e conhecimento do mundo do trabalho de forma geral;" },
+							{ "chave": "r1_1_2", "valor": "f", "alternativa": "b) Compreender a formação dos meus interesses e suas influências;" },
+							{ "chave": "r1_1_3", "valor": "f", "alternativa": "c) Ter claro o sentido que atribuo às minhas decisões e experiências escolares/profissionais;" },
+							{ "chave": "r1_1_4", "valor": "v", "alternativa": "d) Comunicar para professores, pais e comunidade escolar a opção de carreira escolhida." }						
 						]
 					}
 				]
@@ -180,54 +150,50 @@
 				"nomeAtividade": "Avaliação - Unidade 2 - Questões Objetivas",				
 				"questoes": [
 					{
-						"tipoQuestaoString": "PROPORCIONAL",
+						"tipoQuestaoString": "INTEGRAL",
 						"identificador": "r2_1",
-						"enunciado": "Pensar uma escola que acolha as diversidades e que conceba os jovens como interlocutores sobre currículo, ensino e aprendizagem traz desdobramentos importantes para os alunos. Associe cada desdobramento ao seu respectivo impacto para os estudantes:",
+						"enunciado": "Sobre as competências para ser um mentor de carreira para os seus alunos, assinale a resposta que não se adequa ao que foi abordado no curso:",
 						"gabaritos": [
-							{ "chave": "r2_1_1", "valor": "Possibilidade de escolha", "alternativa": "a) No início do Ensino Médio, deverá escolher o itinerário formativo de acordo com suas capacidades, interesses futuros, afinidades ou potencialidades." },
-							{ "chave": "r2_1_2", "valor": "Conjunto comum de saberes", "alternativa": "b) É a Base Nacional Comum Curricular - BNCC, que tem carga horária máxima de 1800 horas." },
-							{ "chave": "r2_1_3", "valor": "Itinerários formativos", "alternativa": "c) Possibilidade de inserção laboral do aluno, a partir de saberes sintonizados às demandas sociais e econômicas." }	
+							{ "chave": "r2_1_1", "valor": "f", "alternativa": "a) O docente irá utilizar o seu tempo previsto de trabalho para estar instrumentalizado para escolher/criar atividades que sejam adequadas ao propósito da função de mentor;" },
+							{ "chave": "r2_1_2", "valor": "v", "alternativa": "b) O professor pode substituir o orientador educacional, funcionando como multiplicador e facilitador das reflexões que auxiliam na aquisição de competências de autoconhecimento;" },
+							{ "chave": "r2_1_3", "valor": "f", "alternativa": "c) A função de mentor não implica que o professor precise necessariamente separar um tempo específico fora da sua disciplina ou horário de trabalho para exercer essas atividades;" },
+							{ "chave": "r2_1_4", "valor": "f", "alternativa": "d) O papel de mentor também é exercido pela forma mais refletida e intencional com que o professor propõe as discussões, expressa opiniões e apresenta os seus conteúdos;" }	
 						]
 					},{
 						"tipoQuestaoString": "PROPORCIONAL",
 						"identificador": "r2_2",
-						"enunciado": "Selecione, para as formações, os itinerários formativos possíveis:",
+						"enunciado": "Na unidade 2 abordamos sobre as competências para ser um professor mentor de carreira que são divididas entre formação teórica, formação técnica e desenvolvimento pessoal e ético. Dentre as competências abaixo, escolha o grupo de competência a que pertence:",
 						"gabaritos": [
-							{ "chave": "r2_2_1", "valor": "Ciências Humanas e Sociais Aplicadas", "alternativa": "Administração" },																	
-							{ "chave": "r2_2_2", "valor": "Matemática e suas tecnologias", "alternativa": "Análise de Investimentos" },																	
-							{ "chave": "r2_2_3", "valor": "Ciências da Natureza e suas tecnologias", "alternativa": "Biologia" },																	
-							{ "chave": "r2_2_4", "valor": "Formação Técnica e Profissional", "alternativa": "Controle e Processos Industriais" },																	
-							{ "chave": "r2_2_5", "valor": "Linguagem e suas tecnologias", "alternativa": "Educação Física" },																	
-							{ "chave": "r2_2_6", "valor": "Ciências da Natureza e suas tecnologias", "alternativa": "Física" },
-							{ "chave": "r2_2_7", "valor": "Ciências Humanas e Sociais Aplicadas", "alternativa": "Geografia" },
-							{ "chave": "r2_2_8", "valor": "Matemática e suas tecnologias", "alternativa": "Informática" },																	
-							{ "chave": "r2_2_9", "valor": "Linguagem e suas tecnologias", "alternativa": "Língua Portuguesa" },																	
-							{ "chave": "r2_2_10", "valor": "Formação Técnica e Profissional", "alternativa": "Saúde" }
-						]
+							{ "chave": "r2_2_1", "valor": "Formação Teórica", "alternativa": "a) Conhecer as teorias do desenvolvimento humano e desenvolvimento de carreira ao longo do ciclo vital." },																	
+							{ "chave": "r2_2_2", "valor": "Formação Prática ", "alternativa": "b) Desenvolver habilidades de intervenção em orientação profissional." },																	
+							{ "chave": "r2_2_3", "valor": "Desenvolvimento Pessoal e Ético", "alternativa": "c) Ter conhecimento do seu próprio desenvolvimento de carreira, critérios de tomada de decisão e escolhas profissionais." },																	
+							{ "chave": "r2_2_4", "valor": "Desenvolvimento Pessoal e Ético", "alternativa": "d) Conhecer e respeitar o Código de Ética Profissional da respectiva profissão." }
+						]	
+					},{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r2_4",
+						"enunciado": "Sobre o processo de encaminhamento de alunos para intervenção de carreira, assinale cada descrição à sua etapa correspondente:",
+						"gabaritos": [
+							{ "chave": "r2_4_1", "valor": "Etapa 3", "alternativa": "a) Ajude os alunos a buscar fontes de informação qualificadas." },																	
+							{ "chave": "r2_4_2", "valor": "Etapa 1", "alternativa": "b) Identifique se na sua própria escola não existe um psicólogo ou orientador educacional preparado para ajudá-lo e fazer esta intervenção" },																	
+							{ "chave": "r2_4_3", "valor": "Etapa 6", "alternativa": "c) Pesquisar os mesmos cursos em diferentes instituições, para avaliar o perfil específico de cada formação e eventuais diferenças que possam ser consideradas na hora da tomada de decisão" },																	
+							{ "chave": "r2_4_4", "valor": "Etapa 2", "alternativa": "d) Busque serviços pelo site da ABOP, pelas instituições de ensino superior mais próximas, e pelos centros de formação e clínicas de psicologia" },
+							{ "chave": "r2_4_5", "valor": "Etapa 5", "alternativa": "e) Caso haja necessidade, fazer buscas mais profundas em sites das instituições formadoras que oferecem o curso escolhido." },
+							{ "chave": "r2_4_6", "valor": "Etapa 4", "alternativa": "f) No campo das profissões técnicas, que muitas vezes são menos conhecidas pelos estudantes do que as profissões universitárias, é importante ter como fonte de consulta o Catálogo Nacional de Cursos Técnicos." }
+						]	
 					}
 				]
 			},{					
-				"identificador": "uni2_ativ3",
-				"nomeAtividade": "Avaliação - Unidade 2 - Montagem de Itinerário Formativo",				
+				"identificador": "uni2_ativ2",
+				"nomeAtividade": "Avaliação - Unidade 4 - Questão Discursiva",				
 				"questoes": [
 					{
 						"tipoQuestaoString": "MODERADA",
 						"identificador": "r2_3",
 						"tipoEnvio": "TEXTO",
-						"enunciado": "Um dos ganhos do Ensino Médio é o desenvolvimento da autonomia do estudante para compor seu itinerário formativo. Considerando Ensino Médio com a formação profissional em Estatística Aplicada, crie um itinerário formativo com diferentes componentes curriculares. Selecione os componentes e defina sua carga horária levando em conta o limite de 2.400 horas*. Escolha uma opção de componente na coluna da esquerda e insira a carga horária correspondente na caixa de texto na coluna da direita. As opções são: Atividade de Extensão, Disciplinas, Estágio Curricular, Projeto de Pesquisa, Projeto Integrador."
+						"enunciado": "Em relação às redes de apoio para intervenção na carreira comente quais foram os resultados da pesquisa sobre a rede de apoio disponível em sua região:"
 					}
 				]
-			},{
-				"identificador": "uni2_ativ4",
-				"nomeAtividade": "Avaliação - Unidade 2 - Questão Discursiva",				
-				"questoes": [
-					{
-						"tipoQuestaoString": "MODERADA",					
-						"identificador": "r2_4",
-						"tipoEnvio": "TEXTO",
-						"enunciado": "Como o Novo Ensino Médio poderá ampliar as opções de atuação do aluno egresso no mundo do trabalho?"
-					}
-				]				
 			}
 		]
 	},{		
@@ -259,7 +225,57 @@
 		},{
 			"identificador": "uni3_tela08",
 			"nome": "Concluindo"
-		}]
+		}],
+		"atividades": [
+			{
+				"identificador": "uni3_ativ1",
+				"nomeAtividade": "Avaliação - Unidade 3 - Questões Objetivas",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r3_1",
+						"enunciado": "Sobre as possibilidades de intervenção de desenvolvimento de carreira na escola, assinale as opções que fazem parte dos tipos de intervenção:",
+						"gabaritos": [
+							{ "chave": "r3_1_1", "valor": "v", "alternativa": "a) Autoconhecimento e autogestão." },
+							{ "chave": "r3_1_2", "valor": "v", "alternativa": "b) Exploração educacional e ocupacional." },
+							{ "chave": "r3_1_3", "valor": "f", "alternativa": "c) Compreensão das dificuldades." },
+							{ "chave": "r3_1_4", "valor": "v", "alternativa": "d) Planejamento e promoção de competências." }	
+						]
+					},{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r3_2",
+						"enunciado": "",
+						"gabaritos": [
+							{ "chave": "r3_2_1", "valor": "Objetivos", "alternativa": "a) Devem ser claros primeiramente para o professor que assim poderá clarificá-los aos alunos." },																	
+							{ "chave": "r3_2_2", "valor": "Tipos de atividade", "alternativa": "b) Deve estar de acordo com os objetivos estabelecidos, público-alvo, tipo de atividades." },			
+							{ "chave": "r3_2_3", "valor": "Formas de avaliação", "alternativa": "c) Ecomenda-se que as atividades desenvolvidas respeitem a fase de desenvolvimento em que os alunos se encontram, de forma que não sejam muito fáceis que infantilizam e desmotiva, nem tampouco tão complexas e difíceis que se tornem inviáveis."} 
+						]	
+					},{
+						"tipoQuestaoString":"PROPORCIONAL",
+						"identificador": "r3_3",
+						"enunciado": "Selecione as opções abaixo para completar o sentido sobre os aspectos importantes para a condução das intervenções:",
+						"gabaritos":[
+							{"chave": "r3_3_1","valor": "norteadores", "alternativa": "Palavra 1"},
+							{"chave": "r3_3_2","valor": "recursos", "alternativa": "Palavra 2"},
+							{"chave": "r3_3_3","valor": "capacitação do professor", "alternativa": "Palavra 3"},
+							{"chave": "r3_3_4","valor": "planejamento", "alternativa": "Palavra 4"},
+							{"chave": "r3_3_5","valor": "objetivos", "alternativa": "Palavra 5"}
+						]
+					}
+				]
+			},{
+				"identificador": "uni3_ativ2",
+				"nomeAtividade": "Avaliação - Unidade 3 - Questão Discursiva",
+				"questoes":[
+					{
+						"tipoQuestaoString":"MODERADA",
+						"identificador":"r3_4",
+						"tipoEnvio":"TEXTO",
+						"enunciado":"4) Dentre as possibilidades de intervenções apresentadas no vídeo “Intervenções de desenvolvimento” avalie qual das atividades sugeridas se adaptaria melhor ao seu contexto de atuação e explique o porquê."
+					}
+				]				 
+			}
+		]		
 	},{		
 		"identificador": "mod4_uni4",
 		"nome": "Experiências de orientação educacional e profissional no contexto escolar",
@@ -283,16 +299,44 @@
 		}],
 		"atividades": [
 			{
-				"identificador": "uni4_ativ1",
-				"nomeAtividade": "Avaliação - Unidade 4",				
+				"identificador": "uni4_ativ2",
+				"nomeAtividade": "Avaliação - Unidade 4 - Questão Discursiva",				
 				"questoes": [
 					{
 						"tipoQuestaoString": "MODERADA",					
-						"identificador": "r4_1",
+						"identificador": "r4_3",
 						"tipoEnvio": "TEXTO",
-						"enunciado": "Elaboração de uma proposta para o itinerário formativo \"Formação Técnica e Profissional\""
+						"enunciado": "Foram apresentados alguns artigos com relatos de intervenções. Qual você escolheu para leitura e análise da matriz FOFA? Explique o que você utilizou como critério de escolha ou sua maior motivação para a escolha, em detrimento das outras:"
 					}
 				]				
+			},{				
+				"identificador": "uni4_ativ1",
+				"nomeAtividade": "Avaliação - Unidade 4 - Questões Objetivas",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r4_1",
+						"enunciado": "Selecione as opções abaixo para completar o sentido das afirmações sobre os benefícios de analisar as intervenções:",
+						"gabaritos": [
+							{ "chave": "r4_1_1", "valor": "intervenções", "alternativa": "Palavra 1" },
+							{ "chave": "r4_1_2", "valor": "aperfeiçoar a técnica", "alternativa": "Palavra 2" },
+							{ "chave": "r4_1_3", "valor": "correção", "alternativa": "Palavra 3" },
+							{ "chave": "r4_1_4", "valor": "experiências futuras", "alternativa": "Palavra 4" },
+							{ "chave": "r4_1_5", "valor": "soluções", "alternativa": "Palavra 5" },
+							{ "chave": "r4_1_6", "valor": "problemas identificados", "alternativa": "Palavra 6" }
+						]
+					},{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r4_2",
+						"enunciado": "",
+						"gabaritos": [
+							{ "chave": "r4_2_1", "valor": "Força", "alternativa": "a) Está relacionado ao ambiente interno, referente aos aspectos positivos da intervenção realizada na escola." },																	
+							{ "chave": "r4_2_2", "valor": "Fraqueza", "alternativa": "b) Está relacionado ao ambiente interno, referente aos aspectos negativos da intervenção realizada na escola." },			
+							{ "chave": "r4_2_3", "valor": "Oportunidade", "alternativa": "c) Está relacionada ao ambiente externo, ou seja, referem-se a aspectos que facilitam a realização da intervenção, mas de forma indireta, nomeadamente no que se refere às diretrizes, normas e leis."},
+							{ "chave": "r4_2_4", "valor": "Ameaças", "alternativa": "d) Está relacionada ao ambiente externo, ou seja, referem-se a aspectos que dificultam a realização da intervenção, mas de forma indireta, nomeadamente no que se refere às diretrizes, normas e leis."} 
+						]	
+					}
+				]
 			}
 		]
 	}

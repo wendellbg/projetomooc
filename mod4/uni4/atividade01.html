@@ -103,7 +103,7 @@
                         <div class="questao">
                             <div class="titulo-questao">Questão 1</div>
                             <div class="enunciado-questao">
-                                <p>Selecione as opções abaixo para completar o sentido das afirmações sobre os benefícios de analisar as intervenções.</p>
+                                Selecione as opções abaixo para completar o sentido das afirmações sobre os benefícios de analisar as intervenções:
                             </div>
                             <div class="area-respostas">
                                 <div class="linha-respostas">
@@ -262,10 +262,10 @@
                         <div class="questao">
                             <div class="titulo-questao">Questão 3</div>
                             <div class="enunciado-questao">
-                                <p>Foram apresentados alguns artigos com relatos de intervenções. Qual você escolheu para leitura e análise da matriz FOFA? Explique o que você utilizou como critério de escolha ou sua maior motivação para a escolha, em detrimento das outras.</p>
+                                Foram apresentados alguns artigos com relatos de intervenções. Qual você escolheu para leitura e análise da matriz FOFA? Explique o que você utilizou como critério de escolha ou sua maior motivação para a escolha, em detrimento das outras:
                             </div>
                             <div class="area-respostas">
-                                <textarea name="r4_2_texto" class="resposta-texto" placeholder="Digite sua resposta" id='r4_2_texto'></textarea>
+                                <textarea name="r4_3_texto" class="resposta-texto" placeholder="Digite sua resposta" id='r4_3_texto'></textarea>
                             </div>
                         </div>
 
@@ -319,209 +319,109 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
-<script src="../../js/funcoes-atividades.js"></script>
+<script src="../../js/funcoes-atividades-novo.js"></script>
 
 <script>
     console.clear(screen);
 
-    var API = new BridgeRestApi();
-    var id_unidade = "mod4_uni4";//modificar
-    var id_slide = "mod4/uni4/atividade01.html";//modificar
-    var id_atividade = "uni4_ativ1";//modificar
-    var revisao_unidade = "uni4_revisao";//modificar
-    var texto_mensagem_fim="<br>Você pode prosseguir para a próxima atividade.<br><br><a class='botao-mensagem' href='../encerramento/index.html'>PRÓXIMA UNIDADE &#10095;</a><br>";    
-
-    function verifica_revisao(){
-        if(revisao_vista==1){
-            document.querySelector("#botao-atividade-uni4").style.display="none";
-        } 
-    }
+    let API = new BridgeRestApi();
+    let id_unidade = "mod4_uni4";//modificar
+    let id_slide = "mod4/uni4/atividade01.html";//modificar
+    let id_atividade = "uni4_ativ1";//modificar
+    let revisao_unidade = "uni4_revisao";//modificar
+    let proxima_unidade = "../encerramento/index.html";//modificar    
+    let botao = document.getElementById("botao-atividade-uni4");//modificar
 
     //Etapa 1: carregamento da página
     window.addEventListener('load', function(){
-        console.log("carregando a página");
-        API.obterDadosGenericos("quant_"+id_atividade);        
-	});
+        console.log("carregando a página");        
+        API.obterRespostaAtividade(id_atividade);        
+    });
 
-    /*************** Verificando se todas as respostas foram enviadas. *****/
-    var botao = document.getElementById("botao-atividade-uni4");//modificar
-	
-    //Etapa 3: Enviando formulário
-	function salvarDados(){
-        nota_atividade_nova=0;
-        nota_atividade=0;
-        quant_respostas=0; 
-        revisao_teste=0;       
+    //Enviando formulário
+    function salvarDados(){           
         erros=0;
+        ///////aqui vai pegar os valores de cada exercício.        
+              
+        //Atividade 1, select
+        r4_1_1 = document.form_atividade_uni4.r4_1_a.value,
+        r4_1_2 = document.form_atividade_uni4.r4_1_b.value,
+        r4_1_3 = document.form_atividade_uni4.r4_1_c.value,    
+        r4_1_4 = document.form_atividade_uni4.r4_1_d.value,
+        r4_1_5 = document.form_atividade_uni4.r4_1_e.value,
+        r4_1_6 = document.form_atividade_uni4.r4_1_f.value;
 
-        //aqui vai pegar os valores de cada exercício.
-        
-        //Atividade de V ou F (radio button)
-		r1_1 = document.form_atividade_uni4.r1_1.value,                
-		
-        // Atividade 2, drag and drop
-        r1_2_1 = document.querySelector("#r1_2_1 span.palavra-resposta"),
-        r1_2_2 = document.querySelector("#r1_2_2 span.palavra-resposta"),
-        r1_2_3 = document.querySelector("#r1_2_3 span.palavra-resposta"),
-        r1_2_4 = document.querySelector("#r1_2_4 span.palavra-resposta"),
-		
-        //Atividade 3, Select
-        r1_3_a = document.form_atividade_uni4.r1_3_a.value,
-        r1_3_b = document.form_atividade_uni4.r1_3_b.value,
-        r1_3_c = document.form_atividade_uni4.r1_3_c.value;
+        //Atividade 2, select
+        r4_2_1 = document.form_atividade_uni3.r4_2_a.value,
+        r4_2_2 = document.form_atividade_uni3.r4_2_b.value,
+        r4_2_3 = document.form_atividade_uni3.r4_2_c.value,
+        r4_2_4 = document.form_atividade_uni3.r4_2_d.value;        
+
+        //Atividade 3, texto
+        r4_3=document.form_atividade_uni4.r4_3_texto.value;
         
         //testando se todos os exercícios  estão preenchidos.
-		if(r1_1==null){
-			erros++;
-		}else if(r1_2_1==null){
-			erros++;
-        }else if(r1_2_2==null){
-			erros++;
-        }else if(r1_2_3==null){
-			erros++;
-        }else if(r1_2_4==null){
-			erros++;
-		}else if(r1_3_a==""){
-			erros++;
-		}else if(r1_3_b==""){
-			erros++;
-		}else if(r1_3_c==""){
-			erros++;
+        if((r4_1_1=="")||(r4_1_2=="")||(r4_1_3=="")||(r4_1_4=="")||(r4_1_5=="")||(r4_1_6=="")){
+            erros++;             
+        }else if(r4_2_1=="" || r4_2_2=="" || r4_2_3=="" || r4_2_4==""){
+            erros++;
+        }else if(r4_3==""){
+            erros++;       
         }
 
-		if(erros>0){
+        if(erros>0){
             //caso algum não esteja preenchido, exibe mensagem de erro
-			mensagem.className = "mensagem-alerta";
-			mensagem.textContent = "Por favor preencha todos os campos";
-			mensagem.style.display = "inline-block";
-			jQuery('body,html').animate({
-            	scrollTop: 0
-        	}, 800);
-			return false;
-		}else{
-			//console.log("\nChecando respostas"+id_atividade);			            
-			//verificando qual tentativa é esta.
-            envio=1;
-            verificando_tentativas("quant_"+id_atividade);            
-			if(erros>0){
-				return false;
-			}			
-		}
-	};
-
-	//Depois que verifica as tentativas de resposta, verifica as respostas salvas;
-	window .addEventListener( "evObtemDadosRespostaAtividade" , resultadoObtemRespostaAtividade, false );
-    function resultadoObtemRespostaAtividade(evento){
-        //console.log("\nObtendo as respostas: ");
-        console.log("Status do evento: "+evento.detail['status']);          
-        //verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
-        if(evento.detail["status"]=="200"){           
-            nota_atividade = evento.detail.data.nota;
-            //console.log("Voltando para a função principal. Quant respostas: "+quant_respostas+" e max: "+max_quant_tentativas);            
-            texto_mensagem_nota="<br>Sua nota mais alta é "+nota_atividade;            
-            var texto_mensagem_total="";
-            texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+texto_mensagem_revisao_0;         
-            verifica_revisao();
-            if(revisao_vista==1){
-                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+texto_mensagem_revisao_1;         
-            }else if(quant_respostas>=max_quant_tentativas){
-                console.log("\n\nMax de mensagens aqui");
-                //Já atingiu o máximo de tentativas
-                if(envio==1){
-                    console.log("\n\nEnvio=1");
-                    mensagem.className = "mensagem-alerta";
-    			    mensagem.innerHTML = "Você já fez suas "+max_quant_tentativas+" tentativas.";
-	    		    mensagem.style.display = "inline-block";                                     
-                }
-                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../encerramento/index.html'>PROSSEGUIR &#10095;</a><p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                                
-                
-                erros++;
-            }else if(nota_atividade==10){
-                console.log("\nNota 10 aqui");
-                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a nota máxima!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
-            }else if(nota_atividade>=6){
-                console.log("\nAtingiu a média aqui");
-                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a !<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                
-            }
-            else{
-                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você deve atingir a média ou fazer as três tentativas para poder ver o gabarito."+texto_mensagem_fim;
-            }            
-            mensagem_tentativas.innerHTML=texto_mensagem_total;            
+            mensagem.className = "mensagem-alerta";
+            mensagem.textContent = "Por favor preencha todos os campos";
+            mensagem.style.display = "inline-block";
             jQuery('body,html').animate({
-            	scrollTop: 0
-        	}, 800);
-        }
-        if(erros==0){       
+                scrollTop: 0
+            }, 800);
+            return false;
+        }else{       
             //se ainda não tiver enviado as respostas, ou se for dentro do máximio de tentativas,
             // registra as re respostas com as funções da API:
             console.log("Registrando respostas:");
             console.log(evento.detail);
+
+            //Questão discursiva
+            API.registrarRespostaAtividade({
+                "identificador": "uni4_ativ2",
+                "questoes": [
+                    { 
+                        "identificador": "r4_3",
+                        "texto": r4_3
+                    }
+                ]
+            });    
+
             API.registrarRespostaAtividade({
                 "identificador": "uni4_ativ1",//modificar
                 "questoes": [
-                    {
-                        "identificador": "r4_1",
+                    {                        
+                        "identificador": "r4_1",                    
                         "gabaritos": [
-                            { "chave": "r4_1_a", "valor": (r4_1_a_3)},
-                            { "chave": "r4_1_b", "valor": (r4_1_b_2)},
-                            { "chave": "r4_1_c", "valor": (r4_1_c_6)},
-                            { "chave": "r4_1_d", "valor": (r4_1_d_4)},
-                            { "chave": "r4_1_e", "valor": (r4_1_e_1)},
-                            { "chave": "r4_1_f", "valor": (r4_1_f_5)}
+                            { "chave": "r4_1_1", "valor": (r4_1_1)},
+                            { "chave": "r4_1_2", "valor": (r4_1_2)},
+                            { "chave": "r4_1_3", "valor": (r4_1_3)},
+                            { "chave": "r4_1_4", "valor": (r4_1_4)},		
+                            { "chave": "r4_1_5", "valor": (r4_1_5)},			
+                            { "chave": "r4_1_6", "valor": (r4_1_6)}			
+                        ]
+                    },{
+                        "identificador": "r4_2",                    
+                        "gabaritos": [
+                            { "chave": "r4_2_1", "valor": (r4_2_1)},
+                            { "chave": "r4_2_2", "valor": (r4_2_2)},
+                            { "chave": "r4_2_3", "valor": (r4_2_3)},
+                            { "chave": "r4_2_4", "valor": (r4_2_4)}
                         ]
                     }
                 ]
             })           
-        }        	
-	};
+        }        		
+    };
 
-    //função de controle, pra exibir no console o resultado do envio das respostas (registraRespostaAtividade)
-	window.addEventListener( "evRegistraRespostaAtividade" ,resultadoRegistrarRespostaAtividade, false );
-    function resultadoRegistrarRespostaAtividade (evento){
-        console .log(evento.detail);
-        nota_atividade_nova= evento.detail.data.notaAtividade;
-        if(erros==0){
-            //se não houver erro, exibe mensagem de OK
-            //console.log("Aqui envia uma nova tentativa, são "+quant_respostas+" salvas");
-			mensagem.className = "mensagem-ok";
-			mensagem.style.display ="inline-block";			
-            if(nota_atividade_nova>nota_atividade){
-                nota_atividade=nota_atividade_nova;
-            }
-            //esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
-            mensagem.innerHTML="Dados Enviados com sucesso!<br />";
-            texto_mensagem_nota="<br />Sua nota foi: "+nota_atividade_nova+"<br />Sua nota mais alta nesta atividade é: "+nota_atividade;
-            let texto_mensagem_total="";
-            verifica_revisao();
-            if(revisao_vista==1){
-                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_revisao_1;
-            }else if(quant_respostas>=max_quant_tentativas){
-                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você não pode mais responder esta atividade. Avance para a próxima unidade.<br><br><a class='botao-mensagem' href='../encerramento/index.html'>PROSSEGUIR &#10095;</a>";
-            }else if(nota_atividade==10){
-                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_fim+"<br>Parabéns! Você atingiu a nota máxima!<p></p><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
-            }else if(nota_atividade>=6){
-                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+texto_mensagem_revisao_0+texto_mensagem_fim;
-            }
-            else{
-                texto_mensagem_total=texto_mensagem_padrao+texto_mensagem_tentativa+texto_mensagem_nota+"<br>Você deve atingir a média ou fazer as três tentativas para poder ver o gabarito."+texto_mensagem_fim;
-            }            
-            
-            mensagem_tentativas.innerHTML=texto_mensagem_total;            
-            //"Ocorreu tudo certo. Tem que aparecer o link
-			jQuery('body,html').animate({
-            	scrollTop: 0
-        	}, 800);
-        }else{
-            //caso algum não esteja preenchido, exibe mensagem de erro
-			mensagem.className = "mensagem-alerta";
-			mensagem.innerHTML = "Ocorreu algum erro! Tente Novamente...";
-			mensagem.style.display = "inline-block";
-			jQuery('body,html').animate({
-            	scrollTop: 0
-        	}, 800);
-        }
-    }
-   
     function valorSelecionado(sel) {
         var val = sel.selectedIndex;
         var id = sel.id;   
@@ -529,7 +429,7 @@
             sel.classList.remove("select-respondido");
         }else{       
             sel.classList.add("select-respondido");
-        }       
+        }        
     }
 </script>
 
