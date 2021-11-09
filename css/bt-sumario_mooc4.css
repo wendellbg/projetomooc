@@ -1,0 +1,70 @@
+.botao-sumario{
+    position: absolute;
+    top: 4%;
+    left: 4%;
+    margin: 0;    
+}
+
+.botao-sumario a{
+    text-decoration: none;
+}
+
+.botao-sumario .link-visivel{
+    background-color: #fff;   
+    color:#2db5b9; 
+    opacity:0.9;
+    position: absolute;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    border-right: 10px solid #fff;
+    border-left: 10px solid #fff;
+    border-radius: 2em;
+    margin:0;
+    padding: 0;
+    transition: all 0.5s ease;    
+}
+
+.botao-sumario .link-hover{
+    /* display: none; */
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.botao-sumario:hover .link-visivel{
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.botao-sumario:hover .link-hover{
+    /* display: inline; */
+    overflow: visible;
+    opacity: 0.9;
+    background-color: #fff;
+    color: #2db5b9;
+    height:30px;    
+    border-radius: 2em;
+    padding-top: 5px;
+    margin-left: -3px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 15px;
+    transition: all 0.5s ease;
+}
+
+.botao-sumario .link-progresso{
+    background-color: #fff;
+    color:#2db5b9;
+    opacity:0.9;
+    border-radius: 10px;
+    font-size: 15px;    
+    margin:0;
+    padding: 10px 15px;
+}
+
+.botao-sumario .link-progresso:hover{
+    background-color: #020E36;
+
+}
+
+
+
