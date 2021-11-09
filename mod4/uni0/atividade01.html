@@ -447,16 +447,19 @@
 					mensagem.className = "mensagem-ok";
 					mensagem.style.display ="block";			
 					//"Ocorreu tudo certo. Tem que aparecer o link
-					window.scrollTo(0, 0);
+					jQuery('body,html').animate({
+            			scrollTop: 0
+        			}, 800);
 				}else{
 					//caso algum não esteja preenchido, exibe mensagem de erro
 					mensagem.className = "mensagem-alerta";
 					mensagem.textContent = "Ocorreu algum erro! Tente Novamente...";
 					mensagem.style.display = "block";
-					window.scrollTo(0, 0);
+					jQuery('body,html').animate({
+            			scrollTop: 0
+        			}, 800);
 				}
-			}
-			
+			}			
 		</script>
 	</body>
 </html>

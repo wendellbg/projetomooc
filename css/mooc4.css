@@ -168,7 +168,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .bt-avanca.atividades {
 	color: #2db5b9;
-	background-color: #feff3b;
+	background-color: #020E36;
 	border-right: 2px solid;
 	border-bottom: 2px solid;
 }
@@ -178,12 +178,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bt-avanca.atividades:hover a {
-	color: #feff3b;
+	color: #151730;
 }
 
 .bt-avanca.atividades:hover {
 	background-color: #09726f;
-	border-color: #feff3b;
+	border-color: #020E36;
 }
 
 
@@ -291,7 +291,7 @@ h3.texto-central b{
 }
 
 .mooc4 .icone-play:hover {
-	border: 2px solid #fec13b;
+	border: 2px solid #020E36;
 }
 
 .icone-botao-libras {
