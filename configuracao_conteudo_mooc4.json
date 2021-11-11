@@ -69,6 +69,7 @@
 		]
 	},
 	{
+		"identificador": "mod4_uni1",	
 		"nome": "Minha escolha: ser professor!",
 		"descricao": "",
 		"permitePorcentagem": "true",
@@ -298,18 +299,7 @@
 			"nome": "Concluindo"
 		}],
 		"atividades": [
-			{
-				"identificador": "uni4_ativ2",
-				"nomeAtividade": "Avaliação - Unidade 4 - Questão Discursiva",				
-				"questoes": [
-					{
-						"tipoQuestaoString": "MODERADA",					
-						"identificador": "r4_3",
-						"tipoEnvio": "TEXTO",
-						"enunciado": "Foram apresentados alguns artigos com relatos de intervenções. Qual você escolheu para leitura e análise da matriz FOFA? Explique o que você utilizou como critério de escolha ou sua maior motivação para a escolha, em detrimento das outras:"
-					}
-				]				
-			},{				
+			{				
 				"identificador": "uni4_ativ1",
 				"nomeAtividade": "Avaliação - Unidade 4 - Questões Objetivas",				
 				"questoes": [
@@ -337,6 +327,17 @@
 						]	
 					}
 				]
+			},{
+				"identificador": "uni4_ativ2",
+				"nomeAtividade": "Avaliação - Unidade 4 - Questão Discursiva",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "MODERADA",					
+						"identificador": "r4_3",
+						"tipoEnvio": "TEXTO",
+						"enunciado": "Foram apresentados alguns artigos com relatos de intervenções. Qual você escolheu para leitura e análise da matriz FOFA? Explique o que você utilizou como critério de escolha ou sua maior motivação para a escolha, em detrimento das outras:"
+					}
+				]				
 			}
 		]
 	}

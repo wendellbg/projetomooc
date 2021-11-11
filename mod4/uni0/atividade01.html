@@ -300,33 +300,28 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>	
-<script src="../../js/funcoes-atividades.js"></script>
+<script src="../../js/funcoes-atividades-novo.js"></script>
 <script>
 	console.clear(screen);
 
-	var API = new BridgeRestApi();
-	var id_unidade = "mod4_uni0";//modificar
-	var id_slide = "uni0/atividade01.html";//modificar
-	var id_atividade = "uni0_ativ1";//modificar						
-	var texto_mensagem_fim="<br>Você pode prosseguir para a próxima atividade.<br><br><a class='botao-mensagem' href='../uni1/index.html'>PRÓXIMA UNIDADE &#10095;</a><br>";
-	var erros = 0;
-	var atividade_concluida =0;
+	let API = new BridgeRestApi();
+	let id_unidade = "mod4_uni0";//modificar
+	let id_slide = "mod4/uni0/atividade01.html";//modificar
+	let id_atividade = "uni0_ativ1";//modificar
+	let revisao_unidade = "uni0_revisao";//modificar
+	let proxima_unidade = "../uni0/tela03.html";//modificar    
+	let botao = document.getElementById("botao-atividade-uni0");//modificar
 
-	/*************** Verificando se todas as respostas foram enviadas. *****/
-	var botao = document.getElementById("botao-atividade-uni0");//modificar
-	var mensagem = document.getElementById("mensagem-alerta");    
-
+	//Etapa 1: carregamento da página
 	window.addEventListener('load', function(){
-        console.log("carregando a página");
-		//Verifica se as respostas já foram enviadas alguma vez
-        API.obterRespostaAtividade(id_atividade);
+		console.log("carregando a página");        
+		API.obterRespostaAtividade(id_atividade);        
 	});
 
-	function salvarDados(){
-		//console.log("função aqui");				
-		erros = 0;
-		
-		//aqui vai pegar os valores de cada exercício.
+	//Enviando formulário
+	function salvarDados(){           
+		erros=0;
+		///////aqui vai pegar os valores de cada exercício.        	
 		r0_1 = document.form_atividade_uni0.r0_1.value,     
 		r0_2 = document.form_atividade_uni0.r0_2.value,     
 		r0_3 = document.form_atividade_uni0.r0_3.value,     
@@ -349,38 +344,13 @@
 			//caso algum não esteja preenchido, exibe mensagem de erro
 			mensagem.className = "mensagem-alerta";
 			mensagem.textContent = "Por favor preencha todos os campos";
-			mensagem.style.display = "block";
-			window.scrollTo(0, 0);
+			mensagem.style.display = "inline-block";
+			jQuery('body,html').animate({
+				scrollTop: 0
+			}, 800);
 			return false;
-		}else{
-			console.log("\nChecando respostas "+id_atividade);
-			//verificando qual tentativa é esta.
-			API.obterRespostaAtividade(id_atividade);          
-			if(erros>0){
-				return false;			
-			}						
-		}
-	}
-
-	//Depois que verifica as tentativas de resposta, verifica as respostas salvas;
-	window .addEventListener( "evObtemDadosRespostaAtividade" , resultadoObtemRespostaAtividade, false );
-	function resultadoObtemRespostaAtividade(evento){
-
-		console.log("\nObtendo as respostas: ");
-		console.log("Status do evento: "+evento.detail['status']);          
-		//verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
-		if(evento.detail["status"]=="200"){  
-			//Se já tiver enviado (200) então exibe a mensagem e libera os 100% da unidade de boas-vindas         
-			botao.style.display="none";
-			mensagem.className = "mensagem-ok";
-			mensagem.innerHTML = "Você já enviou as respostas, avance para a próxima Unidade!<p></p><a href='../uni1/index.html' class='link-proxima-unidade'>PROSSEGUIR &#10095;</a>";
-			mensagem.style.display = "block";
-			window.scrollTo(0, 0);
-			setTimeout(function() {
-    			window.location.href = "tela03.html";
-			}, 5000);
-		}else{
-			//se ainda não tiver enviado as respostas, ou estiver dentro das tentativas, registra as re respostas com as funções da API:
+		}else{       		
+			// registra as re respostas com as funções da API:
 			console.log("Registrando respostas:");
 			console.log(evento.detail);
 			API.registrarRespostaAtividade({
@@ -427,39 +397,10 @@
 						]
 					}
 				]
-			})
-		}	
-	};
+			})         
+		}        		
+	}	
 
-			//função de controle, pra exibir no console o resultado do envio das respostas (registraRespostaAtividade)
-			window .addEventListener( "evRegistraRespostaAtividade" ,resultadoRegistrarRespostaAtividade, false );
-			function resultadoRegistrarRespostaAtividade (evento){
-				console .log(evento.detail);
-				//nota_atividade_nova= evento.detail.data.notaAtividade;
-				if(erros==0){
-					//se não houver erro, exibe mensagem de OK
-					//console.log("Aqui envia uma nova tentativa, são "+quant_respostas+" salvas");					
-					// if(nota_atividade_nova>nota_atividade){
-					// 	nota_atividade=nota_atividade_nova;
-					// }
-					//esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
-					mensagem.innerHTML="Dados Enviados com sucesso!<br /><br><a class='link-proxima-unidade' href='tela03.html'>PROSSEGUIR &#10095;</a>";					
-					mensagem.className = "mensagem-ok";
-					mensagem.style.display ="block";			
-					//"Ocorreu tudo certo. Tem que aparecer o link
-					jQuery('body,html').animate({
-            			scrollTop: 0
-        			}, 800);
-				}else{
-					//caso algum não esteja preenchido, exibe mensagem de erro
-					mensagem.className = "mensagem-alerta";
-					mensagem.textContent = "Ocorreu algum erro! Tente Novamente...";
-					mensagem.style.display = "block";
-					jQuery('body,html').animate({
-            			scrollTop: 0
-        			}, 800);
-				}
-			}			
-		</script>
-	</body>
+</script>
+</body>
 </html>

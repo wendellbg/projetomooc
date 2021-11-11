@@ -13,26 +13,26 @@
     <script src="../../js/bt-topo.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
-    <script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script> -->
+    <!-- <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', 'G-SB34EK30YV');
-    </script>
+    </script> -->
 
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MK4H2FJ');</script>
+    })(window,document,'script','dataLayer','GTM-MK4H2FJ');</script> -->
     <!-- End Google Tag Manager -->
 </head>
 <body class="mooc4">
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MK4H2FJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MK4H2FJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- Header -->
@@ -77,7 +77,7 @@
             <div class="content">
                 <!--Caixa Citação-->
                 <section class="box-info text-white">
-                    <div class="bg-orange"></div>
+                    <div class="bg-green"></div>
                     <div class="border-blue2">
                         <p>Obrigado por ter respondido ao nosso questionário.</p>
                         <p>Ficamos felizes em ter você conosco. Esperamos que ao final do curso você esteja pronto para mentorar seus alunos no processo de escolha de itinerários formativos.</p>
@@ -107,8 +107,11 @@
                     <!--						<span class="legenda">2 de 2</span>-->
 
                     <!--					</div>-->
-
+                </div>
                     <!--Rodapé-->
+                    <div class="botao-referencias">
+                        <a href="../referencias/index.html" target="_blank"><button>REFERÊNCIAS  &#10095;</button></a></span>
+                    </div>
                     <hr/>
                     <div class="row rodape">
                         <div class="6u 12u$(small)">
@@ -152,22 +155,21 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
-<script src="../../js/funcoes-porcentagem-mooc3.js"></script>
+<script src="../../js/funcoes-porcentagem-mooc4-novo.js"></script>
 <script>
 	console.clear(screen);
 
 	var API = new BridgeRestApi();
-	var id_unidade = "mod3_uni0";
-	var id_slide = "mod3/uni0/tela03.html";//alterar
+	var id_unidade = "mod4_uni0";
+	var id_slide = "mod4/uni0/tela03.html";//alterar
 	var unidade=0;//alterar
 	var tela="uni0tela3";//alterar
+    let ultima_tela = 0; //alterar
 	
 	//Obtendo dados curso
 	window.addEventListener('load', function(){
     	API.obterDadosCurso();
 	});
-	
-	API.registrarUltimaPaginaAcessada(id_unidade,id_slide);
 	
 </script>
 
