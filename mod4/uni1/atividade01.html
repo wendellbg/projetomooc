@@ -207,7 +207,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
-<script src="../../js/funcoes-atividades-novo.js"></script>
+ <script src="../../js/funcoes-atividades-novo.js"></script>
 
 <script>
     console.clear(screen);
@@ -217,7 +217,8 @@
     let id_slide = "mod4/uni1/atividade01.html";//modificar
     let id_atividade = "uni1_ativ1";//modificar
     let revisao_unidade = "uni1_revisao";//modificar
-    let proxima_unidade = "../uni2/index.html";//modificar    
+    let proxima_unidade = "../uni2/index.html";//modificar 
+    let unidade=1;//modificar   
     let botao = document.getElementById("botao-atividade-uni1");//modificar
 
     //Etapa 1: carregamento da página
@@ -252,7 +253,7 @@
             //se ainda não tiver enviado as respostas, ou se for dentro do máximio de tentativas,
             // registra as re respostas com as funções da API:
             console.log("Registrando respostas:");
-            console.log(evento.detail);
+            //console.log(evento.detail);
             API.registrarRespostaAtividade({
                 "identificador": "uni1_ativ1",//modificar
                 "questoes": [
@@ -269,7 +270,6 @@
             })           
         }        		
 	};
-
 </script>
 
 </body>

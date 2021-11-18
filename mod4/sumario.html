@@ -1471,14 +1471,18 @@
     
     //Carregamento da página, verifica os dados do curso
     window.addEventListener('load', function(){
+      console.log("Carregando a Página");
       API.obterDadosCurso();
+      //preenchendo o botão com a última página visitada
+      API.obterUltimaPaginaAcessada();
     });
     
+    window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
     function resultadoObterDadosCurso(evento){
-      console.log(evento.detail);  
-      
+      console.log(evento.detail);        
       //Verifica primeiro a porcentagem da unidade 0
       nome_unidade="mod"+mooc+"_uni"+controle_id_unidade;
+      console.log("Nome unidade: "+nome_unidade);
       API.obterPorcentagemConclusaoUnidade(nome_unidade);     
     }
 
@@ -1489,7 +1493,7 @@
       //Se encontrar, é porque alguma porcentagem já foi iniciada
       if(evento.detail["status"]=="200"){
         
-          let porcentagem = evento.detail["data"];                
+          let porcentagem = (evento.detail["data"]).toFixed(0);                          
           //console.log("\nTestando: "+nome_unidade+", Porcentagem="+porcentagem);                      
           //Verifica qual unidade está testando        
           switch (nome_unidade){
@@ -1592,8 +1596,7 @@
       }
     } 
 
-    //preenchendo o botão com a última página visitada
-    API.obterUltimaPaginaAcessada();
+    
     window .addEventListener( "evObtemUltimaPaginaAcessada" ,resultadoObtemUltimaPaginaAcessada, false );
     function resultadoObtemUltimaPaginaAcessada (evento){
       console .log(evento.detail);

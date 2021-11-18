@@ -55,7 +55,8 @@ function resultadoObtemDadosGenericos (evento){
         console.log("Vendo esta tela pela primeira vez.");
         
         //então calcula a porcentagem nova e registra no sistema
-        porcentagem=porcentagem+(Math.round((100/quant_telas[unidade])));
+        porcentagem=porcentagem+((100/quant_telas[unidade]));
+        console.log("nova Porcentagem:"+porcentagem);
         API.registrarPorcentagemConclusaoUnidade(id_unidade,porcentagem);
 
         //Registra a tela;        
