@@ -103,9 +103,10 @@ function exibe_mensagens(){
     if(unidade==0){        
         texto_mensagem_revisao="";
 		texto_mensagem_padrao="Responda às atividades e, ao final, clique em \"Enviar Respostas\".";
-		texto_mensagem_fim="<br>Você pode prosseguir para a próxima atividade.";	
+		texto_mensagem_fim="<br>Você precisa responder para prosseguir.";	
 
 		if(respondido==1){
+            texto_mensagem_fim="";
 			texto_mensagem_nota="<br>Você já respondeu esta atividade.<br><br><a class='botao-mensagem' href='"+proxima_unidade+"'>PRÓXIMA ATIVIDADE &#10095;</a><br>";		
 			setTimeout(function() {
     			window.location.href = "tela03.html";
