@@ -524,6 +524,11 @@ Main components
   height: 120px;
 }
 
+/* Mooc5 Uni3 Tela 7 */
+.mooc5-uni3-tela7 .cd-single-point .cd-more-info{
+  width: 400px;
+  height: 200px;
+}
 
 
 
@@ -534,6 +539,7 @@ Main components
   }
 
   .border .cd-single-point .cd-more-info,
+  .mooc5-uni3-tela7 .cd-single-point .cd-more-info,
   .mooc2-uni3-tela5 .cd-single-point .cd-more-info,
   .small .cd-single-point .cd-more-info,
   .ponto-imagem.infografico2 .cd-single-point .cd-more-info{
@@ -925,7 +931,7 @@ Main components
   left: 6%;
 }
 
-/* Mooc5 Uni12 tela 7*/
+/* Mooc5 Uni2 tela 7*/
 .cd-single-point.mooc5-ponto1-uni2-tela7{
   bottom: 37%;
   right: 25%;
@@ -945,6 +951,23 @@ Main components
   top: 25%;
   left: 15%;
 }
+
+/* Mooc5 Uni3 tela 7*/
+.cd-single-point.mooc5-ponto1-uni3-tela7{
+  top: 37%;
+  left: 13%;
+}
+
+.cd-single-point.mooc5-ponto2-uni3-tela7{
+  bottom: 10%;
+  right: 38%;
+}
+
+.cd-single-point.mooc5-ponto3-uni3-tela7{
+  top: 21%;
+  right: 23%;
+}
+
 
 
 .cd-single-point.titulo-bola{
