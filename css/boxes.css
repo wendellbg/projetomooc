@@ -930,4 +930,20 @@ h3.texto-central b{
 	color: #fec13b;
 }
 
+.bloco-notas {
+	padding: 0px;
+}
+
+.bloco-notas-main {
+	background-image: url(../img/padrao/bloco-notas-main.png);
+	background-repeat: repeat;
+	background-size: contain;
+	padding: 0 80px;
+}
+
+.bloco-notas-bottom img,
+.bloco-notas-top img{
+	 width: 100%;
+ }
+
 
