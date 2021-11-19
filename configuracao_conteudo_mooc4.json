@@ -182,7 +182,7 @@
 						"enunciado": "Na unidade 2 abordamos sobre as competências para ser um professor mentor de carreira que são divididas entre formação teórica, formação técnica e desenvolvimento pessoal e ético. Dentre as competências abaixo, escolha o grupo de competência a que pertence:",
 						"gabaritos": [
 							{ "chave": "r2_2_1", "valor": "Formação Teórica", "alternativa": "a) Conhecer as teorias do desenvolvimento humano e desenvolvimento de carreira ao longo do ciclo vital." },																	
-							{ "chave": "r2_2_2", "valor": "Formação Prática ", "alternativa": "b) Desenvolver habilidades de intervenção em orientação profissional." },																	
+							{ "chave": "r2_2_2", "valor": "Formação Prática", "alternativa": "b) Desenvolver habilidades de intervenção em orientação profissional." },																	
 							{ "chave": "r2_2_3", "valor": "Desenvolvimento Pessoal e Ético", "alternativa": "c) Ter conhecimento do seu próprio desenvolvimento de carreira, critérios de tomada de decisão e escolhas profissionais." },																	
 							{ "chave": "r2_2_4", "valor": "Desenvolvimento Pessoal e Ético", "alternativa": "d) Conhecer e respeitar o Código de Ética Profissional da respectiva profissão." }
 						]	
