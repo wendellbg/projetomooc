@@ -1471,14 +1471,18 @@
     
     //Carregamento da página, verifica os dados do curso
     window.addEventListener('load', function(){
+      console.log("Carregando a Página");
       API.obterDadosCurso();
+      //preenchendo o botão com a última página visitada
+      API.obterUltimaPaginaAcessada();
     });
     
+    window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
     function resultadoObterDadosCurso(evento){
-      console.log(evento.detail);  
-      
+      console.log(evento.detail);        
       //Verifica primeiro a porcentagem da unidade 0
       nome_unidade="mod"+mooc+"_uni"+controle_id_unidade;
+      console.log("Nome unidade: "+nome_unidade);
       API.obterPorcentagemConclusaoUnidade(nome_unidade);     
     }
 
@@ -1489,7 +1493,7 @@
       //Se encontrar, é porque alguma porcentagem já foi iniciada
       if(evento.detail["status"]=="200"){
         
-          let porcentagem = evento.detail["data"];                
+          let porcentagem = (evento.detail["data"]).toFixed(0);                          
           //console.log("\nTestando: "+nome_unidade+", Porcentagem="+porcentagem);                      
           //Verifica qual unidade está testando        
           switch (nome_unidade){
@@ -1499,7 +1503,7 @@
               circulo = document.getElementById("circulo-uni0");
               progresso.innerHTML=""+porcentagem+"%";
               circulo.className="c100 p"+porcentagem;          
-              porcentagem_geral+=porcentagem;
+              porcentagem_geral+=parseFloat(porcentagem); 
               //bloquear outras unidades se essa porcentagem for menor que 100          
               if(porcentagem<100){
                 unidade0=0;
@@ -1523,7 +1527,7 @@
               circulo = document.getElementById("circulo-uni1");
               progresso.innerHTML=""+porcentagem+"%";
               circulo.className="c100 p"+porcentagem;
-              porcentagem_geral+=porcentagem;          
+              porcentagem_geral+=parseFloat(porcentagem);          
             break;
 
             case "mod4_uni2":
@@ -1532,7 +1536,7 @@
               circulo = document.getElementById("circulo-uni2");
               progresso.innerHTML=""+porcentagem+"%";
               circulo.className="c100 p"+porcentagem;
-              porcentagem_geral+=porcentagem;          
+              porcentagem_geral+=parseFloat(porcentagem);                    
             break;
 
             case "mod4_uni3":
@@ -1541,7 +1545,7 @@
               circulo = document.getElementById("circulo-uni3");
               progresso.innerHTML=""+porcentagem+"%";
               circulo.className="c100 p"+porcentagem; 
-              porcentagem_geral+=porcentagem;         
+              porcentagem_geral+=parseFloat(porcentagem);         
             break;
 
             case "mod4_uni4":
@@ -1550,7 +1554,7 @@
               circulo = document.getElementById("circulo-uni4");
               progresso.innerHTML=""+porcentagem+"%";
               circulo.className="c100 p"+porcentagem; 
-              porcentagem_geral+=porcentagem;         
+              porcentagem_geral+=parseFloat(porcentagem);        
             break;
 
           }        
@@ -1560,7 +1564,7 @@
 
       //aqui verifica se todas as unidades foram finalizadas. Se sim, exibe a unidade de encerramento.   
       //porcentagem_geral=900;
-      console.log("\nPorc. Geral="+(porcentagem_geral/5));  
+      console.log("\nPorc. Geral="+(parseFloat(porcentagem_geral)/5));  
       if((porcentagem_geral/5)>=80){
         let div_encerramento = document.querySelector("#div-encerramento span a");
         div_encerramento.style.display="inline-block";
@@ -1592,8 +1596,7 @@
       }
     } 
 
-    //preenchendo o botão com a última página visitada
-    API.obterUltimaPaginaAcessada();
+    
     window .addEventListener( "evObtemUltimaPaginaAcessada" ,resultadoObtemUltimaPaginaAcessada, false );
     function resultadoObtemUltimaPaginaAcessada (evento){
       console .log(evento.detail);

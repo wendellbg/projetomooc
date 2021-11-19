@@ -36,7 +36,7 @@ function resultadoObterPorcentagemConclusaoUnidade (evento){
     }else{
         //Se não encontrar, é porque é a primeira vez que a unidade está sendo vista.
         //Então basta registrar a porcentagem de uma tela        
-        porcentagem=(Math.round((100/quant_telas[unidade])));
+        porcentagem=(Math.round((100/quant_telas[unidade])));        
         API.registrarPorcentagemConclusaoUnidade(id_unidade,porcentagem);
 
         //E registrar a tela atual como vista
@@ -55,7 +55,11 @@ function resultadoObtemDadosGenericos (evento){
         console.log("Vendo esta tela pela primeira vez.");
         
         //então calcula a porcentagem nova e registra no sistema
-        porcentagem=porcentagem+(Math.round((100/quant_telas[unidade])));
+        porcentagem=porcentagem+((100/quant_telas[unidade]));
+        console.log("nova Porcentagem:"+porcentagem);
+        if(porcentagem>100){
+            porcentagem=100;
+        }
         API.registrarPorcentagemConclusaoUnidade(id_unidade,porcentagem);
 
         //Registra a tela;        
@@ -66,7 +70,7 @@ function resultadoObtemDadosGenericos (evento){
 }	
 
 function habilitar_atividade(){
-    if(ultima_tela==1 && porcentagem==100 && unidade!=0){
+    if(ultima_tela==1 && porcentagem>=100 && unidade!=0){
         console.log("Ativando botão de atividades");        
         //Ativa o botão de atividades
         document.querySelector("#botao-atividades button").classList.remove("bt-desativado");                            

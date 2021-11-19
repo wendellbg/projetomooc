@@ -164,12 +164,14 @@
 	var id_slide = "mod4/uni0/tela03.html";//alterar
 	var unidade=0;//alterar
 	var tela="uni0tela3";//alterar
-    let ultima_tela = 0; //alterar
+    let ultima_tela = 1; //alterar
 	
 	//Obtendo dados curso
 	window.addEventListener('load', function(){
     	API.obterDadosCurso();
 	});
+
+    API.registrarPorcentagemConclusaoUnidade(id_unidade,100);
 	
 </script>
 
