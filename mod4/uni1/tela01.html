@@ -193,7 +193,9 @@
 
     //Obtendo dados curso
     window.addEventListener('load', function(){
-        API.obterDadosCurso();
+        //A tela 1 sempre vai verificar a porcentagem da unidade 0 primeiro
+        teste_boasvindas=1;
+        API.obterPorcentagemConclusaoUnidade("mod4_uni0"); 
     });
    
 </script>

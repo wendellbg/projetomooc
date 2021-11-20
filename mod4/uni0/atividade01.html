@@ -444,13 +444,14 @@ function resultadoRegistrarRespostaAtividade (evento){
 		
 		//Se for a unidade 0, não precisa verificar nota
 		if(unidade==0){
-			mensagem.innerHTML="Dados Enviados com sucesso!<br><br><a class='botao-mensagem' href='"+proxima_unidade+"'>PRÓXIMA ATIVIDADE &#10095;</a><br>";	
+			mensagem.innerHTML="Dados Enviados com sucesso!<br><br><a class='botao-mensagem' href='"+proxima_unidade+"'>PRÓXIMA ATIVIDADE &#10095;</a><br>";				
 		}else{
 			mensagem.innerHTML="Dados Enviados com sucesso!<br />";
-			mensagem.style.display ="inline-block";			
+			
         	//Monta a mensagem com as notas nova e já salva, já que enviou a atividade.
         	verifica_nota(nota_atividade,nota_atividade_nova);
-		}        
+		}   
+		mensagem.style.display ="inline-block";     
                 
     }else{
         //caso algum não esteja preenchido, exibe mensagem de erro
