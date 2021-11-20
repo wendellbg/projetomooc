@@ -406,3 +406,119 @@
     font-size: 17px;
     line-height: 22px;
 }
+
+/* ----------------------------- Post-it ----------------------------- */
+.post-it .card .front:after,
+.post-it .card .content .front,
+.post-it .card .back:after,
+.post-it .card .content .back {
+    border-radius: 0px;
+    background-color: #fff;
+}
+
+.post-it .card .content .front .inner,
+.post-it .card .content .back .inner{
+    padding: 0;
+}
+
+.post-it .card .content .back{
+    border: 0px;
+}
+
+.post-it .card .content .back .inner .card-top,
+.post-it .card .content .front .inner .card-top{
+    height: 60px;
+    width: 100%;
+}
+
+.post-it .card .back .description{
+    border-top-width: 50px;
+    grid-row-start: 1;
+}
+
+.post-it .card .back .description p {
+    padding: 0 1.5em;
+    color: #020E36;
+}
+
+
+.post-it .back .description b {
+    text-shadow: 1px 1px 2px black;
+    color: #fff !important;
+}
+
+.post-it .card .content .front .inner .card-bottom{
+    height: 51px;
+    width: 100%;
+    background-image: url(../img/padrao/post-it-bottom.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    position: absolute;
+    bottom: -2px;
+    right: -3px;
+}
+
+.post-it .card .back .button{
+    grid-row: 6;
+    background-color: rgba(2, 14, 54, 0.8);
+}
+
+.post-it .card .front .button {
+    grid-row: 4;
+}
+.post-it .card .front .button:hover {
+    background-color: rgba(2, 14, 54, 0.8);
+}
+
+.post-it .card .content .front h2 {
+    margin-top: -60px;
+    padding: 1.5em;
+    text-shadow: 1px 1px 2px black;
+}
+
+.post-it .yellow .content .back .inner .card-top,
+.post-it .yellow .content .front .inner .card-top{
+    background-color: rgba(254, 193, 59, 1);
+}
+
+.post-it .yellow .back,
+.post-it .yellow .front:after {
+    background: linear-gradient(40deg, rgba(254, 193, 59, 0.4), rgba(254, 193, 59, 0.8));
+}
+
+
+.post-it .red .back,
+.post-it .red .front:after {
+    background: linear-gradient(40deg, rgba(255, 83, 85, 0.4), rgba(255, 83, 85, 0.8));
+}
+
+.post-it .red .content .front .inner .card-top{
+    background-color: rgba(255, 83, 85, 1);
+}
+
+.post-it .green .back,
+.post-it .green .front:after {
+    background: linear-gradient(40deg, rgba(45, 181, 185, 0.4), rgba(45, 181, 185, 0.8));
+}
+
+.post-it .green .content .front .inner .card-top{
+    background-color: rgba(45, 181, 185, 1);
+}
+
+.post-it .orange .back,
+.post-it .orange .front:after {
+    background: linear-gradient(40deg, rgba(255, 132, 29, 0.4), rgba(255, 132, 29, 0.8));
+}
+
+.post-it .orange .content .front .inner .card-top{
+    background-color: rgba(255, 132, 29, 1);
+}
+
+.post-it .blue .back,
+.post-it .blue .front:after {
+    background: linear-gradient(40deg, rgba(42, 92, 170, 0.4), rgba(42, 92, 170, 0.8));
+}
+
+.post-it .blue .content .front .inner .card-top{
+    background-color: rgba(42, 92, 170, 1);
+}
