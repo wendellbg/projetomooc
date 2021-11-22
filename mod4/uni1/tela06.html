@@ -70,25 +70,31 @@
 
             <p hidden>Dentro de um retângulo o um fone de ouvido que é o play do áudio.</p>
             <div class="content">
-                <div class="icone-audio">
-                    <a class='icone-play' id="botao-play-podcast" onclick="playShowPod()"><img src="../../img/uni3/icone-audio.png" alt="Em seguida, dentro de um retângulo o um fone de ouvido que é o play do áudio." /></a>
-                    <a class="icone-pause" id="botao-pause-podcast" onclick="pauseShowPod()" style="display:none;"><img src="../../img/uni3/icone-audio2.gif"/></a>
-                    <audio id='playerPodcast' class='controles-podcast' controls='controls'>
-                        <source src="../../downloads/mooc4/Un1-Podcast1.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
-                    </audio>
-                    <div class="video-libras no-border">
+                <div class="row">
+                    <div class="video-externo 12u 12u$(small)">
+
+                        <div class="icone-audio">
+                            <a class='icone-play' id="botao-play-podcast" onclick="playShowPod()"><img src="../../img/uni3/icone-audio.png"/></a>
+                            <a class="icone-pause" id="botao-pause-podcast" onclick="pauseShowPod()" style="display:none;"><img src="../../img/uni3/icone-audio2.gif" /></a>
+                            <audio id='playerPodcast' class='controles-podcast' controls='controls'>                                
+                                 <source src="../../downloads/mooc4/Un1-Podcast1.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
+                            </audio>
+                            <br><br>
+                            <div class="downloads">
+                                <button onclick="exibirLibras(1)" class="video-exibir bt-download-media" type="button"><i class="fas fa-sign-language"></i> Tradutor de libras</button>
+                                <button onclick="exibirLibras(0)" class="video-cancelar bt-download-media" type="button"><i class="fas fa-sign-language"></i> Esconder tradutor</button>
+                                <a target="_blank" href="../../downloads/Un3-podcast.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="video-libras 3u 12u$(small)">
                         <div class="video-player icone-audio">
                             <iframe id="video1" width="720" height="405" src="https://www.youtube.com/embed/K3Xp6Q5I4iA?enablejsapi=1&html5=1&mute=1&controls=1&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
-                    <div class="downloads">
-                        <a target="_blank" href="../../downloads/mooc4/MOOC4-Unidade01-podcast.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
-                        <button onclick="exibirLibras(1)" class="video-exibir bt-download-media" type="button"><i class="fas fa-sign-language"></i> Tradutor de libras</button>
-                        <button onclick="exibirLibras(0)" class="video-cancelar bt-download-media" type="button"><i class="fas fa-sign-language"></i> Esconder tradutor</button>
-                    </div>
                 </div>
-            </div>
-
+            </div>           
 
             <div class="content">
 
