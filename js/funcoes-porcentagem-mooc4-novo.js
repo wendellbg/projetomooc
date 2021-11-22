@@ -3,6 +3,7 @@
 //esse vetor tem as quantidades de telas de cada unidade;
 let quant_telas=[3,8,7,8,5];
 let porcentagem = 0;
+let teste_boasvindas=0;
 
 //Ao carregar a página, obtém os dados do curso
 window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
@@ -20,27 +21,53 @@ function resultadoObterDadosCurso(evento){
 window.addEventListener( "evObtemPorcentagemConclusaoUnidade",resultadoObterPorcentagemConclusaoUnidade, false );
 function resultadoObterPorcentagemConclusaoUnidade (evento){
     console .log(evento.detail);
-    
-    //Se encontrar, é porque alguma tela da unidade já foi vista.
-    if(evento.detail["status"]=="200"){
-        //se a unidade já foi iniciada, então vai ter porcentagem.
-        porcentagem = evento.detail["data"];                
-        console.log("\nVerificando a unidade: "+id_unidade+"\nCom a porcentagem: "+porcentagem);
-        //Se a porcentagem já for 100%, testa se esta é a última tela da unidade
-        if(porcentagem==100){  
-            habilitar_atividade();
+    console.log("uni atual="+id_unidade+"\nteste boasvindas="+teste_boasvindas);
+    //teste para verificar se O usuário clicou para ver outra unidade sem ter terminado a Unidade de boas-vindas
+    //Se a unidade não for 0 mas o id for, é uma primeira tela testando a porcentagem da unidade de Boas-Vindas
+    if(teste_boasvindas==1){
+        //As primeiras telas de cada unidade virão para cá primeiro
+        console.log("Testando a unidade 0");
+        if(evento.detail["status"]=="200"){
+            porcentagem = evento.detail["data"];
+            if(porcentagem>=100){
+                //Aqui o usuário já terminou a unidade de Boas-Vindas
+                teste_boasvindas=0;
+                API.obterDadosCurso();                
+            }else{
+                //Caso já tenha começado a unidade 0 mas não tenha 100%, envia para lá
+                setTimeout(function() {
+                    window.location.href = "../uni0/tela01.html";
+                }, 0);
+            }
         }else{
-            //Se a porcentagem ainda não for 100%, então verifica se a tela atual já foi vista.            
-            API.obterDadosGenericos(tela);   
+            //caso não seja 200, é porque a unidade 0 não foi iniciada. Envia o usuário para lá.
+            setTimeout(function() {
+    			window.location.href = "../uni0/tela01.html";
+			}, 0);
         }
-    }else{
-        //Se não encontrar, é porque é a primeira vez que a unidade está sendo vista.
-        //Então basta registrar a porcentagem de uma tela        
-        porcentagem=(Math.round((100/quant_telas[unidade])));        
-        API.registrarPorcentagemConclusaoUnidade(id_unidade,porcentagem);
+    }else{           
+        //Retorna ao ritmo normal de todas as telas.
+        //Se encontrar, é porque alguma tela da unidade já foi vista.
+        if(evento.detail["status"]=="200"){
+            //se a unidade já foi iniciada, então vai ter porcentagem.
+            porcentagem = evento.detail["data"];                
+            console.log("\nVerificando a unidade: "+id_unidade+"\nCom a porcentagem: "+porcentagem);
+            //Se a porcentagem já for 100%, testa se esta é a última tela da unidade
+            if(porcentagem==100){  
+                habilitar_atividade();
+            }else{
+                //Se a porcentagem ainda não for 100%, então verifica se a tela atual já foi vista.            
+                API.obterDadosGenericos(tela);   
+            }
+        }else{
+            //Se não encontrar, é porque é a primeira vez que a unidade está sendo vista.
+            //Então basta registrar a porcentagem de uma tela        
+            porcentagem=(Math.round((100/quant_telas[unidade])));        
+            API.registrarPorcentagemConclusaoUnidade(id_unidade,porcentagem);
 
-        //E registrar a tela atual como vista
-        API.registrarDadosGenericos(tela,1);
+            //E registrar a tela atual como vista
+            API.registrarDadosGenericos(tela,1);
+        }
     }
 }
 
