@@ -273,8 +273,8 @@
 	};
 
 
-    //////////////////////////////////////////////////////////////// Funções Javascript para todas as atividades
-    let nota_atividade=0;
+//////////////////////////////////////////////////////////////// Funções Javascript para todas as atividades
+let nota_atividade=0;
 let nota_atividade_nova=0;
 let erros=0;
 let revisao_vista=0;
@@ -318,7 +318,7 @@ function resultadoObtemDadosGenericos (evento){
         texto_mensagem_padrao="<br>Você já verificou o GABARITO, então não pode mais responder esta atividade.";
         
     }else{
-        texto_mensagem_revisao="<br>Após acessar o GABARITO, você NÃO poderá enviar novas respostas.<br><br><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
+        texto_mensagem_revisao="<br>Após acessar o GABARITO, você NÃO poderá enviar novas respostas.";
     }
     exibe_mensagens();             
 }
@@ -365,10 +365,10 @@ function verifica_nota(nota,nota_nova){
     }
     if(nota==10){        
         //Se atingiu a nota 10, pode ver a revisão sem problemas.
-        texto_mensagem_nota=texto_mensagem_nota+"<br>Parabéns! Você atingiu a nota máxima!<br><br><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                    
+        texto_mensagem_nota=texto_mensagem_nota+"<br>Parabéns! Você atingiu a nota máxima!<br><br><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a><br>";                    
     }else if(nota>=6){
         console.log("\nAtingiu a média aqui");                
-        texto_mensagem_nota=texto_mensagem_nota+"<br>Parabéns! Você atingiu a média!<br><br><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                
+        texto_mensagem_nota=texto_mensagem_nota+"<br>Parabéns! Você atingiu a média!<br><br><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a><br>";                
         //Se já atingiu a média, tem que verificar se a revisão já foi vista.
         API.obterDadosGenericos(revisao_unidade);
     }else{
