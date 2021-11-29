@@ -552,6 +552,8 @@ Main components
   .border .cd-single-point .cd-more-info,
   .mooc5-uni3-tela7 .cd-single-point .cd-more-info,
   .mooc2-uni3-tela5 .cd-single-point .cd-more-info,
+  .mooc5-uni4-tela5 .cd-single-point .cd-more-info,
+  .mooc5-uni4-tela3 .cd-single-point .cd-more-info,
   .small .cd-single-point .cd-more-info,
   .ponto-imagem.infografico2 .cd-single-point .cd-more-info{
     width: 100%;
@@ -996,25 +998,46 @@ Main components
   left: 39%;
 }
 
+/* Mooc5 Uni4 tela5 Antigo */
+/*.cd-single-point.mooc5-ponto1-uni4-tela5{*/
+/*  top: 26%;*/
+/*  left: 21%;*/
+/*}*/
+
+/*.cd-single-point.mooc5-ponto2-uni4-tela5{*/
+/*  top: 45.5%;*/
+/*  right: 37%;*/
+/*}*/
+
+/*.cd-single-point.mooc5-ponto3-uni4-tela5{*/
+/*  bottom: 32%;*/
+/*  right: 37%;*/
+/*}*/
+
+/*.cd-single-point.mooc5-ponto4-uni4-tela5{*/
+/*  bottom: 8%;*/
+/*  left: 21%;*/
+/*}*/
+
 /* Mooc5 Uni4 tela5 */
 .cd-single-point.mooc5-ponto1-uni4-tela5{
-  top: 26%;
-  left: 21%;
+  top: 23%;
+  right: 32.5%;
 }
 
 .cd-single-point.mooc5-ponto2-uni4-tela5{
-  top: 45.5%;
-  right: 37%;
+  top: 39%;
+  left: 31.5%;
 }
 
 .cd-single-point.mooc5-ponto3-uni4-tela5{
-  bottom: 32%;
-  right: 37%;
+  bottom: 37.5%;
+  right: 33%;
 }
 
 .cd-single-point.mooc5-ponto4-uni4-tela5{
-  bottom: 8%;
-  left: 21%;
+  bottom: 20%;
+  left: 31.5%;
 }
 
 
