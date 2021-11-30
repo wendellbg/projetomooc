@@ -13,12 +13,16 @@
     <link rel="stylesheet" href="../../css/w3.css" /> 
     <style>
     .grid-container {
-      display: grid;
-      grid-template-columns: 1fr 2fr 1fr;      
-      padding: 10px;
+      display: grid;      
+      grid-template-columns: 1fr 3fr 1fr;      
+      padding: 1%;
+      margin-right: 10%;      
+      margin-left: 10%;
+      margin-top: 25%; 
+      margin-bottom: 1%;     
     }
     .grid-item {      
-      padding: 20px;
+      padding: 35px;
       font-size: 30px;
       text-align: center;
     }
@@ -105,18 +109,20 @@
             <div class="content no-top">
                 <p>Iniciaremos agora a metodologia de design de projeto que estamos utilizando, o Design Thinking. Esse início é destinado a descobrir o contexto e os participantes da intervenção. É o momento<b> Descoberta</b>, quando identificamos as necessidades e os entraves para a Educação para a Carreira de cada contexto escolar.</p>
                 <p>É importante destacar:</p>
-                    <div class="image fit flush border-dark-blue">
-                        <div class="subtitulo"><p>Infográfico</p></div>
-                        <img src="../../img/uni2/MOOC5_Uni2_tela3_imagem2.jpeg" alt="Infografico">
+                    <div class="image fit flush border-dark-blue" style="background-image: url(../../img/uni2/MOOC5_Uni2_tela3_imagem2.jpeg);background-size: cover; background-position: center center;">                        
+                        <div class="subtitulo"><p>Infográfico</p></div>                        
+                        <!--<img src="../../img/uni2/MOOC5_Uni2_tela3_imagem2.jpeg" alt="Infografico">-->
                         <div class="grid-container">
                             <div class="grid-item">
                                 <audio id="audio1" src="../../downloads/galo.wav"></audio>
                                 <button type="button" onclick="play1()"><img width="50px" height="50px" src="../../img/padrao/icone-audio.png" alt="Botão de áudio"></button>
                             </div>                            
+                            <br>                            
                             <div class="grid-item">
                                  <audio id="audio2" src="../../downloads/cao.wav"></audio>
                                  <button type="button" onclick="play2()"><img width="50px" height="50px" src="../../img/padrao/icone-audio.png" alt="Botão de áudio"></button>
                             </div>
+                            <br>                            
                             <div class="grid-item">
                                  <audio id="audio3" src="../../downloads/gato.wav"></audio>
                                  <button type="button" onclick="play3()"><img width="50px" height="50px" src="../../img/padrao/icone-audio.png" alt="Botão de áudio"></button>
