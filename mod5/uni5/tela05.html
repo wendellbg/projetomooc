@@ -94,11 +94,11 @@
             </div>
 
             <div class="content">
-                <div class="image fit flush border-dark-blue">
+                <!--<div class="image fit flush border-dark-blue">
                     <div class="subtitulo"><p>Infográfico</p></div>
 
                     <br><br><p style="text-align: center;"><b>Clique nos botões sobre a imagem para descobrir:</b></p>
-                    <!-- Ponto Interesse -->
+                    <!-- Ponto Interesse 
                     <div class="ponto-interesse cd-product cd-container">
                         <div class="cd-product-wrapper">
                             <img src="../../img/padrao/img_padrao01.png" alt="Infografico">
@@ -112,7 +112,7 @@
                                         </p>
                                         <a href="#0" class="cd-close-info cd-img-replace">Close</a>
                                     </div>
-                                </li> <!-- .cd-single-point -->
+                                </li> <!-- .cd-single-point 
 
                                 <li class="cd-single-point mooc5-ponto2-uni5-tela5">
                                     <a class="cd-img-replace icon" href="#0"><i class="fas fa-question"></i></a>
@@ -123,7 +123,7 @@
                                         </p>
                                         <a href="#0" class="cd-close-info cd-img-replace">Close</a>
                                     </div>
-                                </li> <!-- .cd-single-point -->
+                                </li> <!-- .cd-single-point 
 
                                 <li class="cd-single-point mooc5-ponto3-uni5-tela5">
                                     <a class="cd-img-replace icon" href="#0"><i class="fas fa-question"></i></a>
@@ -134,21 +134,87 @@
                                         </p>
                                         <a href="#0" class="cd-close-info cd-img-replace">Close</a>
                                     </div>
-                                </li> <!-- .cd-single-point -->
+                                </li> <!-- .cd-single-point 
 
                             </ul>
-                        </div> <!-- .cd-product-wrapper -->
-                    </div> <!-- .cd-product -->
-                    <!--                <script src="../../js/jquery-2.1.1.js"></script>-->
-                    <script src="../../js/main.js"></script> <!-- Resource jQuery -->
+                        </div> cd-product-wrapper 
+                    </div> .cd-product 
+                                <script src="../../js/jquery-2.1.1.js"></script>
+                    <script src="../../js/main.js"></script> <!-- Resource jQuery
 
                     <p class="legenda">Figura 01 - Fonte: Imagem produzida pela equipe gráfica do projeto</p>
+                </div>-->
+
+                <p hidden>Três GIFS lado a lado e abaixo deles o botão do play para o áudio.</p>
+                <div class="row audio-gif">
+                    <div class="4u 12u$(small)">
+                        <div class="icone-audio">
+                            <p hidden>À esquerda, uma mulher de pele branca, cabelos castanhos, usa óculos de sol e regata branca, dirige um carro.</p>
+                            <a class='icone-play' onclick="playShowPod1()"><img src="../../img/padrao/img_padrao01.png"/></a>                                
+                            <audio id='playerPodcast1' class='controles-podcast' controls='controls'>
+                                <source src="../../img/uni5/arquivo.mp3" type="audio/mp3" />
+                            </audio>
+
+                            <div class="video-libras no-border">
+                                <div class="video-player icone-audio">
+                                    <iframe id="video1" width="720" height="405" src="?enablejsapi=1&html5=1&mute=1&controls=1&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+
+                            <div class="downloads">
+                                <button onclick="exibirLibras(1)" class="video-exibir bt-download-media" type="button"><i class="fas fa-sign-language"></i> Tradutor de libras</button>
+                                <button onclick="exibirLibras(0)" class="video-cancelar bt-download-media" type="button"><i class="fas fa-sign-language"></i> Esconder tradutor</button>
+                                <a target="_blank" href="../../downloads/mooc5/arquivo.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="4u 12u$(small)">
+                        <div class="icone-audio">
+                            <p hidden>No meio, um homem de pele branca, usa mascara descartável e corta o cabelo de alguém, na mão esquerda, segura o pente e o cabelo entre os dedos e com a direita ele corta.</p>
+                            <a class='icone-play' onclick="playShowPod2()"><img src="../../img/padrao/img_padrao01.png"/></a>
+                            <audio id='playerPodcast2' class='controles-podcast' controls='controls'>
+                                <source src="../../img/uni5/arquivo.mp3" type="audio/mp3" />
+                            </audio>
+
+                            <div class="video-libras no-border">
+                                <div class="video-player icone-audio">
+                                    <iframe id="video2" width="720" height="405" src="?enablejsapi=1&html5=1&mute=1&controls=1&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+
+                            <div class="downloads">
+                                <button onclick="exibirLibras(1)" class="video-exibir bt-download-media" type="button"><i class="fas fa-sign-language"></i> Tradutor de libras</button>
+                                <button onclick="exibirLibras(0)" class="video-cancelar bt-download-media" type="button"><i class="fas fa-sign-language"></i> Esconder tradutor</button>
+                                <a target="_blank" href="../../downloads/mooc5/arquivo.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="4u 12u$(small)">
+                        <div class="icone-audio">
+                            <p hidden>À direita, uma mulher de macacão de toca branco, óculos de proteção transparente, mascara e luvas descartáveis, faz um torniquete no braço de um rapaz de pele branca, cabelos castanhos claros, usa mascara descartável e camiseta preta.</p>
+                            <a class='icone-play' onclick="playShowPod3()"><img src="../../img/padrao/img_padrao01.png"/></a>
+                            <audio id='playerPodcast3' class='controles-podcast' controls='controls'>
+                                <source src="../../img/uni5/arquivo.mp3" type="audio/mp3" />
+                            </audio>
+
+                            <div class="video-libras no-border">
+                                <div class="video-player icone-audio">
+                                    <iframe id="video3" width="720" height="405" src="h?enablejsapi=1&html5=1&mute=1&controls=1&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="downloads">
+                                <button onclick="exibirLibras(1)" class="video-exibir bt-download-media" type="button"><i class="fas fa-sign-language"></i> Tradutor de libras</button>
+                                <button onclick="exibirLibras(0)" class="video-cancelar bt-download-media" type="button"><i class="fas fa-sign-language"></i> Esconder tradutor</button>
+                                <a target="_blank" href="../../downloads/mooc5/arquivo.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="content">
                 <p><b>Mediar também é motivar!</b> Sem minimizar os desafios que os estudantes enfrentam nessa fase da vida, é importante promover uma visão positiva sobre o protagonismo e a autonomia que realizam na escolha do itinerário formativo e no desenho do projeto de carreira.</p>
-                <p>Aprofundamos as ideias sobre mediação pedagógica a partir da Teoria do Flow (fluxo), do psicólogo Mihaly Csikszentmihalyi (1990/1999), no vídeo a seguir.</p>
+                <p>Aprofundamos as ideias sobre mediação pedagógica a partir da <b>Teoria do Flow</b> (fluxo), do psicólogo Mihaly Csikszentmihalyi (1990/1999), no vídeo a seguir.</p>
             </div>
 
 
