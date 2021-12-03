@@ -333,3 +333,84 @@ h3.texto-central b{
 .mooc5 .audio-gif .icone-pause img:hover{
 	background-color: #020E36;
 }
+
+
+/* Formulario de upload */
+
+.form-arquivo{
+	border: 3px solid #020E36;
+	border-radius: 8px;
+	width: 80%;
+	margin: 10px auto;
+	padding: 10px;
+	background-color: #FEC13B;
+}
+
+.form-arquivo input[type="submit"]  {
+	border-radius: 8px;
+	width: 200px;
+	padding: 14px 45px;
+	background: #020E36;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+	cursor: pointer;
+	border: none;
+	margin: 10px auto;
+}
+
+.form-arquivo input[type="submit"]:hover  {
+	background: #D8A235;
+	color: #020E36;
+}
+
+
+.form-arquivo .input-file-container {
+	position: relative;
+	width: 245px;
+	margin: 20px auto;
+}
+.form-arquivo  .input-file-trigger {
+	display: block;
+	padding: 14px 45px;
+	background: #020E36;
+	color: #fff;
+	font-size: 1em;
+	transition: all .4s;
+	cursor: pointer;
+	border-radius: 8px;
+}
+.form-arquivo  .input-file {
+	position: absolute;
+	top: 0; left: 0;
+	width: 245px;
+	opacity: 0;
+	padding: 14px 0;
+	cursor: pointer;
+}
+.form-arquivo  .input-file:hover + .input-file-trigger,
+.form-arquivo  .input-file:focus + .input-file-trigger,
+.form-arquivo  .input-file-trigger:hover,
+.form-arquivo  .input-file-trigger:focus {
+	background: #111d36;
+	color: #fec13b;
+}
+
+.form-arquivo .file-return {
+	margin: 0;
+}
+.form-arquivo .file-return:not(:empty) {
+	margin: 1em 0;
+}
+.form-arquivo  .file-return {
+	font-style: italic;
+	font-size: .9em;
+	font-weight: bold;
+	text-align: center;
+}
+.form-arquivo .file-return:not(:empty):before {
+	content: "Selected file: ";
+	font-style: normal;
+	font-weight: normal;
+}
