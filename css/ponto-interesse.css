@@ -542,6 +542,12 @@ Main components
   height: 250px;
 }
 
+/* Mooc5 Uni3 Tela 3 */
+.mooc5-uni3-tela3 .cd-single-point .cd-more-info{
+  width: 400px;
+  height: 250px;
+}
+
 
 @media screen and (max-width: 560px) {
   .ponto-imagem.infografico2 .cd-single-point > a {
@@ -1038,6 +1044,32 @@ Main components
 .cd-single-point.mooc5-ponto4-uni4-tela5{
   bottom: 20%;
   left: 31.5%;
+}
+
+/* Mooc5 Uni3 tela3 */
+.cd-single-point.mooc5-ponto1-uni3-tela3{
+  top: 35%;
+  right: 32.5%;
+}
+
+.cd-single-point.mooc5-ponto2-uni3-tela3{
+  top: 47%;
+  left: 31.5%;
+}
+
+.cd-single-point.mooc5-ponto3-uni3-tela3{
+  bottom: 36.5%;
+  right: 33%;
+}
+
+.cd-single-point.mooc5-ponto4-uni3-tela3{
+  bottom: 25%;
+  left: 31.5%;
+}
+
+.cd-single-point.mooc5-ponto5-uni3-tela3{
+  bottom: 16%;
+  left: 72.5%;
 }
 
 
