@@ -4,7 +4,7 @@
     <title>Mentoria</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../../css/mooc5.css?ver=1.1"/>
+    <link rel="stylesheet" href="../../css/mooc5.css?ver=1.2"/>
     <link rel="stylesheet" href="../../css/menu.css?ver=1.2"/>    
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2"/>
     <link rel="stylesheet" href="../../css/ponto-interesse.css?ver=1.7"/>    
@@ -105,12 +105,16 @@
                     </div>
                 </section> 
 
-                <p>Após registrar suas ideias e produzir o seu Projeto de Intervenção, não esqueça de enviá-lo clicando aqui.</p>
+                <p>Após registrar suas ideias e produzir o seu Projeto de Intervenção, não esqueça de enviá-lo no botão abaixo.</p>
 
-                <form action="#" method="post" enctype="multipart/form-data">
-                    <input type="file" name="arquivo">
+                <form action="#" class="form-arquivo" method="post" enctype="multipart/form-data">
+                    <div class="input-file-container">
+                        <input class="input-file" id="arquivo" type="file">
+                        <label tabindex="0" for="arquivo" class="input-file-trigger">Selecione o arquivo...</label>
+                    </div>
+                    <p class="file-return"></p>
                     <input type="submit" value="Enviar" name="">
-                </form>                
+                </form>
                 
             </div>
 
@@ -265,6 +269,28 @@
         $(".option").removeClass("active");
         $(this).addClass("active");
 
+    });
+</script>
+
+<!-- Form Input -->
+<script>
+    document.querySelector("html").classList.add('js');
+
+    var fileInput  = document.querySelector( ".input-file" ),
+        button     = document.querySelector( ".input-file-trigger" ),
+        the_return = document.querySelector(".file-return");
+
+    button.addEventListener( "keydown", function( event ) {
+        if ( event.keyCode == 13 || event.keyCode == 32 ) {
+            fileInput.focus();
+        }
+    });
+    button.addEventListener( "click", function( event ) {
+        fileInput.focus();
+        return false;
+    });
+    fileInput.addEventListener( "change", function( event ) {
+        the_return.innerHTML = this.value;
     });
 </script>
 </body>
