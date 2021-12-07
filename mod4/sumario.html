@@ -1557,13 +1557,15 @@
               porcentagem_geral+=parseFloat(porcentagem);        
             break;
 
-          }        
+          }  
+           
       }else{
         console.log("Não encontrou porcentagem da Unidade");
       }
 
       //aqui verifica se todas as unidades foram finalizadas. Se sim, exibe a unidade de encerramento.   
-      //porcentagem_geral=900;
+      //porcentagem_geral=900; 
+      API.registrarDadosGenericos("porcentagem_geral",(parseFloat(porcentagem_geral)/5)); 
       console.log("\nPorc. Geral="+(parseFloat(porcentagem_geral)/5));  
       if((porcentagem_geral/5)>=80){
         let div_encerramento = document.querySelector("#div-encerramento span a");

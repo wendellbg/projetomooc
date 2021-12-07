@@ -1,0 +1,526 @@
+<!DOCTYPE HTML>
+<html lang="pt_BR">
+<head>
+    <title>Mentoria</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../css/mooc5.css?ver=1.1"/>
+    <link rel="stylesheet" href="../../css/efeito.css?ver=1.2"/>
+    <link rel="stylesheet" href="../../css/atividades-padrao.css" />
+    <link rel="stylesheet" href="../../css/cores-mooc5.css" />
+    <link rel="stylesheet" href="../../css/w3.css" />
+
+    <!-- Botão de Voltar ao Topo -->
+    <script src="../../js/jquery-2.1.1.js"></script>
+    <script src="../../js/bt-topo.js"></script>
+    <script src="../../js/Sortable.js.download"></script>
+    <script src="../../js/Swap.js"></script>
+    
+    <style>
+    </style>
+</head>
+<body class="mooc5">
+<!-- Google Tag Manager (noscript) -->
+<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MK4H2FJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+<!-- End Google Tag Manager (noscript) -->
+
+<div hidden class="content">
+    <p hidden>Layout da página das atividades:</p>
+    <p hidden>Sobre fundo azul escuro, dentro de um retângulo azul ciano em letras azul escuro o número das questões e o texto em letras brancas.</p>
+</div>
+
+<!-- Header -->
+<header id="header">
+	<div class="logo">
+		<a href="tela01.html" accesskey="t">UNIDADE 2</a>
+        <h3>Descoberta: caminhos para o mundo do trabalho</h3>
+	</div>
+</header>
+
+<!-- Main -->
+<section id="main">
+	<div class="inner">
+		<!-- One -->
+		<section id="one" class="wrapper style1">
+
+			<div class="botao-sumario">				
+					<a class="link-progresso" href="../sumario.html"><i class="fas fa-tasks"></i> PROGRESSO</a>
+			</div>
+			<header class="special">
+				<div class="entire-menu">                    
+					<div class="menu-tit">
+						<div class="menu-tit-col1">
+							<h2>Unidade 2 - Avaliação</h2>
+						</div>
+						<div class="menu-tit-col2">
+							<input type="checkbox" id="change-hamburguer" />
+							<a class="hamburguer" href="#">
+								<span></span>
+								<label for="change-hamburguer"></label>
+							</a>
+                            <div class="menu">
+                                <a href="../sumario.html" class='titulo-menu link-menu-atual'>UNIDADE 2</a>
+                                <a href="tela01.html">2.01 - Apresentação</a>
+                                <a href="tela02.html">2.02 - Intervenção com propósito</a>
+                                <a href="tela03.html">2.03 - Mentoria para a Educação Profissional</a>
+                                <a href="tela04.html">2.04 - Empatia com os estudantes</a>
+                                <a href="tela05.html">2.05 - Empatia com os estudantes (continuação)</a>
+                                <a href="tela06.html">2.06 - Pesquisa do contexto escolar</a>
+                                <a href="tela07.html">2.07 - Pesquisa do contexto escolar (continuação)</a>
+                                <a href="tela08.html">2.08 - Design de projeto (momento 1 de 4)</a>
+                                <a href="tela09.html">2.09 - Fechamento</a>                                
+                            </div>
+						</div>
+					</div>
+					
+				</div>
+			</header>
+
+            <!-- Conteúdo -->
+            <div class="content">
+                <div class="atividade" id='atividade-uni2'>
+					<div id='mensagem-alerta'>
+					</div>
+                    <div id='mensagem-tentativas' class="atividades">                        
+					</div>
+                    <form action="#" onsubmit="salvarDados(this); return false;" name="form_atividade_uni2" method="POST">
+                        <div class="questao">
+                            <div class="titulo-questao">Questão 1</div>
+                            <div class="enunciado-questao">
+                                De acordo com o material didático desta unidade, para realizar uma intervenção que realmente ajude os estudantes no processo de escolha de carreira profissional, precisamos estar prontos para:
+                            </div>
+                            <div class="area-respostas">
+                                <div class="linha-respostas">
+                                    <div class='texto-resposta  linha-grande'>
+                                        <input type="checkbox" id='r2_1_1' name='r2_1_1' value="a">
+                                        <label for='r2_1_1' class="texto-opcao">a) Elaborar os projetos de carreira para os estudantes.</label>
+                                    </div>
+                                </div>
+
+                                <div class="linha-respostas">
+                                    <div class='texto-resposta  linha-grande'>
+                                        <input type="checkbox" id='r2_1_2' name='r2_1_2' value="b">
+                                        <label for='r2_1_2' class="texto-opcao">b) Enfrentar preconceitos em relação a certas profissões.</label>
+                                    </div>
+                                </div>
+
+                                <div class="linha-respostas">
+                                    <div class='texto-resposta  linha-grande'>
+                                        <input type="checkbox" id='r2_1_3' name='r2_1_3' value="c">
+                                        <label for="r2_1_3" class="texto-opcao">c) Identificar obstáculos que afastam estudantes do ensino técnico.</label>
+                                    </div>
+                                </div>
+
+                                <div class="linha-respostas">
+                                    <div class='texto-resposta  linha-grande'>
+                                        <input type="checkbox" id='r2_1_4' name='r2_1_4' value="d">
+                                        <label for='r2_1_4' class="texto-opcao">d)  Orientar os estudantes a seguirem as escolhas de carreira feitas pelos seus pais.</label>
+                                    </div>
+                                </div>
+                                <p>&nbsp;</p>
+
+                            </div>
+                        </div>
+                        
+                        <div class="questao">
+                            <div class="titulo-questao">Questão 2</div>														
+                            <div class="enunciado-questao">
+                                No processo de Design Thinking, a etapa Descoberta é composta por dois momentos fundamentais para a elaboração de um projeto de intervenção. São eles:
+                            </div>
+                            <div class="area-respostas">
+                                <div class='opcao-resposta'>
+                                    <input type="radio" name="r2_2" id="r2_2_1" value="a" required>
+                                    <label for="r2_2_1" class="texto-opcao">a) Empatia e Pesquisa.</label>
+                                </div>
+                                <div class="opcao-resposta">
+                                    <input type="radio" name="r2_2" id="r2_2_2" value="b">
+                                    <label for="r2_2_2" class="texto-opcao">b) Inovação e Pesquisa.</label>
+                                </div>
+                                <div class="opcao-resposta">
+                                    <input type="radio" name="r2_2" id="r2_2_3" value="c">
+                                    <label for="r2_2_3" class="texto-opcao">c) Empatia e Autonomia.</label>
+                                </div>
+                                <div class="opcao-resposta">
+                                    <input type="radio" name="r2_2" id="r2_2_4" value="d">
+                                    <label for="r2_2_4" class="texto-opcao">d) Autonomia e Inovação.</label>
+                                </div>                                    
+                            </div>
+                        </div>
+                        <div class="questao">
+                            <div class="titulo-questao">Questão 3</div>
+                            <div class="enunciado-questao">
+                                Dentre as atividades abaixo elencadas, selecione aquelas que podem ajudar o/a professor/a na etapa de <b>Descoberta</b> do contexto escolar.
+                            </div>
+                            <div class="area-respostas">
+                                <div class="linha-respostas">
+                                    <div class='texto-resposta  linha-grande'>
+                                        <input type="checkbox" id='r2_3_1' name='r2_3_1' value="a">
+                                        <label for='r2_3_1' class="texto-opcao">a) Analisar as ações de orientação profissional que a escola já realiza.</label>
+                                    </div>
+                                </div>
+
+                                <div class="linha-respostas">
+                                    <div class='texto-resposta  linha-grande'>
+                                        <input type="checkbox" id='r2_3_2' name='r2_3_2' value="b">
+                                        <label for='r2_3_2' class="texto-opcao">b) Realizar atividades para desenvolver a autonomia dos alunos.</label>
+                                    </div>
+                                </div>
+
+                                <div class="linha-respostas">
+                                    <div class='texto-resposta  linha-grande'>
+                                        <input type="checkbox" id='r2_3_3' name='r2_3_3' value="c">
+                                        <label for="r2_3_3" class="texto-opcao">c) Desenvolver um recurso inovador de comunicação com os estudantes.</label>
+                                    </div>
+                                </div>
+
+                                <div class="linha-respostas">
+                                    <div class='texto-resposta  linha-grande'>
+                                        <input type="checkbox" id='r2_3_4' name='r2_3_4' value="d">
+                                        <label for='r2_3_4' class="texto-opcao">d) Conhecer ações que a escola já realiza com instituições de ensino técnico.</label>
+                                    </div>
+                                </div>
+                                <div class="linha-respostas">
+                                    <div class='texto-resposta  linha-grande'>
+                                        <input type="checkbox" id='r2_3_5' name='r2_3_5' value="e">
+                                        <label for='r2_3_5' class="texto-opcao">e) Identificar parcerias que a escola tem com empresas e profissionais locais.</label>
+                                    </div>
+                                </div>
+                                <div class="linha-respostas">
+                                    <div class='texto-resposta  linha-grande'>
+                                        <input type="checkbox" id='r2_3_6' name='r2_3_6' value="f">
+                                        <label for='r2_3_6' class="texto-opcao">f) Observar os espaços e as rotinas da escola, identificando oportunidades.</label>
+                                    </div>
+                                </div>
+                                <div class="linha-respostas">
+                                    <div class='texto-resposta  linha-grande'>
+                                        <input type="checkbox" id='r2_3_7' name='r2_3_7' value="g">
+                                        <label for='r2_3_7' class="texto-opcao">g) Opinar sobre as profissões que vêm sendo escolhidas pelos alunos.</label>
+                                    </div>
+                                </div>
+                                <div class="linha-respostas">
+                                    <div class='texto-resposta  linha-grande'>
+                                        <input type="checkbox" id='r2_3_8' name='r2_3_8' value="h">
+                                        <label for='r2_3_8' class="texto-opcao">h) Trocar ideias sobre orientação profissional com os colegas da escola.</label>
+                                    </div>
+                                </div>
+                                <div class="linha-respostas">
+                                    <div class='texto-resposta  linha-grande'>
+                                        <input type="checkbox" id='r2_3_9' name='r2_3_9' value="i">
+                                        <label for='r2_3_9' class="texto-opcao">i) Mapear as profissões melhor remuneradas.</label>
+                                    </div>
+                                </div>
+                                <p>&nbsp;</p>
+
+                            </div>
+                        </div>
+                        <div class="botao-atividade">
+							<button type="button" id="botao-atividade-uni2" onclick="salvarDados()" ><i class="fas fa-check"></i> ENVIAR RESPOSTAS</button>
+						</div>
+
+                    </form>
+                    
+                </div>
+            </div>
+
+            <!-- Conteúdo -->
+            <div class="content footer"> 
+                <div class='navegacao'>
+                    <div class="bt-topo">
+                        <a href="#"><i class="fas fa-angle-up"></i></a>
+                    </div>
+                    <!-- <div>
+                        <button class="bt-avanca" type="button"><a href="../uni2/tela01.html">IR PARA UNIDADE 2 ></a></button>
+                    </div>                    -->
+
+                </div>               
+                <!--Rodapé-->
+                <hr/>
+                <div class="row rodape">
+                    <div class="6u 12u$(small)">
+                        <p></p>
+                        <img src="../../img/padrao/logo_mentoria.png" alt="MENTORIA">
+                    </div>
+                    <div class="3u 12u$(small)">
+                        <p>Realização:</p>
+                        <img src="../../img/padrao/logo_mec.png" alt="MEC">
+						<p class="small"><b>Secretaria de Educação Profissional e Tecnológica</b></p>
+                    </div>
+                    <div class="3u 12u$(small)">
+                        <p>Produção:</p>
+                        <img src="../../img/padrao/ifsc.png" alt="IFSC">
+                        <img src="../../img/padrao/ifes.png" alt="IFES">
+                    </div>
+                </div><!--Rodapé-->
+
+            </div>
+        </section>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer id="footer">
+</footer>
+
+<div class="icone-botao-libras">
+    <button onclick="document.getElementById('id01').style.display='block'" type="button" style="border:2px solid #fff !important; border-radius: 8px;"><img src="../../img/padrao/libras.png" alt="Botão de Libras"></button>                        
+
+    <div id="id01" class="w3-modal">
+      <div class="w3-modal-content">
+        <div class="w3-container">
+          <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+            <iframe id="ytplayer" type="text/html" width="300" height="500" src="https://www.youtube.com/embed/wyEkCj7R_08?autoplay=1&mute=1" frameborder="0"/></iframe>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
+<!-- <script src="../../js/funcoes-atividades-novo.js"></script> -->
+
+<script>
+console.clear(screen);
+
+let API = new BridgeRestApi();
+let id_unidade = "mod5_uni2";//modificar
+let id_slide = "mod5/uni2/atividade01.html";//modificar
+let id_atividade = "uni2_ativ1";//modificar
+let revisao_unidade = "uni2_revisao";//modificar
+let proxima_unidade = "../uni3/index.html";//modificar 
+let unidade=2;//modificar   
+let botao = document.getElementById("botao-atividade-uni2");//modificar
+
+//Etapa 1: carregamento da página
+window.addEventListener('load', function(){
+    console.log("carregando a página");        
+    API.obterRespostaAtividade(id_atividade);        
+});
+
+//Enviando formulário
+function salvarDados(){           
+    erros=0;
+    ///////aqui vai pegar os valores de cada exercício.        
+    
+    //Questão 1 - checkbox
+    r2_1_1 = document.form_atividade_uni2.r2_1_1.checked==true ? "v" : "f",
+    r2_1_2 = document.form_atividade_uni2.r2_1_2.checked==true ? "v" : "f",
+    r2_1_3 = document.form_atividade_uni2.r2_1_3.checked==true ? "v" : "f",
+    r2_1_4 = document.form_atividade_uni2.r2_1_4.checked==true ? "v" : "f";
+    
+    //Atividade 2, radio
+    r2_2 = document.form_atividade_uni2.r2_2.value;   
+
+    //Atividade 3, checkbox
+    r2_3_1 = document.form_atividade_uni2.r2_3_1.checked==true ? "v" : "f",
+    r2_3_2 = document.form_atividade_uni2.r2_3_2.checked==true ? "v" : "f",
+    r2_3_3 = document.form_atividade_uni2.r2_3_3.checked==true ? "v" : "f",
+    r2_3_4 = document.form_atividade_uni2.r2_3_4.checked==true ? "v" : "f",
+    r2_3_5 = document.form_atividade_uni2.r2_3_5.checked==true ? "v" : "f",
+    r2_3_6 = document.form_atividade_uni2.r2_3_6.checked==true ? "v" : "f",
+    r2_3_7 = document.form_atividade_uni2.r2_3_7.checked==true ? "v" : "f",
+    r2_3_8 = document.form_atividade_uni2.r2_3_8.checked==true ? "v" : "f",
+    r2_3_9 = document.form_atividade_uni2.r2_3_9.checked==true ? "v" : "f";
+    
+    //testando se todos os exercícios  estão preenchidos.
+    if((r2_2=="")){
+        erros++;             
+    }
+
+    console.log("Resposta 1: "+r2_1_1+", "+r2_1_2+", "+r2_1_3+", "+r2_1_4);
+    console.log("Resposta 2: "+r2_2);
+    console.log("Resposta 3: "+r2_3_1+", "+r2_3_2+", "+r2_3_3+", "+r2_3_4+", "+r2_3_5+", "+r2_3_6+", "+r2_3_7+", "+r2_3_8+", "+r2_3_9);
+
+
+    if(erros>0){
+        //caso algum não esteja preenchido, exibe mensagem de erro
+        mensagem.className = "mensagem-alerta";
+        mensagem.textContent = "Por favor preencha todos os campos";
+        mensagem.style.display = "inline-block";
+        jQuery('body,html').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+    }else{       
+        //se ainda não tiver enviado as respostas, ou se for dentro do máximio de tentativas,
+        // registra as re respostas com as funções da API:
+        console.log("Registrando respostas:");       
+        
+        API.registrarRespostaAtividade({
+            "identificador": "uni2_ativ1",//modificar
+            "questoes": [
+                {                        
+                    "identificador": "r2_1",                    
+                    "gabaritos": [
+                        { "chave": "r2_1_1", "valor": (r3_1_1)},
+                        { "chave": "r2_1_2", "valor": (r3_1_2)},
+                        { "chave": "r2_1_3", "valor": (r3_1_3)},
+                        { "chave": "r2_1_4", "valor": (r3_1_4)}			
+                    ]
+                },{
+                    "identificador": "r2_2",                    
+                    "gabaritos": [
+                        { "chave": "r2_2_1", "valor": (r2_2=="a" ? "v" : "f")},
+                        { "chave": "r2_2_2", "valor": (r2_2=="a" ? "v" : "f")},
+                        { "chave": "r2_2_3", "valor": (r2_2=="a" ? "v" : "f")},                        
+                        { "chave": "r2_2_4", "valor": (r2_2=="a" ? "v" : "f")}                        
+                    ]
+                },{
+                    "identificador": "r2_3",                    
+                    "gabaritos": [
+                        { "chave": "r2_3_1", "valor": (r2_3_1)},
+                        { "chave": "r2_3_2", "valor": (r2_3_2)},
+                        { "chave": "r2_3_3", "valor": (r2_3_3)},
+                        { "chave": "r2_3_4", "valor": (r2_3_4)},
+                        { "chave": "r2_3_5", "valor": (r2_3_5)},                        
+                        { "chave": "r2_3_6", "valor": (r2_3_6)},
+                        { "chave": "r2_3_7", "valor": (r2_3_7)},
+                        { "chave": "r2_3_8", "valor": (r2_3_8)},
+                        { "chave": "r2_3_9", "valor": (r2_3_9)}
+                    ]
+                }
+            ]
+        })           
+    }        		
+};
+
+function valorSelecionado(sel) {
+    var val = sel.selectedIndex;
+    var id = sel.id;   
+    if(val==0){
+        sel.classList.remove("select-respondido");
+    }else{       
+        sel.classList.add("select-respondido");
+    }        
+}
+
+//////////////////////////////////////////////////////////////// Funções Javascript para todas as atividades
+let nota_atividade=0;
+let nota_atividade_nova=0;
+let erros=0;
+let revisao_vista=0;
+let respondido=0;
+
+let mensagem = document.getElementById("mensagem-alerta"); 
+let mensagem_tentativas = document.getElementById("mensagem-tentativas");  
+let texto_mensagem_padrao="Responda às atividades e, ao final, clique em \"Enviar Respostas\". <br />Ficará registrada a nota mais alta.";
+let texto_mensagem_nota="";
+let texto_mensagem_revisao="";
+let texto_mensagem_fim="<br>Você pode prosseguir para a próxima atividade.<br><br><a class='botao-mensagem' href='"+proxima_unidade+"'>PRÓXIMA UNIDADE &#10095;</a><br>";
+
+//Etapa 2: Verifica se alguma resposta já foi enviada:
+window .addEventListener( "evObtemDadosRespostaAtividade" , resultadoObtemRespostaAtividade, false );
+function resultadoObtemRespostaAtividade(evento){
+    //console.log("\nObtendo as respostas: ");
+    console.log("Status do evento: "+evento.detail['status']);          
+
+    //verifica qual o código retornado, para saber se as respostas já foram enviadas alguma vez
+    if(evento.detail["status"]=="200"){           
+        nota_atividade = evento.detail.data.nota;
+        //Monta a mensagem com as nota salva, já que está carregando a página.
+        verifica_nota(nota_atividade,(-1));  
+		respondido=1;      
+    }else{
+        texto_mensagem_nota="<br>Você ainda não respondeu esta atividade!";
+    }
+    exibe_mensagens();
+}
+
+//Aqui vai verificar se a revisão já foi acessada
+window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
+function resultadoObtemDadosGenericos (evento){
+    console.log(evento.detail);
+    //verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez            
+    if(evento.detail["status"]=="200"){
+        console.log(evento.detail["data"]);
+        //Se deu 200, é porque já viu a revisão. Então some o botão de envio.                                                                                                                   
+        revisao_vista=1;                        
+        document.querySelector(".botao-atividade button").style.display="none";
+        texto_mensagem_padrao="<br>Você já verificou o GABARITO, então não pode mais responder esta atividade.";
+        
+    }else{
+        texto_mensagem_revisao="<br>Após acessar o GABARITO, você NÃO poderá enviar novas respostas.";
+    }
+    exibe_mensagens();             
+}
+
+
+//função de controle, pra exibir no console o resultado do envio das respostas (registraRespostaAtividade)
+window.addEventListener( "evRegistraRespostaAtividade" ,resultadoRegistrarRespostaAtividade, false );
+function resultadoRegistrarRespostaAtividade (evento){
+    console.log(evento.detail);
+    nota_atividade_nova= evento.detail.data.notaAtividade;
+    if(evento.detail["status"]=="200"){
+        //se não houver erro, exibe mensagem de OK        
+        mensagem.className = "mensagem-ok";
+		
+		//Se for a unidade 0, não precisa verificar nota
+		if(unidade==0){
+			mensagem.innerHTML="Dados Enviados com sucesso!<br><br><a class='botao-mensagem' href='"+proxima_unidade+"'>PRÓXIMA ATIVIDADE &#10095;</a><br>";	
+		}else{
+			mensagem.innerHTML="Dados Enviados com sucesso!<br />";
+			mensagem.style.display ="inline-block";			
+        	//Monta a mensagem com as notas nova e já salva, já que enviou a atividade.
+        	verifica_nota(nota_atividade,nota_atividade_nova);
+		}        
+                
+    }else{
+        //caso algum não esteja preenchido, exibe mensagem de erro
+        mensagem.className = "mensagem-alerta";
+        mensagem.innerHTML = "Ocorreu algum erro! Tente Novamente...";
+        mensagem.style.display = "inline-block";        
+    }
+    jQuery('body,html').animate({
+        scrollTop: 0
+    }, 800);
+}
+
+function verifica_nota(nota,nota_nova){
+    if(nota_nova>=0){
+        if(nota_nova>nota){
+            nota=nota_nova;
+        }
+        texto_mensagem_nota="<br />Sua nota foi: "+nota_nova+"<br />Sua nota mais alta nesta atividade é: "+nota;                
+    }else{
+        texto_mensagem_nota="<br>Você já respondeu esta atividade.<br>Sua nota mais alta é <b>"+nota+"</b>.";		
+    }
+    if(nota==10){        
+        //Se atingiu a nota 10, pode ver a revisão sem problemas.
+        texto_mensagem_nota=texto_mensagem_nota+"<br>Parabéns! Você atingiu a nota máxima!<br><br><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a><br>";                    
+    }else if(nota>=6){
+        console.log("\nAtingiu a média aqui");                
+        texto_mensagem_nota=texto_mensagem_nota+"<br>Parabéns! Você atingiu a média!<br><br><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a><br>";                
+        //Se já atingiu a média, tem que verificar se a revisão já foi vista.
+        API.obterDadosGenericos(revisao_unidade);
+    }else{
+        //Se não atingiu a média, nem vai exibir o botão de gabarito.
+        texto_mensagem_revisao="<br>Você deve atingir a média para poder ver o gabarito.";
+    }
+    exibe_mensagens();
+}
+
+
+function exibe_mensagens(){        
+    if(unidade==0){        
+        texto_mensagem_revisao="";
+		texto_mensagem_padrao="Responda às atividades e, ao final, clique em \"Enviar Respostas\".";
+		texto_mensagem_fim="<br>Você precisa responder para prosseguir.";	
+
+		if(respondido==1){
+            texto_mensagem_fim="";
+			texto_mensagem_nota="<br>Você já respondeu esta atividade.<br><br><a class='botao-mensagem' href='"+proxima_unidade+"'>PRÓXIMA ATIVIDADE &#10095;</a><br>";		
+			setTimeout(function() {
+    			window.location.href = "tela03.html";
+			}, 6000);		
+		}	
+    }
+    mensagem_tentativas.innerHTML=texto_mensagem_padrao+texto_mensagem_nota+texto_mensagem_revisao+texto_mensagem_fim;
+    mensagem_tentativas.style.display="block";
+    jQuery('body,html').animate({
+        scrollTop: 0
+    }, 800);
+}	
+</script>
+
+</body>
+</html>
