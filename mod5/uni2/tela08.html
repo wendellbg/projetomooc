@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../../css/mooc5.css?ver=1.1"/>
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2"/>
+    <link rel="stylesheet" href="../../css/quiz.css?ver=1.1" />
     <link rel="stylesheet" href="../../css/ponto-interesse.css?ver=1.7"/>
     <link rel="stylesheet" href="../../css/w3.css" />   
    
@@ -42,7 +43,7 @@
                 <div class="entire-menu">
                     <div class="menu-tit">
                         <div class="menu-tit-col1">
-                            <h2>Pesquisa do contexto escolar (continuação)</h2>
+                            <h2>Design de projeto (momento 1 de 4)</h2>
                         </div>
                         <div class="menu-tit-col2">
                             <input type="checkbox" id="change-hamburguer" />
@@ -146,13 +147,118 @@
 <!--                    <p class="legenda">Figura 01 - Fonte: Imagem produzida pela equipe gráfica do projeto</p>-->
 <!--                </div> -->
 
-            </div>
+            </div>            
+
+            <!-- Formulário para o quiz -->
+            <div class="content">
+                <div class="atividade" id='quiz-uni2'>
+                    <div id='mensagem-alerta'>
+                    </div>
+                    <!--<div class="image fit flush largura-90">
+                        <img src="../../img/uni2/MOOC1_Uni2_tela2_capa_quiz.jpg">
+                    </div>-->
+                    <form action="#" onsubmit="salvarDados(this); return false;" name="form_quiz_uni2" method="POST">
+                        <!--<div class="questao">
+                            <div class="titulo-questao-imagem">                                                     
+                                <div class="enunciado-questao">Como foi seu Ensino Médio?</div>
+                                <img src="../../img/uni2/MOOC1_Uni2_tela02_icone_quiz.png" />   
+                            </div>
+                            <div class="area-respostas">
+                                <div class='opcao-resposta'>
+                                    <input type="radio" name="resposta_1" id="resposta_1_1" value="Formação Geral" required>
+                                    <label for="resposta_1_1" class="texto-opcao">Formação Geral</label>
+                                </div>
+                                <div class="opcao-resposta">
+                                    <input type="radio" name="resposta_1" id="resposta_1_2" value="Técnico">
+                                    <label for="resposta_1_2" class="texto-opcao">Técnico</label>
+                                </div>
+                                <div class="opcao-resposta">
+                                    <input type="radio" name="resposta_1" id="resposta_1_3" value="Normal">
+                                    <label for="resposta_1_3" class="texto-opcao">Normal</label>
+                                </div>
+                                <div class="opcao-resposta">
+                                    <input type="radio" name="resposta_1" id="resposta_1_4" value="EJA">
+                                    <label for="resposta_1_4" class="texto-opcao">EJA</label>
+                                </div>
+                                <div class="opcao-resposta">
+                                    <input type="radio" name="resposta_1" id="resposta_1_5" value="PROEJA">
+                                    <label for="resposta_1_5" class="texto-opcao">PROEJA</label>
+                                </div>
+                            </div>
+                        </div>-->
+
+                        <div class="questao">
+                            <div class="titulo-questao-imagem">
+                                <div class="enunciado-questao">Registre suas principais descobertas!<br>
+                                    Escreva no espaço abaixo.<br>Dê preferência aos aspectos sobre os estudantes e a escola mais importantes de serem trabalhados no seu projeto, que permitam planejar uma intervenção voltada à realidade própria da sua escola.</p>
+                                </div>
+                                <img src="../../img/uni2/MOOC1_Uni2_tela02_icone_quiz.png" />   
+                            </div>
+                            <div class="area-respostas">
+                                <textarea class="resposta-texto" id='resposta_2_texto' name='resposta_2_texto' required></textarea>
+                            </div>
+                        </div>
+
+                        <!--<div class="questao">
+                            <div class="titulo-questao-imagem">
+                                <div class="enunciado-questao">Você tem ideia do percentual de seus colegas do terceiro ano do Ensino Médio que entraram na faculdade?</div>
+                                <img src="../../img/uni2/MOOC1_Uni2_tela02_icone_quiz.png" />
+                            </div>
+                            <div class="area-respostas">
+                                <div class="opcao-resposta">
+                                    <input type="radio" name="resposta_3" id="resposta_3_1" value="Menos de 10%" required>
+                                    <label for="resposta_3_1" class="texto-opcao">Menos de 10%</label>
+                                </div>
+                                <div class="opcao-resposta">
+                                    <input type="radio" name="resposta_3" id="resposta_3_2" value="Entre 10 e 20%">
+                                    <label for="resposta_3_2" class="texto-opcao">Entre 10 e 20%</label>
+                                </div>
+                                <div class="opcao-resposta">
+                                    <input type="radio" name="resposta_3" id="resposta_3_3" value="Entre 20 e 50%">
+                                    <label for="resposta_3_3" class="texto-opcao">Entre 20 e 50%</label>
+                                </div>
+                                <div class="opcao-resposta">
+                                    <input type="radio" name="resposta_3" id="resposta_3_4" value="Entre 50 e 70%">
+                                    <label for="resposta_3_4" class="texto-opcao">Entre 50 e 70%</label>
+                                </div>
+                                <div class="opcao-resposta">
+                                    <input type="radio" name="resposta_3" id="resposta_3_5" value="Mais de 70%">
+                                    <label for="resposta_3_5" class="texto-opcao">Mais de 70%</label>
+                                </div>
+                            </div>
+                            <p></p>
+                            
+                            <div class="titulo-questao-imagem">                                                     
+                                <div class="enunciado-questao">E o que te faz chegar à resposta acima?</div>
+                            </div>
+                            <div class="area-respostas">
+                                <textarea class="resposta-texto" id='resposta_3_texto' required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="questao">
+                            <div class="titulo-questao-imagem">                                                     
+                                <div class="enunciado-questao">Na sua opinião, qual a importância de uma formação profissional durante o Ensino Médio?</div>
+                                <img src="../../img/uni2/MOOC1_Uni2_tela02_icone_quiz.png" />
+                            </div>
+                            <div class="area-respostas">
+                                <textarea class="resposta-texto" id='resposta_4_texto' required></textarea>
+                            </div>
+                        </div>-->
+                        <div class="botao-atividade">
+                            <button type="button" id="botao-quiz-uni2" onclick="verifica_quiz_enviado()" ><i class="fas fa-check"></i> ENVIAR RESPOSTAS</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- <a href="testerespostas.html">Clique aqui para ver as respostas</a> -->
+
+            </div>  
 
             <div class="content no-top">
-                <!--<p>Se quiser, <a target="_blank" href="../../downloads/mooc5/Un2-tela08-01.pdf"><button class="bt-link-externo" type="button"><i class="fas fa-external-link-alt"></i> clique aqui</button></a> para acessar a versão em PDF dos passos para criar o design de projeto.</p>-->
+                <p>Se quiser, <a target="_blank" href="../../downloads/mooc5/Un2-tela08-01.pdf"><button class="bt-link-externo" type="button"><i class="fas fa-external-link-alt"></i> clique aqui</button></a> para acessar a versão em PDF dos passos para criar o design de projeto.</p>
 
                 <p>Por fim, avance para as telas de conclusão e da atividade desta unidade.</p> 
-            </div>           
+            </div>         
             
 
             <!-- Conteúdo Footer -->
