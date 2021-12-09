@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../../css/mooc5.css?ver=1.1"/>
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2"/>
+    <link rel="stylesheet" href="../../css/podcast.css?ver=1.2"/>
+    <link rel="stylesheet" href="../../css/video-libras.css?ver=1.0" />
     <link rel="stylesheet" href="../../css/w3.css" />
 
     <!-- Botão de Voltar ao Topo -->
@@ -61,22 +63,33 @@
                         </div>
                     </div>
                 </div>
-            </header>
+            </header>           
 
-           <div class="video">
-               <div class='titulo-video'><span></span></div>
-               <div class='video-player'>
-                   <iframe width="720" height="405" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-               </div>
-               <audio id="playerAudioAD1" class="playerAudioAD" controls="controls" style="width: 100%;">
-                   <source  src="../../downloads/" type="audio/mp3" />Seu navegador não suporta HTML5
-               </audio>
-               <div class="downloads">
-                   <button id="exibir-ad" onclick="exibirAD()" class="bt-download-media" type="button"><i class="fas fa-audio-description"></i> Áudio do vídeo com AD )))</button>
-                   <a target="_blank" href="../../downloads/Un1-video.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do vídeo</button></a>
-                   <a target="_blank" href="../../downloads/mooc5/Mooc5-Uni3-tela5_EDITADO.mp3"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o áudio do vídeo</button></a>
-               </div>
-           </div>
+            <div class="content">  
+
+                <div class="row audio-gif">
+                   <div>
+                       <div class="icone-audio">
+                           <!--<h3>Conversar com estudantes e egressos</h3>-->
+                           <a class='icone-play' onclick="playShowPod1()"><img src="../../img/uni3/MOOC5_Uni3_tela5_img-AUDIO.jpg" alt="Imagem podcast" /></a>
+
+                           <audio id='playerPodcast1' class='controles-podcast' controls='controls'>
+                               <source src="../../downloads/mooc5/Mooc5-Uni3-tela5_EDITADO.mp3" type="audio/mp3" />
+                           </audio>
+
+                           <div class="video-libras no-border">
+                               <div class="video-player icone-audio">
+                                   <iframe id="video1" width="720" height="405" src="https://www.youtube.com/embed/?enablejsapi=1&html5=1&mute=1&controls=1&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                               </div>
+                           </div>
+
+                           <div class="downloads">
+                               <a target="_blank" href="../../downloads/mooc2/Un2-gif1.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+            </div>
 
             <!-- Conteúdo -->
             <div class="content no-top">
