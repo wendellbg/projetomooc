@@ -14,11 +14,8 @@
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
     <script src="../../js/bt-topo.js"></script>
-
-    <!-- Funções de acesso à biblioteca do Avamec-->
-    <script src="../../js/funcoes-5.js"></script>
-
 </head>
+
 <body class="mooc5">
 <!-- Header -->
 <header id="header">
@@ -51,12 +48,12 @@
                             </a>
                             <div class="menu">
                                 <a href="../sumario.html" class='titulo-menu'>UNIDADE 2</a>
-                                <a href="tela01.html" class='link-menu-atual'>2.01 - Apresentação</a>
+                                <a href="tela01.html">2.01 - Apresentação</a>
                                 <a href="tela02.html">2.02 - Intervenção com propósito</a>
                                 <a href="tela03.html">2.03 - Mentoria para a Educação Profissional</a>
                                 <a href="tela04.html">2.04 - Empatia com os estudantes</a>
                                 <a href="tela05.html">2.05 - Empatia com os estudantes (continuação)</a>
-                                <a href="tela06.html">2.06 - Pesquisa do contexto escolar</a>
+                                <a href="tela06.html" class='link-menu-atual'>2.06 - Pesquisa do contexto escolar</a>
                                 <a href="tela07.html">2.07 - Pesquisa do contexto escolar (continuação)</a>
                                 <a href="tela08.html">2.08 - Design de projeto (momento 1 de 4)</a>
                                 <a href="tela09.html">2.09 - Fechamento</a>
@@ -164,6 +161,11 @@
                     <span class="legenda">6 de 9</span>
                 </div>
 
+                <div class="botao-referencias">
+                    <a href="../referencias/index.html" target="_blank"><button>REFERÊNCIAS  &#10095;</button></a></span>
+                </div>
+
+
                 <!--Rodapé-->
                 <hr/>
                 <div class="row rodape">
@@ -223,82 +225,6 @@
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
-<script>
-    console.clear(screen);
-
-    var API = new BridgeRestApi();
-    var id_unidade = "mod3_uni1";
-    var id_slide = "uni1/tela01.html";
-    var progresso = 14;
-    var progressoSalvo;
-    var porcentagem = "porcentagemUni1";
-
-    //Obtendo dados curso
-    window.addEventListener('load', function(){
-        API.obterDadosCurso();
-    })
-
-    window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
-    function resultadoObterDadosCurso(evento){
-        console.log(evento.detail);
-        //antes de registrar a porcentagem, verifica a porcentagem atual:
-        API.obterDadosGenericos(porcentagem);
-    }
-
-
-    //Quando obtém a porcentagem da unidade em questão, executa esta função
-    window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
-    function resultadoObtemDadosGenericos (evento){
-        console.log(evento.detail);
-
-        //testando se o status é 200, unidade já iniciada
-        if(evento.detail["status"]==200){
-            var i=0;
-            var cont = 0;
-            //O evento retorna um vetor. É preciso pesquisar em qual posição está a porcentagem da unidade atual
-            while(i==0){
-                if(evento.detail["data"][cont]["chave"]==porcentagem){
-                    console.log("achou na posição "+cont);
-                    console.log(evento.detail["data"][cont]["chave"]);
-                    i=1;
-                }else{
-                    console.log("não encontrou na posição "+cont);
-                    console.log(evento.detail["data"][cont]["chave"]);
-                    cont=cont+1;
-                    if(cont==10){
-                        i=1;
-                    }
-                }
-
-            }
-
-            //depois que encontrar a posição certa, verifica o progresso atual
-            progressoSalvo = evento.detail["data"][cont]["valor"];
-            console.log("Valor de Porcentagem atual: "+progressoSalvo);
-
-            if(progressoSalvo < progresso){
-                //registrando a porcentagem da Unidade em questão
-                API.registrarDadosGenericos(porcentagem,progresso);
-                console.log('Registrando nova porcentagem: '+progresso);
-            }else{
-                //Se o cursista estiver revendo a tela, o progresso Salvo será maior, então não altera nada.
-                console.log("Porcentagem não alterada.");
-            }
-
-        }else if(evento.detail["status"]==412){
-            //se for status 400, inicia a chave da porcentagem da unidade em questão
-            console.log("Inicializando a porcentagem da unidade");
-            API.registrarDadosGenericos(porcentagem,14);
-        }
-    };
-
-    window.addEventListener('evObtemRegistraDadosGenericos', resultadoRegistrarDadosGenericos, false);
-    function resultadoRegistrarDadosGenericos (evento){
-        console.log("Verificando porcentagem registrada");
-        console.log(evento.detail);
-    };
-
-</script>
 
 <!-- Carrossel -->
 <script>
@@ -307,6 +233,26 @@
         $(this).addClass("active");
 
     });
+</script>
+
+<!-- Funções de acesso à biblioteca do Avamec-->    
+<script src="../../js/funcoes-porcentagem-mooc5-novo.js"></script>
+
+<script>
+    console.clear(screen);
+
+    let API = new BridgeRestApi();
+    let id_unidade = "mod5_uni2";//alterar
+    let id_slide = "mod5/uni2/tela06.html";//alterar
+    let unidade=2;//alterar
+    let tela="uni2tela6";//alterar
+    let ultima_tela = 0; //alterar
+
+    //Obtendo dados curso
+    window.addEventListener('load', function(){        
+        API.obterDadosCurso();
+    });
+   
 </script>
 
 </body>

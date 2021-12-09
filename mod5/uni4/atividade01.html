@@ -162,36 +162,36 @@
                             <div class="area-respostas">
                                 <div class="linha-respostas">
                                     <div class='texto-resposta  linha-grande'>
-                                        <input type="checkbox" id='r3_3_1' name='r3_3_1' value="a">
-                                        <label for='r3_3_1' class="texto-opcao">a) O QUE: são as ações do projeto, que podem ser pensadas de forma isolada, sem existir relações entre elas.</label>
+                                        <input type="checkbox" id='r4_2_1' name='r4_2_1' value="a">
+                                        <label for='r4_2_1' class="texto-opcao">a) O QUE: são as ações do projeto, que podem ser pensadas de forma isolada, sem existir relações entre elas.</label>
                                     </div>
                                 </div>
 
                                 <div class="linha-respostas">
                                     <div class='texto-resposta  linha-grande'>
-                                        <input type="checkbox" id='r3_3_2' name='r3_3_2' value="b">
-                                        <label for='r3_3_2' class="texto-opcao">b) COMO: pode ser escrito como uma sequência de tarefas que estrutura a implantação do projeto.</label>
+                                        <input type="checkbox" id='r4_2_2' name='r4_2_2' value="b">
+                                        <label for='r4_2_2' class="texto-opcao">b) COMO: pode ser escrito como uma sequência de tarefas que estrutura a implantação do projeto.</label>
                                     </div>
                                 </div>
 
                                 <div class="linha-respostas">
                                     <div class='texto-resposta  linha-grande'>
-                                        <input type="checkbox" id='r3_3_3' name='r3_3_3' value="c">
-                                        <label for="r3_3_3" class="texto-opcao">c) QUEM: nome dos autores do projeto, mas que não vão participar da intervenção.</label>
+                                        <input type="checkbox" id='r4_2_3' name='r4_2_3' value="c">
+                                        <label for="r4_2_3" class="texto-opcao">c) QUEM: nome dos autores do projeto, mas que não vão participar da intervenção.</label>
                                     </div>
                                 </div>
 
                                 <div class="linha-respostas">
                                     <div class='texto-resposta  linha-grande'>
-                                        <input type="checkbox" id='r3_3_4' name='r3_3_4' value="d">
-                                        <label for='r3_3_4' class="texto-opcao">d)  ONDE: locais internos e externos à escola onde as ações de intervenção vão acontecer.</label>
+                                        <input type="checkbox" id='r4_2_4' name='r4_2_4' value="d">
+                                        <label for='r4_2_4' class="texto-opcao">d)  ONDE: locais internos e externos à escola onde as ações de intervenção vão acontecer.</label>
                                     </div>
                                 </div>
 
                                 <div class="linha-respostas">
                                     <div class='texto-resposta  linha-grande'>
-                                        <input type="checkbox" id='r3_3_5' name='r3_3_5' value="e">
-                                        <label for='r3_3_5' class="texto-opcao">e)  QUANDO: é o cronograma da intervenção e deve trazer as datas de início e de fim de cada atividade a ser realizada. </label>
+                                        <input type="checkbox" id='r4_2_5' name='r4_2_5' value="e">
+                                        <label for='r4_2_5' class="texto-opcao">e)  QUANDO: é o cronograma da intervenção e deve trazer as datas de início e de fim de cada atividade a ser realizada. </label>
                                     </div>
                                 </div>
                                 <p>&nbsp;</p>
@@ -271,8 +271,8 @@ let id_unidade = "mod5_uni4";//modificar
 let id_slide = "mod5/uni4/atividade01.html";//modificar
 let id_atividade = "uni4_ativ1";//modificar
 let revisao_unidade = "uni4_revisao";//modificar
-let proxima_unidade = "../uni4/index.html";//modificar 
-let unidade=3;//modificar   
+let proxima_unidade = "../uni5/index.html";//modificar 
+let unidade=4;//modificar   
 let botao = document.getElementById("botao-atividade-uni4");//modificar
 
 //Etapa 1: carregamento da página
@@ -287,35 +287,27 @@ function salvarDados(){
     ///////aqui vai pegar os valores de cada exercício.        
     
     
-    //Atividade 1 - select
-    r3_1_1 = document.form_atividade_uni4.r3_1_a.value,
-    r3_1_2 = document.form_atividade_uni4.r3_1_b.value,
-    r3_1_3 = document.form_atividade_uni4.r3_1_c.value,    
-    r3_1_4 = document.form_atividade_uni4.r3_1_d.value,
-    r3_1_5 = document.form_atividade_uni4.r3_1_e.value,
-
-    //Atividade 2 - select
+    //Questão 1 - select
     r4_1_1 = document.form_atividade_uni4.r4_1_a.value,
     r4_1_2 = document.form_atividade_uni4.r4_1_b.value,
-    r4_1_3 = document.form_atividade_uni4.r4_1_c.value;    
-    
-    //Questão 3 - checkbox
-    r3_3_1 = document.form_atividade_uni4.r3_3_1.checked==true ? "v" : "f",
-    r3_3_2 = document.form_atividade_uni4.r3_3_2.checked==true ? "v" : "f",
-    r3_3_3 = document.form_atividade_uni4.r3_3_3.checked==true ? "v" : "f",
-    r3_3_4 = document.form_atividade_uni4.r3_3_4.checked==true ? "v" : "f";
+    r4_1_3 = document.form_atividade_uni4.r4_1_c.value,    
+    r4_1_4 = document.form_atividade_uni4.r4_1_d.value,    
+     
+    //Questão 2 - checkbox
+    r4_2_1 = document.form_atividade_uni4.r4_2_1.checked==true ? "v" : "f",
+    r4_2_2 = document.form_atividade_uni4.r4_2_2.checked==true ? "v" : "f",
+    r4_2_3 = document.form_atividade_uni4.r4_2_3.checked==true ? "v" : "f",
+    r4_2_4 = document.form_atividade_uni4.r4_2_4.checked==true ? "v" : "f",
+    r4_2_5 = document.form_atividade_uni4.r4_2_5.checked==true ? "v" : "f";
     
 
     //testando se todos os exercícios  estão preenchidos.
-    if(r3_1_1=="" || r3_1_2=="" || r3_1_3=="" || r3_1_4=="" || r3_1_5==""){
-        erros++;
-    }else if(r4_1_1=="" || r4_1_2==""|| r4_1_3==""){
-        erros++;       
+    if(r4_1_1=="" || r4_1_2=="" || r4_1_3=="" || r4_1_4=="" ){
+        erros++;    
     }
 
-    console.log("Resposta 1: "+r3_1_1+", "+r3_1_2+", "+r3_1_3+", "+r3_1_4+", "+r3_1_5);
-    console.log("Resposta 2: "+r4_1_1+", "+r4_1_2+", "+r4_1_3);
-    console.log("resposta 3: "+r3_3_1+", "+r3_3_2+", "+r3_3_3+", "+r3_3_4);
+    console.log("Resposta 1: "+r4_1_1+", "+r4_1_2+", "+r4_1_3+", "+r4_1_4);    
+    console.log("resposta 2: "+r4_2_1+", "+r4_2_2+", "+r4_2_3+", "+r4_2_4+", "+r4_2_5);
 
     if(erros>0){
         //caso algum não esteja preenchido, exibe mensagem de erro
@@ -335,28 +327,21 @@ function salvarDados(){
             "identificador": "uni4_ativ1",//modificar
             "questoes": [
                 {                        
-                    "identificador": "r3_1",                    
-                    "gabaritos": [
-                        { "chave": "r3_1_1", "valor": (r3_1_1)},
-                        { "chave": "r3_1_2", "valor": (r3_1_2)},
-                        { "chave": "r3_1_3", "valor": (r3_1_3)},
-                        { "chave": "r3_1_4", "valor": (r3_1_4)},
-                        { "chave": "r3_1_5", "valor": (r3_1_5)}
-                    ]
-                },{
                     "identificador": "r4_1",                    
                     "gabaritos": [
                         { "chave": "r4_1_1", "valor": (r4_1_1)},
                         { "chave": "r4_1_2", "valor": (r4_1_2)},
-                        { "chave": "r4_1_3", "valor": (r4_1_3)}                        
+                        { "chave": "r4_1_3", "valor": (r4_1_3)},
+                        { "chave": "r4_1_4", "valor": (r4_1_4)}
                     ]
                 },{
-                    "identificador": "r3_3",                    
+                    "identificador": "r4_2",                    
                     "gabaritos": [
-                        { "chave": "r3_3_1", "valor": (r3_3_1)},
-                        { "chave": "r3_3_2", "valor": (r3_3_2)},
-                        { "chave": "r3_3_3", "valor": (r3_3_3)},
-                        { "chave": "r3_3_4", "valor": (r3_3_4)}                        
+                        { "chave": "r4_2_1", "valor": (r4_2_1)},
+                        { "chave": "r4_2_2", "valor": (r4_2_2)},
+                        { "chave": "r4_2_3", "valor": (r4_2_3)},                        
+                        { "chave": "r4_2_4", "valor": (r4_2_4)},
+                        { "chave": "r4_2_5", "valor": (r4_2_5)}
                     ]
                 }
             ]

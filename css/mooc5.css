@@ -4,7 +4,7 @@
 @import url(padrao.css?ver=1.5);
 @import url(fontes.css?ver=1.2);
 @import url(menu-top-down.css?ver=1.2);
-@import url(bt-sumario.css);
+@import url(bt-sumario_mooc5.css);
 body{
 	background-color: #eeeeee;
 	/*background-image: url(../img/uni1/bg_mooc1.png);*/
@@ -151,10 +151,10 @@ h1, h2, h3, h4, h5, h6 {
 	border-radius: 8px;
 }
 
-.bt-navegacao:hover,
-.bt-avanca a:hover{
+.navegacao .bt-navegacao:hover,
+.navegacao .bt-avanca a:hover{
 	background-color: #D8A235;
-	color: white;
+	color: #020E36;
 }
 
 .botoes-navegacao a:hover input[type="radio"] + label:before{
@@ -162,24 +162,24 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #020E36;
 }
 
-.bt-avanca.atividades {
+#botao-atividades .bt-avanca.atividades {
 	color: #020E36;
-	background-color: #fec13b;
+	background-color:#D8A235;
 	border-right: 2px solid;
 	border-bottom: 2px solid;
 }
 
-.bt-avanca.atividades a {
+#botao-atividades .bt-avanca.atividades a {
 	color: #020E36;
 }
 
-.bt-avanca.atividades:hover a {
-	color: #fec13b;
+#botao-atividades .bt-avanca.atividades:hover a {
+	color: #D8A235;
 }
 
-.bt-avanca.atividades:hover {
-	background-color: #BF851D;
-	border-color: #fff;
+#botao-atividades .bt-avanca.atividades:hover {	
+	background-color: #020E36 !important;
+	color:#d8a235;
 }
 
 
@@ -413,4 +413,30 @@ h3.texto-central b{
 	content: "Selected file: ";
 	font-style: normal;
 	font-weight: normal;
+}
+
+.botao-referencias a button {
+	border: 2px solid #020E36;
+	background-color: #020E36;
+	color: #fff;	
+    border-radius: 10px;
+    margin:0;
+    padding: 10px 15px;	
+	transition: 0.3s;
+	cursor: pointer;
+	font-size: 1em;
+	font-family: "Affogato-Regular", sans-serif;
+}
+
+.botao-referencias a button:hover{
+	background-color: #d8a235;
+	border-color: #d8a235;
+	color: #020E36;
+	transition: 0.3s;
+}
+
+.botao-referencias button:before{
+	font-family: 'Font Awesome 5 Free';
+    font-weight: 900;	
+	content: "\f022  ";
 }
