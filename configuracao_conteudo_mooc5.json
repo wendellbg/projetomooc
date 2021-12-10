@@ -1,0 +1,508 @@
+[
+	{		
+		"identificador": "mod5_uni0",
+		"nome": "Boas-Vindas",
+		"descricao": "",
+		"permitePorcentagem": "true",
+		"topicos": [{
+			"identificador": "uni0_tela01",
+			"nome": "Mensagem de boas-Vindas",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni0_tela02",
+			"nome": "Boas-Vindas",
+			"identificadorPai": ""	
+		}],
+		"atividades": [
+			{
+				"identificador": "uni0_ativ1",
+				"nomeAtividade": "Questionário Inicial",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "INTEGRAL",
+						"identificador": "r0_1",
+						"enunciado": "Você é...",
+						"gabaritos": [
+							{ "chave": "r0_1_a", "valor": "a", "alternativa": "Professor/gestor do Ensino Fundamental da rede pública." },
+							{ "chave": "r0_1_b", "valor": "b", "alternativa": "Professor/gestor do Ensino Fundamental da rede privada." },
+							{ "chave": "r0_1_c", "valor": "c", "alternativa": "Professor/gestor do Ensino Médio da rede pública." },
+							{ "chave": "r0_1_d", "valor": "d", "alternativa": "Professor/gestor do Ensino Médio da rede privada." },
+							{ "chave": "r0_1_e", "valor": "e", "alternativa": "Outro profissional da Educação." },
+							{ "chave": "r0_1_f", "valor": "f", "alternativa": "Responsável por aluno/a da Educação Básica." },
+							{ "chave": "r0_1_g", "valor": "g", "alternativa": "Aluno/a da Educação Básica." }							
+						]
+					},
+					{
+						"tipoQuestaoString": "INTEGRAL",
+						"identificador": "r0_2",
+						"enunciado": "Qual é sua principal motivação para a realização do curso?",
+						"gabaritos": [							
+							{ "chave": "r0_2_a", "valor": "a", "alternativa": "Aquisição de conhecimentos." },
+							{ "chave": "r0_2_b", "valor": "b", "alternativa": "Solicitação do gestor da escola." },
+							{ "chave": "r0_2_c", "valor": "c", "alternativa": "Necessidade para atuação profissional." },
+							{ "chave": "r0_2_d", "valor": "d", "alternativa": "Ascensão funcional." },
+							{ "chave": "r0_2_e", "valor": "e", "alternativa": "Outros." }							
+						]
+					},
+					{
+						"tipoQuestaoString": "INTEGRAL",
+						"identificador": "r0_3",	
+						"enunciado": "O que você pretende?",
+						"gabaritos": [							
+							{ "chave": "r0_3_a", "valor": "a", "alternativa": "Concluir o curso e receber o certificado." },
+							{ "chave": "r0_3_b", "valor": "b", "alternativa": "Começar a fazer o curso, talvez concluir." },							
+							{ "chave": "r0_3_c", "valor": "c", "alternativa": "Apenas dar uma olhada no curso, por curiosidade." }							
+						]
+					},
+					{
+						"tipoQuestaoString": "INTEGRAL",
+						"identificador": "r0_4",
+						"enunciado": "Quais competências você gostaria de desenvolver neste curso?",
+						"gabaritos": [							
+							{ "chave": "r0_4_a", "valor": "a", "alternativa": "Conhecer as normas e procedimentos relativos ao Novo Ensino Médio em direção à escolha de itinerários formativos." },
+							{ "chave": "r0_4_b", "valor": "b", "alternativa": "Conhecer melhor o itinerário formativo de Formação Técnica e Profissional." },
+							{ "chave": "r0_4_c", "valor": "c", "alternativa": "Compreender melhor os processos de orientação (ou mentoria) educacional e profissional." },
+							{ "chave": "r0_4_d", "valor": "d", "alternativa": "Conhecer os tipos de ações que podem ser realizados para ajudar os estudantes a escolherem seus itinerários." },
+							{ "chave": "r0_4_e", "valor": "e", "alternativa": "Sintonizar os conteúdos de suas componentes curriculares aos itinerários formativos e ao mundo do trabalho." }							
+						]
+					}
+				]
+			}
+		]
+	},{
+		"identificador": "mod5_uni1",	
+		"nome": "Bases para a elaboração do Projeto",
+		"descricao": "",
+		"permitePorcentagem": "true",
+		"topicos": [{
+				"identificador": "uni1_tela01",
+				"nome": "Apresentação",
+				"identificadorPai": ""
+			},{
+				"identificador": "uni1_tela02",
+				"nome": "Contextualização",
+				"identificadorPai": ""
+			},{
+				"identificador": "uni1_tela03",
+				"nome": "Mentoria para a Educação Profissional",
+				"identificadorPai": ""
+			},{
+				"identificador": "uni1_tela04",
+				"nome": "Orientação como design de carreira",
+				"identificadorPai": ""
+			},{
+				"identificador": "uni1_tela05",
+				"nome": "Os motivos da Intervenção",
+				"identificadorPai": ""
+			},{
+				"identificador": "uni1_tela06",
+				"nome": "Fundamentos do Projeto de Intervenção",
+				"identificadorPai": ""
+			},{
+				"identificador": "uni1_tela07",
+				"nome": "Design do projeto de intervenção",
+				"identificadorPai": ""
+			},{
+				"identificador": "uni1_tela08",
+				"nome": "O seu desafio neste curso",
+				"identificadorPai": ""
+			}
+		],
+		"atividades": [
+			{
+				"identificador": "uni1_ativ1",
+				"nomeAtividade": "Avaliação - Unidade 1",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r1_1",
+						"enunciado": "Considerando os cuidados que o docente precisa ter na hora de elaborar um projeto de intervenção voltado à orientação profissional dos estudantes, assinale todas as alternativas corretas:",
+						"gabaritos": [
+							{ "chave": "r1_1_1", "valor": "v", "alternativa": "a) Estabelecer pontes efetivas entre a escola e o mundo do trabalho." },
+							{ "chave": "r1_1_2", "valor": "v", "alternativa": "b) Ajudar os estudantes a conhecer as vantagens da formação técnica e profissional." },
+							{ "chave": "r1_1_3", "valor": "v", "alternativa": "c) Ajudar os estudantes a identificar quais cursos técnicos estão relacionados aos seus interesses vocacionais." },
+							{ "chave": "r1_1_4", "valor": "f", "alternativa": "d) Indicar a escolha das profissões mais conhecidas e das \"profissões do futuro\"." }						
+						]
+					},{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r1_2",
+						"enunciado": "Leia o texto abaixo e selecione as palavras que melhor completam o sentido do texto:",
+						"gabaritos":[
+							{ "chave": "r1_2_1", "valor": "a Pesquisa-Ação", "alternativa": "Palavra 1"},
+							{ "chave": "r1_2_2", "valor": "a própria prática", "alternativa": "Palavra 2"},
+							{ "chave": "r1_2_3", "valor": "o Design Thinking", "alternativa": "Palavra 3"},                        
+							{ "chave": "r1_2_4", "valor": "oportunidades", "alternativa": "Palavra 4"},                        
+							{ "chave": "r1_2_5", "valor": "problemas reais", "alternativa": "Palavra 5"} 
+						]
+					},{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r1_3",
+						"enunciado": "Sobre as etapas de design do projeto de intervenção utilizadas neste curso, leia as descrições e identifique a ordem em que essas etapas devem ser realizadas:",
+						"gabaritos": [
+							{ "chave": "r1_3_1", "valor": "Etapa 1", "alternativa": "a) Momento de buscar empatia com os estudantes e pesquisar os entraves para a escolha da Formação Técnica e Profissional no contexto da escola."},
+							{ "chave": "r1_3_2", "valor": "Etapa 4", "alternativa": "b) Momento de implantar o projeto, bem como testar e avaliar a proposta, pensando em como esta poderia ser melhorada."},
+							{ "chave": "r1_3_3", "valor": "Etapa 2", "alternativa": "c) Momento de organizar, selecionar e sintetizar informações, definindo um problema a ser enfrentado através da intervenção na escola."},
+							{ "chave": "r1_3_4", "valor": "Etapa 3", "alternativa": "d) Momento de pensar em soluções possíveis, selecionar e combinar ideias, considerando quais têm mais chance de dar certo no contexto de intervenção."}							
+						]
+					}
+				]
+			}
+		]	
+	},{		
+		"identificador": "mod5_uni2",
+		"nome": "Descoberta: caminhos para o mundo do trabalho",
+		"descricao": "",
+		"permitePorcentagem": "true",
+		"topicos": [{
+			"identificador": "uni2_tela01",
+			"nome": "Apresentação",
+			"identificadorPai": ""
+		},{			
+			"identificador": "uni2_tela02",
+			"nome": "Intervenção com propósito",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni2_tela03",
+			"nome": "Mentoria para a Educação Profissional",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni2_tela04",
+			"nome": "Empatia com os estudantes",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni2_tela05",
+			"nome": "Empatia com os estudantes (continuação)",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni2_tela06",
+			"nome": "Pesquisa do contexto escolar",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni2_tela07",
+			"nome": "Pesquisa do contexto escolar (continuação)",
+			"identificadorPai": ""	
+		},{
+			"identificador": "uni2_tela08",
+			"nome": "Design de projeto (momento 1 de 4)",
+			"identificadorPai": ""	
+		},{
+			"identificador": "uni2_tela09",
+			"nome": "Fechamento",
+			"identificadorPai": ""	
+		}],
+		"atividades": [
+			{
+				"identificador": "uni2_ativ1",
+				"nomeAtividade": "Avaliação - Unidade 2",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r2_1",
+						"enunciado": "Assinale as alternativas corretas. De acordo com o material didático desta unidade, para realizar uma intervenção que realmente ajude os estudantes no processo de escolha de carreira profissional, precisamos estar prontos para:",
+						"gabaritos": [
+							{ "chave": "r2_1_1", "valor": "f", "alternativa": "a) Elaborar os projetos de carreira para os estudantes." },
+							{ "chave": "r2_1_2", "valor": "v", "alternativa": "b) Enfrentar preconceitos em relação a certas profissões." },
+							{ "chave": "r2_1_3", "valor": "f", "alternativa": "c) Identificar obstáculos que afastam estudantes do Ensino Técnico." },
+							{ "chave": "r2_1_4", "valor": "f", "alternativa": "d) Orientar os estudantes a seguirem as escolhas de carreira feitas pelos seus pais." }	
+						]
+					},{
+						"tipoQuestaoString": "INTEGRAL",
+						"identificador": "r2_2",
+						"enunciado": "No processo de Design Thinking, a etapa de Descoberta é composta por dois momentos fundamentais para a elaboração de um projeto de intervenção. São eles:",
+						"gabaritos": [
+							{ "chave": "r2_2_1", "valor": "v", "alternativa": "a) Empatia e Pesquisa." },																	
+							{ "chave": "r2_2_2", "valor": "f", "alternativa": "b) Inovação e Pesquisa." },																	
+							{ "chave": "r2_2_3", "valor": "f", "alternativa": "c) Empatia e Autonomia." },																	
+							{ "chave": "r2_2_4", "valor": "f", "alternativa": "d) Autonomia e Inovação." }
+						]	
+					},{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r2_3",
+						"enunciado": "Dentre as atividades abaixo elencadas, selecione aquelas que podem ajudar o/a professor/a na etapa de Descoberta do contexto escolar.",
+						"gabaritos": [
+							{ "chave": "r2_3_1", "valor": "v", "alternativa": "a) Analisar as ações de orientação profissional que a escola já realiza." },																	
+							{ "chave": "r2_3_2", "valor": "f", "alternativa": "b) Realizar atividades para desenvolver a autonomia dos alunos." },																	
+							{ "chave": "r2_3_3", "valor": "f", "alternativa": "c) Desenvolver um recurso inovador de comunicação com os estudantes." },																	
+							{ "chave": "r2_3_4", "valor": "v", "alternativa": "d) Conhecer ações que a escola já realiza com instituições de Ensino Técnico." },
+							{ "chave": "r2_3_5", "valor": "v", "alternativa": "e) Identificar parcerias que a escola tem com empresas e profissionais locais." },
+							{ "chave": "r2_3_6", "valor": "v", "alternativa": "f) Observar os espaços e as rotinas da escola, identificando oportunidades." },
+							{ "chave": "r2_3_7", "valor": "f", "alternativa": "g) Opinar sobre as profissões que vêm sendo escolhidas pelos alunos." },
+							{ "chave": "r2_3_8", "valor": "v", "alternativa": "h) Trocar ideias sobre orientação profissional com os colegas da escola." },
+							{ "chave": "r2_3_9", "valor": "f", "alternativa": "i) Mapear as profissões melhor remuneradas." }
+						]	
+					}
+				]
+			}
+		]
+	},{		
+		"identificador": "mod5_uni3",
+		"nome": "Definição: foco e objetivo do projeto",
+		"descricao": "",
+		"permitePorcentagem": "true",
+		"topicos": [{
+			"identificador": "uni3_tela01",
+			"nome": "Apresentação",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni3_tela02",
+			"nome": "Momento de convergência de ideias",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni3_tela03",
+			"nome": "Recorte da situação-problema",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni3_tela04",
+			"nome": "Escolha da abordagem",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni3_tela05",
+			"nome": "Caminhos da Escola para o mundo do trabalho",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni3_tela06",
+			"nome": "A \"pedra\" da indecisão",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni3_tela07",
+			"nome": "A \"pedra\" da desinformação",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni3_tela08",
+			"nome": "A \"pedra\" do medo da transformação",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni3_tela09",
+			"nome": "Definir o objetivo da intervenção",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni3_tela10",
+			"nome": "Design de projeto (momento 2 de 4)",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni3_tela11",
+			"nome": "Fechamento",
+			"identificadorPai": ""
+		}],
+		"atividades": [
+			{
+				"identificador": "uni3_ativ1",
+				"nomeAtividade": "Avaliação - Unidade 3",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r3_1",
+						"enunciado": "Sobre a definição da situação-problema, escolha as palavras que melhor completam o sentido do texto:",
+						"gabaritos": [
+							{ "chave": "r3_1_1", "valor": "definir", "alternativa": "Palavra 1" },
+							{ "chave": "r3_1_2", "valor": "informações", "alternativa": "Palavra 2" },
+							{ "chave": "r3_1_3", "valor": "obstáculos", "alternativa": "Palavra 3" },
+							{ "chave": "r3_1_4", "valor": "planejar", "alternativa": "Palavra 4" },
+							{ "chave": "r3_1_5", "valor": "recortar", "alternativa": "Palavra 5" }		
+						]
+					},{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r3_2",
+						"enunciado": "Ao desenhar um projeto de intervenção, consideramos as \"pedras\" que os estudantes costumam encontrar no caminho entre a Escola e o mundo do trabalho. Identifique qual \"pedra\" melhor define os problemas descritos a seguir:",
+						"gabaritos": [
+							{ "chave": "r3_2_1", "valor": "Pedra da indecisão", "alternativa": "a) Escolher uma profissão não é algo simples. Faz parte da construção da identidade dos jovens, buscando entender o que são e o que desejam tornar-se. Por isso a hesitação em escolher qual carreira seguir." },																	
+							{ "chave": "r3_2_2", "valor": "Pedra da desinformação", "alternativa": "b) Ideias preconceituosas sobre o Ensino Técnico, que relacionam essa formação a valores culturais e fatores socioeconômicos “menores”, atrapalham a escolha da Educação Profissional pelos jovens." },			
+							{ "chave": "r3_2_3", "valor": "Pedra do medo da transformação", "alternativa": "c) Nossa relação com o mundo profissional e a forma como se trabalha mudou muito nas duas últimas décadas. Isso pode despertar temores nos jovens, em especial relacionados aos fatores que impulsionam tal transformação."} 
+						]	
+					},{
+						"tipoQuestaoString":"PROPORCIONAL",
+						"identificador": "r3_3",
+						"enunciado": "Sobre a definição dos objetivos da intervenção, assinale as alternativas verdadeiras.",
+						"gabaritos":[
+							{"chave": "r3_3_1","valor": "v", "alternativa": "a) É importante considerar os obstáculos que os estudantes enfrentam para elaborar um projeto de carreira para definir a situação-problema que será enfrentada através da intervenção."},
+							{"chave": "r3_3_2","valor": "f", "alternativa": "b) No momento de definir o objetivo, não é necessário pensar sobre qual abordagem pedagógica será utilizada, basta considerar quem participará da intervenção."},
+							{"chave": "r3_3_3","valor": "v", "alternativa": "c) Ao criar o seu objeto, você deve prestar atenção no verbo escolhido, pois ele especifica a ação pedagógica que será realizada na intervenção."},
+							{"chave": "r3_3_4","valor": "f", "alternativa": "d) Se o objetivo é desenvolver as competências de pesquisa de cursos técnicos, é recomendado realizar aulas expositivas e promover visitação em universidades locais."}							
+						]
+					}
+				]
+			},{
+				"identificador": "uni3_ativ2",
+				"nomeAtividade": "Avaliação - Unidade 3 - Questão Discursiva",
+				"questoes":[
+					{
+						"tipoQuestaoString": "MODERADA",
+						"identificador": "r3_4",
+						"tipoEnvio": "TEXTO",
+						"enunciado": "Dentre as possibilidades de intervenções apresentadas no vídeo “Intervenções de desenvolvimento” avalie qual das atividades sugeridas se adaptaria melhor ao seu contexto de atuação e explique o porquê."
+					}
+				]				 
+			}
+		]		
+	},{		
+		"identificador": "mod5_uni4",
+		"nome": "Ideação e planejamento da intervenção",
+		"descricao": "",
+		"permitePorcentagem": "true",
+		"topicos": [{
+			"identificador": "uni4_tela01",
+			"nome": "Apresentação",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni4_tela02",
+			"nome": "Etapa de Ideação",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni4_tela03",
+			"nome": "Ações de orientação profissional",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni4_tela04",
+			"nome": "Design de projeto & Design de carreira",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni4_tela05",
+			"nome": "Criando ações de orientação",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni4_tela06",
+			"nome": "Seleção de atividades e recursos de orientação",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni4_tela07",
+			"nome": "Articulando as ações no projeto",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni4_tela08",
+			"nome": "Escrevendo o Projeto de intervenção",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni4_tela09",
+			"nome": "Design do seu projeto (momento 3 de 4)",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni4_tela10",
+			"nome": "Fechamento",
+			"identificadorPai": ""
+		}],
+		"atividades": [
+			{				
+				"identificador": "uni4_ativ1",
+				"nomeAtividade": "Avaliação - Unidade 4",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r4_1",
+						"enunciado": "Podemos utilizar as etapas do Design Thinking para ajudar os estudantes a planejar suas carreiras. Relacione cada descrição de ação de orientação profissional abaixo às etapas do processo de design:",
+						"gabaritos": [
+							{ "chave": "r4_1_1", "valor": "Definição", "alternativa": "a) Orientar os estudantes na difícil tarefa de definir o foco do próprio projeto de carreira, além de promover a Autogestão." },
+							{ "chave": "r4_1_2", "valor": "Implantação", "alternativa": "b) Orientar os estudantes a colocar em prática o plano de carreira que cada um construiu, desde a escolha do itinerário do Ensino Médio." },
+							{ "chave": "r4_1_3", "valor": "Descoberta", "alternativa": "c) Realizar ações que ajudem os estudantes nos processos de Autoconhecimento e de Exploração profissional e ocupacional." },
+							{ "chave": "r4_1_4", "valor": "Ideação", "alternativa": "d) Orientar os estudantes nos processos de Planejamento e Desenvolvimento da carreira, para que construam seus próprios planos de formação e atuação profissional." }							
+						]
+					},{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r4_2",
+						"enunciado": "Considerando o que deve compor um projeto de intervenção (O que, Como, Quem, Onde e Quando), selecione as afirmações verdadeiras:",
+						"gabaritos": [
+							{ "chave": "r4_2_1", "valor": "f", "alternativa": "a) O QUE: são as ações do projeto, que podem ser pensadas de forma isolada, sem existir relações entre elas." },																	
+							{ "chave": "r4_2_2", "valor": "v", "alternativa": "b) COMO: pode ser escrito como uma sequência de tarefas que estrutura a implantação do projeto." },			
+							{ "chave": "r4_2_3", "valor": "f", "alternativa": "c) QUEM: nome dos autores do projeto, mas que não vão participar da intervenção."},
+							{ "chave": "r4_2_4", "valor": "v", "alternativa": "d) ONDE: locais internos e externos à escola onde as ações de intervenção vão acontecer."},
+							{ "chave": "r4_2_5", "valor": "v", "alternativa": "e) QUANDO: é o cronograma da intervenção e deve trazer as datas de início e de fim de cada atividade a ser realizada."} 
+						]	
+					}
+				]
+			},{
+				"identificador": "uni4_ativ_projeto",
+				"nomeAtividade": "Unidade 4 - Projeto de Intervenção",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "MODERADA",					
+						"identificador": "r4_projeto",
+						"tipoEnvio": "ARQUIVO",
+						"enunciado": "Após registrar suas ideias e produzir o seu Projeto de Intervenção, não esqueça de enviá-lo no botão abaixo."
+					}
+				]
+			}
+		]
+	},{		
+		"identificador": "mod5_uni5",
+		"nome": "Implantação e o ciclo de vida do projeto",
+		"descricao": "",
+		"permitePorcentagem": "true",
+		"topicos": [{
+			"identificador": "uni5_tela01",
+			"nome": "Apresentação",
+			"identificadorPai": ""
+		},{			
+			"identificador": "uni5_tela02",
+			"nome": "Implantação do projeto",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni5_tela03",
+			"nome": "Gestão da intervenção",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni5_tela04",
+			"nome": "Mediação pedagógica",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni5_tela05",
+			"nome": "Comunicação e Didática",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni5_tela06",
+			"nome": "Mediação como convivência",
+			"identificadorPai": ""
+		},{
+			"identificador": "uni5_tela07",
+			"nome": "Avaliação da intervenção",
+			"identificadorPai": ""	
+		},{
+			"identificador": "uni5_tela08",
+			"nome": "Ciclo de vida do projeto",
+			"identificadorPai": ""	
+		},{
+			"identificador": "uni5_tela09",
+			"nome": "Fechamento",
+			"identificadorPai": ""	
+		}],
+		"atividades": [
+			{
+				"identificador": "uni5_ativ1",
+				"nomeAtividade": "Avaliação - Unidade 5",				
+				"questoes": [
+					{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r5_1",
+						"enunciado": "Sobre a gestão do projeto, selecione as palavras que melhor completam o sentido do texto.",
+						"gabaritos": [
+							{ "chave": "r5_1_1", "valor": "intervenção", "alternativa": "Palavra 1" },
+							{ "chave": "r5_1_2", "valor": "projeto", "alternativa": "Palavra 2" },
+							{ "chave": "r5_1_3", "valor": "orientando", "alternativa": "Palavra 3" },
+							{ "chave": "r5_1_4", "valor": "espontânea", "alternativa": "Palavra 4" },
+							{ "chave": "r5_1_5", "valor": "experiências", "alternativa": "Palavra 5" }	,
+							{ "chave": "r5_1_6", "valor": "significativas", "alternativa": "Palavra 6" }	
+						]
+					},{
+						"tipoQuestaoString": "INTEGRAL",
+						"identificador": "r5_2",
+						"enunciado": "Em relação ao papel da mediação pedagógica no projeto de intervenção, assinale a opção correta:",
+						"gabaritos": [
+							{ "chave": "r5_2_1", "valor": "f", "alternativa": "a) A mediação não pode ser considerada gestão, visto que não contempla planejamento, organização e coordenação de atividades." },																	
+							{ "chave": "r5_2_2", "valor": "v", "alternativa": "b) Toda aprendizagem é mediada, seja por ferramentas, técnicas, conceitos ou outros elementos da cultura." },																	
+							{ "chave": "r5_2_3", "valor": "f", "alternativa": "c) A função mediadora do(a) professor(a) limita-se a estimular os estudantes, esperando reações predefinidas." },																	
+							{ "chave": "r5_2_4", "valor": "f", "alternativa": "d) Mediar é resolver conflitos e intervir apenas para apaziguar os ânimos quando surgem tensões." }
+						]	
+					},{
+						"tipoQuestaoString": "PROPORCIONAL",
+						"identificador": "r5_3",
+						"enunciado": "Um projeto de intervenção pode ter continuidade, gerar desdobramentos após implantado, por isto deve ser avaliado após a implantação. Sobre a avaliação da intervenção, selecione as opções verdadeiras:",
+						"gabaritos": [
+							{ "chave": "r5_3_1", "valor": "v", "alternativa": "a) Deve-se criar condições para que todos os participantes do projeto possam colocar suas percepções e compreensões, fazer críticas e sugestões." },																	
+							{ "chave": "r5_3_2", "valor": "v", "alternativa": "b) Deve-se escutar o público participante da intervenção, por exemplo, através de questionários para serem respondidos pelos estudantes, com perguntas sobre a intervenção." },																	
+							{ "chave": "r5_3_3", "valor": "f", "alternativa": "c) A qualidade didática das ações de intervenção deve ser avaliada no início de cada ação, aproveitando o frescor da memória dos estudantes." },																	
+							{ "chave": "r5_3_4", "valor": "f", "alternativa": "d) A cada reimplantação de um projeto de intervenção, é como se estivéssemos começando do zero, pois pouco se aproveita de experiências da intervenção anterior." }							
+						]	
+					}
+				]
+			}
+		]
+	}
+]

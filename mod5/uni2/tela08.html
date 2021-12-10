@@ -153,35 +153,11 @@
                     <!--<div class="image fit flush largura-90">
                         <img src="../../img/uni2/MOOC1_Uni2_tela2_capa_quiz.jpg">
                     </div>-->
-                    <form action="#" onsubmit="salvarDados(this); return false;" name="form_quiz_uni2" method="POST">
-                        <!--<div class="questao">
-                            <div class="titulo-questao-imagem">                                                     
-                                <div class="enunciado-questao">Como foi seu Ensino Médio?</div>
-                                <img src="../../img/uni2/MOOC1_Uni2_tela02_icone_quiz.png" />   
-                            </div>
-                            <div class="area-respostas">
-                                <div class='opcao-resposta'>
-                                    <input type="radio" name="resposta_1" id="resposta_1_1" value="Formação Geral" required>
-                                    <label for="resposta_1_1" class="texto-opcao">Formação Geral</label>
-                                </div>
-                                <div class="opcao-resposta">
-                                    <input type="radio" name="resposta_1" id="resposta_1_2" value="Técnico">
-                                    <label for="resposta_1_2" class="texto-opcao">Técnico</label>
-                                </div>
-                                <div class="opcao-resposta">
-                                    <input type="radio" name="resposta_1" id="resposta_1_3" value="Normal">
-                                    <label for="resposta_1_3" class="texto-opcao">Normal</label>
-                                </div>
-                                <div class="opcao-resposta">
-                                    <input type="radio" name="resposta_1" id="resposta_1_4" value="EJA">
-                                    <label for="resposta_1_4" class="texto-opcao">EJA</label>
-                                </div>
-                                <div class="opcao-resposta">
-                                    <input type="radio" name="resposta_1" id="resposta_1_5" value="PROEJA">
-                                    <label for="resposta_1_5" class="texto-opcao">PROEJA</label>
-                                </div>
-                            </div>
-                        </div>-->
+                    
+                    <div id='mensagem-tentativas' class="atividades">                        
+                    </div>
+                    
+                    <form action="#" onsubmit="verifica_projeto_enviado(this); return false;" name="form_quiz_uni2" method="POST">                       
 
                         <div class="questao">
                             <div class="titulo-questao-imagem">
@@ -191,58 +167,12 @@
                                 <img src="../../img/uni2/MOOC1_Uni2_tela02_icone_quiz.png" />   
                             </div>
                             <div class="area-respostas">
-                                <textarea class="resposta-texto" id='resposta_2_texto' name='resposta_2_texto' required></textarea>
+                                <textarea class="resposta-texto" id='resposta_2_texto' name='resposta_projeto_etapa1' required></textarea>
                             </div>
                         </div>
 
-                        <!--<div class="questao">
-                            <div class="titulo-questao-imagem">
-                                <div class="enunciado-questao">Você tem ideia do percentual de seus colegas do terceiro ano do Ensino Médio que entraram na faculdade?</div>
-                                <img src="../../img/uni2/MOOC1_Uni2_tela02_icone_quiz.png" />
-                            </div>
-                            <div class="area-respostas">
-                                <div class="opcao-resposta">
-                                    <input type="radio" name="resposta_3" id="resposta_3_1" value="Menos de 10%" required>
-                                    <label for="resposta_3_1" class="texto-opcao">Menos de 10%</label>
-                                </div>
-                                <div class="opcao-resposta">
-                                    <input type="radio" name="resposta_3" id="resposta_3_2" value="Entre 10 e 20%">
-                                    <label for="resposta_3_2" class="texto-opcao">Entre 10 e 20%</label>
-                                </div>
-                                <div class="opcao-resposta">
-                                    <input type="radio" name="resposta_3" id="resposta_3_3" value="Entre 20 e 50%">
-                                    <label for="resposta_3_3" class="texto-opcao">Entre 20 e 50%</label>
-                                </div>
-                                <div class="opcao-resposta">
-                                    <input type="radio" name="resposta_3" id="resposta_3_4" value="Entre 50 e 70%">
-                                    <label for="resposta_3_4" class="texto-opcao">Entre 50 e 70%</label>
-                                </div>
-                                <div class="opcao-resposta">
-                                    <input type="radio" name="resposta_3" id="resposta_3_5" value="Mais de 70%">
-                                    <label for="resposta_3_5" class="texto-opcao">Mais de 70%</label>
-                                </div>
-                            </div>
-                            <p></p>
-                            
-                            <div class="titulo-questao-imagem">                                                     
-                                <div class="enunciado-questao">E o que te faz chegar à resposta acima?</div>
-                            </div>
-                            <div class="area-respostas">
-                                <textarea class="resposta-texto" id='resposta_3_texto' required></textarea>
-                            </div>
-                        </div>
-
-                        <div class="questao">
-                            <div class="titulo-questao-imagem">                                                     
-                                <div class="enunciado-questao">Na sua opinião, qual a importância de uma formação profissional durante o Ensino Médio?</div>
-                                <img src="../../img/uni2/MOOC1_Uni2_tela02_icone_quiz.png" />
-                            </div>
-                            <div class="area-respostas">
-                                <textarea class="resposta-texto" id='resposta_4_texto' required></textarea>
-                            </div>
-                        </div>-->
                         <div class="botao-atividade">
-                            <button type="button" id="botao-quiz-uni2" onclick="verifica_quiz_enviado()" ><i class="fas fa-check"></i> ENVIAR RESPOSTAS</button>
+                            <button type="button" id="botao-quiz-uni2" onclick="verifica_projeto_enviado()" ><i class="fas fa-check"></i> ENVIAR RESPOSTAS</button>
                         </div>
                     </form>
                 </div>
@@ -355,9 +285,6 @@
     });
 </script>
 
-<!-- Funções de acesso à biblioteca do Avamec-->    
-<script src="../../js/funcoes-porcentagem-mooc5-novo.js"></script>
-
 <script>
     console.clear(screen);
 
@@ -372,7 +299,154 @@
     window.addEventListener('load', function(){        
         API.obterDadosCurso();
     });
-   
+
+    //**************Dados do MOOC5 *****************//
+
+    //esse vetor tem as quantidades de telas de cada unidade;
+    let quant_telas=[3,8,9,11,10,9];
+    let porcentagem = 0;
+    let teste_boasvindas=0;
+    let teste_envio_resposta=0;
+
+    //Ao carregar a página, obtém os dados do curso
+    window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
+    function resultadoObterDadosCurso(evento){
+        console.log(evento.detail);    
+
+        //Registar a página atual como última visitada
+        API.registrarUltimaPaginaAcessada(id_unidade,id_slide);
+        
+        //Verifica a porcentagem atual da unidade
+        API.obterPorcentagemConclusaoUnidade(id_unidade);     
+    }
+
+    //Quando verifica a porcentagem, aciona o Listender
+    window.addEventListener( "evObtemPorcentagemConclusaoUnidade",resultadoObterPorcentagemConclusaoUnidade, false );
+    function resultadoObterPorcentagemConclusaoUnidade (evento){
+        console .log(evento.detail);
+        console.log("uni atual="+id_unidade+"\nteste boasvindas="+teste_boasvindas);
+        //teste para verificar se O usuário clicou para ver outra unidade sem ter terminado a Unidade de boas-vindas
+        //Se a unidade não for 0 mas o id for, é uma primeira tela testando a porcentagem da unidade de Boas-Vindas
+        if(teste_boasvindas==1){
+            //As primeiras telas de cada unidade virão para cá primeiro
+            console.log("Testando a unidade 0");
+            if(evento.detail["status"]=="200"){
+                porcentagem = evento.detail["data"];
+                if(porcentagem>=100){
+                    //Aqui o usuário já terminou a unidade de Boas-Vindas
+                    teste_boasvindas=0;
+                    API.obterDadosCurso();                
+                }else{
+                    //Caso já tenha começado a unidade 0 mas não tenha 100%, envia para lá
+                    setTimeout(function() {
+                        window.location.href = "../uni0/tela01.html";
+                    }, 0);
+                }
+            }else{
+                //caso não seja 200, é porque a unidade 0 não foi iniciada. Envia o usuário para lá.
+                setTimeout(function() {
+                    window.location.href = "../uni0/tela01.html";
+                }, 0);
+            }
+        }else{           
+            //Retorna ao ritmo normal de todas as telas.
+            //Se encontrar, é porque alguma tela da unidade já foi vista.
+            if(evento.detail["status"]=="200"){
+                //se a unidade já foi iniciada, então vai ter porcentagem.
+                porcentagem = evento.detail["data"];                
+                console.log("\nVerificando a unidade: "+id_unidade+"\nCom a porcentagem: "+porcentagem);
+                //Se a porcentagem já for 100%, testa se esta é a última tela da unidade
+                if(porcentagem==100){  
+                    habilitar_atividade();
+                }else{
+                    //Se a porcentagem ainda não for 100%, então verifica se a tela atual já foi vista.            
+                    API.obterDadosGenericos(tela);   
+                }
+            }else{
+                //Se não encontrar, é porque é a primeira vez que a unidade está sendo vista.
+                //Então basta registrar a porcentagem de uma tela        
+                porcentagem=(Math.round((100/quant_telas[unidade])));        
+                API.registrarPorcentagemConclusaoUnidade(id_unidade,porcentagem);
+
+                //E registrar a tela atual como vista
+                API.registrarDadosGenericos(tela,1);
+            }
+        }
+    }
+
+    window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
+    function resultadoObtemDadosGenericos (evento){    
+        if(verifica_quiz_enviado==1){
+            console.log("Status do evento: "+evento.detail);    
+            //testando se o status é 200, a tela já foi visitada antes
+            if(evento.detail["status"]==200){                        
+                console.log("O texto já foi enviado antes.");
+                mensagem.innerHTML="Você já enviou esta mensagem antes.";
+                mensagem.style.display="block";
+            }else{
+                API.registrarDadosGenericos("resposta_projeto_etapa1",texto_projeto);
+            }
+        }else{
+            console.log("Status do evento: "+evento.detail);    
+            //testando se o status é 200, a tela já foi visitada antes
+            if(evento.detail["status"]==200){                        
+                console.log("Esta tela já foi vista antes");              
+            }else{
+                //Se der outra mensagem, a tela não foi vista ainda.        
+                console.log("Vendo esta tela pela primeira vez.");
+                
+                //então calcula a porcentagem nova e registra no sistema
+                porcentagem=porcentagem+((100/quant_telas[unidade]));
+                console.log("nova Porcentagem:"+porcentagem);
+                if(porcentagem>100){
+                    porcentagem=100;
+                }
+                API.registrarPorcentagemConclusaoUnidade(id_unidade,porcentagem);
+
+                //Registra a tela;        
+                API.registrarDadosGenericos(tela,1);
+            }
+            //Verifica se e se é a última tela
+            habilitar_atividade(); 
+        }               
+    }	
+
+    window .addEventListener( "evObtemRegistraDadosGenericos" ,resultadoRegistrarDadosGenericos, false );
+    function resultadoRegistrarDadosGenericos (evento){
+        console .log(evento.detail);
+        if(evento.detail["status"]==200){                        
+            console.log("A resposta foi enviada com sucesso");
+            mensagem.innerHTML="Sua resposta foi enviada com sucesso!";
+            mensagem.style.display="block";
+        }
+    }
+
+    function habilitar_atividade(){
+        if(ultima_tela==1 && porcentagem>=100 && unidade!=0){
+            console.log("Ativando botão de atividades");        
+            //Ativa o botão de atividades
+            document.querySelector("#botao-atividades button").classList.remove("bt-desativado");                            
+            document.querySelector("#botao-atividades button").classList.add("atividades");        
+        }    
+    }
+
+
+    function verifica_projeto_enviado(){
+        //Função para verificar se a resposta foi enviada
+
+        //Primeiro verifica se o campo está preenchido
+        if(document.form_quiz_uni2.resposta_projeto_etapa1.value == ""){
+            //Mensagem de erro
+            mensagem.innerHTML="Por favor, preencha o campo de texto.";
+            mensagem.style.display="block";
+        }else{
+            texto_projeto = document.form_quiz_uni2.resposta_projeto_etapa1.value;
+            verifica_quiz_enviado=1;
+            API.obterDadosGenericos("resposta_projeto_etapa1");
+        }        
+    }
+
+
 </script>
 
 </body>
