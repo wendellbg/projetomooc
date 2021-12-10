@@ -10,39 +10,18 @@
 
 	<!-- Botão de Voltar ao Topo -->
 	<script src="../../js/jquery-2.1.1.js"></script>
-	<script src="../../js/bt-topo.js"></script>
-	
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'G-SB34EK30YV');
-	</script> -->
-
-	<!-- Google Tag Manager -->
-	<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-MK4H2FJ');</script> -->
-	<!-- End Google Tag Manager -->
+	<script src="../../js/bt-topo.js"></script>	
 </head>
+
 <body class="mooc5">
-<!-- Google Tag Manager (noscript) -->
-<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MK4H2FJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
-<!-- End Google Tag Manager (noscript) -->
 
 <!-- Header -->
-
 <div hidden class="content">
 	<p hidden>O LAYOUT da página principal é composto de fundo branco.</p>
-	<p hidden>No topo, uma faixa esverdeada, curva e convexa.</p>
+	<p hidden>No topo, uma faixa azul escuro, curva e convexa.</p>
 	<p hidden>Ao centro pequenos círculos amarelos e uma sobreposição de linhas, amarela, azul e vermelha nos apresenta formas geométricas incompletas. 
 	<p hidden>À esquerda, uma molécula branca com contorno vermelho suave e à direita, outra, de contorno cinza.</p>
-	<p hidden>E no rodapé, uma faixa esverdeada, curva e convexa. Ao centro pequenos círculos amarelo suave.</p>
+	<p hidden>E no rodapé, uma faixa azul escuro, curva e convexa. Ao centro pequenos círculos amarelo suave.</p>
 	<p hidden>Sobre o layout, centralizado, uma página onde está o conteúdo do curso.</p>
 	<p hidden>Abaixo de cada vídeo, à direita, o ícone do player: “áudio do vídeo com audiodescrição”</p> 
 	<p hidden>E no rodapé da página, as logomarcas:</p> 
@@ -120,6 +99,10 @@
 					<span class="legenda">1 de 2</span>
 				</div>
 
+				<div class="botao-referencias">
+                    <a href="../referencias/index.html" target="_blank"><button>REFERÊNCIAS  &#10095;</button></a></span>
+                </div>
+				
 				<!--Rodapé-->
 				<hr/>
 				<div class="row rodape">
@@ -165,27 +148,24 @@
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
 
 <!-- Funções de acesso à biblioteca do Avamec-->
-<script src="../../js/funcoes-porcentagem-mooc3.js"></script>
+<script src="../../js/funcoes-porcentagem-mooc5-novo.js"></script>
 <script>
 	console.clear(screen);
 
-	var API = new BridgeRestApi();
-	var id_unidade = "mod3_uni0";
-	var id_slide = "mod3/uni0/tela01.html";//alterar
-	var unidade=0;//alterar
-	var tela="uni0tela1";//alterar
+	let API = new BridgeRestApi();
+	let id_unidade = "mod5_uni0";//alterar
+	let id_slide = "mod5/uni0/tela01.html";//alterar
+	let unidade=0;//alterar
+	let tela="uni0tela1";//alterar
+	let ultima_tela = 0; //alterar
 	
 	//Obtendo dados curso
 	window.addEventListener('load', function(){
+		console.log("Verificando os dados do curso");
     	API.obterDadosCurso();
 	});
-	// API.registrarUltimaPaginaAcessada(id_unidade,id_slide);
-	// API.obterUltimaPaginaAcessada();
-	// window .addEventListener( "evObtemUltimaPaginaAcessada" ,resultadoObtemUltimaPaginaAcessada, false );
-	// function resultadoObtemUltimaPaginaAcessada (evento){
-	// 	console .log(evento.detail);
-	// }
-	API.registrarUltimaPaginaAcessada(id_unidade,id_slide);
+
+	
 </script>
 <script>
 

@@ -126,7 +126,7 @@
                                                     <option  id="r5_1_c_3" name="r5_1_c_3" value="intervenção">intervenção</option>
                                                     <option  id="r5_1_c_4" name="r5_1_c_4" value="orientando">orientando</option>
                                                     <option  id="r5_1_c_5" name="r5_1_c_5" value="projeto">projeto</option>
-                                                    <option  id="r5_1_d_6" name="r5_1_d_6" value="significativas">significativas</option>
+                                                    <option  id="r5_1_c_6" name="r5_1_c_6" value="significativas">significativas</option>
                                                 </select>
                                             </div>
                                             as pessoas a fazerem a intervenção acontecer. Essa articulação raramente ocorre de forma 
@@ -310,8 +310,8 @@ let id_unidade = "mod5_uni5";//modificar
 let id_slide = "mod5/uni5/atividade01.html";//modificar
 let id_atividade = "uni5_ativ1";//modificar
 let revisao_unidade = "uni5_revisao";//modificar
-let proxima_unidade = "../uni5/index.html";//modificar 
-let unidade=3;//modificar   
+let proxima_unidade = "../encerramento/index.html";//modificar 
+let unidade=5;//modificar   
 let botao = document.getElementById("botao-atividade-uni5");//modificar
 
 //Etapa 1: carregamento da página
@@ -332,11 +332,10 @@ function salvarDados(){
     r5_1_3 = document.form_atividade_uni5.r5_1_c.value,    
     r5_1_4 = document.form_atividade_uni5.r5_1_d.value,
     r5_1_5 = document.form_atividade_uni5.r5_1_e.value,
+    r5_1_6 = document.form_atividade_uni5.r5_1_f.value,
 
-    //Atividade 2 - select
-    r4_1_1 = document.form_atividade_uni5.r4_1_a.value,
-    r4_1_2 = document.form_atividade_uni5.r4_1_b.value,
-    r4_1_3 = document.form_atividade_uni5.r4_1_c.value;    
+    //Atividade 2 - radio
+    r5_2 = document.form_atividade_uni5.r5_2.value;       
     
     //Questão 3 - checkbox
     r5_3_1 = document.form_atividade_uni5.r5_3_1.checked==true ? "v" : "f",
@@ -346,14 +345,14 @@ function salvarDados(){
     
 
     //testando se todos os exercícios  estão preenchidos.
-    if(r5_1_1=="" || r5_1_2=="" || r5_1_3=="" || r5_1_4=="" || r5_1_5==""){
+    if(r5_1_1=="" || r5_1_2=="" || r5_1_3=="" || r5_1_4=="" || r5_1_5=="" || r5_1_6 ==""){
         erros++;
-    }else if(r4_1_1=="" || r4_1_2==""|| r4_1_3==""){
+    }else if(r5_2==""){
         erros++;       
     }
 
-    console.log("Resposta 1: "+r5_1_1+", "+r5_1_2+", "+r5_1_3+", "+r5_1_4+", "+r5_1_5);
-    console.log("Resposta 2: "+r4_1_1+", "+r4_1_2+", "+r4_1_3);
+    console.log("Resposta 1: "+r5_1_1+", "+r5_1_2+", "+r5_1_3+", "+r5_1_4+", "+r5_1_5+","+r5_1_6);
+    console.log("Resposta 2: "+r5_2);
     console.log("resposta 3: "+r5_3_1+", "+r5_3_2+", "+r5_3_3+", "+r5_3_4);
 
     if(erros>0){
@@ -380,14 +379,16 @@ function salvarDados(){
                         { "chave": "r5_1_2", "valor": (r5_1_2)},
                         { "chave": "r5_1_3", "valor": (r5_1_3)},
                         { "chave": "r5_1_4", "valor": (r5_1_4)},
-                        { "chave": "r5_1_5", "valor": (r5_1_5)}
+                        { "chave": "r5_1_5", "valor": (r5_1_5)},
+                        { "chave": "r5_1_6", "valor": (r5_1_6)}
                     ]
                 },{
-                    "identificador": "r4_1",                    
+                    "identificador": "r5_2",                    
                     "gabaritos": [
-                        { "chave": "r4_1_1", "valor": (r4_1_1)},
-                        { "chave": "r4_1_2", "valor": (r4_1_2)},
-                        { "chave": "r4_1_3", "valor": (r4_1_3)}                        
+                        { "chave": "r5_2_1", "valor": (r5_2=="a" ? "v" : "f")},
+                        { "chave": "r5_2_2", "valor": (r5_2=="b" ? "v" : "f")},
+                        { "chave": "r5_2_3", "valor": (r5_2=="c" ? "v" : "f")},                        
+                        { "chave": "r5_2_4", "valor": (r5_2=="d" ? "v" : "f")}                        
                     ]
                 },{
                     "identificador": "r5_3",                    

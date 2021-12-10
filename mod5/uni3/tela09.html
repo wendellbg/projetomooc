@@ -16,33 +16,10 @@
 
     <!-- Botão de Voltar ao Topo -->
     <script src="../../js/jquery-2.1.1.js"></script>
-    <script src="../../js/bt-topo.js"></script>
-
-    <!-- Funções de acesso à biblioteca do Avamec-->
-    <script src="../../js/funcoes-5.js"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-SB34EK30YV');
-    </script>
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MK4H2FJ');</script>
-    <!-- End Google Tag Manager -->
+    <script src="../../js/bt-topo.js"></script>    
 </head>
+
 <body class="mooc5">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MK4H2FJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <!-- Header -->
 <header id="header">
@@ -75,7 +52,7 @@
                             </a>
                             <div class="menu">
                                 <a href="../sumario.html" class='titulo-menu'>UNIDADE 3</a>
-                                <a href="tela01.html" class='link-menu-atual'>3.01 - Apresentação</a>
+                                <a href="tela01.html">3.01 - Apresentação</a>
                                 <a href="tela02.html">3.02 - Momento de convergência de ideias</a>
                                 <a href="tela03.html">3.03 - Recorte da situação-problema</a>
                                 <a href="tela04.html">3.04 - Escolha da abordagem</a>
@@ -83,9 +60,9 @@
                                 <a href="tela06.html">3.06 - A "pedra" da indecisão</a>
                                 <a href="tela07.html">3.07 - A "pedra" da desinformação</a>
                                 <a href="tela08.html">3.08 - A "pedra" do medo da transformação</a>
-                                <a href="tela09.html">3.09 - Definir o objetivo da intervenção</a>
+                                <a href="tela09.html" class='link-menu-atual'>3.09 - Definir o objetivo da intervenção</a>
                                 <a href="tela10.html">3.10 - Design de projeto (momento 2 de 4)</a>
-                                <a href="tela10.html">3.11 - Fechamento</a>
+                                <a href="tela11.html">3.11 - Fechamento</a>
                             </div>
                         </div>
                     </div>
@@ -194,6 +171,10 @@
                     <span class="legenda">9 de 11</span>
                 </div>
 
+                <div class="botao-referencias">
+                    <a href="../referencias/index.html" target="_blank"><button>REFERÊNCIAS  &#10095;</button></a></span>
+                </div>
+
                 <!--Rodapé-->
                 <hr/>
                 <div class="row rodape">
@@ -253,82 +234,6 @@
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
-<script>
-    console.clear(screen);
-
-    var API = new BridgeRestApi();
-    var id_unidade = "mod3_uni1";
-    var id_slide = "uni1/tela01.html";
-    var progresso = 14;
-    var progressoSalvo;
-    var porcentagem = "porcentagemUni1";
-
-    //Obtendo dados curso
-    window.addEventListener('load', function(){
-        API.obterDadosCurso();
-    })
-
-    window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
-    function resultadoObterDadosCurso(evento){
-        console.log(evento.detail);
-        //antes de registrar a porcentagem, verifica a porcentagem atual:
-        API.obterDadosGenericos(porcentagem);
-    }
-
-
-    //Quando obtém a porcentagem da unidade em questão, executa esta função
-    window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
-    function resultadoObtemDadosGenericos (evento){
-        console.log(evento.detail);
-
-        //testando se o status é 200, unidade já iniciada
-        if(evento.detail["status"]==200){
-            var i=0;
-            var cont = 0;
-            //O evento retorna um vetor. É preciso pesquisar em qual posição está a porcentagem da unidade atual
-            while(i==0){
-                if(evento.detail["data"][cont]["chave"]==porcentagem){
-                    console.log("achou na posição "+cont);
-                    console.log(evento.detail["data"][cont]["chave"]);
-                    i=1;
-                }else{
-                    console.log("não encontrou na posição "+cont);
-                    console.log(evento.detail["data"][cont]["chave"]);
-                    cont=cont+1;
-                    if(cont==10){
-                        i=1;
-                    }
-                }
-
-            }
-
-            //depois que encontrar a posição certa, verifica o progresso atual
-            progressoSalvo = evento.detail["data"][cont]["valor"];
-            console.log("Valor de Porcentagem atual: "+progressoSalvo);
-
-            if(progressoSalvo < progresso){
-                //registrando a porcentagem da Unidade em questão
-                API.registrarDadosGenericos(porcentagem,progresso);
-                console.log('Registrando nova porcentagem: '+progresso);
-            }else{
-                //Se o cursista estiver revendo a tela, o progresso Salvo será maior, então não altera nada.
-                console.log("Porcentagem não alterada.");
-            }
-
-        }else if(evento.detail["status"]==412){
-            //se for status 400, inicia a chave da porcentagem da unidade em questão
-            console.log("Inicializando a porcentagem da unidade");
-            API.registrarDadosGenericos(porcentagem,14);
-        }
-    };
-
-    window.addEventListener('evObtemRegistraDadosGenericos', resultadoRegistrarDadosGenericos, false);
-    function resultadoRegistrarDadosGenericos (evento){
-        console.log("Verificando porcentagem registrada");
-        console.log(evento.detail);
-    };
-
-</script>
 
 <!-- Carrossel -->
 <script>
@@ -337,6 +242,26 @@
         $(this).addClass("active");
 
     });
+</script>
+
+<!-- Funções de acesso à biblioteca do Avamec-->    
+<script src="../../js/funcoes-porcentagem-mooc5-novo.js"></script>
+
+<script>
+    console.clear(screen);
+
+    let API = new BridgeRestApi();
+    let id_unidade = "mod5_uni3";//alterar
+    let id_slide = "mod5/uni3/tela09.html";//alterar
+    let unidade=3;//alterar
+    let tela="uni3tela9";//alterar
+    let ultima_tela = 0; //alterar
+
+    //Obtendo dados curso
+    window.addEventListener('load', function(){        
+        API.obterDadosCurso();
+    });
+   
 </script>
 </body>
 </html>
