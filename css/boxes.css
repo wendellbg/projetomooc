@@ -914,6 +914,13 @@ h3.texto-central b{
 
 }
 
+
+@media screen and (max-width: 560px) {
+	.background .only-desktop{
+		display: none;
+	}
+}
+
 .mooc5 .destaque-texto {
 	background-color: #151730;
 	color: #fff;
