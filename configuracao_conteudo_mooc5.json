@@ -397,17 +397,6 @@
 						]	
 					}
 				]
-			},{
-				"identificador": "uni4_ativ_projeto",
-				"nomeAtividade": "Unidade 4 - Projeto de Intervenção",				
-				"questoes": [
-					{
-						"tipoQuestaoString": "MODERADA",					
-						"identificador": "r4_projeto",
-						"tipoEnvio": "ARQUIVO",
-						"enunciado": "Após registrar suas ideias e produzir o seu Projeto de Intervenção, não esqueça de enviá-lo no botão abaixo."
-					}
-				]
 			}
 		]
 	},{		
