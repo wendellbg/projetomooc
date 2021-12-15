@@ -1461,7 +1461,7 @@
     console.clear(screen);
     let API = new BridgeRestApi();												
     let controle_id_unidade="0";
-    let mooc=4;//alterar
+    let mooc=5;//alterar
     let nome_unidade="";
     let porcentagem_geral=0;
     let unidade0=1;
@@ -1494,7 +1494,7 @@
           //console.log("\nTestando: "+nome_unidade+", Porcentagem="+porcentagem);                      
           //Verifica qual unidade está testando        
           switch (nome_unidade){
-            case "mod4_uni0":
+            case "mod5_uni0":
               console.log("Unidade 0 tem "+(porcentagem)+"% concluída");
               progresso = document.getElementById("progresso-uni0");
               circulo = document.getElementById("circulo-uni0");
@@ -1512,13 +1512,15 @@
                 div3=document.querySelector("#div-uni3 span a");
                 div3.style.display="none";
                 div4=document.querySelector("#div-uni4 span a");
-                div4.style.display="none";                          
+                div4.style.display="none";   
+                div5=document.querySelector("#div-uni5 span a");
+                div5.style.display="none";                          
                 bt_continuar=document.querySelector("#botao-continuar");
                 bt_continuar.style.display="none";              
               }
             break;
 
-            case "mod4_uni1":
+            case "mod5_uni1":
               console.log("Unidade 1 tem "+(porcentagem)+"% concluída");
               progresso = document.getElementById("progresso-uni1");
               circulo = document.getElementById("circulo-uni1");
@@ -1527,7 +1529,7 @@
               porcentagem_geral+=parseFloat(porcentagem);          
             break;
 
-            case "mod4_uni2":
+            case "mod5_uni2":
               console.log("Unidade 2 tem "+(porcentagem)+"% concluída");
               progresso = document.getElementById("progresso-uni2");
               circulo = document.getElementById("circulo-uni2");
@@ -1536,7 +1538,7 @@
               porcentagem_geral+=parseFloat(porcentagem);                    
             break;
 
-            case "mod4_uni3":
+            case "mod5_uni3":
               console.log("Unidade 3 tem "+(porcentagem)+"% concluída");
               progresso = document.getElementById("progresso-uni3");
               circulo = document.getElementById("circulo-uni3");
@@ -1545,10 +1547,19 @@
               porcentagem_geral+=parseFloat(porcentagem);         
             break;
 
-            case "mod4_uni4":
+            case "mod5_uni4":
               console.log("Unidade 4 tem "+(porcentagem)+"% concluída");
               progresso = document.getElementById("progresso-uni4");
               circulo = document.getElementById("circulo-uni4");
+              progresso.innerHTML=""+porcentagem+"%";
+              circulo.className="c100 p"+porcentagem; 
+              porcentagem_geral+=parseFloat(porcentagem);        
+            break;
+
+            case "mod5_uni5":
+              console.log("Unidade 5 tem "+(porcentagem)+"% concluída");
+              progresso = document.getElementById("progresso-uni5");
+              circulo = document.getElementById("circulo-uni5");
               progresso.innerHTML=""+porcentagem+"%";
               circulo.className="c100 p"+porcentagem; 
               porcentagem_geral+=parseFloat(porcentagem);        
@@ -1567,11 +1578,11 @@
       if((porcentagem_geral/5)>=80){
         let div_encerramento = document.querySelector("#div-encerramento span a");
         div_encerramento.style.display="inline-block";
-        API.obterDadosGenericos("mod4_uniE");
+        API.obterDadosGenericos("mod5_uniE");
       }
 
       //Aqui vai aumentando o número de controle até verificar todas as unidades do MOOC
-      if(unidade0==1 && controle_id_unidade<4){
+      if(unidade0==1 && controle_id_unidade<5){
         controle_id_unidade++;
         nome_unidade="mod"+mooc+"_uni"+controle_id_unidade;
         console.log("Controle="+controle_id_unidade);

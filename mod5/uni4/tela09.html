@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="../../css/mooc5.css?ver=1.2"/>
     <link rel="stylesheet" href="../../css/menu.css?ver=1.2"/>    
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2"/>
-    <link rel="stylesheet" href="../../css/ponto-interesse.css?ver=1.7"/>    
+    <link rel="stylesheet" href="../../css/ponto-interesse.css?ver=1.7"/>
+    <link rel="stylesheet" href="../../css/atividades-padrao.css" />    
+    <link rel="stylesheet" href="../../css/cores-mooc5.css" />
     <link rel="stylesheet" href="../../css/w3.css" />
       
 
@@ -83,19 +85,27 @@
                     </div>
                 </section> 
 
-                <div id='mensagem-tentativas' class="atividades">                        
+                <div class="questao">
+                    <div class="enunciado-questao">
+                        <p>Após registrar suas ideias e produzir o seu Projeto de Intervenção, não esqueça de enviá-lo pelo fórum.</p>
+                        <p>
+                            Para postar no fórum, acesse o Menu de Usuário
+                            <span class="texto-alternativo-1"> pelo <u>painel cinza do lado direito da tela</u> </span>
+                            <span class='texto-alternativo-2'> pelo ícone <img src="../../img/uni0/icone_Menu.png" style="margin-bottom: -20px;""> no topo da página</span>
+                            e clique no ícone "Fórum" <img src="../../img/uni0/icone_Forum.png" style="margin-bottom: -20px;" alt="Forum">
+                        </p>
+                    </div>
                 </div>
-
+                <!-- 
                 <p>Após registrar suas ideias e produzir o seu Projeto de Intervenção, não esqueça de enviá-lo no botão abaixo.</p>
-
                 <form action="#" class="form-arquivo" method="post" enctype="multipart/form-data" name="form_arquivo" onclick="envia_arquivo()">
                     <div class="input-file-container">
-                        <input class="input-file" id="arquivo" type="file">
+                        <input class="input-file" id="arquivo" name="arquivo" type="file">
                         <label tabindex="0" for="arquivo" class="input-file-trigger">Selecione o arquivo...</label>
                     </div>
                     <p class="file-return"></p>
                     <input type="submit" value="Enviar" name="">
-                </form>
+                </form> -->
                 
             </div>
 
@@ -220,55 +230,9 @@
     //Obtendo dados curso
     window.addEventListener('load', function(){
         API.obterDadosCurso();
-        API.obterRespostaAtividade("uni4_ativ_projeto");
-    });   
+    });
+   
 </script>
 
-<script>
-    let mensagem = document.getElementById("mensagem-tentativas"); 
-    let arquivo_enviado=0;
-
-    //Verificação da atividade de envio de arquivo
-    window .addEventListener( "evObtemDadosRespostaAtividade" , resultadoObtemRespostaAtividade, false );
-    function resultadoObtemRespostaAtividade(evento){
-        //console.log("\nObtendo as respostas: ");
-        console.log("Status do evento: "+evento.detail['status']);          
-
-        //verifica qual o código retornado, para saber se o arquivo já foi enviadas alguma vez
-        if(evento.detail["status"]=="200"){                       
-            //Se o arquivo já foi enviado, exibe a mensagem
-            arquivo_envidao=1;
-        }
-        exibe_mensagens();
-    }
-
-    function envia_arquivo(){
-        let arquivo = document.querySelector("#arquivo");         
-        API.registrarRespostaAtividadeArquivo('uni4_ativ_projeto');
-    }
-
-    //Verificando se a resposta foi enviada com sucesso e exibindo a mensagem correspondente
-    window .addEventListener( "evRegistraRespostaAtividadeArquivo" ,resultadoRegistrarRespostaAtividadeArquivo, false );
-    function resultadoRegistrarRespostaAtividadeArquivo (evento){
-        console .log(evento.detail);
-        if(evento.detail["status"]=="200"){
-            arquivo_enviado=2;            
-        }else{
-            arquivo_enviado=3;            
-        }
-        exibe_mensagens();
-    }    
-
-    function exibe_mensagens(){        
-        if(arquivo_enviado==1){        
-            mensagem.innerHTML="Você já enviou seu projeto.";       
-        }else if(arquivo_enviado==2){
-            mensagem.innerHTML="Arquivo enviado com sucesso";
-        }else if(arquivo_enviado==3){
-            mensagem.innerHTML="Houve algum erro. Tente novamente.";
-        }
-        mensagem.style.display="block";
-    }	
-</script>
 </body>
 </html>

@@ -162,27 +162,6 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #020E36;
 }
 
-#botao-atividades .bt-avanca.atividades {
-	color: #020E36;
-	background-color:#D8A235;
-	border-right: 2px solid;
-	border-bottom: 2px solid;
-}
-
-#botao-atividades .bt-avanca.atividades a {
-	color: #020E36;
-}
-
-#botao-atividades .bt-avanca.atividades:hover a {
-	color: #D8A235;
-}
-
-#botao-atividades .bt-avanca.atividades:hover {	
-	background-color: #020E36 !important;
-	color:#d8a235;
-}
-
-
 h3.texto-central{
 	background-color: #020E36;
 	background-image: url(../img/padrao/mooc5/bg_slide_dark.png);

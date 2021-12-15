@@ -11,9 +11,9 @@
 
 .mensagem-flutuante{	
 	font-size: 1.2em;
-	position: absolute;
+	position: fixed;
 	width: 70%;
-	margin-top:-5em;
+	top:20%;
 	left: 15%;
 	display: none; 
 	padding: 1em;
@@ -29,5 +29,30 @@
 .mensagem-flutuante.completa{
     color: #151730;
 	background-color: #d8a235;
-	border: 2px solid #151730;
+	border: 2px solid #151730;	
+}
+
+#botao-atividades .bt-avanca.atividades {
+	color: #020E36;
+	background-color:#D8A235;
+	border-right: 2px solid;
+	border-bottom: 2px solid;
+	transition: 0.3s;
+}
+
+#botao-atividades .bt-avanca.atividades a {
+	color: #020E36;
+	transition: 0.3s;
+}
+
+#botao-atividades .bt-avanca.atividades:hover a{
+	color: #D8A235;
+	background-color: #020E36;
+	transition: 0.3s;
+}
+
+#botao-atividades .bt-avanca.atividades:hover{	
+	background-color: #020E36;
+	color:#d8a235;
+	transition: 0.3s;
 }

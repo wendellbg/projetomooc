@@ -321,17 +321,6 @@
 						]
 					}
 				]
-			},{
-				"identificador": "uni3_ativ2",
-				"nomeAtividade": "Avaliação - Unidade 3 - Questão Discursiva",
-				"questoes":[
-					{
-						"tipoQuestaoString": "MODERADA",
-						"identificador": "r3_4",
-						"tipoEnvio": "TEXTO",
-						"enunciado": "Dentre as possibilidades de intervenções apresentadas no vídeo “Intervenções de desenvolvimento” avalie qual das atividades sugeridas se adaptaria melhor ao seu contexto de atuação e explique o porquê."
-					}
-				]				 
 			}
 		]		
 	},{		

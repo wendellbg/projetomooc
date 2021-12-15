@@ -152,10 +152,8 @@
                     </div>
                     <!--<div class="image fit flush largura-90">
                         <img src="../../img/uni2/MOOC1_Uni2_tela2_capa_quiz.jpg">
-                    </div>-->
-                    
-                    <div id='mensagem-tentativas' class="atividades">                        
-                    </div>
+                    </div>-->                   
+                   
                     
                     <form action="#" onsubmit="verifica_projeto_enviado(this); return false;" name="form_quiz_uni2" method="POST">                       
 
@@ -175,9 +173,14 @@
                             <button type="button" id="botao-quiz-uni2" onclick="verifica_projeto_enviado()" ><i class="fas fa-check"></i> ENVIAR RESPOSTAS</button>
                         </div>
                     </form>
+                    
+                    <div id='mensagem-tentativas' class="atividades" style="margin-top: 20px;">                        
+                    </div> 
+                
                 </div>
                 <!-- <a href="testerespostas.html">Clique aqui para ver as respostas</a> -->
-
+                
+                
             </div>  
 
             <div class="content no-top">
@@ -306,7 +309,8 @@
     let quant_telas=[3,8,9,11,10,9];
     let porcentagem = 0;
     let teste_boasvindas=0;
-    let teste_envio_resposta=0;
+    let  verifica_quiz_enviado=0;
+    let mensagem = document.querySelector("#mensagem-tentativas");
 
     //Ao carregar a página, obtém os dados do curso
     window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
@@ -358,6 +362,8 @@
                 //Se a porcentagem já for 100%, testa se esta é a última tela da unidade
                 if(porcentagem==100){  
                     habilitar_atividade();
+                    verifica_quiz_enviado=1;
+                    API.obterDadosGenericos("resposta_projeto_etapa1");
                 }else{
                     //Se a porcentagem ainda não for 100%, então verifica se a tela atual já foi vista.            
                     API.obterDadosGenericos(tela);   
@@ -376,17 +382,30 @@
 
     window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
     function resultadoObtemDadosGenericos (evento){    
+        //verificando se os dados são da porcentagem ou da resposta desta página.
         if(verifica_quiz_enviado==1){
             console.log("Status do evento: "+evento.detail);    
-            //testando se o status é 200, a tela já foi visitada antes
-            if(evento.detail["status"]==200){                        
+            //verificando se a resposta do projeto já foi enviada.
+            if(evento.detail["status"]==200){                     
+                //caso tenha dados, o cursista já respondeu. Exibe a resposta dada anterirmente, desativa o botão.
                 console.log("O texto já foi enviado antes.");
+                mensagem.className = "mensagem-ok";
                 mensagem.innerHTML="Você já enviou esta mensagem antes.";
                 mensagem.style.display="block";
+                document.querySelector("#botao-quiz-uni2").style.display="none";
+
+                let resposta1 = document.form_quiz_uni2.resposta_projeto_etapa1;
+                resposta1.innerHTML= evento.detail["data"][0]["valor"];~
+                resposta1.setAttribute('disabled', true);
+                resposta1.className ="resposta-estatica";
+
             }else{
+                texto_projeto = document.form_quiz_uni2.resposta_projeto_etapa1.value; 
+                console.log("Texto da resposta: "+texto_projeto);
                 API.registrarDadosGenericos("resposta_projeto_etapa1",texto_projeto);
             }
         }else{
+            //aqui entra na parte da porcentagem
             console.log("Status do evento: "+evento.detail);    
             //testando se o status é 200, a tela já foi visitada antes
             if(evento.detail["status"]==200){                        
@@ -408,6 +427,8 @@
             }
             //Verifica se e se é a última tela
             habilitar_atividade(); 
+            verifica_quiz_enviado=1;
+            API.obterDadosGenericos("resposta_projeto_etapa1");
         }               
     }	
 
@@ -416,6 +437,7 @@
         console .log(evento.detail);
         if(evento.detail["status"]==200){                        
             console.log("A resposta foi enviada com sucesso");
+            mensagem.className = "mensagem-ok";
             mensagem.innerHTML="Sua resposta foi enviada com sucesso!";
             mensagem.style.display="block";
         }
@@ -437,6 +459,7 @@
         //Primeiro verifica se o campo está preenchido
         if(document.form_quiz_uni2.resposta_projeto_etapa1.value == ""){
             //Mensagem de erro
+            mensagem.className = "mensagem-alerta";
             mensagem.innerHTML="Por favor, preencha o campo de texto.";
             mensagem.style.display="block";
         }else{
