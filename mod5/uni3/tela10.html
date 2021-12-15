@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../css/efeito.css?ver=1.2"/>
     <link rel="stylesheet" href="../../css/ponto-interesse.css?ver=1.7"/>
     <link rel="stylesheet" href="../../css/carrossel.css?ver=1.1" />
+    <link rel="stylesheet" href="../../css/quiz.css?ver=1.1" />
     <link rel="stylesheet" href="../../css/w3.css" />
 
 
@@ -72,15 +73,54 @@
                <p>Para fechar esta unidade, é momento de escrever a situação-problema e o objetivo do seu projeto de intervenção.</p>
                <p>Antes disso, é importante relembrar o que você descobriu sobre o contexto e o público participante da sua escola. Então, releia as anotações que fez na unidade anterior (etapa Pesquisa e Empatia).</p>
 
-               <p>Agora, considere as anotações acima e defina o foco do seu projeto, respondendo:</p>
-               <p><b>Qual situação-problema pretende enfrentar através da intervenção?</b></p>
+                <form action="#" onsubmit="verifica_projeto_enviado(this); return false;" name="form_quiz_uni3" method="POST">                       
+               
+                    <div class="questao">
+                        <div class="titulo-questao-imagem">
+                            <div class="enunciado-questao">Sua resposta anterior:</div>
+                            <img src="../../img/uni2/MOOC1_Uni2_tela02_icone_quiz.png" /> 
+                        </div>
+                        <div class="area-respostas">
+                            <textarea disabled class="resposta-estatica" id="resposta_1_texto" name="resposta_projeto_etapa1">
+                            </textarea>
+                        </div>
+                    </div>
+                    
+                    <p>Agora, considere as anotações acima e defina o foco do seu projeto, respondendo:</p>
+                    
+                    <div class="questao">
+                        <div class="titulo-questao-imagem">
+                            <div class="enunciado-questao">Qual situação-problema pretende enfrentar através da intervenção?
+                            </div>
+                            <img src="../../img/uni2/MOOC1_Uni2_tela02_icone_quiz.png" />   
+                        </div>
+                        <div class="area-respostas">
+                            <textarea class="resposta-texto" id='resposta_2_texto' placeholder="Digite aqui sua resposta." name='resposta_projeto_etapa2' required></textarea>
+                        </div>
+                    </div>
 
-               <p><b>Qual será o objetivo do seu projeto de intervenção?</b></p>
-               <p>Dica: lembre-se da tela anterior. Escreva seu objetivo, definindo de que forma (abordagem da intervenção), com quem (público participante) e para que (impacto na realidade) fará a intervenção.</p>        
+                    <div class="questao">
+                        <div class="titulo-questao-imagem">
+                            <div class="enunciado-questao">
+                                Qual será o objetivo do seu projeto de intervenção?<br/>
+                                Dica: lembre-se da tela anterior. Escreva seu objetivo, definindo de que forma (abordagem da intervenção), com quem (público participante) e para que (impacto na realidade) fará a intervenção.
+                            </div>
+                            <img src="../../img/uni2/MOOC1_Uni2_tela02_icone_quiz.png" />   
+                        </div>
+                        <div class="area-respostas">
+                            <textarea class="resposta-texto" id='resposta_3_texto' placeholder="Digite aqui sua resposta." name='resposta_projeto_etapa3' required></textarea>
+                        </div>
+                    </div>
 
+                    <div class="botao-atividade">
+                        <button type="button" id="botao-quiz-uni3" onclick="verifica_projeto_enviado()" ><i class="fas fa-check"></i> ENVIAR RESPOSTAS</button>
+                    </div>
 
-            </div>    
-            
+                    <div id='mensagem-tentativas' class="atividades" style="margin-top: 20px;">                        
+                    </div> 
+                </form>
+            </div> 
+               
 
             <!-- Conteúdo Footer -->
             <div class="content footer">
@@ -184,7 +224,7 @@
 
 
 <!-- Funções de acesso à biblioteca do Avamec-->    
-<script src="../../js/funcoes-porcentagem-mooc5-novo.js"></script>
+<!-- <script src="../../js/funcoes-porcentagem-mooc5-novo.js"></script> -->
 
 <script>
     console.clear(screen);
@@ -200,6 +240,190 @@
     window.addEventListener('load', function(){        
         API.obterDadosCurso();
     });
+
+    
+    //**************Dados do MOOC5 *****************//
+
+    //esse vetor tem as quantidades de telas de cada unidade;
+    let quant_telas=[3,8,9,11,10,9];
+    let porcentagem = 0;
+    let teste_boasvindas=0;
+    let verifica_quiz_enviado=0;
+    let mensagem = document.querySelector("#mensagem-tentativas");
+
+    //Ao carregar a página, obtém os dados do curso
+    window .addEventListener( "evObtemDadosCurso" , resultadoObterDadosCurso, false );
+    function resultadoObterDadosCurso(evento){
+        console.log(evento.detail);    
+
+        //Registar a página atual como última visitada
+        API.registrarUltimaPaginaAcessada(id_unidade,id_slide);
+        
+        //Verifica a porcentagem atual da unidade
+        API.obterPorcentagemConclusaoUnidade(id_unidade);     
+    }
+
+    //Quando verifica a porcentagem, aciona o Listender
+    window.addEventListener( "evObtemPorcentagemConclusaoUnidade",resultadoObterPorcentagemConclusaoUnidade, false );
+    function resultadoObterPorcentagemConclusaoUnidade (evento){
+        console .log(evento.detail);
+        console.log("uni atual="+id_unidade+"\nteste boasvindas="+teste_boasvindas);
+        //teste para verificar se O usuário clicou para ver outra unidade sem ter terminado a Unidade de boas-vindas
+        //Se a unidade não for 0 mas o id for, é uma primeira tela testando a porcentagem da unidade de Boas-Vindas
+        if(teste_boasvindas==1){
+            //As primeiras telas de cada unidade virão para cá primeiro
+            console.log("Testando a unidade 0");
+            if(evento.detail["status"]=="200"){
+                porcentagem = evento.detail["data"];
+                if(porcentagem>=100){
+                    //Aqui o usuário já terminou a unidade de Boas-Vindas
+                    teste_boasvindas=0;
+                    API.obterDadosCurso();                
+                }else{
+                    //Caso já tenha começado a unidade 0 mas não tenha 100%, envia para lá
+                    setTimeout(function() {
+                        window.location.href = "../uni0/tela01.html";
+                    }, 0);
+                }
+            }else{
+                //caso não seja 200, é porque a unidade 0 não foi iniciada. Envia o usuário para lá.
+                setTimeout(function() {
+                    window.location.href = "../uni0/tela01.html";
+                }, 0);
+            }
+        }else{           
+            //Retorna ao ritmo normal de todas as telas.
+            //Se encontrar, é porque alguma tela da unidade já foi vista.
+            if(evento.detail["status"]=="200"){
+                //se a unidade já foi iniciada, então vai ter porcentagem.
+                porcentagem = evento.detail["data"];                
+                console.log("\nVerificando a unidade: "+id_unidade+"\nCom a porcentagem: "+porcentagem);
+                //Se a porcentagem já for 100%, testa se esta é a última tela da unidade
+                if(porcentagem==100){  
+                    habilitar_atividade();
+                    verifica_quiz_enviado=1;
+                    API.obterDadosGenericos("resposta_projeto_etapa1");
+                }else{
+                    //Se a porcentagem ainda não for 100%, então verifica se a tela atual já foi vista.            
+                    API.obterDadosGenericos(tela);   
+                }
+            }else{
+                //Se não encontrar, é porque é a primeira vez que a unidade está sendo vista.
+                //Então basta registrar a porcentagem de uma tela        
+                porcentagem=(Math.round((100/quant_telas[unidade])));        
+                API.registrarPorcentagemConclusaoUnidade(id_unidade,porcentagem);
+
+                //E registrar a tela atual como vista
+                API.registrarDadosGenericos(tela,1);
+            }
+        }
+    }
+
+    window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
+    function resultadoObtemDadosGenericos (evento){    
+        console.log(evento);
+        if(verifica_quiz_enviado==1){
+            console.log("Status do evento: "+evento.detail);    
+            //testando se o status é 200, a tela já foi visitada antes
+            if(evento.detail["status"]==200){                        
+                console.log("A etapa 1 já foi enviada.");
+                console.log("Texto: "+evento.detail["data"][0]["valor"]);
+                document.form_quiz_uni3.resposta_projeto_etapa1.innerHTML= evento.detail["data"][0]["valor"];
+                verifica_quiz_enviado=2;
+                API.obterDadosGenericos("resposta_projeto_etapa2");
+            }else{
+                mensagem.className = "mensagem-alerta";  
+                mensagem.innerHTML="Você Precisa responder a questão da Unidade 2 primeiro! <br /> Clique <a href='../uni2/tela08.html'>aqui</a> para isso.";
+                mensagem.style.display="block";            
+                document.querySelector("#botao_quiz_uni3").style.display="none";
+            }
+        }else if(verifica_quiz_enviado==2){
+            if(evento.detail["status"]==200){
+                console.log("O texto já foi enviado antes.");
+                mensagem.className = "mensagem-ok";  
+                mensagem.innerHTML="Você já enviou estas respostas.";
+                mensagem.style.display="block";
+                document.querySelector("#botao-quiz-uni3").style.display="none";
+                
+                let resposta2 = document.form_quiz_uni3.resposta_projeto_etapa2;
+                resposta2.innerHTML= evento.detail["data"][0]["valor"];~
+                resposta2.setAttribute('disabled', true);
+                resposta2.className ="resposta-estatica";                
+                verifica_quiz_enviado=3;
+                API.obterDadosGenericos("resposta_projeto_etapa3");
+            }                    
+        }else if(verifica_quiz_enviado==3){
+            if(evento.detail["status"]==200){
+                let resposta3 = document.form_quiz_uni3.resposta_projeto_etapa3;
+                resposta3.innerHTML= evento.detail["data"][0]["valor"];~
+                resposta3.setAttribute('disabled', true);
+                resposta3.className ="resposta-estatica";;
+            }
+        }else{
+            console.log("Status do evento: "+evento.detail);    
+            //testando se o status é 200, a tela já foi visitada antes
+            if(evento.detail["status"]==200){                        
+                console.log("Esta tela já foi vista antes");              
+            }else{
+                //Se der outra mensagem, a tela não foi vista ainda.        
+                console.log("Vendo esta tela pela primeira vez.");
+                
+                //então calcula a porcentagem nova e registra no sistema
+                porcentagem=porcentagem+((100/quant_telas[unidade]));
+                console.log("nova Porcentagem:"+porcentagem);
+                if(porcentagem>100){
+                    porcentagem=100;
+                }
+                API.registrarPorcentagemConclusaoUnidade(id_unidade,porcentagem);
+
+                //Registra a tela;        
+                API.registrarDadosGenericos(tela,1);
+            }
+            //Verifica se e se é a última tela
+            habilitar_atividade(); 
+            verifica_quiz_enviado=1;
+            API.obterDadosGenericos("resposta_projeto_etapa1");
+        }               
+    }	
+
+    window .addEventListener( "evObtemRegistraDadosGenericos" ,resultadoRegistrarDadosGenericos, false );
+    function resultadoRegistrarDadosGenericos (evento){
+        console .log(evento.detail);
+        if(evento.detail["status"]==200){   
+            mensagem.className = "mensagem-ok";                     
+            console.log("A resposta foi enviada com sucesso");
+            mensagem.innerHTML="Sua resposta foi enviada com sucesso!";
+            mensagem.style.display="block";
+        }
+    }
+
+    function habilitar_atividade(){
+        if(ultima_tela==1 && porcentagem>=100 && unidade!=0){
+            console.log("Ativando botão de atividades");        
+            //Ativa o botão de atividades
+            document.querySelector("#botao-atividades button").classList.remove("bt-desativado");                            
+            document.querySelector("#botao-atividades button").classList.add("atividades");        
+        }    
+    }
+
+    function verifica_projeto_enviado(){
+        //Função para verificar se a resposta foi enviada
+        //Primeiro verifica se o campo está preenchido
+
+        let resposta2 = document.form_quiz_uni3.resposta_projeto_etapa2.value;
+        let resposta3 = document.form_quiz_uni3.resposta_projeto_etapa3.value;
+        
+        if(resposta2 =="" || resposta3 == ""){
+            //Mensagem de erro
+            mensagem.className = "mensagem-alerta";  
+            mensagem.innerHTML="Por favor, preencha os campos de texto.";
+            mensagem.style.display="block";
+        }else{            
+            verifica_quiz_enviado=1;
+            API.registrarDadosGenericos("resposta_projeto_etapa2",resposta2);
+            API.registrarDadosGenericos("resposta_projeto_etapa3",resposta3);
+        }        
+    }
    
 </script>
 

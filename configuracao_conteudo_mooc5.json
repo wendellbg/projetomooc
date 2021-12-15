@@ -321,17 +321,6 @@
 						]
 					}
 				]
-			},{
-				"identificador": "uni3_ativ2",
-				"nomeAtividade": "Avaliação - Unidade 3 - Questão Discursiva",
-				"questoes":[
-					{
-						"tipoQuestaoString": "MODERADA",
-						"identificador": "r3_4",
-						"tipoEnvio": "TEXTO",
-						"enunciado": "Dentre as possibilidades de intervenções apresentadas no vídeo “Intervenções de desenvolvimento” avalie qual das atividades sugeridas se adaptaria melhor ao seu contexto de atuação e explique o porquê."
-					}
-				]				 
 			}
 		]		
 	},{		
@@ -406,17 +395,6 @@
 							{ "chave": "r4_2_4", "valor": "v", "alternativa": "d) ONDE: locais internos e externos à escola onde as ações de intervenção vão acontecer."},
 							{ "chave": "r4_2_5", "valor": "v", "alternativa": "e) QUANDO: é o cronograma da intervenção e deve trazer as datas de início e de fim de cada atividade a ser realizada."} 
 						]	
-					}
-				]
-			},{
-				"identificador": "uni4_ativ_projeto",
-				"nomeAtividade": "Unidade 4 - Projeto de Intervenção",				
-				"questoes": [
-					{
-						"tipoQuestaoString": "MODERADA",					
-						"identificador": "r4_projeto",
-						"tipoEnvio": "ARQUIVO",
-						"enunciado": "Após registrar suas ideias e produzir o seu Projeto de Intervenção, não esqueça de enviá-lo no botão abaixo."
 					}
 				]
 			}
