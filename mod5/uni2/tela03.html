@@ -94,7 +94,7 @@
                                     <source src="../../downloads/mooc5/Mooc5-Uni2-tela3-1_EDITADO.mp3" type="audio/mp3" />
                                 </audio>
 
-                                <div class="video-libras no-border">
+                                <div class="video-libras 12u 12u$(small)">
                                     <div class="video-player icone-audio">
                                         <iframe id="video1" width="720" height="405" src="?enablejsapi=1&html5=1&mute=1&controls=1&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
@@ -115,7 +115,7 @@
                                     <source src="../../downloads/mooc5/Mooc5-Uni2-tela3-2_EDITADO.mp3" type="audio/mp3" />
                                 </audio>
 
-                                <div class="video-libras no-border">
+                                <div class="video-libras 12u 12u$(small)">
                                     <div class="video-player icone-audio">
                                         <iframe id="video2" width="720" height="405" src="?enablejsapi=1&html5=1&mute=1&controls=1&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
@@ -136,7 +136,7 @@
                                     <source src="../../downloads/mooc5/Mooc5-Uni2-tela3-3_EDITADO.mp3" type="audio/mp3" />
                                 </audio>
 
-                                <div class="video-libras no-border">
+                                <div class="video-libras 12u 12u$(small)">
                                     <div class="video-player icone-audio">
                                         <iframe id="video3" width="720" height="405" src="?enablejsapi=1&html5=1&mute=1&controls=1&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
@@ -308,6 +308,68 @@
         API.obterDadosCurso();
     });
    
+</script>
+
+<script>
+
+    function exibirLibras(valor){
+        if(!valor){ // significa que valor = 0
+
+            var x = document.getElementsByClassName("video-libras");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = 'none';
+            }
+
+            var x = document.getElementsByClassName("video-externo");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.remove("9u");
+                x[i].classList.add("12u");
+            }
+
+
+            var x = document.getElementsByClassName("video-cancelar");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = 'none';
+            }
+
+            var x = document.getElementsByClassName("video-exibir");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = 'initial';
+            }
+
+        }else{ // ou não é 0
+
+            var x = document.getElementsByClassName("video-libras");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = 'block';
+            }
+
+            var x = document.getElementsByClassName("video-externo");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.remove("12u");
+                x[i].classList.add("9u");
+            }
+
+            var x = document.getElementsByClassName("video-cancelar");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = 'initial';
+            }
+
+            var x = document.getElementsByClassName("video-exibir");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = 'none';
+            }
+        }
+    }
+
 </script>
 </body>
 </html>
