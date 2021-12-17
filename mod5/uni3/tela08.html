@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../css/ponto-interesse.css?ver=1.7"/>
     <link rel="stylesheet" href="../../css/carrossel.css?ver=1.1" />
     <link rel="stylesheet" href="../../css/podcast.css?ver=1.2"/>
+    <link rel="stylesheet" href="../../css/video-libras.css?ver=1.0" />
     <link rel="stylesheet" href="../../css/w3.css" />
 
 
@@ -120,10 +121,20 @@
                        </div>
                    </div>
                </div>               
-           </div>
+           </div>           
            <audio id='playerPodcast1' class='controles-podcast' controls='controls'>
                <source src="../../downloads/mooc5/Mooc5-Uni3-tela8-1_EDITADO.mp3" type="audio/mp3" />
            </audio>
+           <div class="video-libras 3u 12u$(small)">
+               <div class="video-player icone-audio">
+                   <iframe id="video1" width="720" height="405" src="https://www.youtube.com/embed/Fxe_YDu1VN4?enablejsapi=1&html5=1&mute=1&controls=1&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               </div>
+           </div>
+           <div class="downloads">
+               <button onclick="exibirLibras(1)" class="video-exibir bt-download-media" type="button"><i class="fas fa-sign-language"></i> Tradutor de libras</button>
+               <button onclick="exibirLibras(0)" class="video-cancelar bt-download-media" type="button"><i class="fas fa-sign-language"></i> Esconder tradutor</button>
+               <a target="_blank" href="../../downloads/mooc5/MOOC5-UNIDADE3-Audio01-tela08.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>                                    
+           </div>
 
             <!-- Conteúdo -->
             <div class="content">
@@ -172,6 +183,16 @@
            <audio id='playerPodcast1' class='controles-podcast' controls='controls'>
                <source src="../../downloads/mooc5/Mooc5-Uni3-tela8-2_EDITADO.mp3" type="audio/mp3" />
            </audio>
+           <div class="video-libras 3u 12u$(small)">
+               <div class="video-player icone-audio">
+                   <iframe id="video1" width="720" height="405" src="https://www.youtube.com/embed/3oC1g2HAg7o?enablejsapi=1&html5=1&mute=1&controls=1&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               </div>
+           </div>
+           <div class="downloads">
+               <button onclick="exibirLibras(1)" class="video-exibir bt-download-media" type="button"><i class="fas fa-sign-language"></i> Tradutor de libras</button>
+               <button onclick="exibirLibras(0)" class="video-cancelar bt-download-media" type="button"><i class="fas fa-sign-language"></i> Esconder tradutor</button>
+               <a target="_blank" href="../../downloads/mooc5/MOOC5-UNIDADE3-Audio02-tela08.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>                                    
+           </div>          
 
             <!-- Conteúdo -->
             <div class="content">
@@ -218,6 +239,17 @@
            <audio id='playerPodcast1' class='controles-podcast' controls='controls'>
                <source src="../../downloads/mooc5/Mooc5-Uni3-tela8-3_EDITADO.mp3" type="audio/mp3" />
            </audio>
+           <div class="video-libras 3u 12u$(small)">
+               <div class="video-player icone-audio">
+                   <iframe id="video1" width="720" height="405" src="https://www.youtube.com/embed/BwA50qHQDY0?enablejsapi=1&html5=1&mute=1&controls=1&rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               </div>
+           </div>
+           <div class="downloads">
+               <button onclick="exibirLibras(1)" class="video-exibir bt-download-media" type="button"><i class="fas fa-sign-language"></i> Tradutor de libras</button>
+               <button onclick="exibirLibras(0)" class="video-cancelar bt-download-media" type="button"><i class="fas fa-sign-language"></i> Esconder tradutor</button>
+               <a target="_blank" href="../../downloads/mooc5/MOOC5-UNIDADE3-Audio03-tela08.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do áudio</button></a>                                    
+           </div>
+           
 
             <!-- Conteúdo -->
             <div class="content">
@@ -364,6 +396,68 @@
         API.obterDadosCurso();
     });
    
+</script>
+
+<script>
+
+    function exibirLibras(valor){
+        if(!valor){ // significa que valor = 0
+
+            var x = document.getElementsByClassName("video-libras");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = 'none';
+            }
+
+            var x = document.getElementsByClassName("video-externo");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.remove("9u");
+                x[i].classList.add("12u");
+            }
+
+
+            var x = document.getElementsByClassName("video-cancelar");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = 'none';
+            }
+
+            var x = document.getElementsByClassName("video-exibir");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = 'initial';
+            }
+
+        }else{ // ou não é 0
+
+            var x = document.getElementsByClassName("video-libras");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = 'block';
+            }
+
+            var x = document.getElementsByClassName("video-externo");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.remove("12u");
+                x[i].classList.add("9u");
+            }
+
+            var x = document.getElementsByClassName("video-cancelar");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = 'initial';
+            }
+
+            var x = document.getElementsByClassName("video-exibir");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = 'none';
+            }
+        }
+    }
+
 </script>
 
 </body>
