@@ -91,6 +91,7 @@
                     <source  src="../../ad/mooc5/uni2/estudantes-da-formacao-tecnica-e-profissional COM AD.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
                 </audio>
                 <div class="downloads">
+                    <a target="_blank" href="https://youtu.be/mQe-JpicvhQ"><button class="bt-download-media" type="button"><i class="fas fa-download"></i>Link citado no vídeo</button></a>
                     <button id="exibir-ad" onclick="exibirAD()" class="bt-download-media" type="button"><i class="fas fa-audio-description"></i> Áudio do vídeo com AD )))</button>
                     <a target="_blank" href="../../downloads/mooc5/MOOC5-UNIDADE2-Video01.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do vídeo</button></a>
                     <a target="_blank" href="../../downloads/mooc5/Mooc5-Uni2-video1_EDITADO.mp3"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o áudio do vídeo</button></a>
@@ -102,11 +103,11 @@
                 <div class='video-player'>
                     <iframe width="720" height="405" src="https://www.youtube.com/embed/R51wzMh2BvY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <audio id="playerAudioAD1" class="playerAudioAD" controls="controls" style="width: 100%;">
+                <audio id="playerAudioAD2" class="playerAudioAD" controls="controls" style="width: 100%;">
                     <source  src="../../ad/mooc5/uni2/mapa-de-empatia-dos-estudantes-da-escola COM AD.mp3" type="audio/mp3" />Seu navegador não suporta HTML5
                 </audio>
-                <div class="downloads">
-                    <button id="exibir-ad" onclick="exibirAD()" class="bt-download-media" type="button"><i class="fas fa-audio-description"></i> Áudio do vídeo com AD )))</button>
+                <div class="downloads">                    
+                    <button id="exibir-ad" onclick="exibirAD2()" class="bt-download-media" type="button"><i class="fas fa-audio-description"></i> Áudio do vídeo com AD )))</button>
                     <a target="_blank" href="../../downloads/mooc5/MOOC5-UNIDADE2-Video02.pdf"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o texto do vídeo</button></a>
                     <a target="_blank" href="../../downloads/mooc5/Mooc5-Uni2-video2_EDITADO.mp3"><button class="bt-download-media" type="button"><i class="fas fa-download"></i> Baixe o áudio do vídeo</button></a>
                 </div>
@@ -225,6 +226,22 @@
         }else{
             audioPod.play();
             document.getElementById('playerAudioAD1').style.display='block';
+        }
+
+    }
+</script>
+
+<script>
+    function exibirAD2(){
+
+        var audioPod = document.getElementById('playerAudioAD2');
+
+        if (audioPod.paused == false) {
+            audioPod.pause();
+            document.getElementById('playerAudioAD2').style.display='none';
+        }else{
+            audioPod.play();
+            document.getElementById('playerAudioAD2').style.display='block';
         }
 
     }
