@@ -461,6 +461,7 @@ function resultadoObtemRespostaAtividade(evento){
     //verifica qual o código retornado, para saber se as respostas já foram enviadas alguma vez
     if(evento.detail["status"]=="200"){           
         nota_atividade = evento.detail.data.nota;
+        console.log("Nota já salva: "+nota_atividade);
         //Monta a mensagem com as nota salva, já que está carregando a página.
         verifica_nota(nota_atividade,(-1));  
 		respondido=1;      
@@ -492,9 +493,9 @@ function resultadoObtemDadosGenericos (evento){
 //função de controle, pra exibir no console o resultado do envio das respostas (registraRespostaAtividade)
 window.addEventListener( "evRegistraRespostaAtividade" ,resultadoRegistrarRespostaAtividade, false );
 function resultadoRegistrarRespostaAtividade (evento){
-    console.log(evento.detail);
-    nota_atividade_nova= evento.detail.data.notaAtividade;
+    console.log(evento.detail);       
     if(evento.detail["status"]=="200"){
+        nota_atividade_nova= evento.detail.data.notaAtividade;
         //se não houver erro, exibe mensagem de OK        
         mensagem.className = "mensagem-ok";
 		
@@ -520,6 +521,7 @@ function resultadoRegistrarRespostaAtividade (evento){
 }
 
 function verifica_nota(nota,nota_nova){
+    console.log("Nota já salva: "+nota_atividade+"\nTeste nota: "+nota+"\nteste nota nova: "+nota_nova);
     if(nota_nova>=0){
         if(nota_nova>nota){
             nota=nota_nova;

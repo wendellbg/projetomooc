@@ -362,8 +362,8 @@
                 //Se a porcentagem já for 100%, testa se esta é a última tela da unidade
                 if(porcentagem==100){  
                     habilitar_atividade();
-                    verifica_quiz_enviado=1;
-                    API.obterDadosGenericos("resposta_projeto_etapa1");
+                    // verifica_quiz_enviado=1;
+                    // API.obterDadosGenericos("resposta_projeto_etapa1");
                 }else{
                     //Se a porcentagem ainda não for 100%, então verifica se a tela atual já foi vista.            
                     API.obterDadosGenericos(tela);   
@@ -375,7 +375,8 @@
                 API.registrarPorcentagemConclusaoUnidade(id_unidade,porcentagem);
 
                 //E registrar a tela atual como vista
-                API.registrarDadosGenericos(tela,1);
+                API.registrarDadosGenericos(tela,1);   
+                API.obterDadosGenericos(tela);             
             }
         }
     }
@@ -384,7 +385,7 @@
     function resultadoObtemDadosGenericos (evento){    
         //verificando se os dados são da porcentagem ou da resposta desta página.
         if(verifica_quiz_enviado==1){
-            console.log("Status do evento: "+evento.detail);    
+            console.log(evento.detail);    
             //verificando se a resposta do projeto já foi enviada.
             if(evento.detail["status"]==200){                     
                 //caso tenha dados, o cursista já respondeu. Exibe a resposta dada anterirmente, desativa o botão.
@@ -395,7 +396,7 @@
                 document.querySelector("#botao-quiz-uni2").style.display="none";
 
                 let resposta1 = document.form_quiz_uni2.resposta_projeto_etapa1;
-                resposta1.innerHTML= evento.detail["data"][0]["valor"];~
+                resposta1.innerHTML= evento.detail["data"][0]["valor"];
                 resposta1.setAttribute('disabled', true);
                 resposta1.className ="resposta-estatica";
 
@@ -435,11 +436,13 @@
     window .addEventListener( "evObtemRegistraDadosGenericos" ,resultadoRegistrarDadosGenericos, false );
     function resultadoRegistrarDadosGenericos (evento){
         console .log(evento.detail);
-        if(evento.detail["status"]==200){                        
-            console.log("A resposta foi enviada com sucesso");
-            mensagem.className = "mensagem-ok";
-            mensagem.innerHTML="Sua resposta foi enviada com sucesso!";
-            mensagem.style.display="block";
+        if(evento.detail["status"]==200){
+            if(verifica_quiz_enviado==1){                        
+                console.log("A resposta foi enviada com sucesso");
+                mensagem.className = "mensagem-ok";
+                mensagem.innerHTML="Sua resposta foi enviada com sucesso!";
+                mensagem.style.display="block";
+            }
         }
     }
 
