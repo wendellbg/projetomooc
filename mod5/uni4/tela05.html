@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../css/ponto-interesse.css?ver=1.8"/>
     <link rel="stylesheet" href="../../css/boxes.css?ver=1.2"/>
     <link rel="stylesheet" href="../../css/carrossel.css?ver=1.1" />
+    <link rel="stylesheet" href="../../css/quiz.css?ver=1.1" />
     <link rel="stylesheet" href="../../css/w3.css" />
 
     <!-- Botão de Voltar ao Topo -->
@@ -85,7 +86,18 @@
             <!-- Conteúdo -->
             <div class="content no-top">
                 <p>Agora, antes de começar a criar ações de intervenção, vamos <b>reler o objetivo</b> que você definiu para o seu projeto.</p>
-                <p>Meu objetivo é:</p>
+                <form action="#" onsubmit="verifica_projeto_enviado(this); return false;" name="form_quiz_uni3" method="POST">                       
+                   
+                    <div class="questao">
+                        <div class="titulo-questao-imagem">
+                            <div class="enunciado-questao">Meu objetivo é:</div>
+                                <img src="../../img/uni2/MOOC1_Uni2_tela02_icone_quiz.png" /> 
+                        </div>
+                        <div class="area-respostas">
+                            <textarea disabled class="resposta-estatica" id="resposta_1_texto" name="resposta_projeto_etapa1"></textarea>
+                        </div>
+                    </div>                                               
+                </form>                
                 <p>Tendo esse objetivo em vista, convidamos você a deixar as ideias virem à tona, realizando o Exercício de <i>Brainstorming</i> (tempestade de ideias).</p>
             </div>
 
@@ -148,7 +160,7 @@
                 <!--                <script src="../../js/jquery-2.1.1.js"></script>-->
                 <script src="../../js/main.js"></script> <!-- Resource jQuery -->
                 <p class="legenda"><b>Clique <a target="_blank" href="../../downloads/mooc5/Un4-tela05-01.pdf">aqui</a> Acesse a versão em PDF do Exercício de Brainstorming (tempestade de ideias).</b></p>
-                <p class="legenda">Figura 01 - Fonte: Imagem produzida pela equipe gráfica do projeto</p>
+                <p class="legenda">Figura 02 - Fonte: Imagem produzida pela equipe gráfica do projeto</p>
             </div>
 
             <!-- Conteúdo -->
