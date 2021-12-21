@@ -202,7 +202,7 @@
 						"gabaritos": [
 							{ "chave": "r2_1_1", "valor": "f", "alternativa": "a) Elaborar os projetos de carreira para os estudantes." },
 							{ "chave": "r2_1_2", "valor": "v", "alternativa": "b) Enfrentar preconceitos em relação a certas profissões." },
-							{ "chave": "r2_1_3", "valor": "f", "alternativa": "c) Identificar obstáculos que afastam estudantes do Ensino Técnico." },
+							{ "chave": "r2_1_3", "valor": "v", "alternativa": "c) Identificar obstáculos que afastam estudantes do Ensino Técnico." },
 							{ "chave": "r2_1_4", "valor": "f", "alternativa": "d) Orientar os estudantes a seguirem as escolhas de carreira feitas pelos seus pais." }	
 						]
 					},{
