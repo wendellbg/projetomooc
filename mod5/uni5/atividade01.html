@@ -150,7 +150,7 @@
                                                     <option  id="r5_1_e_2" name="r5_1_e_2" value="experiências">experiências</option>
                                                     <option  id="r5_1_e_3" name="r5_1_e_3" value="intervenção">intervenção</option>
                                                     <option  id="r5_1_e_4" name="r5_1_e_4" value="orientando">orientando</option>
-                                                    <option  id="r5_1_e_5" name="r5_1_e_5" value="significativas">significativas</option>
+                                                    <option  id="r5_1_e_5" name="r5_1_e_5" value="projeto">projeto</option>
                                                     <option  id="r5_1_e_6" name="r5_1_e_6" value="significativas">significativas</option>
                                                 </select>
                                             </div>
@@ -162,7 +162,7 @@
                                                     <option  id="r5_1_f_2" name="r5_1_f_2" value="experiências">experiências</option>
                                                     <option  id="r5_1_f_3" name="r5_1_f_3" value="intervenção">intervenção</option>
                                                     <option  id="r5_1_f_4" name="r5_1_f_4" value="orientando">orientando</option>
-                                                    <option  id="r5_1_f_5" name="r5_1_f_5" value="significativas">significativas</option>
+                                                    <option  id="r5_1_f_5" name="r5_1_f_5" value="projeto">projeto</option>
                                                     <option  id="r5_1_f_6" name="r5_1_f_6" value="significativas">significativas</option>
                                                 </select>
                                             </div>
@@ -499,6 +499,7 @@ function verifica_nota(nota,nota_nova){
     if(nota_nova>=0){
         if(nota_nova>nota){
             nota=nota_nova;
+            nota_atividade=nota_nova;
         }
         texto_mensagem_nota="<br />Sua nota foi: "+nota_nova+"<br />Sua nota mais alta nesta atividade é: "+nota;                
     }else{

@@ -33,7 +33,7 @@
 <header id="header">
 	<div class="logo">
 		<a href="tela01.html" accesskey="t">UNIDADE 1</a>
-        <h3>Projeto de Intervenção para Orientação Educacional e Profissional na Educação Básica</h3>
+        <h3>Bases para a elaboração do Projeto</h3>
 	</div>
 </header>
 
@@ -59,8 +59,8 @@
 								<label for="change-hamburguer"></label>
 							</a>
                             <div class="menu">
-                                <a href="../sumario.html" class='titulo-menu link-menu-atual'>UNIDADE 1</a>
-                                <a href="tela01.html">1.01 - Apresentação</a>
+                                <a href="../sumario.html" class='titulo-menu'>UNIDADE 1</a>
+                                <a href="tela01.html" class='link-menu-atual'>1.01 - Apresentação</a>
                                 <a href="tela02.html">1.02 - Contextualização</a>
                                 <a href="tela03.html">1.03 - Mentoria para a Educação Profissional</a>
                                 <a href="tela04.html">1.04 - Orientação como design de carreira</a>
@@ -523,6 +523,7 @@ function verifica_nota(nota,nota_nova){
     if(nota_nova>=0){
         if(nota_nova>nota){
             nota=nota_nova;
+            nota_atividade=nota_nova;
         }
         texto_mensagem_nota="<br />Sua nota foi: "+nota_nova+"<br />Sua nota mais alta nesta atividade é: "+nota;                
     }else{

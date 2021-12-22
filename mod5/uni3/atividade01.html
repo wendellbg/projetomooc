@@ -509,6 +509,7 @@ function verifica_nota(nota,nota_nova){
     if(nota_nova>=0){
         if(nota_nova>nota){
             nota=nota_nova;
+            nota_atividade=nota_nova;
         }
         texto_mensagem_nota="<br />Sua nota foi: "+nota_nova+"<br />Sua nota mais alta nesta atividade é: "+nota;                
     }else{
