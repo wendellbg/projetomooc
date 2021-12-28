@@ -78,7 +78,7 @@
                     <div class="questao">
                         <div class="titulo-questao-imagem">
                             <div class="enunciado-questao">Sua resposta anterior:</div>
-                            <img src="../../img/uni2/MOOC1_Uni2_tela02_icone_quiz.png" /> 
+                            <img src="../../img/uni2/IMG_QUIZ.png" /> 
                         </div>
                         <div class="area-respostas">
                             <textarea disabled class="resposta-estatica" id="resposta_1_texto" name="resposta_projeto_etapa1">
@@ -92,7 +92,7 @@
                         <div class="titulo-questao-imagem">
                             <div class="enunciado-questao">Qual situação-problema pretende enfrentar através da intervenção?
                             </div>
-                            <img src="../../img/uni2/MOOC1_Uni2_tela02_icone_quiz.png" />   
+                            <img src="../../img/uni2/IMG_QUIZ.png" />   
                         </div>
                         <div class="area-respostas">
                             <textarea class="resposta-texto" id='resposta_2_texto' placeholder="Digite aqui sua resposta." name='resposta_projeto_etapa2' required></textarea>
@@ -105,7 +105,7 @@
                                 Qual será o objetivo do seu projeto de intervenção?<br/>
                                 Dica: lembre-se da tela anterior. Escreva seu objetivo, definindo de que forma (abordagem da intervenção), com quem (público participante) e para que (impacto na realidade) fará a intervenção.
                             </div>
-                            <img src="../../img/uni2/MOOC1_Uni2_tela02_icone_quiz.png" />   
+                            <img src="../../img/uni2/IMG_QUIZ.png" />   
                         </div>
                         <div class="area-respostas">
                             <textarea class="resposta-texto" id='resposta_3_texto' placeholder="Digite aqui sua resposta." name='resposta_projeto_etapa3' required></textarea>
@@ -333,7 +333,7 @@
                 API.obterDadosGenericos("resposta_projeto_etapa2");
             }else{
                 mensagem.className = "mensagem-alerta";  
-                mensagem.innerHTML="Você Precisa responder a questão da Unidade 2 primeiro! <br /> Clique <a href='../uni2/tela08.html'>aqui</a> para isso.";
+                mensagem.innerHTML="Você Precisa responder a questão da Unidade 2 primeiro! <br /><a href='../uni2/tela08.html'>Clique aqui para isso.</a>";
                 mensagem.style.display="block";            
                 document.querySelector("#botao-quiz-uni3").style.display="none";
             }

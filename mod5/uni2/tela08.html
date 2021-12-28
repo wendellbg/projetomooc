@@ -162,7 +162,7 @@
                                 <div class="enunciado-questao">Registre suas principais descobertas!<br>
                                     Escreva no espaço abaixo.<br>Dê preferência aos aspectos sobre os estudantes e a escola mais importantes de serem trabalhados no seu projeto, que permitam planejar uma intervenção voltada à realidade própria da sua escola.</p>
                                 </div>
-                                <img src="../../img/uni2/MOOC1_Uni2_tela02_icone_quiz.png" alt="Abaixo um retângulo, azul escuro, um amarelo sobreposto e um branco para a resposta." />   
+                                <img src="../../img/uni2/IMG_QUIZ.png" alt="Abaixo um retângulo, azul escuro, um amarelo sobreposto e um branco para a resposta." />   
                             </div>
                             <div class="area-respostas">
                                 <textarea class="resposta-texto" id='resposta_2_texto' name='resposta_projeto_etapa1' required></textarea>
@@ -361,9 +361,9 @@
                 console.log("\nVerificando a unidade: "+id_unidade+"\nCom a porcentagem: "+porcentagem);
                 //Se a porcentagem já for 100%, testa se esta é a última tela da unidade
                 if(porcentagem==100){  
-                    habilitar_atividade();
-                    // verifica_quiz_enviado=1;
-                    // API.obterDadosGenericos("resposta_projeto_etapa1");
+                    habilitar_atividade();  
+                    verifica_quiz_enviado=1;
+                    API.obterDadosGenericos("resposta_projeto_etapa1");                  
                 }else{
                     //Se a porcentagem ainda não for 100%, então verifica se a tela atual já foi vista.            
                     API.obterDadosGenericos(tela);   
