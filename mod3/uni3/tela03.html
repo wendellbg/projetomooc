@@ -14,9 +14,6 @@
     <script src="../../js/jquery-2.1.1.js"></script>
     <script src="../../js/bt-topo.js"></script>
 
-    <!-- Funções de acesso à biblioteca do Avamec-->
-    <script src="../../js/funcoes-porcentagem-mooc3.js"></script>
-
     <!-- Global site tag (gtag.js) - Google Analytics 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
     <script>
@@ -222,20 +219,27 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
+
+<!-- Funções de acesso à biblioteca do Avamec-->    
+<script src="../../js/funcoes-porcentagem-mooc3-novo.js"></script>
+
 <script>
     console.clear(screen);
 
-    var API = new BridgeRestApi();
-    var id_unidade = "mod3_uni3";//alterar
-    var id_slide = "mod3/uni3/tela03.html";//alterar
-    var unidade=3;//alterar
-    var tela="uni3tela3";//alterar
-    var ultima_tela=0;
-    
+    let API = new BridgeRestApi();
+    let id_unidade = "mod3_uni3";//alterar
+    let id_slide = "mod3/uni3/tela03.html";//alterar
+    let unidade=3;//alterar
+    let tela="uni3tela3";//alterar
+    let ultima_tela = 0; //alterar
+
     //Obtendo dados curso
     window.addEventListener('load', function(){
-        API.obterDadosCurso();
-    });
+        //A tela 1 sempre vai verificar a porcentagem da unidade 0 primeiro
+        teste_boasvindas=1;
+        API.obterPorcentagemConclusaoUnidade("mod3_uni0"); 
+    });   
 </script>
+
 </body>
 </html>

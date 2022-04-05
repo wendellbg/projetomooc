@@ -127,15 +127,16 @@
     </footer>
 
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
+    <!-- <script src="../../js/funcoes-porcentagem-mooc5-novo.js"></script> -->
     <script>
         console.clear(screen);
 
         var API = new BridgeRestApi();
-        var id_unidade = "mod4_uniE";
+        var id_unidade = "mod5_uniE";
         var id_slide = "encerramento/index.html";        
         var porcentagem = "porcentagemUniE";
+        let ultima_tela = 0; 
 
         //Obtendo dados curso
         window.addEventListener('load', function () {            

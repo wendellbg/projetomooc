@@ -343,8 +343,8 @@
                 //Se a porcentagem já for 100%, testa se esta é a última tela da unidade
                 if(porcentagem==100){  
                     habilitar_atividade();
-                    // verifica_quiz_enviado=1;
-                    // API.obterDadosGenericos("resposta_projeto_etapa1");
+                    verifica_quiz_enviado=1;
+                    API.obterDadosGenericos("resposta_projeto_etapa3");
                 }else{
                     //Se a porcentagem ainda não for 100%, então verifica se a tela atual já foi vista.            
                     API.obterDadosGenericos(tela);   

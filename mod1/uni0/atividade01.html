@@ -300,172 +300,236 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>	
-<script src="../../js/funcoes-atividades.js"></script>
 <script>
 	console.clear(screen);
 
-	var API = new BridgeRestApi();
-	var id_unidade = "mod1_uni0";//modificar
-	var id_slide = "uni0/atividade01.html";//modificar
-	var id_atividade = "uni0_ativ1";//modificar						
-	var texto_mensagem_fim="<br>Você pode prosseguir para a próxima atividade.<br><br><a class='botao-mensagem' href='../uni1/index.html'>PRÓXIMA UNIDADE &#10095;</a><br>";
-	var erros = 0;
-	var atividade_concluida =0;
+	let API = new BridgeRestApi();
+	let id_unidade = "mod1_uni0";//modificar
+	let id_slide = "mod1/uni0/atividade01.html";//modificar
+	let id_atividade = "uni0_ativ1";//modificar
+	let unidade=0;
+	let revisao_unidade = "uni0_revisao";//modificar
+	let proxima_unidade = "../uni0/tela03.html";//modificar    
+	let botao = document.getElementById("botao-atividade-uni0");//modificar
 
-	/*************** Verificando se todas as respostas foram enviadas. *****/
-	var botao = document.getElementById("botao-atividade-uni0");//modificar
-	var mensagem = document.getElementById("mensagem-alerta");    
+		//Etapa 1: carregamento da página
+	 window.addEventListener('load', function(){
+	 	console.log("carregando a página");        
+	 	API.obterRespostaAtividade(id_atividade);        
+	 });
 
-	window.addEventListener('load', function(){
-        console.log("carregando a página");
-		//Verifica se as respostas já foram enviadas alguma vez
-        API.obterRespostaAtividade(id_atividade);
-	});
-
-	function salvarDados(){
-		//console.log("função aqui");				
-		erros = 0;
+		//Enviando formulário
+	 function salvarDados(){           
+	 	erros=0;
+	 	///////aqui vai pegar os valores de cada exercício.        	
+	 	r0_1 = document.form_atividade_uni0.r0_1.value,     
+	 	r0_2 = document.form_atividade_uni0.r0_2.value,     
+	 	r0_3 = document.form_atividade_uni0.r0_3.value,     
+	 	r0_4_a = document.form_atividade_uni0.r0_4_a.value,
+	 	r0_4_b = document.form_atividade_uni0.r0_4_b.value,
+	 	r0_4_c = document.form_atividade_uni0.r0_4_c.value,
+	 	r0_4_d = document.form_atividade_uni0.r0_4_d.value,
+	 	r0_4_e = document.form_atividade_uni0.r0_4_e.value
 		
-		//aqui vai pegar os valores de cada exercício.
-		r0_1 = document.form_atividade_uni0.r0_1.value,     
-		r0_2 = document.form_atividade_uni0.r0_2.value,     
-		r0_3 = document.form_atividade_uni0.r0_3.value,     
-		r0_4_a = document.form_atividade_uni0.r0_4_a.value,
-		r0_4_b = document.form_atividade_uni0.r0_4_b.value,
-		r0_4_c = document.form_atividade_uni0.r0_4_c.value,
-		r0_4_d = document.form_atividade_uni0.r0_4_d.value,
-		r0_4_e = document.form_atividade_uni0.r0_4_e.value
-		
-		//testando se todos os exercícios estão preenchidos.
-		if(r0_1==""){
-			erros++;
-		}else if(r0_2==""){
-			erros++;
-		}else if(r0_3==""){
-			erros++;
-		}
+	 	//testando se todos os exercícios estão preenchidos.
+	 	if(r0_1==""){
+	 		erros++;
+	 	}else if(r0_2==""){
+	 		erros++;
+	 	}else if(r0_3==""){
+	 		erros++;
+	 	}
 
-		if(erros>0){
-			//caso algum não esteja preenchido, exibe mensagem de erro
-			mensagem.className = "mensagem-alerta";
-			mensagem.textContent = "Por favor preencha todos os campos";
-			mensagem.style.display = "block";
-			jQuery('body,html').animate({
-    			scrollTop: 0
-        	}, 800);
-			return false;
+	 	if(erros>0){
+	 		//caso algum não esteja preenchido, exibe mensagem de erro
+	 		mensagem.className = "mensagem-alerta";
+	 		mensagem.textContent = "Por favor preencha todos os campos";
+	 		mensagem.style.display = "inline-block";
+	 		jQuery('body,html').animate({
+	 			scrollTop: 0
+	 		}, 800);
+	 		return false;
+	 	}else{       		
+	 		// registra as re respostas com as funções da API:
+	 		console.log("Registrando respostas:");
+	 		//console.log(evento.detail);
+	 		API.registrarRespostaAtividade({
+	 			"identificador": "uni0_ativ1",//modificar
+	 			"questoes": [
+	 				{						
+	 					"identificador": "r0_1",                    
+	 					"gabaritos": [							
+	 						{ "chave": "r0_1_a", "valor": r0_1},
+	 						{ "chave": "r0_1_b", "valor": r0_1},
+	 						{ "chave": "r0_1_c", "valor": r0_1},
+	 						{ "chave": "r0_1_d", "valor": r0_1},
+	 						{ "chave": "r0_1_e", "valor": r0_1},
+	 						{ "chave": "r0_1_f", "valor": r0_1},
+	 						{ "chave": "r0_1_g", "valor": r0_1}
+	 					]
+	 				},
+	 				{						
+	 					"identificador": "r0_2",                    
+	 					"gabaritos": [							
+	 						{ "chave": "r0_2_a", "valor": r0_2},
+	 						{ "chave": "r0_2_b", "valor": r0_2},
+	 						{ "chave": "r0_2_c", "valor": r0_2},
+	 						{ "chave": "r0_2_d", "valor": r0_2},
+	 						{ "chave": "r0_2_e", "valor": r0_2}
+	 					]
+	 				},
+	 				{						
+	 					"identificador": "r0_3",                    
+	 					"gabaritos": [							
+	 						{ "chave": "r0_3_a", "valor": r0_3},
+	 						{ "chave": "r0_3_b", "valor": r0_3},
+	 						{ "chave": "r0_3_c", "valor": r0_3}
+	 					]
+	 				},
+	 				{						
+	 					"identificador": "r0_4",                    
+	 					"gabaritos": [							
+	 						{ "chave": "r0_4_a", "valor": r0_4_a},
+	 						{ "chave": "r0_4_b", "valor": r0_4_b},
+	 						{ "chave": "r0_4_c", "valor": r0_4_c},
+	 						{ "chave": "r0_4_d", "valor": r0_4_d},
+	 						{ "chave": "r0_4_e", "valor": r0_4_e}
+	 					]
+	 				}
+	 			]
+	 		});         
+	 	}        		
+	 }	
+
+
+//////////////////////////////////////////////////////////////// Funções Javascript para todas as atividades
+let nota_atividade=0;
+let nota_atividade_nova=0;
+let erros=0;
+let revisao_vista=0;
+let respondido=0;
+
+let mensagem = document.getElementById("mensagem-alerta"); 
+let mensagem_tentativas = document.getElementById("mensagem-tentativas");  
+let texto_mensagem_padrao="Responda às atividades e, ao final, clique em \"Enviar Respostas\". <br />Ficará registrada a nota mais alta.";
+let texto_mensagem_nota="";
+let texto_mensagem_revisao="";
+let texto_mensagem_fim="<br>Você pode prosseguir para a próxima atividade.<br><br><a class='botao-mensagem' href='"+proxima_unidade+"'>PRÓXIMA UNIDADE &#10095;</a><br>";
+
+//Etapa 2: Verifica se alguma resposta já foi enviada:
+window .addEventListener( "evObtemDadosRespostaAtividade" , resultadoObtemRespostaAtividade, false );
+function resultadoObtemRespostaAtividade(evento){
+    //console.log("\nObtendo as respostas: ");
+    console.log("Status do evento: "+evento.detail['status']);          
+
+    //verifica qual o código retornado, para saber se as respostas já foram enviadas alguma vez
+    if(evento.detail["status"]=="200"){           
+        nota_atividade = evento.detail.data.nota;
+        //Monta a mensagem com as nota salva, já que está carregando a página.
+        verifica_nota(nota_atividade,(-1));  
+		respondido=1;      
+    }else{
+        texto_mensagem_nota="<br>Você ainda não respondeu esta atividade!";
+    }
+    exibe_mensagens();
+}
+
+//Aqui vai verificar se a revisão já foi acessada
+window .addEventListener( "evObtemDadosGenericos" , resultadoObtemDadosGenericos,false );
+function resultadoObtemDadosGenericos (evento){
+    console.log(evento.detail);
+    //verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez            
+    if(evento.detail["status"]=="200"){
+        console.log(evento.detail["data"]);
+        //Se deu 200, é porque já viu a revisão. Então some o botão de envio.                                                                                                                   
+        revisao_vista=1;                        
+        document.querySelector(".botao-atividade button").style.display="none";
+        texto_mensagem_padrao="<br>Você já verificou o GABARITO, então não pode mais responder esta atividade.<br><br><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
+    }else{
+        texto_mensagem_revisao="<br>Após acessar o GABARITO, você NÃO poderá enviar novas respostas.<br><br><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";
+    }             
+}
+
+
+//função de controle, pra exibir no console o resultado do envio das respostas (registraRespostaAtividade)
+window.addEventListener( "evRegistraRespostaAtividade" ,resultadoRegistrarRespostaAtividade, false );
+function resultadoRegistrarRespostaAtividade (evento){
+    console.log(evento.detail);
+    nota_atividade_nova= evento.detail.data.notaAtividade;
+    if(evento.detail["status"]=="200"){
+        //se não houver erro, exibe mensagem de OK        
+        mensagem.className = "mensagem-ok";
+		
+		//Se for a unidade 0, não precisa verificar nota
+		if(unidade==0){
+			mensagem.innerHTML="Dados Enviados com sucesso!<br><br><a class='botao-mensagem' href='"+proxima_unidade+"'>PRÓXIMA ATIVIDADE &#10095;</a><br>";				
 		}else{
-			console.log("\nChecando respostas "+id_atividade);
-			//verificando qual tentativa é esta.
-			API.obterRespostaAtividade(id_atividade);          
-			if(erros>0){
-				return false;			
-			}						
-		}
-	}
+			mensagem.innerHTML="Dados Enviados com sucesso!<br />";
+			
+        	//Monta a mensagem com as notas nova e já salva, já que enviou a atividade.
+        	verifica_nota(nota_atividade,nota_atividade_nova);
+		}   
+		mensagem.style.display ="inline-block";     
+                
+    }else{
+        //caso algum não esteja preenchido, exibe mensagem de erro
+        mensagem.className = "mensagem-alerta";
+        mensagem.innerHTML = "Ocorreu algum erro! Tente Novamente...";
+        mensagem.style.display = "inline-block";        
+    }
+    jQuery('body,html').animate({
+        scrollTop: 0
+    }, 800);
+}
 
-	//Depois que verifica as tentativas de resposta, verifica as respostas salvas;
-	window .addEventListener( "evObtemDadosRespostaAtividade" , resultadoObtemRespostaAtividade, false );
-	function resultadoObtemRespostaAtividade(evento){
+function verifica_nota(nota,nota_nova){
+    if(nota_nova>=0){
+        if(nota_nova>nota){
+            nota=nota_nova;
+        }
+        texto_mensagem_nota="<br />Sua nota foi: "+nota_nova+"<br />Sua nota mais alta nesta atividade é: "+nota;                
+    }else{
+        texto_mensagem_nota="<br>Você já respondeu esta atividade.<br>Sua nota mais alta é <b>"+nota+"</b>.";		
+    }
+    if(nota==10){        
+        //Se atingiu a nota 10, pode ver a revisão sem problemas.
+        texto_mensagem_nota=texto_mensagem_nota+"<br>Parabéns! Você atingiu a nota máxima!<br><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                    
+    }else if(nota>=6){
+        console.log("\nAtingiu a média aqui");                
+        texto_mensagem_nota=texto_mensagem_nota+"<br>Parabéns! Você atingiu a média!<br><a class='botao-mensagem' href='revisao01.html'>Ver Gabarito.</a>";                
+        //Se já atingiu a média, tem que verificar se a revisão já foi vista.
+        API.obterDadosGenericos(revisao_unidade);
+    }else{
+        //Se não atingiu a média, nem vai exibir o botão de gabarito.
+        texto_mensagem_revisao="<br>Você deve atingir a média para poder ver o gabarito.";
+    }
+    exibe_mensagens();
+}
 
-		console.log("\nObtendo as respostas: ");
-		console.log("Status do evento: "+evento.detail['status']);          
-		//verifica qual o código retornado, para saber se o formulário já foi enviado alguma vez
-		if(evento.detail["status"]=="200"){  
-			//Se já tiver enviado (200) então exibe a mensagem e libera os 100% da unidade de boas-vindas         
-			botao.style.display="none";
-			mensagem.className = "mensagem-ok";
-			mensagem.innerHTML = "Você já enviou as respostas, avance para a próxima Unidade!<p></p><a href='../uni1/index.html' class='link-proxima-unidade'>PROSSEGUIR &#10095;</a>";
-			mensagem.style.display = "block";
-			jQuery('body,html').animate({
-            	scrollTop: 0
-        	}, 800);
 
+function exibe_mensagens(){        
+    if(unidade==0){        
+        texto_mensagem_revisao="";
+		texto_mensagem_padrao="Responda às atividades e, ao final, clique em \"Enviar Respostas\".";
+		texto_mensagem_fim="<br>Você precisa responder para prosseguir.";	
+
+		if(respondido==1){
+            texto_mensagem_fim="";
+			texto_mensagem_nota="<br>Você já respondeu esta atividade.<br><br><a class='botao-mensagem' href='"+proxima_unidade+"'>PRÓXIMA ATIVIDADE &#10095;</a><br>";		
 			setTimeout(function() {
     			window.location.href = "tela03.html";
-			}, 5000);
-		}else{
-			//se ainda não tiver enviado as respostas, ou estiver dentro das tentativas, registra as re respostas com as funções da API:
-			console.log("Registrando respostas:");
-			console.log(evento.detail);
-			API.registrarRespostaAtividade({
-				"identificador": "uni0_ativ1",//modificar
-				"questoes": [
-					{						
-						"identificador": "r0_1",                    
-						"gabaritos": [							
-							{ "chave": "r0_1_a", "valor": r0_1},
-							{ "chave": "r0_1_b", "valor": r0_1},
-							{ "chave": "r0_1_c", "valor": r0_1},
-							{ "chave": "r0_1_d", "valor": r0_1},
-							{ "chave": "r0_1_e", "valor": r0_1},
-							{ "chave": "r0_1_f", "valor": r0_1},
-							{ "chave": "r0_1_g", "valor": r0_1}
-						]
-					},
-					{						
-						"identificador": "r0_2",                    
-						"gabaritos": [							
-							{ "chave": "r0_2_a", "valor": r0_2},
-							{ "chave": "r0_2_b", "valor": r0_2},
-							{ "chave": "r0_2_c", "valor": r0_2},
-							{ "chave": "r0_2_d", "valor": r0_2},
-							{ "chave": "r0_2_e", "valor": r0_2}
-						]
-					},
-					{						
-						"identificador": "r0_3",                    
-						"gabaritos": [							
-							{ "chave": "r0_3_a", "valor": r0_3},
-							{ "chave": "r0_3_b", "valor": r0_3},
-							{ "chave": "r0_3_c", "valor": r0_3}
-						]
-					},
-					{						
-						"identificador": "r0_4",                    
-						"gabaritos": [							
-							{ "chave": "r0_4_a", "valor": r0_4_a},
-							{ "chave": "r0_4_b", "valor": r0_4_b},
-							{ "chave": "r0_4_c", "valor": r0_4_c},
-							{ "chave": "r0_4_d", "valor": r0_4_d},
-							{ "chave": "r0_4_e", "valor": r0_4_e}
-						]
-					}
-				]
-			})
+			}, 6000);		
 		}	
-	};
+    }
+    mensagem_tentativas.innerHTML=texto_mensagem_padrao+texto_mensagem_nota+texto_mensagem_revisao+texto_mensagem_fim;
+    mensagem_tentativas.style.display="block";
+    jQuery('body,html').animate({
+        scrollTop: 0
+    }, 800);
+}	
+		
 
-			//função de controle, pra exibir no console o resultado do envio das respostas (registraRespostaAtividade)
-			window .addEventListener( "evRegistraRespostaAtividade" ,resultadoRegistrarRespostaAtividade, false );
-			function resultadoRegistrarRespostaAtividade (evento){
-				console .log(evento.detail);
-				//nota_atividade_nova= evento.detail.data.notaAtividade;
-				if(erros==0){
-					//se não houver erro, exibe mensagem de OK
-					//console.log("Aqui envia uma nova tentativa, são "+quant_respostas+" salvas");					
-					// if(nota_atividade_nova>nota_atividade){
-					// 	nota_atividade=nota_atividade_nova;
-					// }
-					//esse é o link que vai levar para a próxima unidade. Lembrar de alterar.
-					mensagem.innerHTML="Dados Enviados com sucesso!<br /><br><a class='link-proxima-unidade' href='tela03.html'>PROSSEGUIR &#10095;</a>";					
-					mensagem.className = "mensagem-ok";
-					mensagem.style.display ="block";			
-					//"Ocorreu tudo certo. Tem que aparecer o link
-					jQuery('body,html').animate({
-            			scrollTop: 0
-        			}, 800);
-				}else{
-					//caso algum não esteja preenchido, exibe mensagem de erro
-					mensagem.className = "mensagem-alerta";
-					mensagem.textContent = "Ocorreu algum erro! Tente Novamente...";
-					mensagem.style.display = "block";
-					jQuery('body,html').animate({
-            			scrollTop: 0
-        			}, 800);
-				}
-			}
-			
-		</script>
-	</body>
+</script>
+
+</body>
 </html>

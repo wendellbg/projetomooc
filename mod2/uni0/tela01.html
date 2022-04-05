@@ -11,7 +11,6 @@
 	<!-- Botão de Voltar ao Topo -->
 	<script src="../../js/jquery-2.1.1.js"></script>
 	<script src="../../js/bt-topo.js"></script>
-	<script src="../../js/funcoes-porcentagem-mooc2.js"></script>
 	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
@@ -150,26 +149,24 @@
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
 
 <!-- Funções de acesso à biblioteca do Avamec-->
+<script src="../../js/funcoes-porcentagem-mooc2-novo.js"></script>
 <script>
 	console.clear(screen);
 
-	var API = new BridgeRestApi();
-	var id_unidade = "mod2_uni0";
-	var id_slide = "mod2/uni0/tela01.html";//alterar
-	var unidade=0;//alterar
-	var tela="uni0tela1";//alterar
+	let API = new BridgeRestApi();
+	let id_unidade = "mod2_uni0";//alterar
+	let id_slide = "mod2/uni0/tela01.html";//alterar
+	let unidade=0;//alterar
+	let tela="uni0tela1";//alterar
+	let ultima_tela = 0; //alterar
 	
 	//Obtendo dados curso
 	window.addEventListener('load', function(){
+		console.log("Verificando os dados do curso");
     	API.obterDadosCurso();
-	});
-	API.registrarUltimaPaginaAcessada(id_unidade,id_slide);
-	// API.obterUltimaPaginaAcessada();
-	// window .addEventListener( "evObtemUltimaPaginaAcessada" ,resultadoObtemUltimaPaginaAcessada, false );
-	// function resultadoObtemUltimaPaginaAcessada (evento){
-	// 	console .log(evento.detail);
-	// }
+	});	
 </script>
+
 <script>
 
     function exibirAD(){

@@ -16,9 +16,6 @@
     <script src="../../js/jquery-2.1.1.js"></script>
     <script src="../../js/bt-topo.js"></script>
 
-    <!-- Funções de acesso à biblioteca do Avamec-->
-    <script src="../../js/funcoes-porcentagem-mooc2.js"></script>
-
     <!-- Global site tag (gtag.js) - Google Analytics 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB34EK30YV"></script>
     <script>
@@ -175,26 +172,29 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
+
+<!-- Funções de acesso à biblioteca do Avamec-->    
+<script src="../../js/funcoes-porcentagem-mooc2-novo4.js"></script>
+
 <script>
     console.clear(screen);
 
-    var API = new BridgeRestApi();
-    var id_unidade = "mod2_uni4";//alterar
-    var id_slide = "mod2/uni4/tela12.html";//alterar
-    var unidade=4;//alterar
-    var tela="un42tela12";//alterar
-    var ultima_tela=1;
+    let API = new BridgeRestApi();
+    let id_unidade = "mod2_uni4";//alterar
+    let id_slide = "mod2/uni4/tela12.html";//alterar
+    let unidade=4;//alterar
+    let tela="uni4tela12";//alterar
+    let ultima_tela = 1; //alterar
 
     //Obtendo dados curso
     window.addEventListener('load', function(){
-        API.obterDadosCurso();
-    });
+        //A tela 1 sempre vai verificar a porcentagem da unidade 0 primeiro
+        teste_boasvindas=1;
+        API.obterPorcentagemConclusaoUnidade("mod2_uni0"); 
+    });   
+</script>
 
-    //Obtendo dados curso
-    window.addEventListener('load', function(){
-        API.obterDadosCurso();
-    });
-
+<script>
     var botao = document.querySelector("#botao-atividades .bt-avanca");  
 
     botao.addEventListener("mouseover",function(){
@@ -212,6 +212,23 @@
             let mensagem = document.querySelector(".mensagem-flutuante.completa").style.display="none";
         }    
     });
+
+    // porcentagem=(Math.floor((100/quant_telas[unidade])));
+    // console.log("Unidade="+unidade+"\nQuant_telas="+quant_telas[unidade]);
+    // console.log("Porcentagem="+porcentagem);
+    // calculo=parseFloat((100/quant_telas[unidade]).toFixed(1));
+    // porc1=0;
+    // porc2=0;
+    // for(i=1;i<=12;i++){
+    //     porc1=porc1+calculo;
+    //     porc2=Math.ceil(porc2+Math.floor(calculo));
+    //     console.log("Tela "+i+"\nporc1="+porc1+"\nporc2="+porc2);
+    // }
+
+    
+
+    
+
 </script> 
 </body>
 </html>

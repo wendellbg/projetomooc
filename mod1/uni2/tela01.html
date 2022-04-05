@@ -158,22 +158,25 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@labtime/avamec-api-bridge-cliente@latest/dist/bridge-rest-api.bundle.js"></script>
 
-<!-- Funções de acesso à biblioteca do Avamec-->
-<script src="../../js/funcoes-porcentagem.js"></script>
-<script>
-	console.clear(screen);
 
-	var API = new BridgeRestApi();
-	var id_unidade = "mod1_uni2";
-	var id_slide = "mod1/uni2/tela01.html";//alterar
-	var unidade=2;//alterar
-	var tela="uni2tela1";//alterar
-	var ultima_tela=0;
-	
-	//Obtendo dados curso
-	window.addEventListener('load', function(){
-    	API.obterDadosCurso();
-	});
+<script src="../../js/funcoes-porcentagem-mooc1-novo.js"></script>
+<script>
+    console.clear(screen);
+
+    let API = new BridgeRestApi();
+    let id_unidade = "mod1_uni2";//alterar
+    let id_slide = "mod1/uni2/tela01.html";//alterar
+    let unidade=2;//alterar
+    let tela="uni2tela1";//alterar
+    let ultima_tela = 0; //alterar
+
+    //Obtendo dados curso
+    window.addEventListener('load', function(){
+        //A tela 1 sempre vai verificar a porcentagem da unidade 0 primeiro
+        teste_boasvindas=1;
+        API.obterPorcentagemConclusaoUnidade("mod1_uni0"); 
+    });   
 </script>
+
 </body>
 </html>
